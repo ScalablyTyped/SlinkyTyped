@@ -24,6 +24,13 @@ class RouterLinkActive protected ()
     router: Router,
     element: ElementRef[_],
     renderer: Renderer2,
+    link: js.UndefOr[scala.Nothing],
+    linkWithHref: RouterLinkWithHref
+  ) = this()
+  def this(
+    router: Router,
+    element: ElementRef[_],
+    renderer: Renderer2,
     link: RouterLink,
     linkWithHref: RouterLinkWithHref
   ) = this()
@@ -32,8 +39,8 @@ class RouterLinkActive protected ()
   var hasActiveLinks: js.Any = js.native
   val isActive: Boolean = js.native
   var isLinkActive: js.Any = js.native
-  var link: js.UndefOr[js.Any] = js.native
-  var linkWithHref: js.UndefOr[js.Any] = js.native
+  var link: js.Any = js.native
+  var linkWithHref: js.Any = js.native
   var links: QueryList[RouterLink] = js.native
   var linksWithHrefs: QueryList[RouterLinkWithHref] = js.native
   var renderer: js.Any = js.native

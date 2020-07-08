@@ -22,7 +22,34 @@ object mod extends js.Object {
     extends typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable {
     def this(url: String, fileUri: String) = this()
     def this(url: String, fileUri: String, options: DownloadOptions) = this()
+    def this(
+      url: String,
+      fileUri: String,
+      options: js.UndefOr[scala.Nothing],
+      callback: DownloadProgressCallback
+    ) = this()
     def this(url: String, fileUri: String, options: DownloadOptions, callback: DownloadProgressCallback) = this()
+    def this(
+      url: String,
+      fileUri: String,
+      options: js.UndefOr[scala.Nothing],
+      callback: js.UndefOr[scala.Nothing],
+      resumeData: String
+    ) = this()
+    def this(
+      url: String,
+      fileUri: String,
+      options: js.UndefOr[scala.Nothing],
+      callback: DownloadProgressCallback,
+      resumeData: String
+    ) = this()
+    def this(
+      url: String,
+      fileUri: String,
+      options: DownloadOptions,
+      callback: js.UndefOr[scala.Nothing],
+      resumeData: String
+    ) = this()
     def this(
       url: String,
       fileUri: String,
@@ -37,7 +64,34 @@ object mod extends js.Object {
   val documentDirectory: String | Null = js.native
   def copyAsync(options: From): js.Promise[Unit] = js.native
   def createDownloadResumable(uri: String, fileUri: String): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
+  def createDownloadResumable(
+    uri: String,
+    fileUri: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.UndefOr[scala.Nothing],
+    resumeData: String
+  ): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
+  def createDownloadResumable(
+    uri: String,
+    fileUri: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: DownloadProgressCallback
+  ): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
+  def createDownloadResumable(
+    uri: String,
+    fileUri: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: DownloadProgressCallback,
+    resumeData: String
+  ): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
   def createDownloadResumable(uri: String, fileUri: String, options: DownloadOptions): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
+  def createDownloadResumable(
+    uri: String,
+    fileUri: String,
+    options: DownloadOptions,
+    callback: js.UndefOr[scala.Nothing],
+    resumeData: String
+  ): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
   def createDownloadResumable(uri: String, fileUri: String, options: DownloadOptions, callback: DownloadProgressCallback): typingsSlinky.expoFileSystem.fileSystemMod.DownloadResumable = js.native
   def createDownloadResumable(
     uri: String,

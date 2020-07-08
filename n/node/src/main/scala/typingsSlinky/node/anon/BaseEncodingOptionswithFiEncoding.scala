@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined node.fs.BaseEncodingOptions & {  withFileTypes  :true} */
+/* Inlined node.fs.BaseEncodingOptions & {  withFileTypes :true} */
 trait BaseEncodingOptionswithFiEncoding extends js.Object {
   var encoding: js.UndefOr[BufferEncoding | Null] = js.undefined
   var withFileTypes: `true`

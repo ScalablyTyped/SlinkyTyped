@@ -13,7 +13,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.filled
 import typingsSlinky.materialUiCore.materialUiCoreStrings.outlined
 import typingsSlinky.materialUiCore.materialUiCoreStrings.standard
 import typingsSlinky.materialUiCore.selectInputMod.SelectInputProps
-import typingsSlinky.materialUiCore.selectInputMod.default
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.ReactType
@@ -29,7 +28,7 @@ object SelectInput {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def IconComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     @scala.inline

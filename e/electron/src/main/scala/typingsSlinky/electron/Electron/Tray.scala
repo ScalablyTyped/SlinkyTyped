@@ -227,6 +227,7 @@ trait Tray extends EventEmitter {
     * Windows, and it is (0, 0) by default.
     */
   def popUpContextMenu(): Unit = js.native
+  def popUpContextMenu(menu: js.UndefOr[scala.Nothing], position: Point): Unit = js.native
   def popUpContextMenu(menu: Menu): Unit = js.native
   def popUpContextMenu(menu: Menu, position: Point): Unit = js.native
   @JSName("removeListener")
@@ -274,10 +275,10 @@ trait Tray extends EventEmitter {
     event: `right-click`,
     listener: js.Function2[/* event */ KeyboardEvent, /* bounds */ Rectangle, Unit]
   ): this.type = js.native
-  def setContextMenu(): Unit = js.native
   /**
     * Sets the context menu for this icon.
     */
+  def setContextMenu(): Unit = js.native
   def setContextMenu(menu: Menu): Unit = js.native
   @JSName("setHighlightMode")
   def setHighlightMode_always(mode: always): Unit = js.native

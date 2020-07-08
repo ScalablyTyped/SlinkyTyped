@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object createIconSetFromIcoMoon extends js.Object {
   def apply(config: js.Object): Instantiable = js.native
+  def apply(config: js.Object, fontName: js.UndefOr[scala.Nothing], fontFile: String): Instantiable = js.native
   def apply(config: js.Object, fontName: String): Instantiable = js.native
   def apply(config: js.Object, fontName: String, fontFile: String): Instantiable = js.native
 }

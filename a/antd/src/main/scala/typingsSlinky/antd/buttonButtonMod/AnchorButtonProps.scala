@@ -85,7 +85,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined {  href  :string,   target ? :string,   onClick ? :react.react.MouseEventHandler<std.HTMLElement>} & antd.antd/lib/button/button.BaseButtonProps & antd.antd/lib/_util/type.Omit<react.react.AnchorHTMLAttributes<any>, 'type' | 'onClick'> */
+/* Inlined {  href :string,   target :string | undefined,   onClick :react.react.MouseEventHandler<std.HTMLElement> | undefined} & antd.antd/lib/button/button.BaseButtonProps & antd.antd/lib/_util/type.Omit<react.react.AnchorHTMLAttributes<any>, 'type' | 'onClick'> */
 trait AnchorButtonProps extends js.Object {
   var about: js.UndefOr[String] = js.undefined
   var accessKey: js.UndefOr[String] = js.undefined
@@ -156,7 +156,7 @@ trait AnchorButtonProps extends js.Object {
   var draggable: js.UndefOr[Booleanish] = js.undefined
   var ghost: js.UndefOr[Boolean] = js.undefined
   var hidden: js.UndefOr[Boolean] = js.undefined
-  var href: js.UndefOr[String] = js.undefined
+  var href: String with js.UndefOr[String]
   var hrefLang: js.UndefOr[String] = js.undefined
   var icon: js.UndefOr[ReactElement] = js.undefined
   var id: js.UndefOr[String] = js.undefined
@@ -281,8 +281,8 @@ trait AnchorButtonProps extends js.Object {
 
 object AnchorButtonProps {
   @scala.inline
-  def apply(): AnchorButtonProps = {
-    val __obj = js.Dynamic.literal()
+  def apply(href: String with js.UndefOr[String]): AnchorButtonProps = {
+    val __obj = js.Dynamic.literal(href = href.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnchorButtonProps]
   }
   @scala.inline
@@ -296,6 +296,8 @@ object AnchorButtonProps {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setHref(value: String with js.UndefOr[String]): Self = this.set("href", value.asInstanceOf[js.Any])
     @scala.inline
     def setAbout(value: String): Self = this.set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -574,10 +576,6 @@ object AnchorButtonProps {
     def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHidden: Self = this.set("hidden", js.undefined)
-    @scala.inline
-    def setHref(value: String): Self = this.set("href", value.asInstanceOf[js.Any])
-    @scala.inline
-    def deleteHref: Self = this.set("href", js.undefined)
     @scala.inline
     def setHrefLang(value: String): Self = this.set("hrefLang", value.asInstanceOf[js.Any])
     @scala.inline

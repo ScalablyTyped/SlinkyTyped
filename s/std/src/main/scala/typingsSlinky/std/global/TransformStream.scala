@@ -15,7 +15,23 @@ import scala.scalajs.js.annotation._
 class TransformStream[I, O] ()
   extends typingsSlinky.std.TransformStream[I, O] {
   def this(transformer: Transformer[I, O]) = this()
+  def this(transformer: js.UndefOr[scala.Nothing], writableStrategy: QueuingStrategy[I]) = this()
   def this(transformer: Transformer[I, O], writableStrategy: QueuingStrategy[I]) = this()
+  def this(
+    transformer: js.UndefOr[scala.Nothing],
+    writableStrategy: js.UndefOr[scala.Nothing],
+    readableStrategy: QueuingStrategy[O]
+  ) = this()
+  def this(
+    transformer: js.UndefOr[scala.Nothing],
+    writableStrategy: QueuingStrategy[I],
+    readableStrategy: QueuingStrategy[O]
+  ) = this()
+  def this(
+    transformer: Transformer[I, O],
+    writableStrategy: js.UndefOr[scala.Nothing],
+    readableStrategy: QueuingStrategy[O]
+  ) = this()
   def this(
     transformer: Transformer[I, O],
     writableStrategy: QueuingStrategy[I],
@@ -36,13 +52,13 @@ object TransformStream
       typingsSlinky.std.TransformStream[js.Object, js.Object]
     ]
      with Instantiable2[
-      /* transformer */ Transformer[js.Object, js.Object], 
+      js.UndefOr[/* transformer */ Transformer[js.Object, js.Object]], 
       /* writableStrategy */ QueuingStrategy[js.Object], 
       typingsSlinky.std.TransformStream[js.Object, js.Object]
     ]
      with Instantiable3[
-      /* transformer */ Transformer[js.Object, js.Object], 
-      /* writableStrategy */ QueuingStrategy[js.Object], 
+      js.UndefOr[/* transformer */ Transformer[js.Object, js.Object]], 
+      js.UndefOr[/* writableStrategy */ QueuingStrategy[js.Object]], 
       /* readableStrategy */ QueuingStrategy[js.Object], 
       typingsSlinky.std.TransformStream[js.Object, js.Object]
     ]

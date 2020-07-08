@@ -53,9 +53,11 @@ object ɵangularPackagesCoreTestingTestingA extends js.Object {
   def get[T](token: InjectionToken[T]): js.Any = js.native
   def get[T](token: InjectionToken[T], notFoundValue: T): js.Any = js.native
   def get[T](token: InjectionToken[T], notFoundValue: T, flags: InjectFlags): js.Any = js.native
+  def get[T](token: InjectionToken[T], notFoundValue: js.UndefOr[scala.Nothing], flags: InjectFlags): js.Any = js.native
   def get[T](token: Type[T]): js.Any = js.native
   def get[T](token: Type[T], notFoundValue: T): js.Any = js.native
   def get[T](token: Type[T], notFoundValue: T, flags: InjectFlags): js.Any = js.native
+  def get[T](token: Type[T], notFoundValue: js.UndefOr[scala.Nothing], flags: InjectFlags): js.Any = js.native
   def initTestEnvironment(ngModule: js.Array[Type[_]], platform: PlatformRef): typingsSlinky.angularCore.testingTestingMod.ɵangularPackagesCoreTestingTestingA = js.native
   def initTestEnvironment(ngModule: js.Array[Type[_]], platform: PlatformRef, aotSummaries: js.Function0[js.Array[_]]): typingsSlinky.angularCore.testingTestingMod.ɵangularPackagesCoreTestingTestingA = js.native
   /**

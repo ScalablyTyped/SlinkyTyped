@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Partial<{  LT  :string,   LTS  :string,   L  :string,   LL  :string,   LLL  :string,   LLLL  :string}> */
+/* Inlined std.Partial<{  LT :string,   LTS :string,   L :string,   LL :string,   LLL :string,   LLLL :string}> */
 trait PartialLTstringLTSstringL extends js.Object {
   var L: js.UndefOr[String] = js.undefined
   var LL: js.UndefOr[String] = js.undefined

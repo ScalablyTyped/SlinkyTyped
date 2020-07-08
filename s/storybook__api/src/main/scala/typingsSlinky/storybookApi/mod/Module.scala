@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined @storybook/api.@storybook/api.StoreData & @storybook/router.@storybook/router.RenderData & @storybook/api.@storybook/api.ProviderData & {  mode ? :'production' | 'development',   state  :@storybook/api.@storybook/api.State} */
+/* Inlined @storybook/api.@storybook/api.StoreData & @storybook/router.@storybook/router.RenderData & @storybook/api.@storybook/api.ProviderData & {  mode :'production' | 'development' | undefined,   state :@storybook/api.@storybook/api.State} */
 trait Module extends js.Object {
   var default: js.UndefOr[Boolean] = js.undefined
   var location: js.UndefOr[WindowLocation[LocationState]] = js.undefined

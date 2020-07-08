@@ -29,9 +29,15 @@ class MultiRouteModel protected () extends IEventEmitter {
   def getViaPoints(): js.Array[ViaPointModel] = js.native
   def getWayPoints(): js.Array[WayPointModel] = js.native
   def setParams(params: IMultiRouteParams): Unit = js.native
+  def setParams(params: IMultiRouteParams, extend: js.UndefOr[scala.Nothing], clearRequests: Boolean): Unit = js.native
   def setParams(params: IMultiRouteParams, extend: Boolean): Unit = js.native
   def setParams(params: IMultiRouteParams, extend: Boolean, clearRequests: Boolean): Unit = js.native
   def setReferencePoints(referencePoints: js.Array[IMultiRouteReferencePoint]): Unit = js.native
+  def setReferencePoints(
+    referencePoints: js.Array[IMultiRouteReferencePoint],
+    viaIndexes: js.UndefOr[scala.Nothing],
+    clearRequests: Boolean
+  ): Unit = js.native
   def setReferencePoints(referencePoints: js.Array[IMultiRouteReferencePoint], viaIndexes: js.Array[Double]): Unit = js.native
   def setReferencePoints(
     referencePoints: js.Array[IMultiRouteReferencePoint],

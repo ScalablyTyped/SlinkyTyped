@@ -31,8 +31,13 @@ object observablesetMod extends js.Object {
        with IInterceptable[ISetWillChange[js.Any]]
        with IListenable {
     def this(initialData: IObservableSetInitialValues[T]) = this()
-    def this(initialData: IObservableSetInitialValues[T], enhancer: IEnhancer[T]) = this()
-    def this(initialData: IObservableSetInitialValues[T], enhancer: IEnhancer[T], name: String) = this()
+    def this(initialData: js.UndefOr[IObservableSetInitialValues[T]], enhancer: IEnhancer[T]) = this()
+    def this(
+      initialData: js.UndefOr[IObservableSetInitialValues[T]],
+      enhancer: js.UndefOr[scala.Nothing],
+      name: String
+    ) = this()
+    def this(initialData: js.UndefOr[IObservableSetInitialValues[T]], enhancer: IEnhancer[T], name: String) = this()
     var _atom: js.Any = js.native
     var _data: js.Any = js.native
     var dehanceValue: js.Any = js.native

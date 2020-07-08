@@ -30,7 +30,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined react-native.react-native.ViewProps & {  pressColor  :string,   disabled ? :boolean,   borderless ? :boolean,   delayPressIn ? :number, onPress ? (): void} */
+/* Inlined react-native.react-native.ViewProps & {  pressColor :string,   disabled :boolean | undefined,   borderless :boolean | undefined,   delayPressIn :number | undefined,   onPress :(): void | undefined} */
 trait Props extends js.Object {
   /**
     * Provides an array of custom actions available for accessibility.

@@ -64,12 +64,33 @@ trait BaseAudioContext extends EventTarget {
   def createPeriodicWave(real: js.Iterable[Double], imag: js.Iterable[Double]): org.scalajs.dom.raw.PeriodicWave = js.native
   def createPeriodicWave(real: js.Iterable[Double], imag: js.Iterable[Double], constraints: PeriodicWaveConstraints): org.scalajs.dom.raw.PeriodicWave = js.native
   def createScriptProcessor(): ScriptProcessorNode = js.native
+  def createScriptProcessor(
+    bufferSize: js.UndefOr[scala.Nothing],
+    numberOfInputChannels: js.UndefOr[scala.Nothing],
+    numberOfOutputChannels: Double
+  ): ScriptProcessorNode = js.native
+  def createScriptProcessor(bufferSize: js.UndefOr[scala.Nothing], numberOfInputChannels: Double): ScriptProcessorNode = js.native
+  def createScriptProcessor(
+    bufferSize: js.UndefOr[scala.Nothing],
+    numberOfInputChannels: Double,
+    numberOfOutputChannels: Double
+  ): ScriptProcessorNode = js.native
   def createScriptProcessor(bufferSize: Double): ScriptProcessorNode = js.native
+  def createScriptProcessor(
+    bufferSize: Double,
+    numberOfInputChannels: js.UndefOr[scala.Nothing],
+    numberOfOutputChannels: Double
+  ): ScriptProcessorNode = js.native
   def createScriptProcessor(bufferSize: Double, numberOfInputChannels: Double): ScriptProcessorNode = js.native
   def createScriptProcessor(bufferSize: Double, numberOfInputChannels: Double, numberOfOutputChannels: Double): ScriptProcessorNode = js.native
   def createStereoPanner(): org.scalajs.dom.raw.StereoPannerNode = js.native
   def createWaveShaper(): org.scalajs.dom.raw.WaveShaperNode = js.native
   def decodeAudioData(audioData: js.typedarray.ArrayBuffer): js.Promise[org.scalajs.dom.raw.AudioBuffer] = js.native
+  def decodeAudioData(
+    audioData: js.typedarray.ArrayBuffer,
+    successCallback: js.UndefOr[scala.Nothing],
+    errorCallback: DecodeErrorCallback
+  ): js.Promise[org.scalajs.dom.raw.AudioBuffer] = js.native
   def decodeAudioData(audioData: js.typedarray.ArrayBuffer, successCallback: Null, errorCallback: DecodeErrorCallback): js.Promise[org.scalajs.dom.raw.AudioBuffer] = js.native
   def decodeAudioData(audioData: js.typedarray.ArrayBuffer, successCallback: DecodeSuccessCallback): js.Promise[org.scalajs.dom.raw.AudioBuffer] = js.native
   def decodeAudioData(

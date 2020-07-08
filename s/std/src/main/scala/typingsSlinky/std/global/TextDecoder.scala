@@ -13,6 +13,7 @@ import scala.scalajs.js.annotation._
 class TextDecoder ()
   extends typingsSlinky.std.TextDecoder {
   def this(label: java.lang.String) = this()
+  def this(label: js.UndefOr[scala.Nothing], options: TextDecoderOptions) = this()
   def this(label: java.lang.String, options: TextDecoderOptions) = this()
   /**
     * Returns encoding's name, lowercased.
@@ -37,7 +38,7 @@ object TextDecoder
   extends Instantiable0[typingsSlinky.std.TextDecoder]
      with Instantiable1[/* label */ java.lang.String, typingsSlinky.std.TextDecoder]
      with Instantiable2[
-      /* label */ java.lang.String, 
+      js.UndefOr[/* label */ java.lang.String], 
       /* options */ TextDecoderOptions, 
       typingsSlinky.std.TextDecoder
     ]

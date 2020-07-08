@@ -3,7 +3,6 @@ package typingsSlinky.materialUiCore.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.materialUiCore.touchRippleMod.TouchRippleProps
-import typingsSlinky.materialUiCore.touchRippleMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +13,7 @@ object TouchRipple {
   @js.native
   object component extends js.Object
   
-  def apply(p: TouchRippleProps): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: TouchRipple.type): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, js.Dictionary.empty))()
+  def apply(p: TouchRippleProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TouchRipple.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

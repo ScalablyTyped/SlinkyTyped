@@ -5,7 +5,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapListItRoot
 import typingsSlinky.materialUiCore.listItemSecondaryActionListItemSecondaryActionMod.ListItemSecondaryActionProps
-import typingsSlinky.materialUiCore.listItemSecondaryActionMod.default
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
@@ -20,7 +19,7 @@ object ListItemSecondaryAction {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

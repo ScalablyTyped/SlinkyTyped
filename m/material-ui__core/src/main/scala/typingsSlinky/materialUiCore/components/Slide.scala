@@ -7,7 +7,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.down
 import typingsSlinky.materialUiCore.materialUiCoreStrings.left
 import typingsSlinky.materialUiCore.materialUiCoreStrings.right
 import typingsSlinky.materialUiCore.materialUiCoreStrings.up
-import typingsSlinky.materialUiCore.slideMod.default
 import typingsSlinky.materialUiCore.slideSlideMod.SlideProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -22,7 +21,7 @@ object Slide {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def addEndListener(value: js.Any): this.type = set("addEndListener", value.asInstanceOf[js.Any])
     @scala.inline

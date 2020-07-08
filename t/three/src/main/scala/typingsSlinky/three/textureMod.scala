@@ -23,7 +23,7 @@ object textureMod extends js.Object {
   @js.native
   class Texture protected () extends EventDispatcher {
     def this(
-      image: js.UndefOr[HTMLCanvasElement | HTMLImageElement | HTMLVideoElement],
+      image: js.UndefOr[HTMLImageElement | HTMLCanvasElement | HTMLVideoElement],
       mapping: js.UndefOr[Mapping],
       wrapS: js.UndefOr[Wrapping],
       wrapT: js.UndefOr[Wrapping],

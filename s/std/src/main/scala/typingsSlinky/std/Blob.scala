@@ -11,7 +11,11 @@ trait Blob extends js.Object {
   val `type`: java.lang.String = js.native
   def arrayBuffer(): js.Promise[js.typedarray.ArrayBuffer] = js.native
   def slice(): org.scalajs.dom.raw.Blob = js.native
+  def slice(start: js.UndefOr[scala.Nothing], end: js.UndefOr[scala.Nothing], contentType: java.lang.String): org.scalajs.dom.raw.Blob = js.native
+  def slice(start: js.UndefOr[scala.Nothing], end: Double): org.scalajs.dom.raw.Blob = js.native
+  def slice(start: js.UndefOr[scala.Nothing], end: Double, contentType: java.lang.String): org.scalajs.dom.raw.Blob = js.native
   def slice(start: Double): org.scalajs.dom.raw.Blob = js.native
+  def slice(start: Double, end: js.UndefOr[scala.Nothing], contentType: java.lang.String): org.scalajs.dom.raw.Blob = js.native
   def slice(start: Double, end: Double): org.scalajs.dom.raw.Blob = js.native
   def slice(start: Double, end: Double, contentType: java.lang.String): org.scalajs.dom.raw.Blob = js.native
   def stream(): org.scalajs.dom.experimental.ReadableStream[_] = js.native

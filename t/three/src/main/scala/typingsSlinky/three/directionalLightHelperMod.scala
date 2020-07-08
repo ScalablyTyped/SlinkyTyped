@@ -15,6 +15,9 @@ object directionalLightHelperMod extends js.Object {
   class DirectionalLightHelper protected () extends Object3D {
     def this(light: DirectionalLight) = this()
     def this(light: DirectionalLight, size: Double) = this()
+    def this(light: DirectionalLight, size: js.UndefOr[scala.Nothing], color: String) = this()
+    def this(light: DirectionalLight, size: js.UndefOr[scala.Nothing], color: Double) = this()
+    def this(light: DirectionalLight, size: js.UndefOr[scala.Nothing], color: Color) = this()
     def this(light: DirectionalLight, size: Double, color: String) = this()
     def this(light: DirectionalLight, size: Double, color: Double) = this()
     def this(light: DirectionalLight, size: Double, color: Color) = this()

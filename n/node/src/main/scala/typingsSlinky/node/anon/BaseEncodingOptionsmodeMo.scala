@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined node.fs.BaseEncodingOptions & {  mode ? :node.fs.Mode,   flag ? :node.fs.OpenMode} */
+/* Inlined node.fs.BaseEncodingOptions & {  mode :node.fs.Mode | undefined,   flag :node.fs.OpenMode | undefined} */
 trait BaseEncodingOptionsmodeMo extends js.Object {
   var encoding: js.UndefOr[BufferEncoding | Null] = js.undefined
   var flag: js.UndefOr[OpenMode] = js.undefined

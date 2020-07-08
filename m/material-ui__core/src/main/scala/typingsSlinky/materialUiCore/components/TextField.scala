@@ -79,7 +79,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.mod.PropTypes.Margin
-import typingsSlinky.materialUiCore.textFieldMod.default
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -100,7 +99,7 @@ object TextField {
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default] {
+         with StBuildingComponent[tag.type, js.Object] {
       @scala.inline
       def FormHelperTextProps(value: PartialFormHelperTextProp): this.type = set("FormHelperTextProps", value.asInstanceOf[js.Any])
       @scala.inline
@@ -533,7 +532,7 @@ object TextField {
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default] {
+         with StBuildingComponent[tag.type, js.Object] {
       @scala.inline
       def FormHelperTextProps(value: PartialFormHelperTextProp): this.type = set("FormHelperTextProps", value.asInstanceOf[js.Any])
       @scala.inline
@@ -966,7 +965,7 @@ object TextField {
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default] {
+         with StBuildingComponent[tag.type, js.Object] {
       @scala.inline
       def FormHelperTextProps(value: PartialFormHelperTextProp): this.type = set("FormHelperTextProps", value.asInstanceOf[js.Any])
       @scala.inline

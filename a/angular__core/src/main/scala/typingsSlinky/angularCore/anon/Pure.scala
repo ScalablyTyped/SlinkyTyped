@@ -21,7 +21,7 @@ trait Pure[T] extends js.Object {
     * If no constructor to instantiate is provided, an instance of type T itself is created.
     */
   /** A factory for creating a pipe instance. */
-  def factory(): T = js.native
+  def factory(t: js.UndefOr[scala.Nothing]): T = js.native
   /**
     * Subclasses without an explicit constructor call through to the factory of their base
     * definition, providing it with their own constructor to instantiate.

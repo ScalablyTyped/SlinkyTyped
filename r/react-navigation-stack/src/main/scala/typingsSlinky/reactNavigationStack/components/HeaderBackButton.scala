@@ -36,11 +36,15 @@ object HeaderBackButton {
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
+    def titleNull: this.type = set("title", null)
+    @scala.inline
     def titleStyle(value: StyleProp[TextStyle]): this.type = set("titleStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def titleStyleNull: this.type = set("titleStyle", null)
     @scala.inline
     def truncatedTitle(value: String): this.type = set("truncatedTitle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def truncatedTitleNull: this.type = set("truncatedTitle", null)
     @scala.inline
     def width(value: Double): this.type = set("width", value.asInstanceOf[js.Any])
   }

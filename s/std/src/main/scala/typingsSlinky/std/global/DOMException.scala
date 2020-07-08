@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
 class DOMException ()
   extends typingsSlinky.std.DOMException {
   def this(message: java.lang.String) = this()
+  def this(message: js.UndefOr[scala.Nothing], name: java.lang.String) = this()
   def this(message: java.lang.String, name: java.lang.String) = this()
   /* CompleteClass */
   override val ABORT_ERR: Double = js.native
@@ -77,7 +78,7 @@ object DOMException
   extends Instantiable0[org.scalajs.dom.raw.DOMException]
      with Instantiable1[/* message */ java.lang.String, org.scalajs.dom.raw.DOMException]
      with Instantiable2[
-      /* message */ java.lang.String, 
+      js.UndefOr[/* message */ java.lang.String], 
       /* name */ java.lang.String, 
       org.scalajs.dom.raw.DOMException
     ] {

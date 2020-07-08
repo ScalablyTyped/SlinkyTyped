@@ -73,9 +73,254 @@ trait SubtleCrypto extends js.Object {
     length: Double
   ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
   def deriveKey(
-    algorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.EcdhKeyDeriveParams | org.scalajs.dom.crypto.DhKeyDeriveParams | org.scalajs.dom.crypto.ConcatParams | org.scalajs.dom.crypto.HkdfCtrParams | org.scalajs.dom.crypto.Pbkdf2Params,
+    algorithm: AlgorithmIdentifier,
     baseKey: org.scalajs.dom.crypto.CryptoKey,
-    derivedKeyType: java.lang.String | org.scalajs.dom.crypto.AesDerivedKeyParams | org.scalajs.dom.crypto.HmacImportParams | org.scalajs.dom.crypto.ConcatParams | org.scalajs.dom.crypto.HkdfCtrParams | org.scalajs.dom.crypto.Pbkdf2Params,
+    derivedKeyType: java.lang.String,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.HkdfCtrParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: AlgorithmIdentifier,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.ConcatParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: java.lang.String,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.ConcatParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.ConcatParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.ConcatParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.HkdfCtrParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.ConcatParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.ConcatParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: java.lang.String,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.HkdfCtrParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.DhKeyDeriveParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: java.lang.String,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.HkdfCtrParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.EcdhKeyDeriveParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.HkdfCtrParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: java.lang.String,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.HkdfCtrParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.HkdfCtrParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.HkdfCtrParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.HkdfCtrParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.HkdfCtrParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.HkdfCtrParams,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: java.lang.String,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.AesDerivedKeyParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.ConcatParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.HkdfCtrParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.HmacImportParams,
+    extractable: scala.Boolean,
+    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
+  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
+  def deriveKey(
+    algorithm: org.scalajs.dom.crypto.Pbkdf2Params,
+    baseKey: org.scalajs.dom.crypto.CryptoKey,
+    derivedKeyType: org.scalajs.dom.crypto.Pbkdf2Params,
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
@@ -450,10 +695,242 @@ trait SubtleCrypto extends js.Object {
     data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
   ): js.Thenable[scala.Boolean] = js.native
   def wrapKey(
-    format: raw | pkcs8 | spki | jwk | java.lang.String,
+    format: java.lang.String,
     key: org.scalajs.dom.crypto.CryptoKey,
     wrappingKey: org.scalajs.dom.crypto.CryptoKey,
-    wrapAlgorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.RsaOaepParams | org.scalajs.dom.crypto.AesCtrParams | org.scalajs.dom.crypto.AesCbcParams | org.scalajs.dom.crypto.AesCmacParams | org.scalajs.dom.crypto.AesGcmParams | org.scalajs.dom.crypto.AesCfbParams
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCbcParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def wrapKey(
+    format: java.lang.String,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCfbParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def wrapKey(
+    format: java.lang.String,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCmacParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def wrapKey(
+    format: java.lang.String,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCtrParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def wrapKey(
+    format: java.lang.String,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesGcmParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def wrapKey(
+    format: java.lang.String,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: AlgorithmIdentifier
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def wrapKey(
+    format: java.lang.String,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_jwk(
+    format: jwk,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCbcParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_jwk(
+    format: jwk,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCfbParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_jwk(
+    format: jwk,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCmacParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_jwk(
+    format: jwk,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCtrParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_jwk(
+    format: jwk,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesGcmParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_jwk(
+    format: jwk,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: AlgorithmIdentifier
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_jwk(
+    format: jwk,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_pkcs8(
+    format: pkcs8,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCbcParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_pkcs8(
+    format: pkcs8,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCfbParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_pkcs8(
+    format: pkcs8,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCmacParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_pkcs8(
+    format: pkcs8,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCtrParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_pkcs8(
+    format: pkcs8,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesGcmParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_pkcs8(
+    format: pkcs8,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: AlgorithmIdentifier
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_pkcs8(
+    format: pkcs8,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_raw(
+    format: raw,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCbcParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_raw(
+    format: raw,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCfbParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_raw(
+    format: raw,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCmacParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_raw(
+    format: raw,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCtrParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_raw(
+    format: raw,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesGcmParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_raw(
+    format: raw,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: AlgorithmIdentifier
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_raw(
+    format: raw,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_spki(
+    format: spki,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCbcParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_spki(
+    format: spki,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCfbParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_spki(
+    format: spki,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCmacParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_spki(
+    format: spki,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesCtrParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_spki(
+    format: spki,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.AesGcmParams
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_spki(
+    format: spki,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: AlgorithmIdentifier
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  @JSName("wrapKey")
+  def wrapKey_spki(
+    format: spki,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    wrappingKey: org.scalajs.dom.crypto.CryptoKey,
+    wrapAlgorithm: org.scalajs.dom.crypto.RsaOaepParams
   ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
 }
 

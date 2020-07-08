@@ -23,7 +23,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapListIt
 import typingsSlinky.materialUiCore.buttonBaseButtonBaseMod.ButtonBaseActions
 import typingsSlinky.materialUiCore.listItemListItemMod.ListItemProps
-import typingsSlinky.materialUiCore.listItemMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`flex-start`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
@@ -91,7 +90,7 @@ object ListItem {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def ContainerComponentFunctionComponent(value: ReactComponentClass[HTMLAttributes[HTMLDivElement]]): this.type = set("ContainerComponent", value.asInstanceOf[js.Any])
     @scala.inline

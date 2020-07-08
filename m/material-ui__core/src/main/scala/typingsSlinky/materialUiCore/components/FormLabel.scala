@@ -22,7 +22,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapFormLa
 import typingsSlinky.materialUiCore.formLabelFormLabelMod.FormLabelBaseProps
 import typingsSlinky.materialUiCore.formLabelFormLabelMod.FormLabelProps
-import typingsSlinky.materialUiCore.formLabelMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
@@ -86,7 +85,7 @@ object FormLabel {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline

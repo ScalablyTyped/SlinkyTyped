@@ -25,7 +25,6 @@ import typingsSlinky.materialUiCore.anon.PartialIconButtonProps
 import typingsSlinky.materialUiCore.buttonBaseButtonBaseMod.ButtonBaseActions
 import typingsSlinky.materialUiCore.buttonBaseButtonBaseMod.ButtonBaseProps
 import typingsSlinky.materialUiCore.expansionPanelSummaryExpansionPanelSummaryMod.ExpansionPanelSummaryProps
-import typingsSlinky.materialUiCore.expansionPanelSummaryMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
@@ -90,7 +89,7 @@ object ExpansionPanelSummary {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def IconButtonProps(value: PartialIconButtonProps): this.type = set("IconButtonProps", value.asInstanceOf[js.Any])
     @scala.inline

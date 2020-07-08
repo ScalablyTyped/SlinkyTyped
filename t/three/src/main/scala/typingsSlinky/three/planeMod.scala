@@ -16,6 +16,7 @@ object planeMod extends js.Object {
   @js.native
   class Plane () extends js.Object {
     def this(normal: Vector3) = this()
+    def this(normal: js.UndefOr[scala.Nothing], constant: Double) = this()
     def this(normal: Vector3, constant: Double) = this()
     var constant: Double = js.native
     var normal: Vector3 = js.native

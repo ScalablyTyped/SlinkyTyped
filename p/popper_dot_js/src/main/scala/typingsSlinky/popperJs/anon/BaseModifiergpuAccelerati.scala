@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined popper.js.popper.js.Popper.BaseModifier & {  gpuAcceleration ? :boolean,   x ? :'bottom' | 'top',   y ? :'left' | 'right'} */
+/* Inlined popper.js.popper.js.Popper.BaseModifier & {  gpuAcceleration :boolean | undefined,   x :'bottom' | 'top' | undefined,   y :'left' | 'right' | undefined} */
 trait BaseModifiergpuAccelerati extends js.Object {
   var enabled: js.UndefOr[Boolean] = js.undefined
   var fn: js.UndefOr[ModifierFn] = js.undefined

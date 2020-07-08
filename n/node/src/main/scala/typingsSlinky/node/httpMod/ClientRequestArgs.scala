@@ -12,7 +12,7 @@ trait ClientRequestArgs extends js.Object {
   // https://github.com/nodejs/node/blob/master/lib/_http_client.js#L278
   var createConnection: js.UndefOr[
     js.Function2[
-      /* options */ ClientRequestArgs, 
+      /* options */ this.type, 
       /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit], 
       Socket
     ]
@@ -69,7 +69,7 @@ object ClientRequestArgs {
     def setAuthNull: Self = this.set("auth", null)
     @scala.inline
     def setCreateConnection(
-      value: (/* options */ ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket
+      value: (ClientRequestArgs, /* oncreate */ js.Function2[/* err */ js.Error, /* socket */ Socket, Unit]) => Socket
     ): Self = this.set("createConnection", js.Any.fromFunction2(value))
     @scala.inline
     def deleteCreateConnection: Self = this.set("createConnection", js.undefined)

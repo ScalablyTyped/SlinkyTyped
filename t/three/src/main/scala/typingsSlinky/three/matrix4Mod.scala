@@ -19,6 +19,7 @@ object matrix4Mod extends js.Object {
     	 * @deprecated Use {@link Matrix4#applyToBufferAttribute matrix4.applyToBufferAttribute( attribute )} instead.
     	 */
     def applyToBuffer(buffer: BufferAttribute): BufferAttribute = js.native
+    def applyToBuffer(buffer: BufferAttribute, offset: js.UndefOr[scala.Nothing], length: Double): BufferAttribute = js.native
     def applyToBuffer(buffer: BufferAttribute, offset: Double): BufferAttribute = js.native
     def applyToBuffer(buffer: BufferAttribute, offset: Double, length: Double): BufferAttribute = js.native
     def applyToBufferAttribute(attribute: BufferAttribute): BufferAttribute = js.native
@@ -37,7 +38,11 @@ object matrix4Mod extends js.Object {
     	 * If parameters are not passed, new instances will be created.
     	 */
     def decompose(): js.Array[js.Object] = js.native
+    def decompose(translation: js.UndefOr[scala.Nothing], rotation: js.UndefOr[scala.Nothing], scale: Vector3): js.Array[js.Object] = js.native
+    def decompose(translation: js.UndefOr[scala.Nothing], rotation: Quaternion): js.Array[js.Object] = js.native
+    def decompose(translation: js.UndefOr[scala.Nothing], rotation: Quaternion, scale: Vector3): js.Array[js.Object] = js.native
     def decompose(translation: Vector3): js.Array[js.Object] = js.native
+    def decompose(translation: Vector3, rotation: js.UndefOr[scala.Nothing], scale: Vector3): js.Array[js.Object] = js.native
     def decompose(translation: Vector3, rotation: Quaternion): js.Array[js.Object] = js.native
     def decompose(translation: Vector3, rotation: Quaternion, scale: Vector3): js.Array[js.Object] = js.native
     def equals(matrix: Matrix4): Boolean = js.native
@@ -187,12 +192,14 @@ object matrix4Mod extends js.Object {
       n44: Double
     ): Matrix4 = js.native
     def setPosition(v: Double): Matrix4 = js.native
+    def setPosition(v: Double, y: js.UndefOr[scala.Nothing], z: Double): Matrix4 = js.native
     def setPosition(v: Double, y: Double): Matrix4 = js.native
     def setPosition(v: Double, y: Double, z: Double): Matrix4 = js.native
     /**
     	 * Sets the position component for this matrix from vector v.
     	 */
     def setPosition(v: Vector3): Matrix4 = js.native
+    def setPosition(v: Vector3, y: js.UndefOr[scala.Nothing], z: Double): Matrix4 = js.native
     def setPosition(v: Vector3, y: Double): Matrix4 = js.native
     def setPosition(v: Vector3, y: Double, z: Double): Matrix4 = js.native
     /**
@@ -206,6 +213,7 @@ object matrix4Mod extends js.Object {
     	 * @return The provided array-like.
     	 */
     def toArray(): ArrayLike[Double] = js.native
+    def toArray(array: js.UndefOr[scala.Nothing], offset: Double): ArrayLike[Double] = js.native
     def toArray(array: js.Array[Double]): js.Array[Double] = js.native
     def toArray(array: js.Array[Double], offset: Double): js.Array[Double] = js.native
     def toArray(array: ArrayLike[Double]): ArrayLike[Double] = js.native
@@ -218,6 +226,8 @@ object matrix4Mod extends js.Object {
     	 */
     @JSName("toArray")
     def toArray_Array(): js.Array[Double] = js.native
+    @JSName("toArray")
+    def toArray_Array(array: js.UndefOr[scala.Nothing], offset: Double): js.Array[Double] = js.native
   }
   
 }

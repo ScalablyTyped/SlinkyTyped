@@ -22,7 +22,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapBottomIconOnly
 import typingsSlinky.materialUiCore.bottomNavigationActionBottomNavigationActionMod.BottomNavigationActionProps
-import typingsSlinky.materialUiCore.bottomNavigationActionMod.default
 import typingsSlinky.materialUiCore.buttonBaseButtonBaseMod.ButtonBaseActions
 import typingsSlinky.materialUiCore.buttonBaseButtonBaseMod.ButtonBaseProps
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
@@ -90,7 +89,7 @@ object BottomNavigationAction {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def TouchRippleProps(value: Partial[typingsSlinky.materialUiCore.touchRippleMod.TouchRippleProps]): this.type = set("TouchRippleProps", value.asInstanceOf[js.Any])
     @scala.inline

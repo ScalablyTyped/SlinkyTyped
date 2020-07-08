@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
 class Image ()
   extends typingsSlinky.std.HTMLImageElement {
   def this(width: Double) = this()
+  def this(width: js.UndefOr[scala.Nothing], height: Double) = this()
   def this(width: Double, height: Double) = this()
   /* CompleteClass */
   override val assignedSlot: typingsSlinky.std.HTMLSlotElement | Null = js.native
@@ -42,5 +43,9 @@ class Image ()
 object Image
   extends Instantiable0[org.scalajs.dom.raw.HTMLImageElement]
      with Instantiable1[/* width */ Double, org.scalajs.dom.raw.HTMLImageElement]
-     with Instantiable2[/* width */ Double, /* height */ Double, org.scalajs.dom.raw.HTMLImageElement]
+     with Instantiable2[
+      js.UndefOr[/* width */ Double], 
+      /* height */ Double, 
+      org.scalajs.dom.raw.HTMLImageElement
+    ]
 

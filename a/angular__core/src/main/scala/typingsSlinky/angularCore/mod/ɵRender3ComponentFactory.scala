@@ -15,6 +15,6 @@ class ɵRender3ComponentFactory[T] protected () extends ComponentFactory[T] {
   def this(componentDef: ɵComponentDef[_], ngModule: NgModuleRef[_]) = this()
   var componentDef: js.Any = js.native
   var isBoundToModule: Boolean = js.native
-  var ngModule: js.UndefOr[js.Any] = js.native
+  var ngModule: js.Any = js.native
 }
 

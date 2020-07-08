@@ -39,6 +39,12 @@ object reactionMod extends js.Object {
     def this(
       name: String,
       onInvalidate: js.Function0[Unit],
+      errorHandler: js.UndefOr[scala.Nothing],
+      requiresObservable: Boolean
+    ) = this()
+    def this(
+      name: String,
+      onInvalidate: js.Function0[Unit],
       errorHandler: js.Function2[/* error */ js.Any, /* derivation */ IDerivation, Unit],
       requiresObservable: Boolean
     ) = this()
@@ -50,7 +56,7 @@ object reactionMod extends js.Object {
     /* CompleteClass */
     override var dependenciesState: IDerivationState = js.native
     var diffValue: Double = js.native
-    var errorHandler: js.UndefOr[js.Any] = js.native
+    var errorHandler: js.Any = js.native
     var isDisposed: Boolean = js.native
     /* CompleteClass */
     override var isTracing: TraceMode = js.native

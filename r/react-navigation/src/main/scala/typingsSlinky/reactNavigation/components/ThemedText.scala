@@ -2,7 +2,6 @@ package typingsSlinky.reactNavigation.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.reactNavigation.mod.Themed.Text
 import typingsSlinky.reactNavigation.mod.ThemedTextProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +13,7 @@ object ThemedText {
   @js.native
   object component extends js.Object
   
-  def apply(p: ThemedTextProps): Default[tag.type, Text] = new Default[tag.type, Text](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ThemedText.type): Default[tag.type, Text] = new Default[tag.type, Text](js.Array(this.component, js.Dictionary.empty))()
+  def apply(p: ThemedTextProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ThemedText.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -21,7 +21,7 @@ trait ColumnGroupType[RecordType] extends js.Object {
   var children: ColumnsType[RecordType]
   var className: js.UndefOr[String] = js.undefined
   var colSpan: js.UndefOr[Double] = js.undefined
-  var defaultFilteredValue: js.UndefOr[js.Array[Key]] = js.undefined
+  var defaultFilteredValue: js.UndefOr[js.Array[Key] | Null] = js.undefined
   var defaultSortOrder: js.UndefOr[SortOrder] = js.undefined
   var ellipsis: js.UndefOr[CellEllipsisType] = js.undefined
   var filterDropdown: js.UndefOr[ReactElement | (js.Function1[/* props */ FilterDropdownProps, ReactElement])] = js.undefined
@@ -29,7 +29,7 @@ trait ColumnGroupType[RecordType] extends js.Object {
   var filterIcon: js.UndefOr[ReactElement | (js.Function1[/* filtered */ Boolean, ReactElement])] = js.undefined
   var filterMultiple: js.UndefOr[Boolean] = js.undefined
   var filtered: js.UndefOr[Boolean] = js.undefined
-  var filteredValue: js.UndefOr[js.Array[Key]] = js.undefined
+  var filteredValue: js.UndefOr[js.Array[Key] | Null] = js.undefined
   var filters: js.UndefOr[js.Array[ColumnFilterItem]] = js.undefined
   var fixed: js.UndefOr[FixedType] = js.undefined
   var key: js.UndefOr[typingsSlinky.rcTable.interfaceMod.Key] = js.undefined
@@ -101,6 +101,8 @@ object ColumnGroupType {
     @scala.inline
     def deleteDefaultFilteredValue: Self = this.set("defaultFilteredValue", js.undefined)
     @scala.inline
+    def setDefaultFilteredValueNull: Self = this.set("defaultFilteredValue", null)
+    @scala.inline
     def setDefaultSortOrder(value: SortOrder): Self = this.set("defaultSortOrder", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultSortOrder: Self = this.set("defaultSortOrder", js.undefined)
@@ -142,6 +144,8 @@ object ColumnGroupType {
     def setFilteredValue(value: js.Array[Key]): Self = this.set("filteredValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFilteredValue: Self = this.set("filteredValue", js.undefined)
+    @scala.inline
+    def setFilteredValueNull: Self = this.set("filteredValue", null)
     @scala.inline
     def setFilters(value: js.Array[ColumnFilterItem]): Self = this.set("filters", value.asInstanceOf[js.Any])
     @scala.inline

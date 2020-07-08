@@ -43,6 +43,7 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.butt
 import typingsSlinky.materialUiCore.materialUiCoreStrings.central
 import typingsSlinky.materialUiCore.materialUiCoreStrings.copy
 import typingsSlinky.materialUiCore.materialUiCoreStrings.date
+import typingsSlinky.materialUiCore.materialUiCoreStrings.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.descending
 import typingsSlinky.materialUiCore.materialUiCoreStrings.dialog
 import typingsSlinky.materialUiCore.materialUiCoreStrings.disabled
@@ -94,12 +95,12 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.tree
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.mod.PropTypes.Color
-import typingsSlinky.materialUiCore.svgIconMod.default
 import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.react.mod.ReactType
 import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
@@ -114,7 +115,7 @@ object SvgIcon {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, LegacyRef[js.Any] with js.Object] {
     @scala.inline
     def accentHeight(value: Double | String): this.type = set("accentHeight", value.asInstanceOf[js.Any])
     @scala.inline
@@ -354,7 +355,7 @@ object SvgIcon {
     @scala.inline
     def fontFamily(value: String): this.type = set("fontFamily", value.asInstanceOf[js.Any])
     @scala.inline
-    def fontSize(value: inherit | typingsSlinky.materialUiCore.materialUiCoreStrings.default | small | large): this.type = set("fontSize", value.asInstanceOf[js.Any])
+    def fontSize(value: inherit | default | small | large): this.type = set("fontSize", value.asInstanceOf[js.Any])
     @scala.inline
     def fontSizeAdjust(value: Double | String): this.type = set("fontSizeAdjust", value.asInstanceOf[js.Any])
     @scala.inline

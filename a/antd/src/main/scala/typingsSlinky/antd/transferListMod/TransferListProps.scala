@@ -24,7 +24,7 @@ trait TransferListProps extends TransferLocale {
   var direction: TransferDirection
   var disabled: js.UndefOr[Boolean] = js.undefined
   var filterOption: js.UndefOr[js.Function2[/* filterText */ String, /* item */ TransferItem, Boolean]] = js.undefined
-  var footer: js.UndefOr[js.Function1[/* props */ TransferListProps, ReactElement]] = js.undefined
+  var footer: js.UndefOr[js.Function1[/* props */ this.type, ReactElement]] = js.undefined
   var onItemRemove: js.UndefOr[js.Function1[/* keys */ js.Array[String], Unit]] = js.undefined
   var pagination: js.UndefOr[PaginationType] = js.undefined
   var prefixCls: String
@@ -111,7 +111,7 @@ object TransferListProps {
     @scala.inline
     def deleteFilterOption: Self = this.set("filterOption", js.undefined)
     @scala.inline
-    def setFooter(value: /* props */ TransferListProps => ReactElement): Self = this.set("footer", js.Any.fromFunction1(value))
+    def setFooter(value: TransferListProps => ReactElement): Self = this.set("footer", js.Any.fromFunction1(value))
     @scala.inline
     def deleteFooter: Self = this.set("footer", js.undefined)
     @scala.inline

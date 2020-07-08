@@ -3,7 +3,6 @@ package typingsSlinky.materialUiCore.components
 import slinky.core.facade.ReactRef
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.materialUiCore.rootRefMod.default
 import typingsSlinky.materialUiCore.rootRefRootRefMod.RootRefProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +16,7 @@ object RootRef {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def rootRefRefObject(value: ReactRef[js.Any]): this.type = set("rootRef", value.asInstanceOf[js.Any])
     @scala.inline

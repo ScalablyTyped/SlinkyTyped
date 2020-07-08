@@ -25,7 +25,6 @@ import typingsSlinky.materialUiCore.anon.PartialClassNameMapDialog
 import typingsSlinky.materialUiCore.anon.PartialPaperProps
 import typingsSlinky.materialUiCore.backdropBackdropMod.BackdropProps
 import typingsSlinky.materialUiCore.dialogDialogMod.DialogProps
-import typingsSlinky.materialUiCore.dialogMod.default
 import typingsSlinky.materialUiCore.materialUiCoreBooleans.`false`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
@@ -101,7 +100,7 @@ object Dialog {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def BackdropComponentFunctionComponent(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     @scala.inline

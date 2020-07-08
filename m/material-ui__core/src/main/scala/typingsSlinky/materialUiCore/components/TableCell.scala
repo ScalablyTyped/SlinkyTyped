@@ -75,7 +75,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.tree
 import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
-import typingsSlinky.materialUiCore.tableCellMod.default
 import typingsSlinky.materialUiCore.tableCellTableCellMod.Padding
 import typingsSlinky.materialUiCore.tableCellTableCellMod.SortDirection
 import typingsSlinky.materialUiCore.tableCellTableCellMod.TableCellBaseProps
@@ -99,7 +98,7 @@ object TableCell {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def abbr(value: String): this.type = set("abbr", value.asInstanceOf[js.Any])
     @scala.inline

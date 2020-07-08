@@ -50,6 +50,7 @@ object map extends js.Object {
     def add(customCopyrights: HTMLElement): ICopyrightsAccessor = js.native
     def addProvider(provider: ICopyrightsProvider): this.type = js.native
     def get(): js.Promise[js.Array[String | HTMLElement]] = js.native
+    def get(point: js.UndefOr[scala.Nothing], zoom: Double): js.Promise[js.Array[String | HTMLElement]] = js.native
     def get(point: js.Array[Double]): js.Promise[js.Array[String | HTMLElement]] = js.native
     def get(point: js.Array[Double], zoom: Double): js.Promise[js.Array[String | HTMLElement]] = js.native
     def getPromoLink(): String = js.native
@@ -111,6 +112,7 @@ object map extends js.Object {
          with IParentOnMap {
       def this(map: Map_) = this()
       def this(map: Map_, behaviors: js.Array[js.Array[String] | String]) = this()
+      def this(map: Map_, behaviors: js.UndefOr[scala.Nothing], options: js.Object) = this()
       def this(map: Map_, behaviors: js.Array[js.Array[String] | String], options: js.Object) = this()
       /* CompleteClass */
       override var events: IEventManager = js.native

@@ -35,19 +35,6 @@ trait SVGSVGElement
   val width: org.scalajs.dom.raw.SVGAnimatedLength = js.native
   val x: org.scalajs.dom.raw.SVGAnimatedLength = js.native
   val y: org.scalajs.dom.raw.SVGAnimatedLength = js.native
-  /**
-    * Appends an event listener for events whose type attribute value is type. The callback argument sets the callback that will be invoked when the event is dispatched.
-    * 
-    * The options argument sets listener-specific options. For compatibility this can be a boolean, in which case the method behaves exactly as if the value was specified as options's capture.
-    * 
-    * When set to true, options's capture prevents callback from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE. When false (or not present), callback will not be invoked when event's eventPhase attribute value is CAPTURING_PHASE. Either way, callback will be invoked if event's eventPhase attribute value is AT_TARGET.
-    * 
-    * When set to true, options's passive indicates that the callback will not cancel the event by invoking preventDefault(). This is used to enable performance optimizations described in § 2.8 Observing event listeners.
-    * 
-    * When set to true, options's once indicates that the callback will only be invoked once after which the event listener will be removed.
-    * 
-    * The event listener is appended to target's event listener list and is not appended if it has the same type, callback, and capture.
-    */
   /* InferMemberOverrides */
   override def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -114,9 +101,6 @@ trait SVGSVGElement
     (org.scalajs.dom.raw.SVGCircleElement | org.scalajs.dom.raw.SVGEllipseElement | org.scalajs.dom.raw.SVGImageElement | org.scalajs.dom.raw.SVGLineElement | org.scalajs.dom.raw.SVGPathElement | org.scalajs.dom.raw.SVGPolygonElement | org.scalajs.dom.raw.SVGPolylineElement | org.scalajs.dom.raw.SVGRectElement | org.scalajs.dom.raw.SVGTextElement | org.scalajs.dom.raw.SVGUseElement) with org.scalajs.dom.raw.Node
   ] = js.native
   def pauseAnimations(): Unit = js.native
-  /**
-    * Removes the event listener in target's event listener list with the same type, callback, and options.
-    */
   /* InferMemberOverrides */
   override def removeEventListener(`type`: java.lang.String, callback: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */

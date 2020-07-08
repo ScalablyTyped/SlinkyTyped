@@ -42,6 +42,7 @@ object sphericalHarmonics3Mod extends js.Object {
     	 * @return The created or provided array.
     	 */
     def toArray(): js.Array[Double] = js.native
+    def toArray(array: js.UndefOr[scala.Nothing], offset: Double): js.Array[Double] = js.native
     def toArray(array: js.Array[Double]): js.Array[Double] = js.native
     def toArray(array: js.Array[Double], offset: Double): js.Array[Double] = js.native
     /**

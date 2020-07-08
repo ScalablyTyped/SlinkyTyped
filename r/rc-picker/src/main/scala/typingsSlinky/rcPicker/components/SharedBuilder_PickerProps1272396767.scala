@@ -271,5 +271,7 @@ class SharedBuilder_PickerProps1272396767[R <: js.Object, DateType] (val args: j
   def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
   @scala.inline
   def value(value: DateType): this.type = set("value", value.asInstanceOf[js.Any])
+  @scala.inline
+  def valueNull: this.type = set("value", null)
 }
 

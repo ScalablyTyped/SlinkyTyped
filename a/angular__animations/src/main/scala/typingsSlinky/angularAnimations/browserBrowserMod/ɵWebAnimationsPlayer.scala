@@ -33,7 +33,7 @@ class ɵWebAnimationsPlayer protected () extends AnimationPlayer {
   var _onStartFns: js.Any = js.native
   var _preparePlayerBeforeStart: js.Any = js.native
   var _resetDomPlayerState: js.Any = js.native
-  var _specialStyles: js.UndefOr[js.Any] = js.native
+  var _specialStyles: js.Any = js.native
   var _started: js.Any = js.native
   var currentSnapshot: StringDictionary[String | Double] = js.native
   val domPlayer: DOMAnimation = js.native

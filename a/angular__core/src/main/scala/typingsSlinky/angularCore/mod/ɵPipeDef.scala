@@ -31,7 +31,7 @@ trait ɵPipeDef[T] extends js.Object {
   /**
     * Factory function used to create a new pipe instance.
     */
-  def factory(): T = js.native
+  def factory(t: js.UndefOr[scala.Nothing]): T = js.native
   /**
     * Subclasses without an explicit constructor call through to the factory of their base
     * definition, providing it with their own constructor to instantiate.

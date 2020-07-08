@@ -32,6 +32,12 @@ trait TransferList
   def getCheckBox(
     filteredItems: js.Array[TransferItem],
     onItemSelectAll: js.Function2[/* dataSource */ js.Array[String], /* checkAll */ Boolean, Unit],
+    showSelectAll: js.UndefOr[scala.Nothing],
+    disabled: Boolean
+  ): `false` | ReactElement = js.native
+  def getCheckBox(
+    filteredItems: js.Array[TransferItem],
+    onItemSelectAll: js.Function2[/* dataSource */ js.Array[String], /* checkAll */ Boolean, Unit],
     showSelectAll: Boolean
   ): `false` | ReactElement = js.native
   def getCheckBox(
@@ -60,7 +66,54 @@ trait TransferList
     notFoundContent: ReactElement,
     filteredRenderItems: js.Array[RenderedItem],
     checkedKeys: js.Array[String],
+    renderList: js.UndefOr[scala.Nothing],
+    showSearch: js.UndefOr[scala.Nothing],
+    disabled: Boolean
+  ): ReactElement = js.native
+  def getListBody(
+    prefixCls: String,
+    searchPlaceholder: String,
+    filterValue: String,
+    filteredItems: js.Array[TransferItem],
+    notFoundContent: ReactElement,
+    filteredRenderItems: js.Array[RenderedItem],
+    checkedKeys: js.Array[String],
+    renderList: js.UndefOr[scala.Nothing],
+    showSearch: Boolean
+  ): ReactElement = js.native
+  def getListBody(
+    prefixCls: String,
+    searchPlaceholder: String,
+    filterValue: String,
+    filteredItems: js.Array[TransferItem],
+    notFoundContent: ReactElement,
+    filteredRenderItems: js.Array[RenderedItem],
+    checkedKeys: js.Array[String],
+    renderList: js.UndefOr[scala.Nothing],
+    showSearch: Boolean,
+    disabled: Boolean
+  ): ReactElement = js.native
+  def getListBody(
+    prefixCls: String,
+    searchPlaceholder: String,
+    filterValue: String,
+    filteredItems: js.Array[TransferItem],
+    notFoundContent: ReactElement,
+    filteredRenderItems: js.Array[RenderedItem],
+    checkedKeys: js.Array[String],
     renderList: RenderListFunction
+  ): ReactElement = js.native
+  def getListBody(
+    prefixCls: String,
+    searchPlaceholder: String,
+    filterValue: String,
+    filteredItems: js.Array[TransferItem],
+    notFoundContent: ReactElement,
+    filteredRenderItems: js.Array[RenderedItem],
+    checkedKeys: js.Array[String],
+    renderList: RenderListFunction,
+    showSearch: js.UndefOr[scala.Nothing],
+    disabled: Boolean
   ): ReactElement = js.native
   def getListBody(
     prefixCls: String,
@@ -90,6 +143,7 @@ trait TransferList
   def handleFilter(e: ChangeEvent[HTMLInputElement]): Unit = js.native
   def matchFilter(text: String, item: TransferItem): Boolean = js.native
   def renderItem(item: TransferItem): RenderedItem = js.native
-  def renderListBody(renderList: js.UndefOr[RenderListFunction], props: TransferListBodyProps): BodyContent = js.native
+  def renderListBody(renderList: js.UndefOr[scala.Nothing], props: TransferListBodyProps): BodyContent = js.native
+  def renderListBody(renderList: RenderListFunction, props: TransferListBodyProps): BodyContent = js.native
 }
 

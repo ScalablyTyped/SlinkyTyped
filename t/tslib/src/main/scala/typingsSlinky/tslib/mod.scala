@@ -24,6 +24,8 @@ object mod extends js.Object {
   @JSName("__decorate")
   def decorate(decorators: js.Array[js.Function], target: js.Any): js.Any = js.native
   @JSName("__decorate")
+  def decorate(decorators: js.Array[js.Function], target: js.Any, key: js.UndefOr[scala.Nothing], desc: js.Any): js.Any = js.native
+  @JSName("__decorate")
   def decorate(decorators: js.Array[js.Function], target: js.Any, key: String): js.Any = js.native
   @JSName("__decorate")
   def decorate(decorators: js.Array[js.Function], target: js.Any, key: String, desc: js.Any): js.Any = js.native

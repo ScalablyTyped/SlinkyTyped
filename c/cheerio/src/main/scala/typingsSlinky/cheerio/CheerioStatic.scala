@@ -17,6 +17,7 @@ trait CheerioStatic extends CheerioSelector {
   def html(selector: String): String = js.native
   def html(selector: String, options: CheerioOptionsInterface): String = js.native
   def parseHTML(data: String): js.Array[Document] = js.native
+  def parseHTML(data: String, context: js.UndefOr[scala.Nothing], keepScripts: Boolean): js.Array[Document] = js.native
   def parseHTML(data: String, context: Document): js.Array[Document] = js.native
   def parseHTML(data: String, context: Document, keepScripts: Boolean): js.Array[Document] = js.native
   def root(): Cheerio = js.native

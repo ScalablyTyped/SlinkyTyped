@@ -13,6 +13,7 @@ class PluralRulesCls ()
   extends typingsSlinky.std.Intl.PluralRules {
   def this(locales: String) = this()
   def this(locales: js.Array[String]) = this()
+  def this(locales: js.UndefOr[scala.Nothing], options: PluralRulesOptions) = this()
   def this(locales: String, options: PluralRulesOptions) = this()
   def this(locales: js.Array[String], options: PluralRulesOptions) = this()
   /* CompleteClass */

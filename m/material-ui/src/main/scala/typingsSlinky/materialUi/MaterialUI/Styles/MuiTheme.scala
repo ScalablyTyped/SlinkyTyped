@@ -4,10 +4,8 @@ import typingsSlinky.materialUi.anon.AccentColor
 import typingsSlinky.materialUi.anon.ActionColor
 import typingsSlinky.materialUi.anon.BackgroundColor
 import typingsSlinky.materialUi.anon.BackgroundColorColor
-import typingsSlinky.materialUi.anon.BackgroundColorString
 import typingsSlinky.materialUi.anon.BodyColor
 import typingsSlinky.materialUi.anon.BorderColor
-import typingsSlinky.materialUi.anon.BorderColorString
 import typingsSlinky.materialUi.anon.BorderColorTextColor
 import typingsSlinky.materialUi.anon.BoxColor
 import typingsSlinky.materialUi.anon.ButtonFilterColor
@@ -17,7 +15,6 @@ import typingsSlinky.materialUi.anon.CheckedColor
 import typingsSlinky.materialUi.anon.ClockCircleColor
 import typingsSlinky.materialUi.anon.Color
 import typingsSlinky.materialUi.anon.ColorFontWeight
-import typingsSlinky.materialUi.anon.ColorString
 import typingsSlinky.materialUi.anon.ConnectorLineColor
 import typingsSlinky.materialUi.anon.ContainerBackgroundColor
 import typingsSlinky.materialUi.anon.DataHeight
@@ -41,6 +38,9 @@ import typingsSlinky.materialUi.anon.TapHighlightColor
 import typingsSlinky.materialUi.anon.TextColor
 import typingsSlinky.materialUi.anon.Width
 import typingsSlinky.materialUi.anon.ZDepthShadows
+import typingsSlinky.materialUi.anon.`0`
+import typingsSlinky.materialUi.anon.`1`
+import typingsSlinky.materialUi.anon.`2`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -66,29 +66,29 @@ trait MuiTheme extends js.Object {
   var fontFamily: js.UndefOr[String] = js.undefined
   var gridTile: js.UndefOr[TextColor] = js.undefined
   var icon: js.UndefOr[BackgroundColorColor] = js.undefined
-  var inkBar: js.UndefOr[BackgroundColorString] = js.undefined
+  var inkBar: js.UndefOr[`0`] = js.undefined
   var isRtl: js.UndefOr[Boolean] = js.undefined
   var listItem: js.UndefOr[LeftIconColor] = js.undefined
   var menu: js.UndefOr[ContainerBackgroundColor] = js.undefined
   var menuItem: js.UndefOr[DataHeight] = js.undefined
   var menuSubheader: js.UndefOr[BorderColor] = js.undefined
-  var overlay: js.UndefOr[BackgroundColorString] = js.undefined
+  var overlay: js.UndefOr[`0`] = js.undefined
   var palette: js.UndefOr[ThemePalette] = js.undefined
   var paper: js.UndefOr[ZDepthShadows] = js.undefined
   var radioButton: js.UndefOr[CheckedColor] = js.undefined
   var raisedButton: js.UndefOr[DisabledColor] = js.undefined
   var rawTheme: js.UndefOr[RawTheme] = js.undefined
   var refreshIndicator: js.UndefOr[LoadingStrokeColor] = js.undefined
-  var ripple: js.UndefOr[ColorString] = js.undefined
+  var ripple: js.UndefOr[`1`] = js.undefined
   var slider: js.UndefOr[HandleColorZero] = js.undefined
   var snackbar: js.UndefOr[ActionColor] = js.undefined
   var spacing: js.UndefOr[Spacing] = js.undefined
   var stepper: js.UndefOr[ConnectorLineColor] = js.undefined
   var subheader: js.UndefOr[ColorFontWeight] = js.undefined
-  var svgIcon: js.UndefOr[ColorString] = js.undefined
-  var table: js.UndefOr[BackgroundColorString] = js.undefined
+  var svgIcon: js.UndefOr[`1`] = js.undefined
+  var table: js.UndefOr[`0`] = js.undefined
   var tableFooter: js.UndefOr[BorderColorTextColor] = js.undefined
-  var tableHeader: js.UndefOr[BorderColorString] = js.undefined
+  var tableHeader: js.UndefOr[`2`] = js.undefined
   var tableHeaderColumn: js.UndefOr[typingsSlinky.materialUi.anon.Spacing] = js.undefined
   var tableRow: js.UndefOr[HoverColor] = js.undefined
   var tableRowColumn: js.UndefOr[HeightSpacing] = js.undefined
@@ -200,7 +200,7 @@ object MuiTheme {
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
-    def setInkBar(value: BackgroundColorString): Self = this.set("inkBar", value.asInstanceOf[js.Any])
+    def setInkBar(value: `0`): Self = this.set("inkBar", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInkBar: Self = this.set("inkBar", js.undefined)
     @scala.inline
@@ -224,7 +224,7 @@ object MuiTheme {
     @scala.inline
     def deleteMenuSubheader: Self = this.set("menuSubheader", js.undefined)
     @scala.inline
-    def setOverlay(value: BackgroundColorString): Self = this.set("overlay", value.asInstanceOf[js.Any])
+    def setOverlay(value: `0`): Self = this.set("overlay", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOverlay: Self = this.set("overlay", js.undefined)
     @scala.inline
@@ -252,7 +252,7 @@ object MuiTheme {
     @scala.inline
     def deleteRefreshIndicator: Self = this.set("refreshIndicator", js.undefined)
     @scala.inline
-    def setRipple(value: ColorString): Self = this.set("ripple", value.asInstanceOf[js.Any])
+    def setRipple(value: `1`): Self = this.set("ripple", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRipple: Self = this.set("ripple", js.undefined)
     @scala.inline
@@ -276,11 +276,11 @@ object MuiTheme {
     @scala.inline
     def deleteSubheader: Self = this.set("subheader", js.undefined)
     @scala.inline
-    def setSvgIcon(value: ColorString): Self = this.set("svgIcon", value.asInstanceOf[js.Any])
+    def setSvgIcon(value: `1`): Self = this.set("svgIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSvgIcon: Self = this.set("svgIcon", js.undefined)
     @scala.inline
-    def setTable(value: BackgroundColorString): Self = this.set("table", value.asInstanceOf[js.Any])
+    def setTable(value: `0`): Self = this.set("table", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTable: Self = this.set("table", js.undefined)
     @scala.inline
@@ -288,7 +288,7 @@ object MuiTheme {
     @scala.inline
     def deleteTableFooter: Self = this.set("tableFooter", js.undefined)
     @scala.inline
-    def setTableHeader(value: BorderColorString): Self = this.set("tableHeader", value.asInstanceOf[js.Any])
+    def setTableHeader(value: `2`): Self = this.set("tableHeader", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTableHeader: Self = this.set("tableHeader", js.undefined)
     @scala.inline

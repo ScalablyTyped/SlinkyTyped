@@ -1,8 +1,8 @@
 package typingsSlinky.angularForms.mod
 
 import typingsSlinky.angularForms.anon.EmitEvent
-import typingsSlinky.angularForms.anon.EmitEventBoolean
 import typingsSlinky.angularForms.anon.OnlySelf
+import typingsSlinky.angularForms.anon.`0`
 import typingsSlinky.rxjs.mod.Observable_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,16 +10,16 @@ import scala.scalajs.js.annotation._
 
 @JSImport("@angular/forms", "AbstractControl")
 @js.native
+/**
+  * Initialize the AbstractControl instance.
+  *
+  * @param validator The function that determines the synchronous validity of this control.
+  * @param asyncValidator The function that determines the asynchronous validity of this
+  * control.
+  */
 abstract class AbstractControl () extends js.Object {
   def this(validator: ValidatorFn) = this()
   def this(validator: Null, asyncValidator: AsyncValidatorFn) = this()
-  /**
-    * Initialize the AbstractControl instance.
-    *
-    * @param validator The function that determines the synchronous validity of this control.
-    * @param asyncValidator The function that determines the asynchronous validity of this
-    * control.
-    */
   def this(validator: ValidatorFn, asyncValidator: AsyncValidatorFn) = this()
   var _asyncValidationSubscription: js.Any = js.native
   var _calculateStatus: js.Any = js.native
@@ -402,10 +402,9 @@ abstract class AbstractControl () extends js.Object {
     * Resets the control. Abstract method (implemented in sub-classes).
     */
   def reset(): Unit = js.native
+  def reset(value: js.UndefOr[scala.Nothing], options: js.Object): Unit = js.native
   def reset(value: js.Any): Unit = js.native
   def reset(value: js.Any, options: js.Object): Unit = js.native
-  def setAsyncValidators(): Unit = js.native
-  def setAsyncValidators(newValidator: js.Array[AsyncValidatorFn]): Unit = js.native
   /**
     * Sets the async validators that are active on this control. Calling this
     * overwrites any existing async validators.
@@ -414,9 +413,9 @@ abstract class AbstractControl () extends js.Object {
     * `updateValueAndValidity()` for the new validation to take effect.
     *
     */
+  def setAsyncValidators(): Unit = js.native
+  def setAsyncValidators(newValidator: js.Array[AsyncValidatorFn]): Unit = js.native
   def setAsyncValidators(newValidator: AsyncValidatorFn): Unit = js.native
-  def setErrors(): Unit = js.native
-  def setErrors(errors: Null, opts: EmitEventBoolean): Unit = js.native
   /**
     * Sets errors on a form control when running validations manually, rather than automatically.
     *
@@ -439,15 +438,15 @@ abstract class AbstractControl () extends js.Object {
     * expect(login.valid).toEqual(true);
     * ```
     */
+  def setErrors(): Unit = js.native
+  def setErrors(errors: Null, opts: `0`): Unit = js.native
   def setErrors(errors: ValidationErrors): Unit = js.native
-  def setErrors(errors: ValidationErrors, opts: EmitEventBoolean): Unit = js.native
+  def setErrors(errors: ValidationErrors, opts: `0`): Unit = js.native
   def setParent(parent: FormArray): Unit = js.native
   /**
     * @param parent Sets the parent of the control
     */
   def setParent(parent: FormGroup): Unit = js.native
-  def setValidators(): Unit = js.native
-  def setValidators(newValidator: js.Array[ValidatorFn]): Unit = js.native
   /**
     * Sets the synchronous validators that are active on this control.  Calling
     * this overwrites any existing sync validators.
@@ -456,6 +455,8 @@ abstract class AbstractControl () extends js.Object {
     * `updateValueAndValidity()` for the new validation to take effect.
     *
     */
+  def setValidators(): Unit = js.native
+  def setValidators(newValidator: js.Array[ValidatorFn]): Unit = js.native
   def setValidators(newValidator: ValidatorFn): Unit = js.native
   /**
     * Sets the value of the control. Abstract method (implemented in sub-classes).

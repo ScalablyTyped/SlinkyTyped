@@ -5,7 +5,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.createBreakpointsMod.Breakpoint
 import typingsSlinky.materialUiCore.hiddenHiddenMod.HiddenProps
-import typingsSlinky.materialUiCore.hiddenMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.css
 import typingsSlinky.materialUiCore.materialUiCoreStrings.js_
 import typingsSlinky.materialUiCore.withStylesMod.ClassNameMap
@@ -24,7 +23,7 @@ object Hidden {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

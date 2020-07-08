@@ -3,7 +3,6 @@ package typingsSlinky.materialUiCore.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.clickAwayListenerClickAwayListenerMod.ClickAwayListenerProps
-import typingsSlinky.materialUiCore.clickAwayListenerMod.default
 import typingsSlinky.materialUiCore.materialUiCoreBooleans.`false`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.onClick
 import typingsSlinky.materialUiCore.materialUiCoreStrings.onMouseDown
@@ -23,7 +22,7 @@ object ClickAwayListener {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def mouseEvent(value: onClick | onMouseDown | onMouseUp | `false`): this.type = set("mouseEvent", value.asInstanceOf[js.Any])
     @scala.inline

@@ -24,7 +24,34 @@ object fileSystemMod extends js.Object {
   class DownloadResumable protected () extends js.Object {
     def this(url: String, fileUri: String) = this()
     def this(url: String, fileUri: String, options: DownloadOptions) = this()
+    def this(
+      url: String,
+      fileUri: String,
+      options: js.UndefOr[scala.Nothing],
+      callback: DownloadProgressCallback
+    ) = this()
     def this(url: String, fileUri: String, options: DownloadOptions, callback: DownloadProgressCallback) = this()
+    def this(
+      url: String,
+      fileUri: String,
+      options: js.UndefOr[scala.Nothing],
+      callback: js.UndefOr[scala.Nothing],
+      resumeData: String
+    ) = this()
+    def this(
+      url: String,
+      fileUri: String,
+      options: js.UndefOr[scala.Nothing],
+      callback: DownloadProgressCallback,
+      resumeData: String
+    ) = this()
+    def this(
+      url: String,
+      fileUri: String,
+      options: DownloadOptions,
+      callback: js.UndefOr[scala.Nothing],
+      resumeData: String
+    ) = this()
     def this(
       url: String,
       fileUri: String,
@@ -53,7 +80,34 @@ object fileSystemMod extends js.Object {
   val documentDirectory: String | Null = js.native
   def copyAsync(options: From): js.Promise[Unit] = js.native
   def createDownloadResumable(uri: String, fileUri: String): DownloadResumable = js.native
+  def createDownloadResumable(
+    uri: String,
+    fileUri: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: js.UndefOr[scala.Nothing],
+    resumeData: String
+  ): DownloadResumable = js.native
+  def createDownloadResumable(
+    uri: String,
+    fileUri: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: DownloadProgressCallback
+  ): DownloadResumable = js.native
+  def createDownloadResumable(
+    uri: String,
+    fileUri: String,
+    options: js.UndefOr[scala.Nothing],
+    callback: DownloadProgressCallback,
+    resumeData: String
+  ): DownloadResumable = js.native
   def createDownloadResumable(uri: String, fileUri: String, options: DownloadOptions): DownloadResumable = js.native
+  def createDownloadResumable(
+    uri: String,
+    fileUri: String,
+    options: DownloadOptions,
+    callback: js.UndefOr[scala.Nothing],
+    resumeData: String
+  ): DownloadResumable = js.native
   def createDownloadResumable(uri: String, fileUri: String, options: DownloadOptions, callback: DownloadProgressCallback): DownloadResumable = js.native
   def createDownloadResumable(
     uri: String,

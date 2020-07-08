@@ -36,7 +36,23 @@ object templateParserMod extends js.Object {
   @js.native
   class TemplateParseResult () extends js.Object {
     def this(templateAst: js.Array[TemplateAst]) = this()
+    def this(templateAst: js.UndefOr[scala.Nothing], usedPipes: js.Array[CompilePipeSummary]) = this()
     def this(templateAst: js.Array[TemplateAst], usedPipes: js.Array[CompilePipeSummary]) = this()
+    def this(
+      templateAst: js.UndefOr[scala.Nothing],
+      usedPipes: js.UndefOr[scala.Nothing],
+      errors: js.Array[ParseError]
+    ) = this()
+    def this(
+      templateAst: js.UndefOr[scala.Nothing],
+      usedPipes: js.Array[CompilePipeSummary],
+      errors: js.Array[ParseError]
+    ) = this()
+    def this(
+      templateAst: js.Array[TemplateAst],
+      usedPipes: js.UndefOr[scala.Nothing],
+      errors: js.Array[ParseError]
+    ) = this()
     def this(
       templateAst: js.Array[TemplateAst],
       usedPipes: js.Array[CompilePipeSummary],

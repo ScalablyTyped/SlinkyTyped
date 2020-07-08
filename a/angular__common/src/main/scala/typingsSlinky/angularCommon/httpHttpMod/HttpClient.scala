@@ -15,18 +15,18 @@ import typingsSlinky.angularCommon.anon.ObserveParamsReportProgressResponseType
 import typingsSlinky.angularCommon.anon.ObserveParamsReportProgressResponseTypeWithCredentials
 import typingsSlinky.angularCommon.anon.ObserveResponseType
 import typingsSlinky.angularCommon.anon.ParamsReportProgress
-import typingsSlinky.angularCommon.anon.ParamsReportProgressBoolean
 import typingsSlinky.angularCommon.anon.ParamsReportProgressResponseType
 import typingsSlinky.angularCommon.anon.ParamsReportProgressResponseTypeWithCredentials
 import typingsSlinky.angularCommon.anon.ReportProgress
-import typingsSlinky.angularCommon.anon.ReportProgressBoolean
-import typingsSlinky.angularCommon.anon.ReportProgressBooleanResponseType
 import typingsSlinky.angularCommon.anon.ReportProgressResponseType
 import typingsSlinky.angularCommon.anon.ReportProgressResponseTypeWithCredentials
 import typingsSlinky.angularCommon.anon.ResponseType
 import typingsSlinky.angularCommon.anon.ResponseTypeWithCredentials
 import typingsSlinky.angularCommon.anon.WithCredentials
-import typingsSlinky.angularCommon.anon.WithCredentialsBoolean
+import typingsSlinky.angularCommon.anon.`0`
+import typingsSlinky.angularCommon.anon.`1`
+import typingsSlinky.angularCommon.anon.`2`
+import typingsSlinky.angularCommon.anon.`3`
 import typingsSlinky.rxjs.mod.Observable_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -101,17 +101,6 @@ class HttpClient protected () extends js.Object {
     */
   def delete(url: String, options: ObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[js.Object]] = js.native
   /**
-    * Constructs a `DELETE` request the interprets the body as a JSON object and returns
-    * the full `HTTPResponse`.
-    *
-    * @param url     The endpoint URL.
-    * @param options The HTTP options to send with the request.
-    *
-    * @return An `Observable` of the `HTTPResponse`, with the response body of type `Object`.
-    *
-    */
-  def delete(url: String, options: ParamsReportProgressBoolean): Observable_[HttpResponse[js.Object]] = js.native
-  /**
     * Constructs a `DELETE` request that interprets the body as an `ArrayBuffer`
     *  and returns the response as an `ArrayBuffer`.
     *
@@ -133,17 +122,6 @@ class HttpClient protected () extends js.Object {
     */
   def delete(url: String, options: ParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[Blob]] = js.native
   /**
-    * Constructs a `DELETE` request that interprets the body as a `Blob` and returns the full
-    * `HTTPResponse`.
-    *
-    * @param url     The endpoint URL.
-    * @param options The HTTP options to send with the request.
-    *
-    * @return An `Observable` of the `HTTPResponse`, with the response body of type `Blob`.
-    */
-  def delete(url: String, options: ReportProgressBoolean): Observable_[HttpResponse[Blob]] = js.native
-  def delete(url: String, options: ReportProgressBooleanResponseType): Observable_[js.Object] = js.native
-  /**
     * Constructs a `DELETE` request that interprets the body as a `Blob` and returns
     * the response as a `Blob`.
     *
@@ -154,6 +132,16 @@ class HttpClient protected () extends js.Object {
     */
   def delete(url: String, options: ReportProgressResponseTypeWithCredentials): Observable_[Blob] = js.native
   /**
+    * Constructs a `DELETE` request that interprets the body as a `Blob` and returns the full
+    * `HTTPResponse`.
+    *
+    * @param url     The endpoint URL.
+    * @param options The HTTP options to send with the request.
+    *
+    * @return An `Observable` of the `HTTPResponse`, with the response body of type `Blob`.
+    */
+  def delete(url: String, options: `0`): Observable_[HttpResponse[Blob]] = js.native
+  /**
     * Constructs a `DELETE` request that interprets the body as a text stream and
     *  returns the full `HTTPResponse`.
     *
@@ -162,7 +150,19 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the full `HTTPResponse`, with the response body of type string.
     */
-  def delete(url: String, options: WithCredentialsBoolean): Observable_[HttpResponse[String]] = js.native
+  def delete(url: String, options: `1`): Observable_[HttpResponse[String]] = js.native
+  /**
+    * Constructs a `DELETE` request the interprets the body as a JSON object and returns
+    * the full `HTTPResponse`.
+    *
+    * @param url     The endpoint URL.
+    * @param options The HTTP options to send with the request.
+    *
+    * @return An `Observable` of the `HTTPResponse`, with the response body of type `Object`.
+    *
+    */
+  def delete(url: String, options: `2`): Observable_[HttpResponse[js.Object]] = js.native
+  def delete(url: String, options: `3`): Observable_[js.Object] = js.native
   /**
     * Constructs a DELETE request that interprets the body as a JSON object and returns
     * the response in a given type.
@@ -196,9 +196,9 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of the `HTTPResponse`, with the response body of the requested type.
     */
   @JSName("delete")
-  def delete_T[T](url: String, options: ParamsReportProgressBoolean): Observable_[HttpResponse[T]] = js.native
+  def delete_T[T](url: String, options: `2`): Observable_[HttpResponse[T]] = js.native
   @JSName("delete")
-  def delete_T[T](url: String, options: ReportProgressBooleanResponseType): Observable_[T] = js.native
+  def delete_T[T](url: String, options: `3`): Observable_[T] = js.native
   /**
     * Constructs a `GET` request that interprets the body as a JSON object and
     * returns the response body as a JSON object.
@@ -263,17 +263,6 @@ class HttpClient protected () extends js.Object {
     */
   def get(url: String, options: ObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[js.Object]] = js.native
   /**
-    * Constructs a `GET` request that interprets the body as a JSON object and
-    * returns the full `HTTPResponse`.
-    *
-    * @param url     The endpoint URL.
-    * @param options The HTTP options to send with the request.
-    *
-    * @return An `Observable` of the full `HttpResponse`,
-    * with the response body of type `Object`.
-    */
-  def get(url: String, options: ParamsReportProgressBoolean): Observable_[HttpResponse[js.Object]] = js.native
-  /**
     * Constructs a `GET` request that interprets the body as an `ArrayBuffer` and returns the response in
     *  an `ArrayBuffer`.
     *
@@ -294,18 +283,6 @@ class HttpClient protected () extends js.Object {
     */
   def get(url: String, options: ParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[Blob]] = js.native
   /**
-    * Constructs a `GET` request that interprets the body as a `Blob` and
-    * returns the full `HTTPResponse`.
-    *
-    * @param url     The endpoint URL.
-    * @param options The HTTP options to send with the request.
-    *
-    * @return An `Observable` of the `HTTPResponse` for the request,
-    *  with the response body as a `Blob`.
-    */
-  def get(url: String, options: ReportProgressBoolean): Observable_[HttpResponse[Blob]] = js.native
-  def get(url: String, options: ReportProgressBooleanResponseType): Observable_[js.Object] = js.native
-  /**
     * Constructs a `GET` request that interprets the body as a `Blob`
     * and returns the response as a `Blob`.
     *
@@ -316,6 +293,17 @@ class HttpClient protected () extends js.Object {
     */
   def get(url: String, options: ReportProgressResponseTypeWithCredentials): Observable_[Blob] = js.native
   /**
+    * Constructs a `GET` request that interprets the body as a `Blob` and
+    * returns the full `HTTPResponse`.
+    *
+    * @param url     The endpoint URL.
+    * @param options The HTTP options to send with the request.
+    *
+    * @return An `Observable` of the `HTTPResponse` for the request,
+    *  with the response body as a `Blob`.
+    */
+  def get(url: String, options: `0`): Observable_[HttpResponse[Blob]] = js.native
+  /**
     * Constructs a `GET` request that interprets the body as a text stream and
     * returns the full `HTTPResponse`.
     *
@@ -325,7 +313,19 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of the `HTTPResponse` for the request,
     * with the response body of type string.
     */
-  def get(url: String, options: WithCredentialsBoolean): Observable_[HttpResponse[String]] = js.native
+  def get(url: String, options: `1`): Observable_[HttpResponse[String]] = js.native
+  /**
+    * Constructs a `GET` request that interprets the body as a JSON object and
+    * returns the full `HTTPResponse`.
+    *
+    * @param url     The endpoint URL.
+    * @param options The HTTP options to send with the request.
+    *
+    * @return An `Observable` of the full `HttpResponse`,
+    * with the response body of type `Object`.
+    */
+  def get(url: String, options: `2`): Observable_[HttpResponse[js.Object]] = js.native
+  def get(url: String, options: `3`): Observable_[js.Object] = js.native
   /**
     * Constructs a `GET` request that interprets the body as a JSON object and returns
     * the response body in a given type.
@@ -358,9 +358,9 @@ class HttpClient protected () extends js.Object {
     * with a response body in the requested type.
     */
   @JSName("get")
-  def get_T[T](url: String, options: ParamsReportProgressBoolean): Observable_[HttpResponse[T]] = js.native
+  def get_T[T](url: String, options: `2`): Observable_[HttpResponse[T]] = js.native
   @JSName("get")
-  def get_T[T](url: String, options: ReportProgressBooleanResponseType): Observable_[T] = js.native
+  def get_T[T](url: String, options: `3`): Observable_[T] = js.native
   /**
     * Constructs a `HEAD` request that interprets the body as a JSON object and
     * returns the response body as a JSON object.
@@ -425,17 +425,6 @@ class HttpClient protected () extends js.Object {
     */
   def head(url: String, options: ObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[js.Object]] = js.native
   /**
-    * Constructs a `HEAD` request that interprets the body as a JSON object and
-    * returns the full `HTTPResponse`.
-    *
-    * @param url     The endpoint URL.
-    * @param options The HTTP options to send with the request.
-    *
-    * @return An `Observable` of the `HTTPResponse` for the request,
-    * with the response body of type `Object`.
-    */
-  def head(url: String, options: ParamsReportProgressBoolean): Observable_[HttpResponse[js.Object]] = js.native
-  /**
     * Constructs a `HEAD` request that interprets the body as an `ArrayBuffer` and
     * returns the response as an `ArrayBuffer`.
     *
@@ -458,18 +447,6 @@ class HttpClient protected () extends js.Object {
   def head(url: String, options: ParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[Blob]] = js.native
   /**
     * Constructs a `HEAD` request that interprets the body as a `Blob` and returns
-    * the full `HTTPResponse`.
-    *
-    * @param url     The endpoint URL.
-    * @param options The HTTP options to send with the request.
-    *
-    * @return An `Observable` of the `HTTPResponse` for the request,
-    * with the response body as a blob.
-    */
-  def head(url: String, options: ReportProgressBoolean): Observable_[HttpResponse[Blob]] = js.native
-  def head(url: String, options: ReportProgressBooleanResponseType): Observable_[js.Object] = js.native
-  /**
-    * Constructs a `HEAD` request that interprets the body as a `Blob` and returns
     * the response as a `Blob`.
     *
     * @param url     The endpoint URL.
@@ -478,6 +455,17 @@ class HttpClient protected () extends js.Object {
     * @return  An `Observable` of the response, with the response body as a `Blob`.
     */
   def head(url: String, options: ReportProgressResponseTypeWithCredentials): Observable_[Blob] = js.native
+  /**
+    * Constructs a `HEAD` request that interprets the body as a `Blob` and returns
+    * the full `HTTPResponse`.
+    *
+    * @param url     The endpoint URL.
+    * @param options The HTTP options to send with the request.
+    *
+    * @return An `Observable` of the `HTTPResponse` for the request,
+    * with the response body as a blob.
+    */
+  def head(url: String, options: `0`): Observable_[HttpResponse[Blob]] = js.native
   /**
     * Constructs a `HEAD` request that interprets the body as text stream
     * and returns the full `HTTPResponse`.
@@ -488,7 +476,19 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of the `HTTPResponse` for the request,
     * with the response body of type string.
     */
-  def head(url: String, options: WithCredentialsBoolean): Observable_[HttpResponse[String]] = js.native
+  def head(url: String, options: `1`): Observable_[HttpResponse[String]] = js.native
+  /**
+    * Constructs a `HEAD` request that interprets the body as a JSON object and
+    * returns the full `HTTPResponse`.
+    *
+    * @param url     The endpoint URL.
+    * @param options The HTTP options to send with the request.
+    *
+    * @return An `Observable` of the `HTTPResponse` for the request,
+    * with the response body of type `Object`.
+    */
+  def head(url: String, options: `2`): Observable_[HttpResponse[js.Object]] = js.native
+  def head(url: String, options: `3`): Observable_[js.Object] = js.native
   /**
     * Constructs a `HEAD` request that interprets the body as a JSON object and returns
     * the response in a given type.
@@ -524,9 +524,9 @@ class HttpClient protected () extends js.Object {
     * with a responmse body of the requested type.
     */
   @JSName("head")
-  def head_T[T](url: String, options: ParamsReportProgressBoolean): Observable_[HttpResponse[T]] = js.native
+  def head_T[T](url: String, options: `2`): Observable_[HttpResponse[T]] = js.native
   @JSName("head")
-  def head_T[T](url: String, options: ReportProgressBooleanResponseType): Observable_[T] = js.native
+  def head_T[T](url: String, options: `3`): Observable_[T] = js.native
   /**
     * Constructs a `JSONP` request for the given URL and name of the callback parameter.
     *
@@ -615,17 +615,6 @@ class HttpClient protected () extends js.Object {
     */
   def options(url: String, options: ObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[js.Object]] = js.native
   /**
-    * Constructs an `OPTIONS` request that interprets the body as a JSON object
-    * and returns the full `HTTPResponse`.
-    *
-    * @param url The endpoint URL.
-    * @param options HTTP options.
-    *
-    * @return An `Observable` of the `HttpResponse` for the request,
-    * with the response body of type `Object`.
-    */
-  def options(url: String, options: ParamsReportProgressBoolean): Observable_[HttpResponse[js.Object]] = js.native
-  /**
     * Constructs an `OPTIONS` request that interprets the body as an
     * `ArrayBuffer` and returns the response as an `ArrayBuffer`.
     *
@@ -647,18 +636,6 @@ class HttpClient protected () extends js.Object {
     */
   def options(url: String, options: ParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[Blob]] = js.native
   /**
-    * Constructs an `OPTIONS` request that interprets the body as a `Blob`
-    *  and returns the full `HTTPResponse`.
-    *
-    * @param url The endpoint URL.
-    * @param options HTTP options.
-    *
-    * @return An `Observable` of the `HttpResponse` for the request,
-    *  with the response body as a `Blob`.
-    */
-  def options(url: String, options: ReportProgressBoolean): Observable_[HttpResponse[Blob]] = js.native
-  def options(url: String, options: ReportProgressBooleanResponseType): Observable_[js.Object] = js.native
-  /**
     * Constructs an `OPTIONS` request that interprets the body as a `Blob` and returns
     * the response as a `Blob`.
     *
@@ -669,6 +646,17 @@ class HttpClient protected () extends js.Object {
     */
   def options(url: String, options: ReportProgressResponseTypeWithCredentials): Observable_[Blob] = js.native
   /**
+    * Constructs an `OPTIONS` request that interprets the body as a `Blob`
+    *  and returns the full `HTTPResponse`.
+    *
+    * @param url The endpoint URL.
+    * @param options HTTP options.
+    *
+    * @return An `Observable` of the `HttpResponse` for the request,
+    *  with the response body as a `Blob`.
+    */
+  def options(url: String, options: `0`): Observable_[HttpResponse[Blob]] = js.native
+  /**
     * Constructs an `OPTIONS` request that interprets the body as text stream
     * and returns the full `HTTPResponse`.
     *
@@ -678,7 +666,19 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of the `HttpResponse` for the request,
     *  with the response body of type string.
     */
-  def options(url: String, options: WithCredentialsBoolean): Observable_[HttpResponse[String]] = js.native
+  def options(url: String, options: `1`): Observable_[HttpResponse[String]] = js.native
+  /**
+    * Constructs an `OPTIONS` request that interprets the body as a JSON object
+    * and returns the full `HTTPResponse`.
+    *
+    * @param url The endpoint URL.
+    * @param options HTTP options.
+    *
+    * @return An `Observable` of the `HttpResponse` for the request,
+    * with the response body of type `Object`.
+    */
+  def options(url: String, options: `2`): Observable_[HttpResponse[js.Object]] = js.native
+  def options(url: String, options: `3`): Observable_[js.Object] = js.native
   /**
     * Constructs an `OPTIONS` request that interprets the body as a JSON object and returns the response
     * in a given type.
@@ -713,10 +713,9 @@ class HttpClient protected () extends js.Object {
     * with a response body in the requested type.
     */
   @JSName("options")
-  def options_T[T](url: String, options: ParamsReportProgressBoolean): Observable_[HttpResponse[T]] = js.native
+  def options_T[T](url: String, options: `2`): Observable_[HttpResponse[T]] = js.native
   @JSName("options")
-  def options_T[T](url: String, options: ReportProgressBooleanResponseType): Observable_[T] = js.native
-  def patch(url: String): Observable_[js.Object] = js.native
+  def options_T[T](url: String, options: `3`): Observable_[T] = js.native
   /**
     * Constructs a `PATCH` request that interprets the body as a JSON object and
     * returns the response body as a JSON object.
@@ -727,6 +726,7 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the response, with the response body as a JSON object.
     */
+  def patch(url: String): Observable_[js.Object] = js.native
   def patch(url: String, body: js.Any): Observable_[js.Object] = js.native
   /**
     * Constructs a `PATCH` request that interprets the body as as a text string and
@@ -788,18 +788,6 @@ class HttpClient protected () extends js.Object {
     */
   def patch(url: String, body: js.Any, options: ObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[js.Object]] = js.native
   /**
-    * Constructs a `PATCH` request that interprets the body as a JSON object
-    * and returns the full `HTTPResponse`.
-    *
-    * @param url The endpoint URL.
-    * @param body The resources to edit.
-    * @param options HTTP options.
-    *
-    * @return An `Observable` of the `HttpResponse` for the request,
-    * with a response body in the requested type.
-    */
-  def patch(url: String, body: js.Any, options: ParamsReportProgressBoolean): Observable_[HttpResponse[js.Object]] = js.native
-  /**
     * Constructs a `PATCH` request that interprets the body as an `ArrayBuffer` and returns
     * the response as an `ArrayBuffer`.
     *
@@ -823,19 +811,6 @@ class HttpClient protected () extends js.Object {
     */
   def patch(url: String, body: js.Any, options: ParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[Blob]] = js.native
   /**
-    * Constructs a `PATCH` request that interprets the body as a `Blob` and returns the full
-    * `HTTPResponse`.
-    *
-    * @param url The endpoint URL.
-    * @param body The resources to edit.
-    * @param options HTTP options.
-    *
-    * @return  An `Observable` of the `HttpResponse` for the request,
-    * with the response body as a `Blob`.
-    */
-  def patch(url: String, body: js.Any, options: ReportProgressBoolean): Observable_[HttpResponse[Blob]] = js.native
-  def patch(url: String, body: js.Any, options: ReportProgressBooleanResponseType): Observable_[js.Object] = js.native
-  /**
     * Constructs a `PATCH` request that interprets the body as a `Blob` and returns the response
     * as a `Blob`.
     *
@@ -847,6 +822,18 @@ class HttpClient protected () extends js.Object {
     */
   def patch(url: String, body: js.Any, options: ReportProgressResponseTypeWithCredentials): Observable_[Blob] = js.native
   /**
+    * Constructs a `PATCH` request that interprets the body as a `Blob` and returns the full
+    * `HTTPResponse`.
+    *
+    * @param url The endpoint URL.
+    * @param body The resources to edit.
+    * @param options HTTP options.
+    *
+    * @return  An `Observable` of the `HttpResponse` for the request,
+    * with the response body as a `Blob`.
+    */
+  def patch(url: String, body: js.Any, options: `0`): Observable_[HttpResponse[Blob]] = js.native
+  /**
     * Constructs a `PATCH` request that interprets the body as a text stream and returns the
     * full `HTTPResponse`.
     *
@@ -857,21 +844,32 @@ class HttpClient protected () extends js.Object {
     * @return  An `Observable` of the `HttpResponse` for the request,
     * with a response body of type string.
     */
-  def patch(url: String, body: js.Any, options: WithCredentialsBoolean): Observable_[HttpResponse[String]] = js.native
+  def patch(url: String, body: js.Any, options: `1`): Observable_[HttpResponse[String]] = js.native
+  /**
+    * Constructs a `PATCH` request that interprets the body as a JSON object
+    * and returns the full `HTTPResponse`.
+    *
+    * @param url The endpoint URL.
+    * @param body The resources to edit.
+    * @param options HTTP options.
+    *
+    * @return An `Observable` of the `HttpResponse` for the request,
+    * with a response body in the requested type.
+    */
+  def patch(url: String, body: js.Any, options: `2`): Observable_[HttpResponse[js.Object]] = js.native
+  def patch(url: String, body: js.Any, options: `3`): Observable_[js.Object] = js.native
   def patch(url: String, body: Null, options: HeadersObserveParamsReportProgress): Observable_[String] = js.native
   def patch(url: String, body: Null, options: HeadersObserveParamsReportProgressResponseType): Observable_[HttpEvent[String]] = js.native
   def patch(url: String, body: Null, options: HeadersObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpResponse[js.typedarray.ArrayBuffer]] = js.native
   def patch(url: String, body: Null, options: ObserveParamsReportProgressResponseType): Observable_[HttpEvent[js.typedarray.ArrayBuffer]] = js.native
   def patch(url: String, body: Null, options: ObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[js.Object]] = js.native
-  def patch(url: String, body: Null, options: ParamsReportProgressBoolean): Observable_[HttpResponse[js.Object]] = js.native
   def patch(url: String, body: Null, options: ParamsReportProgressResponseType): Observable_[js.typedarray.ArrayBuffer] = js.native
   def patch(url: String, body: Null, options: ParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[Blob]] = js.native
-  def patch(url: String, body: Null, options: ReportProgressBoolean): Observable_[HttpResponse[Blob]] = js.native
-  def patch(url: String, body: Null, options: ReportProgressBooleanResponseType): Observable_[js.Object] = js.native
   def patch(url: String, body: Null, options: ReportProgressResponseTypeWithCredentials): Observable_[Blob] = js.native
-  def patch(url: String, body: Null, options: WithCredentialsBoolean): Observable_[HttpResponse[String]] = js.native
-  @JSName("patch")
-  def patch_T[T](url: String): Observable_[T] = js.native
+  def patch(url: String, body: Null, options: `0`): Observable_[HttpResponse[Blob]] = js.native
+  def patch(url: String, body: Null, options: `1`): Observable_[HttpResponse[String]] = js.native
+  def patch(url: String, body: Null, options: `2`): Observable_[HttpResponse[js.Object]] = js.native
+  def patch(url: String, body: Null, options: `3`): Observable_[js.Object] = js.native
   /**
     * Constructs a `PATCH` request that interprets the body as a JSON object
     * and returns the response in a given type.
@@ -883,6 +881,8 @@ class HttpClient protected () extends js.Object {
     * @return  An `Observable` of the `HttpResponse` for the request,
     * with a response body in the given type.
     */
+  @JSName("patch")
+  def patch_T[T](url: String): Observable_[T] = js.native
   @JSName("patch")
   def patch_T[T](url: String, body: js.Any): Observable_[T] = js.native
   /**
@@ -910,16 +910,15 @@ class HttpClient protected () extends js.Object {
     * with a response body in the given type.
     */
   @JSName("patch")
-  def patch_T[T](url: String, body: js.Any, options: ParamsReportProgressBoolean): Observable_[HttpResponse[T]] = js.native
+  def patch_T[T](url: String, body: js.Any, options: `2`): Observable_[HttpResponse[T]] = js.native
   @JSName("patch")
-  def patch_T[T](url: String, body: js.Any, options: ReportProgressBooleanResponseType): Observable_[T] = js.native
+  def patch_T[T](url: String, body: js.Any, options: `3`): Observable_[T] = js.native
   @JSName("patch")
   def patch_T[T](url: String, body: Null, options: ObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[T]] = js.native
   @JSName("patch")
-  def patch_T[T](url: String, body: Null, options: ParamsReportProgressBoolean): Observable_[HttpResponse[T]] = js.native
+  def patch_T[T](url: String, body: Null, options: `2`): Observable_[HttpResponse[T]] = js.native
   @JSName("patch")
-  def patch_T[T](url: String, body: Null, options: ReportProgressBooleanResponseType): Observable_[T] = js.native
-  def post(url: String): Observable_[js.Object] = js.native
+  def patch_T[T](url: String, body: Null, options: `3`): Observable_[T] = js.native
   /**
     * Constructs a `POST` request that interprets the body as a
     * JSON object and returns the response body as a JSON object.
@@ -930,6 +929,7 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the response, with the response body as a JSON object.
     */
+  def post(url: String): Observable_[js.Object] = js.native
   def post(url: String, body: js.Any): Observable_[js.Object] = js.native
   /**
     * Constructs a `POST` request that interprets the body as a text string and
@@ -988,18 +988,6 @@ class HttpClient protected () extends js.Object {
     */
   def post(url: String, body: js.Any, options: ObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[js.Object]] = js.native
   /**
-    * Constructs a `POST` request that interprets the body as a JSON object
-    * and returns the full `HTTPResponse`.
-    *
-    * @param url The endpoint URL.
-    * @param body The content to replace with.
-    * @param options HTTP options
-    *
-    * @return An `Observable` of the `HTTPResponse` for the request, with a response body of type
-    * `Object`.
-    */
-  def post(url: String, body: js.Any, options: ParamsReportProgressBoolean): Observable_[HttpResponse[js.Object]] = js.native
-  /**
     * Constructs a `POST` request that interprets the body as an as an `ArrayBuffer` and returns
     * an `ArrayBuffer`.
     *
@@ -1022,19 +1010,6 @@ class HttpClient protected () extends js.Object {
     */
   def post(url: String, body: js.Any, options: ParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[Blob]] = js.native
   /**
-    * Constructs a `POST` request that interprets the body as a `Blob` and returns the full
-    * `HTTPResponse`.
-    *
-    * @param url The endpoint URL.
-    * @param body The content to replace with.
-    * @param options HTTP options
-    *
-    * @return An `Observable` of the `HTTPResponse` for the request,
-    * with the response body as a `Blob`.
-    */
-  def post(url: String, body: js.Any, options: ReportProgressBoolean): Observable_[HttpResponse[Blob]] = js.native
-  def post(url: String, body: js.Any, options: ReportProgressBooleanResponseType): Observable_[js.Object] = js.native
-  /**
     * Constructs a `POST` request that interprets the body as a `Blob` and returns the
     * response as a `Blob`.
     *
@@ -1046,6 +1021,18 @@ class HttpClient protected () extends js.Object {
     */
   def post(url: String, body: js.Any, options: ReportProgressResponseTypeWithCredentials): Observable_[Blob] = js.native
   /**
+    * Constructs a `POST` request that interprets the body as a `Blob` and returns the full
+    * `HTTPResponse`.
+    *
+    * @param url The endpoint URL.
+    * @param body The content to replace with.
+    * @param options HTTP options
+    *
+    * @return An `Observable` of the `HTTPResponse` for the request,
+    * with the response body as a `Blob`.
+    */
+  def post(url: String, body: js.Any, options: `0`): Observable_[HttpResponse[Blob]] = js.native
+  /**
     * Constructs a `POST` request that interprets the body as a text stream and returns
     * the full `HTTPResponse`.
     *
@@ -1056,21 +1043,32 @@ class HttpClient protected () extends js.Object {
     * @return  An `Observable` of the `HTTPResponse` for the request,
     * with a response body of type string.
     */
-  def post(url: String, body: js.Any, options: WithCredentialsBoolean): Observable_[HttpResponse[String]] = js.native
+  def post(url: String, body: js.Any, options: `1`): Observable_[HttpResponse[String]] = js.native
+  /**
+    * Constructs a `POST` request that interprets the body as a JSON object
+    * and returns the full `HTTPResponse`.
+    *
+    * @param url The endpoint URL.
+    * @param body The content to replace with.
+    * @param options HTTP options
+    *
+    * @return An `Observable` of the `HTTPResponse` for the request, with a response body of type
+    * `Object`.
+    */
+  def post(url: String, body: js.Any, options: `2`): Observable_[HttpResponse[js.Object]] = js.native
+  def post(url: String, body: js.Any, options: `3`): Observable_[js.Object] = js.native
   def post(url: String, body: Null, options: HeadersObserveParamsReportProgress): Observable_[String] = js.native
   def post(url: String, body: Null, options: HeadersObserveParamsReportProgressResponseType): Observable_[HttpEvent[String]] = js.native
   def post(url: String, body: Null, options: HeadersObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpResponse[js.typedarray.ArrayBuffer]] = js.native
   def post(url: String, body: Null, options: ObserveParamsReportProgressResponseType): Observable_[HttpEvent[js.typedarray.ArrayBuffer]] = js.native
   def post(url: String, body: Null, options: ObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[js.Object]] = js.native
-  def post(url: String, body: Null, options: ParamsReportProgressBoolean): Observable_[HttpResponse[js.Object]] = js.native
   def post(url: String, body: Null, options: ParamsReportProgressResponseType): Observable_[js.typedarray.ArrayBuffer] = js.native
   def post(url: String, body: Null, options: ParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[Blob]] = js.native
-  def post(url: String, body: Null, options: ReportProgressBoolean): Observable_[HttpResponse[Blob]] = js.native
-  def post(url: String, body: Null, options: ReportProgressBooleanResponseType): Observable_[js.Object] = js.native
   def post(url: String, body: Null, options: ReportProgressResponseTypeWithCredentials): Observable_[Blob] = js.native
-  def post(url: String, body: Null, options: WithCredentialsBoolean): Observable_[HttpResponse[String]] = js.native
-  @JSName("post")
-  def post_T[T](url: String): Observable_[T] = js.native
+  def post(url: String, body: Null, options: `0`): Observable_[HttpResponse[Blob]] = js.native
+  def post(url: String, body: Null, options: `1`): Observable_[HttpResponse[String]] = js.native
+  def post(url: String, body: Null, options: `2`): Observable_[HttpResponse[js.Object]] = js.native
+  def post(url: String, body: Null, options: `3`): Observable_[js.Object] = js.native
   /**
     * Constructs a `POST` request that interprets the body as a JSON object
     * and returns an observable of the response.
@@ -1081,6 +1079,8 @@ class HttpClient protected () extends js.Object {
     *
     * @return  An `Observable` of the `HTTPResponse` for the request, with a response body in the requested type.
     */
+  @JSName("post")
+  def post_T[T](url: String): Observable_[T] = js.native
   @JSName("post")
   def post_T[T](url: String, body: js.Any): Observable_[T] = js.native
   /**
@@ -1107,16 +1107,15 @@ class HttpClient protected () extends js.Object {
     * @return An `Observable` of the `HTTPResponse` for the request, with a response body in the requested type.
     */
   @JSName("post")
-  def post_T[T](url: String, body: js.Any, options: ParamsReportProgressBoolean): Observable_[HttpResponse[T]] = js.native
+  def post_T[T](url: String, body: js.Any, options: `2`): Observable_[HttpResponse[T]] = js.native
   @JSName("post")
-  def post_T[T](url: String, body: js.Any, options: ReportProgressBooleanResponseType): Observable_[T] = js.native
+  def post_T[T](url: String, body: js.Any, options: `3`): Observable_[T] = js.native
   @JSName("post")
   def post_T[T](url: String, body: Null, options: ObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[T]] = js.native
   @JSName("post")
-  def post_T[T](url: String, body: Null, options: ParamsReportProgressBoolean): Observable_[HttpResponse[T]] = js.native
+  def post_T[T](url: String, body: Null, options: `2`): Observable_[HttpResponse[T]] = js.native
   @JSName("post")
-  def post_T[T](url: String, body: Null, options: ReportProgressBooleanResponseType): Observable_[T] = js.native
-  def put(url: String): Observable_[js.Object] = js.native
+  def post_T[T](url: String, body: Null, options: `3`): Observable_[T] = js.native
   /**
     * Constructs a `PUT` request that interprets the body as a JSON object and returns the response
     * body as a JSON object.
@@ -1127,6 +1126,7 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the response, with the response body as a JSON object.
     */
+  def put(url: String): Observable_[js.Object] = js.native
   def put(url: String, body: js.Any): Observable_[js.Object] = js.native
   /**
     * Constructs a `PUT` request that interprets the body as a text string and
@@ -1185,17 +1185,6 @@ class HttpClient protected () extends js.Object {
     */
   def put(url: String, body: js.Any, options: ObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[js.Object]] = js.native
   /**
-    * Constructs a `PUT` request that interprets the body as a JSON object and returns the full HTTP response.
-    *
-    * @param url The endpoint URL.
-    * @param body The resources to add/update.
-    * @param options HTTP options
-    *
-    * @return An `Observable` of the `HTTPResponse` for the request, with a response body
-    * of type 'Object`.
-    */
-  def put(url: String, body: js.Any, options: ParamsReportProgressBoolean): Observable_[HttpResponse[js.Object]] = js.native
-  /**
     * Constructs a `PUT` request that interprets the body as an `ArrayBuffer` and returns the
     * response as an `ArrayBuffer`.
     *
@@ -1218,19 +1207,6 @@ class HttpClient protected () extends js.Object {
     */
   def put(url: String, body: js.Any, options: ParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[Blob]] = js.native
   /**
-    * Constructs a `PUT` request that interprets the body as a `Blob` and returns the
-    * full HTTP response.
-    *
-    * @param url The endpoint URL.
-    * @param body The resources to add/update.
-    * @param options HTTP options
-    *
-    * @return An `Observable` of the `HTTPResponse` for the request,
-    * with the response body as a `Blob`.
-    */
-  def put(url: String, body: js.Any, options: ReportProgressBoolean): Observable_[HttpResponse[Blob]] = js.native
-  def put(url: String, body: js.Any, options: ReportProgressBooleanResponseType): Observable_[js.Object] = js.native
-  /**
     * Constructs a `PUT` request that interprets the body as a `Blob` and returns
     * the response as a `Blob`.
     *
@@ -1242,6 +1218,18 @@ class HttpClient protected () extends js.Object {
     */
   def put(url: String, body: js.Any, options: ReportProgressResponseTypeWithCredentials): Observable_[Blob] = js.native
   /**
+    * Constructs a `PUT` request that interprets the body as a `Blob` and returns the
+    * full HTTP response.
+    *
+    * @param url The endpoint URL.
+    * @param body The resources to add/update.
+    * @param options HTTP options
+    *
+    * @return An `Observable` of the `HTTPResponse` for the request,
+    * with the response body as a `Blob`.
+    */
+  def put(url: String, body: js.Any, options: `0`): Observable_[HttpResponse[Blob]] = js.native
+  /**
     * Constructs a `PUT` request that interprets the body as a text stream and returns the
     * full HTTP response.
     *
@@ -1251,19 +1239,31 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the `HTTPResponse` for the request, with a response body of type string.
     */
-  def put(url: String, body: js.Any, options: WithCredentialsBoolean): Observable_[HttpResponse[String]] = js.native
+  def put(url: String, body: js.Any, options: `1`): Observable_[HttpResponse[String]] = js.native
+  /**
+    * Constructs a `PUT` request that interprets the body as a JSON object and returns the full HTTP response.
+    *
+    * @param url The endpoint URL.
+    * @param body The resources to add/update.
+    * @param options HTTP options
+    *
+    * @return An `Observable` of the `HTTPResponse` for the request, with a response body
+    * of type 'Object`.
+    */
+  def put(url: String, body: js.Any, options: `2`): Observable_[HttpResponse[js.Object]] = js.native
+  def put(url: String, body: js.Any, options: `3`): Observable_[js.Object] = js.native
   def put(url: String, body: Null, options: HeadersObserveParamsReportProgress): Observable_[String] = js.native
   def put(url: String, body: Null, options: HeadersObserveParamsReportProgressResponseType): Observable_[HttpEvent[String]] = js.native
   def put(url: String, body: Null, options: HeadersObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpResponse[js.typedarray.ArrayBuffer]] = js.native
   def put(url: String, body: Null, options: ObserveParamsReportProgressResponseType): Observable_[HttpEvent[js.typedarray.ArrayBuffer]] = js.native
   def put(url: String, body: Null, options: ObserveParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[js.Object]] = js.native
-  def put(url: String, body: Null, options: ParamsReportProgressBoolean): Observable_[HttpResponse[js.Object]] = js.native
   def put(url: String, body: Null, options: ParamsReportProgressResponseType): Observable_[js.typedarray.ArrayBuffer] = js.native
   def put(url: String, body: Null, options: ParamsReportProgressResponseTypeWithCredentials): Observable_[HttpEvent[Blob]] = js.native
-  def put(url: String, body: Null, options: ReportProgressBoolean): Observable_[HttpResponse[Blob]] = js.native
-  def put(url: String, body: Null, options: ReportProgressBooleanResponseType): Observable_[js.Object] = js.native
   def put(url: String, body: Null, options: ReportProgressResponseTypeWithCredentials): Observable_[Blob] = js.native
-  def put(url: String, body: Null, options: WithCredentialsBoolean): Observable_[HttpResponse[String]] = js.native
+  def put(url: String, body: Null, options: `0`): Observable_[HttpResponse[Blob]] = js.native
+  def put(url: String, body: Null, options: `1`): Observable_[HttpResponse[String]] = js.native
+  def put(url: String, body: Null, options: `2`): Observable_[HttpResponse[js.Object]] = js.native
+  def put(url: String, body: Null, options: `3`): Observable_[js.Object] = js.native
   /**
     * Constructs a `PUT` request that interprets the body as a JSON object and returns the
     * full event stream.
@@ -1277,8 +1277,6 @@ class HttpClient protected () extends js.Object {
     */
   def put[T](url: String, body: js.Any, options: ObserveResponseType): Observable_[HttpEvent[T]] = js.native
   def put[T](url: String, body: Null, options: ObserveResponseType): Observable_[HttpEvent[T]] = js.native
-  @JSName("put")
-  def put_T[T](url: String): Observable_[T] = js.native
   /**
     * Constructs a `PUT` request that interprets the body as a JSON object
     * and returns an observable of the response.
@@ -1289,6 +1287,8 @@ class HttpClient protected () extends js.Object {
     *
     * @return An `Observable` of the `HTTPResponse` for the request, with a response body in the requested type.
     */
+  @JSName("put")
+  def put_T[T](url: String): Observable_[T] = js.native
   @JSName("put")
   def put_T[T](url: String, body: js.Any): Observable_[T] = js.native
   /**
@@ -1302,13 +1302,13 @@ class HttpClient protected () extends js.Object {
     * with a response body in the requested type.
     */
   @JSName("put")
-  def put_T[T](url: String, body: js.Any, options: ParamsReportProgressBoolean): Observable_[HttpResponse[T]] = js.native
+  def put_T[T](url: String, body: js.Any, options: `2`): Observable_[HttpResponse[T]] = js.native
   @JSName("put")
-  def put_T[T](url: String, body: js.Any, options: ReportProgressBooleanResponseType): Observable_[T] = js.native
+  def put_T[T](url: String, body: js.Any, options: `3`): Observable_[T] = js.native
   @JSName("put")
-  def put_T[T](url: String, body: Null, options: ParamsReportProgressBoolean): Observable_[HttpResponse[T]] = js.native
+  def put_T[T](url: String, body: Null, options: `2`): Observable_[HttpResponse[T]] = js.native
   @JSName("put")
-  def put_T[T](url: String, body: Null, options: ReportProgressBooleanResponseType): Observable_[T] = js.native
+  def put_T[T](url: String, body: Null, options: `3`): Observable_[T] = js.native
   /**
     * Constructs a request which interprets the body as a JSON object and returns the full
     * `HTTPResponse` as a JSON object.

@@ -8,6 +8,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait ɵComponentDef[T] extends ɵDirectiveDef[T] {
   /**
+    * Used to store the result of `noSideEffects` function so that it is not removed by closure
+    * compiler. The property should never be read.
+    */
+  @JSName("_")
+  val _underscore: js.UndefOr[scala.Nothing] = js.native
+  /**
     * The number of nodes, local refs, and pipes in this component template.
     *
     * Used to calculate the length of the component's LView array, so we

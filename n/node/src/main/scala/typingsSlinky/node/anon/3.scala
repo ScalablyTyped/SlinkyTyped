@@ -1,18 +1,18 @@
 package typingsSlinky.node.anon
 
-import typingsSlinky.node.BufferEncoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait `3` extends js.Object {
-  var encoding: BufferEncoding
+  var encoding: js.UndefOr[Null] = js.undefined
+  var flag: js.UndefOr[String] = js.undefined
 }
 
 object `3` {
   @scala.inline
-  def apply(encoding: BufferEncoding): `3` = {
-    val __obj = js.Dynamic.literal(encoding = encoding.asInstanceOf[js.Any])
+  def apply(): `3` = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[`3`]
   }
   @scala.inline
@@ -27,7 +27,9 @@ object `3` {
         x
     }
     @scala.inline
-    def setEncoding(value: BufferEncoding): Self = this.set("encoding", value.asInstanceOf[js.Any])
+    def setFlag(value: String): Self = this.set("flag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFlag: Self = this.set("flag", js.undefined)
   }
   
 }

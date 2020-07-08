@@ -19,8 +19,24 @@ object perspectiveCameraMod extends js.Object {
   	 */
   class PerspectiveCamera () extends Camera {
     def this(fov: Double) = this()
+    def this(fov: js.UndefOr[scala.Nothing], aspect: Double) = this()
     def this(fov: Double, aspect: Double) = this()
+    def this(fov: js.UndefOr[scala.Nothing], aspect: js.UndefOr[scala.Nothing], near: Double) = this()
+    def this(fov: js.UndefOr[scala.Nothing], aspect: Double, near: Double) = this()
+    def this(fov: Double, aspect: js.UndefOr[scala.Nothing], near: Double) = this()
     def this(fov: Double, aspect: Double, near: Double) = this()
+    def this(
+      fov: js.UndefOr[scala.Nothing],
+      aspect: js.UndefOr[scala.Nothing],
+      near: js.UndefOr[scala.Nothing],
+      far: Double
+    ) = this()
+    def this(fov: js.UndefOr[scala.Nothing], aspect: js.UndefOr[scala.Nothing], near: Double, far: Double) = this()
+    def this(fov: js.UndefOr[scala.Nothing], aspect: Double, near: js.UndefOr[scala.Nothing], far: Double) = this()
+    def this(fov: js.UndefOr[scala.Nothing], aspect: Double, near: Double, far: Double) = this()
+    def this(fov: Double, aspect: js.UndefOr[scala.Nothing], near: js.UndefOr[scala.Nothing], far: Double) = this()
+    def this(fov: Double, aspect: js.UndefOr[scala.Nothing], near: Double, far: Double) = this()
+    def this(fov: Double, aspect: Double, near: js.UndefOr[scala.Nothing], far: Double) = this()
     def this(fov: Double, aspect: Double, near: Double, far: Double) = this()
     /**
     	 * Camera frustum aspect ratio, window width divided by window height.

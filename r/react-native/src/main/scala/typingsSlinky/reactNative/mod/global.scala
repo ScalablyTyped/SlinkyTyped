@@ -15,23 +15,23 @@ object global extends js.Object {
   trait Console_ extends js.Object {
     var disableYellowBox: Boolean = js.native
     var ignoredYellowBox: js.Array[String] = js.native
-    def debug(): Unit = js.native
+    def debug(message: js.UndefOr[scala.Nothing], optionalParams: js.Any*): Unit = js.native
     def debug(message: js.Any, optionalParams: js.Any*): Unit = js.native
-    def error(): Unit = js.native
+    def error(message: js.UndefOr[scala.Nothing], optionalParams: js.Any*): Unit = js.native
     def error(message: js.Any, optionalParams: js.Any*): Unit = js.native
     def group(): Unit = js.native
     def group(label: String): Unit = js.native
     def groupCollapsed(): Unit = js.native
     def groupCollapsed(label: String): Unit = js.native
     def groupEnd(): Unit = js.native
-    def info(): Unit = js.native
+    def info(message: js.UndefOr[scala.Nothing], optionalParams: js.Any*): Unit = js.native
     def info(message: js.Any, optionalParams: js.Any*): Unit = js.native
-    def log(): Unit = js.native
+    def log(message: js.UndefOr[scala.Nothing], optionalParams: js.Any*): Unit = js.native
     def log(message: js.Any, optionalParams: js.Any*): Unit = js.native
     def table(data: js.Any*): Unit = js.native
-    def trace(): Unit = js.native
+    def trace(message: js.UndefOr[scala.Nothing], optionalParams: js.Any*): Unit = js.native
     def trace(message: js.Any, optionalParams: js.Any*): Unit = js.native
-    def warn(): Unit = js.native
+    def warn(message: js.UndefOr[scala.Nothing], optionalParams: js.Any*): Unit = js.native
     def warn(message: js.Any, optionalParams: js.Any*): Unit = js.native
   }
   

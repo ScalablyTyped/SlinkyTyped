@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined expo.expo/build/AR.BaseAnchor & {  type  :expo.expo/build/AR.AnchorType.Plane,   center  :expo.expo/build/AR.Vector3,   extent  :{  width  :number,   length  :number}} */
+/* Inlined expo.expo/build/AR.BaseAnchor & {  type :expo.expo/build/AR.AnchorType.Plane,   center :expo.expo/build/AR.Vector3,   extent :{  width :number,   length :number}} */
 trait PlaneAnchor extends Anchor {
   var center: Vector3
   var extent: Length

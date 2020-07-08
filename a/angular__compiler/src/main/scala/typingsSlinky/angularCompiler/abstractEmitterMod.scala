@@ -178,6 +178,7 @@ object abstractEmitterMod extends js.Object {
     def print(from: SourceSpan, part: String): Unit = js.native
     def print(from: SourceSpan, part: String, newLine: Boolean): Unit = js.native
     def println(): Unit = js.native
+    def println(from: js.UndefOr[scala.Nothing], lastPart: String): Unit = js.native
     def println(from: Null, lastPart: String): Unit = js.native
     def println(from: SourceSpan): Unit = js.native
     def println(from: SourceSpan, lastPart: String): Unit = js.native

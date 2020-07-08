@@ -57,10 +57,15 @@ trait ClientRequest extends EventEmitter {
     * will not be allowed. The finish event is emitted just after the end operation.
     */
   def end(): Unit = js.native
+  def end(chunk: js.UndefOr[scala.Nothing], encoding: js.UndefOr[scala.Nothing], callback: js.Function): Unit = js.native
+  def end(chunk: js.UndefOr[scala.Nothing], encoding: String): Unit = js.native
+  def end(chunk: js.UndefOr[scala.Nothing], encoding: String, callback: js.Function): Unit = js.native
   def end(chunk: String): Unit = js.native
+  def end(chunk: String, encoding: js.UndefOr[scala.Nothing], callback: js.Function): Unit = js.native
   def end(chunk: String, encoding: String): Unit = js.native
   def end(chunk: String, encoding: String, callback: js.Function): Unit = js.native
   def end(chunk: Buffer): Unit = js.native
+  def end(chunk: Buffer, encoding: js.UndefOr[scala.Nothing], callback: js.Function): Unit = js.native
   def end(chunk: Buffer, encoding: String): Unit = js.native
   def end(chunk: Buffer, encoding: String, callback: js.Function): Unit = js.native
   /**
@@ -215,9 +220,11 @@ trait ClientRequest extends EventEmitter {
     * remove a custom header.
     */
   def write(chunk: String): Unit = js.native
+  def write(chunk: String, encoding: js.UndefOr[scala.Nothing], callback: js.Function): Unit = js.native
   def write(chunk: String, encoding: String): Unit = js.native
   def write(chunk: String, encoding: String, callback: js.Function): Unit = js.native
   def write(chunk: Buffer): Unit = js.native
+  def write(chunk: Buffer, encoding: js.UndefOr[scala.Nothing], callback: js.Function): Unit = js.native
   def write(chunk: Buffer, encoding: String): Unit = js.native
   def write(chunk: Buffer, encoding: String, callback: js.Function): Unit = js.native
 }

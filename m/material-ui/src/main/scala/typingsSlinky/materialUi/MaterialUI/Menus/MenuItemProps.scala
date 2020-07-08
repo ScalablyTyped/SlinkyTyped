@@ -12,6 +12,8 @@ trait MenuItemProps extends ListItemProps {
   // <ListItem/> is the element that get the 'other' properties
   var animation: js.UndefOr[ReactComponentClass[PopoverAnimationProps]] = js.undefined
   var checked: js.UndefOr[Boolean] = js.undefined
+  @JSName("containerElement")
+  var containerElement_MenuItemProps: js.UndefOr[ReactElement | String] = js.undefined
   var desktop: js.UndefOr[Boolean] = js.undefined
   var focusState: js.UndefOr[String] = js.undefined
   var label: js.UndefOr[String | ReactElement] = js.undefined
@@ -43,6 +45,12 @@ object MenuItemProps {
     def setChecked(value: Boolean): Self = this.set("checked", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChecked: Self = this.set("checked", js.undefined)
+    @scala.inline
+    def setContainerElementReactElement(value: ReactElement): Self = this.set("containerElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setContainerElement(value: ReactElement | String): Self = this.set("containerElement", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteContainerElement: Self = this.set("containerElement", js.undefined)
     @scala.inline
     def setDesktop(value: Boolean): Self = this.set("desktop", value.asInstanceOf[js.Any])
     @scala.inline

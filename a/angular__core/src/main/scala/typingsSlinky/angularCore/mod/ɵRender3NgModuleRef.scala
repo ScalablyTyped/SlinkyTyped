@@ -13,6 +13,7 @@ class ɵRender3NgModuleRef[T] protected () extends InternalNgModuleRef[T] {
   var _r3Injector: R3Injector = js.native
   var destroyCbs: js.Array[js.Function0[Unit]] | Null = js.native
   def get(token: js.Any): js.Any = js.native
+  def get(token: js.Any, notFoundValue: js.UndefOr[scala.Nothing], injectFlags: InjectFlags): js.Any = js.native
   def get(token: js.Any, notFoundValue: js.Any): js.Any = js.native
   def get(token: js.Any, notFoundValue: js.Any, injectFlags: InjectFlags): js.Any = js.native
 }

@@ -23,6 +23,13 @@ class WritePropExpr protected ()
     receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,
     name: String,
     value: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    `type`: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    name: String,
+    value: typingsSlinky.angularCompiler.outputAstMod.Expression,
     `type`: Null,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()

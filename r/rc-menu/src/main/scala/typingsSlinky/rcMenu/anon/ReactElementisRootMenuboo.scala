@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined react.react.ReactElement & {  isRootMenu  :boolean,   subMenuInstance  :react.react.ReactInstance} */
+/* Inlined react.react.ReactElement & {  isRootMenu :boolean,   subMenuInstance :react.react.ReactInstance} */
 trait ReactElementisRootMenuboo extends js.Object {
   var isRootMenu: Boolean
   var key: typingsSlinky.react.mod.Key | Null

@@ -1,12 +1,12 @@
 organization := "org.scalablytyped.slinky"
 name := "extract-zip"
-version := "1.6-dt-20200515Z-fcb341"
+version := "1.6-dt-20200515Z-150e6f"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-a77a62")
+  "org.scalablytyped.slinky" %%% "std" % "3.9-dec240")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

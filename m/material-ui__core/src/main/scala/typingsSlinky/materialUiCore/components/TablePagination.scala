@@ -84,7 +84,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.tableCellTableCellMod.Padding
 import typingsSlinky.materialUiCore.tableCellTableCellMod.SortDirection
 import typingsSlinky.materialUiCore.tablePaginationActionsMod.TablePaginationActionsProps
-import typingsSlinky.materialUiCore.tablePaginationMod.default
 import typingsSlinky.materialUiCore.tablePaginationTablePaginationMod.LabelDisplayedRowsArgs
 import typingsSlinky.materialUiCore.tablePaginationTablePaginationMod.TablePaginationBaseProps
 import typingsSlinky.materialUiCore.tablePaginationTablePaginationMod.TablePaginationProps
@@ -108,7 +107,7 @@ object TablePagination {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def ActionsComponentFunctionComponent(value: ReactComponentClass[TablePaginationActionsProps]): this.type = set("ActionsComponent", value.asInstanceOf[js.Any])
     @scala.inline

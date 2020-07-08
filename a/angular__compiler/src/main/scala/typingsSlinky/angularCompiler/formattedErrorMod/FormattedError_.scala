@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Error & {  chain  :@angular/compiler.@angular/compiler/src/aot/formatted_error.FormattedMessageChain,   position ? :@angular/compiler.@angular/compiler/src/aot/formatted_error.Position} */
+/* Inlined std.Error & {  chain :@angular/compiler.@angular/compiler/src/aot/formatted_error.FormattedMessageChain,   position :@angular/compiler.@angular/compiler/src/aot/formatted_error.Position | undefined} */
 trait FormattedError_ extends js.Object {
   var chain: FormattedMessageChain
   var message: String

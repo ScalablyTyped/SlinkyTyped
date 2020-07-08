@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined react-navigation.react-navigation.NavigationLeafRoute<react-navigation.react-navigation.NavigationParams> & {  isDrawerOpen ? :any} */
+/* Inlined react-navigation.react-navigation.NavigationLeafRoute<react-navigation.react-navigation.NavigationParams> & {  isDrawerOpen :any | undefined} */
 trait NavigationLeafRouteNaviga extends js.Object {
   /**
     * Index that represents the depth of the stack

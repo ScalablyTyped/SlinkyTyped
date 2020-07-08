@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Partial<antd.antd/lib/locale-provider.Locale> & {  exist ? :boolean | undefined} */
+/* Inlined std.Partial<antd.antd/lib/locale-provider.Locale> & {  exist :boolean | undefined} */
 trait PartialLocaleexistboolean extends js.Object {
   var Calendar: js.UndefOr[js.Object] = js.undefined
   var DatePicker: js.UndefOr[PickerLocale] = js.undefined

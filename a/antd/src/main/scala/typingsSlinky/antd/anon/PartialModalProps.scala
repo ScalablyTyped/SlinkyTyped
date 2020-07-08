@@ -26,7 +26,7 @@ trait PartialModalProps extends js.Object {
   var destroyOnClose: js.UndefOr[Boolean] = js.undefined
   var footer: js.UndefOr[ReactElement] = js.undefined
   var forceRender: js.UndefOr[Boolean] = js.undefined
-  var getContainer: js.UndefOr[String | HTMLElement | getContainerFunc | `false`] = js.undefined
+  var getContainer: js.UndefOr[String | HTMLElement | getContainerFunc | `false` | Null] = js.undefined
   var keyboard: js.UndefOr[Boolean] = js.undefined
   var mask: js.UndefOr[Boolean] = js.undefined
   var maskClosable: js.UndefOr[Boolean] = js.undefined
@@ -127,6 +127,8 @@ object PartialModalProps {
     def setGetContainer(value: String | HTMLElement | getContainerFunc | `false`): Self = this.set("getContainer", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteGetContainer: Self = this.set("getContainer", js.undefined)
+    @scala.inline
+    def setGetContainerNull: Self = this.set("getContainer", null)
     @scala.inline
     def setKeyboard(value: Boolean): Self = this.set("keyboard", value.asInstanceOf[js.Any])
     @scala.inline

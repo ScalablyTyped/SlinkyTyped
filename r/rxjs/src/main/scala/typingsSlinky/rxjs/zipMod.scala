@@ -25,6 +25,7 @@ object zipMod extends js.Object {
   class ZipSubscriber[T, R] protected () extends Subscriber[T] {
     def this(destination: Subscriber[R]) = this()
     def this(destination: Subscriber[R], resultSelector: js.Function1[/* repeated */ js.Any, R]) = this()
+    def this(destination: Subscriber[R], resultSelector: js.UndefOr[scala.Nothing], values: js.Any) = this()
     def this(destination: Subscriber[R], resultSelector: js.Function1[/* repeated */ js.Any, R], values: js.Any) = this()
     var active: js.Any = js.native
     var iterators: js.Any = js.native

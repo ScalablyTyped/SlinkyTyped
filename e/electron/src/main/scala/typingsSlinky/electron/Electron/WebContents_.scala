@@ -485,6 +485,11 @@ trait WebContents_ extends EventEmitter {
     * userGesture to true will remove this limitation. Deprecated Soon
     */
   def executeJavaScript(code: String): js.Promise[_] = js.native
+  def executeJavaScript(
+    code: String,
+    userGesture: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* result */ js.Any, Unit]
+  ): js.Promise[_] = js.native
   def executeJavaScript(code: String, userGesture: Boolean): js.Promise[_] = js.native
   def executeJavaScript(code: String, userGesture: Boolean, callback: js.Function1[/* result */ js.Any, Unit]): js.Promise[_] = js.native
   /**
@@ -1443,6 +1448,7 @@ trait WebContents_ extends EventEmitter {
     * Use page-break-before: always; CSS style to force to print to a new page.
     */
   def print(): Unit = js.native
+  def print(options: js.UndefOr[scala.Nothing], callback: js.Function1[/* success */ Boolean, Unit]): Unit = js.native
   def print(options: PrintOptions): Unit = js.native
   def print(options: PrintOptions, callback: js.Function1[/* success */ Boolean, Unit]): Unit = js.native
   /**

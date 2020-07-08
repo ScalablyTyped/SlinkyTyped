@@ -141,6 +141,7 @@ trait HTMLMediaElement extends HTMLElement {
     options: AddEventListenerOptions
   ): Unit = js.native
   def addTextTrack(kind: TextTrackKind): org.scalajs.dom.raw.TextTrack = js.native
+  def addTextTrack(kind: TextTrackKind, label: js.UndefOr[scala.Nothing], language: java.lang.String): org.scalajs.dom.raw.TextTrack = js.native
   def addTextTrack(kind: TextTrackKind, label: java.lang.String): org.scalajs.dom.raw.TextTrack = js.native
   def addTextTrack(kind: TextTrackKind, label: java.lang.String, language: java.lang.String): org.scalajs.dom.raw.TextTrack = js.native
   /**

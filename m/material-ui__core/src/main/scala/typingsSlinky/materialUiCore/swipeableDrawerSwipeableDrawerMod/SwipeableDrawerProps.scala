@@ -172,7 +172,7 @@ trait SwipeableDrawerProps extends js.Object {
   var classes: js.UndefOr[PartialClassNameMapDrawer] = js.native
   var closeAfterTransition: js.UndefOr[Boolean] = js.native
   var color: js.UndefOr[String] = js.native
-  var container: js.UndefOr[ReactInstance | js.Function0[ReactInstance]] = js.native
+  var container: js.UndefOr[ReactInstance | js.Function0[ReactInstance] | Null] = js.native
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
   var contextMenu: js.UndefOr[String] = js.native
   var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
@@ -628,6 +628,8 @@ object SwipeableDrawerProps {
     def setContainer(value: ReactInstance | js.Function0[ReactInstance]): Self = this.set("container", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContainer: Self = this.set("container", js.undefined)
+    @scala.inline
+    def setContainerNull: Self = this.set("container", null)
     @scala.inline
     def setContentEditable(value: Booleanish | inherit): Self = this.set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline

@@ -53,9 +53,11 @@ class Map_ protected () extends IEventEmitter {
   def setBounds(bounds: js.Array[js.Array[Double]]): js.Promise[Unit] = js.native
   def setBounds(bounds: js.Array[js.Array[Double]], options: IMapBoundsOptions): js.Promise[Unit] = js.native
   def setCenter(center: js.Array[Double]): js.Promise[Unit] = js.native
+  def setCenter(center: js.Array[Double], zoom: js.UndefOr[scala.Nothing], options: IMapPositionOptions): js.Promise[Unit] = js.native
   def setCenter(center: js.Array[Double], zoom: Double): js.Promise[Unit] = js.native
   def setCenter(center: js.Array[Double], zoom: Double, options: IMapPositionOptions): js.Promise[Unit] = js.native
   def setGlobalPixelCenter(globalPixelCenter: js.Array[Double]): js.Promise[Unit] = js.native
+  def setGlobalPixelCenter(globalPixelCenter: js.Array[Double], zoom: js.UndefOr[scala.Nothing], options: IMapPositionOptions): js.Promise[Unit] = js.native
   def setGlobalPixelCenter(globalPixelCenter: js.Array[Double], zoom: Double): js.Promise[Unit] = js.native
   def setGlobalPixelCenter(globalPixelCenter: js.Array[Double], zoom: Double, options: IMapPositionOptions): js.Promise[Unit] = js.native
   def setType(`type`: String): js.Promise[Unit] = js.native

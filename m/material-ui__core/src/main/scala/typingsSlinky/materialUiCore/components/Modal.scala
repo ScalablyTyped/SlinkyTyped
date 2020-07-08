@@ -69,7 +69,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.modalMod.ModalManager
-import typingsSlinky.materialUiCore.modalMod.default
 import typingsSlinky.materialUiCore.modalModalMod.ModalProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -90,7 +89,7 @@ object Modal {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def BackdropComponentFunctionComponent(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     @scala.inline

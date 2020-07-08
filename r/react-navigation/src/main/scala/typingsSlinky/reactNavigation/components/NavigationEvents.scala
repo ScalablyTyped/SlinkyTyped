@@ -42,7 +42,7 @@ object NavigationEvents {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNavigation.mod.NavigationEvents] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline

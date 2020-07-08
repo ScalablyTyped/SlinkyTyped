@@ -53,7 +53,7 @@ trait PickerPanelDateProps[DateType] extends PickerProps[DateType] {
   var size: js.UndefOr[large | typingsSlinky.antd.antdStrings.default | small] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var tabIndex: js.UndefOr[Double] = js.undefined
-  var value: js.UndefOr[DateType] = js.undefined
+  var value: js.UndefOr[DateType | Null] = js.undefined
 }
 
 object PickerPanelDateProps {
@@ -185,6 +185,8 @@ object PickerPanelDateProps {
     def setValue(value: DateType): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
   
 }

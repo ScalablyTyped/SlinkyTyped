@@ -21,7 +21,30 @@ object fileLoaderMod extends js.Object {
     var responseType: js.UndefOr[String] = js.native
     var withCredentials: js.UndefOr[String] = js.native
     def load(url: String): js.Any = js.native
+    def load(
+      url: String,
+      onLoad: js.UndefOr[scala.Nothing],
+      onProgress: js.UndefOr[scala.Nothing],
+      onError: js.Function1[/* event */ ErrorEvent, Unit]
+    ): js.Any = js.native
+    def load(
+      url: String,
+      onLoad: js.UndefOr[scala.Nothing],
+      onProgress: js.Function1[/* request */ ProgressEvent, Unit]
+    ): js.Any = js.native
+    def load(
+      url: String,
+      onLoad: js.UndefOr[scala.Nothing],
+      onProgress: js.Function1[/* request */ ProgressEvent, Unit],
+      onError: js.Function1[/* event */ ErrorEvent, Unit]
+    ): js.Any = js.native
     def load(url: String, onLoad: js.Function1[/* response */ String | js.typedarray.ArrayBuffer, Unit]): js.Any = js.native
+    def load(
+      url: String,
+      onLoad: js.Function1[/* response */ String | js.typedarray.ArrayBuffer, Unit],
+      onProgress: js.UndefOr[scala.Nothing],
+      onError: js.Function1[/* event */ ErrorEvent, Unit]
+    ): js.Any = js.native
     def load(
       url: String,
       onLoad: js.Function1[/* response */ String | js.typedarray.ArrayBuffer, Unit],

@@ -4,18 +4,18 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait Children[RecordType /* <: /* import warning: importer.ImportType#apply Failed type conversion: {  children ? :std.Array<RecordType>} */ js.Any */] extends js.Object {
+trait Children[RecordType /* <: /* import warning: importer.ImportType#apply Failed type conversion: {  children :std.Array<RecordType> | undefined} */ js.Any */] extends js.Object {
   var children: js.UndefOr[js.Array[RecordType]] = js.undefined
 }
 
 object Children {
   @scala.inline
-  def apply[/* <: / * import warning: importer.ImportType#apply Failed type conversion: {  children ? :std.Array<RecordType>} * / js.Any */ RecordType](): Children[RecordType] = {
+  def apply[/* <: / * import warning: importer.ImportType#apply Failed type conversion: {  children :std.Array<RecordType> | undefined} * / js.Any */ RecordType](): Children[RecordType] = {
     val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Children[RecordType]]
   }
   @scala.inline
-  implicit class ChildrenOps[Self <: Children[_], /* <: / * import warning: importer.ImportType#apply Failed type conversion: {  children ? :std.Array<RecordType>} * / js.Any */ RecordType] (val x: Self with Children[RecordType]) extends AnyVal {
+  implicit class ChildrenOps[Self <: Children[_], /* <: / * import warning: importer.ImportType#apply Failed type conversion: {  children :std.Array<RecordType> | undefined} * / js.Any */ RecordType] (val x: Self with Children[RecordType]) extends AnyVal {
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline

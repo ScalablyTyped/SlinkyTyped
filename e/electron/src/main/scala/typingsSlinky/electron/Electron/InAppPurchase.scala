@@ -49,6 +49,11 @@ trait InAppPurchase extends EventEmitter {
     * certainly before you call purchaseProduct. Deprecated Soon
     */
   def purchaseProduct(productID: String): Unit = js.native
+  def purchaseProduct(
+    productID: String,
+    quantity: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* isProductValid */ Boolean, Unit]
+  ): Unit = js.native
   def purchaseProduct(productID: String, quantity: Double): Unit = js.native
   def purchaseProduct(productID: String, quantity: Double, callback: js.Function1[/* isProductValid */ Boolean, Unit]): Unit = js.native
   /**

@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined react-navigation.react-navigation.NavigationState & {  isDrawerOpen  :boolean} */
+/* Inlined react-navigation.react-navigation.NavigationState & {  isDrawerOpen :boolean} */
 trait NavigationDrawerState extends js.Object {
   /**
     * Index refers to the active child route in the routes array.

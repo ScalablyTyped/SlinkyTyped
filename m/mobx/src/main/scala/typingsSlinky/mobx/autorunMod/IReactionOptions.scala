@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined mobx.mobx/lib/api/autorun.IAutorunOptions & {  fireImmediately ? :boolean,   equals ? :mobx.mobx/lib/internal.IEqualsComparer<any>} */
+/* Inlined mobx.mobx/lib/api/autorun.IAutorunOptions & {  fireImmediately :boolean | undefined,   equals :mobx.mobx/lib/internal.IEqualsComparer<any> | undefined} */
 trait IReactionOptions extends js.Object {
   var delay: js.UndefOr[Double] = js.undefined
   @JSName("equals")

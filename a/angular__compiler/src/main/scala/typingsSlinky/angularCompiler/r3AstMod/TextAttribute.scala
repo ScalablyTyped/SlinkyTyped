@@ -15,6 +15,20 @@ class TextAttribute protected () extends Node {
     name: String,
     value: String,
     sourceSpan: ParseSourceSpan,
+    valueSpan: js.UndefOr[scala.Nothing],
+    i18n: Message
+  ) = this()
+  def this(
+    name: String,
+    value: String,
+    sourceSpan: ParseSourceSpan,
+    valueSpan: js.UndefOr[scala.Nothing],
+    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
+  ) = this()
+  def this(
+    name: String,
+    value: String,
+    sourceSpan: ParseSourceSpan,
     valueSpan: ParseSourceSpan,
     i18n: Message
   ) = this()

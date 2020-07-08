@@ -71,7 +71,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.mod.PropTypes.Alignment
 import typingsSlinky.materialUiCore.mod.PropTypes.Color
-import typingsSlinky.materialUiCore.typographyMod.default
 import typingsSlinky.materialUiCore.typographyTypographyMod.Style
 import typingsSlinky.materialUiCore.typographyTypographyMod.TypographyProps
 import typingsSlinky.react.anon.Html
@@ -92,7 +91,7 @@ object Typography {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline

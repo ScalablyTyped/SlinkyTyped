@@ -10,7 +10,7 @@ trait PartialMentionsState extends js.Object {
   var isFocus: js.UndefOr[Boolean] = js.undefined
   var measureLocation: js.UndefOr[Double] = js.undefined
   var measurePrefix: js.UndefOr[String] = js.undefined
-  var measureText: js.UndefOr[String] = js.undefined
+  var measureText: js.UndefOr[String | Null] = js.undefined
   var measuring: js.UndefOr[Boolean] = js.undefined
   var value: js.UndefOr[String] = js.undefined
 }
@@ -52,6 +52,8 @@ object PartialMentionsState {
     def setMeasureText(value: String): Self = this.set("measureText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMeasureText: Self = this.set("measureText", js.undefined)
+    @scala.inline
+    def setMeasureTextNull: Self = this.set("measureText", null)
     @scala.inline
     def setMeasuring(value: Boolean): Self = this.set("measuring", value.asInstanceOf[js.Any])
     @scala.inline

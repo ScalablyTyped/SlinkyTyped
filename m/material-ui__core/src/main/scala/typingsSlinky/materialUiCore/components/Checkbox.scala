@@ -25,7 +25,6 @@ import typingsSlinky.materialUiCore.anon.PartialClassNameMapCheckb
 import typingsSlinky.materialUiCore.buttonBaseButtonBaseMod.ButtonBaseActions
 import typingsSlinky.materialUiCore.buttonBaseButtonBaseMod.ButtonBaseProps
 import typingsSlinky.materialUiCore.checkboxCheckboxMod.CheckboxProps
-import typingsSlinky.materialUiCore.checkboxMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
@@ -36,6 +35,7 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.both
 import typingsSlinky.materialUiCore.materialUiCoreStrings.copy
 import typingsSlinky.materialUiCore.materialUiCoreStrings.date
 import typingsSlinky.materialUiCore.materialUiCoreStrings.decimal
+import typingsSlinky.materialUiCore.materialUiCoreStrings.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.descending
 import typingsSlinky.materialUiCore.materialUiCoreStrings.dialog
 import typingsSlinky.materialUiCore.materialUiCoreStrings.email
@@ -94,7 +94,7 @@ object Checkbox {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def TouchRippleProps(value: Partial[typingsSlinky.materialUiCore.touchRippleMod.TouchRippleProps]): this.type = set("TouchRippleProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -228,7 +228,7 @@ object Checkbox {
     @scala.inline
     def classes(value: PartialClassNameMapCheckb): this.type = set("classes", value.asInstanceOf[js.Any])
     @scala.inline
-    def color(value: primary | secondary | typingsSlinky.materialUiCore.materialUiCoreStrings.default): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: primary | secondary | default): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def componentFunctionComponent(value: ReactComponentClass[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline

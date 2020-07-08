@@ -50,6 +50,7 @@ object matrix3Mod extends js.Object {
     	 * @deprecated Use {@link Matrix3#applyToBufferAttribute matrix3.applyToBufferAttribute( attribute )} instead.
     	 */
     def applyToBuffer(buffer: BufferAttribute): BufferAttribute = js.native
+    def applyToBuffer(buffer: BufferAttribute, offset: js.UndefOr[scala.Nothing], length: Double): BufferAttribute = js.native
     def applyToBuffer(buffer: BufferAttribute, offset: Double): BufferAttribute = js.native
     def applyToBuffer(buffer: BufferAttribute, offset: Double, length: Double): BufferAttribute = js.native
     def applyToBufferAttribute(attribute: BufferAttribute): BufferAttribute = js.native
@@ -117,6 +118,7 @@ object matrix3Mod extends js.Object {
     	 * @return The provided array-like.
     	 */
     def toArray(): ArrayLike[Double] = js.native
+    def toArray(array: js.UndefOr[scala.Nothing], offset: Double): ArrayLike[Double] = js.native
     def toArray(array: js.Array[Double]): js.Array[Double] = js.native
     def toArray(array: js.Array[Double], offset: Double): js.Array[Double] = js.native
     def toArray(array: ArrayLike[Double]): ArrayLike[Double] = js.native
@@ -129,6 +131,8 @@ object matrix3Mod extends js.Object {
     	 */
     @JSName("toArray")
     def toArray_Array(): js.Array[Double] = js.native
+    @JSName("toArray")
+    def toArray_Array(array: js.UndefOr[scala.Nothing], offset: Double): js.Array[Double] = js.native
     def translate(tx: Double, ty: Double): Matrix3 = js.native
     /**
     	 * Transposes this matrix into the supplied array r, and returns itself.

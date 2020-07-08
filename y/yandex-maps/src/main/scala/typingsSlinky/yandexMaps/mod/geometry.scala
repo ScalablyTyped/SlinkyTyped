@@ -15,10 +15,17 @@ object geometry extends js.Object {
   - typingsSlinky.yandexMaps.mod.ILineStringGeometryAccess because var conflicts: events. Inlined get, getChildGeometry, getClosest, getCoordinates, getLength, insert, remove, set, setCoordinates, splice */ @js.native
   class LineString () extends IGeometry {
     def this(coordinates: js.Array[js.Array[Double]]) = this()
+    def this(coordinates: js.UndefOr[scala.Nothing], options: CoordRendering) = this()
     def this(coordinates: js.Array[js.Array[Double]], options: CoordRendering) = this()
     /* CompleteClass */
     override var events: IEventManager = js.native
     def add(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit]): this.type = js.native
+    def add(
+      types: String,
+      callback: js.Function1[/* event */ js.Object | IEvent, Unit],
+      context: js.UndefOr[scala.Nothing],
+      priority: Double
+    ): this.type = js.native
     def add(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit], context: js.Object): this.type = js.native
     def add(
       types: String,
@@ -27,6 +34,12 @@ object geometry extends js.Object {
       priority: Double
     ): this.type = js.native
     def add(types: js.Array[js.Array[String] | String], callback: js.Function1[IEvent | js.Object, Unit]): this.type = js.native
+    def add(
+      types: js.Array[js.Array[String] | String],
+      callback: js.Function1[IEvent | js.Object, Unit],
+      context: js.UndefOr[scala.Nothing],
+      priority: Double
+    ): this.type = js.native
     def add(
       types: js.Array[js.Array[String] | String],
       callback: js.Function1[IEvent | js.Object, Unit],
@@ -56,6 +69,12 @@ object geometry extends js.Object {
     def isFrozen(): Boolean = js.native
     def remove(index: Double): js.Array[Double] = js.native
     def remove(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit]): this.type = js.native
+    def remove(
+      types: String,
+      callback: js.Function1[/* event */ js.Object | IEvent, Unit],
+      context: js.UndefOr[scala.Nothing],
+      priority: Double
+    ): this.type = js.native
     def remove(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit], context: js.Object): this.type = js.native
     def remove(
       types: String,
@@ -64,6 +83,12 @@ object geometry extends js.Object {
       priority: Double
     ): this.type = js.native
     def remove(types: js.Array[js.Array[String] | String], callback: js.Function1[IEvent | js.Object, Unit]): this.type = js.native
+    def remove(
+      types: js.Array[js.Array[String] | String],
+      callback: js.Function1[IEvent | js.Object, Unit],
+      context: js.UndefOr[scala.Nothing],
+      priority: Double
+    ): this.type = js.native
     def remove(
       types: js.Array[js.Array[String] | String],
       callback: js.Function1[IEvent | js.Object, Unit],
@@ -101,13 +126,29 @@ object geometry extends js.Object {
   - typingsSlinky.yandexMaps.mod.IPolygonGeometryAccess because var conflicts: events. Inlined contains, get, getChildGeometry, getClosest, getCoordinates, getFillRule, getLength, insert, remove, set, setCoordinates, setFillRule, splice */ @js.native
   class Polygon () extends IGeometry {
     def this(coordinates: js.Array[js.Array[js.Array[Double]]]) = this()
+    def this(coordinates: js.UndefOr[scala.Nothing], fillRule: evenOdd) = this()
+    def this(coordinates: js.UndefOr[scala.Nothing], fillRule: nonZero) = this()
     def this(coordinates: js.Array[js.Array[js.Array[Double]]], fillRule: evenOdd) = this()
     def this(coordinates: js.Array[js.Array[js.Array[Double]]], fillRule: nonZero) = this()
+    def this(coordinates: js.UndefOr[scala.Nothing], fillRule: js.UndefOr[scala.Nothing], options: js.Object) = this()
+    def this(coordinates: js.UndefOr[scala.Nothing], fillRule: evenOdd, options: js.Object) = this()
+    def this(coordinates: js.UndefOr[scala.Nothing], fillRule: nonZero, options: js.Object) = this()
+    def this(
+      coordinates: js.Array[js.Array[js.Array[Double]]],
+      fillRule: js.UndefOr[scala.Nothing],
+      options: js.Object
+    ) = this()
     def this(coordinates: js.Array[js.Array[js.Array[Double]]], fillRule: evenOdd, options: js.Object) = this()
     def this(coordinates: js.Array[js.Array[js.Array[Double]]], fillRule: nonZero, options: js.Object) = this()
     /* CompleteClass */
     override var events: IEventManager = js.native
     def add(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit]): this.type = js.native
+    def add(
+      types: String,
+      callback: js.Function1[/* event */ js.Object | IEvent, Unit],
+      context: js.UndefOr[scala.Nothing],
+      priority: Double
+    ): this.type = js.native
     def add(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit], context: js.Object): this.type = js.native
     def add(
       types: String,
@@ -117,6 +158,12 @@ object geometry extends js.Object {
     ): this.type = js.native
      //tslint:disable-line function-name
     def add(types: js.Array[js.Array[String] | String], callback: js.Function1[IEvent | js.Object, Unit]): this.type = js.native
+    def add(
+      types: js.Array[js.Array[String] | String],
+      callback: js.Function1[IEvent | js.Object, Unit],
+      context: js.UndefOr[scala.Nothing],
+      priority: Double
+    ): this.type = js.native
     def add(
       types: js.Array[js.Array[String] | String],
       callback: js.Function1[IEvent | js.Object, Unit],
@@ -181,6 +228,12 @@ object geometry extends js.Object {
       /* CompleteClass */
       override var events: IEventManager = js.native
       def add(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit]): this.type = js.native
+      def add(
+        types: String,
+        callback: js.Function1[/* event */ js.Object | IEvent, Unit],
+        context: js.UndefOr[scala.Nothing],
+        priority: Double
+      ): this.type = js.native
       def add(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit], context: js.Object): this.type = js.native
       def add(
         types: String,
@@ -189,6 +242,12 @@ object geometry extends js.Object {
         priority: Double
       ): this.type = js.native
       def add(types: js.Array[js.Array[String] | String], callback: js.Function1[IEvent | js.Object, Unit]): this.type = js.native
+      def add(
+        types: js.Array[js.Array[String] | String],
+        callback: js.Function1[IEvent | js.Object, Unit],
+        context: js.UndefOr[scala.Nothing],
+        priority: Double
+      ): this.type = js.native
       def add(
         types: js.Array[js.Array[String] | String],
         callback: js.Function1[IEvent | js.Object, Unit],
@@ -218,6 +277,12 @@ object geometry extends js.Object {
       def isFrozen(): Boolean = js.native
       def remove(index: Double): js.Array[Double] = js.native
       def remove(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit]): this.type = js.native
+      def remove(
+        types: String,
+        callback: js.Function1[/* event */ js.Object | IEvent, Unit],
+        context: js.UndefOr[scala.Nothing],
+        priority: Double
+      ): this.type = js.native
       def remove(types: String, callback: js.Function1[/* event */ js.Object | IEvent, Unit], context: js.Object): this.type = js.native
       def remove(
         types: String,
@@ -226,6 +291,12 @@ object geometry extends js.Object {
         priority: Double
       ): this.type = js.native
       def remove(types: js.Array[js.Array[String] | String], callback: js.Function1[IEvent | js.Object, Unit]): this.type = js.native
+      def remove(
+        types: js.Array[js.Array[String] | String],
+        callback: js.Function1[IEvent | js.Object, Unit],
+        context: js.UndefOr[scala.Nothing],
+        priority: Double
+      ): this.type = js.native
       def remove(
         types: js.Array[js.Array[String] | String],
         callback: js.Function1[IEvent | js.Object, Unit],
@@ -262,6 +333,8 @@ object geometry extends js.Object {
       extends IBaseGeometry
          with IPointGeometryAccess {
       def this(coordinates: js.Array[js.Array[js.Array[Double]]]) = this()
+      def this(coordinates: js.UndefOr[scala.Nothing], fillRule: evenOdd) = this()
+      def this(coordinates: js.UndefOr[scala.Nothing], fillRule: nonZero) = this()
       def this(coordinates: js.Array[js.Array[js.Array[Double]]], fillRule: evenOdd) = this()
       def this(coordinates: js.Array[js.Array[js.Array[Double]]], fillRule: nonZero) = this()
       /* CompleteClass */

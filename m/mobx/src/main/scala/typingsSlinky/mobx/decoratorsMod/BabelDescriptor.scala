@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.PropertyDescriptor & {initializer ? (): any} */
+/* Inlined std.PropertyDescriptor & {  initializer :(): any | undefined} */
 trait BabelDescriptor extends js.Object {
   var configurable: js.UndefOr[Boolean] = js.undefined
   var enumerable: js.UndefOr[Boolean] = js.undefined

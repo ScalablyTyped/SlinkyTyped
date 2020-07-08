@@ -55,6 +55,11 @@ trait WebFrame extends EventEmitter {
     * userGesture to true will remove this limitation.
     */
   def executeJavaScript(code: String): js.Promise[_] = js.native
+  def executeJavaScript(
+    code: String,
+    userGesture: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* result */ js.Any, Unit]
+  ): js.Promise[_] = js.native
   def executeJavaScript(code: String, userGesture: Boolean): js.Promise[_] = js.native
   def executeJavaScript(code: String, userGesture: Boolean, callback: js.Function1[/* result */ js.Any, Unit]): js.Promise[_] = js.native
   /**
@@ -62,6 +67,12 @@ trait WebFrame extends EventEmitter {
     * Deprecated Soon
     */
   def executeJavaScriptInIsolatedWorld(worldId: Double, scripts: js.Array[WebSource]): js.Promise[_] = js.native
+  def executeJavaScriptInIsolatedWorld(
+    worldId: Double,
+    scripts: js.Array[WebSource],
+    userGesture: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* result */ js.Any, Unit]
+  ): js.Promise[_] = js.native
   def executeJavaScriptInIsolatedWorld(worldId: Double, scripts: js.Array[WebSource], userGesture: Boolean): js.Promise[_] = js.native
   def executeJavaScriptInIsolatedWorld(
     worldId: Double,

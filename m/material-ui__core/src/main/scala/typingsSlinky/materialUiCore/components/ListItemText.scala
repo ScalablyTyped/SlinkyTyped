@@ -22,7 +22,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapListItDense
 import typingsSlinky.materialUiCore.anon.PartialTypographyProps
 import typingsSlinky.materialUiCore.listItemTextListItemTextMod.ListItemTextProps
-import typingsSlinky.materialUiCore.listItemTextMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
@@ -85,7 +84,7 @@ object ListItemText {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline

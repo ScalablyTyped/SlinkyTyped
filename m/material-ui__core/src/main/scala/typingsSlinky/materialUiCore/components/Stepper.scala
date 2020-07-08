@@ -67,7 +67,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.paperPaperMod.PaperProps
-import typingsSlinky.materialUiCore.stepperMod.default
 import typingsSlinky.materialUiCore.stepperStepperMod.Orientation
 import typingsSlinky.materialUiCore.stepperStepperMod.StepperProps
 import typingsSlinky.react.anon.Html
@@ -88,7 +87,7 @@ object Stepper {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline

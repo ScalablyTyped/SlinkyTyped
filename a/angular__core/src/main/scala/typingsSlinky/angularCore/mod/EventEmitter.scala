@@ -23,7 +23,11 @@ class EventEmitter[T /* <: js.Any */] () extends Subject[T] {
     */
   def emit(): Unit = js.native
   def emit(value: T): Unit = js.native
+  def subscribe(generatorOrNext: js.UndefOr[scala.Nothing], error: js.UndefOr[scala.Nothing], complete: js.Any): Subscription = js.native
+  def subscribe(generatorOrNext: js.UndefOr[scala.Nothing], error: js.Any): Subscription = js.native
+  def subscribe(generatorOrNext: js.UndefOr[scala.Nothing], error: js.Any, complete: js.Any): Subscription = js.native
   def subscribe(generatorOrNext: js.Any): Subscription = js.native
+  def subscribe(generatorOrNext: js.Any, error: js.UndefOr[scala.Nothing], complete: js.Any): Subscription = js.native
   def subscribe(generatorOrNext: js.Any, error: js.Any): Subscription = js.native
   def subscribe(generatorOrNext: js.Any, error: js.Any, complete: js.Any): Subscription = js.native
 }

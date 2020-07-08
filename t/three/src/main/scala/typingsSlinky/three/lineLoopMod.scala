@@ -16,6 +16,8 @@ object lineLoopMod extends js.Object {
   class LineLoop () extends Line {
     def this(geometry: BufferGeometry) = this()
     def this(geometry: Geometry) = this()
+    def this(geometry: js.UndefOr[scala.Nothing], material: js.Array[Material]) = this()
+    def this(geometry: js.UndefOr[scala.Nothing], material: Material) = this()
     def this(geometry: BufferGeometry, material: js.Array[Material]) = this()
     def this(geometry: BufferGeometry, material: Material) = this()
     def this(geometry: Geometry, material: js.Array[Material]) = this()

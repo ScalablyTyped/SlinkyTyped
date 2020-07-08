@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 class Fog protected () extends IFog {
   def this(hex: Double) = this()
   def this(hex: Double, near: Double) = this()
+  def this(hex: Double, near: js.UndefOr[scala.Nothing], far: Double) = this()
   def this(hex: Double, near: Double, far: Double) = this()
   /* CompleteClass */
   override var color: Color = js.native

@@ -47,7 +47,7 @@ trait ZoneSpec extends js.Object {
       /* parentZoneDelegate */ ZoneDelegate, 
       /* currentZone */ Zone, 
       /* targetZone */ Zone, 
-      /* zoneSpec */ ZoneSpec, 
+      /* zoneSpec */ this.type, 
       Zone
     ]
   ] = js.undefined
@@ -188,7 +188,7 @@ object ZoneSpec {
     def deleteOnCancelTask: Self = this.set("onCancelTask", js.undefined)
     @scala.inline
     def setOnFork(
-      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, /* zoneSpec */ ZoneSpec) => Zone
+      value: (/* parentZoneDelegate */ ZoneDelegate, /* currentZone */ Zone, /* targetZone */ Zone, ZoneSpec) => Zone
     ): Self = this.set("onFork", js.Any.fromFunction4(value))
     @scala.inline
     def deleteOnFork: Self = this.set("onFork", js.undefined)

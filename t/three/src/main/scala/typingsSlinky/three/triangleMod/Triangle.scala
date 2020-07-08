@@ -12,7 +12,11 @@ import scala.scalajs.js.annotation._
 @js.native
 class Triangle () extends js.Object {
   def this(a: Vector3) = this()
+  def this(a: js.UndefOr[scala.Nothing], b: Vector3) = this()
   def this(a: Vector3, b: Vector3) = this()
+  def this(a: js.UndefOr[scala.Nothing], b: js.UndefOr[scala.Nothing], c: Vector3) = this()
+  def this(a: js.UndefOr[scala.Nothing], b: Vector3, c: Vector3) = this()
+  def this(a: Vector3, b: js.UndefOr[scala.Nothing], c: Vector3) = this()
   def this(a: Vector3, b: Vector3, c: Vector3) = this()
   var a: Vector3 = js.native
   var b: Vector3 = js.native

@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 /* Inlined parent std.Partial<std.Pick<std.XMLHttpRequest, 'onreadystatechange' | 'responseType' | 'timeout' | 'withCredentials'>> */
 trait XHRFields extends js.Object {
   var msCaching: js.UndefOr[String] = js.undefined
-  var onreadystatechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onreadystatechange: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
   var responseType: js.UndefOr[XMLHttpRequestResponseType] = js.undefined
   var timeout: js.UndefOr[Double] = js.undefined
   var withCredentials: js.UndefOr[Boolean] = js.undefined
@@ -42,6 +42,8 @@ object XHRFields {
     def setOnreadystatechange(value: js.ThisFunction1[XHRFields, /* ev */ Event, _]): Self = this.set("onreadystatechange", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnreadystatechange: Self = this.set("onreadystatechange", js.undefined)
+    @scala.inline
+    def setOnreadystatechangeNull: Self = this.set("onreadystatechange", null)
     @scala.inline
     def setResponseType(value: XMLHttpRequestResponseType): Self = this.set("responseType", value.asInstanceOf[js.Any])
     @scala.inline

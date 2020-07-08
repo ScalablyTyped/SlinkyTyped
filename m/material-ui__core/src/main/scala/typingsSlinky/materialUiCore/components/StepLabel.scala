@@ -68,7 +68,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.stepButtonStepButtonMod.StepButtonIcon
-import typingsSlinky.materialUiCore.stepLabelMod.default
 import typingsSlinky.materialUiCore.stepLabelStepLabelMod.StepLabelProps
 import typingsSlinky.materialUiCore.stepperStepperMod.Orientation
 import typingsSlinky.react.anon.Html
@@ -89,7 +88,7 @@ object StepLabel {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def StepIconComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("StepIconComponent", value.asInstanceOf[js.Any])
     @scala.inline

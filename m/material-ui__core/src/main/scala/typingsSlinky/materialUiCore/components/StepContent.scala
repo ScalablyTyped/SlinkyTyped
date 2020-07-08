@@ -66,7 +66,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.tree
 import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
-import typingsSlinky.materialUiCore.stepContentMod.default
 import typingsSlinky.materialUiCore.stepContentStepContentMod.StepContentProps
 import typingsSlinky.materialUiCore.stepperStepperMod.Orientation
 import typingsSlinky.materialUiCore.transitionMod.TransitionProps
@@ -87,7 +86,7 @@ object StepContent {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def TransitionComponentFunctionComponent(value: ReactComponentClass[TransitionProps]): this.type = set("TransitionComponent", value.asInstanceOf[js.Any])
     @scala.inline

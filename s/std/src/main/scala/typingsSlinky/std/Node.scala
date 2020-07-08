@@ -126,10 +126,10 @@ trait Node extends EventTarget {
     * Returns a bitmask indicating the position of other relative to node.
     */
   def compareDocumentPosition(other: org.scalajs.dom.raw.Node): Double = js.native
-  def contains(): scala.Boolean = js.native
   /**
     * Returns true if other is an inclusive descendant of node, and false otherwise.
     */
+  def contains(): scala.Boolean = js.native
   def contains(other: org.scalajs.dom.raw.Node): scala.Boolean = js.native
   /**
     * Returns node's root.
@@ -144,10 +144,10 @@ trait Node extends EventTarget {
   def insertBefore[T /* <: org.scalajs.dom.raw.Node */](newChild: T, refChild: org.scalajs.dom.raw.Node): T = js.native
   def isDefaultNamespace(): scala.Boolean = js.native
   def isDefaultNamespace(namespace: java.lang.String): scala.Boolean = js.native
-  def isEqualNode(): scala.Boolean = js.native
   /**
     * Returns whether node and otherNode have the same properties.
     */
+  def isEqualNode(): scala.Boolean = js.native
   def isEqualNode(otherNode: org.scalajs.dom.raw.Node): scala.Boolean = js.native
   def isSameNode(): scala.Boolean = js.native
   def isSameNode(otherNode: org.scalajs.dom.raw.Node): scala.Boolean = js.native

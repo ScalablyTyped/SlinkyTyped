@@ -31,7 +31,7 @@ trait DatepickerOptions extends js.Object {
   /**
     * A function that takes an input field and current datepicker instance and returns an options object to update the datepicker with. It is called just before the datepicker is displayed.
     */
-  var beforeShow: js.UndefOr[js.Function2[/* input */ Element, /* inst */ js.Any, DatepickerOptions]] = js.undefined
+  var beforeShow: js.UndefOr[js.Function2[/* input */ Element, /* inst */ js.Any, this.type]] = js.undefined
   /**
     * A function that takes a date as a parameter and must return an array with:
     * [0]: true/false indicating whether or not this date is selectable

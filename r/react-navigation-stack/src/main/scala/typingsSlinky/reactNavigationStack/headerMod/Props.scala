@@ -14,7 +14,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined react-navigation-stack.react-navigation-stack/lib/typescript/types.HeaderProps & {leftLabelInterpolator (props : react-navigation-stack.react-navigation-stack/lib/typescript/types.SceneInterpolatorProps): any, leftButtonInterpolator (props : react-navigation-stack.react-navigation-stack/lib/typescript/types.SceneInterpolatorProps): any, titleFromLeftInterpolator (props : react-navigation-stack.react-navigation-stack/lib/typescript/types.SceneInterpolatorProps): any, layoutInterpolator (props : react-navigation-stack.react-navigation-stack/lib/typescript/types.SceneInterpolatorProps): any,   theme  :string} */
+/* Inlined react-navigation-stack.react-navigation-stack/lib/typescript/types.HeaderProps & {leftLabelInterpolator (props : react-navigation-stack.react-navigation-stack/lib/typescript/types.SceneInterpolatorProps): any, leftButtonInterpolator (props : react-navigation-stack.react-navigation-stack/lib/typescript/types.SceneInterpolatorProps): any, titleFromLeftInterpolator (props : react-navigation-stack.react-navigation-stack/lib/typescript/types.SceneInterpolatorProps): any, layoutInterpolator (props : react-navigation-stack.react-navigation-stack/lib/typescript/types.SceneInterpolatorProps): any,   theme :string} */
 trait Props extends js.Object {
   var backTitleVisible: js.UndefOr[Boolean] = js.undefined
   var backgroundInterpolator: js.UndefOr[js.Function1[/* props */ SceneInterpolatorProps, _]] = js.undefined

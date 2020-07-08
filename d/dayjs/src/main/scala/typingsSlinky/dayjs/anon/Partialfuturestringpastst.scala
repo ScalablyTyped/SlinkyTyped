@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Partial<{  future  :string,   past  :string,   s  :string,   m  :string,   mm  :string,   h  :string,   hh  :string,   d  :string,   dd  :string,   M  :string,   MM  :string,   y  :string,   yy  :string}> */
+/* Inlined std.Partial<{  future :string,   past :string,   s :string,   m :string,   mm :string,   h :string,   hh :string,   d :string,   dd :string,   M :string,   MM :string,   y :string,   yy :string}> */
 trait Partialfuturestringpastst extends js.Object {
   var M: js.UndefOr[String] = js.undefined
   var MM: js.UndefOr[String] = js.undefined

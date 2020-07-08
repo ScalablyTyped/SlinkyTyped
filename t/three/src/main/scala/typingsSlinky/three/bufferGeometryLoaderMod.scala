@@ -17,6 +17,12 @@ object bufferGeometryLoaderMod extends js.Object {
     def load(
       url: String,
       onLoad: js.Function1[/* bufferGeometry */ BufferGeometry, Unit],
+      onProgress: js.UndefOr[scala.Nothing],
+      onError: js.Function1[/* event */ js.Any, Unit]
+    ): Unit = js.native
+    def load(
+      url: String,
+      onLoad: js.Function1[/* bufferGeometry */ BufferGeometry, Unit],
       onProgress: js.Function1[/* event */ js.Any, Unit]
     ): Unit = js.native
     def load(

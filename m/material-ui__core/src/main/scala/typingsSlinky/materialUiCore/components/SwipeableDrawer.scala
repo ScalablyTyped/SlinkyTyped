@@ -80,7 +80,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.modalMod.ModalManager
-import typingsSlinky.materialUiCore.swipeableDrawerMod.default
 import typingsSlinky.materialUiCore.swipeableDrawerSwipeableDrawerMod.SwipeableDrawerProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -101,7 +100,7 @@ object SwipeableDrawer {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def BackdropComponentFunctionComponent(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     @scala.inline
@@ -242,6 +241,8 @@ object SwipeableDrawer {
     def containerComponent(value: ReactComponentClass[js.Any]): this.type = set("container", value.asInstanceOf[js.Any])
     @scala.inline
     def container(value: ReactInstance | js.Function0[ReactInstance]): this.type = set("container", value.asInstanceOf[js.Any])
+    @scala.inline
+    def containerNull: this.type = set("container", null)
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline

@@ -13,6 +13,7 @@ object lightProbeMod extends js.Object {
   @js.native
   class LightProbe () extends Light {
     def this(sh: SphericalHarmonics3) = this()
+    def this(sh: js.UndefOr[scala.Nothing], intensity: Double) = this()
     def this(sh: SphericalHarmonics3, intensity: Double) = this()
     var isLightProbe: `true` = js.native
     var sh: SphericalHarmonics3 = js.native

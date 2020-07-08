@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined react-navigation.react-navigation.NavigationLeafRoute<react-navigation.react-navigation.NavigationParams> & react-navigation.react-navigation.NavigationState & {  isDrawerOpen ? :any} */
+/* Inlined react-navigation.react-navigation.NavigationLeafRoute<react-navigation.react-navigation.NavigationParams> & react-navigation.react-navigation.NavigationState & {  isDrawerOpen :any | undefined} */
 trait NavigationLeafRouteNavigaIndex extends js.Object {
   /**
     * Index that represents the depth of the stack
@@ -29,7 +29,7 @@ trait NavigationLeafRouteNavigaIndex extends js.Object {
     * Params passed to this route when navigating to it,
     * e.g. `{ car_id: 123 }` in a route that displays a car.
     */
-  var params: js.UndefOr[NavigationParams with js.UndefOr[NavigationParams]] = js.undefined
+  var params: js.UndefOr[NavigationParams] = js.undefined
   /**
     * Path is an advanced feature used for deep linking and on the web.
     */
@@ -83,7 +83,7 @@ object NavigationLeafRouteNavigaIndex {
     @scala.inline
     def deleteIsDrawerOpen: Self = this.set("isDrawerOpen", js.undefined)
     @scala.inline
-    def setParams(value: NavigationParams with js.UndefOr[NavigationParams]): Self = this.set("params", value.asInstanceOf[js.Any])
+    def setParams(value: NavigationParams): Self = this.set("params", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteParams: Self = this.set("params", js.undefined)
     @scala.inline

@@ -44,6 +44,16 @@ class NavigationStart protected () extends RouterEvent {
     /** @docsNotRequired */
   url: String,
     /** @docsNotRequired */
+  navigationTrigger: js.UndefOr[scala.Nothing],
+    /** @docsNotRequired */
+  restoredState: Dictk
+  ) = this()
+  def this(
+    /** @docsNotRequired */
+  id: Double,
+    /** @docsNotRequired */
+  url: String,
+    /** @docsNotRequired */
   navigationTrigger: hashchange,
     /** @docsNotRequired */
   restoredState: Dictk

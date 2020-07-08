@@ -166,7 +166,7 @@ trait MonthPickerProps extends js.Object {
   var suffixIcon: js.UndefOr[ReactElement] = js.undefined
   var tabIndex: js.UndefOr[Double] = js.undefined
   var transitionName: js.UndefOr[String] = js.undefined
-  var value: js.UndefOr[Moment] = js.undefined
+  var value: js.UndefOr[Moment | Null] = js.undefined
 }
 
 object MonthPickerProps {
@@ -592,6 +592,8 @@ object MonthPickerProps {
     def setValue(value: Moment): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
   
 }

@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined node.fs.BaseEncodingOptions & {  flag ? :string} */
+/* Inlined node.fs.BaseEncodingOptions & {  flag :string | undefined} */
 trait BaseEncodingOptionsflagst extends js.Object {
   var encoding: js.UndefOr[BufferEncoding | Null] = js.undefined
   var flag: js.UndefOr[String] = js.undefined

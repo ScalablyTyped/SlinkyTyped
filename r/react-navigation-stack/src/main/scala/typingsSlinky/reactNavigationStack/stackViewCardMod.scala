@@ -1,9 +1,7 @@
 package typingsSlinky.reactNavigationStack
 
-import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
-import typingsSlinky.react.mod.Component
 import typingsSlinky.reactNative.mod.Animated.AnimatedInterpolation
 import typingsSlinky.reactNative.mod.Animated.Value
 import typingsSlinky.reactNative.mod.StyleProp
@@ -22,7 +20,7 @@ import scala.scalajs.js.annotation._
 @JSImport("react-navigation-stack/lib/typescript/views/StackView/StackViewCard", JSImport.Namespace)
 @js.native
 object stackViewCardMod extends js.Object {
-  /* Inlined react-navigation-stack.react-navigation-stack/lib/typescript/views/StackView/createPointerEventsContainer.InputProps & react-navigation-stack.react-navigation-stack/lib/typescript/views/StackView/createPointerEventsContainer.InjectedProps & {  style  :react-native.react-native.StyleProp<react-native.react-native.ViewStyle>,   animatedStyle  :any,   position  :react-native.react-native.Animated.AnimatedInterpolation,   transparent ? :boolean,   children  :react.react.ReactNode} */
+  /* Inlined react-navigation-stack.react-navigation-stack/lib/typescript/views/StackView/createPointerEventsContainer.InputProps & react-navigation-stack.react-navigation-stack/lib/typescript/views/StackView/createPointerEventsContainer.InjectedProps & {  style :react-native.react-native.StyleProp<react-native.react-native.ViewStyle>,   animatedStyle :any,   position :react-native.react-native.Animated.AnimatedInterpolation,   transparent :boolean | undefined,   children :react.react.ReactNode} */
   @js.native
   trait Props extends js.Object {
     var animatedStyle: js.Any = js.native
@@ -38,15 +36,6 @@ object stackViewCardMod extends js.Object {
     def onComponentRef(ref: View): Unit = js.native
   }
   
-  @js.native
-  class default protected ()
-    extends Component[PickPropsstylechildrensce, js.Object, js.Any] {
-    def this(props: PickPropsstylechildrensce) = this()
-    def this(props: PickPropsstylechildrensce, context: js.Any) = this()
-  }
-  
-  @js.native
-  object default extends TopLevel[ReactComponentClass[PickPropsstylechildrensce]]
-  
+  val default: ReactComponentClass[PickPropsstylechildrensce] = js.native
 }
 

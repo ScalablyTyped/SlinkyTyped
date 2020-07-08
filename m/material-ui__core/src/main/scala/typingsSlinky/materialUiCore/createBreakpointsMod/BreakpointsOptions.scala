@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Partial<{  unit  :string,   step  :number} & @material-ui/core.@material-ui/core/styles/createBreakpoints.Breakpoints> */
+/* Inlined std.Partial<{  unit :string,   step :number} & @material-ui/core.@material-ui/core/styles/createBreakpoints.Breakpoints> */
 @js.native
 trait BreakpointsOptions extends js.Object {
   var between: js.UndefOr[js.Function2[/* start */ Breakpoint, /* end */ Breakpoint, String]] = js.native

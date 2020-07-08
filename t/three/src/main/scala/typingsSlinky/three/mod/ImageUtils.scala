@@ -9,7 +9,30 @@ import scala.scalajs.js.annotation._
 object ImageUtils extends js.Object {
   var crossOrigin: String = js.native
   def loadTexture(url: String): typingsSlinky.three.textureMod.Texture = js.native
+  def loadTexture(
+    url: String,
+    mapping: js.UndefOr[scala.Nothing],
+    onLoad: js.UndefOr[scala.Nothing],
+    onError: js.Function1[/* message */ String, Unit]
+  ): typingsSlinky.three.textureMod.Texture = js.native
+  def loadTexture(
+    url: String,
+    mapping: js.UndefOr[scala.Nothing],
+    onLoad: js.Function1[/* texture */ typingsSlinky.three.textureMod.Texture, Unit]
+  ): typingsSlinky.three.textureMod.Texture = js.native
+  def loadTexture(
+    url: String,
+    mapping: js.UndefOr[scala.Nothing],
+    onLoad: js.Function1[/* texture */ typingsSlinky.three.textureMod.Texture, Unit],
+    onError: js.Function1[/* message */ String, Unit]
+  ): typingsSlinky.three.textureMod.Texture = js.native
   def loadTexture(url: String, mapping: typingsSlinky.three.constantsMod.Mapping): typingsSlinky.three.textureMod.Texture = js.native
+  def loadTexture(
+    url: String,
+    mapping: typingsSlinky.three.constantsMod.Mapping,
+    onLoad: js.UndefOr[scala.Nothing],
+    onError: js.Function1[/* message */ String, Unit]
+  ): typingsSlinky.three.textureMod.Texture = js.native
   def loadTexture(
     url: String,
     mapping: typingsSlinky.three.constantsMod.Mapping,
@@ -22,7 +45,30 @@ object ImageUtils extends js.Object {
     onError: js.Function1[/* message */ String, Unit]
   ): typingsSlinky.three.textureMod.Texture = js.native
   def loadTextureCube(array: js.Array[String]): typingsSlinky.three.textureMod.Texture = js.native
+  def loadTextureCube(
+    array: js.Array[String],
+    mapping: js.UndefOr[scala.Nothing],
+    onLoad: js.UndefOr[scala.Nothing],
+    onError: js.Function1[/* message */ String, Unit]
+  ): typingsSlinky.three.textureMod.Texture = js.native
+  def loadTextureCube(
+    array: js.Array[String],
+    mapping: js.UndefOr[scala.Nothing],
+    onLoad: js.Function1[/* texture */ typingsSlinky.three.textureMod.Texture, Unit]
+  ): typingsSlinky.three.textureMod.Texture = js.native
+  def loadTextureCube(
+    array: js.Array[String],
+    mapping: js.UndefOr[scala.Nothing],
+    onLoad: js.Function1[/* texture */ typingsSlinky.three.textureMod.Texture, Unit],
+    onError: js.Function1[/* message */ String, Unit]
+  ): typingsSlinky.three.textureMod.Texture = js.native
   def loadTextureCube(array: js.Array[String], mapping: typingsSlinky.three.constantsMod.Mapping): typingsSlinky.three.textureMod.Texture = js.native
+  def loadTextureCube(
+    array: js.Array[String],
+    mapping: typingsSlinky.three.constantsMod.Mapping,
+    onLoad: js.UndefOr[scala.Nothing],
+    onError: js.Function1[/* message */ String, Unit]
+  ): typingsSlinky.three.textureMod.Texture = js.native
   def loadTextureCube(
     array: js.Array[String],
     mapping: typingsSlinky.three.constantsMod.Mapping,

@@ -119,7 +119,7 @@ trait ExportAs[T] extends js.Object {
   /**
     * Factory method used to create an instance of directive.
     */
-  def factory(): T = js.native
+  def factory(t: js.UndefOr[scala.Nothing]): T = js.native
   /**
     * Subclasses without an explicit constructor call through to the factory of their base
     * definition, providing it with their own constructor to instantiate.

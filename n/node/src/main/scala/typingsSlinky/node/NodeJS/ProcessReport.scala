@@ -61,6 +61,7 @@ trait ProcessReport extends js.Object {
     */
   def writeReport(): String = js.native
   def writeReport(error: js.Error): String = js.native
+  def writeReport(fileName: js.UndefOr[scala.Nothing], err: js.Error): String = js.native
   def writeReport(fileName: String): String = js.native
   def writeReport(fileName: String, err: js.Error): String = js.native
 }

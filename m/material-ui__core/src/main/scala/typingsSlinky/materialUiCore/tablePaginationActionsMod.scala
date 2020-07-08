@@ -1,12 +1,10 @@
 package typingsSlinky.materialUiCore
 
-import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.materialUiCore.anon.PartialIconButtonProps
-import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.HTMLAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,15 +24,6 @@ object tablePaginationActionsMod extends js.Object {
     def onChangePage(event: SyntheticMouseEvent[HTMLButtonElement], page: Double): Unit = js.native
   }
   
-  @js.native
-  class default protected ()
-    extends Component[TablePaginationActionsProps, js.Object, js.Any] {
-    def this(props: TablePaginationActionsProps) = this()
-    def this(props: TablePaginationActionsProps, context: js.Any) = this()
-  }
-  
-  @js.native
-  object default extends TopLevel[ReactComponentClass[TablePaginationActionsProps]]
-  
+  val default: ReactComponentClass[TablePaginationActionsProps] = js.native
 }
 

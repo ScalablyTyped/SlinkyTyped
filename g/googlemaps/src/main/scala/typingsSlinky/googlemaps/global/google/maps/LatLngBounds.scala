@@ -19,6 +19,8 @@ class LatLngBounds ()
   extends typingsSlinky.googlemaps.google.maps.LatLngBounds {
   def this(sw: typingsSlinky.googlemaps.google.maps.LatLng) = this()
   def this(sw: LatLngLiteral) = this()
+  def this(sw: js.UndefOr[scala.Nothing], ne: typingsSlinky.googlemaps.google.maps.LatLng) = this()
+  def this(sw: js.UndefOr[scala.Nothing], ne: LatLngLiteral) = this()
   def this(sw: LatLngLiteral, ne: typingsSlinky.googlemaps.google.maps.LatLng) = this()
   def this(sw: LatLngLiteral, ne: LatLngLiteral) = this()
   def this(sw: typingsSlinky.googlemaps.google.maps.LatLng, ne: typingsSlinky.googlemaps.google.maps.LatLng) = this()

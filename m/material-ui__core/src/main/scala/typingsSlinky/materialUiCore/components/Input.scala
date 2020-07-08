@@ -26,7 +26,6 @@ import typingsSlinky.materialUiCore.anon.Disabled
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapInputC
 import typingsSlinky.materialUiCore.inputBaseInputBaseMod.InputBaseComponentProps
 import typingsSlinky.materialUiCore.inputInputMod.InputProps
-import typingsSlinky.materialUiCore.inputMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
@@ -92,7 +91,7 @@ object Input {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline

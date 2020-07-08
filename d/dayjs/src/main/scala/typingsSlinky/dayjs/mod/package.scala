@@ -10,7 +10,7 @@ package object mod {
   type PluginFunc[T] = js.Function3[
     /* option */ T, 
     /* c */ org.scalablytyped.runtime.Instantiable1[
-      js.UndefOr[/* config */ typingsSlinky.dayjs.mod.ConfigType], 
+      /* config */ js.UndefOr[typingsSlinky.dayjs.mod.ConfigType], 
       typingsSlinky.dayjs.mod.Dayjs
     ], 
     /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof dayjs */ /* d */ js.Any, 

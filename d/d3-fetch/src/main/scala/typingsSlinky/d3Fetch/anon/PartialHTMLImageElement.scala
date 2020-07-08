@@ -39,7 +39,6 @@ import typingsSlinky.std.DOMStringMap
 import typingsSlinky.std.HTMLCollectionOf
 import typingsSlinky.std.HTMLSlotElement
 import typingsSlinky.std.InsertPosition
-import typingsSlinky.std.Keyframe
 import typingsSlinky.std.OnErrorEventHandler
 import typingsSlinky.std.SecurityPolicyViolationEvent
 import typingsSlinky.std.ShadowRoot
@@ -80,10 +79,10 @@ trait PartialHTMLImageElement extends js.Object {
   var after: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.undefined
   var align: js.UndefOr[String] = js.undefined
   var alt: js.UndefOr[String] = js.undefined
-  var animate: js.UndefOr[js.Function1[/* keyframes */ js.Array[Keyframe], Animation]] = js.undefined
+  var animate: js.UndefOr[js.Function0[Animation]] = js.undefined
   var append: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.undefined
   var appendChild: js.UndefOr[js.Function1[/* newChild */ Node, Node]] = js.undefined
-  var assignedSlot: js.UndefOr[HTMLSlotElement] = js.undefined
+  var assignedSlot: js.UndefOr[HTMLSlotElement | Null] = js.undefined
   var attachShadow: js.UndefOr[js.Function1[/* init */ ShadowRootInit, ShadowRoot]] = js.undefined
   var attributes: js.UndefOr[NamedNodeMap] = js.undefined
   var autocapitalize: js.UndefOr[String] = js.undefined
@@ -106,9 +105,9 @@ trait PartialHTMLImageElement extends js.Object {
   var closest: js.UndefOr[js.Function1[a, HTMLAnchorElement | Null]] = js.undefined
   var compareDocumentPosition: js.UndefOr[js.Function1[/* other */ Node, Double]] = js.undefined
   var complete: js.UndefOr[Boolean] = js.undefined
-  var contains: js.UndefOr[js.Function1[/* other */ Node, Boolean]] = js.undefined
+  var contains: js.UndefOr[js.Function0[Boolean]] = js.undefined
   var contentEditable: js.UndefOr[String] = js.undefined
-  var crossOrigin: js.UndefOr[String] = js.undefined
+  var crossOrigin: js.UndefOr[String | Null] = js.undefined
   var currentSrc: js.UndefOr[String] = js.undefined
   var dataset: js.UndefOr[DOMStringMap] = js.undefined
   var decode: js.UndefOr[js.Function0[js.Promise[Unit]]] = js.undefined
@@ -116,8 +115,8 @@ trait PartialHTMLImageElement extends js.Object {
   var dir: js.UndefOr[String] = js.undefined
   var dispatchEvent: js.UndefOr[js.Function1[/* event */ Event, Boolean]] = js.undefined
   var draggable: js.UndefOr[Boolean] = js.undefined
-  var firstChild: js.UndefOr[ChildNode] = js.undefined
-  var firstElementChild: js.UndefOr[Element] = js.undefined
+  var firstChild: js.UndefOr[ChildNode | Null] = js.undefined
+  var firstElementChild: js.UndefOr[Element | Null] = js.undefined
   var focus: js.UndefOr[js.Function0[Unit]] = js.undefined
   var getAnimations: js.UndefOr[js.Function0[js.Array[Animation]]] = js.undefined
   var getAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, String | Null]] = js.undefined
@@ -154,137 +153,139 @@ trait PartialHTMLImageElement extends js.Object {
   ] = js.undefined
   var insertAdjacentHTML: js.UndefOr[js.Function2[/* where */ InsertPosition, /* html */ String, Unit]] = js.undefined
   var insertAdjacentText: js.UndefOr[js.Function2[/* where */ InsertPosition, /* text */ String, Unit]] = js.undefined
-  var insertBefore: js.UndefOr[js.Function2[/* newChild */ Node, /* refChild */ Node, Node]] = js.undefined
+  var insertBefore: js.UndefOr[js.Function1[/* newChild */ Node, Node]] = js.undefined
   var isConnected: js.UndefOr[Boolean] = js.undefined
   var isContentEditable: js.UndefOr[Boolean] = js.undefined
-  var isDefaultNamespace: js.UndefOr[js.Function1[/* namespace */ String, Boolean]] = js.undefined
-  var isEqualNode: js.UndefOr[js.Function1[/* otherNode */ Node, Boolean]] = js.undefined
+  var isDefaultNamespace: js.UndefOr[js.Function0[Boolean]] = js.undefined
+  var isEqualNode: js.UndefOr[js.Function0[Boolean]] = js.undefined
   var isMap: js.UndefOr[Boolean] = js.undefined
-  var isSameNode: js.UndefOr[js.Function1[/* otherNode */ Node, Boolean]] = js.undefined
+  var isSameNode: js.UndefOr[js.Function0[Boolean]] = js.undefined
   var lang: js.UndefOr[String] = js.undefined
-  var lastChild: js.UndefOr[ChildNode] = js.undefined
-  var lastElementChild: js.UndefOr[Element] = js.undefined
+  var lastChild: js.UndefOr[ChildNode | Null] = js.undefined
+  var lastElementChild: js.UndefOr[Element | Null] = js.undefined
   var localName: js.UndefOr[String] = js.undefined
   var longDesc: js.UndefOr[String] = js.undefined
-  var lookupNamespaceURI: js.UndefOr[js.Function1[/* prefix */ String, String | Null]] = js.undefined
-  var lookupPrefix: js.UndefOr[js.Function1[/* namespace */ String, String | Null]] = js.undefined
+  var lookupNamespaceURI: js.UndefOr[js.Function0[String | Null]] = js.undefined
+  var lookupPrefix: js.UndefOr[js.Function0[String | Null]] = js.undefined
   var lowsrc: js.UndefOr[String] = js.undefined
   var matches: js.UndefOr[js.Function1[/* selectors */ String, Boolean]] = js.undefined
   var msGetRegionContent: js.UndefOr[js.Function0[_]] = js.undefined
   var name: js.UndefOr[String] = js.undefined
-  var namespaceURI: js.UndefOr[String] = js.undefined
+  var namespaceURI: js.UndefOr[String | Null] = js.undefined
   var naturalHeight: js.UndefOr[Double] = js.undefined
   var naturalWidth: js.UndefOr[Double] = js.undefined
-  var nextElementSibling: js.UndefOr[Element] = js.undefined
-  var nextSibling: js.UndefOr[ChildNode] = js.undefined
+  var nextElementSibling: js.UndefOr[Element | Null] = js.undefined
+  var nextSibling: js.UndefOr[ChildNode | Null] = js.undefined
   var nodeName: js.UndefOr[String] = js.undefined
   var nodeType: js.UndefOr[Double] = js.undefined
-  var nodeValue: js.UndefOr[String] = js.undefined
+  var nodeValue: js.UndefOr[String | Null] = js.undefined
   var nonce: js.UndefOr[String] = js.undefined
   var normalize: js.UndefOr[js.Function0[Unit]] = js.undefined
   var offsetHeight: js.UndefOr[Double] = js.undefined
   var offsetLeft: js.UndefOr[Double] = js.undefined
-  var offsetParent: js.UndefOr[Element] = js.undefined
+  var offsetParent: js.UndefOr[Element | Null] = js.undefined
   var offsetTop: js.UndefOr[Double] = js.undefined
   var offsetWidth: js.UndefOr[Double] = js.undefined
-  var onabort: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]] = js.undefined
-  var onanimationcancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.undefined
-  var onanimationend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.undefined
-  var onanimationiteration: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.undefined
-  var onanimationstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]] = js.undefined
-  var onauxclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onblur: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]] = js.undefined
-  var oncancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var oncanplay: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var oncanplaythrough: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onclose: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var oncontextmenu: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var oncopy: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]] = js.undefined
-  var oncuechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var oncut: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]] = js.undefined
-  var ondblclick: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var ondrag: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
-  var ondragend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
-  var ondragenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
-  var ondragexit: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var ondragleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
-  var ondragover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
-  var ondragstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
-  var ondrop: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]] = js.undefined
-  var ondurationchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onemptied: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onended: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
+  var onabort: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]) | Null] = js.undefined
+  var onanimationcancel: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]) | Null] = js.undefined
+  var onanimationend: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]) | Null] = js.undefined
+  var onanimationiteration: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]) | Null] = js.undefined
+  var onanimationstart: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ AnimationEvent, _]) | Null] = js.undefined
+  var onauxclick: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]) | Null] = js.undefined
+  var onblur: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]) | Null] = js.undefined
+  var oncancel: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var oncanplay: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var oncanplaythrough: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onchange: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onclick: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]) | Null] = js.undefined
+  var onclose: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var oncontextmenu: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]) | Null] = js.undefined
+  var oncopy: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]) | Null] = js.undefined
+  var oncuechange: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var oncut: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]) | Null] = js.undefined
+  var ondblclick: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]) | Null] = js.undefined
+  var ondrag: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]) | Null] = js.undefined
+  var ondragend: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]) | Null] = js.undefined
+  var ondragenter: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]) | Null] = js.undefined
+  var ondragexit: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var ondragleave: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]) | Null] = js.undefined
+  var ondragover: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]) | Null] = js.undefined
+  var ondragstart: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]) | Null] = js.undefined
+  var ondrop: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ DragEvent, _]) | Null] = js.undefined
+  var ondurationchange: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onemptied: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onended: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
   var onerror: js.UndefOr[OnErrorEventHandler] = js.undefined
-  var onfocus: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]] = js.undefined
-  var onfullscreenchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onfullscreenerror: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var ongotpointercapture: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var oninput: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var oninvalid: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onkeydown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.undefined
-  var onkeypress: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.undefined
-  var onkeyup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]] = js.undefined
-  var onload: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onloadeddata: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onloadedmetadata: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onloadstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onlostpointercapture: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onmousedown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onmouseenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onmouseleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onmousemove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onmouseout: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onmouseover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onmouseup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]] = js.undefined
-  var onpaste: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]] = js.undefined
-  var onpause: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onplay: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onplaying: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onpointercancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onpointerdown: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onpointerenter: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onpointerleave: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onpointermove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onpointerout: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onpointerover: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onpointerup: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]] = js.undefined
-  var onprogress: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ ProgressEvent, _]] = js.undefined
-  var onratechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onreset: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onresize: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]] = js.undefined
-  var onscroll: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onsecuritypolicyviolation: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ SecurityPolicyViolationEvent, _]] = js.undefined
-  var onseeked: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onseeking: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onselect: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onselectionchange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onselectstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onstalled: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onsubmit: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onsuspend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var ontimeupdate: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var ontoggle: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var ontouchcancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.undefined
-  var ontouchend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.undefined
-  var ontouchmove: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.undefined
-  var ontouchstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]] = js.undefined
-  var ontransitioncancel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.undefined
-  var ontransitionend: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.undefined
-  var ontransitionrun: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.undefined
-  var ontransitionstart: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]] = js.undefined
-  var onvolumechange: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onwaiting: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]] = js.undefined
-  var onwheel: js.UndefOr[js.ThisFunction1[/* this */ this.type, /* ev */ WheelEvent, _]] = js.undefined
+  var onfocus: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ FocusEvent, _]) | Null] = js.undefined
+  var onfullscreenchange: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onfullscreenerror: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var ongotpointercapture: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]) | Null] = js.undefined
+  var oninput: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var oninvalid: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onkeydown: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]) | Null] = js.undefined
+  var onkeypress: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]) | Null] = js.undefined
+  var onkeyup: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ KeyboardEvent, _]) | Null] = js.undefined
+  var onload: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onloadeddata: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onloadedmetadata: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onloadstart: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onlostpointercapture: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]) | Null] = js.undefined
+  var onmousedown: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]) | Null] = js.undefined
+  var onmouseenter: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]) | Null] = js.undefined
+  var onmouseleave: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]) | Null] = js.undefined
+  var onmousemove: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]) | Null] = js.undefined
+  var onmouseout: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]) | Null] = js.undefined
+  var onmouseover: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]) | Null] = js.undefined
+  var onmouseup: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ MouseEvent, _]) | Null] = js.undefined
+  var onpaste: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ ClipboardEvent, _]) | Null] = js.undefined
+  var onpause: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onplay: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onplaying: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onpointercancel: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]) | Null] = js.undefined
+  var onpointerdown: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]) | Null] = js.undefined
+  var onpointerenter: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]) | Null] = js.undefined
+  var onpointerleave: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]) | Null] = js.undefined
+  var onpointermove: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]) | Null] = js.undefined
+  var onpointerout: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]) | Null] = js.undefined
+  var onpointerover: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]) | Null] = js.undefined
+  var onpointerup: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ PointerEvent, _]) | Null] = js.undefined
+  var onprogress: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ ProgressEvent, _]) | Null] = js.undefined
+  var onratechange: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onreset: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onresize: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ UIEvent, _]) | Null] = js.undefined
+  var onscroll: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onsecuritypolicyviolation: js.UndefOr[
+    (js.ThisFunction1[/* this */ this.type, /* ev */ SecurityPolicyViolationEvent, _]) | Null
+  ] = js.undefined
+  var onseeked: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onseeking: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onselect: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onselectionchange: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onselectstart: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onstalled: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onsubmit: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onsuspend: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var ontimeupdate: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var ontoggle: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var ontouchcancel: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]) | Null] = js.undefined
+  var ontouchend: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]) | Null] = js.undefined
+  var ontouchmove: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]) | Null] = js.undefined
+  var ontouchstart: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ TouchEvent, _]) | Null] = js.undefined
+  var ontransitioncancel: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]) | Null] = js.undefined
+  var ontransitionend: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]) | Null] = js.undefined
+  var ontransitionrun: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]) | Null] = js.undefined
+  var ontransitionstart: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ TransitionEvent, _]) | Null] = js.undefined
+  var onvolumechange: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onwaiting: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ Event, _]) | Null] = js.undefined
+  var onwheel: js.UndefOr[(js.ThisFunction1[/* this */ this.type, /* ev */ WheelEvent, _]) | Null] = js.undefined
   var outerHTML: js.UndefOr[String] = js.undefined
   var ownerDocument: js.UndefOr[Document] = js.undefined
-  var parentElement: js.UndefOr[HTMLElement] = js.undefined
-  var parentNode: js.UndefOr[Node with ParentNode] = js.undefined
-  var prefix: js.UndefOr[String] = js.undefined
+  var parentElement: js.UndefOr[HTMLElement | Null] = js.undefined
+  var parentNode: js.UndefOr[(Node with ParentNode) | Null] = js.undefined
+  var prefix: js.UndefOr[String | Null] = js.undefined
   var prepend: js.UndefOr[js.Function1[/* repeated */ Node | String, Unit]] = js.undefined
-  var previousElementSibling: js.UndefOr[Element] = js.undefined
-  var previousSibling: js.UndefOr[ChildNode] = js.undefined
+  var previousElementSibling: js.UndefOr[Element | Null] = js.undefined
+  var previousSibling: js.UndefOr[ChildNode | Null] = js.undefined
   var querySelector: js.UndefOr[js.Function1[a, HTMLAnchorElement | Null]] = js.undefined
   var querySelectorAll: js.UndefOr[js.Function1[a, NodeListOf[HTMLAnchorElement with Node]]] = js.undefined
   var referrerPolicy: js.UndefOr[String] = js.undefined
@@ -320,7 +321,7 @@ trait PartialHTMLImageElement extends js.Object {
   var setAttributeNode: js.UndefOr[js.Function1[/* attr */ Attr, Attr | Null]] = js.undefined
   var setAttributeNodeNS: js.UndefOr[js.Function1[/* attr */ Attr, Attr | Null]] = js.undefined
   var setPointerCapture: js.UndefOr[js.Function1[/* pointerId */ Double, Unit]] = js.undefined
-  var shadowRoot: js.UndefOr[ShadowRoot] = js.undefined
+  var shadowRoot: js.UndefOr[ShadowRoot | Null] = js.undefined
   var sizes: js.UndefOr[String] = js.undefined
   var slot: js.UndefOr[String] = js.undefined
   var spellcheck: js.UndefOr[Boolean] = js.undefined
@@ -329,7 +330,7 @@ trait PartialHTMLImageElement extends js.Object {
   var style: js.UndefOr[CSSStyleDeclaration] = js.undefined
   var tabIndex: js.UndefOr[Double] = js.undefined
   var tagName: js.UndefOr[String] = js.undefined
-  var textContent: js.UndefOr[String] = js.undefined
+  var textContent: js.UndefOr[String | Null] = js.undefined
   var title: js.UndefOr[String] = js.undefined
   var toggleAttribute: js.UndefOr[js.Function1[/* qualifiedName */ String, Boolean]] = js.undefined
   var translate: js.UndefOr[Boolean] = js.undefined
@@ -457,7 +458,7 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteAlt: Self = this.set("alt", js.undefined)
     @scala.inline
-    def setAnimate(value: /* keyframes */ js.Array[Keyframe] => Animation): Self = this.set("animate", js.Any.fromFunction1(value))
+    def setAnimate(value: () => Animation): Self = this.set("animate", js.Any.fromFunction0(value))
     @scala.inline
     def deleteAnimate: Self = this.set("animate", js.undefined)
     @scala.inline
@@ -472,6 +473,8 @@ object PartialHTMLImageElement {
     def setAssignedSlot(value: HTMLSlotElement): Self = this.set("assignedSlot", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAssignedSlot: Self = this.set("assignedSlot", js.undefined)
+    @scala.inline
+    def setAssignedSlotNull: Self = this.set("assignedSlot", null)
     @scala.inline
     def setAttachShadow(value: /* init */ ShadowRootInit => ShadowRoot): Self = this.set("attachShadow", js.Any.fromFunction1(value))
     @scala.inline
@@ -561,7 +564,7 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteComplete: Self = this.set("complete", js.undefined)
     @scala.inline
-    def setContains(value: /* other */ Node => Boolean): Self = this.set("contains", js.Any.fromFunction1(value))
+    def setContains(value: () => Boolean): Self = this.set("contains", js.Any.fromFunction0(value))
     @scala.inline
     def deleteContains: Self = this.set("contains", js.undefined)
     @scala.inline
@@ -572,6 +575,8 @@ object PartialHTMLImageElement {
     def setCrossOrigin(value: String): Self = this.set("crossOrigin", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCrossOrigin: Self = this.set("crossOrigin", js.undefined)
+    @scala.inline
+    def setCrossOriginNull: Self = this.set("crossOrigin", null)
     @scala.inline
     def setCurrentSrc(value: String): Self = this.set("currentSrc", value.asInstanceOf[js.Any])
     @scala.inline
@@ -605,9 +610,13 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteFirstChild: Self = this.set("firstChild", js.undefined)
     @scala.inline
+    def setFirstChildNull: Self = this.set("firstChild", null)
+    @scala.inline
     def setFirstElementChild(value: Element): Self = this.set("firstElementChild", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFirstElementChild: Self = this.set("firstElementChild", js.undefined)
+    @scala.inline
+    def setFirstElementChildNull: Self = this.set("firstElementChild", null)
     @scala.inline
     def setFocus(value: () => Unit): Self = this.set("focus", js.Any.fromFunction0(value))
     @scala.inline
@@ -723,7 +732,7 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteInsertAdjacentText: Self = this.set("insertAdjacentText", js.undefined)
     @scala.inline
-    def setInsertBefore(value: (/* newChild */ Node, /* refChild */ Node) => Node): Self = this.set("insertBefore", js.Any.fromFunction2(value))
+    def setInsertBefore(value: /* newChild */ Node => Node): Self = this.set("insertBefore", js.Any.fromFunction1(value))
     @scala.inline
     def deleteInsertBefore: Self = this.set("insertBefore", js.undefined)
     @scala.inline
@@ -735,11 +744,11 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteIsContentEditable: Self = this.set("isContentEditable", js.undefined)
     @scala.inline
-    def setIsDefaultNamespace(value: /* namespace */ String => Boolean): Self = this.set("isDefaultNamespace", js.Any.fromFunction1(value))
+    def setIsDefaultNamespace(value: () => Boolean): Self = this.set("isDefaultNamespace", js.Any.fromFunction0(value))
     @scala.inline
     def deleteIsDefaultNamespace: Self = this.set("isDefaultNamespace", js.undefined)
     @scala.inline
-    def setIsEqualNode(value: /* otherNode */ Node => Boolean): Self = this.set("isEqualNode", js.Any.fromFunction1(value))
+    def setIsEqualNode(value: () => Boolean): Self = this.set("isEqualNode", js.Any.fromFunction0(value))
     @scala.inline
     def deleteIsEqualNode: Self = this.set("isEqualNode", js.undefined)
     @scala.inline
@@ -747,7 +756,7 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteIsMap: Self = this.set("isMap", js.undefined)
     @scala.inline
-    def setIsSameNode(value: /* otherNode */ Node => Boolean): Self = this.set("isSameNode", js.Any.fromFunction1(value))
+    def setIsSameNode(value: () => Boolean): Self = this.set("isSameNode", js.Any.fromFunction0(value))
     @scala.inline
     def deleteIsSameNode: Self = this.set("isSameNode", js.undefined)
     @scala.inline
@@ -759,9 +768,13 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteLastChild: Self = this.set("lastChild", js.undefined)
     @scala.inline
+    def setLastChildNull: Self = this.set("lastChild", null)
+    @scala.inline
     def setLastElementChild(value: Element): Self = this.set("lastElementChild", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLastElementChild: Self = this.set("lastElementChild", js.undefined)
+    @scala.inline
+    def setLastElementChildNull: Self = this.set("lastElementChild", null)
     @scala.inline
     def setLocalName(value: String): Self = this.set("localName", value.asInstanceOf[js.Any])
     @scala.inline
@@ -771,11 +784,11 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteLongDesc: Self = this.set("longDesc", js.undefined)
     @scala.inline
-    def setLookupNamespaceURI(value: /* prefix */ String => String | Null): Self = this.set("lookupNamespaceURI", js.Any.fromFunction1(value))
+    def setLookupNamespaceURI(value: () => String | Null): Self = this.set("lookupNamespaceURI", js.Any.fromFunction0(value))
     @scala.inline
     def deleteLookupNamespaceURI: Self = this.set("lookupNamespaceURI", js.undefined)
     @scala.inline
-    def setLookupPrefix(value: /* namespace */ String => String | Null): Self = this.set("lookupPrefix", js.Any.fromFunction1(value))
+    def setLookupPrefix(value: () => String | Null): Self = this.set("lookupPrefix", js.Any.fromFunction0(value))
     @scala.inline
     def deleteLookupPrefix: Self = this.set("lookupPrefix", js.undefined)
     @scala.inline
@@ -799,6 +812,8 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteNamespaceURI: Self = this.set("namespaceURI", js.undefined)
     @scala.inline
+    def setNamespaceURINull: Self = this.set("namespaceURI", null)
+    @scala.inline
     def setNaturalHeight(value: Double): Self = this.set("naturalHeight", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNaturalHeight: Self = this.set("naturalHeight", js.undefined)
@@ -811,9 +826,13 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteNextElementSibling: Self = this.set("nextElementSibling", js.undefined)
     @scala.inline
+    def setNextElementSiblingNull: Self = this.set("nextElementSibling", null)
+    @scala.inline
     def setNextSibling(value: ChildNode): Self = this.set("nextSibling", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNextSibling: Self = this.set("nextSibling", js.undefined)
+    @scala.inline
+    def setNextSiblingNull: Self = this.set("nextSibling", null)
     @scala.inline
     def setNodeName(value: String): Self = this.set("nodeName", value.asInstanceOf[js.Any])
     @scala.inline
@@ -826,6 +845,8 @@ object PartialHTMLImageElement {
     def setNodeValue(value: String): Self = this.set("nodeValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNodeValue: Self = this.set("nodeValue", js.undefined)
+    @scala.inline
+    def setNodeValueNull: Self = this.set("nodeValue", null)
     @scala.inline
     def setNonce(value: String): Self = this.set("nonce", value.asInstanceOf[js.Any])
     @scala.inline
@@ -847,6 +868,8 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteOffsetParent: Self = this.set("offsetParent", js.undefined)
     @scala.inline
+    def setOffsetParentNull: Self = this.set("offsetParent", null)
+    @scala.inline
     def setOffsetTop(value: Double): Self = this.set("offsetTop", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOffsetTop: Self = this.set("offsetTop", js.undefined)
@@ -859,117 +882,175 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteOnabort: Self = this.set("onabort", js.undefined)
     @scala.inline
+    def setOnabortNull: Self = this.set("onabort", null)
+    @scala.inline
     def setOnanimationcancel(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ AnimationEvent, _]): Self = this.set("onanimationcancel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnanimationcancel: Self = this.set("onanimationcancel", js.undefined)
+    @scala.inline
+    def setOnanimationcancelNull: Self = this.set("onanimationcancel", null)
     @scala.inline
     def setOnanimationend(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ AnimationEvent, _]): Self = this.set("onanimationend", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnanimationend: Self = this.set("onanimationend", js.undefined)
     @scala.inline
+    def setOnanimationendNull: Self = this.set("onanimationend", null)
+    @scala.inline
     def setOnanimationiteration(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ AnimationEvent, _]): Self = this.set("onanimationiteration", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnanimationiteration: Self = this.set("onanimationiteration", js.undefined)
+    @scala.inline
+    def setOnanimationiterationNull: Self = this.set("onanimationiteration", null)
     @scala.inline
     def setOnanimationstart(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ AnimationEvent, _]): Self = this.set("onanimationstart", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnanimationstart: Self = this.set("onanimationstart", js.undefined)
     @scala.inline
+    def setOnanimationstartNull: Self = this.set("onanimationstart", null)
+    @scala.inline
     def setOnauxclick(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ MouseEvent, _]): Self = this.set("onauxclick", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnauxclick: Self = this.set("onauxclick", js.undefined)
+    @scala.inline
+    def setOnauxclickNull: Self = this.set("onauxclick", null)
     @scala.inline
     def setOnblur(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ FocusEvent, _]): Self = this.set("onblur", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnblur: Self = this.set("onblur", js.undefined)
     @scala.inline
+    def setOnblurNull: Self = this.set("onblur", null)
+    @scala.inline
     def setOncancel(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("oncancel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOncancel: Self = this.set("oncancel", js.undefined)
+    @scala.inline
+    def setOncancelNull: Self = this.set("oncancel", null)
     @scala.inline
     def setOncanplay(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("oncanplay", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOncanplay: Self = this.set("oncanplay", js.undefined)
     @scala.inline
+    def setOncanplayNull: Self = this.set("oncanplay", null)
+    @scala.inline
     def setOncanplaythrough(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("oncanplaythrough", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOncanplaythrough: Self = this.set("oncanplaythrough", js.undefined)
+    @scala.inline
+    def setOncanplaythroughNull: Self = this.set("oncanplaythrough", null)
     @scala.inline
     def setOnchange(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onchange", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnchange: Self = this.set("onchange", js.undefined)
     @scala.inline
+    def setOnchangeNull: Self = this.set("onchange", null)
+    @scala.inline
     def setOnclick(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ MouseEvent, _]): Self = this.set("onclick", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnclick: Self = this.set("onclick", js.undefined)
+    @scala.inline
+    def setOnclickNull: Self = this.set("onclick", null)
     @scala.inline
     def setOnclose(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onclose", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnclose: Self = this.set("onclose", js.undefined)
     @scala.inline
+    def setOncloseNull: Self = this.set("onclose", null)
+    @scala.inline
     def setOncontextmenu(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ MouseEvent, _]): Self = this.set("oncontextmenu", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOncontextmenu: Self = this.set("oncontextmenu", js.undefined)
+    @scala.inline
+    def setOncontextmenuNull: Self = this.set("oncontextmenu", null)
     @scala.inline
     def setOncopy(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ ClipboardEvent, _]): Self = this.set("oncopy", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOncopy: Self = this.set("oncopy", js.undefined)
     @scala.inline
+    def setOncopyNull: Self = this.set("oncopy", null)
+    @scala.inline
     def setOncuechange(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("oncuechange", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOncuechange: Self = this.set("oncuechange", js.undefined)
+    @scala.inline
+    def setOncuechangeNull: Self = this.set("oncuechange", null)
     @scala.inline
     def setOncut(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ ClipboardEvent, _]): Self = this.set("oncut", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOncut: Self = this.set("oncut", js.undefined)
     @scala.inline
+    def setOncutNull: Self = this.set("oncut", null)
+    @scala.inline
     def setOndblclick(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ MouseEvent, _]): Self = this.set("ondblclick", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOndblclick: Self = this.set("ondblclick", js.undefined)
+    @scala.inline
+    def setOndblclickNull: Self = this.set("ondblclick", null)
     @scala.inline
     def setOndrag(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ DragEvent, _]): Self = this.set("ondrag", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOndrag: Self = this.set("ondrag", js.undefined)
     @scala.inline
+    def setOndragNull: Self = this.set("ondrag", null)
+    @scala.inline
     def setOndragend(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ DragEvent, _]): Self = this.set("ondragend", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOndragend: Self = this.set("ondragend", js.undefined)
+    @scala.inline
+    def setOndragendNull: Self = this.set("ondragend", null)
     @scala.inline
     def setOndragenter(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ DragEvent, _]): Self = this.set("ondragenter", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOndragenter: Self = this.set("ondragenter", js.undefined)
     @scala.inline
+    def setOndragenterNull: Self = this.set("ondragenter", null)
+    @scala.inline
     def setOndragexit(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("ondragexit", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOndragexit: Self = this.set("ondragexit", js.undefined)
+    @scala.inline
+    def setOndragexitNull: Self = this.set("ondragexit", null)
     @scala.inline
     def setOndragleave(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ DragEvent, _]): Self = this.set("ondragleave", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOndragleave: Self = this.set("ondragleave", js.undefined)
     @scala.inline
+    def setOndragleaveNull: Self = this.set("ondragleave", null)
+    @scala.inline
     def setOndragover(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ DragEvent, _]): Self = this.set("ondragover", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOndragover: Self = this.set("ondragover", js.undefined)
+    @scala.inline
+    def setOndragoverNull: Self = this.set("ondragover", null)
     @scala.inline
     def setOndragstart(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ DragEvent, _]): Self = this.set("ondragstart", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOndragstart: Self = this.set("ondragstart", js.undefined)
     @scala.inline
+    def setOndragstartNull: Self = this.set("ondragstart", null)
+    @scala.inline
     def setOndrop(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ DragEvent, _]): Self = this.set("ondrop", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOndrop: Self = this.set("ondrop", js.undefined)
+    @scala.inline
+    def setOndropNull: Self = this.set("ondrop", null)
     @scala.inline
     def setOndurationchange(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("ondurationchange", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOndurationchange: Self = this.set("ondurationchange", js.undefined)
     @scala.inline
+    def setOndurationchangeNull: Self = this.set("ondurationchange", null)
+    @scala.inline
     def setOnemptied(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onemptied", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnemptied: Self = this.set("onemptied", js.undefined)
     @scala.inline
+    def setOnemptiedNull: Self = this.set("onemptied", null)
+    @scala.inline
     def setOnended(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onended", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnended: Self = this.set("onended", js.undefined)
+    @scala.inline
+    def setOnendedNull: Self = this.set("onended", null)
     @scala.inline
     def setOnerror(
       value: (/* event */ Event | String, /* source */ js.UndefOr[String], /* lineno */ js.UndefOr[Double], /* colno */ js.UndefOr[Double], /* error */ js.UndefOr[js.Error]) => js.Any
@@ -983,241 +1064,361 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteOnfocus: Self = this.set("onfocus", js.undefined)
     @scala.inline
+    def setOnfocusNull: Self = this.set("onfocus", null)
+    @scala.inline
     def setOnfullscreenchange(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onfullscreenchange", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnfullscreenchange: Self = this.set("onfullscreenchange", js.undefined)
+    @scala.inline
+    def setOnfullscreenchangeNull: Self = this.set("onfullscreenchange", null)
     @scala.inline
     def setOnfullscreenerror(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onfullscreenerror", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnfullscreenerror: Self = this.set("onfullscreenerror", js.undefined)
     @scala.inline
+    def setOnfullscreenerrorNull: Self = this.set("onfullscreenerror", null)
+    @scala.inline
     def setOngotpointercapture(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ PointerEvent, _]): Self = this.set("ongotpointercapture", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOngotpointercapture: Self = this.set("ongotpointercapture", js.undefined)
+    @scala.inline
+    def setOngotpointercaptureNull: Self = this.set("ongotpointercapture", null)
     @scala.inline
     def setOninput(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("oninput", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOninput: Self = this.set("oninput", js.undefined)
     @scala.inline
+    def setOninputNull: Self = this.set("oninput", null)
+    @scala.inline
     def setOninvalid(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("oninvalid", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOninvalid: Self = this.set("oninvalid", js.undefined)
+    @scala.inline
+    def setOninvalidNull: Self = this.set("oninvalid", null)
     @scala.inline
     def setOnkeydown(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ KeyboardEvent, _]): Self = this.set("onkeydown", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnkeydown: Self = this.set("onkeydown", js.undefined)
     @scala.inline
+    def setOnkeydownNull: Self = this.set("onkeydown", null)
+    @scala.inline
     def setOnkeypress(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ KeyboardEvent, _]): Self = this.set("onkeypress", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnkeypress: Self = this.set("onkeypress", js.undefined)
+    @scala.inline
+    def setOnkeypressNull: Self = this.set("onkeypress", null)
     @scala.inline
     def setOnkeyup(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ KeyboardEvent, _]): Self = this.set("onkeyup", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnkeyup: Self = this.set("onkeyup", js.undefined)
     @scala.inline
+    def setOnkeyupNull: Self = this.set("onkeyup", null)
+    @scala.inline
     def setOnload(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onload", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnload: Self = this.set("onload", js.undefined)
+    @scala.inline
+    def setOnloadNull: Self = this.set("onload", null)
     @scala.inline
     def setOnloadeddata(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onloadeddata", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnloadeddata: Self = this.set("onloadeddata", js.undefined)
     @scala.inline
+    def setOnloadeddataNull: Self = this.set("onloadeddata", null)
+    @scala.inline
     def setOnloadedmetadata(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onloadedmetadata", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnloadedmetadata: Self = this.set("onloadedmetadata", js.undefined)
+    @scala.inline
+    def setOnloadedmetadataNull: Self = this.set("onloadedmetadata", null)
     @scala.inline
     def setOnloadstart(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onloadstart", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnloadstart: Self = this.set("onloadstart", js.undefined)
     @scala.inline
+    def setOnloadstartNull: Self = this.set("onloadstart", null)
+    @scala.inline
     def setOnlostpointercapture(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ PointerEvent, _]): Self = this.set("onlostpointercapture", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnlostpointercapture: Self = this.set("onlostpointercapture", js.undefined)
+    @scala.inline
+    def setOnlostpointercaptureNull: Self = this.set("onlostpointercapture", null)
     @scala.inline
     def setOnmousedown(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ MouseEvent, _]): Self = this.set("onmousedown", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnmousedown: Self = this.set("onmousedown", js.undefined)
     @scala.inline
+    def setOnmousedownNull: Self = this.set("onmousedown", null)
+    @scala.inline
     def setOnmouseenter(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ MouseEvent, _]): Self = this.set("onmouseenter", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnmouseenter: Self = this.set("onmouseenter", js.undefined)
+    @scala.inline
+    def setOnmouseenterNull: Self = this.set("onmouseenter", null)
     @scala.inline
     def setOnmouseleave(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ MouseEvent, _]): Self = this.set("onmouseleave", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnmouseleave: Self = this.set("onmouseleave", js.undefined)
     @scala.inline
+    def setOnmouseleaveNull: Self = this.set("onmouseleave", null)
+    @scala.inline
     def setOnmousemove(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ MouseEvent, _]): Self = this.set("onmousemove", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnmousemove: Self = this.set("onmousemove", js.undefined)
+    @scala.inline
+    def setOnmousemoveNull: Self = this.set("onmousemove", null)
     @scala.inline
     def setOnmouseout(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ MouseEvent, _]): Self = this.set("onmouseout", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnmouseout: Self = this.set("onmouseout", js.undefined)
     @scala.inline
+    def setOnmouseoutNull: Self = this.set("onmouseout", null)
+    @scala.inline
     def setOnmouseover(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ MouseEvent, _]): Self = this.set("onmouseover", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnmouseover: Self = this.set("onmouseover", js.undefined)
+    @scala.inline
+    def setOnmouseoverNull: Self = this.set("onmouseover", null)
     @scala.inline
     def setOnmouseup(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ MouseEvent, _]): Self = this.set("onmouseup", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnmouseup: Self = this.set("onmouseup", js.undefined)
     @scala.inline
+    def setOnmouseupNull: Self = this.set("onmouseup", null)
+    @scala.inline
     def setOnpaste(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ ClipboardEvent, _]): Self = this.set("onpaste", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnpaste: Self = this.set("onpaste", js.undefined)
+    @scala.inline
+    def setOnpasteNull: Self = this.set("onpaste", null)
     @scala.inline
     def setOnpause(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onpause", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnpause: Self = this.set("onpause", js.undefined)
     @scala.inline
+    def setOnpauseNull: Self = this.set("onpause", null)
+    @scala.inline
     def setOnplay(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onplay", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnplay: Self = this.set("onplay", js.undefined)
+    @scala.inline
+    def setOnplayNull: Self = this.set("onplay", null)
     @scala.inline
     def setOnplaying(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onplaying", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnplaying: Self = this.set("onplaying", js.undefined)
     @scala.inline
+    def setOnplayingNull: Self = this.set("onplaying", null)
+    @scala.inline
     def setOnpointercancel(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ PointerEvent, _]): Self = this.set("onpointercancel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnpointercancel: Self = this.set("onpointercancel", js.undefined)
+    @scala.inline
+    def setOnpointercancelNull: Self = this.set("onpointercancel", null)
     @scala.inline
     def setOnpointerdown(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ PointerEvent, _]): Self = this.set("onpointerdown", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnpointerdown: Self = this.set("onpointerdown", js.undefined)
     @scala.inline
+    def setOnpointerdownNull: Self = this.set("onpointerdown", null)
+    @scala.inline
     def setOnpointerenter(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ PointerEvent, _]): Self = this.set("onpointerenter", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnpointerenter: Self = this.set("onpointerenter", js.undefined)
+    @scala.inline
+    def setOnpointerenterNull: Self = this.set("onpointerenter", null)
     @scala.inline
     def setOnpointerleave(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ PointerEvent, _]): Self = this.set("onpointerleave", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnpointerleave: Self = this.set("onpointerleave", js.undefined)
     @scala.inline
+    def setOnpointerleaveNull: Self = this.set("onpointerleave", null)
+    @scala.inline
     def setOnpointermove(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ PointerEvent, _]): Self = this.set("onpointermove", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnpointermove: Self = this.set("onpointermove", js.undefined)
+    @scala.inline
+    def setOnpointermoveNull: Self = this.set("onpointermove", null)
     @scala.inline
     def setOnpointerout(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ PointerEvent, _]): Self = this.set("onpointerout", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnpointerout: Self = this.set("onpointerout", js.undefined)
     @scala.inline
+    def setOnpointeroutNull: Self = this.set("onpointerout", null)
+    @scala.inline
     def setOnpointerover(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ PointerEvent, _]): Self = this.set("onpointerover", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnpointerover: Self = this.set("onpointerover", js.undefined)
+    @scala.inline
+    def setOnpointeroverNull: Self = this.set("onpointerover", null)
     @scala.inline
     def setOnpointerup(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ PointerEvent, _]): Self = this.set("onpointerup", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnpointerup: Self = this.set("onpointerup", js.undefined)
     @scala.inline
+    def setOnpointerupNull: Self = this.set("onpointerup", null)
+    @scala.inline
     def setOnprogress(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ ProgressEvent, _]): Self = this.set("onprogress", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnprogress: Self = this.set("onprogress", js.undefined)
+    @scala.inline
+    def setOnprogressNull: Self = this.set("onprogress", null)
     @scala.inline
     def setOnratechange(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onratechange", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnratechange: Self = this.set("onratechange", js.undefined)
     @scala.inline
+    def setOnratechangeNull: Self = this.set("onratechange", null)
+    @scala.inline
     def setOnreset(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onreset", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnreset: Self = this.set("onreset", js.undefined)
+    @scala.inline
+    def setOnresetNull: Self = this.set("onreset", null)
     @scala.inline
     def setOnresize(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ UIEvent, _]): Self = this.set("onresize", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnresize: Self = this.set("onresize", js.undefined)
     @scala.inline
+    def setOnresizeNull: Self = this.set("onresize", null)
+    @scala.inline
     def setOnscroll(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onscroll", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnscroll: Self = this.set("onscroll", js.undefined)
+    @scala.inline
+    def setOnscrollNull: Self = this.set("onscroll", null)
     @scala.inline
     def setOnsecuritypolicyviolation(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ SecurityPolicyViolationEvent, _]): Self = this.set("onsecuritypolicyviolation", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnsecuritypolicyviolation: Self = this.set("onsecuritypolicyviolation", js.undefined)
     @scala.inline
+    def setOnsecuritypolicyviolationNull: Self = this.set("onsecuritypolicyviolation", null)
+    @scala.inline
     def setOnseeked(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onseeked", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnseeked: Self = this.set("onseeked", js.undefined)
+    @scala.inline
+    def setOnseekedNull: Self = this.set("onseeked", null)
     @scala.inline
     def setOnseeking(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onseeking", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnseeking: Self = this.set("onseeking", js.undefined)
     @scala.inline
+    def setOnseekingNull: Self = this.set("onseeking", null)
+    @scala.inline
     def setOnselect(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onselect", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnselect: Self = this.set("onselect", js.undefined)
+    @scala.inline
+    def setOnselectNull: Self = this.set("onselect", null)
     @scala.inline
     def setOnselectionchange(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onselectionchange", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnselectionchange: Self = this.set("onselectionchange", js.undefined)
     @scala.inline
+    def setOnselectionchangeNull: Self = this.set("onselectionchange", null)
+    @scala.inline
     def setOnselectstart(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onselectstart", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnselectstart: Self = this.set("onselectstart", js.undefined)
+    @scala.inline
+    def setOnselectstartNull: Self = this.set("onselectstart", null)
     @scala.inline
     def setOnstalled(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onstalled", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnstalled: Self = this.set("onstalled", js.undefined)
     @scala.inline
+    def setOnstalledNull: Self = this.set("onstalled", null)
+    @scala.inline
     def setOnsubmit(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onsubmit", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnsubmit: Self = this.set("onsubmit", js.undefined)
+    @scala.inline
+    def setOnsubmitNull: Self = this.set("onsubmit", null)
     @scala.inline
     def setOnsuspend(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onsuspend", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnsuspend: Self = this.set("onsuspend", js.undefined)
     @scala.inline
+    def setOnsuspendNull: Self = this.set("onsuspend", null)
+    @scala.inline
     def setOntimeupdate(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("ontimeupdate", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOntimeupdate: Self = this.set("ontimeupdate", js.undefined)
+    @scala.inline
+    def setOntimeupdateNull: Self = this.set("ontimeupdate", null)
     @scala.inline
     def setOntoggle(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("ontoggle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOntoggle: Self = this.set("ontoggle", js.undefined)
     @scala.inline
+    def setOntoggleNull: Self = this.set("ontoggle", null)
+    @scala.inline
     def setOntouchcancel(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ TouchEvent, _]): Self = this.set("ontouchcancel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOntouchcancel: Self = this.set("ontouchcancel", js.undefined)
+    @scala.inline
+    def setOntouchcancelNull: Self = this.set("ontouchcancel", null)
     @scala.inline
     def setOntouchend(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ TouchEvent, _]): Self = this.set("ontouchend", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOntouchend: Self = this.set("ontouchend", js.undefined)
     @scala.inline
+    def setOntouchendNull: Self = this.set("ontouchend", null)
+    @scala.inline
     def setOntouchmove(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ TouchEvent, _]): Self = this.set("ontouchmove", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOntouchmove: Self = this.set("ontouchmove", js.undefined)
+    @scala.inline
+    def setOntouchmoveNull: Self = this.set("ontouchmove", null)
     @scala.inline
     def setOntouchstart(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ TouchEvent, _]): Self = this.set("ontouchstart", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOntouchstart: Self = this.set("ontouchstart", js.undefined)
     @scala.inline
+    def setOntouchstartNull: Self = this.set("ontouchstart", null)
+    @scala.inline
     def setOntransitioncancel(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ TransitionEvent, _]): Self = this.set("ontransitioncancel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOntransitioncancel: Self = this.set("ontransitioncancel", js.undefined)
+    @scala.inline
+    def setOntransitioncancelNull: Self = this.set("ontransitioncancel", null)
     @scala.inline
     def setOntransitionend(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ TransitionEvent, _]): Self = this.set("ontransitionend", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOntransitionend: Self = this.set("ontransitionend", js.undefined)
     @scala.inline
+    def setOntransitionendNull: Self = this.set("ontransitionend", null)
+    @scala.inline
     def setOntransitionrun(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ TransitionEvent, _]): Self = this.set("ontransitionrun", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOntransitionrun: Self = this.set("ontransitionrun", js.undefined)
+    @scala.inline
+    def setOntransitionrunNull: Self = this.set("ontransitionrun", null)
     @scala.inline
     def setOntransitionstart(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ TransitionEvent, _]): Self = this.set("ontransitionstart", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOntransitionstart: Self = this.set("ontransitionstart", js.undefined)
     @scala.inline
+    def setOntransitionstartNull: Self = this.set("ontransitionstart", null)
+    @scala.inline
     def setOnvolumechange(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onvolumechange", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnvolumechange: Self = this.set("onvolumechange", js.undefined)
+    @scala.inline
+    def setOnvolumechangeNull: Self = this.set("onvolumechange", null)
     @scala.inline
     def setOnwaiting(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ Event, _]): Self = this.set("onwaiting", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnwaiting: Self = this.set("onwaiting", js.undefined)
     @scala.inline
+    def setOnwaitingNull: Self = this.set("onwaiting", null)
+    @scala.inline
     def setOnwheel(value: js.ThisFunction1[PartialHTMLImageElement, /* ev */ WheelEvent, _]): Self = this.set("onwheel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnwheel: Self = this.set("onwheel", js.undefined)
+    @scala.inline
+    def setOnwheelNull: Self = this.set("onwheel", null)
     @scala.inline
     def setOuterHTML(value: String): Self = this.set("outerHTML", value.asInstanceOf[js.Any])
     @scala.inline
@@ -1231,13 +1432,19 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteParentElement: Self = this.set("parentElement", js.undefined)
     @scala.inline
+    def setParentElementNull: Self = this.set("parentElement", null)
+    @scala.inline
     def setParentNode(value: Node with ParentNode): Self = this.set("parentNode", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteParentNode: Self = this.set("parentNode", js.undefined)
     @scala.inline
+    def setParentNodeNull: Self = this.set("parentNode", null)
+    @scala.inline
     def setPrefix(value: String): Self = this.set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePrefix: Self = this.set("prefix", js.undefined)
+    @scala.inline
+    def setPrefixNull: Self = this.set("prefix", null)
     @scala.inline
     def setPrepend(value: /* repeated */ Node | String => Unit): Self = this.set("prepend", js.Any.fromFunction1(value))
     @scala.inline
@@ -1247,9 +1454,13 @@ object PartialHTMLImageElement {
     @scala.inline
     def deletePreviousElementSibling: Self = this.set("previousElementSibling", js.undefined)
     @scala.inline
+    def setPreviousElementSiblingNull: Self = this.set("previousElementSibling", null)
+    @scala.inline
     def setPreviousSibling(value: ChildNode): Self = this.set("previousSibling", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePreviousSibling: Self = this.set("previousSibling", js.undefined)
+    @scala.inline
+    def setPreviousSiblingNull: Self = this.set("previousSibling", null)
     @scala.inline
     def setQuerySelector(value: a => HTMLAnchorElement | Null): Self = this.set("querySelector", js.Any.fromFunction1(value))
     @scala.inline
@@ -1365,6 +1576,8 @@ object PartialHTMLImageElement {
     @scala.inline
     def deleteShadowRoot: Self = this.set("shadowRoot", js.undefined)
     @scala.inline
+    def setShadowRootNull: Self = this.set("shadowRoot", null)
+    @scala.inline
     def setSizes(value: String): Self = this.set("sizes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSizes: Self = this.set("sizes", js.undefined)
@@ -1400,6 +1613,8 @@ object PartialHTMLImageElement {
     def setTextContent(value: String): Self = this.set("textContent", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTextContent: Self = this.set("textContent", js.undefined)
+    @scala.inline
+    def setTextContentNull: Self = this.set("textContent", null)
     @scala.inline
     def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline

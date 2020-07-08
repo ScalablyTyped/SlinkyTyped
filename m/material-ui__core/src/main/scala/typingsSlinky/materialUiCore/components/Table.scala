@@ -65,7 +65,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.tree
 import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
-import typingsSlinky.materialUiCore.tableMod.default
 import typingsSlinky.materialUiCore.tableTableMod.Padding
 import typingsSlinky.materialUiCore.tableTableMod.TableBaseProps
 import typingsSlinky.materialUiCore.tableTableMod.TableProps
@@ -87,7 +86,7 @@ object Table {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline

@@ -34,6 +34,13 @@ class InvokeMethodExpr protected ()
     receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,
     method: String,
     args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
+    `type`: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    method: String,
+    args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
     `type`: Null,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
@@ -42,6 +49,13 @@ class InvokeMethodExpr protected ()
     method: String,
     args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
     `type`: typingsSlinky.angularCompiler.outputAstMod.Type,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    method: typingsSlinky.angularCompiler.outputAstMod.BuiltinMethod,
+    args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
+    `type`: js.UndefOr[scala.Nothing],
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
   def this(

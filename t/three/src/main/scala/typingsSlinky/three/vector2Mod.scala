@@ -102,6 +102,7 @@ object vector2Mod extends js.Object {
   @js.native
   class Vector2 () extends Vector {
     def this(x: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: Double) = this()
     def this(x: Double, y: Double) = this()
     var height: Double = js.native
     var isVector2: `true` = js.native
@@ -304,6 +305,7 @@ object vector2Mod extends js.Object {
     	 * @return The created or provided array.
     	 */
     def toArray(): js.Array[Double] = js.native
+    def toArray(array: js.UndefOr[scala.Nothing], offset: Double): js.Array[Double] = js.native
     def toArray(array: js.Array[Double]): js.Array[Double] = js.native
     def toArray(array: js.Array[Double], offset: Double): js.Array[Double] = js.native
     /**

@@ -387,6 +387,7 @@ trait App extends EventEmitter {
     * the Windows Registry and LSCopyDefaultHandlerForURLScheme internally.
     */
   def isDefaultProtocolClient(protocol: String): Boolean = js.native
+  def isDefaultProtocolClient(protocol: String, path: js.UndefOr[scala.Nothing], args: js.Array[String]): Boolean = js.native
   def isDefaultProtocolClient(protocol: String, path: String): Boolean = js.native
   def isDefaultProtocolClient(protocol: String, path: String, args: js.Array[String]): Boolean = js.native
   def isEmojiPanelSupported(): Boolean = js.native
@@ -950,6 +951,7 @@ trait App extends EventEmitter {
     * protocol (aka URI scheme). If so, it will remove the app as the default handler.
     */
   def removeAsDefaultProtocolClient(protocol: String): Boolean = js.native
+  def removeAsDefaultProtocolClient(protocol: String, path: js.UndefOr[scala.Nothing], args: js.Array[String]): Boolean = js.native
   def removeAsDefaultProtocolClient(protocol: String, path: String): Boolean = js.native
   def removeAsDefaultProtocolClient(protocol: String, path: String, args: js.Array[String]): Boolean = js.native
   @JSName("removeListener")
@@ -1183,6 +1185,7 @@ trait App extends EventEmitter {
     * uses the Windows Registry and LSSetDefaultHandlerForURLScheme internally.
     */
   def setAsDefaultProtocolClient(protocol: String): Boolean = js.native
+  def setAsDefaultProtocolClient(protocol: String, path: js.UndefOr[scala.Nothing], args: js.Array[String]): Boolean = js.native
   def setAsDefaultProtocolClient(protocol: String, path: String): Boolean = js.native
   def setAsDefaultProtocolClient(protocol: String, path: String, args: js.Array[String]): Boolean = js.native
   /**

@@ -70,7 +70,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.svgIconSvgIconMod.SvgIconProps
-import typingsSlinky.materialUiCore.tableSortLabelMod.default
 import typingsSlinky.materialUiCore.tableSortLabelTableSortLabelMod.TableSortLabelProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -91,7 +90,7 @@ object TableSortLabel {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def IconComponentFunctionComponent(value: ReactComponentClass[SvgIconProps]): this.type = set("IconComponent", value.asInstanceOf[js.Any])
     @scala.inline

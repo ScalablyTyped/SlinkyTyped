@@ -49,6 +49,13 @@ class BindingScope protected () extends LocalResolver {
     * @param localRef Whether or not this is a local ref
     */
   def set(retrievalLevel: Double, name: String, lhs: Expression): BindingScope = js.native
+  def set(
+    retrievalLevel: Double,
+    name: String,
+    lhs: Expression,
+    priority: js.UndefOr[scala.Nothing],
+    declareLocalCallback: DeclareLocalVarCallback
+  ): BindingScope = js.native
   def set(retrievalLevel: Double, name: String, lhs: Expression, priority: Double): BindingScope = js.native
   def set(
     retrievalLevel: Double,
@@ -56,6 +63,33 @@ class BindingScope protected () extends LocalResolver {
     lhs: Expression,
     priority: Double,
     declareLocalCallback: DeclareLocalVarCallback
+  ): BindingScope = js.native
+  @JSName("set")
+  def set_true(
+    retrievalLevel: Double,
+    name: String,
+    lhs: Expression,
+    priority: js.UndefOr[scala.Nothing],
+    declareLocalCallback: js.UndefOr[scala.Nothing],
+    localRef: `true`
+  ): BindingScope = js.native
+  @JSName("set")
+  def set_true(
+    retrievalLevel: Double,
+    name: String,
+    lhs: Expression,
+    priority: js.UndefOr[scala.Nothing],
+    declareLocalCallback: DeclareLocalVarCallback,
+    localRef: `true`
+  ): BindingScope = js.native
+  @JSName("set")
+  def set_true(
+    retrievalLevel: Double,
+    name: String,
+    lhs: Expression,
+    priority: Double,
+    declareLocalCallback: js.UndefOr[scala.Nothing],
+    localRef: `true`
   ): BindingScope = js.native
   @JSName("set")
   def set_true(

@@ -32,7 +32,6 @@ object Menu extends js.Object {
     * macOS' native actions.
     */
   def sendActionToFirstResponder(action: String): Unit = js.native
-  def setApplicationMenu(): Unit = js.native
   /**
     * Sets menu as the application menu on macOS. On Windows and Linux, the menu will
     * be set as each window's top menu. Also on Windows and Linux, you can use a & in
@@ -46,6 +45,7 @@ object Menu extends js.Object {
     * not set one. It contains standard items such as File, Edit, View, Window and
     * Help.
     */
+  def setApplicationMenu(): Unit = js.native
   def setApplicationMenu(menu: typingsSlinky.electron.Electron.Menu): Unit = js.native
 }
 

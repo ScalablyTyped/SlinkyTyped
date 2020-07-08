@@ -691,6 +691,7 @@ trait BrowserWindow extends EventEmitter {
     * can not be focused on.
     */
   def setAlwaysOnTop(flag: Boolean): Unit = js.native
+  def setAlwaysOnTop(flag: Boolean, level: js.UndefOr[scala.Nothing], relativeLevel: Double): Unit = js.native
   @JSName("setAlwaysOnTop")
   def setAlwaysOnTop_floating(flag: Boolean, level: floating): Unit = js.native
   @JSName("setAlwaysOnTop")
@@ -837,10 +838,10 @@ trait BrowserWindow extends EventEmitter {
     * Sets the maximum size of window to width and height.
     */
   def setMaximumSize(width: Double, height: Double): Unit = js.native
-  def setMenu(): Unit = js.native
   /**
     * Sets the menu as the window's menu bar.
     */
+  def setMenu(): Unit = js.native
   def setMenu(menu: Menu): Unit = js.native
   /**
     * Sets whether the menu bar should be visible. If the menu bar is auto-hide, users

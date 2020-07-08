@@ -17,7 +17,7 @@ trait NoticeContent extends js.Object {
   var closable: js.UndefOr[Boolean] = js.undefined
   var closeIcon: js.UndefOr[ReactElement] = js.undefined
   var content: js.UndefOr[ReactElement] = js.undefined
-  var duration: js.UndefOr[Double] = js.undefined
+  var duration: js.UndefOr[Double | Null] = js.undefined
   var holder: js.UndefOr[HTMLDivElement] = js.undefined
   var key: js.UndefOr[Key] = js.undefined
   var onClick: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
@@ -70,6 +70,8 @@ object NoticeContent {
     def setDuration(value: Double): Self = this.set("duration", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDuration: Self = this.set("duration", js.undefined)
+    @scala.inline
+    def setDurationNull: Self = this.set("duration", null)
     @scala.inline
     def setHolder(value: HTMLDivElement): Self = this.set("holder", value.asInstanceOf[js.Any])
     @scala.inline

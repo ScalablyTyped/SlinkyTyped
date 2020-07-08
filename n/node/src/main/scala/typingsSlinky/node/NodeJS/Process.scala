@@ -109,9 +109,11 @@ trait Process extends EventEmitter {
   def disconnect(): Unit = js.native
   def emit(event: Signals, signal: Signals): Boolean = js.native
   def emitWarning(warning: String): Unit = js.native
+  def emitWarning(warning: String, name: js.UndefOr[scala.Nothing], ctor: js.Function): Unit = js.native
   def emitWarning(warning: String, name: String): Unit = js.native
   def emitWarning(warning: String, name: String, ctor: js.Function): Unit = js.native
   def emitWarning(warning: js.Error): Unit = js.native
+  def emitWarning(warning: js.Error, name: js.UndefOr[scala.Nothing], ctor: js.Function): Unit = js.native
   def emitWarning(warning: js.Error, name: String): Unit = js.native
   def emitWarning(warning: js.Error, name: String, ctor: js.Function): Unit = js.native
   @JSName("emit")

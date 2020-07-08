@@ -9,7 +9,6 @@ import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNavigation.mod.NavigationParams
 import typingsSlinky.reactNavigation.mod.NavigationRoute
 import typingsSlinky.reactNavigationStack.anon.PickPropsstylechildrensce
-import typingsSlinky.reactNavigationStack.stackViewCardMod.default
 import typingsSlinky.reactNavigationStack.typesMod.NavigationStackProp
 import typingsSlinky.reactNavigationStack.typesMod.Scene
 import scala.scalajs.js
@@ -24,7 +23,7 @@ object StackViewCard {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

@@ -14,6 +14,7 @@ object sphereMod extends js.Object {
   @js.native
   class Sphere () extends js.Object {
     def this(center: Vector3) = this()
+    def this(center: js.UndefOr[scala.Nothing], radius: Double) = this()
     def this(center: Vector3, radius: Double) = this()
     var center: Vector3 = js.native
     var radius: Double = js.native

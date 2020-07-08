@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined {  encoding  :node.BufferEncoding} & node.child_process.ExecOptions */
+/* Inlined {  encoding :node.BufferEncoding} & node.child_process.ExecOptions */
 trait encodingBufferEncodingExe extends js.Object {
   var cwd: js.UndefOr[String] = js.undefined
   var encoding: BufferEncoding

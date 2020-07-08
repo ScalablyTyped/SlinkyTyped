@@ -18,7 +18,7 @@ object combineLatestMod extends js.Object {
   @js.native
   class CombineLatestOperator[T, R] () extends Operator[T, R] {
     def this(resultSelector: js.Function1[/* repeated */ js.Any, R]) = this()
-    var resultSelector: js.UndefOr[js.Any] = js.native
+    var resultSelector: js.Any = js.native
     /* CompleteClass */
     override def call(subscriber: Subscriber[R], source: js.Any): TeardownLogic = js.native
   }
@@ -30,7 +30,7 @@ object combineLatestMod extends js.Object {
     var _tryResultSelector: js.Any = js.native
     var active: js.Any = js.native
     var observables: js.Any = js.native
-    var resultSelector: js.UndefOr[js.Any] = js.native
+    var resultSelector: js.Any = js.native
     var toRespond: js.Any = js.native
     var values: js.Any = js.native
     /* protected */ def _next(observable: js.Any): Unit = js.native

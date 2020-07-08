@@ -18,6 +18,11 @@ class Circle protected () extends GeoObject_ {
   def this(geometry: js.Object, properties: IDataManager) = this()
   def this(
     geometry: js.Array[js.Array[js.Array[js.Array[ICircleGeometry]] | Double]],
+    properties: js.UndefOr[scala.Nothing],
+    options: ICircleOptions
+  ) = this()
+  def this(
+    geometry: js.Array[js.Array[js.Array[js.Array[ICircleGeometry]] | Double]],
     properties: js.Object,
     options: ICircleOptions
   ) = this()
@@ -26,6 +31,7 @@ class Circle protected () extends GeoObject_ {
     properties: IDataManager,
     options: ICircleOptions
   ) = this()
+  def this(geometry: js.Object, properties: js.UndefOr[scala.Nothing], options: ICircleOptions) = this()
   def this(geometry: js.Object, properties: js.Object, options: ICircleOptions) = this()
   def this(geometry: js.Object, properties: IDataManager, options: ICircleOptions) = this()
   var indices: js.typedarray.ArrayBuffer = js.native

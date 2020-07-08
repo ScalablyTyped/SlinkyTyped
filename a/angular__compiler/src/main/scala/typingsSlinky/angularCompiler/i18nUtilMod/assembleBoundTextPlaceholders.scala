@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object assembleBoundTextPlaceholders extends js.Object {
   def apply(meta: AST): Map[String, js.Array[_]] = js.native
+  def apply(meta: AST, bindingStartIndex: js.UndefOr[scala.Nothing], contextId: Double): Map[String, js.Array[_]] = js.native
   def apply(meta: AST, bindingStartIndex: Double): Map[String, js.Array[_]] = js.native
   def apply(meta: AST, bindingStartIndex: Double, contextId: Double): Map[String, js.Array[_]] = js.native
 }

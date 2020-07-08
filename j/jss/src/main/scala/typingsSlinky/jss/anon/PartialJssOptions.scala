@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 
 /* Inlined std.Partial<jss.jss.JssOptions> */
 trait PartialJssOptions extends js.Object {
-  var Renderer: js.UndefOr[Instantiable] = js.undefined
+  var Renderer: js.UndefOr[Instantiable | Null] = js.undefined
   var createGenerateId: js.UndefOr[CreateGenerateId_] = js.undefined
   var id: js.UndefOr[CreateGenerateIdOptions] = js.undefined
   var insertionPoint: js.UndefOr[InsertionPoint] = js.undefined
@@ -41,6 +41,8 @@ object PartialJssOptions {
     def setRenderer(value: Instantiable): Self = this.set("Renderer", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRenderer: Self = this.set("Renderer", js.undefined)
+    @scala.inline
+    def setRendererNull: Self = this.set("Renderer", null)
     @scala.inline
     def setCreateGenerateId(value: /* options */ js.UndefOr[CreateGenerateIdOptions] => GenerateId): Self = this.set("createGenerateId", js.Any.fromFunction1(value))
     @scala.inline

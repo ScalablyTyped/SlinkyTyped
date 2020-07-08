@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined expo.expo/build/AR.BaseAnchor & {  type  :expo.expo/build/AR.AnchorType.Face,   isTracked  :boolean,   geometry ? :expo.expo/build/AR.FaceGeometry,   blendShapes ? :{[ shape in expo.expo/build/AR.BlendShape ]:? number}} */
+/* Inlined expo.expo/build/AR.BaseAnchor & {  type :expo.expo/build/AR.AnchorType.Face,   isTracked :boolean,   geometry :expo.expo/build/AR.FaceGeometry | undefined,   blendShapes :{[ shape in expo.expo/build/AR.BlendShape ]:? number} | undefined} */
 trait FaceAnchor extends Anchor {
   var blendShapes: js.UndefOr[
     /* import warning: importer.ImportType#apply c Unsupported type mapping: 

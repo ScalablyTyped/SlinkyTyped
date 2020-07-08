@@ -272,6 +272,8 @@ object DatePicker {
       def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
       @scala.inline
       def value(value: Moment): this.type = set("value", value.asInstanceOf[js.Any])
+      @scala.inline
+      def valueNull: this.type = set("value", null)
     }
     
     def withProps(p: typingsSlinky.antd.generatePickerMod.PickerBaseProps[Moment]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
@@ -499,6 +501,8 @@ object DatePicker {
       def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
       @scala.inline
       def value(value: Moment): this.type = set("value", value.asInstanceOf[js.Any])
+      @scala.inline
+      def valueNull: this.type = set("value", null)
     }
     
     def withProps(p: typingsSlinky.antd.generatePickerMod.PickerDateProps[Moment]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
@@ -738,6 +742,8 @@ object DatePicker {
       def use12Hours(value: Boolean): this.type = set("use12Hours", value.asInstanceOf[js.Any])
       @scala.inline
       def value(value: Moment): this.type = set("value", value.asInstanceOf[js.Any])
+      @scala.inline
+      def valueNull: this.type = set("value", null)
     }
     
     def withProps(p: typingsSlinky.antd.generatePickerMod.PickerTimeProps[Moment]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

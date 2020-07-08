@@ -17,6 +17,12 @@ class ReadPropExpr protected ()
   def this(
     receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,
     name: String,
+    `type`: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    receiver: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    name: String,
     `type`: Null,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()

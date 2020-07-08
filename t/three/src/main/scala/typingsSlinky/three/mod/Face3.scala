@@ -23,6 +23,20 @@ class Face3 protected ()
     a: Double,
     b: Double,
     c: Double,
+    normal: js.UndefOr[scala.Nothing],
+    color: typingsSlinky.three.colorMod.Color
+  ) = this()
+  def this(
+    a: Double,
+    b: Double,
+    c: Double,
+    normal: js.UndefOr[scala.Nothing],
+    vertexColors: js.Array[typingsSlinky.three.colorMod.Color]
+  ) = this()
+  def this(
+    a: Double,
+    b: Double,
+    c: Double,
     normal: typingsSlinky.three.vector3Mod.Vector3,
     color: typingsSlinky.three.colorMod.Color
   ) = this()
@@ -46,6 +60,38 @@ class Face3 protected ()
     c: Double,
     vertexNormals: js.Array[typingsSlinky.three.vector3Mod.Vector3],
     vertexColors: js.Array[typingsSlinky.three.colorMod.Color]
+  ) = this()
+  def this(
+    a: Double,
+    b: Double,
+    c: Double,
+    normal: js.UndefOr[scala.Nothing],
+    color: js.UndefOr[scala.Nothing],
+    materialIndex: Double
+  ) = this()
+  def this(
+    a: Double,
+    b: Double,
+    c: Double,
+    normal: js.UndefOr[scala.Nothing],
+    color: typingsSlinky.three.colorMod.Color,
+    materialIndex: Double
+  ) = this()
+  def this(
+    a: Double,
+    b: Double,
+    c: Double,
+    normal: js.UndefOr[scala.Nothing],
+    vertexColors: js.Array[typingsSlinky.three.colorMod.Color],
+    materialIndex: Double
+  ) = this()
+  def this(
+    a: Double,
+    b: Double,
+    c: Double,
+    normal: typingsSlinky.three.vector3Mod.Vector3,
+    color: js.UndefOr[scala.Nothing],
+    materialIndex: Double
   ) = this()
   def this(
     a: Double,
@@ -61,6 +107,14 @@ class Face3 protected ()
     c: Double,
     normal: typingsSlinky.three.vector3Mod.Vector3,
     vertexColors: js.Array[typingsSlinky.three.colorMod.Color],
+    materialIndex: Double
+  ) = this()
+  def this(
+    a: Double,
+    b: Double,
+    c: Double,
+    vertexNormals: js.Array[typingsSlinky.three.vector3Mod.Vector3],
+    color: js.UndefOr[scala.Nothing],
     materialIndex: Double
   ) = this()
   def this(

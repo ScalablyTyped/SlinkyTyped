@@ -60,6 +60,7 @@ class Duplex () extends Readable {
   def end(cb: js.Function0[Unit]): Unit = js.native
   def end(chunk: js.Any): Unit = js.native
   def end(chunk: js.Any, cb: js.Function0[Unit]): Unit = js.native
+  def end(chunk: js.Any, encoding: js.UndefOr[scala.Nothing], cb: js.Function0[Unit]): Unit = js.native
   def end(chunk: js.Any, encoding: BufferEncoding): Unit = js.native
   def end(chunk: js.Any, encoding: BufferEncoding, cb: js.Function0[Unit]): Unit = js.native
   @JSName("on")
@@ -106,6 +107,11 @@ class Duplex () extends Readable {
   def uncork(): Unit = js.native
   def write(chunk: js.Any): Boolean = js.native
   def write(chunk: js.Any, cb: js.Function1[js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
+  def write(
+    chunk: js.Any,
+    encoding: js.UndefOr[scala.Nothing],
+    cb: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]
+  ): Boolean = js.native
   def write(chunk: js.Any, encoding: BufferEncoding): Boolean = js.native
   def write(chunk: js.Any, encoding: BufferEncoding, cb: js.Function1[js.UndefOr[js.Error | Null], Unit]): Boolean = js.native
 }

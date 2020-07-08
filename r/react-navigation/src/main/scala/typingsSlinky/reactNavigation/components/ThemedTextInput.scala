@@ -2,7 +2,6 @@ package typingsSlinky.reactNavigation.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.reactNavigation.mod.Themed.TextInput
 import typingsSlinky.reactNavigation.mod.ThemedTextInputProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +13,7 @@ object ThemedTextInput {
   @js.native
   object component extends js.Object
   
-  def apply(p: ThemedTextInputProps): Default[tag.type, TextInput] = new Default[tag.type, TextInput](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: ThemedTextInput.type): Default[tag.type, TextInput] = new Default[tag.type, TextInput](js.Array(this.component, js.Dictionary.empty))()
+  def apply(p: ThemedTextInputProps): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: ThemedTextInput.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -68,7 +68,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.tree
 import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
-import typingsSlinky.materialUiCore.snackbarMod.default
 import typingsSlinky.materialUiCore.snackbarSnackbarMod.SnackbarOrigin
 import typingsSlinky.materialUiCore.snackbarSnackbarMod.SnackbarProps
 import typingsSlinky.materialUiCore.transitionMod.TransitionProps
@@ -89,7 +88,7 @@ object Snackbar {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def ClickAwayListenerProps(value: PartialClickAwayListenerP): this.type = set("ClickAwayListenerProps", value.asInstanceOf[js.Any])
     @scala.inline

@@ -56,6 +56,8 @@ class ɵangularPackagesCoreTestingTestingB ()
   override def get[T](token: InjectionToken[T], notFoundValue: T): T with js.Any = js.native
   /* InferMemberOverrides */
   override def get[T](token: InjectionToken[T], notFoundValue: T, flags: InjectFlags): T with js.Any = js.native
+  /* InferMemberOverrides */
+  override def get[T](token: InjectionToken[T], notFoundValue: js.UndefOr[scala.Nothing], flags: InjectFlags): T with js.Any = js.native
   /**
     * Retrieves an instance from the injector based on the provided token.
     * @returns The instance from the injector if defined, otherwise the `notFoundValue`.
@@ -67,6 +69,8 @@ class ɵangularPackagesCoreTestingTestingB ()
   override def get[T](token: Type[T], notFoundValue: T): T with js.Any = js.native
   /* InferMemberOverrides */
   override def get[T](token: Type[T], notFoundValue: T, flags: InjectFlags): T with js.Any = js.native
+  /* InferMemberOverrides */
+  override def get[T](token: Type[T], notFoundValue: js.UndefOr[scala.Nothing], flags: InjectFlags): T with js.Any = js.native
 }
 
 /* static members */
@@ -94,9 +98,11 @@ object ɵangularPackagesCoreTestingTestingB extends js.Object {
   def get[T](token: InjectionToken[T]): js.Any = js.native
   def get[T](token: InjectionToken[T], notFoundValue: T): js.Any = js.native
   def get[T](token: InjectionToken[T], notFoundValue: T, flags: InjectFlags): js.Any = js.native
+  def get[T](token: InjectionToken[T], notFoundValue: js.UndefOr[scala.Nothing], flags: InjectFlags): js.Any = js.native
   def get[T](token: Type[T]): js.Any = js.native
   def get[T](token: Type[T], notFoundValue: T): js.Any = js.native
   def get[T](token: Type[T], notFoundValue: T, flags: InjectFlags): js.Any = js.native
+  def get[T](token: Type[T], notFoundValue: js.UndefOr[scala.Nothing], flags: InjectFlags): js.Any = js.native
   def initTestEnvironment(ngModule: js.Array[Type[_]], platform: PlatformRef): TestBed = js.native
   def initTestEnvironment(ngModule: js.Array[Type[_]], platform: PlatformRef, aotSummaries: js.Function0[js.Array[_]]): TestBed = js.native
   /**

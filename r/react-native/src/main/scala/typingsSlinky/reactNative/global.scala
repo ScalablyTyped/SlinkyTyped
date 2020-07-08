@@ -124,7 +124,7 @@ object global extends js.Object {
   class Response ()
     extends typingsSlinky.reactNative.Response {
     def this(body: BodyInit) = this()
-    def this(body: BodyInit, init: ResponseInit) = this()
+    def this(body: js.UndefOr[BodyInit], init: ResponseInit) = this()
     /* CompleteClass */
     override val bodyUsed: Boolean = js.native
     /** The initial value of Object.prototype.constructor is the standard built-in Object constructor. */
@@ -186,6 +186,7 @@ object global extends js.Object {
     def this(uri: String) = this()
     def this(uri: String, protocols: String) = this()
     def this(uri: String, protocols: js.Array[String]) = this()
+    def this(uri: String, protocols: js.UndefOr[scala.Nothing], options: DictoptionName) = this()
     def this(uri: String, protocols: String, options: DictoptionName) = this()
     def this(uri: String, protocols: js.Array[String], options: DictoptionName) = this()
     def this(uri: String, protocols: Null, options: DictoptionName) = this()
@@ -208,10 +209,10 @@ object global extends js.Object {
   def fetchBundle(bundleId: Double, callback: js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit]): Unit = js.native
   def requestAnimationFrame(callback: js.Function1[/* time */ Double, Unit]): Double = js.native
   def setImmediate(handler: js.Function1[/* repeated */ js.Any, Unit]): Double = js.native
-  def setInterval(handler: js.Any): Double = js.native
+  def setInterval(handler: js.Any, timeout: js.UndefOr[scala.Nothing], args: js.Any*): Double = js.native
   def setInterval(handler: js.Any, timeout: js.Any, args: js.Any*): Double = js.native
   def setInterval(handler: js.Function1[/* repeated */ js.Any, Unit], timeout: Double): Double = js.native
-  def setTimeout(handler: js.Any): Double = js.native
+  def setTimeout(handler: js.Any, timeout: js.UndefOr[scala.Nothing], args: js.Any*): Double = js.native
   def setTimeout(handler: js.Any, timeout: js.Any, args: js.Any*): Double = js.native
   def setTimeout(handler: js.Function1[/* repeated */ js.Any, Unit], timeout: Double): Double = js.native
   @js.native
@@ -242,7 +243,11 @@ object global extends js.Object {
   object Response
     extends Instantiable0[typingsSlinky.reactNative.Response]
        with Instantiable1[/* body */ BodyInit, typingsSlinky.reactNative.Response]
-       with Instantiable2[/* body */ BodyInit, /* init */ ResponseInit, typingsSlinky.reactNative.Response] {
+       with Instantiable2[
+          js.UndefOr[/* body */ BodyInit], 
+          /* init */ ResponseInit, 
+          typingsSlinky.reactNative.Response
+        ] {
     def error(): typingsSlinky.reactNative.Response = js.native
     def redirect(url: String): typingsSlinky.reactNative.Response = js.native
     def redirect(url: String, status: Double): typingsSlinky.reactNative.Response = js.native
@@ -258,7 +263,9 @@ object global extends js.Object {
         ]
        with Instantiable3[
           /* uri */ String, 
-          (/* protocols */ js.Array[String]) | (/* protocols */ Null) | (/* protocols */ String), 
+          js.UndefOr[
+            (/* protocols */ js.Array[String]) | (/* protocols */ Null) | (/* protocols */ String)
+          ], 
           /* options */ DictoptionName, 
           typingsSlinky.reactNative.WebSocket
         ] {

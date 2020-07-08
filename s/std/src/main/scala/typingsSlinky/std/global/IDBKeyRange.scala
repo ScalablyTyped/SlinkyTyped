@@ -44,6 +44,7 @@ object IDBKeyRange
     * Returns a new IDBKeyRange spanning from lower to upper. If lowerOpen is true, lower is not included in the range. If upperOpen is true, upper is not included in the range.
     */
   def bound(lower: js.Any, upper: js.Any): org.scalajs.dom.raw.IDBKeyRange = js.native
+  def bound(lower: js.Any, upper: js.Any, lowerOpen: js.UndefOr[scala.Nothing], upperOpen: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = js.native
   def bound(lower: js.Any, upper: js.Any, lowerOpen: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = js.native
   def bound(lower: js.Any, upper: js.Any, lowerOpen: scala.Boolean, upperOpen: scala.Boolean): org.scalajs.dom.raw.IDBKeyRange = js.native
   /**

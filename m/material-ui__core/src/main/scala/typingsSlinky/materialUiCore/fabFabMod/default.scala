@@ -2,18 +2,9 @@ package typingsSlinky.materialUiCore.fabFabMod
 
 import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
-
-@JSImport("@material-ui/core/Fab/Fab", JSImport.Default)
-@js.native
-class default protected ()
-  extends Component[FabProps, js.Object, js.Any] {
-  def this(props: FabProps) = this()
-  def this(props: FabProps, context: js.Any) = this()
-}
 
 @JSImport("@material-ui/core/Fab/Fab", JSImport.Default)
 @js.native

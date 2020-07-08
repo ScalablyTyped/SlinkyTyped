@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object assembleI18nBoundString extends js.Object {
   def apply(strings: js.Array[String]): String = js.native
+  def apply(strings: js.Array[String], bindingStartIndex: js.UndefOr[scala.Nothing], contextId: Double): String = js.native
   def apply(strings: js.Array[String], bindingStartIndex: Double): String = js.native
   def apply(strings: js.Array[String], bindingStartIndex: Double, contextId: Double): String = js.native
 }

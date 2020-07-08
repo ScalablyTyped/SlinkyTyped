@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class NoopAnimationPlayer () extends AnimationPlayer {
   def this(duration: Double) = this()
+  def this(duration: js.UndefOr[scala.Nothing], delay: Double) = this()
   def this(duration: Double, delay: Double) = this()
   var _destroyed: js.Any = js.native
   var _finished: js.Any = js.native

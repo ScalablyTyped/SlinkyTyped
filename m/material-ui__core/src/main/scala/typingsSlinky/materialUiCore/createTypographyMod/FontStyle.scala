@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined parent std.Required<{  fontFamily  :@material-ui/core.@material-ui/core/styles/withStyles.CSSProperties['fontFamily'],   fontSize  :number,   fontWeightLight  :@material-ui/core.@material-ui/core/styles/withStyles.CSSProperties['fontWeight'],   fontWeightRegular  :@material-ui/core.@material-ui/core/styles/withStyles.CSSProperties['fontWeight'],   fontWeightMedium  :@material-ui/core.@material-ui/core/styles/withStyles.CSSProperties['fontWeight']}> */
+/* Inlined parent std.Required<{  fontFamily :@material-ui/core.@material-ui/core/styles/withStyles.CSSProperties['fontFamily'],   fontSize :number,   fontWeightLight :@material-ui/core.@material-ui/core/styles/withStyles.CSSProperties['fontWeight'],   fontWeightRegular :@material-ui/core.@material-ui/core/styles/withStyles.CSSProperties['fontWeight'],   fontWeightMedium :@material-ui/core.@material-ui/core/styles/withStyles.CSSProperties['fontWeight']}> */
 @js.native
 trait FontStyle extends js.Object {
   var fontFamily: FontFamilyProperty = js.native

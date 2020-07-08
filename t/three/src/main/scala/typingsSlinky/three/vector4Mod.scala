@@ -17,8 +17,24 @@ object vector4Mod extends js.Object {
   @js.native
   class Vector4 () extends Vector {
     def this(x: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: Double) = this()
     def this(x: Double, y: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], z: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: Double, z: Double) = this()
+    def this(x: Double, y: js.UndefOr[scala.Nothing], z: Double) = this()
     def this(x: Double, y: Double, z: Double) = this()
+    def this(
+      x: js.UndefOr[scala.Nothing],
+      y: js.UndefOr[scala.Nothing],
+      z: js.UndefOr[scala.Nothing],
+      w: Double
+    ) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], z: Double, w: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: Double, z: js.UndefOr[scala.Nothing], w: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: Double, z: Double, w: Double) = this()
+    def this(x: Double, y: js.UndefOr[scala.Nothing], z: js.UndefOr[scala.Nothing], w: Double) = this()
+    def this(x: Double, y: js.UndefOr[scala.Nothing], z: Double, w: Double) = this()
+    def this(x: Double, y: Double, z: js.UndefOr[scala.Nothing], w: Double) = this()
     def this(x: Double, y: Double, z: Double, w: Double) = this()
     var height: Double = js.native
     var isVector4: `true` = js.native
@@ -133,6 +149,7 @@ object vector4Mod extends js.Object {
     	 * @return The created or provided array.
     	 */
     def toArray(): js.Array[Double] = js.native
+    def toArray(array: js.UndefOr[scala.Nothing], offset: Double): js.Array[Double] = js.native
     def toArray(array: js.Array[Double]): js.Array[Double] = js.native
     def toArray(array: js.Array[Double], offset: Double): js.Array[Double] = js.native
     /**

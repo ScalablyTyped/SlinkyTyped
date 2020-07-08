@@ -73,7 +73,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.mobileStepperMobileStepperMod.MobileStepperProps
-import typingsSlinky.materialUiCore.mobileStepperMod.default
 import typingsSlinky.materialUiCore.paperPaperMod.PaperProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -93,7 +92,7 @@ object MobileStepper {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def LinearProgressProps(value: PartialLinearProgressProp): this.type = set("LinearProgressProps", value.asInstanceOf[js.Any])
     @scala.inline

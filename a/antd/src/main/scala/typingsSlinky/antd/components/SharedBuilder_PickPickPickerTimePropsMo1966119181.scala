@@ -285,5 +285,7 @@ class SharedBuilder_PickPickPickerTimePropsMo1966119181 (val args: js.Array[js.A
   def use12Hours(value: Boolean): this.type = set("use12Hours", value.asInstanceOf[js.Any])
   @scala.inline
   def value(value: Moment): this.type = set("value", value.asInstanceOf[js.Any])
+  @scala.inline
+  def valueNull: this.type = set("value", null)
 }
 

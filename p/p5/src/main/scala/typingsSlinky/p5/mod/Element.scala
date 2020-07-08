@@ -167,6 +167,7 @@ trait Element extends js.Object {
     *   @return the inner HTML of the element
     */
   def html(): String = js.native
+  def html(html: js.UndefOr[scala.Nothing], append: Boolean): Element = js.native
   def html(html: String): Element = js.native
   def html(html: String, append: Boolean): Element = js.native
   /**
@@ -351,6 +352,7 @@ trait Element extends js.Object {
     *   object
     */
   def position(): js.Object = js.native
+  def position(x: js.UndefOr[scala.Nothing], y: Double): Element = js.native
   def position(x: Double): Element = js.native
   def position(x: Double, y: Double): Element = js.native
   /**

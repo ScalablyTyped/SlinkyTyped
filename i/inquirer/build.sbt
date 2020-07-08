@@ -1,16 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "inquirer"
-version := "6.5-dt-20200226Z-15fde4"
+version := "6.5-dt-20200226Z-1f145b"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200609Z-a81c57",
-  "org.scalablytyped.slinky" %%% "rxjs" % "6.5.5-c344de",
-  "org.scalablytyped.slinky" %%% "rxjs-compat" % "6.5.5-e9e4c8",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-a77a62",
-  "org.scalablytyped.slinky" %%% "through" % "0.0-unknown-dt-20200515Z-67064f")
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200609Z-6ee82c",
+  "org.scalablytyped.slinky" %%% "rxjs" % "6.5.5-3504e0",
+  "org.scalablytyped.slinky" %%% "rxjs-compat" % "6.5.5-db78b9",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-dec240",
+  "org.scalablytyped.slinky" %%% "through" % "0.0-unknown-dt-20200515Z-9f78d0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

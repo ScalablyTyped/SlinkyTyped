@@ -1,14 +1,14 @@
 package typingsSlinky.yandexMaps.mod.control
 
-import typingsSlinky.yandexMaps.anon.ContentString
 import typingsSlinky.yandexMaps.anon.Layout
 import typingsSlinky.yandexMaps.anon.Selected
+import typingsSlinky.yandexMaps.anon.`0`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait IListBoxItemParameters extends js.Object {
-  var data: js.UndefOr[ContentString] = js.undefined
+  var data: js.UndefOr[`0`] = js.undefined
   var options: js.UndefOr[Layout] = js.undefined
   var state: js.UndefOr[Selected] = js.undefined
 }
@@ -31,7 +31,7 @@ object IListBoxItemParameters {
         x
     }
     @scala.inline
-    def setData(value: ContentString): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: `0`): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteData: Self = this.set("data", js.undefined)
     @scala.inline

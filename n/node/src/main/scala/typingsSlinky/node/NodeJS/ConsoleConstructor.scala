@@ -14,7 +14,7 @@ trait ConsoleConstructor
      with Instantiable2[/* stdout */ WritableStream, /* stderr */ WritableStream, Console]
      with Instantiable3[
       /* stdout */ WritableStream, 
-      /* stderr */ WritableStream, 
+      js.UndefOr[/* stderr */ WritableStream], 
       /* ignoreErrors */ Boolean, 
       Console
     ]

@@ -753,8 +753,54 @@ trait Window
   def moveTo(x: Double, y: Double): Unit = js.native
   def msWriteProfilerMark(profilerMarkName: java.lang.String): Unit = js.native
   def open(): org.scalajs.dom.raw.Window | Null = js.native
+  def open(
+    url: js.UndefOr[scala.Nothing],
+    target: js.UndefOr[scala.Nothing],
+    features: js.UndefOr[scala.Nothing],
+    replace: scala.Boolean
+  ): org.scalajs.dom.raw.Window | Null = js.native
+  def open(url: js.UndefOr[scala.Nothing], target: js.UndefOr[scala.Nothing], features: java.lang.String): org.scalajs.dom.raw.Window | Null = js.native
+  def open(
+    url: js.UndefOr[scala.Nothing],
+    target: js.UndefOr[scala.Nothing],
+    features: java.lang.String,
+    replace: scala.Boolean
+  ): org.scalajs.dom.raw.Window | Null = js.native
+  def open(url: js.UndefOr[scala.Nothing], target: java.lang.String): org.scalajs.dom.raw.Window | Null = js.native
+  def open(
+    url: js.UndefOr[scala.Nothing],
+    target: java.lang.String,
+    features: js.UndefOr[scala.Nothing],
+    replace: scala.Boolean
+  ): org.scalajs.dom.raw.Window | Null = js.native
+  def open(url: js.UndefOr[scala.Nothing], target: java.lang.String, features: java.lang.String): org.scalajs.dom.raw.Window | Null = js.native
+  def open(
+    url: js.UndefOr[scala.Nothing],
+    target: java.lang.String,
+    features: java.lang.String,
+    replace: scala.Boolean
+  ): org.scalajs.dom.raw.Window | Null = js.native
   def open(url: java.lang.String): org.scalajs.dom.raw.Window | Null = js.native
+  def open(
+    url: java.lang.String,
+    target: js.UndefOr[scala.Nothing],
+    features: js.UndefOr[scala.Nothing],
+    replace: scala.Boolean
+  ): org.scalajs.dom.raw.Window | Null = js.native
+  def open(url: java.lang.String, target: js.UndefOr[scala.Nothing], features: java.lang.String): org.scalajs.dom.raw.Window | Null = js.native
+  def open(
+    url: java.lang.String,
+    target: js.UndefOr[scala.Nothing],
+    features: java.lang.String,
+    replace: scala.Boolean
+  ): org.scalajs.dom.raw.Window | Null = js.native
   def open(url: java.lang.String, target: java.lang.String): org.scalajs.dom.raw.Window | Null = js.native
+  def open(
+    url: java.lang.String,
+    target: java.lang.String,
+    features: js.UndefOr[scala.Nothing],
+    replace: scala.Boolean
+  ): org.scalajs.dom.raw.Window | Null = js.native
   def open(url: java.lang.String, target: java.lang.String, features: java.lang.String): org.scalajs.dom.raw.Window | Null = js.native
   def open(
     url: java.lang.String,
@@ -766,6 +812,7 @@ trait Window
   def postMessage(message: js.Any, targetOrigin: java.lang.String, transfer: js.Array[Transferable]): Unit = js.native
   def print(): Unit = js.native
   def prompt(): java.lang.String | Null = js.native
+  def prompt(message: js.UndefOr[scala.Nothing], _default: java.lang.String): java.lang.String | Null = js.native
   def prompt(message: java.lang.String): java.lang.String | Null = js.native
   def prompt(message: java.lang.String, _default: java.lang.String): java.lang.String | Null = js.native
   /** @deprecated */

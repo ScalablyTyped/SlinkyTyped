@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined expo.expo/build/AR.BaseAnchor & {  type  :expo.expo/build/AR.AnchorType.Image,   image ? :{  name  :string | null,   size  :expo.expo/build/AR.Size}} */
+/* Inlined expo.expo/build/AR.BaseAnchor & {  type :expo.expo/build/AR.AnchorType.Image,   image :{  name :string | null,   size :expo.expo/build/AR.Size} | undefined} */
 trait ImageAnchor extends Anchor {
   var id: String
   var image: js.UndefOr[Name] = js.undefined

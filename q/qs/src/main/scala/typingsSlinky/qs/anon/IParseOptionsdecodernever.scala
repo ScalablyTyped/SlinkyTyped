@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined qs.qs.IParseOptions & {  decoder ? :never} */
+/* Inlined qs.qs.IParseOptions & {  decoder :never | undefined} */
 trait IParseOptionsdecodernever extends js.Object {
   var allowDots: js.UndefOr[Boolean] = js.undefined
   var allowPrototypes: js.UndefOr[Boolean] = js.undefined
@@ -18,7 +18,7 @@ trait IParseOptionsdecodernever extends js.Object {
   var charset: js.UndefOr[`utf-8` | `iso-8859-1`] = js.undefined
   var charsetSentinel: js.UndefOr[Boolean] = js.undefined
   var comma: js.UndefOr[Boolean] = js.undefined
-  var decoder: js.UndefOr[
+  var decoder: (js.UndefOr[
     js.Function4[
       /* str */ String, 
       /* defaultDecoder */ defaultDecoder, 
@@ -26,7 +26,7 @@ trait IParseOptionsdecodernever extends js.Object {
       /* type */ key | value, 
       _
     ]
-  ] = js.undefined
+  ]) with js.UndefOr[scala.Nothing]
   var delimiter: js.UndefOr[String | js.RegExp] = js.undefined
   var depth: js.UndefOr[Double | `false`] = js.undefined
   var ignoreQueryPrefix: js.UndefOr[Boolean] = js.undefined
@@ -39,8 +39,18 @@ trait IParseOptionsdecodernever extends js.Object {
 
 object IParseOptionsdecodernever {
   @scala.inline
-  def apply(): IParseOptionsdecodernever = {
-    val __obj = js.Dynamic.literal()
+  def apply(
+    decoder: (js.UndefOr[
+      js.Function4[
+        /* str */ String, 
+        /* defaultDecoder */ defaultDecoder, 
+        /* charset */ String, 
+        /* type */ key | value, 
+        _
+      ]
+    ]) with js.UndefOr[scala.Nothing]
+  ): IParseOptionsdecodernever = {
+    val __obj = js.Dynamic.literal(decoder = decoder.asInstanceOf[js.Any])
     __obj.asInstanceOf[IParseOptionsdecodernever]
   }
   @scala.inline
@@ -54,6 +64,18 @@ object IParseOptionsdecodernever {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setDecoder(
+      value: (js.UndefOr[
+          js.Function4[
+            /* str */ String, 
+            /* defaultDecoder */ defaultDecoder, 
+            /* charset */ String, 
+            /* type */ key | value, 
+            _
+          ]
+        ]) with js.UndefOr[scala.Nothing]
+    ): Self = this.set("decoder", value.asInstanceOf[js.Any])
     @scala.inline
     def setAllowDots(value: Boolean): Self = this.set("allowDots", value.asInstanceOf[js.Any])
     @scala.inline
@@ -78,12 +100,6 @@ object IParseOptionsdecodernever {
     def setComma(value: Boolean): Self = this.set("comma", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteComma: Self = this.set("comma", js.undefined)
-    @scala.inline
-    def setDecoder(
-      value: (/* str */ String, /* defaultDecoder */ defaultDecoder, /* charset */ String, /* type */ key | value) => _
-    ): Self = this.set("decoder", js.Any.fromFunction4(value))
-    @scala.inline
-    def deleteDecoder: Self = this.set("decoder", js.undefined)
     @scala.inline
     def setDelimiterRegExp(value: js.RegExp): Self = this.set("delimiter", value.asInstanceOf[js.Any])
     @scala.inline

@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined node.http.RequestOptions & node.tls.SecureContextOptions & {  rejectUnauthorized ? :boolean,   servername ? :string} */
+/* Inlined node.http.RequestOptions & node.tls.SecureContextOptions & {  rejectUnauthorized :boolean | undefined,   servername :string | undefined} */
 trait RequestOptions extends js.Object {
   var _defaultAgent: js.UndefOr[typingsSlinky.node.httpMod.Agent] = js.undefined
   var agent: js.UndefOr[typingsSlinky.node.httpMod.Agent | Boolean] = js.undefined

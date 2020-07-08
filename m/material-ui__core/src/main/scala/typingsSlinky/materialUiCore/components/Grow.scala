@@ -4,7 +4,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.createMuiThemeMod.Theme
 import typingsSlinky.materialUiCore.growGrowMod.GrowProps
-import typingsSlinky.materialUiCore.growMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.auto
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -19,7 +18,7 @@ object Grow {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def addEndListener(value: js.Any): this.type = set("addEndListener", value.asInstanceOf[js.Any])
     @scala.inline

@@ -6,13 +6,13 @@ import scala.scalajs.js.annotation._
 
 trait BufferFloat32Array extends js.Object {
   var buffer: js.typedarray.Float32Array
-  var bytesWritten: Double
+  var bytesRead: Double
 }
 
 object BufferFloat32Array {
   @scala.inline
-  def apply(buffer: js.typedarray.Float32Array, bytesWritten: Double): BufferFloat32Array = {
-    val __obj = js.Dynamic.literal(buffer = buffer.asInstanceOf[js.Any], bytesWritten = bytesWritten.asInstanceOf[js.Any])
+  def apply(buffer: js.typedarray.Float32Array, bytesRead: Double): BufferFloat32Array = {
+    val __obj = js.Dynamic.literal(buffer = buffer.asInstanceOf[js.Any], bytesRead = bytesRead.asInstanceOf[js.Any])
     __obj.asInstanceOf[BufferFloat32Array]
   }
   @scala.inline
@@ -29,7 +29,7 @@ object BufferFloat32Array {
     @scala.inline
     def setBuffer(value: js.typedarray.Float32Array): Self = this.set("buffer", value.asInstanceOf[js.Any])
     @scala.inline
-    def setBytesWritten(value: Double): Self = this.set("bytesWritten", value.asInstanceOf[js.Any])
+    def setBytesRead(value: Double): Self = this.set("bytesRead", value.asInstanceOf[js.Any])
   }
   
 }

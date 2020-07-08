@@ -53,6 +53,26 @@ class TmplAstBoundAttribute protected () extends BoundAttribute {
     value: typingsSlinky.angularCompiler.astMod.AST,
     unit: String,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    valueSpan: js.UndefOr[scala.Nothing],
+    i18n: Message
+  ) = this()
+  def this(
+    name: String,
+    `type`: BindingType,
+    securityContext: SecurityContext,
+    value: typingsSlinky.angularCompiler.astMod.AST,
+    unit: String,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    valueSpan: js.UndefOr[scala.Nothing],
+    i18n: Node
+  ) = this()
+  def this(
+    name: String,
+    `type`: BindingType,
+    securityContext: SecurityContext,
+    value: typingsSlinky.angularCompiler.astMod.AST,
+    unit: String,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     valueSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     i18n: Message
   ) = this()
@@ -64,6 +84,26 @@ class TmplAstBoundAttribute protected () extends BoundAttribute {
     unit: String,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
     valueSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    i18n: Node
+  ) = this()
+  def this(
+    name: String,
+    `type`: BindingType,
+    securityContext: SecurityContext,
+    value: typingsSlinky.angularCompiler.astMod.AST,
+    unit: Null,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    valueSpan: js.UndefOr[scala.Nothing],
+    i18n: Message
+  ) = this()
+  def this(
+    name: String,
+    `type`: BindingType,
+    securityContext: SecurityContext,
+    value: typingsSlinky.angularCompiler.astMod.AST,
+    unit: Null,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    valueSpan: js.UndefOr[scala.Nothing],
     i18n: Node
   ) = this()
   def this(

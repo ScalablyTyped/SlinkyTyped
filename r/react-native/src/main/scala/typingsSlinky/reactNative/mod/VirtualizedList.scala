@@ -1,10 +1,10 @@
 package typingsSlinky.reactNative.mod
 
 import typingsSlinky.react.mod.Component
-import typingsSlinky.reactNative.anon.AnimatedBoolean
 import typingsSlinky.reactNative.anon.AnimatedItem
 import typingsSlinky.reactNative.anon.AnimatedOffset
 import typingsSlinky.reactNative.anon.ViewPosition
+import typingsSlinky.reactNative.anon.`1`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ class VirtualizedList[ItemT] ()
   extends Component[VirtualizedListProps[ItemT], js.Object, js.Any] {
   def recordInteraction(): Unit = js.native
   def scrollToEnd(): Unit = js.native
-  def scrollToEnd(params: AnimatedBoolean): Unit = js.native
+  def scrollToEnd(params: `1`): Unit = js.native
   def scrollToIndex(params: ViewPosition): Unit = js.native
   def scrollToItem(params: AnimatedItem[ItemT]): Unit = js.native
   /**

@@ -41,11 +41,507 @@ class TemplateDefinitionBuilder protected ()
     constantPool: ConstantPool,
     parentBindingScope: BindingScope,
     level: Double,
-    contextName: String | Null,
-    i18nContext: I18nContext | Null,
-    templateIndex: Double | Null,
-    templateName: String | Null,
-    directiveMatcher: SelectorMatcher[_] | Null,
+    contextName: String,
+    i18nContext: Null,
+    templateIndex: Double,
+    templateName: String,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: Null,
+    templateIndex: Double,
+    templateName: String,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: Null,
+    templateIndex: Double,
+    templateName: Null,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: Null,
+    templateIndex: Double,
+    templateName: Null,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: Null,
+    templateIndex: Null,
+    templateName: String,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: Null,
+    templateIndex: Null,
+    templateName: String,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: Null,
+    templateIndex: Null,
+    templateName: Null,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: Null,
+    templateIndex: Null,
+    templateName: Null,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: I18nContext,
+    templateIndex: Double,
+    templateName: String,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: I18nContext,
+    templateIndex: Double,
+    templateName: String,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: I18nContext,
+    templateIndex: Double,
+    templateName: Null,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: I18nContext,
+    templateIndex: Double,
+    templateName: Null,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: I18nContext,
+    templateIndex: Null,
+    templateName: String,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: I18nContext,
+    templateIndex: Null,
+    templateName: String,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: I18nContext,
+    templateIndex: Null,
+    templateName: Null,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: String,
+    i18nContext: I18nContext,
+    templateIndex: Null,
+    templateName: Null,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: Null,
+    templateIndex: Double,
+    templateName: String,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: Null,
+    templateIndex: Double,
+    templateName: String,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: Null,
+    templateIndex: Double,
+    templateName: Null,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: Null,
+    templateIndex: Double,
+    templateName: Null,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: Null,
+    templateIndex: Null,
+    templateName: String,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: Null,
+    templateIndex: Null,
+    templateName: String,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: Null,
+    templateIndex: Null,
+    templateName: Null,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: Null,
+    templateIndex: Null,
+    templateName: Null,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: I18nContext,
+    templateIndex: Double,
+    templateName: String,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: I18nContext,
+    templateIndex: Double,
+    templateName: String,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: I18nContext,
+    templateIndex: Double,
+    templateName: Null,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: I18nContext,
+    templateIndex: Double,
+    templateName: Null,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: I18nContext,
+    templateIndex: Null,
+    templateName: String,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: I18nContext,
+    templateIndex: Null,
+    templateName: String,
+    directiveMatcher: SelectorMatcher[_],
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: I18nContext,
+    templateIndex: Null,
+    templateName: Null,
+    directiveMatcher: Null,
+    directives: Set[Expression],
+    pipeTypeByName: Map[String, Expression],
+    pipes: Set[Expression],
+    _namespace: ExternalReference,
+    relativeContextFilePath: String,
+    i18nUseExternalIds: Boolean
+  ) = this()
+  def this(
+    constantPool: ConstantPool,
+    parentBindingScope: BindingScope,
+    level: Double,
+    contextName: Null,
+    i18nContext: I18nContext,
+    templateIndex: Null,
+    templateName: Null,
+    directiveMatcher: SelectorMatcher[_],
     directives: Set[Expression],
     pipeTypeByName: Map[String, Expression],
     pipes: Set[Expression],
@@ -164,6 +660,12 @@ class TemplateDefinitionBuilder protected ()
   var updateInstructionChain: js.Any = js.native
   def addNamespaceInstruction(nsInstruction: ExternalReference, element: Element): Unit = js.native
   def buildTemplateFunction(nodes: js.Array[Node], variables: js.Array[Variable]): FunctionExpr = js.native
+  def buildTemplateFunction(
+    nodes: js.Array[Node],
+    variables: js.Array[Variable],
+    ngContentSelectorsOffset: js.UndefOr[scala.Nothing],
+    i18n: AST
+  ): FunctionExpr = js.native
   def buildTemplateFunction(nodes: js.Array[Node], variables: js.Array[Variable], ngContentSelectorsOffset: Double): FunctionExpr = js.native
   def buildTemplateFunction(nodes: js.Array[Node], variables: js.Array[Variable], ngContentSelectorsOffset: Double, i18n: AST): FunctionExpr = js.native
   def getConstCount(): Double = js.native
@@ -176,15 +678,40 @@ class TemplateDefinitionBuilder protected ()
   def i18nAppendBindings(expressions: js.Array[typingsSlinky.angularCompiler.astMod.AST]): Unit = js.native
   def i18nBindProps(props: StringDictionary[Text | BoundText]): StringDictionary[Expression] = js.native
   def i18nEnd(): Unit = js.native
+  def i18nEnd(span: js.UndefOr[scala.Nothing], selfClosing: Boolean): Unit = js.native
   def i18nEnd(span: Null, selfClosing: Boolean): Unit = js.native
   def i18nEnd(span: ParseSourceSpan): Unit = js.native
   def i18nEnd(span: ParseSourceSpan, selfClosing: Boolean): Unit = js.native
-  def i18nFormatPlaceholderNames(params: js.UndefOr[StringDictionary[Expression]], useCamelCase: Boolean): StringDictionary[Expression] = js.native
+  def i18nFormatPlaceholderNames(params: js.UndefOr[scala.Nothing], useCamelCase: Boolean): StringDictionary[Expression] = js.native
+  def i18nFormatPlaceholderNames(params: StringDictionary[Expression], useCamelCase: Boolean): StringDictionary[Expression] = js.native
   def i18nGenerateClosureVar(messageId: String): ReadVarExpr = js.native
-  def i18nStart(span: js.UndefOr[Null | ParseSourceSpan], meta: AST): Unit = js.native
-  def i18nStart(span: js.UndefOr[Null | ParseSourceSpan], meta: AST, selfClosing: Boolean): Unit = js.native
+  def i18nStart(span: js.UndefOr[scala.Nothing], meta: AST): Unit = js.native
+  def i18nStart(span: js.UndefOr[scala.Nothing], meta: AST, selfClosing: Boolean): Unit = js.native
+  def i18nStart(span: Null, meta: AST): Unit = js.native
+  def i18nStart(span: Null, meta: AST, selfClosing: Boolean): Unit = js.native
+  def i18nStart(span: ParseSourceSpan, meta: AST): Unit = js.native
+  def i18nStart(span: ParseSourceSpan, meta: AST, selfClosing: Boolean): Unit = js.native
   def i18nTranslate(message: Message): ReadVarExpr = js.native
+  def i18nTranslate(
+    message: Message,
+    params: js.UndefOr[scala.Nothing],
+    ref: js.UndefOr[scala.Nothing],
+    transformFn: js.Function1[/* raw */ ReadVarExpr, Expression]
+  ): ReadVarExpr = js.native
+  def i18nTranslate(message: Message, params: js.UndefOr[scala.Nothing], ref: ReadVarExpr): ReadVarExpr = js.native
+  def i18nTranslate(
+    message: Message,
+    params: js.UndefOr[scala.Nothing],
+    ref: ReadVarExpr,
+    transformFn: js.Function1[/* raw */ ReadVarExpr, Expression]
+  ): ReadVarExpr = js.native
   def i18nTranslate(message: Message, params: StringDictionary[Expression]): ReadVarExpr = js.native
+  def i18nTranslate(
+    message: Message,
+    params: StringDictionary[Expression],
+    ref: js.UndefOr[scala.Nothing],
+    transformFn: js.Function1[/* raw */ ReadVarExpr, Expression]
+  ): ReadVarExpr = js.native
   def i18nTranslate(message: Message, params: StringDictionary[Expression], ref: ReadVarExpr): ReadVarExpr = js.native
   def i18nTranslate(
     message: Message,

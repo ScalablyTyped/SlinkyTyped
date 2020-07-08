@@ -51,6 +51,11 @@ object expandMod extends js.Object {
   }
   
   def expand[T](project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[T]]): MonoTypeOperatorFunction[T] = js.native
+  def expand[T](
+    project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[T]],
+    concurrent: js.UndefOr[scala.Nothing],
+    scheduler: SchedulerLike
+  ): MonoTypeOperatorFunction[T] = js.native
   def expand[T](project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[T]], concurrent: Double): MonoTypeOperatorFunction[T] = js.native
   def expand[T](
     project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[T]],
@@ -59,6 +64,12 @@ object expandMod extends js.Object {
   ): MonoTypeOperatorFunction[T] = js.native
   @JSName("expand")
   def expand_TR_OperatorFunction[T, R](project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[R]]): OperatorFunction[T, R] = js.native
+  @JSName("expand")
+  def expand_TR_OperatorFunction[T, R](
+    project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[R]],
+    concurrent: js.UndefOr[scala.Nothing],
+    scheduler: SchedulerLike
+  ): OperatorFunction[T, R] = js.native
   @JSName("expand")
   def expand_TR_OperatorFunction[T, R](project: js.Function2[/* value */ T, /* index */ Double, ObservableInput[R]], concurrent: Double): OperatorFunction[T, R] = js.native
   @JSName("expand")

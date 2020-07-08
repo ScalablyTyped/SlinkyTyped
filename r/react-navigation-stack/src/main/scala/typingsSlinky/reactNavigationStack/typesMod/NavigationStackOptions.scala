@@ -5,7 +5,7 @@ import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNavigationStack.anon.Horizontal
-import typingsSlinky.reactNavigationStack.anon.TextPropschildrenstring
+import typingsSlinky.reactNavigationStack.anon.TextPropschildrenstringun
 import typingsSlinky.reactNavigationStack.anon.TintColor
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.inverted
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.normal
@@ -35,7 +35,9 @@ trait NavigationStackOptions extends js.Object {
   var headerShown: js.UndefOr[Boolean] = js.undefined
   var headerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   var headerTintColor: js.UndefOr[String] = js.undefined
-  var headerTitle: js.UndefOr[(js.Function1[/* props */ TextPropschildrenstring, ReactElement]) | ReactElement] = js.undefined
+  var headerTitle: js.UndefOr[
+    (js.Function1[/* props */ TextPropschildrenstringun, ReactElement]) | ReactElement
+  ] = js.undefined
   var headerTitleAllowFontScaling: js.UndefOr[Boolean] = js.undefined
   var headerTitleContainerStyle: js.UndefOr[StyleProp[ViewStyle]] = js.undefined
   var headerTitleStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
@@ -166,9 +168,9 @@ object NavigationStackOptions {
     @scala.inline
     def setHeaderTitleReactElement(value: ReactElement): Self = this.set("headerTitle", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHeaderTitleFunction1(value: /* props */ TextPropschildrenstring => ReactElement): Self = this.set("headerTitle", js.Any.fromFunction1(value))
+    def setHeaderTitleFunction1(value: /* props */ TextPropschildrenstringun => ReactElement): Self = this.set("headerTitle", js.Any.fromFunction1(value))
     @scala.inline
-    def setHeaderTitle(value: (js.Function1[/* props */ TextPropschildrenstring, ReactElement]) | ReactElement): Self = this.set("headerTitle", value.asInstanceOf[js.Any])
+    def setHeaderTitle(value: (js.Function1[/* props */ TextPropschildrenstringun, ReactElement]) | ReactElement): Self = this.set("headerTitle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHeaderTitle: Self = this.set("headerTitle", js.undefined)
     @scala.inline

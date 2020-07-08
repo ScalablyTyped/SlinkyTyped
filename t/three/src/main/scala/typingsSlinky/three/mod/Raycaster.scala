@@ -16,11 +16,52 @@ import scala.scalajs.js.annotation._
 class Raycaster ()
   extends typingsSlinky.three.raycasterMod.Raycaster {
   def this(origin: typingsSlinky.three.vector3Mod.Vector3) = this()
+  def this(origin: js.UndefOr[scala.Nothing], direction: typingsSlinky.three.vector3Mod.Vector3) = this()
   def this(origin: typingsSlinky.three.vector3Mod.Vector3, direction: typingsSlinky.three.vector3Mod.Vector3) = this()
+  def this(origin: js.UndefOr[scala.Nothing], direction: js.UndefOr[scala.Nothing], near: Double) = this()
+  def this(origin: js.UndefOr[scala.Nothing], direction: typingsSlinky.three.vector3Mod.Vector3, near: Double) = this()
+  def this(origin: typingsSlinky.three.vector3Mod.Vector3, direction: js.UndefOr[scala.Nothing], near: Double) = this()
   def this(
     origin: typingsSlinky.three.vector3Mod.Vector3,
     direction: typingsSlinky.three.vector3Mod.Vector3,
     near: Double
+  ) = this()
+  def this(
+    origin: js.UndefOr[scala.Nothing],
+    direction: js.UndefOr[scala.Nothing],
+    near: js.UndefOr[scala.Nothing],
+    far: Double
+  ) = this()
+  def this(origin: js.UndefOr[scala.Nothing], direction: js.UndefOr[scala.Nothing], near: Double, far: Double) = this()
+  def this(
+    origin: js.UndefOr[scala.Nothing],
+    direction: typingsSlinky.three.vector3Mod.Vector3,
+    near: js.UndefOr[scala.Nothing],
+    far: Double
+  ) = this()
+  def this(
+    origin: js.UndefOr[scala.Nothing],
+    direction: typingsSlinky.three.vector3Mod.Vector3,
+    near: Double,
+    far: Double
+  ) = this()
+  def this(
+    origin: typingsSlinky.three.vector3Mod.Vector3,
+    direction: js.UndefOr[scala.Nothing],
+    near: js.UndefOr[scala.Nothing],
+    far: Double
+  ) = this()
+  def this(
+    origin: typingsSlinky.three.vector3Mod.Vector3,
+    direction: js.UndefOr[scala.Nothing],
+    near: Double,
+    far: Double
+  ) = this()
+  def this(
+    origin: typingsSlinky.three.vector3Mod.Vector3,
+    direction: typingsSlinky.three.vector3Mod.Vector3,
+    near: js.UndefOr[scala.Nothing],
+    far: Double
   ) = this()
   def this(
     origin: typingsSlinky.three.vector3Mod.Vector3,

@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Partial<{  duration  :number | string,   easing  :string,   delay  :number | string}> */
+/* Inlined std.Partial<{  duration :number | string,   easing :string,   delay :number | string}> */
 @js.native
 trait Partialdurationnumberstri extends js.Object {
   var delay: js.UndefOr[Double | String] = js.native

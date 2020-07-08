@@ -34,16 +34,52 @@ trait RequireFunction extends js.Object {
     */
   def apply(paths: js.Array[String], callback: js.Function1[/* repeated */ js.Any, Unit]): Unit = js.native
   def context(path: String): RequireContext = js.native
+  def context(path: String, deep: js.UndefOr[scala.Nothing], filter: js.RegExp): RequireContext = js.native
   def context(path: String, deep: Boolean): RequireContext = js.native
   def context(path: String, deep: Boolean, filter: js.RegExp): RequireContext = js.native
   @JSName("context")
+  def context_eager(path: String, deep: js.UndefOr[scala.Nothing], filter: js.UndefOr[scala.Nothing], mode: eager): RequireContext = js.native
+  @JSName("context")
+  def context_eager(path: String, deep: js.UndefOr[scala.Nothing], filter: js.RegExp, mode: eager): RequireContext = js.native
+  @JSName("context")
+  def context_eager(path: String, deep: Boolean, filter: js.UndefOr[scala.Nothing], mode: eager): RequireContext = js.native
+  @JSName("context")
   def context_eager(path: String, deep: Boolean, filter: js.RegExp, mode: eager): RequireContext = js.native
+  @JSName("context")
+  def context_lazy(path: String, deep: js.UndefOr[scala.Nothing], filter: js.UndefOr[scala.Nothing], mode: `lazy`): RequireContext = js.native
+  @JSName("context")
+  def context_lazy(path: String, deep: js.UndefOr[scala.Nothing], filter: js.RegExp, mode: `lazy`): RequireContext = js.native
+  @JSName("context")
+  def context_lazy(path: String, deep: Boolean, filter: js.UndefOr[scala.Nothing], mode: `lazy`): RequireContext = js.native
   @JSName("context")
   def context_lazy(path: String, deep: Boolean, filter: js.RegExp, mode: `lazy`): RequireContext = js.native
   @JSName("context")
+  def context_lazyonce(
+    path: String,
+    deep: js.UndefOr[scala.Nothing],
+    filter: js.UndefOr[scala.Nothing],
+    mode: `lazy-once`
+  ): RequireContext = js.native
+  @JSName("context")
+  def context_lazyonce(path: String, deep: js.UndefOr[scala.Nothing], filter: js.RegExp, mode: `lazy-once`): RequireContext = js.native
+  @JSName("context")
+  def context_lazyonce(path: String, deep: Boolean, filter: js.UndefOr[scala.Nothing], mode: `lazy-once`): RequireContext = js.native
+  @JSName("context")
   def context_lazyonce(path: String, deep: Boolean, filter: js.RegExp, mode: `lazy-once`): RequireContext = js.native
   @JSName("context")
+  def context_sync(path: String, deep: js.UndefOr[scala.Nothing], filter: js.UndefOr[scala.Nothing], mode: sync): RequireContext = js.native
+  @JSName("context")
+  def context_sync(path: String, deep: js.UndefOr[scala.Nothing], filter: js.RegExp, mode: sync): RequireContext = js.native
+  @JSName("context")
+  def context_sync(path: String, deep: Boolean, filter: js.UndefOr[scala.Nothing], mode: sync): RequireContext = js.native
+  @JSName("context")
   def context_sync(path: String, deep: Boolean, filter: js.RegExp, mode: sync): RequireContext = js.native
+  @JSName("context")
+  def context_weak(path: String, deep: js.UndefOr[scala.Nothing], filter: js.UndefOr[scala.Nothing], mode: weak): RequireContext = js.native
+  @JSName("context")
+  def context_weak(path: String, deep: js.UndefOr[scala.Nothing], filter: js.RegExp, mode: weak): RequireContext = js.native
+  @JSName("context")
+  def context_weak(path: String, deep: Boolean, filter: js.UndefOr[scala.Nothing], mode: weak): RequireContext = js.native
   @JSName("context")
   def context_weak(path: String, deep: Boolean, filter: js.RegExp, mode: weak): RequireContext = js.native
   /**
@@ -55,6 +91,12 @@ trait RequireFunction extends js.Object {
   def ensure(
     paths: js.Array[String],
     callback: js.Function1[/* require */ NodeRequire, Unit],
+    chunkName: String
+  ): Unit = js.native
+  def ensure(
+    paths: js.Array[String],
+    callback: js.Function1[/* require */ NodeRequire, Unit],
+    errorCallback: js.UndefOr[scala.Nothing],
     chunkName: String
   ): Unit = js.native
   def ensure(

@@ -7,7 +7,6 @@ import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNavigationStack.anon.PickPropsmodeheaderModehe
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.card
 import typingsSlinky.reactNavigationStack.reactNavigationStackStrings.modal
-import typingsSlinky.reactNavigationStack.stackViewLayoutMod.default
 import typingsSlinky.reactNavigationStack.typesMod.HeaderBackgroundTransitionPreset
 import typingsSlinky.reactNavigationStack.typesMod.HeaderLayoutPreset
 import typingsSlinky.reactNavigationStack.typesMod.HeaderMode
@@ -27,7 +26,7 @@ object StackViewLayout {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def cardOverlayEnabled(value: Boolean): this.type = set("cardOverlayEnabled", value.asInstanceOf[js.Any])
     @scala.inline

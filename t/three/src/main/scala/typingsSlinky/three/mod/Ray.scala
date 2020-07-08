@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
 class Ray ()
   extends typingsSlinky.three.rayMod.Ray {
   def this(origin: typingsSlinky.three.vector3Mod.Vector3) = this()
+  def this(origin: js.UndefOr[scala.Nothing], direction: typingsSlinky.three.vector3Mod.Vector3) = this()
   def this(origin: typingsSlinky.three.vector3Mod.Vector3, direction: typingsSlinky.three.vector3Mod.Vector3) = this()
 }
 

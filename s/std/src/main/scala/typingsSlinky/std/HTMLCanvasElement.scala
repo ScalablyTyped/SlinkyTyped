@@ -42,6 +42,7 @@ trait HTMLCanvasElement extends HTMLElement {
   @JSName("getContext")
   def getContext_webgl2(contextId: webgl2, options: org.scalajs.dom.raw.WebGLContextAttributes): WebGL2RenderingContext | Null = js.native
   def toBlob(callback: BlobCallback): Unit = js.native
+  def toBlob(callback: BlobCallback, `type`: js.UndefOr[scala.Nothing], quality: js.Any): Unit = js.native
   def toBlob(callback: BlobCallback, `type`: java.lang.String): Unit = js.native
   def toBlob(callback: BlobCallback, `type`: java.lang.String, quality: js.Any): Unit = js.native
   /**
@@ -49,6 +50,7 @@ trait HTMLCanvasElement extends HTMLElement {
     * @param type The standard MIME type for the image format to return. If you do not specify this parameter, the default value is a PNG format image.
     */
   def toDataURL(): java.lang.String = js.native
+  def toDataURL(`type`: js.UndefOr[scala.Nothing], quality: js.Any): java.lang.String = js.native
   def toDataURL(`type`: java.lang.String): java.lang.String = js.native
   def toDataURL(`type`: java.lang.String, quality: js.Any): java.lang.String = js.native
   def transferControlToOffscreen(): OffscreenCanvas = js.native

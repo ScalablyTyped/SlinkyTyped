@@ -16,6 +16,10 @@ trait NonDirectionalSuspenseListProps
     * Defines the order in which the `SuspenseList` children should be revealed.
     */
   var revealOrder: js.UndefOr[Exclude[SuspenseListRevealOrder, forwards | backwards]] = js.undefined
+  /**
+    * The tail property is invalid when not using the `forwards` or `backwards` reveal orders.
+    */
+  var tail: js.UndefOr[scala.Nothing] = js.undefined
 }
 
 object NonDirectionalSuspenseListProps {

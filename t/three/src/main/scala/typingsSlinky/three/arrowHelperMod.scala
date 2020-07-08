@@ -16,9 +16,164 @@ object arrowHelperMod extends js.Object {
   class ArrowHelper protected () extends Object3D {
     def this(dir: Vector3) = this()
     def this(dir: Vector3, origin: Vector3) = this()
+    def this(dir: Vector3, origin: js.UndefOr[scala.Nothing], length: Double) = this()
     def this(dir: Vector3, origin: Vector3, length: Double) = this()
+    def this(dir: Vector3, origin: js.UndefOr[scala.Nothing], length: js.UndefOr[scala.Nothing], hex: Double) = this()
+    def this(dir: Vector3, origin: js.UndefOr[scala.Nothing], length: Double, hex: Double) = this()
+    def this(dir: Vector3, origin: Vector3, length: js.UndefOr[scala.Nothing], hex: Double) = this()
     def this(dir: Vector3, origin: Vector3, length: Double, hex: Double) = this()
+    def this(
+      dir: Vector3,
+      origin: js.UndefOr[scala.Nothing],
+      length: js.UndefOr[scala.Nothing],
+      hex: js.UndefOr[scala.Nothing],
+      headLength: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: js.UndefOr[scala.Nothing],
+      length: js.UndefOr[scala.Nothing],
+      hex: Double,
+      headLength: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: js.UndefOr[scala.Nothing],
+      length: Double,
+      hex: js.UndefOr[scala.Nothing],
+      headLength: Double
+    ) = this()
+    def this(dir: Vector3, origin: js.UndefOr[scala.Nothing], length: Double, hex: Double, headLength: Double) = this()
+    def this(
+      dir: Vector3,
+      origin: Vector3,
+      length: js.UndefOr[scala.Nothing],
+      hex: js.UndefOr[scala.Nothing],
+      headLength: Double
+    ) = this()
+    def this(dir: Vector3, origin: Vector3, length: js.UndefOr[scala.Nothing], hex: Double, headLength: Double) = this()
+    def this(dir: Vector3, origin: Vector3, length: Double, hex: js.UndefOr[scala.Nothing], headLength: Double) = this()
     def this(dir: Vector3, origin: Vector3, length: Double, hex: Double, headLength: Double) = this()
+    def this(
+      dir: Vector3,
+      origin: js.UndefOr[scala.Nothing],
+      length: js.UndefOr[scala.Nothing],
+      hex: js.UndefOr[scala.Nothing],
+      headLength: js.UndefOr[scala.Nothing],
+      headWidth: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: js.UndefOr[scala.Nothing],
+      length: js.UndefOr[scala.Nothing],
+      hex: js.UndefOr[scala.Nothing],
+      headLength: Double,
+      headWidth: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: js.UndefOr[scala.Nothing],
+      length: js.UndefOr[scala.Nothing],
+      hex: Double,
+      headLength: js.UndefOr[scala.Nothing],
+      headWidth: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: js.UndefOr[scala.Nothing],
+      length: js.UndefOr[scala.Nothing],
+      hex: Double,
+      headLength: Double,
+      headWidth: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: js.UndefOr[scala.Nothing],
+      length: Double,
+      hex: js.UndefOr[scala.Nothing],
+      headLength: js.UndefOr[scala.Nothing],
+      headWidth: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: js.UndefOr[scala.Nothing],
+      length: Double,
+      hex: js.UndefOr[scala.Nothing],
+      headLength: Double,
+      headWidth: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: js.UndefOr[scala.Nothing],
+      length: Double,
+      hex: Double,
+      headLength: js.UndefOr[scala.Nothing],
+      headWidth: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: js.UndefOr[scala.Nothing],
+      length: Double,
+      hex: Double,
+      headLength: Double,
+      headWidth: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: Vector3,
+      length: js.UndefOr[scala.Nothing],
+      hex: js.UndefOr[scala.Nothing],
+      headLength: js.UndefOr[scala.Nothing],
+      headWidth: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: Vector3,
+      length: js.UndefOr[scala.Nothing],
+      hex: js.UndefOr[scala.Nothing],
+      headLength: Double,
+      headWidth: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: Vector3,
+      length: js.UndefOr[scala.Nothing],
+      hex: Double,
+      headLength: js.UndefOr[scala.Nothing],
+      headWidth: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: Vector3,
+      length: js.UndefOr[scala.Nothing],
+      hex: Double,
+      headLength: Double,
+      headWidth: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: Vector3,
+      length: Double,
+      hex: js.UndefOr[scala.Nothing],
+      headLength: js.UndefOr[scala.Nothing],
+      headWidth: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: Vector3,
+      length: Double,
+      hex: js.UndefOr[scala.Nothing],
+      headLength: Double,
+      headWidth: Double
+    ) = this()
+    def this(
+      dir: Vector3,
+      origin: Vector3,
+      length: Double,
+      hex: Double,
+      headLength: js.UndefOr[scala.Nothing],
+      headWidth: Double
+    ) = this()
     def this(dir: Vector3, origin: Vector3, length: Double, hex: Double, headLength: Double, headWidth: Double) = this()
     var cone: Mesh = js.native
     var line: Line = js.native
@@ -27,6 +182,7 @@ object arrowHelperMod extends js.Object {
     def setColor(color: Color): Unit = js.native
     def setDirection(dir: Vector3): Unit = js.native
     def setLength(length: Double): Unit = js.native
+    def setLength(length: Double, headLength: js.UndefOr[scala.Nothing], headWidth: Double): Unit = js.native
     def setLength(length: Double, headLength: Double): Unit = js.native
     def setLength(length: Double, headLength: Double, headWidth: Double): Unit = js.native
   }

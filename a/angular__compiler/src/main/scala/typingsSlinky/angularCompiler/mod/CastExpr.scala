@@ -15,6 +15,11 @@ class CastExpr protected ()
   ) = this()
   def this(
     value: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    `type`: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    value: typingsSlinky.angularCompiler.outputAstMod.Expression,
     `type`: Null,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()

@@ -6,7 +6,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapGridLiActionIcon
 import typingsSlinky.materialUiCore.gridListTileBarGridListTileBarMod.GridListTileBarProps
-import typingsSlinky.materialUiCore.gridListTileBarMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.bottom
 import typingsSlinky.materialUiCore.materialUiCoreStrings.left
 import typingsSlinky.materialUiCore.materialUiCoreStrings.right
@@ -25,7 +24,7 @@ object GridListTileBar {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def actionIconReactElement(value: ReactElement): this.type = set("actionIcon", value.asInstanceOf[js.Any])
     @scala.inline

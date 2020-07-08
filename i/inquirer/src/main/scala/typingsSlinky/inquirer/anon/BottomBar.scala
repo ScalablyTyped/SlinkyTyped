@@ -14,13 +14,13 @@ trait BottomBar extends js.Object {
   /**
     * Represents the bottom-bar UI.
     */
-  var BottomBar: Instantiable1[js.UndefOr[/* options */ BottomBarOptions], ^]
+  var BottomBar: Instantiable1[/* options */ js.UndefOr[BottomBarOptions], ^]
   /**
     * Represents the prompt ui.
     */
   var Prompt: Instantiable2[
     /* prompts */ PromptCollection, 
-    js.UndefOr[/* options */ StreamOptions], 
+    /* options */ js.UndefOr[StreamOptions], 
     typingsSlinky.inquirer.promptMod.^
   ]
 }
@@ -28,10 +28,10 @@ trait BottomBar extends js.Object {
 object BottomBar {
   @scala.inline
   def apply(
-    BottomBar: Instantiable1[js.UndefOr[/* options */ BottomBarOptions], ^],
+    BottomBar: Instantiable1[/* options */ js.UndefOr[BottomBarOptions], ^],
     Prompt: Instantiable2[
       /* prompts */ PromptCollection, 
-      js.UndefOr[/* options */ StreamOptions], 
+      /* options */ js.UndefOr[StreamOptions], 
       typingsSlinky.inquirer.promptMod.^
     ]
   ): BottomBar = {
@@ -50,12 +50,12 @@ object BottomBar {
         x
     }
     @scala.inline
-    def setBottomBar(value: Instantiable1[js.UndefOr[/* options */ BottomBarOptions], ^]): Self = this.set("BottomBar", value.asInstanceOf[js.Any])
+    def setBottomBar(value: Instantiable1[/* options */ js.UndefOr[BottomBarOptions], ^]): Self = this.set("BottomBar", value.asInstanceOf[js.Any])
     @scala.inline
     def setPrompt(
       value: Instantiable2[
           /* prompts */ PromptCollection, 
-          js.UndefOr[/* options */ StreamOptions], 
+          /* options */ js.UndefOr[StreamOptions], 
           typingsSlinky.inquirer.promptMod.^
         ]
     ): Self = this.set("Prompt", value.asInstanceOf[js.Any])

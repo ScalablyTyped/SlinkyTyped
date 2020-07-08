@@ -14,6 +14,12 @@ object polyhedronGeometryMod extends js.Object {
   class PolyhedronBufferGeometry protected () extends BufferGeometry {
     def this(vertices: js.Array[Double], indices: js.Array[Double]) = this()
     def this(vertices: js.Array[Double], indices: js.Array[Double], radius: Double) = this()
+    def this(
+      vertices: js.Array[Double],
+      indices: js.Array[Double],
+      radius: js.UndefOr[scala.Nothing],
+      detail: Double
+    ) = this()
     def this(vertices: js.Array[Double], indices: js.Array[Double], radius: Double, detail: Double) = this()
     var parameters: Indices = js.native
   }
@@ -22,6 +28,12 @@ object polyhedronGeometryMod extends js.Object {
   class PolyhedronGeometry protected () extends Geometry {
     def this(vertices: js.Array[Double], indices: js.Array[Double]) = this()
     def this(vertices: js.Array[Double], indices: js.Array[Double], radius: Double) = this()
+    def this(
+      vertices: js.Array[Double],
+      indices: js.Array[Double],
+      radius: js.UndefOr[scala.Nothing],
+      detail: Double
+    ) = this()
     def this(vertices: js.Array[Double], indices: js.Array[Double], radius: Double, detail: Double) = this()
     var parameters: Indices = js.native
   }

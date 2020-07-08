@@ -41,7 +41,7 @@ object GestureHandlerRootView {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNativeGestureHandler.mod.GestureHandlerRootView] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline

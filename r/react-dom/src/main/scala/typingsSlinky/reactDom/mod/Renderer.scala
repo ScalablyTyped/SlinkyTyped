@@ -38,6 +38,8 @@ trait Renderer extends js.Object {
   def apply(element: SFCElement[_], container: DocumentFragment, callback: js.Function0[Unit]): Unit = js.native
   def apply(element: SFCElement[_], container: Element): Unit = js.native
   def apply(element: SFCElement[_], container: Element, callback: js.Function0[Unit]): Unit = js.native
+  // Deprecated(render): The return value is deprecated.
+  // In future releases the render function's return type will be void.
   def apply[T /* <: Element */](element: DOMElement[DOMAttributes[T], T]): T = js.native
   def apply[T /* <: Element */](element: DOMElement[DOMAttributes[T], T], container: Null, callback: js.Function0[Unit]): T = js.native
   def apply[T /* <: Element */](element: DOMElement[DOMAttributes[T], T], container: DocumentFragment): T = js.native
@@ -46,8 +48,6 @@ trait Renderer extends js.Object {
     container: DocumentFragment,
     callback: js.Function0[Unit]
   ): T = js.native
-  // Deprecated(render): The return value is deprecated.
-  // In future releases the render function's return type will be void.
   def apply[T /* <: Element */](element: DOMElement[DOMAttributes[T], T], container: Element): T = js.native
   def apply[T /* <: Element */](element: DOMElement[DOMAttributes[T], T], container: Element, callback: js.Function0[Unit]): T = js.native
   def apply[P](element: ReactElement): ReactComponentClass[P] | Element | Unit = js.native

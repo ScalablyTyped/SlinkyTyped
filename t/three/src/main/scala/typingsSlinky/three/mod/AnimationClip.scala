@@ -10,7 +10,23 @@ import scala.scalajs.js.annotation._
 class AnimationClip ()
   extends typingsSlinky.three.animationClipMod.AnimationClip {
   def this(name: String) = this()
+  def this(name: js.UndefOr[scala.Nothing], duration: Double) = this()
   def this(name: String, duration: Double) = this()
+  def this(
+    name: js.UndefOr[scala.Nothing],
+    duration: js.UndefOr[scala.Nothing],
+    tracks: js.Array[typingsSlinky.three.keyframeTrackMod.KeyframeTrack]
+  ) = this()
+  def this(
+    name: js.UndefOr[scala.Nothing],
+    duration: Double,
+    tracks: js.Array[typingsSlinky.three.keyframeTrackMod.KeyframeTrack]
+  ) = this()
+  def this(
+    name: String,
+    duration: js.UndefOr[scala.Nothing],
+    tracks: js.Array[typingsSlinky.three.keyframeTrackMod.KeyframeTrack]
+  ) = this()
   def this(
     name: String,
     duration: Double,

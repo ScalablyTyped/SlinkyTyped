@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined popper.js.popper.js.Popper.BaseModifier & {  element ? :string | std.Element} */
+/* Inlined popper.js.popper.js.Popper.BaseModifier & {  element :string | std.Element | undefined} */
 trait BaseModifierelementstring extends js.Object {
   var element: js.UndefOr[String | Element] = js.undefined
   var enabled: js.UndefOr[Boolean] = js.undefined

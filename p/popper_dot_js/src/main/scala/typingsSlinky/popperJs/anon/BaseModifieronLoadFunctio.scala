@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined popper.js.popper.js.Popper.BaseModifier & {  onLoad ? :std.Function,   gpuAcceleration ? :boolean} */
+/* Inlined popper.js.popper.js.Popper.BaseModifier & {  onLoad :std.Function | undefined,   gpuAcceleration :boolean | undefined} */
 trait BaseModifieronLoadFunctio extends js.Object {
   var enabled: js.UndefOr[Boolean] = js.undefined
   var fn: js.UndefOr[ModifierFn] = js.undefined

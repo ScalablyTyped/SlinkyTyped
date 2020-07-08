@@ -17,9 +17,9 @@ trait Props extends js.Object {
   var onPress: js.Function0[Unit]
   var pressColorAndroid: js.UndefOr[String] = js.undefined
   var tintColor: js.UndefOr[String] = js.undefined
-  var title: js.UndefOr[String] = js.undefined
+  var title: js.UndefOr[String | Null] = js.undefined
   var titleStyle: js.UndefOr[StyleProp[TextStyle]] = js.undefined
-  var truncatedTitle: js.UndefOr[String] = js.undefined
+  var truncatedTitle: js.UndefOr[String | Null] = js.undefined
   var width: js.UndefOr[Double] = js.undefined
 }
 
@@ -71,6 +71,8 @@ object Props {
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline
+    def setTitleNull: Self = this.set("title", null)
+    @scala.inline
     def setTitleStyle(value: StyleProp[TextStyle]): Self = this.set("titleStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitleStyle: Self = this.set("titleStyle", js.undefined)
@@ -80,6 +82,8 @@ object Props {
     def setTruncatedTitle(value: String): Self = this.set("truncatedTitle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTruncatedTitle: Self = this.set("truncatedTitle", js.undefined)
+    @scala.inline
+    def setTruncatedTitleNull: Self = this.set("truncatedTitle", null)
     @scala.inline
     def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
     @scala.inline

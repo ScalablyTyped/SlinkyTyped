@@ -17,12 +17,23 @@ object skinnedMeshMod extends js.Object {
   class SkinnedMesh () extends Mesh {
     def this(geometry: BufferGeometry) = this()
     def this(geometry: Geometry) = this()
+    def this(geometry: js.UndefOr[scala.Nothing], material: js.Array[Material]) = this()
+    def this(geometry: js.UndefOr[scala.Nothing], material: Material) = this()
     def this(geometry: BufferGeometry, material: js.Array[Material]) = this()
     def this(geometry: BufferGeometry, material: Material) = this()
     def this(geometry: Geometry, material: js.Array[Material]) = this()
     def this(geometry: Geometry, material: Material) = this()
+    def this(
+      geometry: js.UndefOr[scala.Nothing],
+      material: js.UndefOr[scala.Nothing],
+      useVertexTexture: Boolean
+    ) = this()
+    def this(geometry: js.UndefOr[scala.Nothing], material: js.Array[Material], useVertexTexture: Boolean) = this()
+    def this(geometry: js.UndefOr[scala.Nothing], material: Material, useVertexTexture: Boolean) = this()
+    def this(geometry: BufferGeometry, material: js.UndefOr[scala.Nothing], useVertexTexture: Boolean) = this()
     def this(geometry: BufferGeometry, material: js.Array[Material], useVertexTexture: Boolean) = this()
     def this(geometry: BufferGeometry, material: Material, useVertexTexture: Boolean) = this()
+    def this(geometry: Geometry, material: js.UndefOr[scala.Nothing], useVertexTexture: Boolean) = this()
     def this(geometry: Geometry, material: js.Array[Material], useVertexTexture: Boolean) = this()
     def this(geometry: Geometry, material: Material, useVertexTexture: Boolean) = this()
     var bindMatrix: Matrix4 = js.native

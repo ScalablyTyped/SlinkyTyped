@@ -32,7 +32,7 @@ object contextMod extends js.Object {
     val meta: AST = js.native
     var placeholders: Map[String, js.Array[_]] = js.native
     val ref: ReadVarExpr = js.native
-    var registry: js.UndefOr[js.Any] = js.native
+    var registry: js.Any = js.native
     val templateIndex: Double | Null = js.native
     def appendBinding(binding: typingsSlinky.angularCompiler.astMod.AST): Unit = js.native
     def appendBoundText(node: AST): Unit = js.native

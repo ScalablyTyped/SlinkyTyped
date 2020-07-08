@@ -22,7 +22,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined chart.js.chart.js.ChartOptions & chart.js.chart.js.ChartFontOptions & {  tooltips  :chart.js.chart.js.ChartTooltipOptions} */
+/* Inlined chart.js.chart.js.ChartOptions & chart.js.chart.js.ChartFontOptions & {  tooltips :chart.js.chart.js.ChartTooltipOptions} */
 trait ChartOptionsChartFontOpti extends js.Object {
   var animation: js.UndefOr[ChartAnimationOptions] = js.undefined
   var aspectRatio: js.UndefOr[Double] = js.undefined
@@ -67,13 +67,13 @@ trait ChartOptionsChartFontOpti extends js.Object {
   var showLines: js.UndefOr[Boolean] = js.undefined
   var spanGaps: js.UndefOr[Boolean] = js.undefined
   var title: js.UndefOr[ChartTitleOptions] = js.undefined
-  var tooltips: js.UndefOr[ChartTooltipOptions] = js.undefined
+  var tooltips: js.UndefOr[ChartTooltipOptions] with ChartTooltipOptions
 }
 
 object ChartOptionsChartFontOpti {
   @scala.inline
-  def apply(): ChartOptionsChartFontOpti = {
-    val __obj = js.Dynamic.literal()
+  def apply(tooltips: js.UndefOr[ChartTooltipOptions] with ChartTooltipOptions): ChartOptionsChartFontOpti = {
+    val __obj = js.Dynamic.literal(tooltips = tooltips.asInstanceOf[js.Any])
     __obj.asInstanceOf[ChartOptionsChartFontOpti]
   }
   @scala.inline
@@ -87,6 +87,8 @@ object ChartOptionsChartFontOpti {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setTooltips(value: js.UndefOr[ChartTooltipOptions] with ChartTooltipOptions): Self = this.set("tooltips", value.asInstanceOf[js.Any])
     @scala.inline
     def setAnimation(value: ChartAnimationOptions): Self = this.set("animation", value.asInstanceOf[js.Any])
     @scala.inline
@@ -212,10 +214,6 @@ object ChartOptionsChartFontOpti {
     def setTitle(value: ChartTitleOptions): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
-    @scala.inline
-    def setTooltips(value: ChartTooltipOptions): Self = this.set("tooltips", value.asInstanceOf[js.Any])
-    @scala.inline
-    def deleteTooltips: Self = this.set("tooltips", js.undefined)
   }
   
 }

@@ -72,7 +72,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.tree
 import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
-import typingsSlinky.materialUiCore.tabsMod.default
 import typingsSlinky.materialUiCore.tabsTabsMod.TabsActions
 import typingsSlinky.materialUiCore.tabsTabsMod.TabsProps
 import typingsSlinky.react.anon.Html
@@ -95,7 +94,7 @@ object Tabs {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def ScrollButtonComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("ScrollButtonComponent", value.asInstanceOf[js.Any])
     @scala.inline

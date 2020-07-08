@@ -21,7 +21,11 @@ object vector3Mod extends js.Object {
   @js.native
   class Vector3 () extends Vector {
     def this(x: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: Double) = this()
     def this(x: Double, y: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: js.UndefOr[scala.Nothing], z: Double) = this()
+    def this(x: js.UndefOr[scala.Nothing], y: Double, z: Double) = this()
+    def this(x: Double, y: js.UndefOr[scala.Nothing], z: Double) = this()
     def this(x: Double, y: Double, z: Double) = this()
     var isVector3: `true` = js.native
     var x: Double = js.native
@@ -176,6 +180,7 @@ object vector3Mod extends js.Object {
     	 * @return The created or provided array.
     	 */
     def toArray(): js.Array[Double] = js.native
+    def toArray(array: js.UndefOr[scala.Nothing], offset: Double): js.Array[Double] = js.native
     def toArray(array: js.Array[Double]): js.Array[Double] = js.native
     def toArray(array: js.Array[Double], offset: Double): js.Array[Double] = js.native
     /**

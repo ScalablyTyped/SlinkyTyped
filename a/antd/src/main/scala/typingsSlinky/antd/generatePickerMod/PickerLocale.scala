@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined {  lang  :rc-picker.rc-picker/lib/interface.Locale & antd.antd/lib/date-picker/generatePicker.AdditionalPickerLocaleLangProps,   timePickerLocale  :antd.antd/lib/time-picker.TimePickerLocale} & antd.antd/lib/date-picker/generatePicker.AdditionalPickerLocaleProps */
+/* Inlined {  lang :rc-picker.rc-picker/lib/interface.Locale & antd.antd/lib/date-picker/generatePicker.AdditionalPickerLocaleLangProps,   timePickerLocale :antd.antd/lib/time-picker.TimePickerLocale} & antd.antd/lib/date-picker/generatePicker.AdditionalPickerLocaleProps */
 trait PickerLocale extends js.Object {
   var dateFormat: js.UndefOr[String] = js.undefined
   var dateTimeFormat: js.UndefOr[String] = js.undefined

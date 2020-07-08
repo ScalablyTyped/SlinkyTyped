@@ -22,6 +22,14 @@ class Element protected () extends Node {
     attrs: js.Array[Attribute],
     children: js.Array[Node],
     sourceSpan: ParseSourceSpan,
+    startSourceSpan: js.UndefOr[scala.Nothing],
+    endSourceSpan: ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
     startSourceSpan: Null,
     endSourceSpan: ParseSourceSpan
   ) = this()
@@ -32,6 +40,78 @@ class Element protected () extends Node {
     sourceSpan: ParseSourceSpan,
     startSourceSpan: ParseSourceSpan,
     endSourceSpan: ParseSourceSpan
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: js.UndefOr[scala.Nothing],
+    endSourceSpan: js.UndefOr[scala.Nothing],
+    i18n: Message
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: js.UndefOr[scala.Nothing],
+    endSourceSpan: js.UndefOr[scala.Nothing],
+    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: js.UndefOr[scala.Nothing],
+    endSourceSpan: Null,
+    i18n: Message
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: js.UndefOr[scala.Nothing],
+    endSourceSpan: Null,
+    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: js.UndefOr[scala.Nothing],
+    endSourceSpan: ParseSourceSpan,
+    i18n: Message
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: js.UndefOr[scala.Nothing],
+    endSourceSpan: ParseSourceSpan,
+    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: Null,
+    endSourceSpan: js.UndefOr[scala.Nothing],
+    i18n: Message
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: Null,
+    endSourceSpan: js.UndefOr[scala.Nothing],
+    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
   ) = this()
   def this(
     name: String,
@@ -67,6 +147,24 @@ class Element protected () extends Node {
     sourceSpan: ParseSourceSpan,
     startSourceSpan: Null,
     endSourceSpan: ParseSourceSpan,
+    i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: ParseSourceSpan,
+    endSourceSpan: js.UndefOr[scala.Nothing],
+    i18n: Message
+  ) = this()
+  def this(
+    name: String,
+    attrs: js.Array[Attribute],
+    children: js.Array[Node],
+    sourceSpan: ParseSourceSpan,
+    startSourceSpan: ParseSourceSpan,
+    endSourceSpan: js.UndefOr[scala.Nothing],
     i18n: typingsSlinky.angularCompiler.i18nAstMod.Node
   ) = this()
   def this(

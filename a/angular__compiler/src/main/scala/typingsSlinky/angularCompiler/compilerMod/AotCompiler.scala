@@ -94,6 +94,7 @@ class AotCompiler protected () extends js.Object {
   def emitTypeCheckStub(genFileName: String, originalFileName: String): GeneratedFile | Null = js.native
   def findGeneratedFileNames(fileName: String): js.Array[String] = js.native
   def listLazyRoutes(): js.Array[LazyRoute] = js.native
+  def listLazyRoutes(entryRoute: js.UndefOr[scala.Nothing], analyzedModules: NgAnalyzedModules): js.Array[LazyRoute] = js.native
   def listLazyRoutes(entryRoute: String): js.Array[LazyRoute] = js.native
   def listLazyRoutes(entryRoute: String, analyzedModules: NgAnalyzedModules): js.Array[LazyRoute] = js.native
   def loadFilesAsync(fileNames: js.Array[String], tsFiles: js.Array[String]): js.Promise[AnalyzedInjectables] = js.native

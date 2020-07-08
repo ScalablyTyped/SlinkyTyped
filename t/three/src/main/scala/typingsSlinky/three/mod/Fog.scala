@@ -10,6 +10,7 @@ class Fog protected ()
   extends typingsSlinky.three.fogMod.Fog {
   def this(hex: Double) = this()
   def this(hex: Double, near: Double) = this()
+  def this(hex: Double, near: js.UndefOr[scala.Nothing], far: Double) = this()
   def this(hex: Double, near: Double, far: Double) = this()
 }
 

@@ -73,7 +73,29 @@ object mod extends js.Object {
   def fail(): scala.Nothing = js.native
   /** @deprecated since v10.0.0 - use fail([message]) or other assert functions instead. */
   def fail(actual: js.Any, expected: js.Any): scala.Nothing = js.native
+  def fail(
+    actual: js.Any,
+    expected: js.Any,
+    message: js.UndefOr[scala.Nothing],
+    operator: js.UndefOr[scala.Nothing],
+    stackStartFn: js.Function
+  ): scala.Nothing = js.native
+  def fail(actual: js.Any, expected: js.Any, message: js.UndefOr[scala.Nothing], operator: java.lang.String): scala.Nothing = js.native
+  def fail(
+    actual: js.Any,
+    expected: js.Any,
+    message: js.UndefOr[scala.Nothing],
+    operator: java.lang.String,
+    stackStartFn: js.Function
+  ): scala.Nothing = js.native
   def fail(actual: js.Any, expected: js.Any, message: java.lang.String): scala.Nothing = js.native
+  def fail(
+    actual: js.Any,
+    expected: js.Any,
+    message: java.lang.String,
+    operator: js.UndefOr[scala.Nothing],
+    stackStartFn: js.Function
+  ): scala.Nothing = js.native
   def fail(actual: js.Any, expected: js.Any, message: java.lang.String, operator: java.lang.String): scala.Nothing = js.native
   def fail(
     actual: js.Any,
@@ -83,6 +105,13 @@ object mod extends js.Object {
     stackStartFn: js.Function
   ): scala.Nothing = js.native
   def fail(actual: js.Any, expected: js.Any, message: js.Error): scala.Nothing = js.native
+  def fail(
+    actual: js.Any,
+    expected: js.Any,
+    message: js.Error,
+    operator: js.UndefOr[scala.Nothing],
+    stackStartFn: js.Function
+  ): scala.Nothing = js.native
   def fail(actual: js.Any, expected: js.Any, message: js.Error, operator: java.lang.String): scala.Nothing = js.native
   def fail(
     actual: js.Any,

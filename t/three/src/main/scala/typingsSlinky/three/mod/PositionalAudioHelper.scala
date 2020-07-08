@@ -12,8 +12,31 @@ class PositionalAudioHelper protected ()
   def this(audio: typingsSlinky.three.positionalAudioMod.PositionalAudio, range: Double) = this()
   def this(
     audio: typingsSlinky.three.positionalAudioMod.PositionalAudio,
+    range: js.UndefOr[scala.Nothing],
+    divisionsInnerAngle: Double
+  ) = this()
+  def this(
+    audio: typingsSlinky.three.positionalAudioMod.PositionalAudio,
     range: Double,
     divisionsInnerAngle: Double
+  ) = this()
+  def this(
+    audio: typingsSlinky.three.positionalAudioMod.PositionalAudio,
+    range: js.UndefOr[scala.Nothing],
+    divisionsInnerAngle: js.UndefOr[scala.Nothing],
+    divisionsOuterAngle: Double
+  ) = this()
+  def this(
+    audio: typingsSlinky.three.positionalAudioMod.PositionalAudio,
+    range: js.UndefOr[scala.Nothing],
+    divisionsInnerAngle: Double,
+    divisionsOuterAngle: Double
+  ) = this()
+  def this(
+    audio: typingsSlinky.three.positionalAudioMod.PositionalAudio,
+    range: Double,
+    divisionsInnerAngle: js.UndefOr[scala.Nothing],
+    divisionsOuterAngle: Double
   ) = this()
   def this(
     audio: typingsSlinky.three.positionalAudioMod.PositionalAudio,

@@ -31,6 +31,7 @@ trait Injector extends js.Object {
   def get[T](token: InjectionToken[T]): T = js.native
   def get[T](token: InjectionToken[T], notFoundValue: T): T = js.native
   def get[T](token: InjectionToken[T], notFoundValue: T, flags: InjectFlags): T = js.native
+  def get[T](token: InjectionToken[T], notFoundValue: js.UndefOr[scala.Nothing], flags: InjectFlags): T = js.native
   /**
     * Retrieves an instance from the injector based on the provided token.
     * @returns The instance from the injector if defined, otherwise the `notFoundValue`.
@@ -39,5 +40,6 @@ trait Injector extends js.Object {
   def get[T](token: Type[T]): T = js.native
   def get[T](token: Type[T], notFoundValue: T): T = js.native
   def get[T](token: Type[T], notFoundValue: T, flags: InjectFlags): T = js.native
+  def get[T](token: Type[T], notFoundValue: js.UndefOr[scala.Nothing], flags: InjectFlags): T = js.native
 }
 

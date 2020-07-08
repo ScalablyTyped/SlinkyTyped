@@ -13,7 +13,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined yandex-maps.yandex-maps.control.IBaseButtonParametersOptions & {  selectOnClick ? :boolean,   size ? :'auto' | 'small' | 'medium' | 'large'} */
+/* Inlined yandex-maps.yandex-maps.control.IBaseButtonParametersOptions & {  selectOnClick :boolean | undefined,   size :'auto' | 'small' | 'medium' | 'large' | undefined} */
 trait IBaseButtonParametersOpti extends js.Object {
   var adjustMapMargin: js.UndefOr[Boolean] = js.undefined
   var float: js.UndefOr[none | left | right] = js.undefined

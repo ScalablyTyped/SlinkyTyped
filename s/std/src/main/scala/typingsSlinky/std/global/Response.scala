@@ -15,8 +15,8 @@ import scala.scalajs.js.annotation._
 class Response ()
   extends typingsSlinky.std.Response {
   def this(body: BodyInit) = this()
+  def this(body: js.UndefOr[BodyInit], init: ResponseInit) = this()
   def this(body: Null, init: ResponseInit) = this()
-  def this(body: BodyInit, init: ResponseInit) = this()
   /* CompleteClass */
   override val body: org.scalajs.dom.experimental.ReadableStream[js.typedarray.Uint8Array] | Null = js.native
   /* CompleteClass */
@@ -55,7 +55,7 @@ object Response
   extends Instantiable0[org.scalajs.dom.experimental.Response]
      with Instantiable1[/* body */ BodyInit, org.scalajs.dom.experimental.Response]
      with Instantiable2[
-      (/* body */ BodyInit) | (/* body */ Null), 
+      js.UndefOr[(/* body */ BodyInit) | (/* body */ Null)], 
       /* init */ ResponseInit, 
       org.scalajs.dom.experimental.Response
     ] {

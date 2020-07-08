@@ -28,7 +28,7 @@ object findMod extends js.Object {
     ) = this()
     var predicate: js.Any = js.native
     var source: js.Any = js.native
-    var thisArg: js.UndefOr[js.Any] = js.native
+    var thisArg: js.Any = js.native
     var yieldIndex: js.Any = js.native
     /* CompleteClass */
     override def call(subscriber: Subscriber[js.UndefOr[T | Double]], source: js.Any): TeardownLogic = js.native
@@ -53,7 +53,7 @@ object findMod extends js.Object {
     var notifyComplete: js.Any = js.native
     var predicate: js.Any = js.native
     var source: js.Any = js.native
-    var thisArg: js.UndefOr[js.Any] = js.native
+    var thisArg: js.Any = js.native
     var yieldIndex: js.Any = js.native
   }
   

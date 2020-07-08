@@ -365,6 +365,7 @@ abstract class Evented () extends Class {
     * The event might can optionally be propagated to event parents.
     */
   def fire(`type`: String): this.type = js.native
+  def fire(`type`: String, data: js.UndefOr[scala.Nothing], propagate: Boolean): this.type = js.native
   def fire(`type`: String, data: js.Any): this.type = js.native
   def fire(`type`: String, data: js.Any, propagate: Boolean): this.type = js.native
   // tslint:enable:unified-signatures
@@ -376,6 +377,7 @@ abstract class Evented () extends Class {
     * The event might can optionally be propagated to event parents.
     */
   def fireEvent(`type`: String): this.type = js.native
+  def fireEvent(`type`: String, data: js.UndefOr[scala.Nothing], propagate: Boolean): this.type = js.native
   def fireEvent(`type`: String, data: js.Any): this.type = js.native
   def fireEvent(`type`: String, data: js.Any, propagate: Boolean): this.type = js.native
   /**
@@ -402,6 +404,11 @@ abstract class Evented () extends Class {
   ): this.type = js.native
   def off(
     `type`: zoomlevelschange | unload | viewreset | load | zoomstart | movestart | zoom | move | zoomend | moveend | autopanstart | dragstart | drag | add | remove | loading | error | update | down | predrag,
+    fn: js.UndefOr[scala.Nothing],
+    context: js.Any
+  ): this.type = js.native
+  def off(
+    `type`: zoomlevelschange | unload | viewreset | load | zoomstart | movestart | zoom | move | zoomend | moveend | autopanstart | dragstart | drag | add | remove | loading | error | update | down | predrag,
     fn: LeafletEventHandlerFn
   ): this.type = js.native
   def off(
@@ -418,10 +425,13 @@ abstract class Evented () extends Class {
     */
   // tslint:disable:unified-signatures
   def off(`type`: String): this.type = js.native
+  def off(`type`: String, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   def off(`type`: String, fn: LeafletEventHandlerFn): this.type = js.native
   def off(`type`: String, fn: LeafletEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_baselayerchange(`type`: baselayerchange): this.type = js.native
+  @JSName("off")
+  def off_baselayerchange(`type`: baselayerchange, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_baselayerchange(`type`: baselayerchange, fn: LayersControlEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -429,11 +439,15 @@ abstract class Evented () extends Class {
   @JSName("off")
   def off_click(`type`: click): this.type = js.native
   @JSName("off")
+  def off_click(`type`: click, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_click(`type`: click, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_click(`type`: click, fn: LeafletMouseEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_contextmenu(`type`: contextmenu): this.type = js.native
+  @JSName("off")
+  def off_contextmenu(`type`: contextmenu, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_contextmenu(`type`: contextmenu, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -441,11 +455,15 @@ abstract class Evented () extends Class {
   @JSName("off")
   def off_dblclick(`type`: dblclick): this.type = js.native
   @JSName("off")
+  def off_dblclick(`type`: dblclick, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_dblclick(`type`: dblclick, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_dblclick(`type`: dblclick, fn: LeafletMouseEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_dragend(`type`: dragend): this.type = js.native
+  @JSName("off")
+  def off_dragend(`type`: dragend, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_dragend(`type`: dragend, fn: DragEndEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -453,11 +471,15 @@ abstract class Evented () extends Class {
   @JSName("off")
   def off_keydown(`type`: keydown): this.type = js.native
   @JSName("off")
+  def off_keydown(`type`: keydown, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_keydown(`type`: keydown, fn: LeafletKeyboardEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_keydown(`type`: keydown, fn: LeafletKeyboardEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_keypress(`type`: keypress): this.type = js.native
+  @JSName("off")
+  def off_keypress(`type`: keypress, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_keypress(`type`: keypress, fn: LeafletKeyboardEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -465,11 +487,15 @@ abstract class Evented () extends Class {
   @JSName("off")
   def off_keyup(`type`: keyup): this.type = js.native
   @JSName("off")
+  def off_keyup(`type`: keyup, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_keyup(`type`: keyup, fn: LeafletKeyboardEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_keyup(`type`: keyup, fn: LeafletKeyboardEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_layeradd(`type`: layeradd): this.type = js.native
+  @JSName("off")
+  def off_layeradd(`type`: layeradd, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_layeradd(`type`: layeradd, fn: LayerEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -477,11 +503,15 @@ abstract class Evented () extends Class {
   @JSName("off")
   def off_layerremove(`type`: layerremove): this.type = js.native
   @JSName("off")
+  def off_layerremove(`type`: layerremove, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_layerremove(`type`: layerremove, fn: LayerEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_layerremove(`type`: layerremove, fn: LayerEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_locationerror(`type`: locationerror): this.type = js.native
+  @JSName("off")
+  def off_locationerror(`type`: locationerror, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_locationerror(`type`: locationerror, fn: ErrorEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -489,11 +519,15 @@ abstract class Evented () extends Class {
   @JSName("off")
   def off_locationfound(`type`: locationfound): this.type = js.native
   @JSName("off")
+  def off_locationfound(`type`: locationfound, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_locationfound(`type`: locationfound, fn: LocationEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_locationfound(`type`: locationfound, fn: LocationEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_mousedown(`type`: mousedown): this.type = js.native
+  @JSName("off")
+  def off_mousedown(`type`: mousedown, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_mousedown(`type`: mousedown, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -501,11 +535,15 @@ abstract class Evented () extends Class {
   @JSName("off")
   def off_mousemove(`type`: mousemove): this.type = js.native
   @JSName("off")
+  def off_mousemove(`type`: mousemove, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_mousemove(`type`: mousemove, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_mousemove(`type`: mousemove, fn: LeafletMouseEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_mouseout(`type`: mouseout): this.type = js.native
+  @JSName("off")
+  def off_mouseout(`type`: mouseout, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_mouseout(`type`: mouseout, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -513,11 +551,15 @@ abstract class Evented () extends Class {
   @JSName("off")
   def off_mouseover(`type`: mouseover): this.type = js.native
   @JSName("off")
+  def off_mouseover(`type`: mouseover, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_mouseover(`type`: mouseover, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_mouseover(`type`: mouseover, fn: LeafletMouseEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_mouseup(`type`: mouseup): this.type = js.native
+  @JSName("off")
+  def off_mouseup(`type`: mouseup, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_mouseup(`type`: mouseup, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -525,11 +567,15 @@ abstract class Evented () extends Class {
   @JSName("off")
   def off_overlayadd(`type`: overlayadd): this.type = js.native
   @JSName("off")
+  def off_overlayadd(`type`: overlayadd, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_overlayadd(`type`: overlayadd, fn: LayersControlEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_overlayadd(`type`: overlayadd, fn: LayersControlEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_overlayremove(`type`: overlayremove): this.type = js.native
+  @JSName("off")
+  def off_overlayremove(`type`: overlayremove, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_overlayremove(`type`: overlayremove, fn: LayersControlEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -537,11 +583,15 @@ abstract class Evented () extends Class {
   @JSName("off")
   def off_popupclose(`type`: popupclose): this.type = js.native
   @JSName("off")
+  def off_popupclose(`type`: popupclose, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_popupclose(`type`: popupclose, fn: PopupEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_popupclose(`type`: popupclose, fn: PopupEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_popupopen(`type`: popupopen): this.type = js.native
+  @JSName("off")
+  def off_popupopen(`type`: popupopen, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_popupopen(`type`: popupopen, fn: PopupEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -549,11 +599,15 @@ abstract class Evented () extends Class {
   @JSName("off")
   def off_preclick(`type`: preclick): this.type = js.native
   @JSName("off")
+  def off_preclick(`type`: preclick, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_preclick(`type`: preclick, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_preclick(`type`: preclick, fn: LeafletMouseEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_resize(`type`: resize): this.type = js.native
+  @JSName("off")
+  def off_resize(`type`: resize, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_resize(`type`: resize, fn: ResizeEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -561,11 +615,15 @@ abstract class Evented () extends Class {
   @JSName("off")
   def off_tileerror(`type`: tileerror): this.type = js.native
   @JSName("off")
+  def off_tileerror(`type`: tileerror, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_tileerror(`type`: tileerror, fn: TileErrorEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_tileerror(`type`: tileerror, fn: TileErrorEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_tileload(`type`: tileload): this.type = js.native
+  @JSName("off")
+  def off_tileload(`type`: tileload, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_tileload(`type`: tileload, fn: TileEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -573,11 +631,15 @@ abstract class Evented () extends Class {
   @JSName("off")
   def off_tileloadstart(`type`: tileloadstart): this.type = js.native
   @JSName("off")
+  def off_tileloadstart(`type`: tileloadstart, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_tileloadstart(`type`: tileloadstart, fn: TileEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_tileloadstart(`type`: tileloadstart, fn: TileEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_tileunload(`type`: tileunload): this.type = js.native
+  @JSName("off")
+  def off_tileunload(`type`: tileunload, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_tileunload(`type`: tileunload, fn: TileEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -585,17 +647,23 @@ abstract class Evented () extends Class {
   @JSName("off")
   def off_tooltipclose(`type`: tooltipclose): this.type = js.native
   @JSName("off")
+  def off_tooltipclose(`type`: tooltipclose, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_tooltipclose(`type`: tooltipclose, fn: TooltipEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_tooltipclose(`type`: tooltipclose, fn: TooltipEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_tooltipopen(`type`: tooltipopen): this.type = js.native
   @JSName("off")
+  def off_tooltipopen(`type`: tooltipopen, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("off")
   def off_tooltipopen(`type`: tooltipopen, fn: TooltipEventHandlerFn): this.type = js.native
   @JSName("off")
   def off_tooltipopen(`type`: tooltipopen, fn: TooltipEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("off")
   def off_zoomanim(`type`: zoomanim): this.type = js.native
+  @JSName("off")
+  def off_zoomanim(`type`: zoomanim, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("off")
   def off_zoomanim(`type`: zoomanim, fn: ZoomAnimEventHandlerFn): this.type = js.native
   @JSName("off")
@@ -892,6 +960,11 @@ abstract class Evented () extends Class {
   ): this.type = js.native
   def removeEventListener(
     `type`: zoomlevelschange | unload | viewreset | load | zoomstart | movestart | zoom | move | zoomend | moveend | autopanstart | dragstart | drag | add | remove | loading | error | update | down | predrag,
+    fn: js.UndefOr[scala.Nothing],
+    context: js.Any
+  ): this.type = js.native
+  def removeEventListener(
+    `type`: zoomlevelschange | unload | viewreset | load | zoomstart | movestart | zoom | move | zoomend | moveend | autopanstart | dragstart | drag | add | remove | loading | error | update | down | predrag,
     fn: LeafletEventHandlerFn
   ): this.type = js.native
   def removeEventListener(
@@ -910,10 +983,13 @@ abstract class Evented () extends Class {
     */
   // tslint:disable:unified-signatures
   def removeEventListener(`type`: String): this.type = js.native
+  def removeEventListener(`type`: String, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   def removeEventListener(`type`: String, fn: LeafletEventHandlerFn): this.type = js.native
   def removeEventListener(`type`: String, fn: LeafletEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_baselayerchange(`type`: baselayerchange): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_baselayerchange(`type`: baselayerchange, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_baselayerchange(`type`: baselayerchange, fn: LayersControlEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
@@ -921,11 +997,15 @@ abstract class Evented () extends Class {
   @JSName("removeEventListener")
   def removeEventListener_click(`type`: click): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_click(`type`: click, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_click(`type`: click, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_click(`type`: click, fn: LeafletMouseEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_contextmenu(`type`: contextmenu): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_contextmenu(`type`: contextmenu, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_contextmenu(`type`: contextmenu, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
@@ -933,11 +1013,15 @@ abstract class Evented () extends Class {
   @JSName("removeEventListener")
   def removeEventListener_dblclick(`type`: dblclick): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_dblclick(`type`: dblclick, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_dblclick(`type`: dblclick, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_dblclick(`type`: dblclick, fn: LeafletMouseEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragend(`type`: dragend): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_dragend(`type`: dragend, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragend(`type`: dragend, fn: DragEndEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
@@ -945,11 +1029,15 @@ abstract class Evented () extends Class {
   @JSName("removeEventListener")
   def removeEventListener_keydown(`type`: keydown): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_keydown(`type`: keydown, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_keydown(`type`: keydown, fn: LeafletKeyboardEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_keydown(`type`: keydown, fn: LeafletKeyboardEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_keypress(`type`: keypress): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_keypress(`type`: keypress, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_keypress(`type`: keypress, fn: LeafletKeyboardEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
@@ -957,11 +1045,15 @@ abstract class Evented () extends Class {
   @JSName("removeEventListener")
   def removeEventListener_keyup(`type`: keyup): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_keyup(`type`: keyup, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_keyup(`type`: keyup, fn: LeafletKeyboardEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_keyup(`type`: keyup, fn: LeafletKeyboardEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_layeradd(`type`: layeradd): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_layeradd(`type`: layeradd, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_layeradd(`type`: layeradd, fn: LayerEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
@@ -969,11 +1061,15 @@ abstract class Evented () extends Class {
   @JSName("removeEventListener")
   def removeEventListener_layerremove(`type`: layerremove): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_layerremove(`type`: layerremove, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_layerremove(`type`: layerremove, fn: LayerEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_layerremove(`type`: layerremove, fn: LayerEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_locationerror(`type`: locationerror): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_locationerror(`type`: locationerror, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_locationerror(`type`: locationerror, fn: ErrorEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
@@ -981,11 +1077,15 @@ abstract class Evented () extends Class {
   @JSName("removeEventListener")
   def removeEventListener_locationfound(`type`: locationfound): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_locationfound(`type`: locationfound, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_locationfound(`type`: locationfound, fn: LocationEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_locationfound(`type`: locationfound, fn: LocationEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_mousedown(`type`: mousedown): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_mousedown(`type`: mousedown, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_mousedown(`type`: mousedown, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
@@ -993,11 +1093,15 @@ abstract class Evented () extends Class {
   @JSName("removeEventListener")
   def removeEventListener_mousemove(`type`: mousemove): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_mousemove(`type`: mousemove, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_mousemove(`type`: mousemove, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_mousemove(`type`: mousemove, fn: LeafletMouseEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseout(`type`: mouseout): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_mouseout(`type`: mouseout, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseout(`type`: mouseout, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
@@ -1005,11 +1109,15 @@ abstract class Evented () extends Class {
   @JSName("removeEventListener")
   def removeEventListener_mouseover(`type`: mouseover): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_mouseover(`type`: mouseover, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_mouseover(`type`: mouseover, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseover(`type`: mouseover, fn: LeafletMouseEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseup(`type`: mouseup): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_mouseup(`type`: mouseup, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_mouseup(`type`: mouseup, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
@@ -1017,11 +1125,15 @@ abstract class Evented () extends Class {
   @JSName("removeEventListener")
   def removeEventListener_overlayadd(`type`: overlayadd): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_overlayadd(`type`: overlayadd, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_overlayadd(`type`: overlayadd, fn: LayersControlEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_overlayadd(`type`: overlayadd, fn: LayersControlEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_overlayremove(`type`: overlayremove): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_overlayremove(`type`: overlayremove, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_overlayremove(`type`: overlayremove, fn: LayersControlEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
@@ -1029,11 +1141,15 @@ abstract class Evented () extends Class {
   @JSName("removeEventListener")
   def removeEventListener_popupclose(`type`: popupclose): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_popupclose(`type`: popupclose, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_popupclose(`type`: popupclose, fn: PopupEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_popupclose(`type`: popupclose, fn: PopupEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_popupopen(`type`: popupopen): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_popupopen(`type`: popupopen, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_popupopen(`type`: popupopen, fn: PopupEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
@@ -1041,11 +1157,15 @@ abstract class Evented () extends Class {
   @JSName("removeEventListener")
   def removeEventListener_preclick(`type`: preclick): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_preclick(`type`: preclick, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_preclick(`type`: preclick, fn: LeafletMouseEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_preclick(`type`: preclick, fn: LeafletMouseEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_resize(`type`: resize): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_resize(`type`: resize, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_resize(`type`: resize, fn: ResizeEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
@@ -1053,11 +1173,15 @@ abstract class Evented () extends Class {
   @JSName("removeEventListener")
   def removeEventListener_tileerror(`type`: tileerror): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_tileerror(`type`: tileerror, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_tileerror(`type`: tileerror, fn: TileErrorEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_tileerror(`type`: tileerror, fn: TileErrorEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_tileload(`type`: tileload): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_tileload(`type`: tileload, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_tileload(`type`: tileload, fn: TileEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
@@ -1065,11 +1189,15 @@ abstract class Evented () extends Class {
   @JSName("removeEventListener")
   def removeEventListener_tileloadstart(`type`: tileloadstart): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_tileloadstart(`type`: tileloadstart, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_tileloadstart(`type`: tileloadstart, fn: TileEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_tileloadstart(`type`: tileloadstart, fn: TileEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_tileunload(`type`: tileunload): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_tileunload(`type`: tileunload, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_tileunload(`type`: tileunload, fn: TileEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
@@ -1077,17 +1205,23 @@ abstract class Evented () extends Class {
   @JSName("removeEventListener")
   def removeEventListener_tooltipclose(`type`: tooltipclose): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_tooltipclose(`type`: tooltipclose, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_tooltipclose(`type`: tooltipclose, fn: TooltipEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_tooltipclose(`type`: tooltipclose, fn: TooltipEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_tooltipopen(`type`: tooltipopen): this.type = js.native
   @JSName("removeEventListener")
+  def removeEventListener_tooltipopen(`type`: tooltipopen, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
+  @JSName("removeEventListener")
   def removeEventListener_tooltipopen(`type`: tooltipopen, fn: TooltipEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_tooltipopen(`type`: tooltipopen, fn: TooltipEventHandlerFn, context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_zoomanim(`type`: zoomanim): this.type = js.native
+  @JSName("removeEventListener")
+  def removeEventListener_zoomanim(`type`: zoomanim, fn: js.UndefOr[scala.Nothing], context: js.Any): this.type = js.native
   @JSName("removeEventListener")
   def removeEventListener_zoomanim(`type`: zoomanim, fn: ZoomAnimEventHandlerFn): this.type = js.native
   @JSName("removeEventListener")

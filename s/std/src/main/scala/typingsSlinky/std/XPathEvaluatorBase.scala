@@ -13,6 +13,33 @@ trait XPathEvaluatorBase extends js.Object {
   def evaluate(
     expression: java.lang.String,
     contextNode: org.scalajs.dom.raw.Node,
+    resolver: js.UndefOr[XPathNSResolver],
+    `type`: js.UndefOr[scala.Nothing],
+    result: org.scalajs.dom.raw.XPathResult
+  ): org.scalajs.dom.raw.XPathResult = js.native
+  def evaluate(
+    expression: java.lang.String,
+    contextNode: org.scalajs.dom.raw.Node,
+    resolver: js.UndefOr[XPathNSResolver],
+    `type`: Double
+  ): org.scalajs.dom.raw.XPathResult = js.native
+  def evaluate(
+    expression: java.lang.String,
+    contextNode: org.scalajs.dom.raw.Node,
+    resolver: js.UndefOr[XPathNSResolver],
+    `type`: Double,
+    result: org.scalajs.dom.raw.XPathResult
+  ): org.scalajs.dom.raw.XPathResult = js.native
+  def evaluate(
+    expression: java.lang.String,
+    contextNode: org.scalajs.dom.raw.Node,
+    resolver: Null,
+    `type`: js.UndefOr[scala.Nothing],
+    result: org.scalajs.dom.raw.XPathResult
+  ): org.scalajs.dom.raw.XPathResult = js.native
+  def evaluate(
+    expression: java.lang.String,
+    contextNode: org.scalajs.dom.raw.Node,
     resolver: Null,
     `type`: Double
   ): org.scalajs.dom.raw.XPathResult = js.native
@@ -24,18 +51,5 @@ trait XPathEvaluatorBase extends js.Object {
     result: org.scalajs.dom.raw.XPathResult
   ): org.scalajs.dom.raw.XPathResult = js.native
   def evaluate(expression: java.lang.String, contextNode: org.scalajs.dom.raw.Node, resolver: XPathNSResolver): org.scalajs.dom.raw.XPathResult = js.native
-  def evaluate(
-    expression: java.lang.String,
-    contextNode: org.scalajs.dom.raw.Node,
-    resolver: XPathNSResolver,
-    `type`: Double
-  ): org.scalajs.dom.raw.XPathResult = js.native
-  def evaluate(
-    expression: java.lang.String,
-    contextNode: org.scalajs.dom.raw.Node,
-    resolver: XPathNSResolver,
-    `type`: Double,
-    result: org.scalajs.dom.raw.XPathResult
-  ): org.scalajs.dom.raw.XPathResult = js.native
 }
 

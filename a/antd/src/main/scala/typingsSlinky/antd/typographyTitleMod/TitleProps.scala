@@ -14,7 +14,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined antd.antd/lib/_util/type.Omit<antd.antd/lib/typography/Base.BlockProps & {  level ? :[1, 2, 3, 4][number]}, 'strong'> */
+/* Inlined antd.antd/lib/_util/type.Omit<antd.antd/lib/typography/Base.BlockProps & {  level :[1, 2, 3, 4][number] | undefined}, 'strong'> */
 trait TitleProps extends js.Object {
   var `aria-label`: js.UndefOr[String] = js.undefined
   var children: js.UndefOr[ReactElement] = js.undefined

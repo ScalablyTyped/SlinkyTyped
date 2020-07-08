@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined antd.antd/lib/form/FormItemLabel.FormItemLabelProps & {  required ? :boolean,   prefixCls  :string} */
+/* Inlined antd.antd/lib/form/FormItemLabel.FormItemLabelProps & {  required :boolean | undefined,   prefixCls :string} */
 trait FormItemLabelPropsrequire extends js.Object {
   var colon: js.UndefOr[Boolean] = js.undefined
   var htmlFor: js.UndefOr[String] = js.undefined

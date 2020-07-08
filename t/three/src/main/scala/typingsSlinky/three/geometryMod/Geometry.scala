@@ -163,6 +163,7 @@ class Geometry () extends EventDispatcher {
   def fromBufferGeometry(geometry: BufferGeometry): Geometry = js.native
   def lookAt(vector: Vector3): Unit = js.native
   def merge(geometry: Geometry): Unit = js.native
+  def merge(geometry: Geometry, matrix: js.UndefOr[scala.Nothing], materialIndexOffset: Double): Unit = js.native
   def merge(geometry: Geometry, matrix: Matrix): Unit = js.native
   def merge(geometry: Geometry, matrix: Matrix, materialIndexOffset: Double): Unit = js.native
   def mergeMesh(mesh: Mesh): Unit = js.native

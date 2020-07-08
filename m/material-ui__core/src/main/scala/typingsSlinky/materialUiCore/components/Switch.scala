@@ -34,6 +34,7 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.both
 import typingsSlinky.materialUiCore.materialUiCoreStrings.copy
 import typingsSlinky.materialUiCore.materialUiCoreStrings.date
 import typingsSlinky.materialUiCore.materialUiCoreStrings.decimal
+import typingsSlinky.materialUiCore.materialUiCoreStrings.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.descending
 import typingsSlinky.materialUiCore.materialUiCoreStrings.dialog
 import typingsSlinky.materialUiCore.materialUiCoreStrings.email
@@ -71,7 +72,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.tree
 import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
-import typingsSlinky.materialUiCore.switchMod.default
 import typingsSlinky.materialUiCore.switchSwitchMod.SwitchProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -94,7 +94,7 @@ object Switch {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def TouchRippleProps(value: Partial[typingsSlinky.materialUiCore.touchRippleMod.TouchRippleProps]): this.type = set("TouchRippleProps", value.asInstanceOf[js.Any])
     @scala.inline
@@ -228,7 +228,7 @@ object Switch {
     @scala.inline
     def classes(value: PartialClassNameMapSwitch): this.type = set("classes", value.asInstanceOf[js.Any])
     @scala.inline
-    def color(value: primary | secondary | typingsSlinky.materialUiCore.materialUiCoreStrings.default): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: primary | secondary | default): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def componentFunctionComponent(value: ReactComponentClass[ButtonBaseProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline

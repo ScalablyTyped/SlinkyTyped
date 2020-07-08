@@ -28,7 +28,6 @@ trait TypeofMenu extends Instantiable0[Menu] {
     * macOS' native actions.
     */
   def sendActionToFirstResponder(action: String): Unit = js.native
-  def setApplicationMenu(): Unit = js.native
   /**
     * Sets menu as the application menu on macOS. On Windows and Linux, the menu will
     * be set as each window's top menu. Also on Windows and Linux, you can use a & in
@@ -42,6 +41,7 @@ trait TypeofMenu extends Instantiable0[Menu] {
     * not set one. It contains standard items such as File, Edit, View, Window and
     * Help.
     */
+  def setApplicationMenu(): Unit = js.native
   def setApplicationMenu(menu: Menu): Unit = js.native
 }
 

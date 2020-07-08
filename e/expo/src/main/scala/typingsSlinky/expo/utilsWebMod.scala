@@ -20,6 +20,7 @@ object utilsWebMod extends js.Object {
   def getImageElementFromURIAsync(uri: String): js.Promise[HTMLImageElement] = js.native
   def getMimeTypeFromSource(url: String): String = js.native
   def getSourceAndEncodeAsync(url: String): js.Promise[String] = js.native
+  def getSourceAndEncodeAsync(url: String, preventCaching: js.UndefOr[scala.Nothing], missingImageSource: String): js.Promise[String] = js.native
   def getSourceAndEncodeAsync(url: String, preventCaching: Boolean): js.Promise[String] = js.native
   def getSourceAndEncodeAsync(url: String, preventCaching: Boolean, missingImageSource: String): js.Promise[String] = js.native
   def getWidthForElement(element: Element): Double = js.native

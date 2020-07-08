@@ -10,6 +10,7 @@ class Size protected ()
   extends typingsSlinky.googlemaps.google.maps.Size {
   def this(width: Double, height: Double) = this()
   def this(width: Double, height: Double, widthUnit: String) = this()
+  def this(width: Double, height: Double, widthUnit: js.UndefOr[scala.Nothing], heightUnit: String) = this()
   def this(width: Double, height: Double, widthUnit: String, heightUnit: String) = this()
   /* CompleteClass */
   override var height: Double = js.native

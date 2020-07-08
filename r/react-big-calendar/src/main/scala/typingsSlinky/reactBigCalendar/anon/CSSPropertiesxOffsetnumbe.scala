@@ -495,7 +495,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined react.react.CSSProperties & {  xOffset  :number} */
+/* Inlined react.react.CSSProperties & {  xOffset :number} */
 trait CSSPropertiesxOffsetnumbe extends js.Object {
   /**
     * The **`box-align`** CSS property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.

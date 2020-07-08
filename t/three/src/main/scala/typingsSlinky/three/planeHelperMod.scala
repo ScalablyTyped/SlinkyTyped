@@ -13,6 +13,7 @@ object planeHelperMod extends js.Object {
   class PlaneHelper protected () extends LineSegments {
     def this(plane: Plane) = this()
     def this(plane: Plane, size: Double) = this()
+    def this(plane: Plane, size: js.UndefOr[scala.Nothing], hex: Double) = this()
     def this(plane: Plane, size: Double, hex: Double) = this()
     var plane: Plane = js.native
     var size: Double = js.native

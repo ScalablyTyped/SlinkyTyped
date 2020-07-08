@@ -21,6 +21,7 @@ object distinctMod extends js.Object {
   }
   
   def distinct[T, K](): MonoTypeOperatorFunction[T] = js.native
+  def distinct[T, K](keySelector: js.UndefOr[scala.Nothing], flushes: Observable[_]): MonoTypeOperatorFunction[T] = js.native
   def distinct[T, K](keySelector: js.Function1[/* value */ T, K]): MonoTypeOperatorFunction[T] = js.native
   def distinct[T, K](keySelector: js.Function1[/* value */ T, K], flushes: Observable[_]): MonoTypeOperatorFunction[T] = js.native
 }

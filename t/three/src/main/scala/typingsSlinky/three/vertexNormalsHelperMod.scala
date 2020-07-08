@@ -13,7 +13,16 @@ object vertexNormalsHelperMod extends js.Object {
   class VertexNormalsHelper protected () extends LineSegments {
     def this(`object`: Object3D) = this()
     def this(`object`: Object3D, size: Double) = this()
+    def this(`object`: Object3D, size: js.UndefOr[scala.Nothing], hex: Double) = this()
     def this(`object`: Object3D, size: Double, hex: Double) = this()
+    def this(
+      `object`: Object3D,
+      size: js.UndefOr[scala.Nothing],
+      hex: js.UndefOr[scala.Nothing],
+      linewidth: Double
+    ) = this()
+    def this(`object`: Object3D, size: js.UndefOr[scala.Nothing], hex: Double, linewidth: Double) = this()
+    def this(`object`: Object3D, size: Double, hex: js.UndefOr[scala.Nothing], linewidth: Double) = this()
     def this(`object`: Object3D, size: Double, hex: Double, linewidth: Double) = this()
     var `object`: Object3D = js.native
     var size: Double = js.native

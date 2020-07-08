@@ -21,7 +21,6 @@ import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapListSu
 import typingsSlinky.materialUiCore.listSubheaderListSubheaderMod.ListSubheaderProps
-import typingsSlinky.materialUiCore.listSubheaderMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
@@ -32,6 +31,7 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.both
 import typingsSlinky.materialUiCore.materialUiCoreStrings.copy
 import typingsSlinky.materialUiCore.materialUiCoreStrings.date
 import typingsSlinky.materialUiCore.materialUiCoreStrings.decimal
+import typingsSlinky.materialUiCore.materialUiCoreStrings.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.descending
 import typingsSlinky.materialUiCore.materialUiCoreStrings.dialog
 import typingsSlinky.materialUiCore.materialUiCoreStrings.email
@@ -86,7 +86,7 @@ object ListSubheader {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -198,7 +198,7 @@ object ListSubheader {
     @scala.inline
     def classes(value: PartialClassNameMapListSu): this.type = set("classes", value.asInstanceOf[js.Any])
     @scala.inline
-    def color(value: typingsSlinky.materialUiCore.materialUiCoreStrings.default | primary | inherit): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: default | primary | inherit): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def componentFunctionComponent(value: ReactComponentClass[ListSubheaderProps]): this.type = set("component", value.asInstanceOf[js.Any])
     @scala.inline

@@ -20,6 +20,12 @@ class InstantiateExpr protected ()
   def this(
     classExpr: typingsSlinky.angularCompiler.outputAstMod.Expression,
     args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
+    `type`: js.UndefOr[scala.Nothing],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+  def this(
+    classExpr: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    args: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression],
     `type`: Null,
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()

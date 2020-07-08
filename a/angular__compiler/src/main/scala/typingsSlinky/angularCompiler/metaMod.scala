@@ -19,6 +19,7 @@ object metaMod extends js.Object {
   @js.native
   class I18nMetaVisitor () extends Visitor {
     def this(interpolationConfig: InterpolationConfig) = this()
+    def this(interpolationConfig: js.UndefOr[scala.Nothing], keepI18nAttrs: Boolean) = this()
     def this(interpolationConfig: InterpolationConfig, keepI18nAttrs: Boolean) = this()
     var _createI18nMessage: js.Any = js.native
     var _generateI18nMessage: js.Any = js.native

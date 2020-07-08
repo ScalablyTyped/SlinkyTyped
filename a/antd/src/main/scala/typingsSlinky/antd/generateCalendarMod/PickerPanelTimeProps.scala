@@ -59,7 +59,7 @@ trait PickerPanelTimeProps[DateType] extends PickerProps[DateType] {
   var style: js.UndefOr[CSSProperties] = js.undefined
   var tabIndex: js.UndefOr[Double] = js.undefined
   var use12Hours: js.UndefOr[Boolean] = js.undefined
-  var value: js.UndefOr[DateType] = js.undefined
+  var value: js.UndefOr[DateType | Null] = js.undefined
 }
 
 object PickerPanelTimeProps {
@@ -225,6 +225,8 @@ object PickerPanelTimeProps {
     def setValue(value: DateType): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
   
 }

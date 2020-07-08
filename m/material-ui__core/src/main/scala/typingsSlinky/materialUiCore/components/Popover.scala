@@ -73,7 +73,6 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.url
 import typingsSlinky.materialUiCore.materialUiCoreStrings.vertical
 import typingsSlinky.materialUiCore.materialUiCoreStrings.yes
 import typingsSlinky.materialUiCore.modalMod.ModalManager
-import typingsSlinky.materialUiCore.popoverMod.default
 import typingsSlinky.materialUiCore.popoverPopoverMod.PopoverActions
 import typingsSlinky.materialUiCore.popoverPopoverMod.PopoverOrigin
 import typingsSlinky.materialUiCore.popoverPopoverMod.PopoverPosition
@@ -99,7 +98,7 @@ object Popover {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def BackdropComponentFunctionComponent(value: ReactComponentClass[BackdropProps]): this.type = set("BackdropComponent", value.asInstanceOf[js.Any])
     @scala.inline

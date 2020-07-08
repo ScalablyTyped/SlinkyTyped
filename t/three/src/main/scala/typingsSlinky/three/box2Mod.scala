@@ -11,6 +11,7 @@ object box2Mod extends js.Object {
   @js.native
   class Box2 () extends js.Object {
     def this(min: Vector2) = this()
+    def this(min: js.UndefOr[scala.Nothing], max: Vector2) = this()
     def this(min: Vector2, max: Vector2) = this()
     var max: Vector2 = js.native
     var min: Vector2 = js.native

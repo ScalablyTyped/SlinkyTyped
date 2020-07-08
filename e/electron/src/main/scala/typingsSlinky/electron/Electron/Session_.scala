@@ -52,6 +52,7 @@ trait Session_ extends EventEmitter {
     * Clears the storage data for the current session. Deprecated Soon
     */
   def clearStorageData(): Unit = js.native
+  def clearStorageData(options: js.UndefOr[scala.Nothing], callback: js.Function): Unit = js.native
   def clearStorageData(options: ClearStorageDataOptions): Unit = js.native
   def clearStorageData(options: ClearStorageDataOptions, callback: js.Function): Unit = js.native
   @JSName("clearStorageData")
@@ -136,12 +137,12 @@ trait Session_ extends EventEmitter {
     * Downloads under the respective app folder.
     */
   def setDownloadPath(path: String): Unit = js.native
-  def setPermissionCheckHandler(): Unit = js.native
   /**
     * Sets the handler which can be used to respond to permission checks for the
     * session. Returning true will allow the permission and false will reject it. To
     * clear the handler, call setPermissionCheckHandler(null).
     */
+  def setPermissionCheckHandler(): Unit = js.native
   def setPermissionCheckHandler(
     handler: js.Function4[
       /* webContents */ WebContents_, 
@@ -151,12 +152,12 @@ trait Session_ extends EventEmitter {
       Boolean
     ]
   ): Unit = js.native
-  def setPermissionRequestHandler(): Unit = js.native
   /**
     * Sets the handler which can be used to respond to permission requests for the
     * session. Calling callback(true) will allow the permission and callback(false)
     * will reject it. To clear the handler, call setPermissionRequestHandler(null).
     */
+  def setPermissionRequestHandler(): Unit = js.native
   def setPermissionRequestHandler(
     handler: js.Function4[
       /* webContents */ WebContents_, 

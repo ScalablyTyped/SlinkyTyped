@@ -26,6 +26,7 @@ trait InfoWindow extends MVCObject {
     * the offset from the anchor's position to the tip of the InfoWindow.
     */
   def open(): Unit = js.native
+  def open(map: js.UndefOr[scala.Nothing], anchor: MVCObject): Unit = js.native
   def open(map: Map[Element]): Unit = js.native
   def open(map: Map[Element], anchor: MVCObject): Unit = js.native
   def open(map: StreetViewPanorama): Unit = js.native

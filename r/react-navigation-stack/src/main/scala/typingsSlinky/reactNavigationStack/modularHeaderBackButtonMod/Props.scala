@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined react-navigation-stack.react-navigation-stack/lib/typescript/types.HeaderBackButtonProps & {  LabelContainerComponent  :react.react.ComponentType<{}>,   ButtonContainerComponent  :react.react.ComponentType<{}>} */
+/* Inlined react-navigation-stack.react-navigation-stack/lib/typescript/types.HeaderBackButtonProps & {  LabelContainerComponent :react.react.ComponentType<{}>,   ButtonContainerComponent :react.react.ComponentType<{}>} */
 trait Props extends js.Object {
   var ButtonContainerComponent: ReactComponentClass[js.Object]
   var LabelContainerComponent: ReactComponentClass[js.Object]

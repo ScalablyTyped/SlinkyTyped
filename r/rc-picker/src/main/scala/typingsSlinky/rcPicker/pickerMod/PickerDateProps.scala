@@ -308,7 +308,7 @@ trait PickerDateProps[DateType] extends PickerProps[DateType] {
   var superPrevIcon: js.UndefOr[ReactElement] = js.undefined
   var tabIndex: js.UndefOr[Double] = js.undefined
   var transitionName: js.UndefOr[String] = js.undefined
-  var value: js.UndefOr[DateType] = js.undefined
+  var value: js.UndefOr[DateType | Null] = js.undefined
 }
 
 object PickerDateProps {
@@ -758,6 +758,8 @@ object PickerDateProps {
     def setValue(value: DateType): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
+    @scala.inline
+    def setValueNull: Self = this.set("value", null)
   }
   
 }

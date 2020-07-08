@@ -37,7 +37,7 @@ class ɵCssKeyframesPlayer protected () extends AnimationPlayer {
   var _onDestroyFns: js.Any = js.native
   var _onDoneFns: js.Any = js.native
   var _onStartFns: js.Any = js.native
-  val _specialStyles: js.UndefOr[js.Any] = js.native
+  val _specialStyles: js.Any = js.native
   var _started: js.Any = js.native
   var _state: js.Any = js.native
   var _styler: js.Any = js.native

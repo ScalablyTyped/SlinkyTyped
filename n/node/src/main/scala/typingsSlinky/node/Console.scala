@@ -9,12 +9,12 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Console extends js.Object {
   var Console: ConsoleConstructor = js.native
+  def assert(value: js.Any, message: js.UndefOr[scala.Nothing], optionalParams: js.Any*): Unit = js.native
   /**
     * A simple assertion test that verifies whether `value` is truthy.
     * If it is not, an `AssertionError` is thrown.
     * If provided, the error `message` is formatted using `util.format()` and used as the error message.
     */
-  def assert(value: js.Any): Unit = js.native
   def assert(value: js.Any, message: java.lang.String, optionalParams: js.Any*): Unit = js.native
   /**
     * When `stdout` is a TTY, calling `console.clear()` will attempt to clear the TTY.
@@ -31,10 +31,10 @@ trait Console extends js.Object {
     */
   def countReset(): Unit = js.native
   def countReset(label: java.lang.String): Unit = js.native
+  def debug(message: js.UndefOr[scala.Nothing], optionalParams: js.Any*): Unit = js.native
   /**
     * The `console.debug()` function is an alias for {@link console.log()}.
     */
-  def debug(): Unit = js.native
   def debug(message: js.Any, optionalParams: js.Any*): Unit = js.native
   /**
     * Uses {@link util.inspect()} on `obj` and prints the resulting string to `stdout`.
@@ -46,10 +46,10 @@ trait Console extends js.Object {
     * This method calls {@link console.log()} passing it the arguments received. Please note that this method does not produce any XML formatting
     */
   def dirxml(data: js.Any*): Unit = js.native
+  def error(message: js.UndefOr[scala.Nothing], optionalParams: js.Any*): Unit = js.native
   /**
     * Prints to `stderr` with newline.
     */
-  def error(): Unit = js.native
   def error(message: js.Any, optionalParams: js.Any*): Unit = js.native
   /**
     * Increases indentation of subsequent lines by two spaces.
@@ -64,15 +64,15 @@ trait Console extends js.Object {
     * Decreases indentation of subsequent lines by two spaces.
     */
   def groupEnd(): Unit = js.native
+  def info(message: js.UndefOr[scala.Nothing], optionalParams: js.Any*): Unit = js.native
   /**
     * The {@link console.info()} function is an alias for {@link console.log()}.
     */
-  def info(): Unit = js.native
   def info(message: js.Any, optionalParams: js.Any*): Unit = js.native
+  def log(message: js.UndefOr[scala.Nothing], optionalParams: js.Any*): Unit = js.native
   /**
     * Prints to `stdout` with newline.
     */
-  def log(): Unit = js.native
   def log(message: js.Any, optionalParams: js.Any*): Unit = js.native
   // --- Inspector mode only ---
   /**
@@ -103,10 +103,10 @@ trait Console extends js.Object {
     */
   def timeEnd(): Unit = js.native
   def timeEnd(label: java.lang.String): Unit = js.native
+  def timeLog(label: js.UndefOr[scala.Nothing], data: js.Any*): Unit = js.native
   /**
     * For a timer that was previously started by calling {@link console.time()}, prints the elapsed time and other `data` arguments to `stdout`.
     */
-  def timeLog(): Unit = js.native
   def timeLog(label: java.lang.String, data: js.Any*): Unit = js.native
   /**
     * This method does not display anything unless used in the inspector.
@@ -114,15 +114,15 @@ trait Console extends js.Object {
     */
   def timeStamp(): Unit = js.native
   def timeStamp(label: java.lang.String): Unit = js.native
+  def trace(message: js.UndefOr[scala.Nothing], optionalParams: js.Any*): Unit = js.native
   /**
     * Prints to `stderr` the string 'Trace :', followed by the {@link util.format()} formatted message and stack trace to the current position in the code.
     */
-  def trace(): Unit = js.native
   def trace(message: js.Any, optionalParams: js.Any*): Unit = js.native
+  def warn(message: js.UndefOr[scala.Nothing], optionalParams: js.Any*): Unit = js.native
   /**
     * The {@link console.warn()} function is an alias for {@link console.error()}.
     */
-  def warn(): Unit = js.native
   def warn(message: js.Any, optionalParams: js.Any*): Unit = js.native
 }
 

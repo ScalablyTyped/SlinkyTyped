@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Readonly<{  name  :react-native.react-native.AccessibilityActionName,   label ? :string}> */
+/* Inlined std.Readonly<{  name :react-native.react-native.AccessibilityActionName,   label :string | undefined}> */
 trait AccessibilityActionInfo extends js.Object {
   val label: js.UndefOr[String] = js.undefined
   val name: AccessibilityActionName

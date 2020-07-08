@@ -10,6 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class GeoObject_ () extends IGeoObject {
   def this(feature: IGeoObjectFeature) = this()
+  def this(feature: js.UndefOr[scala.Nothing], options: IGeoObjectOptions) = this()
   def this(feature: IGeoObjectFeature, options: IGeoObjectOptions) = this()
   var balloon: typingsSlinky.yandexMaps.mod.geoObject.Balloon = js.native
   var editor: IGeometryEditor = js.native

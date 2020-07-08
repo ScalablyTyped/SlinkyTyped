@@ -33,7 +33,7 @@ trait Task extends js.Object {
     *
     * A zone may chose to intercept this function and perform its own un-scheduling.
     */
-  var cancelFn: js.UndefOr[js.Function1[/* task */ Task, Unit]] = js.undefined
+  var cancelFn: js.UndefOr[js.Function1[/* task */ this.type, Unit]] = js.undefined
   /**
     * Task specific options associated with the current task. This is passed to the `scheduleFn`.
     */
@@ -52,7 +52,7 @@ trait Task extends js.Object {
     *
     * A zone may choose to intercept this function and perform its own scheduling.
     */
-  var scheduleFn: js.UndefOr[js.Function1[/* task */ Task, Unit]] = js.undefined
+  var scheduleFn: js.UndefOr[js.Function1[/* task */ this.type, Unit]] = js.undefined
   /**
     * Debug string representing the API which requested the scheduling of the task.
     */
@@ -122,7 +122,7 @@ object Task {
     @scala.inline
     def setZone(value: Zone): Self = this.set("zone", value.asInstanceOf[js.Any])
     @scala.inline
-    def setCancelFn(value: /* task */ Task => Unit): Self = this.set("cancelFn", js.Any.fromFunction1(value))
+    def setCancelFn(value: Task => Unit): Self = this.set("cancelFn", js.Any.fromFunction1(value))
     @scala.inline
     def deleteCancelFn: Self = this.set("cancelFn", js.undefined)
     @scala.inline
@@ -130,7 +130,7 @@ object Task {
     @scala.inline
     def deleteData: Self = this.set("data", js.undefined)
     @scala.inline
-    def setScheduleFn(value: /* task */ Task => Unit): Self = this.set("scheduleFn", js.Any.fromFunction1(value))
+    def setScheduleFn(value: Task => Unit): Self = this.set("scheduleFn", js.Any.fromFunction1(value))
     @scala.inline
     def deleteScheduleFn: Self = this.set("scheduleFn", js.undefined)
   }

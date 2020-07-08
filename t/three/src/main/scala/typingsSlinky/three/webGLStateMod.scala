@@ -91,6 +91,7 @@ object webGLStateMod extends js.Object {
       `type`: Double,
       source: js.Any
     ): Unit = js.native
+    // Same interface as https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D
     def texImage2D(
       target: Double,
       level: Double,
@@ -101,7 +102,6 @@ object webGLStateMod extends js.Object {
       format: Double,
       `type`: Double
     ): Unit = js.native
-    // Same interface as https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/texImage2D
     def texImage2D(
       target: Double,
       level: Double,

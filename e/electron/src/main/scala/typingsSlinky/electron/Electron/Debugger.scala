@@ -58,6 +58,11 @@ trait Debugger extends EventEmitter {
     * Send given command to the debugging target. Deprecated Soon
     */
   def sendCommand(method: String): Unit = js.native
+  def sendCommand(
+    method: String,
+    commandParams: js.UndefOr[scala.Nothing],
+    callback: js.Function2[/* error */ js.Any, /* result */ js.Any, Unit]
+  ): Unit = js.native
   def sendCommand(method: String, commandParams: js.Any): Unit = js.native
   def sendCommand(
     method: String,

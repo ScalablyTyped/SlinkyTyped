@@ -5,7 +5,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.createMuiThemeMod.Theme
 import typingsSlinky.materialUiCore.muiThemeProviderMod.MuiThemeProviderProps
 import typingsSlinky.materialUiCore.muiThemeProviderMod.SheetManagerTheme
-import typingsSlinky.materialUiCore.muiThemeProviderMod.default
 import typingsSlinky.materialUiCore.withStylesMod.StylesCreator
 import typingsSlinky.std.Map
 import scala.scalajs.js
@@ -20,7 +19,7 @@ object MuiThemeProvider {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def disableStylesGeneration(value: Boolean): this.type = set("disableStylesGeneration", value.asInstanceOf[js.Any])
     @scala.inline

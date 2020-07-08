@@ -3,7 +3,6 @@ package typingsSlinky.materialUiCore.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.materialUiCore.noSsrMod.default
 import typingsSlinky.materialUiCore.noSsrNoSsrMod.NoSsrProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +16,7 @@ object NoSsr {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def fallbackReactElement(value: ReactElement): this.type = set("fallback", value.asInstanceOf[js.Any])
     @scala.inline

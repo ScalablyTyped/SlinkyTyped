@@ -9,7 +9,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined yandex-maps.yandex-maps.control.IBaseButtonParametersOptions & {  collapseOnBlur ? :boolean,   expandOnClick ? :boolean,   popupFloat ? :'left' | 'right'} */
+/* Inlined yandex-maps.yandex-maps.control.IBaseButtonParametersOptions & {  collapseOnBlur :boolean | undefined,   expandOnClick :boolean | undefined,   popupFloat :'left' | 'right' | undefined} */
 trait IBaseButtonParametersOptiAdjustMapMargin extends js.Object {
   var adjustMapMargin: js.UndefOr[Boolean] = js.undefined
   var collapseOnBlur: js.UndefOr[Boolean] = js.undefined

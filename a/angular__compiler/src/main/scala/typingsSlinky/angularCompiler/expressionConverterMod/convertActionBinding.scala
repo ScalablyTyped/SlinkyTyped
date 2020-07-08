@@ -16,6 +16,14 @@ object convertActionBinding extends js.Object {
     implicitReceiver: Expression,
     action: AST,
     bindingId: String,
+    interpolationFunction: js.UndefOr[scala.Nothing],
+    baseSourceSpan: ParseSourceSpan
+  ): ConvertActionBindingResult = js.native
+  def apply(
+    localResolver: Null,
+    implicitReceiver: Expression,
+    action: AST,
+    bindingId: String,
     interpolationFunction: InterpolationFunction
   ): ConvertActionBindingResult = js.native
   def apply(
@@ -27,6 +35,14 @@ object convertActionBinding extends js.Object {
     baseSourceSpan: ParseSourceSpan
   ): ConvertActionBindingResult = js.native
   def apply(localResolver: LocalResolver, implicitReceiver: Expression, action: AST, bindingId: String): ConvertActionBindingResult = js.native
+  def apply(
+    localResolver: LocalResolver,
+    implicitReceiver: Expression,
+    action: AST,
+    bindingId: String,
+    interpolationFunction: js.UndefOr[scala.Nothing],
+    baseSourceSpan: ParseSourceSpan
+  ): ConvertActionBindingResult = js.native
   def apply(
     localResolver: LocalResolver,
     implicitReceiver: Expression,

@@ -24,6 +24,18 @@ object dictUtilMod extends js.Object {
     expandedKeys: js.Array[
       /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
     ],
+    startKey: js.UndefOr[scala.Nothing],
+    endKey: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ js.Any
+  ): js.Array[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
+  ] = js.native
+  def calcRangeKeys(
+    treeData: js.Array[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DataNode */ _
+    ],
+    expandedKeys: js.Array[
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
+    ],
     startKey: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ js.Any
   ): js.Array[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _

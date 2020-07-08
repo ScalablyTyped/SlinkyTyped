@@ -1,19 +1,18 @@
 package typingsSlinky.react.anon
 
+import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait `0` extends js.Object {
-  var defaultProps: /* import warning: importer.ImportType#apply Failed type conversion: infer D */ js.Any
+  var ref: js.UndefOr[Exclude[_, String]] = js.undefined
 }
 
 object `0` {
   @scala.inline
-  def apply(
-    defaultProps: /* import warning: importer.ImportType#apply Failed type conversion: infer D */ js.Any
-  ): `0` = {
-    val __obj = js.Dynamic.literal(defaultProps = defaultProps.asInstanceOf[js.Any])
+  def apply(): `0` = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[`0`]
   }
   @scala.inline
@@ -28,7 +27,9 @@ object `0` {
         x
     }
     @scala.inline
-    def setDefaultProps(value: /* import warning: importer.ImportType#apply Failed type conversion: infer D */ js.Any): Self = this.set("defaultProps", value.asInstanceOf[js.Any])
+    def setRef(value: Exclude[_, String]): Self = this.set("ref", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRef: Self = this.set("ref", js.undefined)
   }
   
 }

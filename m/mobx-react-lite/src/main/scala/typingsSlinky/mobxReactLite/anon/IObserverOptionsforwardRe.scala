@@ -5,15 +5,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined mobx-react-lite.mobx-react-lite/dist/observer.IObserverOptions & {  forwardRef  :true} */
+/* Inlined mobx-react-lite.mobx-react-lite/dist/observer.IObserverOptions & {  forwardRef :true} */
 trait IObserverOptionsforwardRe extends js.Object {
-  val forwardRef: js.UndefOr[Boolean with `true`] = js.undefined
+  val forwardRef: js.UndefOr[Boolean] with `true`
 }
 
 object IObserverOptionsforwardRe {
   @scala.inline
-  def apply(): IObserverOptionsforwardRe = {
-    val __obj = js.Dynamic.literal()
+  def apply(forwardRef: js.UndefOr[Boolean] with `true`): IObserverOptionsforwardRe = {
+    val __obj = js.Dynamic.literal(forwardRef = forwardRef.asInstanceOf[js.Any])
     __obj.asInstanceOf[IObserverOptionsforwardRe]
   }
   @scala.inline
@@ -28,9 +28,7 @@ object IObserverOptionsforwardRe {
         x
     }
     @scala.inline
-    def setForwardRef(value: Boolean with `true`): Self = this.set("forwardRef", value.asInstanceOf[js.Any])
-    @scala.inline
-    def deleteForwardRef: Self = this.set("forwardRef", js.undefined)
+    def setForwardRef(value: js.UndefOr[Boolean] with `true`): Self = this.set("forwardRef", value.asInstanceOf[js.Any])
   }
   
 }

@@ -13,7 +13,15 @@ object animationClipMod extends js.Object {
   @js.native
   class AnimationClip () extends js.Object {
     def this(name: String) = this()
+    def this(name: js.UndefOr[scala.Nothing], duration: Double) = this()
     def this(name: String, duration: Double) = this()
+    def this(
+      name: js.UndefOr[scala.Nothing],
+      duration: js.UndefOr[scala.Nothing],
+      tracks: js.Array[KeyframeTrack]
+    ) = this()
+    def this(name: js.UndefOr[scala.Nothing], duration: Double, tracks: js.Array[KeyframeTrack]) = this()
+    def this(name: String, duration: js.UndefOr[scala.Nothing], tracks: js.Array[KeyframeTrack]) = this()
     def this(name: String, duration: Double, tracks: js.Array[KeyframeTrack]) = this()
     var duration: Double = js.native
     var name: String = js.native

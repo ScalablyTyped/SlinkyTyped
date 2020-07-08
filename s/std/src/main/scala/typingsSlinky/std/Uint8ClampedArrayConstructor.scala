@@ -42,6 +42,7 @@ trait Uint8ClampedArrayConstructor
     * @param thisArg Value of 'this' used to invoke the mapfn.
     */
   def from(arrayLike: js.Iterable[Double]): js.typedarray.Uint8ClampedArray = js.native
+  def from(arrayLike: js.Iterable[Double], mapfn: js.UndefOr[scala.Nothing], thisArg: js.Any): js.typedarray.Uint8ClampedArray = js.native
   def from(arrayLike: js.Iterable[Double], mapfn: js.Function2[/* v */ Double, /* k */ Double, Double]): js.typedarray.Uint8ClampedArray = js.native
   def from(
     arrayLike: js.Iterable[Double],

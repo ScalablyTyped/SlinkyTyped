@@ -1,8 +1,6 @@
 package typingsSlinky.reactNavigationStack
 
-import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.mod.Component
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactNativeGestureHandler.mod.PanGestureHandler
@@ -27,7 +25,6 @@ import typingsSlinky.reactNavigationStack.anon.OpacityUndefined
 import typingsSlinky.reactNavigationStack.anon.OpacityUndefinedTransformArray
 import typingsSlinky.reactNavigationStack.anon.OverlayOpacity
 import typingsSlinky.reactNavigationStack.anon.PickPropsmodeheaderModehe
-import typingsSlinky.reactNavigationStack.anon.PickPropsscenenavigationp
 import typingsSlinky.reactNavigationStack.anon.PickPropsstylechildrensce
 import typingsSlinky.reactNavigationStack.anon.ScreenInterpolator
 import typingsSlinky.reactNavigationStack.anon.ShadowOpacity
@@ -61,13 +58,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   @js.native
-  class Header protected ()
-    extends Component[PickPropsscenenavigationp, js.Any, js.Any] {
-    def this(props: PickPropsscenenavigationp) = this()
-    def this(props: PickPropsscenenavigationp, context: js.Any) = this()
-  }
-  
-  @js.native
   class HeaderBackButton () extends default
   
   @js.native
@@ -79,27 +69,16 @@ object mod extends js.Object {
     extends typingsSlinky.reactNavigationStack.stackViewMod.StackView
   
   @js.native
-  class StackViewCard protected ()
-    extends Component[PickPropsstylechildrensce, js.Object, js.Any] {
-    def this(props: PickPropsstylechildrensce) = this()
-    def this(props: PickPropsstylechildrensce, context: js.Any) = this()
-  }
-  
-  @js.native
-  class StackViewLayout protected ()
-    extends Component[PickPropsmodeheaderModehe, js.Object, js.Any] {
-    def this(props: PickPropsmodeheaderModehe) = this()
-    def this(props: PickPropsmodeheaderModehe, context: js.Any) = this()
-  }
-  
-  @js.native
   class Transitioner protected ()
     extends typingsSlinky.reactNavigationStack.transitionerMod.default {
     def this(props: Props) = this()
   }
   
   val Assets: js.Array[js.Any] = js.native
+  val Header: ComponentClassPickPropssc | FunctionComponentPickProp = js.native
   val StackGestureContext: Context[Ref[PanGestureHandler]] = js.native
+  val StackViewCard: ReactComponentClass[PickPropsstylechildrensce] = js.native
+  val StackViewLayout: ReactComponentClass[PickPropsmodeheaderModehe] = js.native
   def ScenesReducer(
     scenes: js.Array[Scene],
     nextState: NavigationStackState,
@@ -133,9 +112,6 @@ object mod extends js.Object {
       NavigationStackProp[NavigationRoute[NavigationParams], _]
     ]
   ): js.Any = js.native
-  @js.native
-  object Header extends TopLevel[ComponentClassPickPropssc | FunctionComponentPickProp]
-  
   /* static members */
   @js.native
   object HeaderBackButton extends js.Object {
@@ -169,12 +145,6 @@ object mod extends js.Object {
   object HeaderTitle extends js.Object {
     var contextType: Context[SupportedThemes] = js.native
   }
-  
-  @js.native
-  object StackViewCard extends TopLevel[ReactComponentClass[PickPropsstylechildrensce]]
-  
-  @js.native
-  object StackViewLayout extends TopLevel[ReactComponentClass[PickPropsmodeheaderModehe]]
   
   @js.native
   object StackViewStyleInterpolator extends js.Object {

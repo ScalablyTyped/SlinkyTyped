@@ -32,9 +32,9 @@ trait WindowOrWorkerGlobalScope extends js.Object {
   def fetch(input: RequestInfo): js.Promise[org.scalajs.dom.experimental.Response] = js.native
   def fetch(input: RequestInfo, init: org.scalajs.dom.experimental.RequestInit): js.Promise[org.scalajs.dom.experimental.Response] = js.native
   def queueMicrotask(callback: VoidFunction): Unit = js.native
-  def setInterval(handler: TimerHandler): Double = js.native
+  def setInterval(handler: TimerHandler, timeout: js.UndefOr[scala.Nothing], arguments: js.Any*): Double = js.native
   def setInterval(handler: TimerHandler, timeout: Double, arguments: js.Any*): Double = js.native
-  def setTimeout(handler: TimerHandler): Double = js.native
+  def setTimeout(handler: TimerHandler, timeout: js.UndefOr[scala.Nothing], arguments: js.Any*): Double = js.native
   def setTimeout(handler: TimerHandler, timeout: Double, arguments: js.Any*): Double = js.native
 }
 

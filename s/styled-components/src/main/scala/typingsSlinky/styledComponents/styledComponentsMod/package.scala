@@ -124,6 +124,6 @@ package object styledComponentsMod {
   // See https://github.com/DefinitelyTyped/DefinitelyTyped/pull/31945
   // and https://github.com/DefinitelyTyped/DefinitelyTyped/pull/32843
   type WithChildrenIfReactComponentClass[C /* <: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 176 */ js.Any */] = js.Object | typingsSlinky.styledComponents.anon.Children
-  type WithOptionalTheme[P /* <: typingsSlinky.styledComponents.anon.ThemeT[T] */, T] = P with typingsSlinky.styledComponents.anon.ThemeT[T]
+  type WithOptionalTheme[P /* <: typingsSlinky.styledComponents.anon.`0`[T] */, T] = P with typingsSlinky.styledComponents.anon.`0`[T]
   type WithThemeFnInterface[T /* <: js.Object */] = typingsSlinky.styledComponents.styledComponentsMod.BaseWithThemeFnInterface[typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[T]]
 }

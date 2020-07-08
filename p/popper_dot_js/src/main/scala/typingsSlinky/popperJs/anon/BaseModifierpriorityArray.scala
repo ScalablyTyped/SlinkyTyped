@@ -10,7 +10,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined popper.js.popper.js.Popper.BaseModifier & {  priority ? :std.Array<popper.js.popper.js.Popper.Position>,   padding ? :number | popper.js.popper.js.Popper.Padding,   boundariesElement ? :popper.js.popper.js.Popper.Boundary | std.Element,   escapeWithReference ? :boolean} */
+/* Inlined popper.js.popper.js.Popper.BaseModifier & {  priority :std.Array<popper.js.popper.js.Popper.Position> | undefined,   padding :number | popper.js.popper.js.Popper.Padding | undefined,   boundariesElement :popper.js.popper.js.Popper.Boundary | std.Element | undefined,   escapeWithReference :boolean | undefined} */
 trait BaseModifierpriorityArray extends js.Object {
   var boundariesElement: js.UndefOr[Boundary | Element] = js.undefined
   var enabled: js.UndefOr[Boolean] = js.undefined

@@ -11,7 +11,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined rc-notification.rc-notification/lib/Notice.NoticeProps & {  key  :react.react.Key} */
+/* Inlined rc-notification.rc-notification/lib/Notice.NoticeProps & {  key :react.react.Key} */
 trait NoticePropskeyKey extends js.Object {
   var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined

@@ -131,7 +131,7 @@ trait Pickanychildrensizeciteda extends js.Object {
   var itemRef: js.UndefOr[js.Any] = js.undefined
   var itemScope: js.UndefOr[js.Any] = js.undefined
   var itemType: js.UndefOr[js.Any] = js.undefined
-  var key: js.UndefOr[js.Any with Key] = js.undefined
+  var key: js.UndefOr[js.Any] with js.UndefOr[Key]
   var keyParams: js.UndefOr[js.Any] = js.undefined
   var keyType: js.UndefOr[js.Any] = js.undefined
   var kind: js.UndefOr[js.Any] = js.undefined
@@ -378,8 +378,8 @@ trait Pickanychildrensizeciteda extends js.Object {
 
 object Pickanychildrensizeciteda {
   @scala.inline
-  def apply(): Pickanychildrensizeciteda = {
-    val __obj = js.Dynamic.literal()
+  def apply(key: js.UndefOr[js.Any] with js.UndefOr[Key]): Pickanychildrensizeciteda = {
+    val __obj = js.Dynamic.literal(key = key.asInstanceOf[js.Any])
     __obj.asInstanceOf[Pickanychildrensizeciteda]
   }
   @scala.inline
@@ -393,6 +393,8 @@ object Pickanychildrensizeciteda {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setKey(value: js.UndefOr[js.Any] with js.UndefOr[Key]): Self = this.set("key", value.asInstanceOf[js.Any])
     @scala.inline
     def setAbout(value: js.Any): Self = this.set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -877,10 +879,6 @@ object Pickanychildrensizeciteda {
     def setItemType(value: js.Any): Self = this.set("itemType", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteItemType: Self = this.set("itemType", js.undefined)
-    @scala.inline
-    def setKey(value: js.Any with Key): Self = this.set("key", value.asInstanceOf[js.Any])
-    @scala.inline
-    def deleteKey: Self = this.set("key", js.undefined)
     @scala.inline
     def setKeyParams(value: js.Any): Self = this.set("keyParams", value.asInstanceOf[js.Any])
     @scala.inline

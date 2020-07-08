@@ -112,7 +112,7 @@ trait PartialMenuProps extends js.Object {
   var about: js.UndefOr[String] = js.native
   var accessKey: js.UndefOr[String] = js.native
   var action: js.UndefOr[js.Function1[/* actions */ PopoverActions, Unit]] = js.native
-  var anchorEl: js.UndefOr[HTMLElement | (js.Function1[/* element */ HTMLElement, HTMLElement])] = js.native
+  var anchorEl: js.UndefOr[Null | HTMLElement | (js.Function1[/* element */ HTMLElement, HTMLElement])] = js.native
   var anchorOrigin: js.UndefOr[PopoverOrigin] = js.native
   var anchorPosition: js.UndefOr[PopoverPosition] = js.native
   var anchorReference: js.UndefOr[PopoverReference] = js.native
@@ -172,7 +172,7 @@ trait PartialMenuProps extends js.Object {
   var classes: js.UndefOr[PartialClassNameMapMenuCl] = js.native
   var closeAfterTransition: js.UndefOr[Boolean] = js.native
   var color: js.UndefOr[String] = js.native
-  var container: js.UndefOr[ReactInstance | js.Function0[ReactInstance]] = js.native
+  var container: js.UndefOr[ReactInstance | js.Function0[ReactInstance] | Null] = js.native
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.native
   var contextMenu: js.UndefOr[String] = js.native
   var dangerouslySetInnerHTML: js.UndefOr[Html] = js.native
@@ -189,7 +189,7 @@ trait PartialMenuProps extends js.Object {
   var disableRestoreFocus: js.UndefOr[Boolean] = js.native
   var draggable: js.UndefOr[Booleanish] = js.native
   var elevation: js.UndefOr[Double] = js.native
-  var getContentAnchorEl: js.UndefOr[js.Function1[/* element */ HTMLElement, HTMLElement]] = js.native
+  var getContentAnchorEl: js.UndefOr[Null | (js.Function1[/* element */ HTMLElement, HTMLElement])] = js.native
   var hidden: js.UndefOr[Boolean] = js.native
   var hideBackdrop: js.UndefOr[Boolean] = js.native
   var id: js.UndefOr[String] = js.native
@@ -398,6 +398,8 @@ object PartialMenuProps {
     def setAnchorEl(value: HTMLElement | (js.Function1[/* element */ HTMLElement, HTMLElement])): Self = this.set("anchorEl", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAnchorEl: Self = this.set("anchorEl", js.undefined)
+    @scala.inline
+    def setAnchorElNull: Self = this.set("anchorEl", null)
     @scala.inline
     def setAnchorOrigin(value: PopoverOrigin): Self = this.set("anchorOrigin", value.asInstanceOf[js.Any])
     @scala.inline
@@ -647,6 +649,8 @@ object PartialMenuProps {
     @scala.inline
     def deleteContainer: Self = this.set("container", js.undefined)
     @scala.inline
+    def setContainerNull: Self = this.set("container", null)
+    @scala.inline
     def setContentEditable(value: Booleanish | inherit): Self = this.set("contentEditable", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContentEditable: Self = this.set("contentEditable", js.undefined)
@@ -714,6 +718,8 @@ object PartialMenuProps {
     def setGetContentAnchorEl(value: /* element */ HTMLElement => HTMLElement): Self = this.set("getContentAnchorEl", js.Any.fromFunction1(value))
     @scala.inline
     def deleteGetContentAnchorEl: Self = this.set("getContentAnchorEl", js.undefined)
+    @scala.inline
+    def setGetContentAnchorElNull: Self = this.set("getContentAnchorEl", null)
     @scala.inline
     def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])
     @scala.inline

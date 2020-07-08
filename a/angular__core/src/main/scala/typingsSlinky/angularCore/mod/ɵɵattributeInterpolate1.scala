@@ -8,6 +8,14 @@ import scala.scalajs.js.annotation._
 @js.native
 object ɵɵattributeInterpolate1 extends js.Object {
   def apply(attrName: String, prefix: String, v0: js.Any, suffix: String): TsickleIssue1009 = js.native
+  def apply(
+    attrName: String,
+    prefix: String,
+    v0: js.Any,
+    suffix: String,
+    sanitizer: js.UndefOr[scala.Nothing],
+    namespace: String
+  ): TsickleIssue1009 = js.native
   def apply(attrName: String, prefix: String, v0: js.Any, suffix: String, sanitizer: SanitizerFn): TsickleIssue1009 = js.native
   def apply(
     attrName: String,

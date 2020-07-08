@@ -14,6 +14,7 @@ object subjectMod extends js.Object {
   @js.native
   class AnonymousSubject[T] () extends Subject[T] {
     def this(destination: Observer[T]) = this()
+    def this(destination: js.UndefOr[scala.Nothing], source: Observable[T]) = this()
     def this(destination: Observer[T], source: Observable[T]) = this()
     var destination: js.UndefOr[Observer[T]] = js.native
   }

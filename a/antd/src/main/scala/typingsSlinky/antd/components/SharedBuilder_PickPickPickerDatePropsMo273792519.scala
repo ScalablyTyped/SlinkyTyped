@@ -269,5 +269,7 @@ class SharedBuilder_PickPickPickerDatePropsMo273792519 (val args: js.Array[js.An
   def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
   @scala.inline
   def value(value: Moment): this.type = set("value", value.asInstanceOf[js.Any])
+  @scala.inline
+  def valueNull: this.type = set("value", null)
 }
 

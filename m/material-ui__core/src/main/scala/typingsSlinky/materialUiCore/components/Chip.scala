@@ -22,7 +22,6 @@ import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiCore.anon.PartialClassNameMapChipCl
 import typingsSlinky.materialUiCore.chipChipMod.ChipProps
-import typingsSlinky.materialUiCore.chipMod.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`additions text`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.`inline`
 import typingsSlinky.materialUiCore.materialUiCoreStrings.additions
@@ -33,6 +32,7 @@ import typingsSlinky.materialUiCore.materialUiCoreStrings.both
 import typingsSlinky.materialUiCore.materialUiCoreStrings.copy
 import typingsSlinky.materialUiCore.materialUiCoreStrings.date
 import typingsSlinky.materialUiCore.materialUiCoreStrings.decimal
+import typingsSlinky.materialUiCore.materialUiCoreStrings.default
 import typingsSlinky.materialUiCore.materialUiCoreStrings.descending
 import typingsSlinky.materialUiCore.materialUiCoreStrings.dialog
 import typingsSlinky.materialUiCore.materialUiCoreStrings.email
@@ -88,7 +88,7 @@ object Chip {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -462,7 +462,7 @@ object Chip {
     @scala.inline
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
-    def variant(value: typingsSlinky.materialUiCore.materialUiCoreStrings.default | outlined): this.type = set("variant", value.asInstanceOf[js.Any])
+    def variant(value: default | outlined): this.type = set("variant", value.asInstanceOf[js.Any])
     @scala.inline
     def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
   }

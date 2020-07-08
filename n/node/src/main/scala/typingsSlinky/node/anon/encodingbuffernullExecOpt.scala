@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined {  encoding  :'buffer' | null} & node.child_process.ExecOptions */
+/* Inlined {  encoding :'buffer' | null} & node.child_process.ExecOptions */
 trait encodingbuffernullExecOpt extends js.Object {
   var cwd: js.UndefOr[String] = js.undefined
   var encoding: buffer_ | Null

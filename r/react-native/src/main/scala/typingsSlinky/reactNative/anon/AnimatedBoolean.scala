@@ -5,13 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait AnimatedBoolean extends js.Object {
-  var animated: js.UndefOr[Boolean] = js.undefined
+  var animated: Boolean
 }
 
 object AnimatedBoolean {
   @scala.inline
-  def apply(): AnimatedBoolean = {
-    val __obj = js.Dynamic.literal()
+  def apply(animated: Boolean): AnimatedBoolean = {
+    val __obj = js.Dynamic.literal(animated = animated.asInstanceOf[js.Any])
     __obj.asInstanceOf[AnimatedBoolean]
   }
   @scala.inline
@@ -27,8 +27,6 @@ object AnimatedBoolean {
     }
     @scala.inline
     def setAnimated(value: Boolean): Self = this.set("animated", value.asInstanceOf[js.Any])
-    @scala.inline
-    def deleteAnimated: Self = this.set("animated", js.undefined)
   }
   
 }

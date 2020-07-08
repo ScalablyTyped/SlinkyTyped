@@ -1,9 +1,7 @@
 package typingsSlinky.materialUiCore
 
-import org.scalablytyped.runtime.TopLevel
 import slinky.core.ReactComponentClass
 import typingsSlinky.materialUiCore.popperPopperMod.PopperProps
-import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,15 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("@material-ui/core/Popper", JSImport.Namespace)
 @js.native
 object popperMod extends js.Object {
-  @js.native
-  class default protected ()
-    extends Component[PopperProps, js.Object, js.Any] {
-    def this(props: PopperProps) = this()
-    def this(props: PopperProps, context: js.Any) = this()
-  }
-  
-  @js.native
-  object default extends TopLevel[ReactComponentClass[PopperProps]]
-  
+  val default: ReactComponentClass[PopperProps] = js.native
 }
 

@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Readonly<{  actionName  :string}> */
+/* Inlined std.Readonly<{  actionName :string}> */
 trait ReadonlyactionNamestring extends js.Object {
   val actionName: String
 }

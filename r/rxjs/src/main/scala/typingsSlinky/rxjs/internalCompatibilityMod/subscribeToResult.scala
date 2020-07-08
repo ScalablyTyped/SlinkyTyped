@@ -27,5 +27,11 @@ object subscribeToResult extends js.Object {
     outerIndex: js.UndefOr[scala.Nothing],
     innerSubscriber: typingsSlinky.rxjs.innerSubscriberMod.InnerSubscriber[T, R]
   ): js.UndefOr[Subscription] = js.native
+  def apply[T, R](
+    outerSubscriber: typingsSlinky.rxjs.outerSubscriberMod.OuterSubscriber[T, R],
+    result: js.Any,
+    outerValue: js.UndefOr[scala.Nothing],
+    outerIndex: Double
+  ): js.UndefOr[Subscription] = js.native
 }
 

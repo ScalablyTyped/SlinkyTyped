@@ -1621,6 +1621,11 @@ trait WebviewTag extends HTMLElement {
     * action, can take advantage of this option for automation. Deprecated Soon
     */
   def executeJavaScript(code: String): js.Promise[_] = js.native
+  def executeJavaScript(
+    code: String,
+    userGesture: js.UndefOr[scala.Nothing],
+    callback: js.Function1[/* result */ js.Any, Unit]
+  ): js.Promise[_] = js.native
   def executeJavaScript(code: String, userGesture: Boolean): js.Promise[_] = js.native
   def executeJavaScript(code: String, userGesture: Boolean, callback: js.Function1[/* result */ js.Any, Unit]): js.Promise[_] = js.native
   /**

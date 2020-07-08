@@ -20,10 +20,44 @@ class Face3 protected () extends js.Object {
   def this(a: Double, b: Double, c: Double) = this()
   def this(a: Double, b: Double, c: Double, normal: Vector3) = this()
   def this(a: Double, b: Double, c: Double, vertexNormals: js.Array[Vector3]) = this()
+  def this(a: Double, b: Double, c: Double, normal: js.UndefOr[scala.Nothing], color: Color) = this()
+  def this(a: Double, b: Double, c: Double, normal: js.UndefOr[scala.Nothing], vertexColors: js.Array[Color]) = this()
   def this(a: Double, b: Double, c: Double, normal: Vector3, color: Color) = this()
   def this(a: Double, b: Double, c: Double, normal: Vector3, vertexColors: js.Array[Color]) = this()
   def this(a: Double, b: Double, c: Double, vertexNormals: js.Array[Vector3], color: Color) = this()
   def this(a: Double, b: Double, c: Double, vertexNormals: js.Array[Vector3], vertexColors: js.Array[Color]) = this()
+  def this(
+    a: Double,
+    b: Double,
+    c: Double,
+    normal: js.UndefOr[scala.Nothing],
+    color: js.UndefOr[scala.Nothing],
+    materialIndex: Double
+  ) = this()
+  def this(
+    a: Double,
+    b: Double,
+    c: Double,
+    normal: js.UndefOr[scala.Nothing],
+    color: Color,
+    materialIndex: Double
+  ) = this()
+  def this(
+    a: Double,
+    b: Double,
+    c: Double,
+    normal: js.UndefOr[scala.Nothing],
+    vertexColors: js.Array[Color],
+    materialIndex: Double
+  ) = this()
+  def this(
+    a: Double,
+    b: Double,
+    c: Double,
+    normal: Vector3,
+    color: js.UndefOr[scala.Nothing],
+    materialIndex: Double
+  ) = this()
   def this(a: Double, b: Double, c: Double, normal: Vector3, color: Color, materialIndex: Double) = this()
   def this(
     a: Double,
@@ -31,6 +65,14 @@ class Face3 protected () extends js.Object {
     c: Double,
     normal: Vector3,
     vertexColors: js.Array[Color],
+    materialIndex: Double
+  ) = this()
+  def this(
+    a: Double,
+    b: Double,
+    c: Double,
+    vertexNormals: js.Array[Vector3],
+    color: js.UndefOr[scala.Nothing],
     materialIndex: Double
   ) = this()
   def this(
