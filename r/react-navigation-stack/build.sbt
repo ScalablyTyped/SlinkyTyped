@@ -1,18 +1,18 @@
 organization := "org.scalablytyped.slinky"
 name := "react-navigation-stack"
-version := "1.10.3-fe5b6f"
+version := "1.10.3-be7cb6"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-2278c5",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-360342",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200617Z-036789",
-  "org.scalablytyped.slinky" %%% "react-native" % "0.62-dt-20200604Z-46692e",
-  "org.scalablytyped.slinky" %%% "react-native-gesture-handler" % "1.6.1-3abef4",
-  "org.scalablytyped.slinky" %%% "react-navigation" % "4.3.9-5eb895",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-dec240")
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-57a4b7",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-151476",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200617Z-5b2e1b",
+  "org.scalablytyped.slinky" %%% "react-native" % "0.62-dt-20200604Z-88f9e5",
+  "org.scalablytyped.slinky" %%% "react-native-gesture-handler" % "1.6.1-cd73c3",
+  "org.scalablytyped.slinky" %%% "react-navigation" % "4.3.9-8f5710",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-18eec6")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

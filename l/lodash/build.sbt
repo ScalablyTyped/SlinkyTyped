@@ -1,12 +1,12 @@
 organization := "org.scalablytyped.slinky"
 name := "lodash"
-version := "4.14-dt-20200603Z-77f0c5"
+version := "4.14-dt-20200603Z-bece43"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-dec240")
+  "org.scalablytyped.slinky" %%% "std" % "3.9-18eec6")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

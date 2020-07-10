@@ -5,20 +5,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Partial<@material-ui/core.@material-ui/core/styles/withStyles.StyleRules<@material-ui/core.@material-ui/core/ExpansionPanelDetails.ExpansionPanelDetailsClassKey>> */
+/* Inlined std.Partial<@material-ui/core.@material-ui/core/styles/withStyles.StyleRules<@material-ui/core.@material-ui/core/ListItemIcon.ListItemIconClassKey>> */
 @js.native
-trait PartialStyleRulesExpansioRoot extends js.Object {
+trait PartialStyleRulesListItemRoot extends js.Object {
   var root: js.UndefOr[CSSProperties] = js.native
 }
 
-object PartialStyleRulesExpansioRoot {
+object PartialStyleRulesListItemRoot {
   @scala.inline
-  def apply(): PartialStyleRulesExpansioRoot = {
+  def apply(): PartialStyleRulesListItemRoot = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[PartialStyleRulesExpansioRoot]
+    __obj.asInstanceOf[PartialStyleRulesListItemRoot]
   }
   @scala.inline
-  implicit class PartialStyleRulesExpansioRootOps[Self <: PartialStyleRulesExpansioRoot] (val x: Self) extends AnyVal {
+  implicit class PartialStyleRulesListItemRootOps[Self <: PartialStyleRulesListItemRoot] (val x: Self) extends AnyVal {
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
     @scala.inline

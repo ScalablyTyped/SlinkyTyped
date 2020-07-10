@@ -62,13 +62,6 @@ class Navigator_ () extends Navigator {
   /* CompleteClass */
   override def removeWebWideTrackingException(args: ExceptionInformation): Unit = js.native
   /* CompleteClass */
-  override def sendBeacon(
-    url: java.lang.String,
-    data: js.UndefOr[
-      org.scalajs.dom.raw.Blob | js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer | org.scalajs.dom.raw.FormData | java.lang.String | Null
-    ]
-  ): scala.Boolean = js.native
-  /* CompleteClass */
   override def storeSiteSpecificTrackingException(args: StoreSiteSpecificExceptionsInformation): Unit = js.native
   /* CompleteClass */
   override def storeWebWideTrackingException(args: StoreExceptionsInformation): Unit = js.native

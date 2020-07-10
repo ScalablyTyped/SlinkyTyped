@@ -12,37 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait SubtleCrypto extends js.Object {
   def decrypt(
-    algorithm: org.scalajs.dom.crypto.AesCbcParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
-  def decrypt(
-    algorithm: org.scalajs.dom.crypto.AesCfbParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
-  def decrypt(
-    algorithm: org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
-  def decrypt(
-    algorithm: org.scalajs.dom.crypto.AesCtrParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
-  def decrypt(
-    algorithm: org.scalajs.dom.crypto.AesGcmParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
-  def decrypt(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
-  def decrypt(
-    algorithm: org.scalajs.dom.crypto.RsaOaepParams,
+    algorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.RsaOaepParams | org.scalajs.dom.crypto.AesCtrParams | org.scalajs.dom.crypto.AesCbcParams | org.scalajs.dom.crypto.AesCmacParams | org.scalajs.dom.crypto.AesGcmParams | org.scalajs.dom.crypto.AesCfbParams,
     key: org.scalajs.dom.crypto.CryptoKey,
     data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
   ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
@@ -324,42 +294,19 @@ trait SubtleCrypto extends js.Object {
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def digest(
-    algorithm: AlgorithmIdentifier,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.ArrayBuffer): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.DataView): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Float32Array): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Float64Array): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Int16Array): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Int32Array): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Int8Array): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Uint16Array): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Uint32Array): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Uint8Array): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def digest(algorithm: AlgorithmIdentifier, data: js.typedarray.Uint8ClampedArray): js.Thenable[js.typedarray.ArrayBuffer] = js.native
   def encrypt(
-    algorithm: org.scalajs.dom.crypto.AesCbcParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
-  def encrypt(
-    algorithm: org.scalajs.dom.crypto.AesCfbParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
-  def encrypt(
-    algorithm: org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
-  def encrypt(
-    algorithm: org.scalajs.dom.crypto.AesCtrParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
-  def encrypt(
-    algorithm: org.scalajs.dom.crypto.AesGcmParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
-  def encrypt(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
-  def encrypt(
-    algorithm: org.scalajs.dom.crypto.RsaOaepParams,
+    algorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.RsaOaepParams | org.scalajs.dom.crypto.AesCtrParams | org.scalajs.dom.crypto.AesCbcParams | org.scalajs.dom.crypto.AesCmacParams | org.scalajs.dom.crypto.AesGcmParams | org.scalajs.dom.crypto.AesCfbParams,
     key: org.scalajs.dom.crypto.CryptoKey,
     data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
   ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
@@ -408,44 +355,16 @@ trait SubtleCrypto extends js.Object {
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Thenable[org.scalajs.dom.crypto.CryptoKeyPair] = js.native
   def importKey(
-    format: java.lang.String,
-    keyData: org.scalajs.dom.crypto.JsonWebKey | js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.AesKeyAlgorithm,
+    format: raw | pkcs8 | spki,
+    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
+    algorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.RsaHashedImportParams | org.scalajs.dom.crypto.EcKeyImportParams | org.scalajs.dom.crypto.HmacImportParams | org.scalajs.dom.crypto.DhImportKeyParams | org.scalajs.dom.crypto.AesKeyAlgorithm,
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
   def importKey(
     format: java.lang.String,
     keyData: org.scalajs.dom.crypto.JsonWebKey | js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: AlgorithmIdentifier,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def importKey(
-    format: java.lang.String,
-    keyData: org.scalajs.dom.crypto.JsonWebKey | js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.DhImportKeyParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def importKey(
-    format: java.lang.String,
-    keyData: org.scalajs.dom.crypto.JsonWebKey | js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.EcKeyImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def importKey(
-    format: java.lang.String,
-    keyData: org.scalajs.dom.crypto.JsonWebKey | js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.HmacImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  def importKey(
-    format: java.lang.String,
-    keyData: org.scalajs.dom.crypto.JsonWebKey | js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.RsaHashedImportParams,
+    algorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.RsaHashedImportParams | org.scalajs.dom.crypto.EcKeyImportParams | org.scalajs.dom.crypto.HmacImportParams | org.scalajs.dom.crypto.DhImportKeyParams | org.scalajs.dom.crypto.AesKeyAlgorithm,
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
@@ -493,150 +412,6 @@ trait SubtleCrypto extends js.Object {
   def importKey_jwk(
     format: jwk,
     keyData: org.scalajs.dom.crypto.JsonWebKey,
-    algorithm: org.scalajs.dom.crypto.RsaHashedImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_pkcs8(
-    format: pkcs8,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.AesKeyAlgorithm,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_pkcs8(
-    format: pkcs8,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: AlgorithmIdentifier,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_pkcs8(
-    format: pkcs8,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.DhImportKeyParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_pkcs8(
-    format: pkcs8,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.EcKeyImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_pkcs8(
-    format: pkcs8,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.HmacImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_pkcs8(
-    format: pkcs8,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.RsaHashedImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_raw(
-    format: raw,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.AesKeyAlgorithm,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_raw(
-    format: raw,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: AlgorithmIdentifier,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_raw(
-    format: raw,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.DhImportKeyParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_raw(
-    format: raw,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.EcKeyImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_raw(
-    format: raw,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.HmacImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_raw(
-    format: raw,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.RsaHashedImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_spki(
-    format: spki,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.AesKeyAlgorithm,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_spki(
-    format: spki,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: AlgorithmIdentifier,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_spki(
-    format: spki,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.DhImportKeyParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_spki(
-    format: spki,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.EcKeyImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_spki(
-    format: spki,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    algorithm: org.scalajs.dom.crypto.HmacImportParams,
-    extractable: scala.Boolean,
-    keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
-  ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
-  @JSName("importKey")
-  def importKey_spki(
-    format: spki,
-    keyData: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
     algorithm: org.scalajs.dom.crypto.RsaHashedImportParams,
     extractable: scala.Boolean,
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
@@ -644,22 +419,222 @@ trait SubtleCrypto extends js.Object {
   def sign(
     algorithm: org.scalajs.dom.crypto.AesCmacParams,
     key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
+    data: js.typedarray.ArrayBuffer
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.AesCmacParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.DataView
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.AesCmacParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Float32Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.AesCmacParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Float64Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.AesCmacParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int16Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.AesCmacParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int32Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.AesCmacParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int8Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.AesCmacParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint16Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.AesCmacParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint32Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.AesCmacParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint8Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.AesCmacParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint8ClampedArray
   ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
   def sign(
     algorithm: AlgorithmIdentifier,
     key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
+    data: js.typedarray.ArrayBuffer
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.DataView
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Float32Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Float64Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int16Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int32Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int8Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint16Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint32Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint8Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: AlgorithmIdentifier,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint8ClampedArray
   ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
   def sign(
     algorithm: org.scalajs.dom.crypto.EcdsaParams,
     key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
+    data: js.typedarray.ArrayBuffer
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.EcdsaParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.DataView
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.EcdsaParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Float32Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.EcdsaParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Float64Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.EcdsaParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int16Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.EcdsaParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int32Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.EcdsaParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int8Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.EcdsaParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint16Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.EcdsaParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint32Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.EcdsaParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint8Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.EcdsaParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint8ClampedArray
   ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
   def sign(
     algorithm: org.scalajs.dom.crypto.RsaPssParams,
     key: org.scalajs.dom.crypto.CryptoKey,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
+    data: js.typedarray.ArrayBuffer
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.RsaPssParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.DataView
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.RsaPssParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Float32Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.RsaPssParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Float64Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.RsaPssParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int16Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.RsaPssParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int32Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.RsaPssParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Int8Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.RsaPssParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint16Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.RsaPssParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint32Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.RsaPssParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint8Array
+  ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
+  def sign(
+    algorithm: org.scalajs.dom.crypto.RsaPssParams,
+    key: org.scalajs.dom.crypto.CryptoKey,
+    data: js.typedarray.Uint8ClampedArray
   ): js.Thenable[js.typedarray.ArrayBuffer] = js.native
   def unwrapKey(
     format: raw | pkcs8 | spki | jwk | java.lang.String,
@@ -671,25 +646,7 @@ trait SubtleCrypto extends js.Object {
     keyUsages: js.Array[org.scalajs.dom.crypto.KeyUsage]
   ): js.Thenable[org.scalajs.dom.crypto.CryptoKey] = js.native
   def verify(
-    algorithm: org.scalajs.dom.crypto.AesCmacParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    signature: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[scala.Boolean] = js.native
-  def verify(
-    algorithm: AlgorithmIdentifier,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    signature: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[scala.Boolean] = js.native
-  def verify(
-    algorithm: org.scalajs.dom.crypto.EcdsaParams,
-    key: org.scalajs.dom.crypto.CryptoKey,
-    signature: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
-    data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer
-  ): js.Thenable[scala.Boolean] = js.native
-  def verify(
-    algorithm: org.scalajs.dom.crypto.RsaPssParams,
+    algorithm: AlgorithmIdentifier | org.scalajs.dom.crypto.RsaPssParams | org.scalajs.dom.crypto.EcdsaParams | org.scalajs.dom.crypto.AesCmacParams,
     key: org.scalajs.dom.crypto.CryptoKey,
     signature: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer,
     data: js.typedarray.Int8Array | js.typedarray.Int16Array | js.typedarray.Int32Array | js.typedarray.Uint8Array | js.typedarray.Uint16Array | js.typedarray.Uint32Array | js.typedarray.Uint8ClampedArray | js.typedarray.Float32Array | js.typedarray.Float64Array | js.typedarray.DataView | js.typedarray.ArrayBuffer

@@ -5,13 +5,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Partial<@material-ui/core.@material-ui/core/styles/withStyles.StyleRules<@material-ui/core.@material-ui/core/ExpansionPanel.ExpansionPanelClassKey>> */
+/* Inlined std.Partial<@material-ui/core.@material-ui/core/styles/withStyles.StyleRules<@material-ui/core.@material-ui/core/ExpansionPanelDetails.ExpansionPanelDetailsClassKey>> */
 @js.native
 trait PartialStyleRulesExpansio extends js.Object {
-  var disabled: js.UndefOr[CSSProperties] = js.native
-  var expanded: js.UndefOr[CSSProperties] = js.native
   var root: js.UndefOr[CSSProperties] = js.native
-  var rounded: js.UndefOr[CSSProperties] = js.native
 }
 
 object PartialStyleRulesExpansio {
@@ -32,21 +29,9 @@ object PartialStyleRulesExpansio {
         x
     }
     @scala.inline
-    def setDisabled(value: CSSProperties): Self = this.set("disabled", value.asInstanceOf[js.Any])
-    @scala.inline
-    def deleteDisabled: Self = this.set("disabled", js.undefined)
-    @scala.inline
-    def setExpanded(value: CSSProperties): Self = this.set("expanded", value.asInstanceOf[js.Any])
-    @scala.inline
-    def deleteExpanded: Self = this.set("expanded", js.undefined)
-    @scala.inline
     def setRoot(value: CSSProperties): Self = this.set("root", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRoot: Self = this.set("root", js.undefined)
-    @scala.inline
-    def setRounded(value: CSSProperties): Self = this.set("rounded", value.asInstanceOf[js.Any])
-    @scala.inline
-    def deleteRounded: Self = this.set("rounded", js.undefined)
   }
   
 }

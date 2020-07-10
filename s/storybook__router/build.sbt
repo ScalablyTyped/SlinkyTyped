@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "storybook__router"
-version := "5.3.19-543484"
+version := "5.3.19-bb66c3"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-2278c5",
-  "org.scalablytyped.slinky" %%% "history" % "4.7.2-dt-20200518Z-50a723",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-360342",
-  "org.scalablytyped.slinky" %%% "reach__router" % "1.3-dt-20200426Z-d61f23",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200617Z-036789",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-dec240")
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-57a4b7",
+  "org.scalablytyped.slinky" %%% "history" % "4.7.2-dt-20200518Z-6106d7",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-151476",
+  "org.scalablytyped.slinky" %%% "reach__router" % "1.3-dt-20200426Z-451df0",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200617Z-5b2e1b",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-18eec6")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

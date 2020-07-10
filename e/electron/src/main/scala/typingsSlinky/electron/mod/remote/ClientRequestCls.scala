@@ -18,6 +18,15 @@ import scala.scalajs.js.annotation._
 @JSImport("electron", "remote.ClientRequest")
 @js.native
 class ClientRequestCls protected () extends ClientRequest {
-  def this(options: method | url | session | partition | protocol | host | hostname | port | path | redirect) = this()
+  def this(options: host) = this()
+  def this(options: hostname) = this()
+  def this(options: method) = this()
+  def this(options: partition) = this()
+  def this(options: path) = this()
+  def this(options: port) = this()
+  def this(options: protocol) = this()
+  def this(options: redirect) = this()
+  def this(options: session) = this()
+  def this(options: url) = this()
 }
 

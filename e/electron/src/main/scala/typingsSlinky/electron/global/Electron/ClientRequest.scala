@@ -16,6 +16,15 @@ import scala.scalajs.js.annotation._
 @js.native
 class ClientRequest protected ()
   extends typingsSlinky.electron.Electron.ClientRequest {
-  def this(options: method | url | typingsSlinky.electron.electronStrings.session | partition | typingsSlinky.electron.electronStrings.protocol | host | hostname | port | path | redirect) = this()
+  def this(options: host) = this()
+  def this(options: hostname) = this()
+  def this(options: method) = this()
+  def this(options: partition) = this()
+  def this(options: path) = this()
+  def this(options: port) = this()
+  def this(options: typingsSlinky.electron.electronStrings.protocol) = this()
+  def this(options: redirect) = this()
+  def this(options: typingsSlinky.electron.electronStrings.session) = this()
+  def this(options: url) = this()
 }
 

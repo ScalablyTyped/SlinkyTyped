@@ -9,7 +9,7 @@ import typingsSlinky.materialUiCore.anon.PartialStyleRulesBottomNaRoot
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesButtonBa
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesButtonCl
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesCardActi
-import typingsSlinky.materialUiCore.anon.PartialStyleRulesCardActiAction
+import typingsSlinky.materialUiCore.anon.PartialStyleRulesCardActiFocusHighlight
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesCardClas
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesCardCont
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesCardHead
@@ -28,7 +28,7 @@ import typingsSlinky.materialUiCore.anon.PartialStyleRulesDrawerCl
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesExpansio
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesExpansioAction
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesExpansioContent
-import typingsSlinky.materialUiCore.anon.PartialStyleRulesExpansioRoot
+import typingsSlinky.materialUiCore.anon.PartialStyleRulesExpansioDisabled
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesFabClass
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesFilledIn
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesFormCont
@@ -39,7 +39,7 @@ import typingsSlinky.materialUiCore.anon.PartialStyleRulesFormLabe
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesGridClas
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesGridList
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesGridListActionIcon
-import typingsSlinky.materialUiCore.anon.PartialStyleRulesGridListImgFullHeight
+import typingsSlinky.materialUiCore.anon.PartialStyleRulesGridListRoot
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesIconButt
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesIconClas
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesInputAdo
@@ -51,8 +51,8 @@ import typingsSlinky.materialUiCore.anon.PartialStyleRulesLinkClas
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesListClas
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesListItem
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesListItemButton
-import typingsSlinky.materialUiCore.anon.PartialStyleRulesListItemDense
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesListItemIcon
+import typingsSlinky.materialUiCore.anon.PartialStyleRulesListItemRoot
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesListSubh
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesMenuClas
 import typingsSlinky.materialUiCore.anon.PartialStyleRulesMenuItem
@@ -106,8 +106,8 @@ trait Overrides extends js.Object {
   var MuiButton: js.UndefOr[PartialStyleRulesButtonCl] = js.native
   var MuiButtonBase: js.UndefOr[PartialStyleRulesButtonBa] = js.native
   var MuiCard: js.UndefOr[PartialStyleRulesCardClas] = js.native
-  var MuiCardActionArea: js.UndefOr[PartialStyleRulesCardActi] = js.native
-  var MuiCardActions: js.UndefOr[PartialStyleRulesCardActiAction] = js.native
+  var MuiCardActionArea: js.UndefOr[PartialStyleRulesCardActiFocusHighlight] = js.native
+  var MuiCardActions: js.UndefOr[PartialStyleRulesCardActi] = js.native
   var MuiCardContent: js.UndefOr[PartialStyleRulesCardCont] = js.native
   var MuiCardHeader: js.UndefOr[PartialStyleRulesCardHead] = js.native
   var MuiCardMedia: js.UndefOr[PartialStyleRulesCardMedi] = js.native
@@ -123,9 +123,9 @@ trait Overrides extends js.Object {
   var MuiDialogTitle: js.UndefOr[PartialStyleRulesDialogTi] = js.native
   var MuiDivider: js.UndefOr[PartialStyleRulesDividerC] = js.native
   var MuiDrawer: js.UndefOr[PartialStyleRulesDrawerCl] = js.native
-  var MuiExpansionPanel: js.UndefOr[PartialStyleRulesExpansio] = js.native
+  var MuiExpansionPanel: js.UndefOr[PartialStyleRulesExpansioDisabled] = js.native
   var MuiExpansionPanelActions: js.UndefOr[PartialStyleRulesExpansioAction] = js.native
-  var MuiExpansionPanelDetails: js.UndefOr[PartialStyleRulesExpansioRoot] = js.native
+  var MuiExpansionPanelDetails: js.UndefOr[PartialStyleRulesExpansio] = js.native
   var MuiExpansionPanelSummary: js.UndefOr[PartialStyleRulesExpansioContent] = js.native
   var MuiFab: js.UndefOr[PartialStyleRulesFabClass] = js.native
   var MuiFilledInput: js.UndefOr[PartialStyleRulesFilledIn] = js.native
@@ -135,8 +135,8 @@ trait Overrides extends js.Object {
   var MuiFormHelperText: js.UndefOr[PartialStyleRulesFormHelp] = js.native
   var MuiFormLabel: js.UndefOr[PartialStyleRulesFormLabe] = js.native
   var MuiGrid: js.UndefOr[PartialStyleRulesGridClas] = js.native
-  var MuiGridList: js.UndefOr[PartialStyleRulesGridList] = js.native
-  var MuiGridListTile: js.UndefOr[PartialStyleRulesGridListImgFullHeight] = js.native
+  var MuiGridList: js.UndefOr[PartialStyleRulesGridListRoot] = js.native
+  var MuiGridListTile: js.UndefOr[PartialStyleRulesGridList] = js.native
   var MuiGridListTileBar: js.UndefOr[PartialStyleRulesGridListActionIcon] = js.native
   var MuiIcon: js.UndefOr[PartialStyleRulesIconClas] = js.native
   var MuiIconButton: js.UndefOr[PartialStyleRulesIconButt] = js.native
@@ -149,9 +149,9 @@ trait Overrides extends js.Object {
   var MuiList: js.UndefOr[PartialStyleRulesListClas] = js.native
   var MuiListItem: js.UndefOr[PartialStyleRulesListItemButton] = js.native
   var MuiListItemAvatar: js.UndefOr[PartialStyleRulesListItemIcon] = js.native
-  var MuiListItemIcon: js.UndefOr[PartialStyleRulesListItem] = js.native
-  var MuiListItemSecondaryAction: js.UndefOr[PartialStyleRulesListItem] = js.native
-  var MuiListItemText: js.UndefOr[PartialStyleRulesListItemDense] = js.native
+  var MuiListItemIcon: js.UndefOr[PartialStyleRulesListItemRoot] = js.native
+  var MuiListItemSecondaryAction: js.UndefOr[PartialStyleRulesListItemRoot] = js.native
+  var MuiListItemText: js.UndefOr[PartialStyleRulesListItem] = js.native
   var MuiListSubheader: js.UndefOr[PartialStyleRulesListSubh] = js.native
   var MuiMenu: js.UndefOr[PartialStyleRulesMenuClas] = js.native
   var MuiMenuItem: js.UndefOr[PartialStyleRulesMenuItem] = js.native
@@ -245,11 +245,11 @@ object Overrides {
     @scala.inline
     def deleteMuiCard: Self = this.set("MuiCard", js.undefined)
     @scala.inline
-    def setMuiCardActionArea(value: PartialStyleRulesCardActi): Self = this.set("MuiCardActionArea", value.asInstanceOf[js.Any])
+    def setMuiCardActionArea(value: PartialStyleRulesCardActiFocusHighlight): Self = this.set("MuiCardActionArea", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMuiCardActionArea: Self = this.set("MuiCardActionArea", js.undefined)
     @scala.inline
-    def setMuiCardActions(value: PartialStyleRulesCardActiAction): Self = this.set("MuiCardActions", value.asInstanceOf[js.Any])
+    def setMuiCardActions(value: PartialStyleRulesCardActi): Self = this.set("MuiCardActions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMuiCardActions: Self = this.set("MuiCardActions", js.undefined)
     @scala.inline
@@ -313,7 +313,7 @@ object Overrides {
     @scala.inline
     def deleteMuiDrawer: Self = this.set("MuiDrawer", js.undefined)
     @scala.inline
-    def setMuiExpansionPanel(value: PartialStyleRulesExpansio): Self = this.set("MuiExpansionPanel", value.asInstanceOf[js.Any])
+    def setMuiExpansionPanel(value: PartialStyleRulesExpansioDisabled): Self = this.set("MuiExpansionPanel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMuiExpansionPanel: Self = this.set("MuiExpansionPanel", js.undefined)
     @scala.inline
@@ -321,7 +321,7 @@ object Overrides {
     @scala.inline
     def deleteMuiExpansionPanelActions: Self = this.set("MuiExpansionPanelActions", js.undefined)
     @scala.inline
-    def setMuiExpansionPanelDetails(value: PartialStyleRulesExpansioRoot): Self = this.set("MuiExpansionPanelDetails", value.asInstanceOf[js.Any])
+    def setMuiExpansionPanelDetails(value: PartialStyleRulesExpansio): Self = this.set("MuiExpansionPanelDetails", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMuiExpansionPanelDetails: Self = this.set("MuiExpansionPanelDetails", js.undefined)
     @scala.inline
@@ -361,11 +361,11 @@ object Overrides {
     @scala.inline
     def deleteMuiGrid: Self = this.set("MuiGrid", js.undefined)
     @scala.inline
-    def setMuiGridList(value: PartialStyleRulesGridList): Self = this.set("MuiGridList", value.asInstanceOf[js.Any])
+    def setMuiGridList(value: PartialStyleRulesGridListRoot): Self = this.set("MuiGridList", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMuiGridList: Self = this.set("MuiGridList", js.undefined)
     @scala.inline
-    def setMuiGridListTile(value: PartialStyleRulesGridListImgFullHeight): Self = this.set("MuiGridListTile", value.asInstanceOf[js.Any])
+    def setMuiGridListTile(value: PartialStyleRulesGridList): Self = this.set("MuiGridListTile", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMuiGridListTile: Self = this.set("MuiGridListTile", js.undefined)
     @scala.inline
@@ -417,15 +417,15 @@ object Overrides {
     @scala.inline
     def deleteMuiListItemAvatar: Self = this.set("MuiListItemAvatar", js.undefined)
     @scala.inline
-    def setMuiListItemIcon(value: PartialStyleRulesListItem): Self = this.set("MuiListItemIcon", value.asInstanceOf[js.Any])
+    def setMuiListItemIcon(value: PartialStyleRulesListItemRoot): Self = this.set("MuiListItemIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMuiListItemIcon: Self = this.set("MuiListItemIcon", js.undefined)
     @scala.inline
-    def setMuiListItemSecondaryAction(value: PartialStyleRulesListItem): Self = this.set("MuiListItemSecondaryAction", value.asInstanceOf[js.Any])
+    def setMuiListItemSecondaryAction(value: PartialStyleRulesListItemRoot): Self = this.set("MuiListItemSecondaryAction", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMuiListItemSecondaryAction: Self = this.set("MuiListItemSecondaryAction", js.undefined)
     @scala.inline
-    def setMuiListItemText(value: PartialStyleRulesListItemDense): Self = this.set("MuiListItemText", value.asInstanceOf[js.Any])
+    def setMuiListItemText(value: PartialStyleRulesListItem): Self = this.set("MuiListItemText", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMuiListItemText: Self = this.set("MuiListItemText", js.undefined)
     @scala.inline

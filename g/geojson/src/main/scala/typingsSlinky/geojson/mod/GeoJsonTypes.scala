@@ -6,14 +6,14 @@ import scala.scalajs.js.annotation._
 
 /* Inlined geojson.geojson.GeoJSON['type'] */
 /* Rewritten from type alias, can be one of: 
+  - typingsSlinky.geojson.geojsonStrings.MultiPolygon
   - typingsSlinky.geojson.geojsonStrings.GeometryCollection
-  - typingsSlinky.geojson.geojsonStrings.MultiPoint
+  - typingsSlinky.geojson.geojsonStrings.MultiLineString
   - typingsSlinky.geojson.geojsonStrings.LineString
   - typingsSlinky.geojson.geojsonStrings.Point
-  - typingsSlinky.geojson.geojsonStrings.Polygon
-  - typingsSlinky.geojson.geojsonStrings.MultiLineString
-  - typingsSlinky.geojson.geojsonStrings.MultiPolygon
   - typingsSlinky.geojson.geojsonStrings.FeatureCollection
+  - typingsSlinky.geojson.geojsonStrings.Polygon
+  - typingsSlinky.geojson.geojsonStrings.MultiPoint
   - typingsSlinky.geojson.geojsonStrings.Feature
 */
 trait GeoJsonTypes extends js.Object

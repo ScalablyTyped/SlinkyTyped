@@ -5,11 +5,11 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Partial<@material-ui/core.@material-ui/core/styles/withStyles.StyleRules<@material-ui/core.@material-ui/core/CardActionArea.CardActionAreaClassKey>> */
+/* Inlined std.Partial<@material-ui/core.@material-ui/core/styles/withStyles.StyleRules<@material-ui/core.@material-ui/core/CardActions.CardActionsClassKey>> */
 @js.native
 trait PartialStyleRulesCardActi extends js.Object {
-  var focusHighlight: js.UndefOr[CSSProperties] = js.native
-  var focusVisible: js.UndefOr[CSSProperties] = js.native
+  var action: js.UndefOr[CSSProperties] = js.native
+  var disableActionSpacing: js.UndefOr[CSSProperties] = js.native
   var root: js.UndefOr[CSSProperties] = js.native
 }
 
@@ -31,13 +31,13 @@ object PartialStyleRulesCardActi {
         x
     }
     @scala.inline
-    def setFocusHighlight(value: CSSProperties): Self = this.set("focusHighlight", value.asInstanceOf[js.Any])
+    def setAction(value: CSSProperties): Self = this.set("action", value.asInstanceOf[js.Any])
     @scala.inline
-    def deleteFocusHighlight: Self = this.set("focusHighlight", js.undefined)
+    def deleteAction: Self = this.set("action", js.undefined)
     @scala.inline
-    def setFocusVisible(value: CSSProperties): Self = this.set("focusVisible", value.asInstanceOf[js.Any])
+    def setDisableActionSpacing(value: CSSProperties): Self = this.set("disableActionSpacing", value.asInstanceOf[js.Any])
     @scala.inline
-    def deleteFocusVisible: Self = this.set("focusVisible", js.undefined)
+    def deleteDisableActionSpacing: Self = this.set("disableActionSpacing", js.undefined)
     @scala.inline
     def setRoot(value: CSSProperties): Self = this.set("root", value.asInstanceOf[js.Any])
     @scala.inline

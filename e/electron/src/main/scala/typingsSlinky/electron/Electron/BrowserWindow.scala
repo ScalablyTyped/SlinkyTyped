@@ -970,9 +970,26 @@ trait BrowserWindow extends EventEmitter {
     * Adds a vibrancy effect to the browser window. Passing null or an empty string
     * will remove the vibrancy effect on the window.
     */
-  def setVibrancy(
-    `type`: `appearance-based` | light | dark | titlebar | selection | menu | popover | sidebar | `medium-light` | `ultra-dark`
-  ): Unit = js.native
+  @JSName("setVibrancy")
+  def setVibrancy_appearancebased(`type`: `appearance-based`): Unit = js.native
+  @JSName("setVibrancy")
+  def setVibrancy_dark(`type`: dark): Unit = js.native
+  @JSName("setVibrancy")
+  def setVibrancy_light(`type`: light): Unit = js.native
+  @JSName("setVibrancy")
+  def setVibrancy_mediumlight(`type`: `medium-light`): Unit = js.native
+  @JSName("setVibrancy")
+  def setVibrancy_menu(`type`: menu): Unit = js.native
+  @JSName("setVibrancy")
+  def setVibrancy_popover(`type`: popover): Unit = js.native
+  @JSName("setVibrancy")
+  def setVibrancy_selection(`type`: selection): Unit = js.native
+  @JSName("setVibrancy")
+  def setVibrancy_sidebar(`type`: sidebar): Unit = js.native
+  @JSName("setVibrancy")
+  def setVibrancy_titlebar(`type`: titlebar): Unit = js.native
+  @JSName("setVibrancy")
+  def setVibrancy_ultradark(`type`: `ultra-dark`): Unit = js.native
   /**
     * Sets whether the window should be visible on all workspaces. Note: This API does
     * nothing on Windows.
