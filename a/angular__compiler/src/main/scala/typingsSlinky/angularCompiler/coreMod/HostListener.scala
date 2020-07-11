@@ -27,6 +27,8 @@ object HostListener {
         x
     }
     @scala.inline
+    def setArgsVarargs(value: String*): Self = this.set("args", js.Array(value :_*))
+    @scala.inline
     def setArgs(value: js.Array[String]): Self = this.set("args", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteArgs: Self = this.set("args", js.undefined)

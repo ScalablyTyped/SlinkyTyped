@@ -29,7 +29,11 @@ object Pipes {
         x
     }
     @scala.inline
+    def setPipesVarargs(value: CompilePipeSummary*): Self = this.set("pipes", js.Array(value :_*))
+    @scala.inline
     def setPipes(value: js.Array[CompilePipeSummary]): Self = this.set("pipes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTemplateVarargs(value: TemplateAst*): Self = this.set("template", js.Array(value :_*))
     @scala.inline
     def setTemplate(value: js.Array[TemplateAst]): Self = this.set("template", value.asInstanceOf[js.Any])
   }

@@ -32,6 +32,8 @@ object Column {
     @scala.inline
     def colSpan(value: Double): this.type = set("colSpan", value.asInstanceOf[js.Any])
     @scala.inline
+    def dataIndexVarargs(value: (String | Double)*): this.type = set("dataIndex", js.Array(value :_*))
+    @scala.inline
     def dataIndex(value: DataIndex): this.type = set("dataIndex", value.asInstanceOf[js.Any])
     @scala.inline
     def ellipsis(value: CellEllipsisType): this.type = set("ellipsis", value.asInstanceOf[js.Any])

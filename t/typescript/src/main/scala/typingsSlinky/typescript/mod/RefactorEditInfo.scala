@@ -33,7 +33,11 @@ object RefactorEditInfo {
         x
     }
     @scala.inline
+    def setEditsVarargs(value: FileTextChanges*): Self = this.set("edits", js.Array(value :_*))
+    @scala.inline
     def setEdits(value: js.Array[FileTextChanges]): Self = this.set("edits", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCommandsVarargs(value: CodeActionCommand*): Self = this.set("commands", js.Array(value :_*))
     @scala.inline
     def setCommands(value: js.Array[CodeActionCommand]): Self = this.set("commands", value.asInstanceOf[js.Any])
     @scala.inline

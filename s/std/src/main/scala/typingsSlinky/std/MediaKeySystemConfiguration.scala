@@ -32,6 +32,8 @@ object MediaKeySystemConfiguration {
         x
     }
     @scala.inline
+    def setAudioCapabilitiesVarargs(value: MediaKeySystemMediaCapability*): Self = this.set("audioCapabilities", js.Array(value :_*))
+    @scala.inline
     def setAudioCapabilities(value: js.Array[MediaKeySystemMediaCapability]): Self = this.set("audioCapabilities", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAudioCapabilities: Self = this.set("audioCapabilities", js.undefined)
@@ -39,6 +41,8 @@ object MediaKeySystemConfiguration {
     def setDistinctiveIdentifier(value: MediaKeysRequirement): Self = this.set("distinctiveIdentifier", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDistinctiveIdentifier: Self = this.set("distinctiveIdentifier", js.undefined)
+    @scala.inline
+    def setInitDataTypesVarargs(value: java.lang.String*): Self = this.set("initDataTypes", js.Array(value :_*))
     @scala.inline
     def setInitDataTypes(value: js.Array[java.lang.String]): Self = this.set("initDataTypes", value.asInstanceOf[js.Any])
     @scala.inline
@@ -52,9 +56,13 @@ object MediaKeySystemConfiguration {
     @scala.inline
     def deletePersistentState: Self = this.set("persistentState", js.undefined)
     @scala.inline
+    def setSessionTypesVarargs(value: java.lang.String*): Self = this.set("sessionTypes", js.Array(value :_*))
+    @scala.inline
     def setSessionTypes(value: js.Array[java.lang.String]): Self = this.set("sessionTypes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSessionTypes: Self = this.set("sessionTypes", js.undefined)
+    @scala.inline
+    def setVideoCapabilitiesVarargs(value: MediaKeySystemMediaCapability*): Self = this.set("videoCapabilities", js.Array(value :_*))
     @scala.inline
     def setVideoCapabilities(value: js.Array[MediaKeySystemMediaCapability]): Self = this.set("videoCapabilities", value.asInstanceOf[js.Any])
     @scala.inline

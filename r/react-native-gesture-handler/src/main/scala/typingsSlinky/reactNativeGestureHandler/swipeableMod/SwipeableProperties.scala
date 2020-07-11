@@ -111,9 +111,13 @@ object SwipeableProperties {
         x
     }
     @scala.inline
+    def setActiveOffsetXVarargs(value: Double*): Self = this.set("activeOffsetX", js.Array(value :_*))
+    @scala.inline
     def setActiveOffsetX(value: Double | js.Array[Double]): Self = this.set("activeOffsetX", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteActiveOffsetX: Self = this.set("activeOffsetX", js.undefined)
+    @scala.inline
+    def setActiveOffsetYVarargs(value: Double*): Self = this.set("activeOffsetY", js.Array(value :_*))
     @scala.inline
     def setActiveOffsetY(value: Double | js.Array[Double]): Self = this.set("activeOffsetY", value.asInstanceOf[js.Any])
     @scala.inline
@@ -139,9 +143,13 @@ object SwipeableProperties {
     @scala.inline
     def deleteEnabled: Self = this.set("enabled", js.undefined)
     @scala.inline
+    def setFailOffsetXVarargs(value: Double*): Self = this.set("failOffsetX", js.Array(value :_*))
+    @scala.inline
     def setFailOffsetX(value: Double | js.Array[Double]): Self = this.set("failOffsetX", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFailOffsetX: Self = this.set("failOffsetX", js.undefined)
+    @scala.inline
+    def setFailOffsetYVarargs(value: Double*): Self = this.set("failOffsetY", js.Array(value :_*))
     @scala.inline
     def setFailOffsetY(value: Double | js.Array[Double]): Self = this.set("failOffsetY", value.asInstanceOf[js.Any])
     @scala.inline
@@ -275,6 +283,8 @@ object SwipeableProperties {
     @scala.inline
     def deleteShouldCancelWhenOutside: Self = this.set("shouldCancelWhenOutside", js.undefined)
     @scala.inline
+    def setSimultaneousHandlersVarargs(value: Ref[js.Any]*): Self = this.set("simultaneousHandlers", js.Array(value :_*))
+    @scala.inline
     def setSimultaneousHandlersRefObject(value: ReactRef[_]): Self = this.set("simultaneousHandlers", value.asInstanceOf[js.Any])
     @scala.inline
     def setSimultaneousHandlersFunction1(value: /* instance */ _ | Null => Unit): Self = this.set("simultaneousHandlers", js.Any.fromFunction1(value))
@@ -288,6 +298,8 @@ object SwipeableProperties {
     def setUseNativeAnimations(value: Boolean): Self = this.set("useNativeAnimations", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUseNativeAnimations: Self = this.set("useNativeAnimations", js.undefined)
+    @scala.inline
+    def setWaitForVarargs(value: Ref[js.Any]*): Self = this.set("waitFor", js.Array(value :_*))
     @scala.inline
     def setWaitForRefObject(value: ReactRef[_]): Self = this.set("waitFor", value.asInstanceOf[js.Any])
     @scala.inline

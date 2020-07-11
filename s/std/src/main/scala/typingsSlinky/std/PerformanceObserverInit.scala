@@ -32,6 +32,8 @@ object PerformanceObserverInit {
     @scala.inline
     def deleteBuffered: Self = this.set("buffered", js.undefined)
     @scala.inline
+    def setEntryTypesVarargs(value: java.lang.String*): Self = this.set("entryTypes", js.Array(value :_*))
+    @scala.inline
     def setEntryTypes(value: js.Array[java.lang.String]): Self = this.set("entryTypes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEntryTypes: Self = this.set("entryTypes", js.undefined)

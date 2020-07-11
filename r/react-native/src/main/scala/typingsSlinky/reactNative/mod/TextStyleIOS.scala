@@ -37,6 +37,8 @@ object TextStyleIOS {
         x
     }
     @scala.inline
+    def setFontVariantVarargs(value: FontVariant*): Self = this.set("fontVariant", js.Array(value :_*))
+    @scala.inline
     def setFontVariant(value: js.Array[FontVariant]): Self = this.set("fontVariant", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFontVariant: Self = this.set("fontVariant", js.undefined)

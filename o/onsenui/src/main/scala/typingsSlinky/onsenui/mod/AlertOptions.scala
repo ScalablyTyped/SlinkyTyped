@@ -44,6 +44,8 @@ object AlertOptions {
     @scala.inline
     def deleteButtonLabel: Self = this.set("buttonLabel", js.undefined)
     @scala.inline
+    def setButtonLabelsVarargs(value: String*): Self = this.set("buttonLabels", js.Array(value :_*))
+    @scala.inline
     def setButtonLabels(value: js.Array[String]): Self = this.set("buttonLabels", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteButtonLabels: Self = this.set("buttonLabels", js.undefined)

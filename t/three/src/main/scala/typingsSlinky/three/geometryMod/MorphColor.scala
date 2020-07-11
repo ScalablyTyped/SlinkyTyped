@@ -28,6 +28,8 @@ object MorphColor {
         x
     }
     @scala.inline
+    def setColorsVarargs(value: Color*): Self = this.set("colors", js.Array(value :_*))
+    @scala.inline
     def setColors(value: js.Array[Color]): Self = this.set("colors", value.asInstanceOf[js.Any])
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

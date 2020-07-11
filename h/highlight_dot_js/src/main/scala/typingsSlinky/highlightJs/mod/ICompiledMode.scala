@@ -34,6 +34,8 @@ object ICompiledMode {
     @scala.inline
     def setTerminators(value: js.RegExp): Self = this.set("terminators", value.asInstanceOf[js.Any])
     @scala.inline
+    def setContainsVarargs(value: ICompiledMode*): Self = this.set("contains", js.Array(value :_*))
+    @scala.inline
     def setContains(value: js.Array[ICompiledMode]): Self = this.set("contains", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContains: Self = this.set("contains", js.undefined)

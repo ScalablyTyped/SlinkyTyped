@@ -71,6 +71,8 @@ object NativeTouchEvent {
         x
     }
     @scala.inline
+    def setChangedTouchesVarargs(value: NativeTouchEvent*): Self = this.set("changedTouches", js.Array(value :_*))
+    @scala.inline
     def setChangedTouches(value: js.Array[NativeTouchEvent]): Self = this.set("changedTouches", value.asInstanceOf[js.Any])
     @scala.inline
     def setIdentifier(value: String): Self = this.set("identifier", value.asInstanceOf[js.Any])
@@ -86,6 +88,8 @@ object NativeTouchEvent {
     def setTarget(value: String): Self = this.set("target", value.asInstanceOf[js.Any])
     @scala.inline
     def setTimestamp(value: Double): Self = this.set("timestamp", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTouchesVarargs(value: NativeTouchEvent*): Self = this.set("touches", js.Array(value :_*))
     @scala.inline
     def setTouches(value: js.Array[NativeTouchEvent]): Self = this.set("touches", value.asInstanceOf[js.Any])
   }

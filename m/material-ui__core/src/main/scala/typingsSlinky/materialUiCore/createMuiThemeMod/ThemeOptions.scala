@@ -74,6 +74,8 @@ object ThemeOptions {
     @scala.inline
     def deleteProps: Self = this.set("props", js.undefined)
     @scala.inline
+    def setShadowsVarargs(value: js.Any*): Self = this.set("shadows", js.Array(value :_*))
+    @scala.inline
     def setShadows(value: Shadows): Self = this.set("shadows", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteShadows: Self = this.set("shadows", js.undefined)

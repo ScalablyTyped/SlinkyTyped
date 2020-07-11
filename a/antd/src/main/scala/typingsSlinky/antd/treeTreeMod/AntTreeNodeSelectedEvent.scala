@@ -41,6 +41,8 @@ object AntTreeNodeSelectedEvent {
     @scala.inline
     def deleteSelected: Self = this.set("selected", js.undefined)
     @scala.inline
+    def setSelectedNodesVarargs(value: js.Any*): Self = this.set("selectedNodes", js.Array(value :_*))
+    @scala.inline
     def setSelectedNodes(
       value: js.Array[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DataNode */ _

@@ -37,6 +37,8 @@ object TouchBarColorPickerConstructorOptions {
         x
     }
     @scala.inline
+    def setAvailableColorsVarargs(value: String*): Self = this.set("availableColors", js.Array(value :_*))
+    @scala.inline
     def setAvailableColors(value: js.Array[String]): Self = this.set("availableColors", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAvailableColors: Self = this.set("availableColors", js.undefined)

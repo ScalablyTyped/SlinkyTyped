@@ -40,6 +40,8 @@ object Index {
     @scala.inline
     def setIndex(value: Double): Self = this.set("index", value.asInstanceOf[js.Any])
     @scala.inline
+    def setKeysVarargs(value: String*): Self = this.set("keys", js.Array(value :_*))
+    @scala.inline
     def setKeys(value: js.Array[String]): Self = this.set("keys", value.asInstanceOf[js.Any])
     @scala.inline
     def setObj(value: js.Object): Self = this.set("obj", value.asInstanceOf[js.Any])

@@ -48,6 +48,8 @@ object IntersectionObserver {
     @scala.inline
     def setTakeRecords(value: () => js.Array[IntersectionObserverEntry]): Self = this.set("takeRecords", js.Any.fromFunction0(value))
     @scala.inline
+    def setThresholdsVarargs(value: Double*): Self = this.set("thresholds", js.Array(value :_*))
+    @scala.inline
     def setThresholds(value: js.Array[Double]): Self = this.set("thresholds", value.asInstanceOf[js.Any])
     @scala.inline
     def setUnobserve(value: org.scalajs.dom.raw.Element => Unit): Self = this.set("unobserve", js.Any.fromFunction1(value))

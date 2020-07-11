@@ -27,7 +27,11 @@ object TransferState {
         x
     }
     @scala.inline
+    def setSourceSelectedKeysVarargs(value: String*): Self = this.set("sourceSelectedKeys", js.Array(value :_*))
+    @scala.inline
     def setSourceSelectedKeys(value: js.Array[String]): Self = this.set("sourceSelectedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTargetSelectedKeysVarargs(value: String*): Self = this.set("targetSelectedKeys", js.Array(value :_*))
     @scala.inline
     def setTargetSelectedKeys(value: js.Array[String]): Self = this.set("targetSelectedKeys", value.asInstanceOf[js.Any])
   }

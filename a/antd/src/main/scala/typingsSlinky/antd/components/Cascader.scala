@@ -37,6 +37,8 @@ object Cascader {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: (String | Double)*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: CascaderValueType): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
@@ -84,6 +86,8 @@ object Cascader {
     def suffixIconReactElement(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def suffixIcon(value: ReactElement): this.type = set("suffixIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: (String | Double)*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: CascaderValueType): this.type = set("value", value.asInstanceOf[js.Any])
   }

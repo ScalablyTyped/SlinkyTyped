@@ -68,6 +68,8 @@ object NativeSelectInputProps {
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
     @scala.inline
+    def setValueVarargs(value: (String | Double | Boolean)*): Self = this.set("value", js.Array(value :_*))
+    @scala.inline
     def setValue(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)

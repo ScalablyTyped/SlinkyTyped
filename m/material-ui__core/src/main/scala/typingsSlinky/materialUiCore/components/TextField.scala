@@ -511,6 +511,8 @@ object TextField {
       @scala.inline
       def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
       @scala.inline
+      def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
+      @scala.inline
       def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
       @scala.inline
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -944,6 +946,8 @@ object TextField {
       @scala.inline
       def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
       @scala.inline
+      def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
+      @scala.inline
       def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
       @scala.inline
       def vocab(value: String): this.type = set("vocab", value.asInstanceOf[js.Any])
@@ -1376,6 +1380,8 @@ object TextField {
       def typeof(value: String): this.type = set("typeof", value.asInstanceOf[js.Any])
       @scala.inline
       def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
+      @scala.inline
+      def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
       @scala.inline
       def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
       @scala.inline

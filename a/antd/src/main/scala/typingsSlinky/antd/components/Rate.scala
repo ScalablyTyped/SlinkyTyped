@@ -45,6 +45,8 @@ object Rate {
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
+    def tooltipsVarargs(value: String*): this.type = set("tooltips", js.Array(value :_*))
+    @scala.inline
     def tooltips(value: js.Array[String]): this.type = set("tooltips", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])

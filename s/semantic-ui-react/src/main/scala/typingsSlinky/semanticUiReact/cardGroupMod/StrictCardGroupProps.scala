@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.cardCardMod.CardProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.center
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
@@ -80,6 +81,8 @@ object StrictCardGroupProps {
     def setDoubling(value: Boolean): Self = this.set("doubling", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDoubling: Self = this.set("doubling", js.undefined)
+    @scala.inline
+    def setItemsVarargs(value: SemanticShorthandItem[CardProps]*): Self = this.set("items", js.Array(value :_*))
     @scala.inline
     def setItems(value: SemanticShorthandCollection[CardProps]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline

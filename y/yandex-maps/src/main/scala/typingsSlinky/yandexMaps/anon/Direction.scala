@@ -30,6 +30,8 @@ object Direction {
         x
     }
     @scala.inline
+    def setDirectionVarargs(value: Double*): Self = this.set("direction", js.Array(value :_*))
+    @scala.inline
     def setDirection(value: js.Array[Double] | String): Self = this.set("direction", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDirection: Self = this.set("direction", js.undefined)
@@ -37,6 +39,8 @@ object Direction {
     def setLayer(value: yandexNumbersignpanorama | yandexNumbersignairPanorama): Self = this.set("layer", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLayer: Self = this.set("layer", js.undefined)
+    @scala.inline
+    def setSpanVarargs(value: Double*): Self = this.set("span", js.Array(value :_*))
     @scala.inline
     def setSpan(value: js.Array[Double] | String): Self = this.set("span", value.asInstanceOf[js.Any])
     @scala.inline

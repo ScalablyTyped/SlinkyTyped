@@ -3,6 +3,7 @@ package typingsSlinky.rcTable.bodyContextMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.rcTable.interfaceMod.ColumnGroupType
 import typingsSlinky.rcTable.interfaceMod.ColumnType
 import typingsSlinky.rcTable.interfaceMod.ColumnsType
 import typingsSlinky.rcTable.interfaceMod.ExpandableType
@@ -70,6 +71,8 @@ object BodyContextProps {
         x
     }
     @scala.inline
+    def setColumnsVarargs(value: (ColumnGroupType[RecordType] | ColumnType[RecordType])*): Self = this.set("columns", js.Array(value :_*))
+    @scala.inline
     def setColumns(value: ColumnsType[RecordType]): Self = this.set("columns", value.asInstanceOf[js.Any])
     @scala.inline
     def setComponentWidth(value: Double): Self = this.set("componentWidth", value.asInstanceOf[js.Any])
@@ -91,6 +94,8 @@ object BodyContextProps {
     def setFixColumn(value: Boolean): Self = this.set("fixColumn", value.asInstanceOf[js.Any])
     @scala.inline
     def setFixHeader(value: Boolean): Self = this.set("fixHeader", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFlattenColumnsVarargs(value: ColumnType[RecordType]*): Self = this.set("flattenColumns", js.Array(value :_*))
     @scala.inline
     def setFlattenColumns(value: js.Array[ColumnType[RecordType]]): Self = this.set("flattenColumns", value.asInstanceOf[js.Any])
     @scala.inline

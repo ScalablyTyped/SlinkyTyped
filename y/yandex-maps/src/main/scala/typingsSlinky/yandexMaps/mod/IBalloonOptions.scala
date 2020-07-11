@@ -57,6 +57,8 @@ object IBalloonOptions {
     @scala.inline
     def deleteAutoPanDuration: Self = this.set("autoPanDuration", js.undefined)
     @scala.inline
+    def setAutoPanMarginVarargs(value: (js.Array[Double] | Double)*): Self = this.set("autoPanMargin", js.Array(value :_*))
+    @scala.inline
     def setAutoPanMargin(value: (js.Array[js.Array[Double] | Double]) | Double): Self = this.set("autoPanMargin", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAutoPanMargin: Self = this.set("autoPanMargin", js.undefined)
@@ -93,6 +95,8 @@ object IBalloonOptions {
     @scala.inline
     def deleteMinWidth: Self = this.set("minWidth", js.undefined)
     @scala.inline
+    def setOffsetVarargs(value: Double*): Self = this.set("offset", js.Array(value :_*))
+    @scala.inline
     def setOffset(value: js.Array[Double]): Self = this.set("offset", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOffset: Self = this.set("offset", js.undefined)
@@ -120,6 +124,8 @@ object IBalloonOptions {
     def setShadowLayout(value: IClassConstructor[ILayout] | String): Self = this.set("shadowLayout", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteShadowLayout: Self = this.set("shadowLayout", js.undefined)
+    @scala.inline
+    def setShadowOffsetVarargs(value: Double*): Self = this.set("shadowOffset", js.Array(value :_*))
     @scala.inline
     def setShadowOffset(value: js.Array[Double]): Self = this.set("shadowOffset", value.asInstanceOf[js.Any])
     @scala.inline

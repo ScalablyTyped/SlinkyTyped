@@ -27,6 +27,8 @@ object TablePaginationConfig {
         x
     }
     @scala.inline
+    def setPositionVarargs(value: TablePaginationPosition*): Self = this.set("position", js.Array(value :_*))
+    @scala.inline
     def setPosition(value: js.Array[TablePaginationPosition]): Self = this.set("position", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePosition: Self = this.set("position", js.undefined)

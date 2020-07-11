@@ -1,17 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "enzyme"
-version := "3.10-dt-20200515Z-e55b02"
+version := "3.10-dt-20200515Z-84e7d2"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "cheerio" % "v0.22.0-dt-20200515Z-4eeb41",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-57a4b7",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200609Z-5ab0d9",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-151476",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200617Z-5b2e1b",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-18eec6")
+  "org.scalablytyped.slinky" %%% "cheerio" % "v0.22.0-dt-20200515Z-27f004",
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-9fcfdc",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200609Z-439deb",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-77dff4",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200617Z-0ab4bf",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

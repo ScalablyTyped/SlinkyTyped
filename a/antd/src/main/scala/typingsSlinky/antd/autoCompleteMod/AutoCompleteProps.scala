@@ -27,6 +27,8 @@ object AutoCompleteProps {
         x
     }
     @scala.inline
+    def setDataSourceVarargs(value: DataSourceItemType*): Self = this.set("dataSource", js.Array(value :_*))
+    @scala.inline
     def setDataSource(value: js.Array[DataSourceItemType]): Self = this.set("dataSource", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDataSource: Self = this.set("dataSource", js.undefined)

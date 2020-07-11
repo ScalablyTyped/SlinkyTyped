@@ -214,9 +214,15 @@ class SharedBuilder_MenuProps1085698216[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
   @scala.inline
+  def defaultOpenKeysVarargs(value: String*): this.type = set("defaultOpenKeys", js.Array(value :_*))
+  @scala.inline
   def defaultOpenKeys(value: js.Array[String]): this.type = set("defaultOpenKeys", value.asInstanceOf[js.Any])
   @scala.inline
+  def defaultSelectedKeysVarargs(value: String*): this.type = set("defaultSelectedKeys", js.Array(value :_*))
+  @scala.inline
   def defaultSelectedKeys(value: js.Array[String]): this.type = set("defaultSelectedKeys", value.asInstanceOf[js.Any])
+  @scala.inline
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   @scala.inline
   def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   @scala.inline
@@ -440,6 +446,8 @@ class SharedBuilder_MenuProps1085698216[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def openAnimation(value: OpenAnimation): this.type = set("openAnimation", value.asInstanceOf[js.Any])
   @scala.inline
+  def openKeysVarargs(value: String*): this.type = set("openKeys", js.Array(value :_*))
+  @scala.inline
   def openKeys(value: js.Array[String]): this.type = set("openKeys", value.asInstanceOf[js.Any])
   @scala.inline
   def openTransitionName(value: String): this.type = set("openTransitionName", value.asInstanceOf[js.Any])
@@ -467,6 +475,8 @@ class SharedBuilder_MenuProps1085698216[R <: js.Object] (val args: js.Array[js.A
   def security(value: String): this.type = set("security", value.asInstanceOf[js.Any])
   @scala.inline
   def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
+  @scala.inline
+  def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
   @scala.inline
   def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
   @scala.inline

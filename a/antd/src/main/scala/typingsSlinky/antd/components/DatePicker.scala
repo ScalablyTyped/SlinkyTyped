@@ -203,6 +203,8 @@ object DatePicker {
       @scala.inline
       def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
       @scala.inline
+      def formatVarargs(value: String*): this.type = set("format", js.Array(value :_*))
+      @scala.inline
       def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
       @scala.inline
       def getPopupContainer(value: /* node */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
@@ -425,6 +427,8 @@ object DatePicker {
       ): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
       @scala.inline
       def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
+      @scala.inline
+      def formatVarargs(value: String*): this.type = set("format", js.Array(value :_*))
       @scala.inline
       def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
       @scala.inline
@@ -656,6 +660,8 @@ object DatePicker {
       ): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
       @scala.inline
       def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
+      @scala.inline
+      def formatVarargs(value: String*): this.type = set("format", js.Array(value :_*))
       @scala.inline
       def format(value: String | js.Array[String]): this.type = set("format", value.asInstanceOf[js.Any])
       @scala.inline

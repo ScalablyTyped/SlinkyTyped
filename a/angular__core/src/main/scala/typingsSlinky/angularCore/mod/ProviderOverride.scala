@@ -38,6 +38,8 @@ object ProviderOverride {
     @scala.inline
     def setDeprecatedBehavior(value: Boolean): Self = this.set("deprecatedBehavior", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDepsVarargs(value: ((js.Tuple2[ɵDepFlags, js.Any]) | js.Any)*): Self = this.set("deps", js.Array(value :_*))
+    @scala.inline
     def setDeps(value: js.Array[(js.Tuple2[ɵDepFlags, _]) | _]): Self = this.set("deps", value.asInstanceOf[js.Any])
     @scala.inline
     def setFlags(value: ɵNodeFlags): Self = this.set("flags", value.asInstanceOf[js.Any])

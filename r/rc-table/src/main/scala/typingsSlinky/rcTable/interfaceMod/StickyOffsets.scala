@@ -27,7 +27,11 @@ object StickyOffsets {
         x
     }
     @scala.inline
+    def setLeftVarargs(value: Double*): Self = this.set("left", js.Array(value :_*))
+    @scala.inline
     def setLeft(value: js.Array[Double]): Self = this.set("left", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRightVarargs(value: Double*): Self = this.set("right", js.Array(value :_*))
     @scala.inline
     def setRight(value: js.Array[Double]): Self = this.set("right", value.asInstanceOf[js.Any])
   }

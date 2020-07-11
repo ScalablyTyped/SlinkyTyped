@@ -30,9 +30,13 @@ object Imports {
     @scala.inline
     def setFactory(value: () => js.Any): Self = this.set("factory", js.Any.fromFunction0(value))
     @scala.inline
+    def setImportsVarargs(value: js.Any*): Self = this.set("imports", js.Array(value :_*))
+    @scala.inline
     def setImports(value: js.Array[_]): Self = this.set("imports", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteImports: Self = this.set("imports", js.undefined)
+    @scala.inline
+    def setProvidersVarargs(value: js.Any*): Self = this.set("providers", js.Array(value :_*))
     @scala.inline
     def setProviders(value: js.Array[_]): Self = this.set("providers", value.asInstanceOf[js.Any])
     @scala.inline

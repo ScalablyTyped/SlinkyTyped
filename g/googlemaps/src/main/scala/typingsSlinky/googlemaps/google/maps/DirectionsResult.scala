@@ -27,7 +27,11 @@ object DirectionsResult {
         x
     }
     @scala.inline
+    def setGeocoded_waypointsVarargs(value: DirectionsGeocodedWaypoint*): Self = this.set("geocoded_waypoints", js.Array(value :_*))
+    @scala.inline
     def setGeocoded_waypoints(value: js.Array[DirectionsGeocodedWaypoint]): Self = this.set("geocoded_waypoints", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRoutesVarargs(value: DirectionsRoute*): Self = this.set("routes", js.Array(value :_*))
     @scala.inline
     def setRoutes(value: js.Array[DirectionsRoute]): Self = this.set("routes", value.asInstanceOf[js.Any])
   }

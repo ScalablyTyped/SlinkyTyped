@@ -108,9 +108,13 @@ object SubPopupMenuProps {
     @scala.inline
     def deleteDefaultActiveFirst: Self = this.set("defaultActiveFirst", js.undefined)
     @scala.inline
+    def setDefaultOpenKeysVarargs(value: String*): Self = this.set("defaultOpenKeys", js.Array(value :_*))
+    @scala.inline
     def setDefaultOpenKeys(value: js.Array[String]): Self = this.set("defaultOpenKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultOpenKeys: Self = this.set("defaultOpenKeys", js.undefined)
+    @scala.inline
+    def setDefaultSelectedKeysVarargs(value: String*): Self = this.set("defaultSelectedKeys", js.Array(value :_*))
     @scala.inline
     def setDefaultSelectedKeys(value: js.Array[String]): Self = this.set("defaultSelectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -198,6 +202,8 @@ object SubPopupMenuProps {
     @scala.inline
     def deleteOnSelect: Self = this.set("onSelect", js.undefined)
     @scala.inline
+    def setOpenKeysVarargs(value: String*): Self = this.set("openKeys", js.Array(value :_*))
+    @scala.inline
     def setOpenKeys(value: js.Array[String]): Self = this.set("openKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOpenKeys: Self = this.set("openKeys", js.undefined)
@@ -223,6 +229,8 @@ object SubPopupMenuProps {
     def setRole(value: String): Self = this.set("role", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRole: Self = this.set("role", js.undefined)
+    @scala.inline
+    def setSelectedKeysVarargs(value: String*): Self = this.set("selectedKeys", js.Array(value :_*))
     @scala.inline
     def setSelectedKeys(value: js.Array[String]): Self = this.set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline

@@ -32,6 +32,8 @@ object R3NgModuleDef {
         x
     }
     @scala.inline
+    def setAdditionalStatementsVarargs(value: Statement*): Self = this.set("additionalStatements", js.Array(value :_*))
+    @scala.inline
     def setAdditionalStatements(value: js.Array[Statement]): Self = this.set("additionalStatements", value.asInstanceOf[js.Any])
     @scala.inline
     def setExpression(value: Expression): Self = this.set("expression", value.asInstanceOf[js.Any])

@@ -62,6 +62,8 @@ object RendererType2 {
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
+    def setStylesVarargs(value: (String | js.Array[js.Any])*): Self = this.set("styles", js.Array(value :_*))
+    @scala.inline
     def setStyles(value: js.Array[String | js.Array[_]]): Self = this.set("styles", value.asInstanceOf[js.Any])
   }
   

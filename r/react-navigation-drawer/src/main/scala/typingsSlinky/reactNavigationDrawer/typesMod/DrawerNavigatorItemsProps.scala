@@ -62,6 +62,8 @@ object DrawerNavigatorItemsProps {
     @scala.inline
     def setGetLabel(value: Scene => ReactElement): Self = this.set("getLabel", js.Any.fromFunction1(value))
     @scala.inline
+    def setItemsVarargs(value: NavigationRoute[NavigationParams]*): Self = this.set("items", js.Array(value :_*))
+    @scala.inline
     def setItems(value: js.Array[NavigationRoute[NavigationParams]]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline
     def setOnItemPress(value: Focused => Unit): Self = this.set("onItemPress", js.Any.fromFunction1(value))

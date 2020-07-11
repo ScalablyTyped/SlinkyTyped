@@ -40,6 +40,8 @@ object ChartTitleOptions {
     @scala.inline
     def deleteDisplay: Self = this.set("display", js.undefined)
     @scala.inline
+    def setFontColorVarargs(value: String*): Self = this.set("fontColor", js.Array(value :_*))
+    @scala.inline
     def setFontColorCanvasPattern(value: CanvasPattern): Self = this.set("fontColor", value.asInstanceOf[js.Any])
     @scala.inline
     def setFontColorCanvasGradient(value: CanvasGradient): Self = this.set("fontColor", value.asInstanceOf[js.Any])
@@ -71,6 +73,8 @@ object ChartTitleOptions {
     def setPosition(value: PositionType): Self = this.set("position", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePosition: Self = this.set("position", js.undefined)
+    @scala.inline
+    def setTextVarargs(value: String*): Self = this.set("text", js.Array(value :_*))
     @scala.inline
     def setText(value: String | js.Array[String]): Self = this.set("text", value.asInstanceOf[js.Any])
     @scala.inline

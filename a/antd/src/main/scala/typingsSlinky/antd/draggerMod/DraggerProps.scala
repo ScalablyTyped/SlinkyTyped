@@ -116,6 +116,8 @@ object DraggerProps {
     @scala.inline
     def deleteData: Self = this.set("data", js.undefined)
     @scala.inline
+    def setDefaultFileListVarargs(value: UploadFile[js.Any]*): Self = this.set("defaultFileList", js.Array(value :_*))
+    @scala.inline
     def setDefaultFileList(value: js.Array[UploadFile[_]]): Self = this.set("defaultFileList", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultFileList: Self = this.set("defaultFileList", js.undefined)
@@ -127,6 +129,8 @@ object DraggerProps {
     def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setFileListVarargs(value: UploadFile[js.Any]*): Self = this.set("fileList", js.Array(value :_*))
     @scala.inline
     def setFileList(value: js.Array[UploadFile[_]]): Self = this.set("fileList", value.asInstanceOf[js.Any])
     @scala.inline

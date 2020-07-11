@@ -23,11 +23,15 @@ object Collapse {
     @scala.inline
     def accordion(value: Boolean): this.type = set("accordion", value.asInstanceOf[js.Any])
     @scala.inline
+    def activeKeyVarargs(value: (String | Double)*): this.type = set("activeKey", js.Array(value :_*))
+    @scala.inline
     def activeKey(value: (js.Array[String | Double]) | String | Double): this.type = set("activeKey", value.asInstanceOf[js.Any])
     @scala.inline
     def bordered(value: Boolean): this.type = set("bordered", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultActiveKeyVarargs(value: (String | Double)*): this.type = set("defaultActiveKey", js.Array(value :_*))
     @scala.inline
     def defaultActiveKey(value: (js.Array[String | Double]) | String | Double): this.type = set("defaultActiveKey", value.asInstanceOf[js.Any])
     @scala.inline

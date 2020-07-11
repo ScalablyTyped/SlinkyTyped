@@ -30,6 +30,8 @@ object VRLayer {
     @scala.inline
     def setLeftBoundsFloat32Array(value: js.typedarray.Float32Array): Self = this.set("leftBounds", value.asInstanceOf[js.Any])
     @scala.inline
+    def setLeftBoundsVarargs(value: Double*): Self = this.set("leftBounds", js.Array(value :_*))
+    @scala.inline
     def setLeftBounds(value: js.Array[Double] | js.typedarray.Float32Array): Self = this.set("leftBounds", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLeftBounds: Self = this.set("leftBounds", js.undefined)
@@ -37,6 +39,8 @@ object VRLayer {
     def setLeftBoundsNull: Self = this.set("leftBounds", null)
     @scala.inline
     def setRightBoundsFloat32Array(value: js.typedarray.Float32Array): Self = this.set("rightBounds", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRightBoundsVarargs(value: Double*): Self = this.set("rightBounds", js.Array(value :_*))
     @scala.inline
     def setRightBounds(value: js.Array[Double] | js.typedarray.Float32Array): Self = this.set("rightBounds", value.asInstanceOf[js.Any])
     @scala.inline

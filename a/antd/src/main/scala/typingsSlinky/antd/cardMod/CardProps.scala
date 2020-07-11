@@ -304,6 +304,8 @@ object CardProps {
     @scala.inline
     def deleteAccessKey: Self = this.set("accessKey", js.undefined)
     @scala.inline
+    def setActionsVarargs(value: ReactElement*): Self = this.set("actions", js.Array(value :_*))
+    @scala.inline
     def setActions(value: js.Array[ReactElement]): Self = this.set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteActions: Self = this.set("actions", js.undefined)
@@ -567,6 +569,8 @@ object CardProps {
     def setDefaultChecked(value: Boolean): Self = this.set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultChecked: Self = this.set("defaultChecked", js.undefined)
+    @scala.inline
+    def setDefaultValueVarargs(value: String*): Self = this.set("defaultValue", js.Array(value :_*))
     @scala.inline
     def setDefaultValue(value: String | Double | js.Array[String]): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -1033,6 +1037,8 @@ object CardProps {
     def setTabIndex(value: Double): Self = this.set("tabIndex", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTabIndex: Self = this.set("tabIndex", js.undefined)
+    @scala.inline
+    def setTabListVarargs(value: CardTabListType*): Self = this.set("tabList", js.Array(value :_*))
     @scala.inline
     def setTabList(value: js.Array[CardTabListType]): Self = this.set("tabList", value.asInstanceOf[js.Any])
     @scala.inline

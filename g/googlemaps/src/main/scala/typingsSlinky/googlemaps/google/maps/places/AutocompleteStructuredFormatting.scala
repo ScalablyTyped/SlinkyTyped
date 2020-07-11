@@ -36,9 +36,13 @@ object AutocompleteStructuredFormatting {
     @scala.inline
     def setMain_text(value: String): Self = this.set("main_text", value.asInstanceOf[js.Any])
     @scala.inline
+    def setMain_text_matched_substringsVarargs(value: PredictionSubstring*): Self = this.set("main_text_matched_substrings", js.Array(value :_*))
+    @scala.inline
     def setMain_text_matched_substrings(value: js.Array[PredictionSubstring]): Self = this.set("main_text_matched_substrings", value.asInstanceOf[js.Any])
     @scala.inline
     def setSecondary_text(value: String): Self = this.set("secondary_text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSecondary_text_matched_substringsVarargs(value: PredictionSubstring*): Self = this.set("secondary_text_matched_substrings", js.Array(value :_*))
     @scala.inline
     def setSecondary_text_matched_substrings(value: js.Array[PredictionSubstring]): Self = this.set("secondary_text_matched_substrings", value.asInstanceOf[js.Any])
     @scala.inline

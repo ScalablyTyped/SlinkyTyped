@@ -61,6 +61,8 @@ object SaveDialogOptions {
     @scala.inline
     def deleteDefaultPath: Self = this.set("defaultPath", js.undefined)
     @scala.inline
+    def setFiltersVarargs(value: FileFilter*): Self = this.set("filters", js.Array(value :_*))
+    @scala.inline
     def setFilters(value: js.Array[FileFilter]): Self = this.set("filters", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFilters: Self = this.set("filters", js.undefined)

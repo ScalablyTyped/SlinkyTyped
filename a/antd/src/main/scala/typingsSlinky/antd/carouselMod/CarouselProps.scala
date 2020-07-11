@@ -241,6 +241,8 @@ object CarouselProps {
     @scala.inline
     def deletePrevArrow: Self = this.set("prevArrow", js.undefined)
     @scala.inline
+    def setResponsiveVarargs(value: ResponsiveObject*): Self = this.set("responsive", js.Array(value :_*))
+    @scala.inline
     def setResponsive(value: js.Array[ResponsiveObject]): Self = this.set("responsive", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteResponsive: Self = this.set("responsive", js.undefined)

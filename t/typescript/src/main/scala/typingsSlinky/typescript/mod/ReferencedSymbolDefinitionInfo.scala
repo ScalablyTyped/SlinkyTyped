@@ -34,6 +34,8 @@ object ReferencedSymbolDefinitionInfo {
         x
     }
     @scala.inline
+    def setDisplayPartsVarargs(value: SymbolDisplayPart*): Self = this.set("displayParts", js.Array(value :_*))
+    @scala.inline
     def setDisplayParts(value: js.Array[SymbolDisplayPart]): Self = this.set("displayParts", value.asInstanceOf[js.Any])
   }
   

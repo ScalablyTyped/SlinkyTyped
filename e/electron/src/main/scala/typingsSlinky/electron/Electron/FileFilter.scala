@@ -28,6 +28,8 @@ object FileFilter {
         x
     }
     @scala.inline
+    def setExtensionsVarargs(value: String*): Self = this.set("extensions", js.Array(value :_*))
+    @scala.inline
     def setExtensions(value: js.Array[String]): Self = this.set("extensions", value.asInstanceOf[js.Any])
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

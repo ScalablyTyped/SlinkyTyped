@@ -562,6 +562,8 @@ object ExpansionPanelProps {
     @scala.inline
     def deleteDefaultExpanded: Self = this.set("defaultExpanded", js.undefined)
     @scala.inline
+    def setDefaultValueVarargs(value: String*): Self = this.set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def setDefaultValue(value: String | Double | js.Array[String]): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)

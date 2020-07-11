@@ -89,6 +89,8 @@ object NativeConstants {
     @scala.inline
     def setStatusBarHeight(value: Double): Self = this.set("statusBarHeight", value.asInstanceOf[js.Any])
     @scala.inline
+    def setSystemFontsVarargs(value: String*): Self = this.set("systemFonts", js.Array(value :_*))
+    @scala.inline
     def setSystemFonts(value: js.Array[String]): Self = this.set("systemFonts", value.asInstanceOf[js.Any])
     @scala.inline
     def setDeviceName(value: String): Self = this.set("deviceName", value.asInstanceOf[js.Any])

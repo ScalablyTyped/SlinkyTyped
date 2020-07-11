@@ -28,6 +28,8 @@ object DrawingControlOptions {
         x
     }
     @scala.inline
+    def setDrawingModesVarargs(value: OverlayType*): Self = this.set("drawingModes", js.Array(value :_*))
+    @scala.inline
     def setDrawingModes(value: js.Array[OverlayType]): Self = this.set("drawingModes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDrawingModes: Self = this.set("drawingModes", js.undefined)

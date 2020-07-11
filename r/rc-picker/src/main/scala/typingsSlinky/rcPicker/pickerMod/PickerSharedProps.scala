@@ -118,6 +118,8 @@ object PickerSharedProps {
     @scala.inline
     def deleteDropdownClassName: Self = this.set("dropdownClassName", js.undefined)
     @scala.inline
+    def setFormatVarargs(value: String*): Self = this.set("format", js.Array(value :_*))
+    @scala.inline
     def setFormat(value: String | js.Array[String]): Self = this.set("format", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)

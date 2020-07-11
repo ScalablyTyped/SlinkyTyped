@@ -26,6 +26,8 @@ object ComponentRestrictions {
         x
     }
     @scala.inline
+    def setCountryVarargs(value: String*): Self = this.set("country", js.Array(value :_*))
+    @scala.inline
     def setCountry(value: String | js.Array[String]): Self = this.set("country", value.asInstanceOf[js.Any])
   }
   

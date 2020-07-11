@@ -75,6 +75,8 @@ object JsonWebKey {
     @scala.inline
     def deleteK: Self = this.set("k", js.undefined)
     @scala.inline
+    def setKey_opsVarargs(value: java.lang.String*): Self = this.set("key_ops", js.Array(value :_*))
+    @scala.inline
     def setKey_ops(value: js.Array[java.lang.String]): Self = this.set("key_ops", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteKey_ops: Self = this.set("key_ops", js.undefined)
@@ -86,6 +88,8 @@ object JsonWebKey {
     def setN(value: java.lang.String): Self = this.set("n", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteN: Self = this.set("n", js.undefined)
+    @scala.inline
+    def setOthVarargs(value: org.scalajs.dom.crypto.RsaOtherPrimesInfo*): Self = this.set("oth", js.Array(value :_*))
     @scala.inline
     def setOth(value: js.Array[org.scalajs.dom.crypto.RsaOtherPrimesInfo]): Self = this.set("oth", value.asInstanceOf[js.Any])
     @scala.inline

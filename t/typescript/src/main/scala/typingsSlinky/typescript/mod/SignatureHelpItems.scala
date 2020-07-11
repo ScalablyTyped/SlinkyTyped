@@ -45,6 +45,8 @@ object SignatureHelpItems {
     @scala.inline
     def setArgumentIndex(value: Double): Self = this.set("argumentIndex", value.asInstanceOf[js.Any])
     @scala.inline
+    def setItemsVarargs(value: SignatureHelpItem*): Self = this.set("items", js.Array(value :_*))
+    @scala.inline
     def setItems(value: js.Array[SignatureHelpItem]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline
     def setSelectedItemIndex(value: Double): Self = this.set("selectedItemIndex", value.asInstanceOf[js.Any])

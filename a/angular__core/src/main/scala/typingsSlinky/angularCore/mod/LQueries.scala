@@ -61,6 +61,8 @@ object LQueries {
     @scala.inline
     def setInsertView(value: TView => Unit): Self = this.set("insertView", js.Any.fromFunction1(value))
     @scala.inline
+    def setQueriesVarargs(value: LQuery[js.Any]*): Self = this.set("queries", js.Array(value :_*))
+    @scala.inline
     def setQueries(value: js.Array[LQuery[_]]): Self = this.set("queries", value.asInstanceOf[js.Any])
   }
   

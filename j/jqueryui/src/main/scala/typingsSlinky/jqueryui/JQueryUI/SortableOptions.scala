@@ -119,6 +119,8 @@ object SortableOptions {
     @scala.inline
     def deleteForcePlaceholderSize: Self = this.set("forcePlaceholderSize", js.undefined)
     @scala.inline
+    def setGridVarargs(value: Double*): Self = this.set("grid", js.Array(value :_*))
+    @scala.inline
     def setGrid(value: js.Array[Double]): Self = this.set("grid", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteGrid: Self = this.set("grid", js.undefined)

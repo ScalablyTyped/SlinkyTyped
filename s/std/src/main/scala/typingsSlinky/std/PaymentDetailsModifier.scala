@@ -29,7 +29,11 @@ object PaymentDetailsModifier {
         x
     }
     @scala.inline
+    def setSupportedMethodsVarargs(value: java.lang.String*): Self = this.set("supportedMethods", js.Array(value :_*))
+    @scala.inline
     def setSupportedMethods(value: java.lang.String | js.Array[java.lang.String]): Self = this.set("supportedMethods", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAdditionalDisplayItemsVarargs(value: PaymentItem*): Self = this.set("additionalDisplayItems", js.Array(value :_*))
     @scala.inline
     def setAdditionalDisplayItems(value: js.Array[PaymentItem]): Self = this.set("additionalDisplayItems", value.asInstanceOf[js.Any])
     @scala.inline

@@ -42,6 +42,8 @@ object CompilerOptions {
     @scala.inline
     def deletePreserveWhitespaces: Self = this.set("preserveWhitespaces", js.undefined)
     @scala.inline
+    def setProvidersVarargs(value: StaticProvider*): Self = this.set("providers", js.Array(value :_*))
+    @scala.inline
     def setProviders(value: js.Array[StaticProvider]): Self = this.set("providers", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteProviders: Self = this.set("providers", js.undefined)

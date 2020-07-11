@@ -27,6 +27,8 @@ object CallHierarchyOutgoingCall {
         x
     }
     @scala.inline
+    def setFromSpansVarargs(value: TextSpan*): Self = this.set("fromSpans", js.Array(value :_*))
+    @scala.inline
     def setFromSpans(value: js.Array[TextSpan]): Self = this.set("fromSpans", value.asInstanceOf[js.Any])
     @scala.inline
     def setTo(value: CallHierarchyItem): Self = this.set("to", value.asInstanceOf[js.Any])

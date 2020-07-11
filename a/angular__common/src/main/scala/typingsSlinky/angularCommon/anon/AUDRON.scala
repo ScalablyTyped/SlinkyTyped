@@ -28,9 +28,15 @@ object AUDRON {
         x
     }
     @scala.inline
+    def setAUDVarargs(value: String*): Self = this.set("AUD", js.Array(value :_*))
+    @scala.inline
     def setAUD(value: js.Array[String]): Self = this.set("AUD", value.asInstanceOf[js.Any])
     @scala.inline
+    def setRONVarargs(value: js.UndefOr[String]*): Self = this.set("RON", js.Array(value :_*))
+    @scala.inline
     def setRON(value: js.Array[js.UndefOr[String]]): Self = this.set("RON", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUSDVarargs(value: String*): Self = this.set("USD", js.Array(value :_*))
     @scala.inline
     def setUSD(value: js.Array[String]): Self = this.set("USD", value.asInstanceOf[js.Any])
   }

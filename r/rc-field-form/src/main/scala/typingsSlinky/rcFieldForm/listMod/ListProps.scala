@@ -31,6 +31,8 @@ object ListProps {
         x
     }
     @scala.inline
+    def setNameVarargs(value: (String | Double)*): Self = this.set("name", js.Array(value :_*))
+    @scala.inline
     def setName(value: NamePath): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
     def setChildren(value: (/* fields */ js.Array[ListField], /* operations */ ListOperations) => ReactElement): Self = this.set("children", js.Any.fromFunction2(value))

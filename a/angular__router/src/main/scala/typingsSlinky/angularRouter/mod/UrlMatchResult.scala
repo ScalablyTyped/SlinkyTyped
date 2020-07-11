@@ -28,6 +28,8 @@ object UrlMatchResult {
         x
     }
     @scala.inline
+    def setConsumedVarargs(value: UrlSegment*): Self = this.set("consumed", js.Array(value :_*))
+    @scala.inline
     def setConsumed(value: js.Array[UrlSegment]): Self = this.set("consumed", value.asInstanceOf[js.Any])
     @scala.inline
     def setPosParams(value: StringDictionary[UrlSegment]): Self = this.set("posParams", value.asInstanceOf[js.Any])

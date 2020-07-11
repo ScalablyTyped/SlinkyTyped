@@ -87,6 +87,8 @@ object Patch {
     @scala.inline
     def deleteNavigate: Self = this.set("navigate", js.undefined)
     @scala.inline
+    def setNotificationsVarargs(value: Notification*): Self = this.set("notifications", js.Array(value :_*))
+    @scala.inline
     def setNotifications(value: js.Array[Notification]): Self = this.set("notifications", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNotifications: Self = this.set("notifications", js.undefined)

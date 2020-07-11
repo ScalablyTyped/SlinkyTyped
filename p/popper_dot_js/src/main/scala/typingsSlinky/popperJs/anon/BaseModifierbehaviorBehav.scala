@@ -41,6 +41,8 @@ object BaseModifierbehaviorBehav {
         x
     }
     @scala.inline
+    def setBehaviorVarargs(value: Position*): Self = this.set("behavior", js.Array(value :_*))
+    @scala.inline
     def setBehavior(value: Behavior | js.Array[Position]): Self = this.set("behavior", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBehavior: Self = this.set("behavior", js.undefined)

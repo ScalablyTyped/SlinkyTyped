@@ -210,6 +210,8 @@ object ListItem {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -267,6 +269,8 @@ object ListItem {
     def leftCheckbox(value: ReactElement): this.type = set("leftCheckbox", value.asInstanceOf[js.Any])
     @scala.inline
     def leftIcon(value: ReactElement): this.type = set("leftIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nestedItemsVarargs(value: ReactElement*): this.type = set("nestedItems", js.Array(value :_*))
     @scala.inline
     def nestedItems(value: js.Array[ReactElement]): this.type = set("nestedItems", value.asInstanceOf[js.Any])
     @scala.inline

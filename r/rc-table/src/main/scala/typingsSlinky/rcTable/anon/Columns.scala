@@ -3,6 +3,8 @@ package typingsSlinky.rcTable.anon
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.rcTable.interfaceMod.ColumnGroupType
+import typingsSlinky.rcTable.interfaceMod.ColumnType
 import typingsSlinky.rcTable.interfaceMod.ColumnsType
 import typingsSlinky.rcTable.interfaceMod.GetRowKey
 import typingsSlinky.rcTable.interfaceMod.Key
@@ -67,6 +69,8 @@ object Columns {
     def setChildren(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
+    @scala.inline
+    def setColumnsVarargs(value: (ColumnGroupType[RecordType] | ColumnType[RecordType])*): Self = this.set("columns", js.Array(value :_*))
     @scala.inline
     def setColumns(value: ColumnsType[RecordType]): Self = this.set("columns", value.asInstanceOf[js.Any])
     @scala.inline

@@ -60,6 +60,8 @@ object RootContext {
     @scala.inline
     def setClean(value: js.Promise[Null]): Self = this.set("clean", value.asInstanceOf[js.Any])
     @scala.inline
+    def setComponentsVarargs(value: js.Object*): Self = this.set("components", js.Array(value :_*))
+    @scala.inline
     def setComponents(value: js.Array[js.Object]): Self = this.set("components", value.asInstanceOf[js.Any])
     @scala.inline
     def setFlags(value: RootContextFlags): Self = this.set("flags", value.asInstanceOf[js.Any])

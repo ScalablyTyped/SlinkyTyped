@@ -32,7 +32,11 @@ object Lights {
     @scala.inline
     def setLights(value: WebGLLights): Self = this.set("lights", value.asInstanceOf[js.Any])
     @scala.inline
+    def setLightsArrayVarargs(value: Light*): Self = this.set("lightsArray", js.Array(value :_*))
+    @scala.inline
     def setLightsArray(value: js.Array[Light]): Self = this.set("lightsArray", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setShadowsArrayVarargs(value: Light*): Self = this.set("shadowsArray", js.Array(value :_*))
     @scala.inline
     def setShadowsArray(value: js.Array[Light]): Self = this.set("shadowsArray", value.asInstanceOf[js.Any])
   }

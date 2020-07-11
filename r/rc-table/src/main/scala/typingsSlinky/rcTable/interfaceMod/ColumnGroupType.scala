@@ -26,6 +26,8 @@ object ColumnGroupType {
         x
     }
     @scala.inline
+    def setChildrenVarargs(value: (ColumnGroupType[RecordType] | ColumnType[RecordType])*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: ColumnsType[RecordType]): Self = this.set("children", value.asInstanceOf[js.Any])
   }
   

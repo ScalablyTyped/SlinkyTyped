@@ -28,6 +28,8 @@ object FlowLabel {
         x
     }
     @scala.inline
+    def setAntecedentsVarargs(value: FlowNode*): Self = this.set("antecedents", js.Array(value :_*))
+    @scala.inline
     def setAntecedents(value: js.Array[FlowNode]): Self = this.set("antecedents", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAntecedents: Self = this.set("antecedents", js.undefined)

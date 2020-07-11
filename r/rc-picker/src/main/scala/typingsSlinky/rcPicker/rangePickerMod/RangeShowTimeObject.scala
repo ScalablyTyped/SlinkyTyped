@@ -39,6 +39,8 @@ object RangeShowTimeObject {
         x
     }
     @scala.inline
+    def setDefaultValueVarargs(value: DateType*): Self = this.set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def setDefaultValue(value: js.Array[DateType]): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)

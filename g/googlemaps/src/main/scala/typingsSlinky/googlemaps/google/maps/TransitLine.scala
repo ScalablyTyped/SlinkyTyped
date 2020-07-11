@@ -42,6 +42,8 @@ object TransitLine {
         x
     }
     @scala.inline
+    def setAgenciesVarargs(value: TransitAgency*): Self = this.set("agencies", js.Array(value :_*))
+    @scala.inline
     def setAgencies(value: js.Array[TransitAgency]): Self = this.set("agencies", value.asInstanceOf[js.Any])
     @scala.inline
     def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])

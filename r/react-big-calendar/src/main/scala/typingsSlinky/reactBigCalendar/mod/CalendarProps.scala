@@ -179,6 +179,8 @@ object CalendarProps {
     @scala.inline
     def deleteEventPropGetter: Self = this.set("eventPropGetter", js.undefined)
     @scala.inline
+    def setEventsVarargs(value: TEvent*): Self = this.set("events", js.Array(value :_*))
+    @scala.inline
     def setEvents(value: js.Array[TEvent]): Self = this.set("events", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEvents: Self = this.set("events", js.undefined)
@@ -289,6 +291,8 @@ object CalendarProps {
     @scala.inline
     def deleteResourceTitleAccessor: Self = this.set("resourceTitleAccessor", js.undefined)
     @scala.inline
+    def setResourcesVarargs(value: TResource*): Self = this.set("resources", js.Array(value :_*))
+    @scala.inline
     def setResources(value: js.Array[TResource]): Self = this.set("resources", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteResources: Self = this.set("resources", js.undefined)
@@ -356,6 +360,8 @@ object CalendarProps {
     def setView(value: View): Self = this.set("view", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteView: Self = this.set("view", js.undefined)
+    @scala.inline
+    def setViewsVarargs(value: View*): Self = this.set("views", js.Array(value :_*))
     @scala.inline
     def setViews(value: ViewsProps): Self = this.set("views", value.asInstanceOf[js.Any])
     @scala.inline

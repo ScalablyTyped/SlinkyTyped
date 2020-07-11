@@ -91,6 +91,8 @@ object ReactSlick {
     @scala.inline
     def prevArrow(value: ReactElement): this.type = set("prevArrow", value.asInstanceOf[js.Any])
     @scala.inline
+    def responsiveVarargs(value: ResponsiveObject*): this.type = set("responsive", js.Array(value :_*))
+    @scala.inline
     def responsive(value: js.Array[ResponsiveObject]): this.type = set("responsive", value.asInstanceOf[js.Any])
     @scala.inline
     def rows(value: Double): this.type = set("rows", value.asInstanceOf[js.Any])

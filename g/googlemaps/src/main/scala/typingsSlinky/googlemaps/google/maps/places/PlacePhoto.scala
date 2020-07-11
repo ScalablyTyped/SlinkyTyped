@@ -33,6 +33,8 @@ object PlacePhoto {
     @scala.inline
     def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
     @scala.inline
+    def setHtml_attributionsVarargs(value: String*): Self = this.set("html_attributions", js.Array(value :_*))
+    @scala.inline
     def setHtml_attributions(value: js.Array[String]): Self = this.set("html_attributions", value.asInstanceOf[js.Any])
     @scala.inline
     def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])

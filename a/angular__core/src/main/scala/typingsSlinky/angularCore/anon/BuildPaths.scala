@@ -27,7 +27,11 @@ object BuildPaths {
         x
     }
     @scala.inline
+    def setBuildPathsVarargs(value: String*): Self = this.set("buildPaths", js.Array(value :_*))
+    @scala.inline
     def setBuildPaths(value: js.Array[String]): Self = this.set("buildPaths", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTestPathsVarargs(value: String*): Self = this.set("testPaths", js.Array(value :_*))
     @scala.inline
     def setTestPaths(value: js.Array[String]): Self = this.set("testPaths", value.asInstanceOf[js.Any])
   }

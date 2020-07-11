@@ -28,6 +28,8 @@ object DropdownMenuProps {
         x
     }
     @scala.inline
+    def setOptionsVarargs(value: OptionProps*): Self = this.set("options", js.Array(value :_*))
+    @scala.inline
     def setOptions(value: js.Array[OptionProps]): Self = this.set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])

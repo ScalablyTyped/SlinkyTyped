@@ -44,6 +44,8 @@ object EmitHelper {
       value: java.lang.String | (js.Function1[/* node */ EmitHelperUniqueNameCallback, java.lang.String])
     ): Self = this.set("text", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDependenciesVarargs(value: EmitHelper*): Self = this.set("dependencies", js.Array(value :_*))
+    @scala.inline
     def setDependencies(value: js.Array[EmitHelper]): Self = this.set("dependencies", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDependencies: Self = this.set("dependencies", js.undefined)

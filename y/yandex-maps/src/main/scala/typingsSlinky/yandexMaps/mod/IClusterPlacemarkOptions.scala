@@ -100,6 +100,8 @@ object IClusterPlacemarkOptions {
     @scala.inline
     def deleteIconShape: Self = this.set("iconShape", js.undefined)
     @scala.inline
+    def setIconsVarargs(value: Href*): Self = this.set("icons", js.Array(value :_*))
+    @scala.inline
     def setIcons(value: js.Array[Href]): Self = this.set("icons", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcons: Self = this.set("icons", js.undefined)
@@ -107,6 +109,8 @@ object IClusterPlacemarkOptions {
     def setInteractivityModel(value: InteractivityModelKey): Self = this.set("interactivityModel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInteractivityModel: Self = this.set("interactivityModel", js.undefined)
+    @scala.inline
+    def setNumbersVarargs(value: Double*): Self = this.set("numbers", js.Array(value :_*))
     @scala.inline
     def setNumbers(value: js.Array[Double]): Self = this.set("numbers", value.asInstanceOf[js.Any])
     @scala.inline

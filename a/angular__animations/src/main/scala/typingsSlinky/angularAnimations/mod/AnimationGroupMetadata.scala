@@ -36,6 +36,8 @@ object AnimationGroupMetadata {
         x
     }
     @scala.inline
+    def setStepsVarargs(value: AnimationMetadata*): Self = this.set("steps", js.Array(value :_*))
+    @scala.inline
     def setSteps(value: js.Array[AnimationMetadata]): Self = this.set("steps", value.asInstanceOf[js.Any])
     @scala.inline
     def setOptions(value: AnimationOptions): Self = this.set("options", value.asInstanceOf[js.Any])

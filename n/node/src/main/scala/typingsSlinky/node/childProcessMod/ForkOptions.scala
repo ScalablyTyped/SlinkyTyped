@@ -1,5 +1,10 @@
 package typingsSlinky.node.childProcessMod
 
+import typingsSlinky.node.nodeStrings.ignore
+import typingsSlinky.node.nodeStrings.inherit
+import typingsSlinky.node.nodeStrings.ipc
+import typingsSlinky.node.nodeStrings.pipe
+import typingsSlinky.node.streamMod.Stream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,6 +42,8 @@ object ForkOptions {
     @scala.inline
     def deleteDetached: Self = this.set("detached", js.undefined)
     @scala.inline
+    def setExecArgvVarargs(value: String*): Self = this.set("execArgv", js.Array(value :_*))
+    @scala.inline
     def setExecArgv(value: js.Array[String]): Self = this.set("execArgv", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExecArgv: Self = this.set("execArgv", js.undefined)
@@ -48,6 +55,8 @@ object ForkOptions {
     def setSilent(value: Boolean): Self = this.set("silent", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSilent: Self = this.set("silent", js.undefined)
+    @scala.inline
+    def setStdioVarargs(value: (js.UndefOr[pipe | ipc | ignore | inherit | Stream | Double | Null])*): Self = this.set("stdio", js.Array(value :_*))
     @scala.inline
     def setStdio(value: StdioOptions): Self = this.set("stdio", value.asInstanceOf[js.Any])
     @scala.inline

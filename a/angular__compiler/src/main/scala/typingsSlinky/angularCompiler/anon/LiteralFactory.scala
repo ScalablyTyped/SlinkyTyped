@@ -32,6 +32,8 @@ object LiteralFactory {
     @scala.inline
     def setLiteralFactory(value: typingsSlinky.angularCompiler.outputAstMod.Expression): Self = this.set("literalFactory", value.asInstanceOf[js.Any])
     @scala.inline
+    def setLiteralFactoryArgumentsVarargs(value: typingsSlinky.angularCompiler.outputAstMod.Expression*): Self = this.set("literalFactoryArguments", js.Array(value :_*))
+    @scala.inline
     def setLiteralFactoryArguments(value: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression]): Self = this.set("literalFactoryArguments", value.asInstanceOf[js.Any])
   }
   

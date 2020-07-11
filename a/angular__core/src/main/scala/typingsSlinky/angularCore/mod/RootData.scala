@@ -48,6 +48,8 @@ object RootData {
     @scala.inline
     def setNgModule(value: NgModuleRef[_]): Self = this.set("ngModule", value.asInstanceOf[js.Any])
     @scala.inline
+    def setProjectableNodesVarargs(value: js.Array[js.Any]*): Self = this.set("projectableNodes", js.Array(value :_*))
+    @scala.inline
     def setProjectableNodes(value: js.Array[js.Array[_]]): Self = this.set("projectableNodes", value.asInstanceOf[js.Any])
     @scala.inline
     def setRenderer(value: Renderer2): Self = this.set("renderer", value.asInstanceOf[js.Any])

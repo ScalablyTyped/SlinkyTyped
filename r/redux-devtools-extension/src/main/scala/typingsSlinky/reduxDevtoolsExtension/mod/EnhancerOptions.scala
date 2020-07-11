@@ -142,6 +142,8 @@ object EnhancerOptions {
         x
     }
     @scala.inline
+    def setActionCreatorsVarargs(value: ActionCreator[js.Any]*): Self = this.set("actionCreators", js.Array(value :_*))
+    @scala.inline
     def setActionCreators(value: js.Array[ActionCreator[_]] | StringDictionary[ActionCreator[_]]): Self = this.set("actionCreators", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteActionCreators: Self = this.set("actionCreators", js.undefined)
@@ -150,9 +152,13 @@ object EnhancerOptions {
     @scala.inline
     def deleteActionSanitizer: Self = this.set("actionSanitizer", js.undefined)
     @scala.inline
+    def setActionsBlacklistVarargs(value: String*): Self = this.set("actionsBlacklist", js.Array(value :_*))
+    @scala.inline
     def setActionsBlacklist(value: String | js.Array[String]): Self = this.set("actionsBlacklist", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteActionsBlacklist: Self = this.set("actionsBlacklist", js.undefined)
+    @scala.inline
+    def setActionsWhitelistVarargs(value: String*): Self = this.set("actionsWhitelist", js.Array(value :_*))
     @scala.inline
     def setActionsWhitelist(value: String | js.Array[String]): Self = this.set("actionsWhitelist", value.asInstanceOf[js.Any])
     @scala.inline

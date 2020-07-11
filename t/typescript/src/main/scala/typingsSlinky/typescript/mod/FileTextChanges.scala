@@ -30,6 +30,8 @@ object FileTextChanges {
     @scala.inline
     def setFileName(value: java.lang.String): Self = this.set("fileName", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTextChangesVarargs(value: TextChange*): Self = this.set("textChanges", js.Array(value :_*))
+    @scala.inline
     def setTextChanges(value: js.Array[TextChange]): Self = this.set("textChanges", value.asInstanceOf[js.Any])
     @scala.inline
     def setIsNewFile(value: Boolean): Self = this.set("isNewFile", value.asInstanceOf[js.Any])

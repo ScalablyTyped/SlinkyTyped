@@ -28,6 +28,8 @@ object QueryDef {
         x
     }
     @scala.inline
+    def setBindingsVarargs(value: QueryBindingDef*): Self = this.set("bindings", js.Array(value :_*))
+    @scala.inline
     def setBindings(value: js.Array[QueryBindingDef]): Self = this.set("bindings", value.asInstanceOf[js.Any])
     @scala.inline
     def setFilterId(value: Double): Self = this.set("filterId", value.asInstanceOf[js.Any])

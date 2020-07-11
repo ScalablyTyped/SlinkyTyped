@@ -31,6 +31,8 @@ object UploadChangeParam {
     @scala.inline
     def setFile(value: T): Self = this.set("file", value.asInstanceOf[js.Any])
     @scala.inline
+    def setFileListVarargs(value: UploadFile[js.Any]*): Self = this.set("fileList", js.Array(value :_*))
+    @scala.inline
     def setFileList(value: js.Array[UploadFile[_]]): Self = this.set("fileList", value.asInstanceOf[js.Any])
     @scala.inline
     def setEvent(value: Percent): Self = this.set("event", value.asInstanceOf[js.Any])

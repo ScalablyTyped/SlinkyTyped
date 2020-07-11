@@ -29,6 +29,8 @@ object HeapStatsUpdateEventDataType {
         x
     }
     @scala.inline
+    def setStatsUpdateVarargs(value: Double*): Self = this.set("statsUpdate", js.Array(value :_*))
+    @scala.inline
     def setStatsUpdate(value: js.Array[Double]): Self = this.set("statsUpdate", value.asInstanceOf[js.Any])
   }
   

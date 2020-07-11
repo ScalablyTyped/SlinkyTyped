@@ -107,6 +107,8 @@ object ImagePropsBase {
         x
     }
     @scala.inline
+    def setSourceVarargs(value: ImageURISource*): Self = this.set("source", js.Array(value :_*))
+    @scala.inline
     def setSource(value: ImageSourcePropType): Self = this.set("source", value.asInstanceOf[js.Any])
     @scala.inline
     def setBorderBottomLeftRadius(value: Double): Self = this.set("borderBottomLeftRadius", value.asInstanceOf[js.Any])

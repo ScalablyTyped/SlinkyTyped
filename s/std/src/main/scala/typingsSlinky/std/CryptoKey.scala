@@ -42,6 +42,8 @@ object CryptoKey {
     @scala.inline
     def setType(value: org.scalajs.dom.crypto.KeyType): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
+    def setUsagesVarargs(value: org.scalajs.dom.crypto.KeyUsage*): Self = this.set("usages", js.Array(value :_*))
+    @scala.inline
     def setUsages(value: js.Array[org.scalajs.dom.crypto.KeyUsage]): Self = this.set("usages", value.asInstanceOf[js.Any])
   }
   

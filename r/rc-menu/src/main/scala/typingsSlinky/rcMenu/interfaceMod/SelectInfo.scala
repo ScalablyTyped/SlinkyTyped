@@ -30,6 +30,8 @@ object SelectInfo {
         x
     }
     @scala.inline
+    def setSelectedKeysVarargs(value: Key*): Self = this.set("selectedKeys", js.Array(value :_*))
+    @scala.inline
     def setSelectedKeys(value: js.Array[Key]): Self = this.set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSelectedKeys: Self = this.set("selectedKeys", js.undefined)

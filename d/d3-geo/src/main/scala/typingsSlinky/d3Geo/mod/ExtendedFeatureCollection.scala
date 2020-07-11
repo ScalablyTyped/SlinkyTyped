@@ -34,6 +34,8 @@ object ExtendedFeatureCollection {
         x
     }
     @scala.inline
+    def setFeaturesVarargs(value: FeatureType*): Self = this.set("features", js.Array(value :_*))
+    @scala.inline
     def setFeatures(value: js.Array[FeatureType]): Self = this.set("features", value.asInstanceOf[js.Any])
   }
   

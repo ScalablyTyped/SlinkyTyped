@@ -35,6 +35,8 @@ object DirectionsGeocodedWaypoint {
     @scala.inline
     def setPlace_id(value: String): Self = this.set("place_id", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTypesVarargs(value: String*): Self = this.set("types", js.Array(value :_*))
+    @scala.inline
     def setTypes(value: js.Array[String]): Self = this.set("types", value.asInstanceOf[js.Any])
   }
   

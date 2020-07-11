@@ -44,6 +44,8 @@ object SegmentedControlIOS {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNative.mod.SegmentedControlIOS] {
     @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -61,6 +63,8 @@ object SegmentedControlIOS {
     def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
@@ -165,6 +169,8 @@ object SegmentedControlIOS {
     def tvParallaxShiftDistanceY(value: Double): this.type = set("tvParallaxShiftDistanceY", value.asInstanceOf[js.Any])
     @scala.inline
     def tvParallaxTiltAngle(value: Double): this.type = set("tvParallaxTiltAngle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valuesVarargs(value: String*): this.type = set("values", js.Array(value :_*))
     @scala.inline
     def values(value: js.Array[String]): this.type = set("values", value.asInstanceOf[js.Any])
   }

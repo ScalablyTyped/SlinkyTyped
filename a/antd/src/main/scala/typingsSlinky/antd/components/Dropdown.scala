@@ -54,6 +54,8 @@ object Dropdown {
     @scala.inline
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
     @scala.inline
+    def triggerVarargs(value: (click | hover | contextMenu)*): this.type = set("trigger", js.Array(value :_*))
+    @scala.inline
     def trigger(value: js.Array[click | hover | contextMenu]): this.type = set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
     def visible(value: Boolean): this.type = set("visible", value.asInstanceOf[js.Any])

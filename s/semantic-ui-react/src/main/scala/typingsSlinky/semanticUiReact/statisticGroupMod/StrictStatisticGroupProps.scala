@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
 import typingsSlinky.semanticUiReact.statisticStatisticMod.StatisticProps
 import typingsSlinky.semanticUiReact.statisticStatisticMod.StatisticSizeProp
@@ -83,6 +84,8 @@ object StrictStatisticGroupProps {
     def setInverted(value: Boolean): Self = this.set("inverted", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInverted: Self = this.set("inverted", js.undefined)
+    @scala.inline
+    def setItemsVarargs(value: SemanticShorthandItem[StatisticProps]*): Self = this.set("items", js.Array(value :_*))
     @scala.inline
     def setItems(value: SemanticShorthandCollection[StatisticProps]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline

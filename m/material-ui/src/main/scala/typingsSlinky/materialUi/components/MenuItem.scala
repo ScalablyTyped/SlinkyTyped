@@ -216,6 +216,8 @@ object MenuItem {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def desktop(value: Boolean): this.type = set("desktop", value.asInstanceOf[js.Any])
@@ -285,6 +287,8 @@ object MenuItem {
     def menuItemsReactElement(value: ReactElement): this.type = set("menuItems", value.asInstanceOf[js.Any])
     @scala.inline
     def menuItems(value: ReactElement): this.type = set("menuItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def nestedItemsVarargs(value: ReactElement*): this.type = set("nestedItems", js.Array(value :_*))
     @scala.inline
     def nestedItems(value: js.Array[ReactElement]): this.type = set("nestedItems", value.asInstanceOf[js.Any])
     @scala.inline

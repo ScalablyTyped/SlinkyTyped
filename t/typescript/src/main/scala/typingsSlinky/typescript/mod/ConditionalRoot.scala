@@ -59,9 +59,13 @@ object ConditionalRoot {
     @scala.inline
     def deleteAliasSymbol: Self = this.set("aliasSymbol", js.undefined)
     @scala.inline
+    def setAliasTypeArgumentsVarargs(value: Type*): Self = this.set("aliasTypeArguments", js.Array(value :_*))
+    @scala.inline
     def setAliasTypeArguments(value: js.Array[Type]): Self = this.set("aliasTypeArguments", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAliasTypeArguments: Self = this.set("aliasTypeArguments", js.undefined)
+    @scala.inline
+    def setInferTypeParametersVarargs(value: TypeParameter*): Self = this.set("inferTypeParameters", js.Array(value :_*))
     @scala.inline
     def setInferTypeParameters(value: js.Array[TypeParameter]): Self = this.set("inferTypeParameters", value.asInstanceOf[js.Any])
     @scala.inline
@@ -70,6 +74,8 @@ object ConditionalRoot {
     def setInstantiations(value: Map[Type]): Self = this.set("instantiations", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInstantiations: Self = this.set("instantiations", js.undefined)
+    @scala.inline
+    def setOuterTypeParametersVarargs(value: TypeParameter*): Self = this.set("outerTypeParameters", js.Array(value :_*))
     @scala.inline
     def setOuterTypeParameters(value: js.Array[TypeParameter]): Self = this.set("outerTypeParameters", value.asInstanceOf[js.Any])
     @scala.inline

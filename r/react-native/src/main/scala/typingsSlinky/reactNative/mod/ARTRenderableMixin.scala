@@ -48,6 +48,8 @@ object ARTRenderableMixin {
     @scala.inline
     def deleteStrokeCap: Self = this.set("strokeCap", js.undefined)
     @scala.inline
+    def setStrokeDashVarargs(value: Double*): Self = this.set("strokeDash", js.Array(value :_*))
+    @scala.inline
     def setStrokeDash(value: js.Array[Double]): Self = this.set("strokeDash", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStrokeDash: Self = this.set("strokeDash", js.undefined)

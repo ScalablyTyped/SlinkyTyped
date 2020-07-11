@@ -26,6 +26,8 @@ object ATSArray {
         x
     }
     @scala.inline
+    def setATSVarargs(value: String*): Self = this.set("ATS", js.Array(value :_*))
+    @scala.inline
     def setATS(value: js.Array[String]): Self = this.set("ATS", value.asInstanceOf[js.Any])
   }
   

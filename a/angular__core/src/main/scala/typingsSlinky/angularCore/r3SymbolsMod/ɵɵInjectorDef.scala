@@ -38,7 +38,13 @@ object ɵɵInjectorDef {
     @scala.inline
     def setFactory(value: () => T): Self = this.set("factory", js.Any.fromFunction0(value))
     @scala.inline
+    def setImportsVarargs(value: (InjectorType[js.Any] | InjectorTypeWithProviders[js.Any])*): Self = this.set("imports", js.Array(value :_*))
+    @scala.inline
     def setImports(value: js.Array[InjectorType[_] | InjectorTypeWithProviders[_]]): Self = this.set("imports", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProvidersVarargs(
+      value: (Type[js.Any] | ValueProvider | ExistingProvider | FactoryProvider | ConstructorProvider | StaticClassProvider | ClassProvider | js.Array[js.Any])*
+    ): Self = this.set("providers", js.Array(value :_*))
     @scala.inline
     def setProviders(
       value: js.Array[

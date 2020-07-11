@@ -67,6 +67,8 @@ object IPlacemarkOptions {
     @scala.inline
     def deleteHideIconOnBalloonOpen: Self = this.set("hideIconOnBalloonOpen", js.undefined)
     @scala.inline
+    def setIconOffsetVarargs(value: Double*): Self = this.set("iconOffset", js.Array(value :_*))
+    @scala.inline
     def setIconOffset(value: js.Array[Double]): Self = this.set("iconOffset", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIconOffset: Self = this.set("iconOffset", js.undefined)

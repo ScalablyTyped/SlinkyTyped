@@ -634,6 +634,8 @@ object PartialListItemProps {
     @scala.inline
     def deleteDefaultChecked: Self = this.set("defaultChecked", js.undefined)
     @scala.inline
+    def setDefaultValueVarargs(value: String*): Self = this.set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def setDefaultValue(value: String | Double | js.Array[String]): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
@@ -1191,6 +1193,8 @@ object PartialListItemProps {
     def setUnselectable(value: on | off): Self = this.set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUnselectable: Self = this.set("unselectable", js.undefined)
+    @scala.inline
+    def setValueVarargs(value: String*): Self = this.set("value", js.Array(value :_*))
     @scala.inline
     def setValue(value: String | js.Array[String] | Double): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline

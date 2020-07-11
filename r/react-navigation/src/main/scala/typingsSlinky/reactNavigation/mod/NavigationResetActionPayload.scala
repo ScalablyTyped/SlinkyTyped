@@ -28,6 +28,8 @@ object NavigationResetActionPayload {
         x
     }
     @scala.inline
+    def setActionsVarargs(value: NavigationNavigateAction*): Self = this.set("actions", js.Array(value :_*))
+    @scala.inline
     def setActions(value: js.Array[NavigationNavigateAction]): Self = this.set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def setIndex(value: Double): Self = this.set("index", value.asInstanceOf[js.Any])

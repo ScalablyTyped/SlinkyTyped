@@ -83,6 +83,8 @@ object ChartOptions {
     @scala.inline
     def deleteElements: Self = this.set("elements", js.undefined)
     @scala.inline
+    def setEventsVarargs(value: String*): Self = this.set("events", js.Array(value :_*))
+    @scala.inline
     def setEvents(value: js.Array[String]): Self = this.set("events", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEvents: Self = this.set("events", js.undefined)

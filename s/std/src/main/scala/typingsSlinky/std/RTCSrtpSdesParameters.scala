@@ -33,9 +33,13 @@ object RTCSrtpSdesParameters {
     @scala.inline
     def deleteCryptoSuite: Self = this.set("cryptoSuite", js.undefined)
     @scala.inline
+    def setKeyParamsVarargs(value: RTCSrtpKeyParam*): Self = this.set("keyParams", js.Array(value :_*))
+    @scala.inline
     def setKeyParams(value: js.Array[RTCSrtpKeyParam]): Self = this.set("keyParams", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteKeyParams: Self = this.set("keyParams", js.undefined)
+    @scala.inline
+    def setSessionParamsVarargs(value: java.lang.String*): Self = this.set("sessionParams", js.Array(value :_*))
     @scala.inline
     def setSessionParams(value: js.Array[java.lang.String]): Self = this.set("sessionParams", value.asInstanceOf[js.Any])
     @scala.inline

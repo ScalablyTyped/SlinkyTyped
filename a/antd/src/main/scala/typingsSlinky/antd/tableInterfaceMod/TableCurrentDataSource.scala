@@ -26,6 +26,8 @@ object TableCurrentDataSource {
         x
     }
     @scala.inline
+    def setCurrentDataSourceVarargs(value: RecordType*): Self = this.set("currentDataSource", js.Array(value :_*))
+    @scala.inline
     def setCurrentDataSource(value: js.Array[RecordType]): Self = this.set("currentDataSource", value.asInstanceOf[js.Any])
   }
   

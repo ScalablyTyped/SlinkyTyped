@@ -28,7 +28,11 @@ object Menu {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultOpenKeysVarargs(value: String*): this.type = set("defaultOpenKeys", js.Array(value :_*))
+    @scala.inline
     def defaultOpenKeys(value: js.Array[String]): this.type = set("defaultOpenKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSelectedKeysVarargs(value: String*): this.type = set("defaultSelectedKeys", js.Array(value :_*))
     @scala.inline
     def defaultSelectedKeys(value: js.Array[String]): this.type = set("defaultSelectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -62,6 +66,8 @@ object Menu {
     @scala.inline
     def openAnimation(value: String): this.type = set("openAnimation", value.asInstanceOf[js.Any])
     @scala.inline
+    def openKeysVarargs(value: String*): this.type = set("openKeys", js.Array(value :_*))
+    @scala.inline
     def openKeys(value: js.Array[String]): this.type = set("openKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def openTransitionName(value: String): this.type = set("openTransitionName", value.asInstanceOf[js.Any])
@@ -73,6 +79,8 @@ object Menu {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
     @scala.inline
     def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline

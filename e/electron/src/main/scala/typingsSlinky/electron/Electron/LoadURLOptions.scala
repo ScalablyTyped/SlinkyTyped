@@ -56,6 +56,8 @@ object LoadURLOptions {
     @scala.inline
     def deleteHttpReferrer: Self = this.set("httpReferrer", js.undefined)
     @scala.inline
+    def setPostDataVarargs(value: (UploadBlob | UploadFile | UploadRawData)*): Self = this.set("postData", js.Array(value :_*))
+    @scala.inline
     def setPostData(value: js.Array[UploadBlob | UploadFile | UploadRawData]): Self = this.set("postData", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePostData: Self = this.set("postData", js.undefined)

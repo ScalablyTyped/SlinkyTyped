@@ -55,6 +55,8 @@ object PageHeader {
     @scala.inline
     def tagsReactElement(value: ReactElement): this.type = set("tags", value.asInstanceOf[js.Any])
     @scala.inline
+    def tagsVarargs(value: ReactElement*): this.type = set("tags", js.Array(value :_*))
+    @scala.inline
     def tags(value: ReactElement | js.Array[ReactElement]): this.type = set("tags", value.asInstanceOf[js.Any])
     @scala.inline
     def title(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])

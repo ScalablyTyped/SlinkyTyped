@@ -54,7 +54,11 @@ object RowProps {
     @scala.inline
     def setCellComponent(value: CustomizeComponent): Self = this.set("cellComponent", value.asInstanceOf[js.Any])
     @scala.inline
+    def setCellsVarargs(value: CellType[RecordType]*): Self = this.set("cells", js.Array(value :_*))
+    @scala.inline
     def setCells(value: js.Array[CellType[RecordType]]): Self = this.set("cells", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFlattenColumnsVarargs(value: ColumnType[RecordType]*): Self = this.set("flattenColumns", js.Array(value :_*))
     @scala.inline
     def setFlattenColumns(value: js.Array[ColumnType[RecordType]]): Self = this.set("flattenColumns", value.asInstanceOf[js.Any])
     @scala.inline

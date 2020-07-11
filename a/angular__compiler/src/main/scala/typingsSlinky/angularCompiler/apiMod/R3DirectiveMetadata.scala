@@ -116,6 +116,8 @@ object R3DirectiveMetadata {
     @scala.inline
     def setOutputs(value: StringDictionary[String]): Self = this.set("outputs", value.asInstanceOf[js.Any])
     @scala.inline
+    def setQueriesVarargs(value: R3QueryMetadata*): Self = this.set("queries", js.Array(value :_*))
+    @scala.inline
     def setQueries(value: js.Array[R3QueryMetadata]): Self = this.set("queries", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: Expression): Self = this.set("type", value.asInstanceOf[js.Any])
@@ -126,11 +128,17 @@ object R3DirectiveMetadata {
     @scala.inline
     def setUsesInheritance(value: Boolean): Self = this.set("usesInheritance", value.asInstanceOf[js.Any])
     @scala.inline
+    def setViewQueriesVarargs(value: R3QueryMetadata*): Self = this.set("viewQueries", js.Array(value :_*))
+    @scala.inline
     def setViewQueries(value: js.Array[R3QueryMetadata]): Self = this.set("viewQueries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDepsVarargs(value: R3DependencyMetadata*): Self = this.set("deps", js.Array(value :_*))
     @scala.inline
     def setDeps(value: js.Array[R3DependencyMetadata]): Self = this.set("deps", value.asInstanceOf[js.Any])
     @scala.inline
     def setDepsNull: Self = this.set("deps", null)
+    @scala.inline
+    def setExportAsVarargs(value: String*): Self = this.set("exportAs", js.Array(value :_*))
     @scala.inline
     def setExportAs(value: js.Array[String]): Self = this.set("exportAs", value.asInstanceOf[js.Any])
     @scala.inline

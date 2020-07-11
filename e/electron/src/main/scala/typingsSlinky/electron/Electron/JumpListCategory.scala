@@ -42,6 +42,8 @@ object JumpListCategory {
         x
     }
     @scala.inline
+    def setItemsVarargs(value: JumpListItem*): Self = this.set("items", js.Array(value :_*))
+    @scala.inline
     def setItems(value: js.Array[JumpListItem]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteItems: Self = this.set("items", js.undefined)

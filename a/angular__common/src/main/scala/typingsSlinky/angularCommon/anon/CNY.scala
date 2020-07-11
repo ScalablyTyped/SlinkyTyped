@@ -28,9 +28,15 @@ object CNY {
         x
     }
     @scala.inline
+    def setCNYVarargs(value: String*): Self = this.set("CNY", js.Array(value :_*))
+    @scala.inline
     def setCNY(value: js.Array[String]): Self = this.set("CNY", value.asInstanceOf[js.Any])
     @scala.inline
+    def setJPYVarargs(value: String*): Self = this.set("JPY", js.Array(value :_*))
+    @scala.inline
     def setJPY(value: js.Array[String]): Self = this.set("JPY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUSDVarargs(value: String*): Self = this.set("USD", js.Array(value :_*))
     @scala.inline
     def setUSD(value: js.Array[String]): Self = this.set("USD", value.asInstanceOf[js.Any])
   }

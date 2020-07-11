@@ -40,9 +40,13 @@ object PartialILocale {
     @scala.inline
     def deleteFormats: Self = this.set("formats", js.undefined)
     @scala.inline
+    def setMonthsVarargs(value: String*): Self = this.set("months", js.Array(value :_*))
+    @scala.inline
     def setMonths(value: js.Array[String]): Self = this.set("months", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMonths: Self = this.set("months", js.undefined)
+    @scala.inline
+    def setMonthsShortVarargs(value: String*): Self = this.set("monthsShort", js.Array(value :_*))
     @scala.inline
     def setMonthsShort(value: js.Array[String]): Self = this.set("monthsShort", value.asInstanceOf[js.Any])
     @scala.inline
@@ -64,13 +68,19 @@ object PartialILocale {
     @scala.inline
     def deleteWeekStart: Self = this.set("weekStart", js.undefined)
     @scala.inline
+    def setWeekdaysVarargs(value: String*): Self = this.set("weekdays", js.Array(value :_*))
+    @scala.inline
     def setWeekdays(value: js.Array[String]): Self = this.set("weekdays", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWeekdays: Self = this.set("weekdays", js.undefined)
     @scala.inline
+    def setWeekdaysMinVarargs(value: String*): Self = this.set("weekdaysMin", js.Array(value :_*))
+    @scala.inline
     def setWeekdaysMin(value: js.Array[String]): Self = this.set("weekdaysMin", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWeekdaysMin: Self = this.set("weekdaysMin", js.undefined)
+    @scala.inline
+    def setWeekdaysShortVarargs(value: String*): Self = this.set("weekdaysShort", js.Array(value :_*))
     @scala.inline
     def setWeekdaysShort(value: js.Array[String]): Self = this.set("weekdaysShort", value.asInstanceOf[js.Any])
     @scala.inline

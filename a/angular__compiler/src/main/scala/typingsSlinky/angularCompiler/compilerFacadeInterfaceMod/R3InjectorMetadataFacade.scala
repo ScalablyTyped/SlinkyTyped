@@ -31,13 +31,19 @@ object R3InjectorMetadataFacade {
         x
     }
     @scala.inline
+    def setImportsVarargs(value: js.Any*): Self = this.set("imports", js.Array(value :_*))
+    @scala.inline
     def setImports(value: js.Array[_]): Self = this.set("imports", value.asInstanceOf[js.Any])
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def setProvidersVarargs(value: js.Any*): Self = this.set("providers", js.Array(value :_*))
+    @scala.inline
     def setProviders(value: js.Array[_]): Self = this.set("providers", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: js.Any): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDepsVarargs(value: R3DependencyMetadataFacade*): Self = this.set("deps", js.Array(value :_*))
     @scala.inline
     def setDeps(value: js.Array[R3DependencyMetadataFacade]): Self = this.set("deps", value.asInstanceOf[js.Any])
     @scala.inline

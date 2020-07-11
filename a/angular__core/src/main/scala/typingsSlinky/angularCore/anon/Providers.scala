@@ -27,6 +27,8 @@ object Providers {
         x
     }
     @scala.inline
+    def setProvidersVarargs(value: js.Any*): Self = this.set("providers", js.Array(value :_*))
+    @scala.inline
     def setProviders(value: js.Array[_]): Self = this.set("providers", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteProviders: Self = this.set("providers", js.undefined)

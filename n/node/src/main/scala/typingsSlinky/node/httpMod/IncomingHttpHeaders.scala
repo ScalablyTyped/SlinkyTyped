@@ -269,6 +269,8 @@ object IncomingHttpHeaders {
     @scala.inline
     def `deleteRetry-after`: Self = this.set("retry-after", js.undefined)
     @scala.inline
+    def `setSet-cookieVarargs`(value: String*): Self = this.set("set-cookie", js.Array(value :_*))
+    @scala.inline
     def `setSet-cookie`(value: js.Array[String]): Self = this.set("set-cookie", value.asInstanceOf[js.Any])
     @scala.inline
     def `deleteSet-cookie`: Self = this.set("set-cookie", js.undefined)

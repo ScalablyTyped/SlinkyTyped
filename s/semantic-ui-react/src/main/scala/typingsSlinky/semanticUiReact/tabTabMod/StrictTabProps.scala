@@ -96,6 +96,8 @@ object StrictTabProps {
     @scala.inline
     def deleteOnTabChange: Self = this.set("onTabChange", js.undefined)
     @scala.inline
+    def setPanesVarargs(value: MenuItem*): Self = this.set("panes", js.Array(value :_*))
+    @scala.inline
     def setPanes(value: js.Array[MenuItem]): Self = this.set("panes", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePanes: Self = this.set("panes", js.undefined)

@@ -27,6 +27,8 @@ object Route {
         x
     }
     @scala.inline
+    def setChildrenVarargs(value: Route*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: js.Array[Route]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)

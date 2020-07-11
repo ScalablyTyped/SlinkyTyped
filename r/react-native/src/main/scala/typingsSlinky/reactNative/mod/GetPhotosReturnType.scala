@@ -29,6 +29,8 @@ object GetPhotosReturnType {
         x
     }
     @scala.inline
+    def setEdgesVarargs(value: Node*): Self = this.set("edges", js.Array(value :_*))
+    @scala.inline
     def setEdges(value: js.Array[Node]): Self = this.set("edges", value.asInstanceOf[js.Any])
     @scala.inline
     def setPage_info(value: Hasnextpage): Self = this.set("page_info", value.asInstanceOf[js.Any])

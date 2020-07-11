@@ -29,6 +29,8 @@ object ModuleWithProviders {
     @scala.inline
     def setNgModule(value: Type): Self = this.set("ngModule", value.asInstanceOf[js.Any])
     @scala.inline
+    def setProvidersVarargs(value: Provider*): Self = this.set("providers", js.Array(value :_*))
+    @scala.inline
     def setProviders(value: js.Array[Provider]): Self = this.set("providers", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteProviders: Self = this.set("providers", js.undefined)

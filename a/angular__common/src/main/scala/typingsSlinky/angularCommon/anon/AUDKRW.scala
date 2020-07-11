@@ -28,9 +28,15 @@ object AUDKRW {
         x
     }
     @scala.inline
+    def setAUDVarargs(value: String*): Self = this.set("AUD", js.Array(value :_*))
+    @scala.inline
     def setAUD(value: js.Array[String]): Self = this.set("AUD", value.asInstanceOf[js.Any])
     @scala.inline
+    def setKRWVarargs(value: String*): Self = this.set("KRW", js.Array(value :_*))
+    @scala.inline
     def setKRW(value: js.Array[String]): Self = this.set("KRW", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUSDVarargs(value: String*): Self = this.set("USD", js.Array(value :_*))
     @scala.inline
     def setUSD(value: js.Array[String]): Self = this.set("USD", value.asInstanceOf[js.Any])
   }

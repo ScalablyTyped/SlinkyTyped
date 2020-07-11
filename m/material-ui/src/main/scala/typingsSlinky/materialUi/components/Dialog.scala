@@ -38,6 +38,8 @@ object Dialog {
     @scala.inline
     def actionFocus(value: String): this.type = set("actionFocus", value.asInstanceOf[js.Any])
     @scala.inline
+    def actionsVarargs(value: (DialogAction | ReactElement)*): this.type = set("actions", js.Array(value :_*))
+    @scala.inline
     def actions(value: js.Array[DialogAction | ReactElement]): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def actionsContainerClassName(value: String): this.type = set("actionsContainerClassName", value.asInstanceOf[js.Any])

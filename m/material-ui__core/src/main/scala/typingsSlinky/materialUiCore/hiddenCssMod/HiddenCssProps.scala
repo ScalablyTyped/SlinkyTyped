@@ -54,6 +54,8 @@ object HiddenCssProps {
     @scala.inline
     def deleteMdUp: Self = this.set("mdUp", js.undefined)
     @scala.inline
+    def setOnlyVarargs(value: Breakpoint*): Self = this.set("only", js.Array(value :_*))
+    @scala.inline
     def setOnly(value: Breakpoint | js.Array[Breakpoint]): Self = this.set("only", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnly: Self = this.set("only", js.undefined)

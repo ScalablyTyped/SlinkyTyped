@@ -179,6 +179,8 @@ object StrictTableProps {
     @scala.inline
     def deleteHeaderRow: Self = this.set("headerRow", js.undefined)
     @scala.inline
+    def setHeaderRowsVarargs(value: SemanticShorthandItem[TableRowProps]*): Self = this.set("headerRows", js.Array(value :_*))
+    @scala.inline
     def setHeaderRows(value: SemanticShorthandCollection[TableRowProps]): Self = this.set("headerRows", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHeaderRows: Self = this.set("headerRows", js.undefined)
@@ -222,6 +224,8 @@ object StrictTableProps {
     def setStructured(value: Boolean): Self = this.set("structured", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStructured: Self = this.set("structured", js.undefined)
+    @scala.inline
+    def setTableDataVarargs(value: js.Any*): Self = this.set("tableData", js.Array(value :_*))
     @scala.inline
     def setTableData(value: js.Array[_]): Self = this.set("tableData", value.asInstanceOf[js.Any])
     @scala.inline

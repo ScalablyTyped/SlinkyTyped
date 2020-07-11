@@ -87,6 +87,8 @@ object PropsWithChildrenPickProp {
     @scala.inline
     def setScene(value: Scene): Self = this.set("scene", value.asInstanceOf[js.Any])
     @scala.inline
+    def setScenesVarargs(value: Scene*): Self = this.set("scenes", js.Array(value :_*))
+    @scala.inline
     def setScenes(value: js.Array[Scene]): Self = this.set("scenes", value.asInstanceOf[js.Any])
     @scala.inline
     def setTheme(value: String): Self = this.set("theme", value.asInstanceOf[js.Any])

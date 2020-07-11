@@ -96,6 +96,8 @@ object StrictSearchCategoryProps {
     @scala.inline
     def deleteRenderer: Self = this.set("renderer", js.undefined)
     @scala.inline
+    def setResultsVarargs(value: ReactComponentClass[SearchResultProps]*): Self = this.set("results", js.Array(value :_*))
+    @scala.inline
     def setResults(value: js.Array[ReactComponentClass[SearchResultProps]]): Self = this.set("results", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteResults: Self = this.set("results", js.undefined)

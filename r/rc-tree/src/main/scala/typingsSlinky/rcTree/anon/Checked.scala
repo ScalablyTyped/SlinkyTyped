@@ -27,7 +27,11 @@ object Checked {
         x
     }
     @scala.inline
+    def setCheckedVarargs(value: String*): Self = this.set("checked", js.Array(value :_*))
+    @scala.inline
     def setChecked(value: js.Array[String]): Self = this.set("checked", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHalfCheckedVarargs(value: String*): Self = this.set("halfChecked", js.Array(value :_*))
     @scala.inline
     def setHalfChecked(value: js.Array[String]): Self = this.set("halfChecked", value.asInstanceOf[js.Any])
   }

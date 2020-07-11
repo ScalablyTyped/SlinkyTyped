@@ -30,6 +30,8 @@ object MuiColorObject {
     @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
+    def setValuesVarargs(value: Double*): Self = this.set("values", js.Array(value :_*))
+    @scala.inline
     def setValues(value: js.Array[Double]): Self = this.set("values", value.asInstanceOf[js.Any])
   }
   

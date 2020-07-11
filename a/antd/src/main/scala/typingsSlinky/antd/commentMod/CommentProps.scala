@@ -45,6 +45,8 @@ object CommentProps {
         x
     }
     @scala.inline
+    def setActionsVarargs(value: ReactElement*): Self = this.set("actions", js.Array(value :_*))
+    @scala.inline
     def setActions(value: js.Array[ReactElement]): Self = this.set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteActions: Self = this.set("actions", js.undefined)

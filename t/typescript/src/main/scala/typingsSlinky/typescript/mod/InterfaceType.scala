@@ -55,9 +55,13 @@ object InterfaceType {
         x
     }
     @scala.inline
+    def setLocalTypeParametersVarargs(value: TypeParameter*): Self = this.set("localTypeParameters", js.Array(value :_*))
+    @scala.inline
     def setLocalTypeParameters(value: js.Array[TypeParameter]): Self = this.set("localTypeParameters", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLocalTypeParameters: Self = this.set("localTypeParameters", js.undefined)
+    @scala.inline
+    def setOuterTypeParametersVarargs(value: TypeParameter*): Self = this.set("outerTypeParameters", js.Array(value :_*))
     @scala.inline
     def setOuterTypeParameters(value: js.Array[TypeParameter]): Self = this.set("outerTypeParameters", value.asInstanceOf[js.Any])
     @scala.inline
@@ -66,6 +70,8 @@ object InterfaceType {
     def setThisType(value: TypeParameter): Self = this.set("thisType", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteThisType: Self = this.set("thisType", js.undefined)
+    @scala.inline
+    def setTypeParametersVarargs(value: TypeParameter*): Self = this.set("typeParameters", js.Array(value :_*))
     @scala.inline
     def setTypeParameters(value: js.Array[TypeParameter]): Self = this.set("typeParameters", value.asInstanceOf[js.Any])
     @scala.inline

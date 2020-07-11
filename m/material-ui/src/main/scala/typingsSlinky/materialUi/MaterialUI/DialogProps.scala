@@ -65,6 +65,8 @@ object DialogProps {
     @scala.inline
     def deleteActionFocus: Self = this.set("actionFocus", js.undefined)
     @scala.inline
+    def setActionsVarargs(value: (DialogAction | ReactElement)*): Self = this.set("actions", js.Array(value :_*))
+    @scala.inline
     def setActions(value: js.Array[DialogAction | ReactElement]): Self = this.set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteActions: Self = this.set("actions", js.undefined)

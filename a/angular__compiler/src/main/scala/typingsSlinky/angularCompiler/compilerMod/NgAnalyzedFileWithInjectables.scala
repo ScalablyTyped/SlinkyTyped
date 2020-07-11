@@ -36,7 +36,11 @@ object NgAnalyzedFileWithInjectables {
     @scala.inline
     def setFileName(value: String): Self = this.set("fileName", value.asInstanceOf[js.Any])
     @scala.inline
+    def setInjectablesVarargs(value: CompileInjectableMetadata*): Self = this.set("injectables", js.Array(value :_*))
+    @scala.inline
     def setInjectables(value: js.Array[CompileInjectableMetadata]): Self = this.set("injectables", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setShallowModulesVarargs(value: CompileShallowModuleMetadata*): Self = this.set("shallowModules", js.Array(value :_*))
     @scala.inline
     def setShallowModules(value: js.Array[CompileShallowModuleMetadata]): Self = this.set("shallowModules", value.asInstanceOf[js.Any])
   }

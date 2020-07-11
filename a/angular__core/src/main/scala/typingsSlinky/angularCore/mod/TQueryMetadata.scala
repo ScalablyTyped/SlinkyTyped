@@ -36,6 +36,8 @@ object TQueryMetadata {
     @scala.inline
     def setIsStatic(value: Boolean): Self = this.set("isStatic", value.asInstanceOf[js.Any])
     @scala.inline
+    def setPredicateVarargs(value: String*): Self = this.set("predicate", js.Array(value :_*))
+    @scala.inline
     def setPredicate(value: Type[_] | js.Array[String]): Self = this.set("predicate", value.asInstanceOf[js.Any])
     @scala.inline
     def setRead(value: js.Any): Self = this.set("read", value.asInstanceOf[js.Any])

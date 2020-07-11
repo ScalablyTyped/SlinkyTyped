@@ -29,6 +29,8 @@ object UploadState {
     @scala.inline
     def setDragState(value: String): Self = this.set("dragState", value.asInstanceOf[js.Any])
     @scala.inline
+    def setFileListVarargs(value: UploadFile[T]*): Self = this.set("fileList", js.Array(value :_*))
+    @scala.inline
     def setFileList(value: js.Array[UploadFile[T]]): Self = this.set("fileList", value.asInstanceOf[js.Any])
   }
   

@@ -31,7 +31,11 @@ object InterpolationConfigType {
         x
     }
     @scala.inline
+    def setInputRangeVarargs(value: Double*): Self = this.set("inputRange", js.Array(value :_*))
+    @scala.inline
     def setInputRange(value: js.Array[Double]): Self = this.set("inputRange", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOutputRangeVarargs(value: (Double | String)*): Self = this.set("outputRange", js.Array(value :_*))
     @scala.inline
     def setOutputRange(value: js.Array[Double | String]): Self = this.set("outputRange", value.asInstanceOf[js.Any])
     @scala.inline

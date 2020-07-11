@@ -36,7 +36,11 @@ object State {
     @scala.inline
     def setPosition(value: Value): Self = this.set("position", value.asInstanceOf[js.Any])
     @scala.inline
+    def setScenesVarargs(value: Scene*): Self = this.set("scenes", js.Array(value :_*))
+    @scala.inline
     def setScenes(value: js.Array[Scene]): Self = this.set("scenes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNextScenesVarargs(value: Scene*): Self = this.set("nextScenes", js.Array(value :_*))
     @scala.inline
     def setNextScenes(value: js.Array[Scene]): Self = this.set("nextScenes", value.asInstanceOf[js.Any])
     @scala.inline

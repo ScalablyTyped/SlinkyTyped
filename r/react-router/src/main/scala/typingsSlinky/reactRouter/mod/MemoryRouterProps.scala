@@ -37,6 +37,8 @@ object MemoryRouterProps {
     @scala.inline
     def deleteGetUserConfirmation: Self = this.set("getUserConfirmation", js.undefined)
     @scala.inline
+    def setInitialEntriesVarargs(value: LocationDescriptor[LocationState]*): Self = this.set("initialEntries", js.Array(value :_*))
+    @scala.inline
     def setInitialEntries(value: js.Array[LocationDescriptor[LocationState]]): Self = this.set("initialEntries", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInitialEntries: Self = this.set("initialEntries", js.undefined)

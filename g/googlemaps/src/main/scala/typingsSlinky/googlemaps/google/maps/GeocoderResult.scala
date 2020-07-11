@@ -40,6 +40,8 @@ object GeocoderResult {
         x
     }
     @scala.inline
+    def setAddress_componentsVarargs(value: GeocoderAddressComponent*): Self = this.set("address_components", js.Array(value :_*))
+    @scala.inline
     def setAddress_components(value: js.Array[GeocoderAddressComponent]): Self = this.set("address_components", value.asInstanceOf[js.Any])
     @scala.inline
     def setFormatted_address(value: String): Self = this.set("formatted_address", value.asInstanceOf[js.Any])
@@ -50,7 +52,11 @@ object GeocoderResult {
     @scala.inline
     def setPlace_id(value: String): Self = this.set("place_id", value.asInstanceOf[js.Any])
     @scala.inline
+    def setPostcode_localitiesVarargs(value: String*): Self = this.set("postcode_localities", js.Array(value :_*))
+    @scala.inline
     def setPostcode_localities(value: js.Array[String]): Self = this.set("postcode_localities", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTypesVarargs(value: String*): Self = this.set("types", js.Array(value :_*))
     @scala.inline
     def setTypes(value: js.Array[String]): Self = this.set("types", value.asInstanceOf[js.Any])
   }

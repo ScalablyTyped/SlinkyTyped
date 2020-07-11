@@ -85,6 +85,8 @@ object IconMenu {
     @scala.inline
     def useLayerForClickAway(value: Boolean): this.type = set("useLayerForClickAway", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: js.Any | js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
   }
   

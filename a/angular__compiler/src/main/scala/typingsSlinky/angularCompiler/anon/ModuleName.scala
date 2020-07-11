@@ -30,7 +30,11 @@ object ModuleName {
         x
     }
     @scala.inline
+    def setImportAsVarargs(value: ImportAs*): Self = this.set("importAs", js.Array(value :_*))
+    @scala.inline
     def setImportAs(value: js.Array[ImportAs]): Self = this.set("importAs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSummariesVarargs(value: Summary[StaticSymbol]*): Self = this.set("summaries", js.Array(value :_*))
     @scala.inline
     def setSummaries(value: js.Array[Summary[StaticSymbol]]): Self = this.set("summaries", value.asInstanceOf[js.Any])
     @scala.inline

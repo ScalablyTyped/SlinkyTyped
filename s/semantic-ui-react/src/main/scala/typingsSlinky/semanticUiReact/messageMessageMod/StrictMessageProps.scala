@@ -150,6 +150,8 @@ object StrictMessageProps {
     @scala.inline
     def deleteInfo: Self = this.set("info", js.undefined)
     @scala.inline
+    def setListVarargs(value: SemanticShorthandItem[MessageItemProps]*): Self = this.set("list", js.Array(value :_*))
+    @scala.inline
     def setList(value: SemanticShorthandCollection[MessageItemProps]): Self = this.set("list", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteList: Self = this.set("list", js.undefined)

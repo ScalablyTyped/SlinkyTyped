@@ -30,6 +30,8 @@ object OnTextChange {
     @scala.inline
     def setOnTextChange(value: String => Unit): Self = this.set("onTextChange", js.Any.fromFunction1(value))
     @scala.inline
+    def setValueTextsVarargs(value: String*): Self = this.set("valueTexts", js.Array(value :_*))
+    @scala.inline
     def setValueTexts(value: js.Array[String]): Self = this.set("valueTexts", value.asInstanceOf[js.Any])
   }
   

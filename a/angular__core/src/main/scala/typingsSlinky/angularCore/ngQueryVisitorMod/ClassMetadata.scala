@@ -35,7 +35,11 @@ object ClassMetadata {
         x
     }
     @scala.inline
+    def setDerivedClassesVarargs(value: ClassDeclaration*): Self = this.set("derivedClasses", js.Array(value :_*))
+    @scala.inline
     def setDerivedClasses(value: js.Array[ClassDeclaration]): Self = this.set("derivedClasses", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNgInputNamesVarargs(value: String*): Self = this.set("ngInputNames", js.Array(value :_*))
     @scala.inline
     def setNgInputNames(value: js.Array[String]): Self = this.set("ngInputNames", value.asInstanceOf[js.Any])
     @scala.inline

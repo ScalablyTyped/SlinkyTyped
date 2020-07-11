@@ -76,6 +76,8 @@ object SectionListProps {
         x
     }
     @scala.inline
+    def setSectionsVarargs(value: SectionListData[ItemT]*): Self = this.set("sections", js.Array(value :_*))
+    @scala.inline
     def setSections(value: js.Array[SectionListData[ItemT]]): Self = this.set("sections", value.asInstanceOf[js.Any])
     @scala.inline
     def setItemSeparatorComponentFunctionComponent(value: ReactComponentClass[_]): Self = this.set("ItemSeparatorComponent", value.asInstanceOf[js.Any])

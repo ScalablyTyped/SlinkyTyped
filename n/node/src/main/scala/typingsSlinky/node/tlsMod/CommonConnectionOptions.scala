@@ -69,6 +69,8 @@ object CommonConnectionOptions {
         x
     }
     @scala.inline
+    def setALPNProtocolsVarargs(value: (String | js.typedarray.Uint8Array)*): Self = this.set("ALPNProtocols", js.Array(value :_*))
+    @scala.inline
     def setALPNProtocolsUint8Array(value: js.typedarray.Uint8Array): Self = this.set("ALPNProtocols", value.asInstanceOf[js.Any])
     @scala.inline
     def setALPNProtocols(value: (js.Array[String | js.typedarray.Uint8Array]) | js.typedarray.Uint8Array): Self = this.set("ALPNProtocols", value.asInstanceOf[js.Any])

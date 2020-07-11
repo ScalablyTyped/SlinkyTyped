@@ -135,11 +135,15 @@ object AxiosRequestConfig {
     @scala.inline
     def deleteTimeoutErrorMessage: Self = this.set("timeoutErrorMessage", js.undefined)
     @scala.inline
+    def setTransformRequestVarargs(value: AxiosTransformer*): Self = this.set("transformRequest", js.Array(value :_*))
+    @scala.inline
     def setTransformRequestFunction2(value: (/* data */ js.Any, /* headers */ js.UndefOr[js.Any]) => js.Any): Self = this.set("transformRequest", js.Any.fromFunction2(value))
     @scala.inline
     def setTransformRequest(value: AxiosTransformer | js.Array[AxiosTransformer]): Self = this.set("transformRequest", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTransformRequest: Self = this.set("transformRequest", js.undefined)
+    @scala.inline
+    def setTransformResponseVarargs(value: AxiosTransformer*): Self = this.set("transformResponse", js.Array(value :_*))
     @scala.inline
     def setTransformResponseFunction2(value: (/* data */ js.Any, /* headers */ js.UndefOr[js.Any]) => js.Any): Self = this.set("transformResponse", js.Any.fromFunction2(value))
     @scala.inline

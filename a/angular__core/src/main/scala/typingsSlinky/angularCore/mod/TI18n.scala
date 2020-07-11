@@ -57,11 +57,17 @@ object TI18n {
         x
     }
     @scala.inline
+    def setCreateVarargs(value: (Double | String | ELEMENT_MARKER | COMMENT_MARKER | Null)*): Self = this.set("create", js.Array(value :_*))
+    @scala.inline
     def setCreate(value: I18nMutateOpCodes): Self = this.set("create", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUpdateVarargs(value: (String | Double | SanitizerFn | Null)*): Self = this.set("update", js.Array(value :_*))
     @scala.inline
     def setUpdate(value: I18nUpdateOpCodes): Self = this.set("update", value.asInstanceOf[js.Any])
     @scala.inline
     def setVars(value: Double): Self = this.set("vars", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIcusVarargs(value: TIcu*): Self = this.set("icus", js.Array(value :_*))
     @scala.inline
     def setIcus(value: js.Array[TIcu]): Self = this.set("icus", value.asInstanceOf[js.Any])
     @scala.inline

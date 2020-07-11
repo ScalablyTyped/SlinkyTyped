@@ -183,6 +183,8 @@ object ComponentOptions {
     @scala.inline
     def deleteInheritAttrs: Self = this.set("inheritAttrs", js.undefined)
     @scala.inline
+    def setInjectVarargs(value: String*): Self = this.set("inject", js.Array(value :_*))
+    @scala.inline
     def setInject(value: InjectOptions): Self = this.set("inject", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInject: Self = this.set("inject", js.undefined)
@@ -190,6 +192,17 @@ object ComponentOptions {
     def setMethods(value: Methods): Self = this.set("methods", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMethods: Self = this.set("methods", js.undefined)
+    @scala.inline
+    def setMixinsVarargs(
+      value: ((ComponentOptions[
+          Vue, 
+          DefaultData[Vue], 
+          DefaultMethods[Vue], 
+          DefaultComputed, 
+          PropsDefinition[DefaultProps], 
+          DefaultProps
+        ]) | VueConstructor[Vue])*
+    ): Self = this.set("mixins", js.Array(value :_*))
     @scala.inline
     def setMixins(
       value: js.Array[
@@ -247,6 +260,8 @@ object ComponentOptions {
     def setServerPrefetch(value: js.ThisFunction0[/* this */ V, js.Promise[Unit]]): Self = this.set("serverPrefetch", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteServerPrefetch: Self = this.set("serverPrefetch", js.undefined)
+    @scala.inline
+    def setStaticRenderFnsVarargs(value: (js.Function1[/* createElement */ CreateElement, VNode])*): Self = this.set("staticRenderFns", js.Array(value :_*))
     @scala.inline
     def setStaticRenderFns(value: js.Array[js.Function1[/* createElement */ CreateElement, VNode]]): Self = this.set("staticRenderFns", value.asInstanceOf[js.Any])
     @scala.inline

@@ -37,7 +37,11 @@ object NgModuleDefinition {
     @scala.inline
     def setIsRoot(value: Boolean): Self = this.set("isRoot", value.asInstanceOf[js.Any])
     @scala.inline
+    def setModulesVarargs(value: js.Any*): Self = this.set("modules", js.Array(value :_*))
+    @scala.inline
     def setModules(value: js.Array[_]): Self = this.set("modules", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProvidersVarargs(value: NgModuleProviderDef*): Self = this.set("providers", js.Array(value :_*))
     @scala.inline
     def setProviders(value: js.Array[NgModuleProviderDef]): Self = this.set("providers", value.asInstanceOf[js.Any])
     @scala.inline

@@ -106,6 +106,8 @@ object Popup {
     @scala.inline
     def offset(value: Double | String): this.type = set("offset", value.asInstanceOf[js.Any])
     @scala.inline
+    def onVarargs(value: (hover | click | focus)*): this.type = set("on", js.Array(value :_*))
+    @scala.inline
     def on(value: hover | click | focus | (js.Array[hover | click | focus])): this.type = set("on", value.asInstanceOf[js.Any])
     @scala.inline
     def onClose(value: (/* event */ SyntheticMouseEvent[HTMLElement], /* data */ PopupProps) => Unit): this.type = set("onClose", js.Any.fromFunction2(value))
@@ -125,6 +127,8 @@ object Popup {
     def openOnTriggerMouseEnter(value: Boolean): this.type = set("openOnTriggerMouseEnter", value.asInstanceOf[js.Any])
     @scala.inline
     def pinned(value: Boolean): this.type = set("pinned", value.asInstanceOf[js.Any])
+    @scala.inline
+    def popperDependenciesVarargs(value: js.Any*): this.type = set("popperDependencies", js.Array(value :_*))
     @scala.inline
     def popperDependencies(value: js.Array[_]): this.type = set("popperDependencies", value.asInstanceOf[js.Any])
     @scala.inline

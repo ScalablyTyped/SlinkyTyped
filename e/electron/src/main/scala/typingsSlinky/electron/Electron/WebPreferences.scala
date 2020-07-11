@@ -238,6 +238,8 @@ object WebPreferences {
         x
     }
     @scala.inline
+    def setAdditionalArgumentsVarargs(value: String*): Self = this.set("additionalArguments", js.Array(value :_*))
+    @scala.inline
     def setAdditionalArguments(value: js.Array[String]): Self = this.set("additionalArguments", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAdditionalArguments: Self = this.set("additionalArguments", js.undefined)

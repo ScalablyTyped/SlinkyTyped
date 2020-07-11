@@ -28,7 +28,11 @@ object Args {
         x
     }
     @scala.inline
+    def setArgsVarargs(value: typingsSlinky.angularCompiler.outputAstMod.Expression*): Self = this.set("args", js.Array(value :_*))
+    @scala.inline
     def setArgs(value: js.Array[typingsSlinky.angularCompiler.outputAstMod.Expression]): Self = this.set("args", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStmtsVarargs(value: Statement*): Self = this.set("stmts", js.Array(value :_*))
     @scala.inline
     def setStmts(value: js.Array[Statement]): Self = this.set("stmts", value.asInstanceOf[js.Any])
   }

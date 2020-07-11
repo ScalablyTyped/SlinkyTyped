@@ -52,6 +52,8 @@ object UnionOrIntersectionType {
         x
     }
     @scala.inline
+    def setTypesVarargs(value: Type*): Self = this.set("types", js.Array(value :_*))
+    @scala.inline
     def setTypes(value: js.Array[Type]): Self = this.set("types", value.asInstanceOf[js.Any])
   }
   

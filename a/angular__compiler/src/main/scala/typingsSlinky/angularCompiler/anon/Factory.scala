@@ -30,6 +30,8 @@ object Factory {
     @scala.inline
     def setFactory(value: typingsSlinky.angularCompiler.outputAstMod.Expression): Self = this.set("factory", value.asInstanceOf[js.Any])
     @scala.inline
+    def setStatementsVarargs(value: Statement*): Self = this.set("statements", js.Array(value :_*))
+    @scala.inline
     def setStatements(value: js.Array[Statement]): Self = this.set("statements", value.asInstanceOf[js.Any])
   }
   

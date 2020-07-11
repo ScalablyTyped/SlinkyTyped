@@ -29,6 +29,8 @@ object IDependencyTree {
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDependenciesVarargs(value: IDependencyTree*): Self = this.set("dependencies", js.Array(value :_*))
+    @scala.inline
     def setDependencies(value: js.Array[IDependencyTree]): Self = this.set("dependencies", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDependencies: Self = this.set("dependencies", js.undefined)

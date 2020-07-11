@@ -36,6 +36,8 @@ object RTCConfiguration {
     @scala.inline
     def deleteBundlePolicy: Self = this.set("bundlePolicy", js.undefined)
     @scala.inline
+    def setCertificatesVarargs(value: RTCCertificate*): Self = this.set("certificates", js.Array(value :_*))
+    @scala.inline
     def setCertificates(value: js.Array[RTCCertificate]): Self = this.set("certificates", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCertificates: Self = this.set("certificates", js.undefined)
@@ -43,6 +45,8 @@ object RTCConfiguration {
     def setIceCandidatePoolSize(value: Double): Self = this.set("iceCandidatePoolSize", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIceCandidatePoolSize: Self = this.set("iceCandidatePoolSize", js.undefined)
+    @scala.inline
+    def setIceServersVarargs(value: org.scalajs.dom.experimental.webrtc.RTCIceServer*): Self = this.set("iceServers", js.Array(value :_*))
     @scala.inline
     def setIceServers(value: js.Array[org.scalajs.dom.experimental.webrtc.RTCIceServer]): Self = this.set("iceServers", value.asInstanceOf[js.Any])
     @scala.inline

@@ -28,7 +28,11 @@ object Holes {
         x
     }
     @scala.inline
+    def setHolesVarargs(value: js.Array[Vector2]*): Self = this.set("holes", js.Array(value :_*))
+    @scala.inline
     def setHoles(value: js.Array[js.Array[Vector2]]): Self = this.set("holes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setShapeVarargs(value: Vector2*): Self = this.set("shape", js.Array(value :_*))
     @scala.inline
     def setShape(value: js.Array[Vector2]): Self = this.set("shape", value.asInstanceOf[js.Any])
   }

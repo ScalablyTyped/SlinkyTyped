@@ -43,6 +43,8 @@ object GridLayerOptions {
     @scala.inline
     def deleteAttribution: Self = this.set("attribution", js.undefined)
     @scala.inline
+    def setBoundsVarargs(value: LatLngTuple*): Self = this.set("bounds", js.Array(value :_*))
+    @scala.inline
     def setBounds(value: LatLngBoundsExpression): Self = this.set("bounds", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBounds: Self = this.set("bounds", js.undefined)

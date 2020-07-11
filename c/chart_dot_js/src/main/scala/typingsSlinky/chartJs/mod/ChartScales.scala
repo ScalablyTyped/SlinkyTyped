@@ -57,9 +57,13 @@ object ChartScales {
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
     @scala.inline
+    def setXAxesVarargs(value: ChartXAxe*): Self = this.set("xAxes", js.Array(value :_*))
+    @scala.inline
     def setXAxes(value: js.Array[ChartXAxe]): Self = this.set("xAxes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteXAxes: Self = this.set("xAxes", js.undefined)
+    @scala.inline
+    def setYAxesVarargs(value: ChartYAxe*): Self = this.set("yAxes", js.Array(value :_*))
     @scala.inline
     def setYAxes(value: js.Array[ChartYAxe]): Self = this.set("yAxes", value.asInstanceOf[js.Any])
     @scala.inline

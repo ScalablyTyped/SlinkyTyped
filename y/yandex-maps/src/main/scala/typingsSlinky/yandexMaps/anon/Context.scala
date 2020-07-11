@@ -34,6 +34,8 @@ object Context {
     @scala.inline
     def deleteContext: Self = this.set("context", js.undefined)
     @scala.inline
+    def setControllersVarargs(value: IEventWorkflowController*): Self = this.set("controllers", js.Array(value :_*))
+    @scala.inline
     def setControllers(value: js.Array[IEventWorkflowController]): Self = this.set("controllers", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteControllers: Self = this.set("controllers", js.undefined)

@@ -37,6 +37,8 @@ object SorterResult {
     @scala.inline
     def deleteColumnKey: Self = this.set("columnKey", js.undefined)
     @scala.inline
+    def setFieldVarargs(value: Key*): Self = this.set("field", js.Array(value :_*))
+    @scala.inline
     def setField(value: Key | js.Array[Key]): Self = this.set("field", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteField: Self = this.set("field", js.undefined)

@@ -57,6 +57,8 @@ object PausedEventDataType {
         x
     }
     @scala.inline
+    def setCallFramesVarargs(value: CallFrame*): Self = this.set("callFrames", js.Array(value :_*))
+    @scala.inline
     def setCallFrames(value: js.Array[CallFrame]): Self = this.set("callFrames", value.asInstanceOf[js.Any])
     @scala.inline
     def setReason(value: String): Self = this.set("reason", value.asInstanceOf[js.Any])
@@ -76,6 +78,8 @@ object PausedEventDataType {
     def setData(value: js.Object): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteData: Self = this.set("data", js.undefined)
+    @scala.inline
+    def setHitBreakpointsVarargs(value: String*): Self = this.set("hitBreakpoints", js.Array(value :_*))
     @scala.inline
     def setHitBreakpoints(value: js.Array[String]): Self = this.set("hitBreakpoints", value.asInstanceOf[js.Any])
     @scala.inline

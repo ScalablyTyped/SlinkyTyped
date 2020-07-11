@@ -27,6 +27,8 @@ object MentionsConfig {
         x
     }
     @scala.inline
+    def setPrefixVarargs(value: String*): Self = this.set("prefix", js.Array(value :_*))
+    @scala.inline
     def setPrefix(value: String | js.Array[String]): Self = this.set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePrefix: Self = this.set("prefix", js.undefined)

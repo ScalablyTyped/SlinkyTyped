@@ -29,6 +29,8 @@ object SetBlackboxPatternsParameterType {
         x
     }
     @scala.inline
+    def setPatternsVarargs(value: String*): Self = this.set("patterns", js.Array(value :_*))
+    @scala.inline
     def setPatterns(value: js.Array[String]): Self = this.set("patterns", value.asInstanceOf[js.Any])
   }
   

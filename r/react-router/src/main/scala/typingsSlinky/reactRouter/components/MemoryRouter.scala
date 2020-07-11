@@ -21,6 +21,8 @@ object MemoryRouter {
     @scala.inline
     def getUserConfirmation(value: (/* message */ String, /* callback */ js.Function1[/* ok */ Boolean, Unit]) => Unit): this.type = set("getUserConfirmation", js.Any.fromFunction2(value))
     @scala.inline
+    def initialEntriesVarargs(value: LocationDescriptor[LocationState]*): this.type = set("initialEntries", js.Array(value :_*))
+    @scala.inline
     def initialEntries(value: js.Array[LocationDescriptor[LocationState]]): this.type = set("initialEntries", value.asInstanceOf[js.Any])
     @scala.inline
     def initialIndex(value: Double): this.type = set("initialIndex", value.asInstanceOf[js.Any])

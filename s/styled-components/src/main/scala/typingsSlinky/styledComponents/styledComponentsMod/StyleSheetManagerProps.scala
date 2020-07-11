@@ -43,6 +43,8 @@ object StyleSheetManagerProps {
     @scala.inline
     def deleteSheet: Self = this.set("sheet", js.undefined)
     @scala.inline
+    def setStylisPluginsVarargs(value: StylisPlugin*): Self = this.set("stylisPlugins", js.Array(value :_*))
+    @scala.inline
     def setStylisPlugins(value: js.Array[StylisPlugin]): Self = this.set("stylisPlugins", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStylisPlugins: Self = this.set("stylisPlugins", js.undefined)

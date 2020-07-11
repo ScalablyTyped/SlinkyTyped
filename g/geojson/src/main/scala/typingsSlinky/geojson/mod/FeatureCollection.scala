@@ -29,6 +29,8 @@ object FeatureCollection {
         x
     }
     @scala.inline
+    def setFeaturesVarargs(value: (Feature[G, P])*): Self = this.set("features", js.Array(value :_*))
+    @scala.inline
     def setFeatures(value: js.Array[Feature[G, P]]): Self = this.set("features", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: typingsSlinky.geojson.geojsonStrings.FeatureCollection): Self = this.set("type", value.asInstanceOf[js.Any])

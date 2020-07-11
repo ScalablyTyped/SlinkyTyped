@@ -92,6 +92,8 @@ object NodeDef {
     @scala.inline
     def setBindingIndex(value: Double): Self = this.set("bindingIndex", value.asInstanceOf[js.Any])
     @scala.inline
+    def setBindingsVarargs(value: BindingDef*): Self = this.set("bindings", js.Array(value :_*))
+    @scala.inline
     def setBindings(value: js.Array[BindingDef]): Self = this.set("bindings", value.asInstanceOf[js.Any])
     @scala.inline
     def setCheckIndex(value: Double): Self = this.set("checkIndex", value.asInstanceOf[js.Any])
@@ -113,6 +115,8 @@ object NodeDef {
     def setNodeIndex(value: Double): Self = this.set("nodeIndex", value.asInstanceOf[js.Any])
     @scala.inline
     def setOutputIndex(value: Double): Self = this.set("outputIndex", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOutputsVarargs(value: OutputDef*): Self = this.set("outputs", js.Array(value :_*))
     @scala.inline
     def setOutputs(value: js.Array[OutputDef]): Self = this.set("outputs", value.asInstanceOf[js.Any])
     @scala.inline

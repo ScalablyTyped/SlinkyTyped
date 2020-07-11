@@ -29,6 +29,8 @@ object GetColumnKeyColumn {
         x
     }
     @scala.inline
+    def setDataIndexVarargs(value: (String | Double)*): Self = this.set("dataIndex", js.Array(value :_*))
+    @scala.inline
     def setDataIndex(value: DataIndex): Self = this.set("dataIndex", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDataIndex: Self = this.set("dataIndex", js.undefined)

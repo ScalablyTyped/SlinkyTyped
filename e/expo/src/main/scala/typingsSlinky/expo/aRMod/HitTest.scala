@@ -41,9 +41,13 @@ object HitTest {
     @scala.inline
     def setDistance(value: Double): Self = this.set("distance", value.asInstanceOf[js.Any])
     @scala.inline
+    def setLocalTransformVarargs(value: Double*): Self = this.set("localTransform", js.Array(value :_*))
+    @scala.inline
     def setLocalTransform(value: js.Array[Double]): Self = this.set("localTransform", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: Double): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWorldTransformVarargs(value: Double*): Self = this.set("worldTransform", js.Array(value :_*))
     @scala.inline
     def setWorldTransform(value: js.Array[Double]): Self = this.set("worldTransform", value.asInstanceOf[js.Any])
   }

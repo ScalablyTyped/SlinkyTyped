@@ -26,6 +26,8 @@ object HitTestResults {
         x
     }
     @scala.inline
+    def setHitTestVarargs(value: HitTest*): Self = this.set("hitTest", js.Array(value :_*))
+    @scala.inline
     def setHitTest(value: js.Array[HitTest]): Self = this.set("hitTest", value.asInstanceOf[js.Any])
   }
   

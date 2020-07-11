@@ -37,13 +37,19 @@ object QuickInfo {
     @scala.inline
     def setTextSpan(value: TextSpan): Self = this.set("textSpan", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDisplayPartsVarargs(value: SymbolDisplayPart*): Self = this.set("displayParts", js.Array(value :_*))
+    @scala.inline
     def setDisplayParts(value: js.Array[SymbolDisplayPart]): Self = this.set("displayParts", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDisplayParts: Self = this.set("displayParts", js.undefined)
     @scala.inline
+    def setDocumentationVarargs(value: SymbolDisplayPart*): Self = this.set("documentation", js.Array(value :_*))
+    @scala.inline
     def setDocumentation(value: js.Array[SymbolDisplayPart]): Self = this.set("documentation", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDocumentation: Self = this.set("documentation", js.undefined)
+    @scala.inline
+    def setTagsVarargs(value: JSDocTagInfo*): Self = this.set("tags", js.Array(value :_*))
     @scala.inline
     def setTags(value: js.Array[JSDocTagInfo]): Self = this.set("tags", value.asInstanceOf[js.Any])
     @scala.inline

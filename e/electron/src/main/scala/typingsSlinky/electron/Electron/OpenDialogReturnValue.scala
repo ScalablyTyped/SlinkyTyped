@@ -42,9 +42,13 @@ object OpenDialogReturnValue {
     @scala.inline
     def setCanceled(value: Boolean): Self = this.set("canceled", value.asInstanceOf[js.Any])
     @scala.inline
+    def setBookmarksVarargs(value: String*): Self = this.set("bookmarks", js.Array(value :_*))
+    @scala.inline
     def setBookmarks(value: js.Array[String]): Self = this.set("bookmarks", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBookmarks: Self = this.set("bookmarks", js.undefined)
+    @scala.inline
+    def setFilePathsVarargs(value: String*): Self = this.set("filePaths", js.Array(value :_*))
     @scala.inline
     def setFilePaths(value: js.Array[String]): Self = this.set("filePaths", value.asInstanceOf[js.Any])
     @scala.inline

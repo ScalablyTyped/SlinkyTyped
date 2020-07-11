@@ -46,6 +46,8 @@ object ApplicableRefactorInfo {
         x
     }
     @scala.inline
+    def setActionsVarargs(value: RefactorActionInfo*): Self = this.set("actions", js.Array(value :_*))
+    @scala.inline
     def setActions(value: js.Array[RefactorActionInfo]): Self = this.set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def setDescription(value: java.lang.String): Self = this.set("description", value.asInstanceOf[js.Any])

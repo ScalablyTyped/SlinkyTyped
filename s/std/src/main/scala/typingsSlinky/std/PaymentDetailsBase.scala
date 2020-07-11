@@ -28,13 +28,19 @@ object PaymentDetailsBase {
         x
     }
     @scala.inline
+    def setDisplayItemsVarargs(value: PaymentItem*): Self = this.set("displayItems", js.Array(value :_*))
+    @scala.inline
     def setDisplayItems(value: js.Array[PaymentItem]): Self = this.set("displayItems", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDisplayItems: Self = this.set("displayItems", js.undefined)
     @scala.inline
+    def setModifiersVarargs(value: PaymentDetailsModifier*): Self = this.set("modifiers", js.Array(value :_*))
+    @scala.inline
     def setModifiers(value: js.Array[PaymentDetailsModifier]): Self = this.set("modifiers", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteModifiers: Self = this.set("modifiers", js.undefined)
+    @scala.inline
+    def setShippingOptionsVarargs(value: PaymentShippingOption*): Self = this.set("shippingOptions", js.Array(value :_*))
     @scala.inline
     def setShippingOptions(value: js.Array[PaymentShippingOption]): Self = this.set("shippingOptions", value.asInstanceOf[js.Any])
     @scala.inline

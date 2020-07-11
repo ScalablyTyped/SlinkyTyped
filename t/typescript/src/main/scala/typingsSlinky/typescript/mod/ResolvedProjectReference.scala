@@ -32,6 +32,8 @@ object ResolvedProjectReference {
     @scala.inline
     def setSourceFile(value: SourceFile): Self = this.set("sourceFile", value.asInstanceOf[js.Any])
     @scala.inline
+    def setReferencesVarargs(value: js.UndefOr[ResolvedProjectReference]*): Self = this.set("references", js.Array(value :_*))
+    @scala.inline
     def setReferences(value: js.Array[js.UndefOr[ResolvedProjectReference]]): Self = this.set("references", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteReferences: Self = this.set("references", js.undefined)

@@ -29,6 +29,8 @@ object Options {
         x
     }
     @scala.inline
+    def setErrorsVarargs(value: Diagnostic*): Self = this.set("errors", js.Array(value :_*))
+    @scala.inline
     def setErrors(value: js.Array[Diagnostic]): Self = this.set("errors", value.asInstanceOf[js.Any])
     @scala.inline
     def setOptions(value: TypeAcquisition): Self = this.set("options", value.asInstanceOf[js.Any])

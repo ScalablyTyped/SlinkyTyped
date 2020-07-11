@@ -39,6 +39,8 @@ object IArrayWillSplice {
         x
     }
     @scala.inline
+    def setAddedVarargs(value: T*): Self = this.set("added", js.Array(value :_*))
+    @scala.inline
     def setAdded(value: js.Array[T]): Self = this.set("added", value.asInstanceOf[js.Any])
     @scala.inline
     def setIndex(value: Double): Self = this.set("index", value.asInstanceOf[js.Any])

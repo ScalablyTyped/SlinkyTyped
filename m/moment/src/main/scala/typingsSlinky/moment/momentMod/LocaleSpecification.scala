@@ -72,11 +72,15 @@ object LocaleSpecification {
     @scala.inline
     def setMonthsFunction2(value: (/* momentToFormat */ Moment, /* format */ js.UndefOr[String]) => String): Self = this.set("months", js.Any.fromFunction2(value))
     @scala.inline
+    def setMonthsVarargs(value: String*): Self = this.set("months", js.Array(value :_*))
+    @scala.inline
     def setMonths(value: js.Array[String] | StandaloneFormatSpec | MonthWeekdayFn): Self = this.set("months", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMonths: Self = this.set("months", js.undefined)
     @scala.inline
     def setMonthsShortFunction2(value: (/* momentToFormat */ Moment, /* format */ js.UndefOr[String]) => String): Self = this.set("monthsShort", js.Any.fromFunction2(value))
+    @scala.inline
+    def setMonthsShortVarargs(value: String*): Self = this.set("monthsShort", js.Array(value :_*))
     @scala.inline
     def setMonthsShort(value: js.Array[String] | StandaloneFormatSpec | MonthWeekdayFn): Self = this.set("monthsShort", value.asInstanceOf[js.Any])
     @scala.inline
@@ -100,15 +104,21 @@ object LocaleSpecification {
     @scala.inline
     def setWeekdaysFunction2(value: (/* momentToFormat */ Moment, /* format */ js.UndefOr[String]) => String): Self = this.set("weekdays", js.Any.fromFunction2(value))
     @scala.inline
+    def setWeekdaysVarargs(value: String*): Self = this.set("weekdays", js.Array(value :_*))
+    @scala.inline
     def setWeekdays(value: js.Array[String] | StandaloneFormatSpec | MonthWeekdayFn): Self = this.set("weekdays", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWeekdays: Self = this.set("weekdays", js.undefined)
+    @scala.inline
+    def setWeekdaysMinVarargs(value: String*): Self = this.set("weekdaysMin", js.Array(value :_*))
     @scala.inline
     def setWeekdaysMinFunction1(value: /* momentToFormat */ Moment => String): Self = this.set("weekdaysMin", js.Any.fromFunction1(value))
     @scala.inline
     def setWeekdaysMin(value: js.Array[String] | StandaloneFormatSpec | WeekdaySimpleFn): Self = this.set("weekdaysMin", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWeekdaysMin: Self = this.set("weekdaysMin", js.undefined)
+    @scala.inline
+    def setWeekdaysShortVarargs(value: String*): Self = this.set("weekdaysShort", js.Array(value :_*))
     @scala.inline
     def setWeekdaysShortFunction1(value: /* momentToFormat */ Moment => String): Self = this.set("weekdaysShort", js.Any.fromFunction1(value))
     @scala.inline

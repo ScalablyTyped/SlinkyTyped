@@ -34,6 +34,8 @@ object SecureServerOptions {
     @scala.inline
     def deleteAllowHTTP1: Self = this.set("allowHTTP1", js.undefined)
     @scala.inline
+    def setOriginsVarargs(value: String*): Self = this.set("origins", js.Array(value :_*))
+    @scala.inline
     def setOrigins(value: js.Array[String]): Self = this.set("origins", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOrigins: Self = this.set("origins", js.undefined)

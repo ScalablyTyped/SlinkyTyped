@@ -31,6 +31,8 @@ object RelativeTimeOptions {
     @scala.inline
     def deleteRounding: Self = this.set("rounding", js.undefined)
     @scala.inline
+    def setThresholdsVarargs(value: RelativeTimeThreshold*): Self = this.set("thresholds", js.Array(value :_*))
+    @scala.inline
     def setThresholds(value: js.Array[RelativeTimeThreshold]): Self = this.set("thresholds", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteThresholds: Self = this.set("thresholds", js.undefined)

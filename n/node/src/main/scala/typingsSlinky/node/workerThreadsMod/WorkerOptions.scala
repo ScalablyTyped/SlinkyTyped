@@ -45,6 +45,8 @@ object WorkerOptions {
         x
     }
     @scala.inline
+    def setArgvVarargs(value: js.Any*): Self = this.set("argv", js.Array(value :_*))
+    @scala.inline
     def setArgv(value: js.Array[_]): Self = this.set("argv", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteArgv: Self = this.set("argv", js.undefined)
@@ -56,6 +58,8 @@ object WorkerOptions {
     def setEval(value: Boolean): Self = this.set("eval", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEval: Self = this.set("eval", js.undefined)
+    @scala.inline
+    def setExecArgvVarargs(value: String*): Self = this.set("execArgv", js.Array(value :_*))
     @scala.inline
     def setExecArgv(value: js.Array[String]): Self = this.set("execArgv", value.asInstanceOf[js.Any])
     @scala.inline
@@ -76,6 +80,8 @@ object WorkerOptions {
     def setStdout(value: Boolean): Self = this.set("stdout", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStdout: Self = this.set("stdout", js.undefined)
+    @scala.inline
+    def setTransferListVarargs(value: (js.typedarray.ArrayBuffer | MessagePort)*): Self = this.set("transferList", js.Array(value :_*))
     @scala.inline
     def setTransferList(value: js.Array[js.typedarray.ArrayBuffer | MessagePort]): Self = this.set("transferList", value.asInstanceOf[js.Any])
     @scala.inline

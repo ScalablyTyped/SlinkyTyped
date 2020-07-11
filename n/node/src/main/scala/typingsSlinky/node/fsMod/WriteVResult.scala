@@ -28,6 +28,8 @@ object WriteVResult {
         x
     }
     @scala.inline
+    def setBuffersVarargs(value: ArrayBufferView*): Self = this.set("buffers", js.Array(value :_*))
+    @scala.inline
     def setBuffers(value: js.Array[ArrayBufferView]): Self = this.set("buffers", value.asInstanceOf[js.Any])
     @scala.inline
     def setBytesWritten(value: Double): Self = this.set("bytesWritten", value.asInstanceOf[js.Any])

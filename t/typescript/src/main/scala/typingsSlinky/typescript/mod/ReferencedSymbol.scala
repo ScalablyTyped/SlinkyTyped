@@ -29,6 +29,8 @@ object ReferencedSymbol {
     @scala.inline
     def setDefinition(value: ReferencedSymbolDefinitionInfo): Self = this.set("definition", value.asInstanceOf[js.Any])
     @scala.inline
+    def setReferencesVarargs(value: ReferenceEntry*): Self = this.set("references", js.Array(value :_*))
+    @scala.inline
     def setReferences(value: js.Array[ReferenceEntry]): Self = this.set("references", value.asInstanceOf[js.Any])
   }
   

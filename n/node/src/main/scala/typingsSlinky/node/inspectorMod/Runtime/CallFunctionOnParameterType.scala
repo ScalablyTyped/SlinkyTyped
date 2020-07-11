@@ -68,6 +68,8 @@ object CallFunctionOnParameterType {
     @scala.inline
     def setFunctionDeclaration(value: String): Self = this.set("functionDeclaration", value.asInstanceOf[js.Any])
     @scala.inline
+    def setArgumentsVarargs(value: CallArgument*): Self = this.set("arguments", js.Array(value :_*))
+    @scala.inline
     def setArguments(value: js.Array[CallArgument]): Self = this.set("arguments", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteArguments: Self = this.set("arguments", js.undefined)

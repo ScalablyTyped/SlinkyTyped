@@ -51,6 +51,8 @@ object PaymentAddress {
         x
     }
     @scala.inline
+    def setAddressLineVarargs(value: java.lang.String*): Self = this.set("addressLine", js.Array(value :_*))
+    @scala.inline
     def setAddressLine(value: js.Array[java.lang.String]): Self = this.set("addressLine", value.asInstanceOf[js.Any])
     @scala.inline
     def setCity(value: java.lang.String): Self = this.set("city", value.asInstanceOf[js.Any])

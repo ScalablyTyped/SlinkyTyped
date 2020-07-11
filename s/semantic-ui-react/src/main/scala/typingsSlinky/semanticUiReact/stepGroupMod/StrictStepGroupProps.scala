@@ -3,6 +3,7 @@ package typingsSlinky.semanticUiReact.stepGroupMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.semanticUiReactNumbers.`1`
 import typingsSlinky.semanticUiReact.semanticUiReactNumbers.`2`
 import typingsSlinky.semanticUiReact.semanticUiReactNumbers.`3`
@@ -110,6 +111,8 @@ object StrictStepGroupProps {
     def setFluid(value: Boolean): Self = this.set("fluid", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFluid: Self = this.set("fluid", js.undefined)
+    @scala.inline
+    def setItemsVarargs(value: SemanticShorthandItem[StepProps]*): Self = this.set("items", js.Array(value :_*))
     @scala.inline
     def setItems(value: SemanticShorthandCollection[StepProps]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline

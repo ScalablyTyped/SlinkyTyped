@@ -31,6 +31,8 @@ object Dependencies {
         x
     }
     @scala.inline
+    def setDependenciesVarargs(value: NamePath*): Self = this.set("dependencies", js.Array(value :_*))
+    @scala.inline
     def setDependencies(value: js.Array[NamePath]): Self = this.set("dependencies", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDependencies: Self = this.set("dependencies", js.undefined)
@@ -39,9 +41,13 @@ object Dependencies {
     @scala.inline
     def deleteInitialValue: Self = this.set("initialValue", js.undefined)
     @scala.inline
+    def setNameVarargs(value: (String | Double)*): Self = this.set("name", js.Array(value :_*))
+    @scala.inline
     def setName(value: NamePath): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
+    @scala.inline
+    def setRulesVarargs(value: Rule*): Self = this.set("rules", js.Array(value :_*))
     @scala.inline
     def setRules(value: js.Array[Rule]): Self = this.set("rules", value.asInstanceOf[js.Any])
     @scala.inline

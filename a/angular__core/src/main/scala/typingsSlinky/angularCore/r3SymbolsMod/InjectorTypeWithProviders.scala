@@ -41,6 +41,10 @@ object InjectorTypeWithProviders {
     @scala.inline
     def setNgModule(value: InjectorType[T]): Self = this.set("ngModule", value.asInstanceOf[js.Any])
     @scala.inline
+    def setProvidersVarargs(
+      value: (Type[js.Any] | ValueProvider | ExistingProvider | FactoryProvider | ConstructorProvider | StaticClassProvider | ClassProvider | js.Array[js.Any])*
+    ): Self = this.set("providers", js.Array(value :_*))
+    @scala.inline
     def setProviders(
       value: js.Array[
           Type[_] | ValueProvider | ExistingProvider | FactoryProvider | ConstructorProvider | StaticClassProvider | ClassProvider | js.Array[_]

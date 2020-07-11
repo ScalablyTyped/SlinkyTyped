@@ -30,6 +30,8 @@ object AnimationKeyframesSequenceMetadata {
         x
     }
     @scala.inline
+    def setStepsVarargs(value: AnimationStyleMetadata*): Self = this.set("steps", js.Array(value :_*))
+    @scala.inline
     def setSteps(value: js.Array[AnimationStyleMetadata]): Self = this.set("steps", value.asInstanceOf[js.Any])
   }
   

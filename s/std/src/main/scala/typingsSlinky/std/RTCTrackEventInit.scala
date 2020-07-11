@@ -39,6 +39,8 @@ object RTCTrackEventInit {
     @scala.inline
     def setTransceiver(value: RTCRtpTransceiver): Self = this.set("transceiver", value.asInstanceOf[js.Any])
     @scala.inline
+    def setStreamsVarargs(value: org.scalajs.dom.experimental.mediastream.MediaStream*): Self = this.set("streams", js.Array(value :_*))
+    @scala.inline
     def setStreams(value: js.Array[org.scalajs.dom.experimental.mediastream.MediaStream]): Self = this.set("streams", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStreams: Self = this.set("streams", js.undefined)

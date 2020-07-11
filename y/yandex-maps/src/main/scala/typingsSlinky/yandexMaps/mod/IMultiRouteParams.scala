@@ -41,6 +41,8 @@ object IMultiRouteParams {
     @scala.inline
     def deleteAvoidTrafficJams: Self = this.set("avoidTrafficJams", js.undefined)
     @scala.inline
+    def setBoundedByVarargs(value: js.Array[Double]*): Self = this.set("boundedBy", js.Array(value :_*))
+    @scala.inline
     def setBoundedBy(value: js.Array[js.Array[Double]]): Self = this.set("boundedBy", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBoundedBy: Self = this.set("boundedBy", js.undefined)
@@ -70,6 +72,8 @@ object IMultiRouteParams {
     def setStrictBounds(value: Boolean): Self = this.set("strictBounds", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStrictBounds: Self = this.set("strictBounds", js.undefined)
+    @scala.inline
+    def setViaIndexesVarargs(value: Double*): Self = this.set("viaIndexes", js.Array(value :_*))
     @scala.inline
     def setViaIndexes(value: js.Array[Double]): Self = this.set("viaIndexes", value.asInstanceOf[js.Any])
     @scala.inline

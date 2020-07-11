@@ -75,97 +75,145 @@ object VendorShorthandPropertiesFallback {
         x
     }
     @scala.inline
+    def setMozAnimationVarargs(value: AnimationProperty*): Self = this.set("MozAnimation", js.Array(value :_*))
+    @scala.inline
     def setMozAnimation(value: AnimationProperty | js.Array[AnimationProperty]): Self = this.set("MozAnimation", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMozAnimation: Self = this.set("MozAnimation", js.undefined)
+    @scala.inline
+    def setMozBorderImageVarargs(value: BorderImageProperty*): Self = this.set("MozBorderImage", js.Array(value :_*))
     @scala.inline
     def setMozBorderImage(value: BorderImageProperty | js.Array[BorderImageProperty]): Self = this.set("MozBorderImage", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMozBorderImage: Self = this.set("MozBorderImage", js.undefined)
     @scala.inline
+    def setMozColumnRuleVarargs(value: ColumnRuleProperty[TLength]*): Self = this.set("MozColumnRule", js.Array(value :_*))
+    @scala.inline
     def setMozColumnRule(value: ColumnRuleProperty[TLength] | js.Array[ColumnRuleProperty[TLength]]): Self = this.set("MozColumnRule", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMozColumnRule: Self = this.set("MozColumnRule", js.undefined)
+    @scala.inline
+    def setMozColumnsVarargs(value: ColumnsProperty[TLength]*): Self = this.set("MozColumns", js.Array(value :_*))
     @scala.inline
     def setMozColumns(value: ColumnsProperty[TLength] | js.Array[ColumnsProperty[TLength]]): Self = this.set("MozColumns", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMozColumns: Self = this.set("MozColumns", js.undefined)
     @scala.inline
+    def setMozTransitionVarargs(value: TransitionProperty*): Self = this.set("MozTransition", js.Array(value :_*))
+    @scala.inline
     def setMozTransition(value: TransitionProperty | js.Array[TransitionProperty]): Self = this.set("MozTransition", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMozTransition: Self = this.set("MozTransition", js.undefined)
+    @scala.inline
+    def setWebkitAnimationVarargs(value: AnimationProperty*): Self = this.set("WebkitAnimation", js.Array(value :_*))
     @scala.inline
     def setWebkitAnimation(value: AnimationProperty | js.Array[AnimationProperty]): Self = this.set("WebkitAnimation", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWebkitAnimation: Self = this.set("WebkitAnimation", js.undefined)
     @scala.inline
+    def setWebkitBorderBeforeVarargs(value: WebkitBorderBeforeProperty[TLength]*): Self = this.set("WebkitBorderBefore", js.Array(value :_*))
+    @scala.inline
     def setWebkitBorderBefore(value: WebkitBorderBeforeProperty[TLength] | js.Array[WebkitBorderBeforeProperty[TLength]]): Self = this.set("WebkitBorderBefore", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWebkitBorderBefore: Self = this.set("WebkitBorderBefore", js.undefined)
+    @scala.inline
+    def setWebkitBorderImageVarargs(value: BorderImageProperty*): Self = this.set("WebkitBorderImage", js.Array(value :_*))
     @scala.inline
     def setWebkitBorderImage(value: BorderImageProperty | js.Array[BorderImageProperty]): Self = this.set("WebkitBorderImage", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWebkitBorderImage: Self = this.set("WebkitBorderImage", js.undefined)
     @scala.inline
+    def setWebkitBorderRadiusVarargs(value: BorderRadiusProperty[TLength]*): Self = this.set("WebkitBorderRadius", js.Array(value :_*))
+    @scala.inline
     def setWebkitBorderRadius(value: BorderRadiusProperty[TLength] | js.Array[BorderRadiusProperty[TLength]]): Self = this.set("WebkitBorderRadius", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWebkitBorderRadius: Self = this.set("WebkitBorderRadius", js.undefined)
+    @scala.inline
+    def setWebkitColumnRuleVarargs(value: ColumnRuleProperty[TLength]*): Self = this.set("WebkitColumnRule", js.Array(value :_*))
     @scala.inline
     def setWebkitColumnRule(value: ColumnRuleProperty[TLength] | js.Array[ColumnRuleProperty[TLength]]): Self = this.set("WebkitColumnRule", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWebkitColumnRule: Self = this.set("WebkitColumnRule", js.undefined)
     @scala.inline
+    def setWebkitColumnsVarargs(value: ColumnsProperty[TLength]*): Self = this.set("WebkitColumns", js.Array(value :_*))
+    @scala.inline
     def setWebkitColumns(value: ColumnsProperty[TLength] | js.Array[ColumnsProperty[TLength]]): Self = this.set("WebkitColumns", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWebkitColumns: Self = this.set("WebkitColumns", js.undefined)
+    @scala.inline
+    def setWebkitFlexVarargs(value: FlexProperty[TLength]*): Self = this.set("WebkitFlex", js.Array(value :_*))
     @scala.inline
     def setWebkitFlex(value: FlexProperty[TLength] | js.Array[FlexProperty[TLength]]): Self = this.set("WebkitFlex", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWebkitFlex: Self = this.set("WebkitFlex", js.undefined)
     @scala.inline
+    def setWebkitFlexFlowVarargs(value: FlexFlowProperty*): Self = this.set("WebkitFlexFlow", js.Array(value :_*))
+    @scala.inline
     def setWebkitFlexFlow(value: FlexFlowProperty | js.Array[FlexFlowProperty]): Self = this.set("WebkitFlexFlow", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWebkitFlexFlow: Self = this.set("WebkitFlexFlow", js.undefined)
+    @scala.inline
+    def setWebkitMaskVarargs(value: WebkitMaskProperty[TLength]*): Self = this.set("WebkitMask", js.Array(value :_*))
     @scala.inline
     def setWebkitMask(value: WebkitMaskProperty[TLength] | js.Array[WebkitMaskProperty[TLength]]): Self = this.set("WebkitMask", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWebkitMask: Self = this.set("WebkitMask", js.undefined)
     @scala.inline
+    def setWebkitTextEmphasisVarargs(value: TextEmphasisProperty*): Self = this.set("WebkitTextEmphasis", js.Array(value :_*))
+    @scala.inline
     def setWebkitTextEmphasis(value: TextEmphasisProperty | js.Array[TextEmphasisProperty]): Self = this.set("WebkitTextEmphasis", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWebkitTextEmphasis: Self = this.set("WebkitTextEmphasis", js.undefined)
+    @scala.inline
+    def setWebkitTextStrokeVarargs(value: WebkitTextStrokeProperty[TLength]*): Self = this.set("WebkitTextStroke", js.Array(value :_*))
     @scala.inline
     def setWebkitTextStroke(value: WebkitTextStrokeProperty[TLength] | js.Array[WebkitTextStrokeProperty[TLength]]): Self = this.set("WebkitTextStroke", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWebkitTextStroke: Self = this.set("WebkitTextStroke", js.undefined)
     @scala.inline
+    def setWebkitTransitionVarargs(value: TransitionProperty*): Self = this.set("WebkitTransition", js.Array(value :_*))
+    @scala.inline
     def setWebkitTransition(value: TransitionProperty | js.Array[TransitionProperty]): Self = this.set("WebkitTransition", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWebkitTransition: Self = this.set("WebkitTransition", js.undefined)
+    @scala.inline
+    def setMsContentZoomLimitVarargs(value: GlobalsString*): Self = this.set("msContentZoomLimit", js.Array(value :_*))
     @scala.inline
     def setMsContentZoomLimit(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("msContentZoomLimit", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMsContentZoomLimit: Self = this.set("msContentZoomLimit", js.undefined)
     @scala.inline
+    def setMsContentZoomSnapVarargs(value: MsContentZoomSnapProperty*): Self = this.set("msContentZoomSnap", js.Array(value :_*))
+    @scala.inline
     def setMsContentZoomSnap(value: MsContentZoomSnapProperty | js.Array[MsContentZoomSnapProperty]): Self = this.set("msContentZoomSnap", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMsContentZoomSnap: Self = this.set("msContentZoomSnap", js.undefined)
+    @scala.inline
+    def setMsFlexVarargs(value: FlexProperty[TLength]*): Self = this.set("msFlex", js.Array(value :_*))
     @scala.inline
     def setMsFlex(value: FlexProperty[TLength] | js.Array[FlexProperty[TLength]]): Self = this.set("msFlex", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMsFlex: Self = this.set("msFlex", js.undefined)
     @scala.inline
+    def setMsScrollLimitVarargs(value: GlobalsString*): Self = this.set("msScrollLimit", js.Array(value :_*))
+    @scala.inline
     def setMsScrollLimit(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("msScrollLimit", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMsScrollLimit: Self = this.set("msScrollLimit", js.undefined)
+    @scala.inline
+    def setMsScrollSnapXVarargs(value: GlobalsString*): Self = this.set("msScrollSnapX", js.Array(value :_*))
     @scala.inline
     def setMsScrollSnapX(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("msScrollSnapX", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMsScrollSnapX: Self = this.set("msScrollSnapX", js.undefined)
     @scala.inline
+    def setMsScrollSnapYVarargs(value: GlobalsString*): Self = this.set("msScrollSnapY", js.Array(value :_*))
+    @scala.inline
     def setMsScrollSnapY(value: GlobalsString | js.Array[GlobalsString]): Self = this.set("msScrollSnapY", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMsScrollSnapY: Self = this.set("msScrollSnapY", js.undefined)
+    @scala.inline
+    def setMsTransitionVarargs(value: TransitionProperty*): Self = this.set("msTransition", js.Array(value :_*))
     @scala.inline
     def setMsTransition(value: TransitionProperty | js.Array[TransitionProperty]): Self = this.set("msTransition", value.asInstanceOf[js.Any])
     @scala.inline

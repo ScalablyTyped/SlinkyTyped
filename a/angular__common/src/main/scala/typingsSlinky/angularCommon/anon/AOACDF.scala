@@ -29,11 +29,19 @@ object AOACDF {
         x
     }
     @scala.inline
+    def setAOAVarargs(value: String*): Self = this.set("AOA", js.Array(value :_*))
+    @scala.inline
     def setAOA(value: js.Array[String]): Self = this.set("AOA", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCDFVarargs(value: String*): Self = this.set("CDF", js.Array(value :_*))
     @scala.inline
     def setCDF(value: js.Array[String]): Self = this.set("CDF", value.asInstanceOf[js.Any])
     @scala.inline
+    def setJPYVarargs(value: String*): Self = this.set("JPY", js.Array(value :_*))
+    @scala.inline
     def setJPY(value: js.Array[String]): Self = this.set("JPY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUSDVarargs(value: String*): Self = this.set("USD", js.Array(value :_*))
     @scala.inline
     def setUSD(value: js.Array[String]): Self = this.set("USD", value.asInstanceOf[js.Any])
   }

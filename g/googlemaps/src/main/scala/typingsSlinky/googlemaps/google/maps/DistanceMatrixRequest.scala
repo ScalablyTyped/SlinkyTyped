@@ -48,6 +48,8 @@ object DistanceMatrixRequest {
     @scala.inline
     def deleteAvoidTolls: Self = this.set("avoidTolls", js.undefined)
     @scala.inline
+    def setDestinationsVarargs(value: (LatLng | LatLngLiteral | Place | String)*): Self = this.set("destinations", js.Array(value :_*))
+    @scala.inline
     def setDestinations(value: js.Array[LatLng | LatLngLiteral | Place | String]): Self = this.set("destinations", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDestinations: Self = this.set("destinations", js.undefined)
@@ -59,6 +61,8 @@ object DistanceMatrixRequest {
     def setDurationInTraffic(value: Boolean): Self = this.set("durationInTraffic", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDurationInTraffic: Self = this.set("durationInTraffic", js.undefined)
+    @scala.inline
+    def setOriginsVarargs(value: (LatLng | LatLngLiteral | Place | String)*): Self = this.set("origins", js.Array(value :_*))
     @scala.inline
     def setOrigins(value: js.Array[LatLng | LatLngLiteral | Place | String]): Self = this.set("origins", value.asInstanceOf[js.Any])
     @scala.inline

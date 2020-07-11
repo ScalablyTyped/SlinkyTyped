@@ -29,6 +29,8 @@ object State {
     @scala.inline
     def setDrawerWidth(value: Double): Self = this.set("drawerWidth", value.asInstanceOf[js.Any])
     @scala.inline
+    def setLoadedVarargs(value: Double*): Self = this.set("loaded", js.Array(value :_*))
+    @scala.inline
     def setLoaded(value: js.Array[Double]): Self = this.set("loaded", value.asInstanceOf[js.Any])
   }
   

@@ -33,6 +33,8 @@ object Route {
     @scala.inline
     def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
     @scala.inline
+    def setChildrenVarargs(value: OmitRoutechildren*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: js.Array[OmitRoutechildren]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)

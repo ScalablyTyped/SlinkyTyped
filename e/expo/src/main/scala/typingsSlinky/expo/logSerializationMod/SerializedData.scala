@@ -28,6 +28,8 @@ object SerializedData {
         x
     }
     @scala.inline
+    def setBodyVarargs(value: LogData*): Self = this.set("body", js.Array(value :_*))
+    @scala.inline
     def setBody(value: js.Array[LogData]): Self = this.set("body", value.asInstanceOf[js.Any])
     @scala.inline
     def setIncludesStack(value: Boolean): Self = this.set("includesStack", value.asInstanceOf[js.Any])

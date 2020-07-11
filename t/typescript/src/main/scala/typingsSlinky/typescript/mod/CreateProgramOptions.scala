@@ -33,7 +33,11 @@ object CreateProgramOptions {
     @scala.inline
     def setOptions(value: CompilerOptions): Self = this.set("options", value.asInstanceOf[js.Any])
     @scala.inline
+    def setRootNamesVarargs(value: java.lang.String*): Self = this.set("rootNames", js.Array(value :_*))
+    @scala.inline
     def setRootNames(value: js.Array[java.lang.String]): Self = this.set("rootNames", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setConfigFileParsingDiagnosticsVarargs(value: Diagnostic*): Self = this.set("configFileParsingDiagnostics", js.Array(value :_*))
     @scala.inline
     def setConfigFileParsingDiagnostics(value: js.Array[Diagnostic]): Self = this.set("configFileParsingDiagnostics", value.asInstanceOf[js.Any])
     @scala.inline
@@ -46,6 +50,8 @@ object CreateProgramOptions {
     def setOldProgram(value: Program): Self = this.set("oldProgram", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOldProgram: Self = this.set("oldProgram", js.undefined)
+    @scala.inline
+    def setProjectReferencesVarargs(value: ProjectReference*): Self = this.set("projectReferences", js.Array(value :_*))
     @scala.inline
     def setProjectReferences(value: js.Array[ProjectReference]): Self = this.set("projectReferences", value.asInstanceOf[js.Any])
     @scala.inline

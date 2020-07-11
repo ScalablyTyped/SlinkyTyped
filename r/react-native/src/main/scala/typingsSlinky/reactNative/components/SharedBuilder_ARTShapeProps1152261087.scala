@@ -36,6 +36,8 @@ class SharedBuilder_ARTShapeProps1152261087[R <: js.Object] (val args: js.Array[
   @scala.inline
   def strokeCap(value: butt | square | round): this.type = set("strokeCap", value.asInstanceOf[js.Any])
   @scala.inline
+  def strokeDashVarargs(value: Double*): this.type = set("strokeDash", js.Array(value :_*))
+  @scala.inline
   def strokeDash(value: js.Array[Double]): this.type = set("strokeDash", value.asInstanceOf[js.Any])
   @scala.inline
   def strokeJoin(value: bevel | miter | round): this.type = set("strokeJoin", value.asInstanceOf[js.Any])

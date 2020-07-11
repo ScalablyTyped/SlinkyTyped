@@ -82,6 +82,8 @@ object CustomQueryParams {
     @scala.inline
     def setLocation(value: WindowLocation[LocationState]): Self = this.set("location", value.asInstanceOf[js.Any])
     @scala.inline
+    def setNotificationsVarargs(value: Notification*): Self = this.set("notifications", js.Array(value :_*))
+    @scala.inline
     def setNotifications(value: js.Array[Notification]): Self = this.set("notifications", value.asInstanceOf[js.Any])
     @scala.inline
     def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])

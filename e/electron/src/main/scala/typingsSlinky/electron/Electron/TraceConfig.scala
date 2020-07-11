@@ -29,9 +29,13 @@ object TraceConfig {
         x
     }
     @scala.inline
+    def setExcluded_categoriesVarargs(value: String*): Self = this.set("excluded_categories", js.Array(value :_*))
+    @scala.inline
     def setExcluded_categories(value: js.Array[String]): Self = this.set("excluded_categories", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExcluded_categories: Self = this.set("excluded_categories", js.undefined)
+    @scala.inline
+    def setIncluded_categoriesVarargs(value: String*): Self = this.set("included_categories", js.Array(value :_*))
     @scala.inline
     def setIncluded_categories(value: js.Array[String]): Self = this.set("included_categories", value.asInstanceOf[js.Any])
     @scala.inline

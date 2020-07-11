@@ -53,6 +53,8 @@ object MutationObserverInit {
         x
     }
     @scala.inline
+    def setAttributeFilterVarargs(value: java.lang.String*): Self = this.set("attributeFilter", js.Array(value :_*))
+    @scala.inline
     def setAttributeFilter(value: js.Array[java.lang.String]): Self = this.set("attributeFilter", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAttributeFilter: Self = this.set("attributeFilter", js.undefined)

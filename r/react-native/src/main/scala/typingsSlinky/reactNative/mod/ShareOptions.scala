@@ -33,6 +33,8 @@ object ShareOptions {
     @scala.inline
     def deleteDialogTitle: Self = this.set("dialogTitle", js.undefined)
     @scala.inline
+    def setExcludedActivityTypesVarargs(value: String*): Self = this.set("excludedActivityTypes", js.Array(value :_*))
+    @scala.inline
     def setExcludedActivityTypes(value: js.Array[String]): Self = this.set("excludedActivityTypes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExcludedActivityTypes: Self = this.set("excludedActivityTypes", js.undefined)

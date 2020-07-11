@@ -33,6 +33,8 @@ object LegacyCheckedNode {
     @scala.inline
     def setPos(value: String): Self = this.set("pos", value.asInstanceOf[js.Any])
     @scala.inline
+    def setChildrenVarargs(value: LegacyCheckedNode*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: js.Array[LegacyCheckedNode]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)

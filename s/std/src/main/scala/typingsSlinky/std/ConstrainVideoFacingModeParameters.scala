@@ -27,9 +27,13 @@ object ConstrainVideoFacingModeParameters {
         x
     }
     @scala.inline
+    def setExactVarargs(value: VideoFacingModeEnum*): Self = this.set("exact", js.Array(value :_*))
+    @scala.inline
     def setExact(value: VideoFacingModeEnum | js.Array[VideoFacingModeEnum]): Self = this.set("exact", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExact: Self = this.set("exact", js.undefined)
+    @scala.inline
+    def setIdealVarargs(value: VideoFacingModeEnum*): Self = this.set("ideal", js.Array(value :_*))
     @scala.inline
     def setIdeal(value: VideoFacingModeEnum | js.Array[VideoFacingModeEnum]): Self = this.set("ideal", value.asInstanceOf[js.Any])
     @scala.inline

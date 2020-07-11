@@ -34,6 +34,8 @@ object PhiLength {
     @scala.inline
     def setPhiStart(value: Double): Self = this.set("phiStart", value.asInstanceOf[js.Any])
     @scala.inline
+    def setPointsVarargs(value: Vector2*): Self = this.set("points", js.Array(value :_*))
+    @scala.inline
     def setPoints(value: js.Array[Vector2]): Self = this.set("points", value.asInstanceOf[js.Any])
     @scala.inline
     def setSegments(value: Double): Self = this.set("segments", value.asInstanceOf[js.Any])

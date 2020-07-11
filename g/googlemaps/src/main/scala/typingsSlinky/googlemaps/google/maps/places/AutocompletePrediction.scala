@@ -51,6 +51,8 @@ object AutocompletePrediction {
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
+    def setMatched_substringsVarargs(value: PredictionSubstring*): Self = this.set("matched_substrings", js.Array(value :_*))
+    @scala.inline
     def setMatched_substrings(value: js.Array[PredictionSubstring]): Self = this.set("matched_substrings", value.asInstanceOf[js.Any])
     @scala.inline
     def setPlace_id(value: String): Self = this.set("place_id", value.asInstanceOf[js.Any])
@@ -59,7 +61,11 @@ object AutocompletePrediction {
     @scala.inline
     def setStructured_formatting(value: AutocompleteStructuredFormatting): Self = this.set("structured_formatting", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTermsVarargs(value: PredictionTerm*): Self = this.set("terms", js.Array(value :_*))
+    @scala.inline
     def setTerms(value: js.Array[PredictionTerm]): Self = this.set("terms", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTypesVarargs(value: String*): Self = this.set("types", js.Array(value :_*))
     @scala.inline
     def setTypes(value: js.Array[String]): Self = this.set("types", value.asInstanceOf[js.Any])
     @scala.inline

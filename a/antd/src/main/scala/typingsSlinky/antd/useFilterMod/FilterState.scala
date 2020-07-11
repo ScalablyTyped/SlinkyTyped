@@ -35,6 +35,8 @@ object FilterState {
     @scala.inline
     def setKey(value: Key): Self = this.set("key", value.asInstanceOf[js.Any])
     @scala.inline
+    def setFilteredKeysVarargs(value: Key*): Self = this.set("filteredKeys", js.Array(value :_*))
+    @scala.inline
     def setFilteredKeys(value: js.Array[Key]): Self = this.set("filteredKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFilteredKeys: Self = this.set("filteredKeys", js.undefined)

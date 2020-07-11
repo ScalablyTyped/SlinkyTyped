@@ -31,6 +31,8 @@ object RTCRtpReceiveParameters {
         x
     }
     @scala.inline
+    def setEncodingsVarargs(value: RTCRtpDecodingParameters*): Self = this.set("encodings", js.Array(value :_*))
+    @scala.inline
     def setEncodings(value: js.Array[RTCRtpDecodingParameters]): Self = this.set("encodings", value.asInstanceOf[js.Any])
   }
   

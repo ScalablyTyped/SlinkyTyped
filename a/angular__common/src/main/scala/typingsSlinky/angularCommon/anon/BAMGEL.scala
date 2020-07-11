@@ -42,19 +42,35 @@ object BAMGEL {
         x
     }
     @scala.inline
+    def setAUDVarargs(value: js.UndefOr[String]*): Self = this.set("AUD", js.Array(value :_*))
+    @scala.inline
     def setAUD(value: js.Array[js.UndefOr[String]]): Self = this.set("AUD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBAMVarargs(value: String*): Self = this.set("BAM", js.Array(value :_*))
     @scala.inline
     def setBAM(value: js.Array[String]): Self = this.set("BAM", value.asInstanceOf[js.Any])
     @scala.inline
+    def setGELVarargs(value: js.UndefOr[String]*): Self = this.set("GEL", js.Array(value :_*))
+    @scala.inline
     def setGEL(value: js.Array[js.UndefOr[String]]): Self = this.set("GEL", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setKRWVarargs(value: js.UndefOr[String]*): Self = this.set("KRW", js.Array(value :_*))
     @scala.inline
     def setKRW(value: js.Array[js.UndefOr[String]]): Self = this.set("KRW", value.asInstanceOf[js.Any])
     @scala.inline
+    def setNZDVarargs(value: js.UndefOr[String]*): Self = this.set("NZD", js.Array(value :_*))
+    @scala.inline
     def setNZD(value: js.Array[js.UndefOr[String]]): Self = this.set("NZD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTWDVarargs(value: String*): Self = this.set("TWD", js.Array(value :_*))
     @scala.inline
     def setTWD(value: js.Array[String]): Self = this.set("TWD", value.asInstanceOf[js.Any])
     @scala.inline
+    def setUSDVarargs(value: String*): Self = this.set("USD", js.Array(value :_*))
+    @scala.inline
     def setUSD(value: js.Array[String]): Self = this.set("USD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVNDVarargs(value: js.UndefOr[String]*): Self = this.set("VND", js.Array(value :_*))
     @scala.inline
     def setVND(value: js.Array[js.UndefOr[String]]): Self = this.set("VND", value.asInstanceOf[js.Any])
   }

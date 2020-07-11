@@ -37,6 +37,8 @@ object ChartConfiguration {
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)
     @scala.inline
+    def setPluginsVarargs(value: PluginServiceRegistrationOptions*): Self = this.set("plugins", js.Array(value :_*))
+    @scala.inline
     def setPlugins(value: js.Array[PluginServiceRegistrationOptions]): Self = this.set("plugins", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePlugins: Self = this.set("plugins", js.undefined)

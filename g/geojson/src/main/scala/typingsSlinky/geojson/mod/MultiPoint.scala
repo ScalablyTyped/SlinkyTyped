@@ -31,6 +31,8 @@ object MultiPoint {
         x
     }
     @scala.inline
+    def setCoordinatesVarargs(value: Position*): Self = this.set("coordinates", js.Array(value :_*))
+    @scala.inline
     def setCoordinates(value: js.Array[Position]): Self = this.set("coordinates", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: typingsSlinky.geojson.geojsonStrings.MultiPoint): Self = this.set("type", value.asInstanceOf[js.Any])

@@ -36,13 +36,23 @@ object THB {
         x
     }
     @scala.inline
+    def setBDTVarargs(value: String*): Self = this.set("BDT", js.Array(value :_*))
+    @scala.inline
     def setBDT(value: js.Array[String]): Self = this.set("BDT", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setJPYVarargs(value: String*): Self = this.set("JPY", js.Array(value :_*))
     @scala.inline
     def setJPY(value: js.Array[String]): Self = this.set("JPY", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTHBVarargs(value: String*): Self = this.set("THB", js.Array(value :_*))
+    @scala.inline
     def setTHB(value: js.Array[String]): Self = this.set("THB", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTWDVarargs(value: String*): Self = this.set("TWD", js.Array(value :_*))
+    @scala.inline
     def setTWD(value: js.Array[String]): Self = this.set("TWD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUSDVarargs(value: String*): Self = this.set("USD", js.Array(value :_*))
     @scala.inline
     def setUSD(value: js.Array[String]): Self = this.set("USD", value.asInstanceOf[js.Any])
   }

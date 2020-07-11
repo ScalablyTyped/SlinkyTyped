@@ -57,6 +57,8 @@ object ProfileNode {
     @scala.inline
     def setId(value: Double): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
+    def setChildrenVarargs(value: Double*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: js.Array[Double]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
@@ -68,6 +70,8 @@ object ProfileNode {
     def setHitCount(value: Double): Self = this.set("hitCount", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHitCount: Self = this.set("hitCount", js.undefined)
+    @scala.inline
+    def setPositionTicksVarargs(value: PositionTickInfo*): Self = this.set("positionTicks", js.Array(value :_*))
     @scala.inline
     def setPositionTicks(value: js.Array[PositionTickInfo]): Self = this.set("positionTicks", value.asInstanceOf[js.Any])
     @scala.inline

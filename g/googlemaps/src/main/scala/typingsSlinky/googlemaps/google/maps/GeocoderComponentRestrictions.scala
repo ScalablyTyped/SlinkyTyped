@@ -34,6 +34,8 @@ object GeocoderComponentRestrictions {
     @scala.inline
     def deleteAdministrativeArea: Self = this.set("administrativeArea", js.undefined)
     @scala.inline
+    def setCountryVarargs(value: String*): Self = this.set("country", js.Array(value :_*))
+    @scala.inline
     def setCountry(value: String | js.Array[String]): Self = this.set("country", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCountry: Self = this.set("country", js.undefined)

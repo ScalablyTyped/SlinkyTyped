@@ -29,7 +29,11 @@ object CustomTabsBrowsersResults {
         x
     }
     @scala.inline
+    def setBrowserPackagesVarargs(value: String*): Self = this.set("browserPackages", js.Array(value :_*))
+    @scala.inline
     def setBrowserPackages(value: js.Array[String]): Self = this.set("browserPackages", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setServicePackagesVarargs(value: String*): Self = this.set("servicePackages", js.Array(value :_*))
     @scala.inline
     def setServicePackages(value: js.Array[String]): Self = this.set("servicePackages", value.asInstanceOf[js.Any])
     @scala.inline

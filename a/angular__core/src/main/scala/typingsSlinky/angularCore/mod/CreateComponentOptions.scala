@@ -69,6 +69,8 @@ object CreateComponentOptions {
     @scala.inline
     def deleteHost: Self = this.set("host", js.undefined)
     @scala.inline
+    def setHostFeaturesVarargs(value: HostFeature*): Self = this.set("hostFeatures", js.Array(value :_*))
+    @scala.inline
     def setHostFeatures(value: js.Array[HostFeature]): Self = this.set("hostFeatures", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHostFeatures: Self = this.set("hostFeatures", js.undefined)

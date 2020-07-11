@@ -25,6 +25,8 @@ object TimeUnitColumn {
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
+    def unitsVarargs(value: typingsSlinky.rcPicker.timeUnitColumnMod.Unit*): this.type = set("units", js.Array(value :_*))
+    @scala.inline
     def units(value: js.Array[typingsSlinky.rcPicker.timeUnitColumnMod.Unit]): this.type = set("units", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: Double): this.type = set("value", value.asInstanceOf[js.Any])

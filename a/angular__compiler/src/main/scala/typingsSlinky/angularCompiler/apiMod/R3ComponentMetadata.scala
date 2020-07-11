@@ -118,6 +118,8 @@ object R3ComponentMetadata {
         x
     }
     @scala.inline
+    def setDirectivesVarargs(value: ExpressionSelector*): Self = this.set("directives", js.Array(value :_*))
+    @scala.inline
     def setDirectives(value: js.Array[ExpressionSelector]): Self = this.set("directives", value.asInstanceOf[js.Any])
     @scala.inline
     def setEncapsulation(value: ViewEncapsulation): Self = this.set("encapsulation", value.asInstanceOf[js.Any])
@@ -129,6 +131,8 @@ object R3ComponentMetadata {
     def setPipes(value: Map[String, Expression]): Self = this.set("pipes", value.asInstanceOf[js.Any])
     @scala.inline
     def setRelativeContextFilePath(value: String): Self = this.set("relativeContextFilePath", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStylesVarargs(value: String*): Self = this.set("styles", js.Array(value :_*))
     @scala.inline
     def setStyles(value: js.Array[String]): Self = this.set("styles", value.asInstanceOf[js.Any])
     @scala.inline

@@ -31,9 +31,13 @@ object ExtendedGeometryCollection {
         x
     }
     @scala.inline
+    def setGeometriesVarargs(value: GeometryType*): Self = this.set("geometries", js.Array(value :_*))
+    @scala.inline
     def setGeometries(value: js.Array[GeometryType]): Self = this.set("geometries", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBboxVarargs(value: Double*): Self = this.set("bbox", js.Array(value :_*))
     @scala.inline
     def setBbox(value: js.Array[Double]): Self = this.set("bbox", value.asInstanceOf[js.Any])
     @scala.inline

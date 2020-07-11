@@ -41,6 +41,8 @@ object OnDropData {
     @scala.inline
     def setDragNode(value: ReactComponentClass[InternalTreeNodeProps]): Self = this.set("dragNode", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDragNodesKeysVarargs(value: String*): Self = this.set("dragNodesKeys", js.Array(value :_*))
+    @scala.inline
     def setDragNodesKeys(value: js.Array[String]): Self = this.set("dragNodesKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def setDropPosition(value: Double): Self = this.set("dropPosition", value.asInstanceOf[js.Any])

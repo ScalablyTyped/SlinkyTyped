@@ -45,6 +45,8 @@ object MSFIDOCredentialAssertion {
     @scala.inline
     def setPublicKey(value: java.lang.String): Self = this.set("publicKey", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTransportHintsVarargs(value: MSTransportType*): Self = this.set("transportHints", js.Array(value :_*))
+    @scala.inline
     def setTransportHints(value: js.Array[MSTransportType]): Self = this.set("transportHints", value.asInstanceOf[js.Any])
   }
   

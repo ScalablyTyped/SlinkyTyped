@@ -108,6 +108,8 @@ object RevealOptions {
     @scala.inline
     def deleteControls: Self = this.set("controls", js.undefined)
     @scala.inline
+    def setDependenciesVarargs(value: RevealDependency*): Self = this.set("dependencies", js.Array(value :_*))
+    @scala.inline
     def setDependencies(value: js.Array[RevealDependency]): Self = this.set("dependencies", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDependencies: Self = this.set("dependencies", js.undefined)

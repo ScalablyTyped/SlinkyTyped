@@ -2,6 +2,7 @@ package typingsSlinky.semanticUiReact.tableRowMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.center
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
@@ -69,6 +70,8 @@ object StrictTableRowProps {
     def setCellAs(value: js.Any): Self = this.set("cellAs", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCellAs: Self = this.set("cellAs", js.undefined)
+    @scala.inline
+    def setCellsVarargs(value: SemanticShorthandItem[TableCellProps]*): Self = this.set("cells", js.Array(value :_*))
     @scala.inline
     def setCells(value: SemanticShorthandCollection[TableCellProps]): Self = this.set("cells", value.asInstanceOf[js.Any])
     @scala.inline

@@ -215,6 +215,8 @@ object TreeSelectProps {
     @scala.inline
     def deleteTreeCheckable: Self = this.set("treeCheckable", js.undefined)
     @scala.inline
+    def setTreeDataVarargs(value: DataNode*): Self = this.set("treeData", js.Array(value :_*))
+    @scala.inline
     def setTreeData(value: js.Array[DataNode]): Self = this.set("treeData", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTreeData: Self = this.set("treeData", js.undefined)
@@ -227,9 +229,13 @@ object TreeSelectProps {
     @scala.inline
     def deleteTreeDefaultExpandAll: Self = this.set("treeDefaultExpandAll", js.undefined)
     @scala.inline
+    def setTreeDefaultExpandedKeysVarargs(value: Key*): Self = this.set("treeDefaultExpandedKeys", js.Array(value :_*))
+    @scala.inline
     def setTreeDefaultExpandedKeys(value: js.Array[Key]): Self = this.set("treeDefaultExpandedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTreeDefaultExpandedKeys: Self = this.set("treeDefaultExpandedKeys", js.undefined)
+    @scala.inline
+    def setTreeExpandedKeysVarargs(value: Key*): Self = this.set("treeExpandedKeys", js.Array(value :_*))
     @scala.inline
     def setTreeExpandedKeys(value: js.Array[Key]): Self = this.set("treeExpandedKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -244,6 +250,8 @@ object TreeSelectProps {
     def setTreeLine(value: Boolean): Self = this.set("treeLine", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTreeLine: Self = this.set("treeLine", js.undefined)
+    @scala.inline
+    def setTreeLoadedKeysVarargs(value: Key*): Self = this.set("treeLoadedKeys", js.Array(value :_*))
     @scala.inline
     def setTreeLoadedKeys(value: js.Array[Key]): Self = this.set("treeLoadedKeys", value.asInstanceOf[js.Any])
     @scala.inline

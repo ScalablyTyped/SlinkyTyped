@@ -48,6 +48,8 @@ object InformationEvent {
     @scala.inline
     def setHttpVersionMinor(value: Double): Self = this.set("httpVersionMinor", value.asInstanceOf[js.Any])
     @scala.inline
+    def setRawHeadersVarargs(value: String*): Self = this.set("rawHeaders", js.Array(value :_*))
+    @scala.inline
     def setRawHeaders(value: js.Array[String]): Self = this.set("rawHeaders", value.asInstanceOf[js.Any])
     @scala.inline
     def setStatusCode(value: Double): Self = this.set("statusCode", value.asInstanceOf[js.Any])

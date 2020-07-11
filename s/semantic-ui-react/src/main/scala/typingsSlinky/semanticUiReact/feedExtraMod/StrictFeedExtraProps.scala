@@ -61,6 +61,8 @@ object StrictFeedExtraProps {
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
     @scala.inline
+    def setImagesVarargs(value: SemanticShorthandCollection[HtmlImageProps]*): Self = this.set("images", js.Array(value :_*))
+    @scala.inline
     def setImages(value: Boolean | js.Array[SemanticShorthandCollection[HtmlImageProps]]): Self = this.set("images", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteImages: Self = this.set("images", js.undefined)

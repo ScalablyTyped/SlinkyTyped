@@ -69,6 +69,8 @@ object Product {
         x
     }
     @scala.inline
+    def setContentLengthsVarargs(value: Double*): Self = this.set("contentLengths", js.Array(value :_*))
+    @scala.inline
     def setContentLengths(value: js.Array[Double]): Self = this.set("contentLengths", value.asInstanceOf[js.Any])
     @scala.inline
     def setContentVersion(value: String): Self = this.set("contentVersion", value.asInstanceOf[js.Any])

@@ -66,6 +66,8 @@ object ItemsUnit {
     @scala.inline
     def setSelectInvert(value: String): Self = this.set("selectInvert", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTitlesVarargs(value: String*): Self = this.set("titles", js.Array(value :_*))
+    @scala.inline
     def setTitles(value: js.Array[String]): Self = this.set("titles", value.asInstanceOf[js.Any])
     @scala.inline
     def setNotFoundContent(value: ReactElement): Self = this.set("notFoundContent", value.asInstanceOf[js.Any])

@@ -3,6 +3,7 @@ package typingsSlinky.semanticUiReact.feedFeedMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.feedEventMod.FeedEventProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.large
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.small
 import scala.scalajs.js
@@ -53,6 +54,8 @@ object StrictFeedProps {
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setEventsVarargs(value: SemanticShorthandItem[FeedEventProps]*): Self = this.set("events", js.Array(value :_*))
     @scala.inline
     def setEvents(value: SemanticShorthandCollection[FeedEventProps]): Self = this.set("events", value.asInstanceOf[js.Any])
     @scala.inline

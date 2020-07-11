@@ -32,6 +32,8 @@ object ClosedByChildren {
         x
     }
     @scala.inline
+    def setClosedByChildrenVarargs(value: String*): Self = this.set("closedByChildren", js.Array(value :_*))
+    @scala.inline
     def setClosedByChildren(value: js.Array[String]): Self = this.set("closedByChildren", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClosedByChildren: Self = this.set("closedByChildren", js.undefined)

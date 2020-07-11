@@ -29,6 +29,8 @@ object ValidateErrorEntity {
         x
     }
     @scala.inline
+    def setErrorFieldsVarargs(value: Errors*): Self = this.set("errorFields", js.Array(value :_*))
+    @scala.inline
     def setErrorFields(value: js.Array[Errors]): Self = this.set("errorFields", value.asInstanceOf[js.Any])
     @scala.inline
     def setOutOfDate(value: Boolean): Self = this.set("outOfDate", value.asInstanceOf[js.Any])

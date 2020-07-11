@@ -30,6 +30,8 @@ object PartialModule {
     @scala.inline
     def setFileName(value: String): Self = this.set("fileName", value.asInstanceOf[js.Any])
     @scala.inline
+    def setStatementsVarargs(value: Statement*): Self = this.set("statements", js.Array(value :_*))
+    @scala.inline
     def setStatements(value: js.Array[Statement]): Self = this.set("statements", value.asInstanceOf[js.Any])
   }
   

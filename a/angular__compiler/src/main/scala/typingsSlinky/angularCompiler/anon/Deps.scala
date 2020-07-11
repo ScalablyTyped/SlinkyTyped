@@ -31,6 +31,8 @@ object Deps {
         x
     }
     @scala.inline
+    def setDepsVarargs(value: js.Object*): Self = this.set("deps", js.Array(value :_*))
+    @scala.inline
     def setDeps(value: js.Array[js.Object]): Self = this.set("deps", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDeps: Self = this.set("deps", js.undefined)

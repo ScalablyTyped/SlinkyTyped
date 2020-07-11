@@ -32,6 +32,8 @@ object ActionSheetIOSOptions {
         x
     }
     @scala.inline
+    def setOptionsVarargs(value: String*): Self = this.set("options", js.Array(value :_*))
+    @scala.inline
     def setOptions(value: js.Array[String]): Self = this.set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def setAnchor(value: Double): Self = this.set("anchor", value.asInstanceOf[js.Any])

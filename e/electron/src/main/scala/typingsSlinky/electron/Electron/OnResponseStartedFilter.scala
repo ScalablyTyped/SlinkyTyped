@@ -30,6 +30,8 @@ object OnResponseStartedFilter {
         x
     }
     @scala.inline
+    def setUrlsVarargs(value: String*): Self = this.set("urls", js.Array(value :_*))
+    @scala.inline
     def setUrls(value: js.Array[String]): Self = this.set("urls", value.asInstanceOf[js.Any])
   }
   

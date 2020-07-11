@@ -35,17 +35,23 @@ object Declarations {
         x
     }
     @scala.inline
+    def setDeclarationsVarargs(value: Type[js.Any]*): Self = this.set("declarations", js.Array(value :_*))
+    @scala.inline
     def setDeclarationsFunction0(value: () => js.Array[Type[_]]): Self = this.set("declarations", js.Any.fromFunction0(value))
     @scala.inline
     def setDeclarations(value: js.Array[Type[_]] | js.Function0[js.Array[Type[_]]]): Self = this.set("declarations", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDeclarations: Self = this.set("declarations", js.undefined)
     @scala.inline
+    def setExportsVarargs(value: Type[js.Any]*): Self = this.set("exports", js.Array(value :_*))
+    @scala.inline
     def setExportsFunction0(value: () => js.Array[Type[_]]): Self = this.set("exports", js.Any.fromFunction0(value))
     @scala.inline
     def setExports(value: js.Array[Type[_]] | js.Function0[js.Array[Type[_]]]): Self = this.set("exports", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExports: Self = this.set("exports", js.undefined)
+    @scala.inline
+    def setImportsVarargs(value: Type[js.Any]*): Self = this.set("imports", js.Array(value :_*))
     @scala.inline
     def setImportsFunction0(value: () => js.Array[Type[_]]): Self = this.set("imports", js.Any.fromFunction0(value))
     @scala.inline

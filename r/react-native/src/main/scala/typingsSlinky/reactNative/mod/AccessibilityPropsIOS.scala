@@ -70,6 +70,8 @@ object AccessibilityPropsIOS {
     @scala.inline
     def deleteAccessibilityIgnoresInvertColors: Self = this.set("accessibilityIgnoresInvertColors", js.undefined)
     @scala.inline
+    def setAccessibilityTraitsVarargs(value: AccessibilityTrait*): Self = this.set("accessibilityTraits", js.Array(value :_*))
+    @scala.inline
     def setAccessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): Self = this.set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAccessibilityTraits: Self = this.set("accessibilityTraits", js.undefined)

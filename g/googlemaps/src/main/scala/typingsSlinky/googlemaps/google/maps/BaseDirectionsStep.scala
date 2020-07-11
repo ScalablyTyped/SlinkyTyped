@@ -51,6 +51,8 @@ object BaseDirectionsStep {
     @scala.inline
     def setInstructions(value: String): Self = this.set("instructions", value.asInstanceOf[js.Any])
     @scala.inline
+    def setPathVarargs(value: LatLng*): Self = this.set("path", js.Array(value :_*))
+    @scala.inline
     def setPath(value: js.Array[LatLng]): Self = this.set("path", value.asInstanceOf[js.Any])
     @scala.inline
     def setStart_location(value: LatLng): Self = this.set("start_location", value.asInstanceOf[js.Any])

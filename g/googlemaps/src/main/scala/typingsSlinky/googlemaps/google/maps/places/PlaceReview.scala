@@ -44,6 +44,8 @@ object PlaceReview {
         x
     }
     @scala.inline
+    def setAspectsVarargs(value: PlaceAspectRating*): Self = this.set("aspects", js.Array(value :_*))
+    @scala.inline
     def setAspects(value: js.Array[PlaceAspectRating]): Self = this.set("aspects", value.asInstanceOf[js.Any])
     @scala.inline
     def setAuthor_name(value: String): Self = this.set("author_name", value.asInstanceOf[js.Any])

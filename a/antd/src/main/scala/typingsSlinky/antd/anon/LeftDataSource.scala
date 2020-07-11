@@ -28,7 +28,11 @@ object LeftDataSource {
         x
     }
     @scala.inline
+    def setLeftDataSourceVarargs(value: TransferItem*): Self = this.set("leftDataSource", js.Array(value :_*))
+    @scala.inline
     def setLeftDataSource(value: js.Array[TransferItem]): Self = this.set("leftDataSource", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRightDataSourceVarargs(value: TransferItem*): Self = this.set("rightDataSource", js.Array(value :_*))
     @scala.inline
     def setRightDataSource(value: js.Array[TransferItem]): Self = this.set("rightDataSource", value.asInstanceOf[js.Any])
   }

@@ -39,6 +39,8 @@ object TypeProfileEntry {
     @scala.inline
     def setOffset(value: Double): Self = this.set("offset", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTypesVarargs(value: TypeObject*): Self = this.set("types", js.Array(value :_*))
+    @scala.inline
     def setTypes(value: js.Array[TypeObject]): Self = this.set("types", value.asInstanceOf[js.Any])
   }
   

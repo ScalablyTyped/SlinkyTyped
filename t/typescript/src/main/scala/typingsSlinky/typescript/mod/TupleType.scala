@@ -74,6 +74,8 @@ object TupleType {
     @scala.inline
     def setTarget(value: GenericType): Self = this.set("target", value.asInstanceOf[js.Any])
     @scala.inline
+    def setAssociatedNamesVarargs(value: String*): Self = this.set("associatedNames", js.Array(value :_*))
+    @scala.inline
     def setAssociatedNames(value: js.Array[String]): Self = this.set("associatedNames", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAssociatedNames: Self = this.set("associatedNames", js.undefined)
@@ -81,6 +83,8 @@ object TupleType {
     def setNode(value: TypeReferenceNode | ArrayTypeNode | TupleTypeNode): Self = this.set("node", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNode: Self = this.set("node", js.undefined)
+    @scala.inline
+    def setTypeArgumentsVarargs(value: Type*): Self = this.set("typeArguments", js.Array(value :_*))
     @scala.inline
     def setTypeArguments(value: js.Array[Type]): Self = this.set("typeArguments", value.asInstanceOf[js.Any])
     @scala.inline

@@ -575,6 +575,8 @@ object PartialInputProps {
     @scala.inline
     def deleteDefaultChecked: Self = this.set("defaultChecked", js.undefined)
     @scala.inline
+    def setDefaultValueVarargs(value: (String | Double | Boolean | js.Object)*): Self = this.set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def setDefaultValue(value: (js.Array[String | Double | Boolean | js.Object]) | String | Double | Boolean | js.Object): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
@@ -1118,6 +1120,8 @@ object PartialInputProps {
     def setUnselectable(value: on | off): Self = this.set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUnselectable: Self = this.set("unselectable", js.undefined)
+    @scala.inline
+    def setValueVarargs(value: (String | Double | Boolean | js.Object)*): Self = this.set("value", js.Array(value :_*))
     @scala.inline
     def setValue(value: (js.Array[String | Double | Boolean | js.Object]) | String | Double | Boolean | js.Object): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline

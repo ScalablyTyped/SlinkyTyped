@@ -48,6 +48,8 @@ object LQuery {
     @scala.inline
     def setSetDirty(value: () => Unit): Self = this.set("setDirty", js.Any.fromFunction0(value))
     @scala.inline
+    def setMatchesVarargs(value: (T | Null)*): Self = this.set("matches", js.Array(value :_*))
+    @scala.inline
     def setMatches(value: js.Array[T | Null]): Self = this.set("matches", value.asInstanceOf[js.Any])
     @scala.inline
     def setMatchesNull: Self = this.set("matches", null)

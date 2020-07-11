@@ -97,15 +97,21 @@ object SubMenu {
     @scala.inline
     def onTitleMouseLeave(value: /* info */ typingsSlinky.rcMenu.anon.Key => Unit): this.type = set("onTitleMouseLeave", js.Any.fromFunction1(value))
     @scala.inline
+    def openKeysVarargs(value: String*): this.type = set("openKeys", js.Array(value :_*))
+    @scala.inline
     def openKeys(value: js.Array[String]): this.type = set("openKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def parentMenu(value: ReactElementisRootMenuboo): this.type = set("parentMenu", value.asInstanceOf[js.Any])
     @scala.inline
     def popupClassName(value: String): this.type = set("popupClassName", value.asInstanceOf[js.Any])
     @scala.inline
+    def popupOffsetVarargs(value: Double*): this.type = set("popupOffset", js.Array(value :_*))
+    @scala.inline
     def popupOffset(value: js.Array[Double]): this.type = set("popupOffset", value.asInstanceOf[js.Any])
     @scala.inline
     def rootPrefixCls(value: String): this.type = set("rootPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
     @scala.inline
     def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline

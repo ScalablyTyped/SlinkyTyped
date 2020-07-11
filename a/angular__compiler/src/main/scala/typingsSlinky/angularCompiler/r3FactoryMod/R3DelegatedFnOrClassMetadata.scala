@@ -43,6 +43,8 @@ object R3DelegatedFnOrClassMetadata {
     @scala.inline
     def setDelegate(value: Expression): Self = this.set("delegate", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDelegateDepsVarargs(value: R3DependencyMetadata*): Self = this.set("delegateDeps", js.Array(value :_*))
+    @scala.inline
     def setDelegateDeps(value: js.Array[R3DependencyMetadata]): Self = this.set("delegateDeps", value.asInstanceOf[js.Any])
     @scala.inline
     def setDelegateType(value: Class | Function): Self = this.set("delegateType", value.asInstanceOf[js.Any])

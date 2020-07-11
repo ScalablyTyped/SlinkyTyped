@@ -49,6 +49,8 @@ object DiscoverTypings {
     @scala.inline
     def setCompilerOptions(value: CompilerOptions): Self = this.set("compilerOptions", value.asInstanceOf[js.Any])
     @scala.inline
+    def setFileNamesVarargs(value: String*): Self = this.set("fileNames", js.Array(value :_*))
+    @scala.inline
     def setFileNames(value: js.Array[String]): Self = this.set("fileNames", value.asInstanceOf[js.Any])
     @scala.inline
     def setKind(value: discover): Self = this.set("kind", value.asInstanceOf[js.Any])

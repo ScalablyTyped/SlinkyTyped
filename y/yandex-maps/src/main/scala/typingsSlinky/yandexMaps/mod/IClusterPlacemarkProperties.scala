@@ -26,6 +26,8 @@ object IClusterPlacemarkProperties {
         x
     }
     @scala.inline
+    def setGeoObjectsVarargs(value: IGeoObject*): Self = this.set("geoObjects", js.Array(value :_*))
+    @scala.inline
     def setGeoObjects(value: js.Array[IGeoObject]): Self = this.set("geoObjects", value.asInstanceOf[js.Any])
   }
   

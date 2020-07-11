@@ -26,6 +26,8 @@ object PostMessageOptions {
         x
     }
     @scala.inline
+    def setTransferVarargs(value: js.Any*): Self = this.set("transfer", js.Array(value :_*))
+    @scala.inline
     def setTransfer(value: js.Array[_]): Self = this.set("transfer", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTransfer: Self = this.set("transfer", js.undefined)

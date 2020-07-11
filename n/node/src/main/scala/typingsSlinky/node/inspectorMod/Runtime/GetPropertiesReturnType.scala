@@ -37,11 +37,15 @@ object GetPropertiesReturnType {
         x
     }
     @scala.inline
+    def setResultVarargs(value: PropertyDescriptor*): Self = this.set("result", js.Array(value :_*))
+    @scala.inline
     def setResult(value: js.Array[PropertyDescriptor]): Self = this.set("result", value.asInstanceOf[js.Any])
     @scala.inline
     def setExceptionDetails(value: ExceptionDetails): Self = this.set("exceptionDetails", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExceptionDetails: Self = this.set("exceptionDetails", js.undefined)
+    @scala.inline
+    def setInternalPropertiesVarargs(value: InternalPropertyDescriptor*): Self = this.set("internalProperties", js.Array(value :_*))
     @scala.inline
     def setInternalProperties(value: js.Array[InternalPropertyDescriptor]): Self = this.set("internalProperties", value.asInstanceOf[js.Any])
     @scala.inline

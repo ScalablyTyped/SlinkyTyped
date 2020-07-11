@@ -42,7 +42,11 @@ object SubPopupMenu {
     @scala.inline
     def defaultActiveFirst(value: Boolean): this.type = set("defaultActiveFirst", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultOpenKeysVarargs(value: String*): this.type = set("defaultOpenKeys", js.Array(value :_*))
+    @scala.inline
     def defaultOpenKeys(value: js.Array[String]): this.type = set("defaultOpenKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSelectedKeysVarargs(value: String*): this.type = set("defaultSelectedKeys", js.Array(value :_*))
     @scala.inline
     def defaultSelectedKeys(value: js.Array[String]): this.type = set("defaultSelectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -92,6 +96,8 @@ object SubPopupMenu {
     @scala.inline
     def onSelect(value: /* info */ SelectInfo => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
     @scala.inline
+    def openKeysVarargs(value: String*): this.type = set("openKeys", js.Array(value :_*))
+    @scala.inline
     def openKeys(value: js.Array[String]): this.type = set("openKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def overflowedIndicatorReactElement(value: ReactElement): this.type = set("overflowedIndicator", value.asInstanceOf[js.Any])
@@ -107,6 +113,8 @@ object SubPopupMenu {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
     @scala.inline
     def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline

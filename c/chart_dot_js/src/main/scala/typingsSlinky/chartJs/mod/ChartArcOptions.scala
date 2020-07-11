@@ -30,6 +30,8 @@ object ChartArcOptions {
         x
     }
     @scala.inline
+    def setBackgroundColorVarargs(value: String*): Self = this.set("backgroundColor", js.Array(value :_*))
+    @scala.inline
     def setBackgroundColorCanvasPattern(value: CanvasPattern): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def setBackgroundColorCanvasGradient(value: CanvasGradient): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
@@ -37,6 +39,8 @@ object ChartArcOptions {
     def setBackgroundColor(value: ChartColor): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
+    @scala.inline
+    def setBorderColorVarargs(value: String*): Self = this.set("borderColor", js.Array(value :_*))
     @scala.inline
     def setBorderColorCanvasPattern(value: CanvasPattern): Self = this.set("borderColor", value.asInstanceOf[js.Any])
     @scala.inline

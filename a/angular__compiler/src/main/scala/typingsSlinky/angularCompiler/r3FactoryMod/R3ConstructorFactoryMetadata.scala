@@ -61,6 +61,8 @@ object R3ConstructorFactoryMetadata {
     @scala.inline
     def setType(value: Expression): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDepsVarargs(value: R3DependencyMetadata*): Self = this.set("deps", js.Array(value :_*))
+    @scala.inline
     def setDeps(value: js.Array[R3DependencyMetadata] | invalid): Self = this.set("deps", value.asInstanceOf[js.Any])
     @scala.inline
     def setDepsNull: Self = this.set("deps", null)

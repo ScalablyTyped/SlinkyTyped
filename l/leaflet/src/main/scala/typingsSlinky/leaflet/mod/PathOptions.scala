@@ -47,6 +47,8 @@ object PathOptions {
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
     @scala.inline
+    def setDashArrayVarargs(value: Double*): Self = this.set("dashArray", js.Array(value :_*))
+    @scala.inline
     def setDashArray(value: String | js.Array[Double]): Self = this.set("dashArray", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDashArray: Self = this.set("dashArray", js.undefined)

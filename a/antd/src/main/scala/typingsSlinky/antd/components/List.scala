@@ -30,6 +30,8 @@ object List {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def dataSourceVarargs(value: T*): this.type = set("dataSource", js.Array(value :_*))
+    @scala.inline
     def dataSource(value: js.Array[T]): this.type = set("dataSource", value.asInstanceOf[js.Any])
     @scala.inline
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])

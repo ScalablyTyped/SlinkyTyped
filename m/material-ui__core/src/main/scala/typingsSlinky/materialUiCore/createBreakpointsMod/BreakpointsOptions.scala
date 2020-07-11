@@ -44,6 +44,8 @@ object BreakpointsOptions {
     @scala.inline
     def deleteDown: Self = this.set("down", js.undefined)
     @scala.inline
+    def setKeysVarargs(value: Breakpoint*): Self = this.set("keys", js.Array(value :_*))
+    @scala.inline
     def setKeys(value: js.Array[Breakpoint]): Self = this.set("keys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteKeys: Self = this.set("keys", js.undefined)

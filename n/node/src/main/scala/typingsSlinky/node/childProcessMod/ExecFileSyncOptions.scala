@@ -3,6 +3,11 @@ package typingsSlinky.node.childProcessMod
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.NodeJS.Signals
+import typingsSlinky.node.nodeStrings.ignore
+import typingsSlinky.node.nodeStrings.inherit
+import typingsSlinky.node.nodeStrings.ipc
+import typingsSlinky.node.nodeStrings.pipe
+import typingsSlinky.node.streamMod.Stream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -73,6 +78,8 @@ object ExecFileSyncOptions {
     def setShell(value: Boolean | String): Self = this.set("shell", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteShell: Self = this.set("shell", js.undefined)
+    @scala.inline
+    def setStdioVarargs(value: (js.UndefOr[pipe | ipc | ignore | inherit | Stream | Double | Null])*): Self = this.set("stdio", js.Array(value :_*))
     @scala.inline
     def setStdio(value: StdioOptions): Self = this.set("stdio", value.asInstanceOf[js.Any])
     @scala.inline

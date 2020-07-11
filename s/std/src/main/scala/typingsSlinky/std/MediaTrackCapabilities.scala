@@ -44,6 +44,8 @@ object MediaTrackCapabilities {
     @scala.inline
     def deleteAspectRatio: Self = this.set("aspectRatio", js.undefined)
     @scala.inline
+    def setAutoGainControlVarargs(value: scala.Boolean*): Self = this.set("autoGainControl", js.Array(value :_*))
+    @scala.inline
     def setAutoGainControl(value: js.Array[scala.Boolean]): Self = this.set("autoGainControl", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAutoGainControl: Self = this.set("autoGainControl", js.undefined)
@@ -56,9 +58,13 @@ object MediaTrackCapabilities {
     @scala.inline
     def deleteDeviceId: Self = this.set("deviceId", js.undefined)
     @scala.inline
+    def setEchoCancellationVarargs(value: scala.Boolean*): Self = this.set("echoCancellation", js.Array(value :_*))
+    @scala.inline
     def setEchoCancellation(value: js.Array[scala.Boolean]): Self = this.set("echoCancellation", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEchoCancellation: Self = this.set("echoCancellation", js.undefined)
+    @scala.inline
+    def setFacingModeVarargs(value: java.lang.String*): Self = this.set("facingMode", js.Array(value :_*))
     @scala.inline
     def setFacingMode(value: js.Array[java.lang.String]): Self = this.set("facingMode", value.asInstanceOf[js.Any])
     @scala.inline
@@ -80,9 +86,13 @@ object MediaTrackCapabilities {
     @scala.inline
     def deleteLatency: Self = this.set("latency", js.undefined)
     @scala.inline
+    def setNoiseSuppressionVarargs(value: scala.Boolean*): Self = this.set("noiseSuppression", js.Array(value :_*))
+    @scala.inline
     def setNoiseSuppression(value: js.Array[scala.Boolean]): Self = this.set("noiseSuppression", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNoiseSuppression: Self = this.set("noiseSuppression", js.undefined)
+    @scala.inline
+    def setResizeModeVarargs(value: java.lang.String*): Self = this.set("resizeMode", js.Array(value :_*))
     @scala.inline
     def setResizeMode(value: js.Array[java.lang.String]): Self = this.set("resizeMode", value.asInstanceOf[js.Any])
     @scala.inline

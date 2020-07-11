@@ -44,6 +44,8 @@ object R3InjectableMetadataFacade {
     @scala.inline
     def setTypeArgumentCount(value: Double): Self = this.set("typeArgumentCount", value.asInstanceOf[js.Any])
     @scala.inline
+    def setCtorDepsVarargs(value: R3DependencyMetadataFacade*): Self = this.set("ctorDeps", js.Array(value :_*))
+    @scala.inline
     def setCtorDeps(value: js.Array[R3DependencyMetadataFacade]): Self = this.set("ctorDeps", value.asInstanceOf[js.Any])
     @scala.inline
     def setCtorDepsNull: Self = this.set("ctorDeps", null)
@@ -63,6 +65,8 @@ object R3InjectableMetadataFacade {
     def setUseValue(value: js.Any): Self = this.set("useValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUseValue: Self = this.set("useValue", js.undefined)
+    @scala.inline
+    def setUserDepsVarargs(value: R3DependencyMetadataFacade*): Self = this.set("userDeps", js.Array(value :_*))
     @scala.inline
     def setUserDeps(value: js.Array[R3DependencyMetadataFacade]): Self = this.set("userDeps", value.asInstanceOf[js.Any])
     @scala.inline

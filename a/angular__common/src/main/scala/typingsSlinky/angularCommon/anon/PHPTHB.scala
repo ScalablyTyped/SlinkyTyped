@@ -28,9 +28,15 @@ object PHPTHB {
         x
     }
     @scala.inline
+    def setPHPVarargs(value: String*): Self = this.set("PHP", js.Array(value :_*))
+    @scala.inline
     def setPHP(value: js.Array[String]): Self = this.set("PHP", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTHBVarargs(value: String*): Self = this.set("THB", js.Array(value :_*))
+    @scala.inline
     def setTHB(value: js.Array[String]): Self = this.set("THB", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTWDVarargs(value: String*): Self = this.set("TWD", js.Array(value :_*))
     @scala.inline
     def setTWD(value: js.Array[String]): Self = this.set("TWD", value.asInstanceOf[js.Any])
   }

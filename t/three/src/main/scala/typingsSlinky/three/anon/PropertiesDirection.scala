@@ -29,6 +29,8 @@ object PropertiesDirection {
     @scala.inline
     def setProperties(value: Direction): Self = this.set("properties", value.asInstanceOf[js.Any])
     @scala.inline
+    def setValueVarargs(value: js.Any*): Self = this.set("value", js.Array(value :_*))
+    @scala.inline
     def setValue(value: js.Array[_]): Self = this.set("value", value.asInstanceOf[js.Any])
   }
   

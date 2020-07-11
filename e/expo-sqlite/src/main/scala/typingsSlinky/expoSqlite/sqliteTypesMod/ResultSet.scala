@@ -29,6 +29,8 @@ object ResultSet {
         x
     }
     @scala.inline
+    def setRowsVarargs(value: StringDictionary[js.Any]*): Self = this.set("rows", js.Array(value :_*))
+    @scala.inline
     def setRows(value: js.Array[StringDictionary[_]]): Self = this.set("rows", value.asInstanceOf[js.Any])
     @scala.inline
     def setRowsAffected(value: Double): Self = this.set("rowsAffected", value.asInstanceOf[js.Any])

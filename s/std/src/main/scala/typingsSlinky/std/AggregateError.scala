@@ -26,6 +26,8 @@ object AggregateError {
         x
     }
     @scala.inline
+    def setErrorsVarargs(value: js.Any*): Self = this.set("errors", js.Array(value :_*))
+    @scala.inline
     def setErrors(value: js.Array[_]): Self = this.set("errors", value.asInstanceOf[js.Any])
   }
   

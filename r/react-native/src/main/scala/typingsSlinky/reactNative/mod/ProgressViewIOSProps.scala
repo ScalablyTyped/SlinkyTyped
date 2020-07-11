@@ -55,6 +55,8 @@ object ProgressViewIOSProps {
     @scala.inline
     def deleteProgress: Self = this.set("progress", js.undefined)
     @scala.inline
+    def setProgressImageVarargs(value: ImageURISource*): Self = this.set("progressImage", js.Array(value :_*))
+    @scala.inline
     def setProgressImage(value: ImageURISource | js.Array[ImageURISource]): Self = this.set("progressImage", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteProgressImage: Self = this.set("progressImage", js.undefined)
@@ -66,6 +68,8 @@ object ProgressViewIOSProps {
     def setProgressViewStyle(value: default | bar): Self = this.set("progressViewStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteProgressViewStyle: Self = this.set("progressViewStyle", js.undefined)
+    @scala.inline
+    def setTrackImageVarargs(value: ImageURISource*): Self = this.set("trackImage", js.Array(value :_*))
     @scala.inline
     def setTrackImage(value: ImageURISource | js.Array[ImageURISource]): Self = this.set("trackImage", value.asInstanceOf[js.Any])
     @scala.inline

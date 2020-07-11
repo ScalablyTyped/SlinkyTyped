@@ -52,6 +52,8 @@ object MediaTrackConstraintSet {
     @scala.inline
     def deleteChannelCount: Self = this.set("channelCount", js.undefined)
     @scala.inline
+    def setDeviceIdVarargs(value: java.lang.String*): Self = this.set("deviceId", js.Array(value :_*))
+    @scala.inline
     def setDeviceId(value: ConstrainDOMString): Self = this.set("deviceId", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDeviceId: Self = this.set("deviceId", js.undefined)
@@ -60,6 +62,8 @@ object MediaTrackConstraintSet {
     @scala.inline
     def deleteEchoCancellation: Self = this.set("echoCancellation", js.undefined)
     @scala.inline
+    def setFacingModeVarargs(value: java.lang.String*): Self = this.set("facingMode", js.Array(value :_*))
+    @scala.inline
     def setFacingMode(value: ConstrainDOMString): Self = this.set("facingMode", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFacingMode: Self = this.set("facingMode", js.undefined)
@@ -67,6 +71,8 @@ object MediaTrackConstraintSet {
     def setFrameRate(value: ConstrainDouble): Self = this.set("frameRate", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFrameRate: Self = this.set("frameRate", js.undefined)
+    @scala.inline
+    def setGroupIdVarargs(value: java.lang.String*): Self = this.set("groupId", js.Array(value :_*))
     @scala.inline
     def setGroupId(value: ConstrainDOMString): Self = this.set("groupId", value.asInstanceOf[js.Any])
     @scala.inline
@@ -83,6 +89,8 @@ object MediaTrackConstraintSet {
     def setNoiseSuppression(value: ConstrainBoolean): Self = this.set("noiseSuppression", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNoiseSuppression: Self = this.set("noiseSuppression", js.undefined)
+    @scala.inline
+    def setResizeModeVarargs(value: java.lang.String*): Self = this.set("resizeMode", js.Array(value :_*))
     @scala.inline
     def setResizeMode(value: ConstrainDOMString): Self = this.set("resizeMode", value.asInstanceOf[js.Any])
     @scala.inline

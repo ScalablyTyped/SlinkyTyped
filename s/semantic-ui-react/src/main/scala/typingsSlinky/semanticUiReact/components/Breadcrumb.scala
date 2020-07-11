@@ -49,6 +49,8 @@ object Breadcrumb {
     @scala.inline
     def icon(value: SemanticShorthandItem[IconProps]): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
+    def sectionsVarargs(value: SemanticShorthandItem[BreadcrumbSectionProps]*): this.type = set("sections", js.Array(value :_*))
+    @scala.inline
     def sections(value: SemanticShorthandCollection[BreadcrumbSectionProps]): this.type = set("sections", value.asInstanceOf[js.Any])
     @scala.inline
     def size(value: mini | tiny | small | large | big | huge | massive): this.type = set("size", value.asInstanceOf[js.Any])

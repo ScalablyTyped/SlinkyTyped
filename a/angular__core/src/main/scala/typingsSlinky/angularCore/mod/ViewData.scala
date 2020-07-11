@@ -64,6 +64,8 @@ object ViewData {
     @scala.inline
     def setNodes(value: NumberDictionary[NodeData]): Self = this.set("nodes", value.asInstanceOf[js.Any])
     @scala.inline
+    def setOldValuesVarargs(value: js.Any*): Self = this.set("oldValues", js.Array(value :_*))
+    @scala.inline
     def setOldValues(value: js.Array[_]): Self = this.set("oldValues", value.asInstanceOf[js.Any])
     @scala.inline
     def setRenderer(value: Renderer2): Self = this.set("renderer", value.asInstanceOf[js.Any])
@@ -71,6 +73,8 @@ object ViewData {
     def setRoot(value: RootData): Self = this.set("root", value.asInstanceOf[js.Any])
     @scala.inline
     def setState(value: ViewState): Self = this.set("state", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDisposablesVarargs(value: DisposableFn*): Self = this.set("disposables", js.Array(value :_*))
     @scala.inline
     def setDisposables(value: js.Array[DisposableFn]): Self = this.set("disposables", value.asInstanceOf[js.Any])
     @scala.inline

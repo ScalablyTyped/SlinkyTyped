@@ -42,6 +42,8 @@ object SelectData {
     @scala.inline
     def setSelected(value: Boolean): Self = this.set("selected", value.asInstanceOf[js.Any])
     @scala.inline
+    def setSelectedNodesVarargs(value: ReactComponentClass[InternalTreeNodeProps]*): Self = this.set("selectedNodes", js.Array(value :_*))
+    @scala.inline
     def setSelectedNodes(value: js.Array[ReactComponentClass[InternalTreeNodeProps]]): Self = this.set("selectedNodes", value.asInstanceOf[js.Any])
   }
   

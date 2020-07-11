@@ -99,6 +99,8 @@ object ServeStaticOptions {
     @scala.inline
     def deleteEtag: Self = this.set("etag", js.undefined)
     @scala.inline
+    def setExtensionsVarargs(value: String*): Self = this.set("extensions", js.Array(value :_*))
+    @scala.inline
     def setExtensions(value: js.Array[String] | `false`): Self = this.set("extensions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExtensions: Self = this.set("extensions", js.undefined)
@@ -110,6 +112,8 @@ object ServeStaticOptions {
     def setImmutable(value: Boolean): Self = this.set("immutable", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteImmutable: Self = this.set("immutable", js.undefined)
+    @scala.inline
+    def setIndexVarargs(value: String*): Self = this.set("index", js.Array(value :_*))
     @scala.inline
     def setIndex(value: Boolean | String | js.Array[String]): Self = this.set("index", value.asInstanceOf[js.Any])
     @scala.inline

@@ -46,23 +46,43 @@ object BWP {
         x
     }
     @scala.inline
+    def setBDTVarargs(value: js.UndefOr[String]*): Self = this.set("BDT", js.Array(value :_*))
+    @scala.inline
     def setBDT(value: js.Array[js.UndefOr[String]]): Self = this.set("BDT", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBWPVarargs(value: scala.Nothing*): Self = this.set("BWP", js.Array(value :_*))
     @scala.inline
     def setBWP(value: js.Array[scala.Nothing]): Self = this.set("BWP", value.asInstanceOf[js.Any])
     @scala.inline
+    def setHKDVarargs(value: String*): Self = this.set("HKD", js.Array(value :_*))
+    @scala.inline
     def setHKD(value: js.Array[String]): Self = this.set("HKD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setJPYVarargs(value: String*): Self = this.set("JPY", js.Array(value :_*))
     @scala.inline
     def setJPY(value: js.Array[String]): Self = this.set("JPY", value.asInstanceOf[js.Any])
     @scala.inline
+    def setKRWVarargs(value: js.UndefOr[String]*): Self = this.set("KRW", js.Array(value :_*))
+    @scala.inline
     def setKRW(value: js.Array[js.UndefOr[String]]): Self = this.set("KRW", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTHBVarargs(value: String*): Self = this.set("THB", js.Array(value :_*))
     @scala.inline
     def setTHB(value: js.Array[String]): Self = this.set("THB", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTWDVarargs(value: String*): Self = this.set("TWD", js.Array(value :_*))
+    @scala.inline
     def setTWD(value: js.Array[String]): Self = this.set("TWD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUSDVarargs(value: String*): Self = this.set("USD", js.Array(value :_*))
     @scala.inline
     def setUSD(value: js.Array[String]): Self = this.set("USD", value.asInstanceOf[js.Any])
     @scala.inline
+    def setZARVarargs(value: scala.Nothing*): Self = this.set("ZAR", js.Array(value :_*))
+    @scala.inline
     def setZAR(value: js.Array[scala.Nothing]): Self = this.set("ZAR", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setZMWVarargs(value: scala.Nothing*): Self = this.set("ZMW", js.Array(value :_*))
     @scala.inline
     def setZMW(value: js.Array[scala.Nothing]): Self = this.set("ZMW", value.asInstanceOf[js.Any])
   }

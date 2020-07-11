@@ -33,7 +33,11 @@ object Href {
     @scala.inline
     def setHref(value: String): Self = this.set("href", value.asInstanceOf[js.Any])
     @scala.inline
+    def setOoffsetVarargs(value: Double*): Self = this.set("ooffset", js.Array(value :_*))
+    @scala.inline
     def setOoffset(value: js.Array[Double]): Self = this.set("ooffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSizeVarargs(value: Double*): Self = this.set("size", js.Array(value :_*))
     @scala.inline
     def setSize(value: js.Array[Double]): Self = this.set("size", value.asInstanceOf[js.Any])
     @scala.inline

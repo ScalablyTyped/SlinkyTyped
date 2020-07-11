@@ -118,6 +118,8 @@ object MaterialParameters {
     @scala.inline
     def deleteClipShadows: Self = this.set("clipShadows", js.undefined)
     @scala.inline
+    def setClippingPlanesVarargs(value: Plane*): Self = this.set("clippingPlanes", js.Array(value :_*))
+    @scala.inline
     def setClippingPlanes(value: js.Array[Plane]): Self = this.set("clippingPlanes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClippingPlanes: Self = this.set("clippingPlanes", js.undefined)

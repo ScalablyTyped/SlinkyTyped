@@ -35,6 +35,8 @@ object DirectoryTreeState {
         x
     }
     @scala.inline
+    def setExpandedKeysVarargs(value: js.Any*): Self = this.set("expandedKeys", js.Array(value :_*))
+    @scala.inline
     def setExpandedKeys(
       value: js.Array[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
@@ -42,6 +44,8 @@ object DirectoryTreeState {
     ): Self = this.set("expandedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExpandedKeys: Self = this.set("expandedKeys", js.undefined)
+    @scala.inline
+    def setSelectedKeysVarargs(value: js.Any*): Self = this.set("selectedKeys", js.Array(value :_*))
     @scala.inline
     def setSelectedKeys(
       value: js.Array[

@@ -37,6 +37,8 @@ object PointLabelOptions {
     @scala.inline
     def deleteCallback: Self = this.set("callback", js.undefined)
     @scala.inline
+    def setFontColorVarargs(value: String*): Self = this.set("fontColor", js.Array(value :_*))
+    @scala.inline
     def setFontColorCanvasPattern(value: CanvasPattern): Self = this.set("fontColor", value.asInstanceOf[js.Any])
     @scala.inline
     def setFontColorCanvasGradient(value: CanvasGradient): Self = this.set("fontColor", value.asInstanceOf[js.Any])

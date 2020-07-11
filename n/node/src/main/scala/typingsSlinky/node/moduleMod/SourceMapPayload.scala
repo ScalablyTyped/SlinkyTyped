@@ -44,11 +44,17 @@ object SourceMapPayload {
     @scala.inline
     def setMappings(value: String): Self = this.set("mappings", value.asInstanceOf[js.Any])
     @scala.inline
+    def setNamesVarargs(value: String*): Self = this.set("names", js.Array(value :_*))
+    @scala.inline
     def setNames(value: js.Array[String]): Self = this.set("names", value.asInstanceOf[js.Any])
     @scala.inline
     def setSourceRoot(value: String): Self = this.set("sourceRoot", value.asInstanceOf[js.Any])
     @scala.inline
+    def setSourcesVarargs(value: String*): Self = this.set("sources", js.Array(value :_*))
+    @scala.inline
     def setSources(value: js.Array[String]): Self = this.set("sources", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSourcesContentVarargs(value: String*): Self = this.set("sourcesContent", js.Array(value :_*))
     @scala.inline
     def setSourcesContent(value: js.Array[String]): Self = this.set("sourcesContent", value.asInstanceOf[js.Any])
     @scala.inline

@@ -60,6 +60,8 @@ object PartialJssOptions {
     @scala.inline
     def deleteInsertionPoint: Self = this.set("insertionPoint", js.undefined)
     @scala.inline
+    def setPluginsVarargs(value: Plugin*): Self = this.set("plugins", js.Array(value :_*))
+    @scala.inline
     def setPlugins(value: js.Array[Plugin]): Self = this.set("plugins", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePlugins: Self = this.set("plugins", js.undefined)

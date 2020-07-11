@@ -33,6 +33,8 @@ object SpawnSyncReturns {
         x
     }
     @scala.inline
+    def setOutputVarargs(value: String*): Self = this.set("output", js.Array(value :_*))
+    @scala.inline
     def setOutput(value: js.Array[String]): Self = this.set("output", value.asInstanceOf[js.Any])
     @scala.inline
     def setPid(value: Double): Self = this.set("pid", value.asInstanceOf[js.Any])

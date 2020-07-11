@@ -58,6 +58,8 @@ object ADDEVENTLISTENERSTR {
     @scala.inline
     def setZONE_SYMBOL_PREFIX(value: String): Self = this.set("ZONE_SYMBOL_PREFIX", value.asInstanceOf[js.Any])
     @scala.inline
+    def setEventNamesVarargs(value: String*): Self = this.set("eventNames", js.Array(value :_*))
+    @scala.inline
     def setEventNames(value: js.Array[String]): Self = this.set("eventNames", value.asInstanceOf[js.Any])
     @scala.inline
     def setGlobalSources(value: js.Any): Self = this.set("globalSources", value.asInstanceOf[js.Any])

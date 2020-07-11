@@ -29,6 +29,8 @@ object CheckboxGroupProps {
         x
     }
     @scala.inline
+    def setDefaultValueVarargs(value: CheckboxValueType*): Self = this.set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def setDefaultValue(value: js.Array[CheckboxValueType]): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
@@ -40,6 +42,8 @@ object CheckboxGroupProps {
     def setOnChange(value: /* checkedValue */ js.Array[CheckboxValueType] => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setValueVarargs(value: CheckboxValueType*): Self = this.set("value", js.Array(value :_*))
     @scala.inline
     def setValue(value: js.Array[CheckboxValueType]): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline

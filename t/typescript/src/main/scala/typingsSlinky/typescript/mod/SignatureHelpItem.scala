@@ -47,17 +47,29 @@ object SignatureHelpItem {
         x
     }
     @scala.inline
+    def setDocumentationVarargs(value: SymbolDisplayPart*): Self = this.set("documentation", js.Array(value :_*))
+    @scala.inline
     def setDocumentation(value: js.Array[SymbolDisplayPart]): Self = this.set("documentation", value.asInstanceOf[js.Any])
     @scala.inline
     def setIsVariadic(value: Boolean): Self = this.set("isVariadic", value.asInstanceOf[js.Any])
     @scala.inline
+    def setParametersVarargs(value: SignatureHelpParameter*): Self = this.set("parameters", js.Array(value :_*))
+    @scala.inline
     def setParameters(value: js.Array[SignatureHelpParameter]): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPrefixDisplayPartsVarargs(value: SymbolDisplayPart*): Self = this.set("prefixDisplayParts", js.Array(value :_*))
     @scala.inline
     def setPrefixDisplayParts(value: js.Array[SymbolDisplayPart]): Self = this.set("prefixDisplayParts", value.asInstanceOf[js.Any])
     @scala.inline
+    def setSeparatorDisplayPartsVarargs(value: SymbolDisplayPart*): Self = this.set("separatorDisplayParts", js.Array(value :_*))
+    @scala.inline
     def setSeparatorDisplayParts(value: js.Array[SymbolDisplayPart]): Self = this.set("separatorDisplayParts", value.asInstanceOf[js.Any])
     @scala.inline
+    def setSuffixDisplayPartsVarargs(value: SymbolDisplayPart*): Self = this.set("suffixDisplayParts", js.Array(value :_*))
+    @scala.inline
     def setSuffixDisplayParts(value: js.Array[SymbolDisplayPart]): Self = this.set("suffixDisplayParts", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTagsVarargs(value: JSDocTagInfo*): Self = this.set("tags", js.Array(value :_*))
     @scala.inline
     def setTags(value: js.Array[JSDocTagInfo]): Self = this.set("tags", value.asInstanceOf[js.Any])
   }

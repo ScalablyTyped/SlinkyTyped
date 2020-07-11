@@ -624,6 +624,8 @@ object PartialTablePaginationPro {
     @scala.inline
     def deleteDefaultChecked: Self = this.set("defaultChecked", js.undefined)
     @scala.inline
+    def setDefaultValueVarargs(value: String*): Self = this.set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def setDefaultValue(value: String | Double | js.Array[String]): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
@@ -1083,6 +1085,8 @@ object PartialTablePaginationPro {
     def setRowsPerPage(value: Double): Self = this.set("rowsPerPage", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRowsPerPage: Self = this.set("rowsPerPage", js.undefined)
+    @scala.inline
+    def setRowsPerPageOptionsVarargs(value: Double*): Self = this.set("rowsPerPageOptions", js.Array(value :_*))
     @scala.inline
     def setRowsPerPageOptions(value: js.Array[Double]): Self = this.set("rowsPerPageOptions", value.asInstanceOf[js.Any])
     @scala.inline

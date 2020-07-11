@@ -31,11 +31,19 @@ object Errors {
         x
     }
     @scala.inline
+    def setNodesVarargs(value: Node*): Self = this.set("nodes", js.Array(value :_*))
+    @scala.inline
     def setNodes(value: js.Array[Node]): Self = this.set("nodes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStyleUrlsVarargs(value: String*): Self = this.set("styleUrls", js.Array(value :_*))
     @scala.inline
     def setStyleUrls(value: js.Array[String]): Self = this.set("styleUrls", value.asInstanceOf[js.Any])
     @scala.inline
+    def setStylesVarargs(value: String*): Self = this.set("styles", js.Array(value :_*))
+    @scala.inline
     def setStyles(value: js.Array[String]): Self = this.set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setErrorsVarargs(value: ParseError*): Self = this.set("errors", js.Array(value :_*))
     @scala.inline
     def setErrors(value: js.Array[ParseError]): Self = this.set("errors", value.asInstanceOf[js.Any])
     @scala.inline

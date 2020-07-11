@@ -85,6 +85,8 @@ object MenuItem {
     @scala.inline
     def rootPrefixCls(value: String): this.type = set("rootPrefixCls", value.asInstanceOf[js.Any])
     @scala.inline
+    def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
+    @scala.inline
     def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])

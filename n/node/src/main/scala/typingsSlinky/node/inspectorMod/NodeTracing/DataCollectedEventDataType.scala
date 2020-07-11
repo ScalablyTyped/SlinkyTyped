@@ -26,6 +26,8 @@ object DataCollectedEventDataType {
         x
     }
     @scala.inline
+    def setValueVarargs(value: js.Object*): Self = this.set("value", js.Array(value :_*))
+    @scala.inline
     def setValue(value: js.Array[js.Object]): Self = this.set("value", value.asInstanceOf[js.Any])
   }
   

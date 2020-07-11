@@ -40,6 +40,8 @@ object InstallTypes {
     @scala.inline
     def setKind(value: EventBeginInstallTypes | EventEndInstallTypes): Self = this.set("kind", value.asInstanceOf[js.Any])
     @scala.inline
+    def setPackagesToInstallVarargs(value: String*): Self = this.set("packagesToInstall", js.Array(value :_*))
+    @scala.inline
     def setPackagesToInstall(value: js.Array[String]): Self = this.set("packagesToInstall", value.asInstanceOf[js.Any])
     @scala.inline
     def setTypingsInstallerVersion(value: String): Self = this.set("typingsInstallerVersion", value.asInstanceOf[js.Any])

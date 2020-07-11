@@ -34,9 +34,13 @@ object CodeAction {
         x
     }
     @scala.inline
+    def setChangesVarargs(value: FileTextChanges*): Self = this.set("changes", js.Array(value :_*))
+    @scala.inline
     def setChanges(value: js.Array[FileTextChanges]): Self = this.set("changes", value.asInstanceOf[js.Any])
     @scala.inline
     def setDescription(value: java.lang.String): Self = this.set("description", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCommandsVarargs(value: CodeActionCommand*): Self = this.set("commands", js.Array(value :_*))
     @scala.inline
     def setCommands(value: js.Array[CodeActionCommand]): Self = this.set("commands", value.asInstanceOf[js.Any])
     @scala.inline

@@ -46,6 +46,8 @@ object SkeletonParagraphProps {
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
     @scala.inline
+    def setWidthVarargs(value: widthUnit*): Self = this.set("width", js.Array(value :_*))
+    @scala.inline
     def setWidth(value: widthUnit | js.Array[widthUnit]): Self = this.set("width", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWidth: Self = this.set("width", js.undefined)

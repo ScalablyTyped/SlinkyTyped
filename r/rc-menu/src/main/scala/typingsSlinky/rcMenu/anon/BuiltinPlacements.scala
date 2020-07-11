@@ -57,7 +57,11 @@ object BuiltinPlacements {
     @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDefaultOpenKeysVarargs(value: js.Any*): Self = this.set("defaultOpenKeys", js.Array(value :_*))
+    @scala.inline
     def setDefaultOpenKeys(value: js.Array[_]): Self = this.set("defaultOpenKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDefaultSelectedKeysVarargs(value: js.Any*): Self = this.set("defaultSelectedKeys", js.Array(value :_*))
     @scala.inline
     def setDefaultSelectedKeys(value: js.Array[_]): Self = this.set("defaultSelectedKeys", value.asInstanceOf[js.Any])
     @scala.inline

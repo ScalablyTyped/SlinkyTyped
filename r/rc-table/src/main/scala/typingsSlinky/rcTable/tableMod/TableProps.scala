@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcTable.anon.Body
 import typingsSlinky.rcTable.anon.X
+import typingsSlinky.rcTable.interfaceMod.ColumnGroupType
 import typingsSlinky.rcTable.interfaceMod.ColumnType
 import typingsSlinky.rcTable.interfaceMod.ColumnsType
 import typingsSlinky.rcTable.interfaceMod.ExpandableConfig
@@ -94,6 +95,8 @@ object TableProps {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
+    def setColumnsVarargs(value: (ColumnGroupType[RecordType] | ColumnType[RecordType])*): Self = this.set("columns", js.Array(value :_*))
+    @scala.inline
     def setColumns(value: ColumnsType[RecordType]): Self = this.set("columns", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColumns: Self = this.set("columns", js.undefined)
@@ -101,6 +104,8 @@ object TableProps {
     def setComponents(value: TableComponents[RecordType]): Self = this.set("components", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteComponents: Self = this.set("components", js.undefined)
+    @scala.inline
+    def setDataVarargs(value: RecordType*): Self = this.set("data", js.Array(value :_*))
     @scala.inline
     def setData(value: js.Array[RecordType]): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline

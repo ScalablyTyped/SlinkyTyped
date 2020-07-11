@@ -77,6 +77,8 @@ object Calendar {
       value: (TEvent, /* start */ stringOrDate, /* end */ stringOrDate, /* isSelected */ Boolean) => HTMLAttributes[HTMLDivElement]
     ): this.type = set("eventPropGetter", js.Any.fromFunction4(value))
     @scala.inline
+    def eventsVarargs(value: TEvent*): this.type = set("events", js.Array(value :_*))
+    @scala.inline
     def events(value: js.Array[TEvent]): this.type = set("events", value.asInstanceOf[js.Any])
     @scala.inline
     def formats(value: Formats): this.type = set("formats", value.asInstanceOf[js.Any])
@@ -137,6 +139,8 @@ object Calendar {
     @scala.inline
     def resourceTitleAccessor(value: (/* keyof TResource */ String) | (js.Function1[TResource, _])): this.type = set("resourceTitleAccessor", value.asInstanceOf[js.Any])
     @scala.inline
+    def resourcesVarargs(value: TResource*): this.type = set("resources", js.Array(value :_*))
+    @scala.inline
     def resources(value: js.Array[TResource]): this.type = set("resources", value.asInstanceOf[js.Any])
     @scala.inline
     def rtl(value: Boolean): this.type = set("rtl", value.asInstanceOf[js.Any])
@@ -174,6 +178,8 @@ object Calendar {
     def tooltipAccessor(value: (/* keyof TEvent */ String) | (js.Function1[TEvent, String])): this.type = set("tooltipAccessor", value.asInstanceOf[js.Any])
     @scala.inline
     def view(value: View): this.type = set("view", value.asInstanceOf[js.Any])
+    @scala.inline
+    def viewsVarargs(value: View*): this.type = set("views", js.Array(value :_*))
     @scala.inline
     def views(value: ViewsProps): this.type = set("views", value.asInstanceOf[js.Any])
   }

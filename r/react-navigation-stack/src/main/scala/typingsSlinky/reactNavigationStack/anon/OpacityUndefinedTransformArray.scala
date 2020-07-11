@@ -27,6 +27,8 @@ object OpacityUndefinedTransformArray {
         x
     }
     @scala.inline
+    def setTransformVarargs(value: TranslateYAnimatedInterpolation*): Self = this.set("transform", js.Array(value :_*))
+    @scala.inline
     def setTransform(value: js.Array[TranslateYAnimatedInterpolation]): Self = this.set("transform", value.asInstanceOf[js.Any])
   }
   

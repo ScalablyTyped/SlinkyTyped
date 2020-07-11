@@ -37,6 +37,8 @@ object IManagerOptions {
     @scala.inline
     def deletePane: Self = this.set("pane", js.undefined)
     @scala.inline
+    def setStatesVarargs(value: String*): Self = this.set("states", js.Array(value :_*))
+    @scala.inline
     def setStates(value: js.Array[String]): Self = this.set("states", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStates: Self = this.set("states", js.undefined)

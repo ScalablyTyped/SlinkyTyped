@@ -59,9 +59,13 @@ object FormatLocaleDefinition {
     @scala.inline
     def setDecimal(value: String): Self = this.set("decimal", value.asInstanceOf[js.Any])
     @scala.inline
+    def setGroupingVarargs(value: Double*): Self = this.set("grouping", js.Array(value :_*))
+    @scala.inline
     def setGrouping(value: js.Array[Double]): Self = this.set("grouping", value.asInstanceOf[js.Any])
     @scala.inline
     def setThousands(value: String): Self = this.set("thousands", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNumeralsVarargs(value: String*): Self = this.set("numerals", js.Array(value :_*))
     @scala.inline
     def setNumerals(value: js.Array[String]): Self = this.set("numerals", value.asInstanceOf[js.Any])
     @scala.inline

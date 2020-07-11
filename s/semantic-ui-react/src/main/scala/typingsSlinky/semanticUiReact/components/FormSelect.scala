@@ -83,6 +83,8 @@ object FormSelect {
     @scala.inline
     def defaultUpward(value: Boolean): this.type = set("defaultUpward", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: (Double | String | Boolean)*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | Boolean | (js.Array[Double | String | Boolean])): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def direction(value: left | right): this.type = set("direction", value.asInstanceOf[js.Any])
@@ -204,6 +206,8 @@ object FormSelect {
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
     @scala.inline
     def upward(value: Boolean): this.type = set("upward", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: (Boolean | Double | String)*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: Boolean | Double | String | (js.Array[Boolean | Double | String])): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

@@ -27,6 +27,8 @@ object PathElevationRequest {
         x
     }
     @scala.inline
+    def setPathVarargs(value: LatLng*): Self = this.set("path", js.Array(value :_*))
+    @scala.inline
     def setPath(value: js.Array[LatLng]): Self = this.set("path", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePath: Self = this.set("path", js.undefined)

@@ -49,6 +49,8 @@ object Channel {
     @scala.inline
     def deleteSound: Self = this.set("sound", js.undefined)
     @scala.inline
+    def setVibrateVarargs(value: Double*): Self = this.set("vibrate", js.Array(value :_*))
+    @scala.inline
     def setVibrate(value: Boolean | js.Array[Double]): Self = this.set("vibrate", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteVibrate: Self = this.set("vibrate", js.undefined)

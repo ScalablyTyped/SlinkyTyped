@@ -2,6 +2,7 @@ package typingsSlinky.semanticUiReact.messageListMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.messageItemMod.MessageItemProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -49,6 +50,8 @@ object StrictMessageListProps {
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setItemsVarargs(value: SemanticShorthandItem[MessageItemProps]*): Self = this.set("items", js.Array(value :_*))
     @scala.inline
     def setItems(value: SemanticShorthandCollection[MessageItemProps]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline

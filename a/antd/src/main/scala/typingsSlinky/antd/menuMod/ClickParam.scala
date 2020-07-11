@@ -36,6 +36,8 @@ object ClickParam {
     @scala.inline
     def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
     @scala.inline
+    def setKeyPathVarargs(value: String*): Self = this.set("keyPath", js.Array(value :_*))
+    @scala.inline
     def setKeyPath(value: js.Array[String]): Self = this.set("keyPath", value.asInstanceOf[js.Any])
   }
   

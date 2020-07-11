@@ -26,6 +26,8 @@ object TransformArray {
         x
     }
     @scala.inline
+    def setTransformVarargs(value: TranslateX*): Self = this.set("transform", js.Array(value :_*))
+    @scala.inline
     def setTransform(value: js.Array[TranslateX]): Self = this.set("transform", value.asInstanceOf[js.Any])
   }
   

@@ -39,6 +39,8 @@ object DirectionsStep {
         x
     }
     @scala.inline
+    def setStepsVarargs(value: BaseDirectionsStep*): Self = this.set("steps", js.Array(value :_*))
+    @scala.inline
     def setSteps(value: js.Array[BaseDirectionsStep]): Self = this.set("steps", value.asInstanceOf[js.Any])
   }
   

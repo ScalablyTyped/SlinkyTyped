@@ -30,6 +30,8 @@ object MomentCreationData {
         x
     }
     @scala.inline
+    def setInputVarargs(value: (Double | String)*): Self = this.set("input", js.Array(value :_*))
+    @scala.inline
     def setInputDate(value: js.Date): Self = this.set("input", value.asInstanceOf[js.Any])
     @scala.inline
     def setInput(value: MomentInput): Self = this.set("input", value.asInstanceOf[js.Any])
@@ -37,6 +39,8 @@ object MomentCreationData {
     def setIsUTC(value: Boolean): Self = this.set("isUTC", value.asInstanceOf[js.Any])
     @scala.inline
     def setLocale(value: Locale_): Self = this.set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFormatVarargs(value: (String | MomentBuiltinFormat)*): Self = this.set("format", js.Array(value :_*))
     @scala.inline
     def setFormat(value: MomentFormatSpecification): Self = this.set("format", value.asInstanceOf[js.Any])
     @scala.inline

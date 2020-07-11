@@ -299,6 +299,8 @@ object VirtualizedListWithoutRenderItemProps {
     @scala.inline
     def deleteViewabilityConfig: Self = this.set("viewabilityConfig", js.undefined)
     @scala.inline
+    def setViewabilityConfigCallbackPairsVarargs(value: ViewabilityConfigCallbackPair*): Self = this.set("viewabilityConfigCallbackPairs", js.Array(value :_*))
+    @scala.inline
     def setViewabilityConfigCallbackPairs(value: ViewabilityConfigCallbackPairs): Self = this.set("viewabilityConfigCallbackPairs", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteViewabilityConfigCallbackPairs: Self = this.set("viewabilityConfigCallbackPairs", js.undefined)

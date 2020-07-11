@@ -9,6 +9,7 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
 import typingsSlinky.semanticUiReact.genericMod.SemanticSIZES
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
 import typingsSlinky.semanticUiReact.listItemMod.ListItemProps
 import typingsSlinky.semanticUiReact.listListMod.ListProps
@@ -48,6 +49,8 @@ object List {
     def horizontal(value: Boolean): this.type = set("horizontal", value.asInstanceOf[js.Any])
     @scala.inline
     def inverted(value: Boolean): this.type = set("inverted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemsVarargs(value: SemanticShorthandItem[ListItemProps]*): this.type = set("items", js.Array(value :_*))
     @scala.inline
     def items(value: SemanticShorthandCollection[ListItemProps]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline

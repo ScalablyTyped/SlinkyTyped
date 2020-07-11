@@ -35,17 +35,25 @@ object TestModuleMetadata {
     @scala.inline
     def deleteAotSummaries: Self = this.set("aotSummaries", js.undefined)
     @scala.inline
+    def setDeclarationsVarargs(value: js.Any*): Self = this.set("declarations", js.Array(value :_*))
+    @scala.inline
     def setDeclarations(value: js.Array[_]): Self = this.set("declarations", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDeclarations: Self = this.set("declarations", js.undefined)
+    @scala.inline
+    def setImportsVarargs(value: js.Any*): Self = this.set("imports", js.Array(value :_*))
     @scala.inline
     def setImports(value: js.Array[_]): Self = this.set("imports", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteImports: Self = this.set("imports", js.undefined)
     @scala.inline
+    def setProvidersVarargs(value: js.Any*): Self = this.set("providers", js.Array(value :_*))
+    @scala.inline
     def setProviders(value: js.Array[_]): Self = this.set("providers", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteProviders: Self = this.set("providers", js.undefined)
+    @scala.inline
+    def setSchemasVarargs(value: (SchemaMetadata | js.Array[js.Any])*): Self = this.set("schemas", js.Array(value :_*))
     @scala.inline
     def setSchemas(value: js.Array[SchemaMetadata | js.Array[_]]): Self = this.set("schemas", value.asInstanceOf[js.Any])
     @scala.inline

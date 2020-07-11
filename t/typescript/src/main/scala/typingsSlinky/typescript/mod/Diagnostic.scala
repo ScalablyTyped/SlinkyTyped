@@ -29,6 +29,8 @@ object Diagnostic {
         x
     }
     @scala.inline
+    def setRelatedInformationVarargs(value: DiagnosticRelatedInformation*): Self = this.set("relatedInformation", js.Array(value :_*))
+    @scala.inline
     def setRelatedInformation(value: js.Array[DiagnosticRelatedInformation]): Self = this.set("relatedInformation", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRelatedInformation: Self = this.set("relatedInformation", js.undefined)

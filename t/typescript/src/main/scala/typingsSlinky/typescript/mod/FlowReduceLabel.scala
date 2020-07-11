@@ -30,6 +30,8 @@ object FlowReduceLabel {
     @scala.inline
     def setAntecedent(value: FlowNode): Self = this.set("antecedent", value.asInstanceOf[js.Any])
     @scala.inline
+    def setAntecedentsVarargs(value: FlowNode*): Self = this.set("antecedents", js.Array(value :_*))
+    @scala.inline
     def setAntecedents(value: js.Array[FlowNode]): Self = this.set("antecedents", value.asInstanceOf[js.Any])
     @scala.inline
     def setTarget(value: FlowLabel): Self = this.set("target", value.asInstanceOf[js.Any])

@@ -40,13 +40,19 @@ object FaceGeometry {
     @scala.inline
     def setTextureCoordinateCount(value: Double): Self = this.set("textureCoordinateCount", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTextureCoordinatesVarargs(value: TextureCoordinate*): Self = this.set("textureCoordinates", js.Array(value :_*))
+    @scala.inline
     def setTextureCoordinates(value: js.Array[TextureCoordinate]): Self = this.set("textureCoordinates", value.asInstanceOf[js.Any])
     @scala.inline
     def setTriangleCount(value: Double): Self = this.set("triangleCount", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTriangleIndicesVarargs(value: Double*): Self = this.set("triangleIndices", js.Array(value :_*))
+    @scala.inline
     def setTriangleIndices(value: js.Array[Double]): Self = this.set("triangleIndices", value.asInstanceOf[js.Any])
     @scala.inline
     def setVertexCount(value: Double): Self = this.set("vertexCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVerticesVarargs(value: Vector3*): Self = this.set("vertices", js.Array(value :_*))
     @scala.inline
     def setVertices(value: js.Array[Vector3]): Self = this.set("vertices", value.asInstanceOf[js.Any])
   }

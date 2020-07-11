@@ -28,6 +28,8 @@ object Data {
         x
     }
     @scala.inline
+    def setDataVarargs(value: Double*): Self = this.set("data", js.Array(value :_*))
+    @scala.inline
     def setData(value: js.Array[Double]): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: typingsSlinky.node.nodeStrings.Buffer): Self = this.set("type", value.asInstanceOf[js.Any])

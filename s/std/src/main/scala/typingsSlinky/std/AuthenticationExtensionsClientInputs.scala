@@ -37,6 +37,8 @@ object AuthenticationExtensionsClientInputs {
     @scala.inline
     def deleteAppid: Self = this.set("appid", js.undefined)
     @scala.inline
+    def setAuthnSelVarargs(value: AAGUID*): Self = this.set("authnSel", js.Array(value :_*))
+    @scala.inline
     def setAuthnSel(value: AuthenticatorSelectionList): Self = this.set("authnSel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAuthnSel: Self = this.set("authnSel", js.undefined)

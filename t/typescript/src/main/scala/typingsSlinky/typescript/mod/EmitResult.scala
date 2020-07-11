@@ -29,9 +29,13 @@ object EmitResult {
         x
     }
     @scala.inline
+    def setDiagnosticsVarargs(value: Diagnostic*): Self = this.set("diagnostics", js.Array(value :_*))
+    @scala.inline
     def setDiagnostics(value: js.Array[Diagnostic]): Self = this.set("diagnostics", value.asInstanceOf[js.Any])
     @scala.inline
     def setEmitSkipped(value: Boolean): Self = this.set("emitSkipped", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setEmittedFilesVarargs(value: java.lang.String*): Self = this.set("emittedFiles", js.Array(value :_*))
     @scala.inline
     def setEmittedFiles(value: js.Array[java.lang.String]): Self = this.set("emittedFiles", value.asInstanceOf[js.Any])
     @scala.inline

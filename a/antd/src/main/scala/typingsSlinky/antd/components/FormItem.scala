@@ -44,11 +44,15 @@ object FormItem {
     @scala.inline
     def colon(value: Boolean): this.type = set("colon", value.asInstanceOf[js.Any])
     @scala.inline
+    def dependenciesVarargs(value: NamePath*): this.type = set("dependencies", js.Array(value :_*))
+    @scala.inline
     def dependencies(value: js.Array[NamePath]): this.type = set("dependencies", value.asInstanceOf[js.Any])
     @scala.inline
     def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
     @scala.inline
     def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fieldKeyVarargs(value: Key*): this.type = set("fieldKey", js.Array(value :_*))
     @scala.inline
     def fieldKey(value: Key | js.Array[Key]): this.type = set("fieldKey", value.asInstanceOf[js.Any])
     @scala.inline
@@ -80,6 +84,8 @@ object FormItem {
     @scala.inline
     def messageVariables(value: Record[String, String]): this.type = set("messageVariables", value.asInstanceOf[js.Any])
     @scala.inline
+    def nameVarargs(value: (String | Double)*): this.type = set("name", js.Array(value :_*))
+    @scala.inline
     def name(value: NamePath): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
     def noStyle(value: Boolean): this.type = set("noStyle", value.asInstanceOf[js.Any])
@@ -91,6 +97,8 @@ object FormItem {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rulesVarargs(value: Rule*): this.type = set("rules", js.Array(value :_*))
     @scala.inline
     def rules(value: js.Array[Rule]): this.type = set("rules", value.asInstanceOf[js.Any])
     @scala.inline
@@ -105,6 +113,8 @@ object FormItem {
     def validateFirst(value: Boolean): this.type = set("validateFirst", value.asInstanceOf[js.Any])
     @scala.inline
     def validateStatus(value: ValidateStatus): this.type = set("validateStatus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def validateTriggerVarargs(value: String*): this.type = set("validateTrigger", js.Array(value :_*))
     @scala.inline
     def validateTrigger(value: String | js.Array[String] | `false`): this.type = set("validateTrigger", value.asInstanceOf[js.Any])
     @scala.inline

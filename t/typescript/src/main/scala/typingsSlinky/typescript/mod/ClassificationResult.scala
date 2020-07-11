@@ -27,6 +27,8 @@ object ClassificationResult {
         x
     }
     @scala.inline
+    def setEntriesVarargs(value: ClassificationInfo*): Self = this.set("entries", js.Array(value :_*))
+    @scala.inline
     def setEntries(value: js.Array[ClassificationInfo]): Self = this.set("entries", value.asInstanceOf[js.Any])
     @scala.inline
     def setFinalLexState(value: EndOfLineState): Self = this.set("finalLexState", value.asInstanceOf[js.Any])

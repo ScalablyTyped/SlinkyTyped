@@ -54,6 +54,8 @@ object GestureHandlerProperties {
     @scala.inline
     def deleteShouldCancelWhenOutside: Self = this.set("shouldCancelWhenOutside", js.undefined)
     @scala.inline
+    def setSimultaneousHandlersVarargs(value: Ref[js.Any]*): Self = this.set("simultaneousHandlers", js.Array(value :_*))
+    @scala.inline
     def setSimultaneousHandlersRefObject(value: ReactRef[_]): Self = this.set("simultaneousHandlers", value.asInstanceOf[js.Any])
     @scala.inline
     def setSimultaneousHandlersFunction1(value: /* instance */ _ | Null => Unit): Self = this.set("simultaneousHandlers", js.Any.fromFunction1(value))
@@ -63,6 +65,8 @@ object GestureHandlerProperties {
     def deleteSimultaneousHandlers: Self = this.set("simultaneousHandlers", js.undefined)
     @scala.inline
     def setSimultaneousHandlersNull: Self = this.set("simultaneousHandlers", null)
+    @scala.inline
+    def setWaitForVarargs(value: Ref[js.Any]*): Self = this.set("waitFor", js.Array(value :_*))
     @scala.inline
     def setWaitForRefObject(value: ReactRef[_]): Self = this.set("waitFor", value.asInstanceOf[js.Any])
     @scala.inline

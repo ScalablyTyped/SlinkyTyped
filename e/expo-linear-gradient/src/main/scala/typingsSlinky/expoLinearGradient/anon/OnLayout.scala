@@ -31,6 +31,8 @@ object OnLayout {
         x
     }
     @scala.inline
+    def setColorsVarargs(value: Double*): Self = this.set("colors", js.Array(value :_*))
+    @scala.inline
     def setColors(value: js.Array[Double]): Self = this.set("colors", value.asInstanceOf[js.Any])
     @scala.inline
     def setEndPoint(value: Point): Self = this.set("endPoint", value.asInstanceOf[js.Any])
@@ -38,6 +40,8 @@ object OnLayout {
     def deleteEndPoint: Self = this.set("endPoint", js.undefined)
     @scala.inline
     def setEndPointNull: Self = this.set("endPoint", null)
+    @scala.inline
+    def setLocationsVarargs(value: Double*): Self = this.set("locations", js.Array(value :_*))
     @scala.inline
     def setLocations(value: js.Array[Double]): Self = this.set("locations", value.asInstanceOf[js.Any])
     @scala.inline

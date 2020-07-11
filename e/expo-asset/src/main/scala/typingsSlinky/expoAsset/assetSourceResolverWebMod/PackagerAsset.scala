@@ -53,6 +53,8 @@ object PackagerAsset {
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def setScalesVarargs(value: Double*): Self = this.set("scales", js.Array(value :_*))
+    @scala.inline
     def setScales(value: js.Array[Double]): Self = this.set("scales", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])

@@ -36,11 +36,17 @@ object NgAnalyzedModules {
         x
     }
     @scala.inline
+    def setFilesVarargs(value: NgAnalyzedFile*): Self = this.set("files", js.Array(value :_*))
+    @scala.inline
     def setFiles(value: js.Array[NgAnalyzedFile]): Self = this.set("files", value.asInstanceOf[js.Any])
     @scala.inline
     def setNgModuleByPipeOrDirective(value: Map[StaticSymbol, CompileNgModuleMetadata]): Self = this.set("ngModuleByPipeOrDirective", value.asInstanceOf[js.Any])
     @scala.inline
+    def setNgModulesVarargs(value: CompileNgModuleMetadata*): Self = this.set("ngModules", js.Array(value :_*))
+    @scala.inline
     def setNgModules(value: js.Array[CompileNgModuleMetadata]): Self = this.set("ngModules", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSymbolsMissingModuleVarargs(value: StaticSymbol*): Self = this.set("symbolsMissingModule", js.Array(value :_*))
     @scala.inline
     def setSymbolsMissingModule(value: js.Array[StaticSymbol]): Self = this.set("symbolsMissingModule", value.asInstanceOf[js.Any])
     @scala.inline

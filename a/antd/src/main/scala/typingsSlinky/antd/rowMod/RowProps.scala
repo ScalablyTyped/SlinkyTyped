@@ -38,6 +38,8 @@ object RowProps {
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
+    def setRowVarargs(value: ReactElement*): Self = this.set("row", js.Array(value :_*))
+    @scala.inline
     def setRow(value: js.Array[ReactElement]): Self = this.set("row", value.asInstanceOf[js.Any])
     @scala.inline
     def setVertical(value: Boolean): Self = this.set("vertical", value.asInstanceOf[js.Any])

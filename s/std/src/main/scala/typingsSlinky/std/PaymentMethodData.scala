@@ -27,6 +27,8 @@ object PaymentMethodData {
         x
     }
     @scala.inline
+    def setSupportedMethodsVarargs(value: java.lang.String*): Self = this.set("supportedMethods", js.Array(value :_*))
+    @scala.inline
     def setSupportedMethods(value: java.lang.String | js.Array[java.lang.String]): Self = this.set("supportedMethods", value.asInstanceOf[js.Any])
     @scala.inline
     def setData(value: js.Any): Self = this.set("data", value.asInstanceOf[js.Any])

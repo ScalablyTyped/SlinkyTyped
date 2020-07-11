@@ -51,6 +51,8 @@ object Pagination {
     @scala.inline
     def pageSize(value: Double): this.type = set("pageSize", value.asInstanceOf[js.Any])
     @scala.inline
+    def pageSizeOptionsVarargs(value: String*): this.type = set("pageSizeOptions", js.Array(value :_*))
+    @scala.inline
     def pageSizeOptions(value: js.Array[String]): this.type = set("pageSizeOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])

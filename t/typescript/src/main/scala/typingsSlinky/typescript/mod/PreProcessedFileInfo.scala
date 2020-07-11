@@ -37,15 +37,25 @@ object PreProcessedFileInfo {
         x
     }
     @scala.inline
+    def setImportedFilesVarargs(value: FileReference*): Self = this.set("importedFiles", js.Array(value :_*))
+    @scala.inline
     def setImportedFiles(value: js.Array[FileReference]): Self = this.set("importedFiles", value.asInstanceOf[js.Any])
     @scala.inline
     def setIsLibFile(value: Boolean): Self = this.set("isLibFile", value.asInstanceOf[js.Any])
     @scala.inline
+    def setLibReferenceDirectivesVarargs(value: FileReference*): Self = this.set("libReferenceDirectives", js.Array(value :_*))
+    @scala.inline
     def setLibReferenceDirectives(value: js.Array[FileReference]): Self = this.set("libReferenceDirectives", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setReferencedFilesVarargs(value: FileReference*): Self = this.set("referencedFiles", js.Array(value :_*))
     @scala.inline
     def setReferencedFiles(value: js.Array[FileReference]): Self = this.set("referencedFiles", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTypeReferenceDirectivesVarargs(value: FileReference*): Self = this.set("typeReferenceDirectives", js.Array(value :_*))
+    @scala.inline
     def setTypeReferenceDirectives(value: js.Array[FileReference]): Self = this.set("typeReferenceDirectives", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAmbientExternalModulesVarargs(value: java.lang.String*): Self = this.set("ambientExternalModules", js.Array(value :_*))
     @scala.inline
     def setAmbientExternalModules(value: js.Array[java.lang.String]): Self = this.set("ambientExternalModules", value.asInstanceOf[js.Any])
     @scala.inline

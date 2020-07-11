@@ -42,6 +42,8 @@ object AllowClear {
     @scala.inline
     def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
+    def setOptionsVarargs(value: scala.Nothing*): Self = this.set("options", js.Array(value :_*))
+    @scala.inline
     def setOptions(value: js.Array[scala.Nothing]): Self = this.set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def setTransitionName(value: String): Self = this.set("transitionName", value.asInstanceOf[js.Any])

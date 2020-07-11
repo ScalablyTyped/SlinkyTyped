@@ -29,6 +29,8 @@ object NavigatorLanguage {
     @scala.inline
     def setLanguage(value: java.lang.String): Self = this.set("language", value.asInstanceOf[js.Any])
     @scala.inline
+    def setLanguagesVarargs(value: java.lang.String*): Self = this.set("languages", js.Array(value :_*))
+    @scala.inline
     def setLanguages(value: js.Array[java.lang.String]): Self = this.set("languages", value.asInstanceOf[js.Any])
   }
   

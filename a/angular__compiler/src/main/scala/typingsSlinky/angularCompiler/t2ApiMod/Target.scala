@@ -27,6 +27,8 @@ object Target {
         x
     }
     @scala.inline
+    def setTemplateVarargs(value: Node*): Self = this.set("template", js.Array(value :_*))
+    @scala.inline
     def setTemplate(value: js.Array[Node]): Self = this.set("template", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTemplate: Self = this.set("template", js.undefined)

@@ -63,7 +63,11 @@ object CertificatePrincipal {
     @scala.inline
     def setLocality(value: String): Self = this.set("locality", value.asInstanceOf[js.Any])
     @scala.inline
+    def setOrganizationUnitsVarargs(value: String*): Self = this.set("organizationUnits", js.Array(value :_*))
+    @scala.inline
     def setOrganizationUnits(value: js.Array[String]): Self = this.set("organizationUnits", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOrganizationsVarargs(value: String*): Self = this.set("organizations", js.Array(value :_*))
     @scala.inline
     def setOrganizations(value: js.Array[String]): Self = this.set("organizations", value.asInstanceOf[js.Any])
     @scala.inline

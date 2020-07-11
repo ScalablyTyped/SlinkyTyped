@@ -20,6 +20,8 @@ object DOMWrap {
     extends AnyVal
        with StBuildingComponent[slinky.web.html.`*`.tag.type, default] {
     @scala.inline
+    def childrenVarargs(value: ReactElement*): this.type = set("children", js.Array(value :_*))
+    @scala.inline
     def children(value: js.Array[ReactElement]): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])

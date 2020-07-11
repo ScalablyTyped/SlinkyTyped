@@ -40,6 +40,8 @@ object NativeSelectInput {
     @scala.inline
     def onChange(value: (/* event */ ChangeEvent[HTMLSelectElement], /* child */ ReactElement) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
     @scala.inline
+    def valueVarargs(value: (String | Double | Boolean)*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: (js.Array[String | Double | Boolean]) | String | Double | Boolean): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def variant(value: standard | outlined | filled): this.type = set("variant", value.asInstanceOf[js.Any])

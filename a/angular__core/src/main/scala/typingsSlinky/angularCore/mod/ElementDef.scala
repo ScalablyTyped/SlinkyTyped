@@ -49,6 +49,8 @@ object ElementDef {
     @scala.inline
     def setAllProvidersNull: Self = this.set("allProviders", null)
     @scala.inline
+    def setAttrsVarargs(value: (js.Tuple3[String, String, String])*): Self = this.set("attrs", js.Array(value :_*))
+    @scala.inline
     def setAttrs(value: js.Array[js.Tuple3[String, String, String]]): Self = this.set("attrs", value.asInstanceOf[js.Any])
     @scala.inline
     def setAttrsNull: Self = this.set("attrs", null)

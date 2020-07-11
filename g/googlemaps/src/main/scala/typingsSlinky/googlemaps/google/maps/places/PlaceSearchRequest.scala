@@ -80,6 +80,8 @@ object PlaceSearchRequest {
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
     @scala.inline
+    def setTypesVarargs(value: String*): Self = this.set("types", js.Array(value :_*))
+    @scala.inline
     def setTypes(value: js.Array[String]): Self = this.set("types", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTypes: Self = this.set("types", js.undefined)

@@ -33,6 +33,8 @@ object FormListProps {
     @scala.inline
     def setChildren(value: (js.Array[FieldData], Operation) => ReactElement): Self = this.set("children", js.Any.fromFunction2(value))
     @scala.inline
+    def setNameVarargs(value: (String | Double)*): Self = this.set("name", js.Array(value :_*))
+    @scala.inline
     def setName(value: String | Double | (js.Array[String | Double])): Self = this.set("name", value.asInstanceOf[js.Any])
   }
   

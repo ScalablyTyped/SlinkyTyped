@@ -29,6 +29,8 @@ object AnyTxtRecord {
         x
     }
     @scala.inline
+    def setEntriesVarargs(value: String*): Self = this.set("entries", js.Array(value :_*))
+    @scala.inline
     def setEntries(value: js.Array[String]): Self = this.set("entries", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: TXT): Self = this.set("type", value.asInstanceOf[js.Any])

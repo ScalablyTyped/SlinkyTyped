@@ -47,6 +47,8 @@ object Modal {
     @scala.inline
     def presentationStyle(value: fullScreen | pageSheet | formSheet | overFullScreen): this.type = set("presentationStyle", value.asInstanceOf[js.Any])
     @scala.inline
+    def supportedOrientationsVarargs(value: (portrait | `portrait-upside-down` | landscape | `landscape-left` | `landscape-right`)*): this.type = set("supportedOrientations", js.Array(value :_*))
+    @scala.inline
     def supportedOrientations(
       value: js.Array[
           portrait | `portrait-upside-down` | landscape | `landscape-left` | `landscape-right`

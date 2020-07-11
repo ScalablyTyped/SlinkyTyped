@@ -65,7 +65,11 @@ object TransformationResult {
     @scala.inline
     def setSubstituteNode(value: (EmitHint, Node) => Node): Self = this.set("substituteNode", js.Any.fromFunction2(value))
     @scala.inline
+    def setTransformedVarargs(value: T*): Self = this.set("transformed", js.Array(value :_*))
+    @scala.inline
     def setTransformed(value: js.Array[T]): Self = this.set("transformed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDiagnosticsVarargs(value: DiagnosticWithLocation*): Self = this.set("diagnostics", js.Array(value :_*))
     @scala.inline
     def setDiagnostics(value: js.Array[DiagnosticWithLocation]): Self = this.set("diagnostics", value.asInstanceOf[js.Any])
     @scala.inline

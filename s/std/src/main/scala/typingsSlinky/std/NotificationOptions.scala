@@ -39,6 +39,8 @@ object NotificationOptions {
         x
     }
     @scala.inline
+    def setActionsVarargs(value: NotificationAction*): Self = this.set("actions", js.Array(value :_*))
+    @scala.inline
     def setActions(value: js.Array[NotificationAction]): Self = this.set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteActions: Self = this.set("actions", js.undefined)
@@ -90,6 +92,8 @@ object NotificationOptions {
     def setTimestamp(value: Double): Self = this.set("timestamp", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTimestamp: Self = this.set("timestamp", js.undefined)
+    @scala.inline
+    def setVibrateVarargs(value: Double*): Self = this.set("vibrate", js.Array(value :_*))
     @scala.inline
     def setVibrate(value: VibratePattern): Self = this.set("vibrate", value.asInstanceOf[js.Any])
     @scala.inline

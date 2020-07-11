@@ -27,7 +27,11 @@ object IIRFilterOptions {
         x
     }
     @scala.inline
+    def setFeedbackVarargs(value: Double*): Self = this.set("feedback", js.Array(value :_*))
+    @scala.inline
     def setFeedback(value: js.Array[Double]): Self = this.set("feedback", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFeedforwardVarargs(value: Double*): Self = this.set("feedforward", js.Array(value :_*))
     @scala.inline
     def setFeedforward(value: js.Array[Double]): Self = this.set("feedforward", value.asInstanceOf[js.Any])
   }

@@ -35,6 +35,8 @@ object RTCRtpSendParameters {
         x
     }
     @scala.inline
+    def setEncodingsVarargs(value: RTCRtpEncodingParameters*): Self = this.set("encodings", js.Array(value :_*))
+    @scala.inline
     def setEncodings(value: js.Array[RTCRtpEncodingParameters]): Self = this.set("encodings", value.asInstanceOf[js.Any])
     @scala.inline
     def setTransactionId(value: java.lang.String): Self = this.set("transactionId", value.asInstanceOf[js.Any])

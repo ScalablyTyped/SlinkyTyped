@@ -65,6 +65,8 @@ object BaseModifierpriorityArray {
     @scala.inline
     def deletePadding: Self = this.set("padding", js.undefined)
     @scala.inline
+    def setPriorityVarargs(value: Position*): Self = this.set("priority", js.Array(value :_*))
+    @scala.inline
     def setPriority(value: js.Array[Position]): Self = this.set("priority", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePriority: Self = this.set("priority", js.undefined)

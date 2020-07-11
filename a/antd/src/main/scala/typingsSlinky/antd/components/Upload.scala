@@ -54,11 +54,15 @@ object Upload {
     @scala.inline
     def data(value: js.Object | (js.Function1[/* file */ UploadFile[js.Any], js.Object])): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultFileListVarargs(value: UploadFile[js.Any]*): this.type = set("defaultFileList", js.Array(value :_*))
+    @scala.inline
     def defaultFileList(value: js.Array[UploadFile[js.Any]]): this.type = set("defaultFileList", value.asInstanceOf[js.Any])
     @scala.inline
     def directory(value: Boolean): this.type = set("directory", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fileListVarargs(value: UploadFile[js.Any]*): this.type = set("fileList", js.Array(value :_*))
     @scala.inline
     def fileList(value: js.Array[UploadFile[js.Any]]): this.type = set("fileList", value.asInstanceOf[js.Any])
     @scala.inline

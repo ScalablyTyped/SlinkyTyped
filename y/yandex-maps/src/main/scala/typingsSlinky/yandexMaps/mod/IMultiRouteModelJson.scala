@@ -29,6 +29,8 @@ object IMultiRouteModelJson {
     @scala.inline
     def setParams(value: IMultiRouteParams): Self = this.set("params", value.asInstanceOf[js.Any])
     @scala.inline
+    def setReferencePointsVarargs(value: IMultiRouteReferencePoint*): Self = this.set("referencePoints", js.Array(value :_*))
+    @scala.inline
     def setReferencePoints(value: js.Array[IMultiRouteReferencePoint]): Self = this.set("referencePoints", value.asInstanceOf[js.Any])
   }
   

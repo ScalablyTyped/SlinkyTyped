@@ -64,6 +64,8 @@ object ListProps {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
+    def setDataSourceVarargs(value: T*): Self = this.set("dataSource", js.Array(value :_*))
+    @scala.inline
     def setDataSource(value: js.Array[T]): Self = this.set("dataSource", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDataSource: Self = this.set("dataSource", js.undefined)

@@ -32,6 +32,8 @@ object ImplementationLocation {
         x
     }
     @scala.inline
+    def setDisplayPartsVarargs(value: SymbolDisplayPart*): Self = this.set("displayParts", js.Array(value :_*))
+    @scala.inline
     def setDisplayParts(value: js.Array[SymbolDisplayPart]): Self = this.set("displayParts", value.asInstanceOf[js.Any])
     @scala.inline
     def setKind(value: ScriptElementKind): Self = this.set("kind", value.asInstanceOf[js.Any])

@@ -63,6 +63,8 @@ object FormProps {
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)
     @scala.inline
+    def setFieldsVarargs(value: FieldData*): Self = this.set("fields", js.Array(value :_*))
+    @scala.inline
     def setFields(value: js.Array[FieldData]): Self = this.set("fields", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFields: Self = this.set("fields", js.undefined)
@@ -94,6 +96,8 @@ object FormProps {
     def setValidateMessages(value: ValidateMessages): Self = this.set("validateMessages", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValidateMessages: Self = this.set("validateMessages", js.undefined)
+    @scala.inline
+    def setValidateTriggerVarargs(value: String*): Self = this.set("validateTrigger", js.Array(value :_*))
     @scala.inline
     def setValidateTrigger(value: String | js.Array[String] | `false`): Self = this.set("validateTrigger", value.asInstanceOf[js.Any])
     @scala.inline

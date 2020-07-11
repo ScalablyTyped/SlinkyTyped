@@ -28,6 +28,8 @@ object BlendShapes {
         x
     }
     @scala.inline
+    def setBlendShapesVarargs(value: BlendShape*): Self = this.set("blendShapes", js.Array(value :_*))
+    @scala.inline
     def setBlendShapes(value: Boolean | js.Array[BlendShape]): Self = this.set("blendShapes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBlendShapes: Self = this.set("blendShapes", js.undefined)

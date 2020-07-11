@@ -32,9 +32,15 @@ object DistanceMatrixResponse {
         x
     }
     @scala.inline
+    def setDestinationAddressesVarargs(value: String*): Self = this.set("destinationAddresses", js.Array(value :_*))
+    @scala.inline
     def setDestinationAddresses(value: js.Array[String]): Self = this.set("destinationAddresses", value.asInstanceOf[js.Any])
     @scala.inline
+    def setOriginAddressesVarargs(value: String*): Self = this.set("originAddresses", js.Array(value :_*))
+    @scala.inline
     def setOriginAddresses(value: js.Array[String]): Self = this.set("originAddresses", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRowsVarargs(value: DistanceMatrixResponseRow*): Self = this.set("rows", js.Array(value :_*))
     @scala.inline
     def setRows(value: js.Array[DistanceMatrixResponseRow]): Self = this.set("rows", value.asInstanceOf[js.Any])
   }

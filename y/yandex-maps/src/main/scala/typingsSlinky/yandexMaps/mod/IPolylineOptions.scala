@@ -101,17 +101,25 @@ object IPolylineOptions {
     @scala.inline
     def deletePane: Self = this.set("pane", js.undefined)
     @scala.inline
+    def setStrokeColorVarargs(value: String*): Self = this.set("strokeColor", js.Array(value :_*))
+    @scala.inline
     def setStrokeColor(value: String | js.Array[String]): Self = this.set("strokeColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStrokeColor: Self = this.set("strokeColor", js.undefined)
+    @scala.inline
+    def setStrokeOpacityVarargs(value: Double*): Self = this.set("strokeOpacity", js.Array(value :_*))
     @scala.inline
     def setStrokeOpacity(value: Double | js.Array[Double]): Self = this.set("strokeOpacity", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStrokeOpacity: Self = this.set("strokeOpacity", js.undefined)
     @scala.inline
+    def setStrokeStyleVarargs(value: (js.Object | String)*): Self = this.set("strokeStyle", js.Array(value :_*))
+    @scala.inline
     def setStrokeStyle(value: String | (js.Array[js.Object | String]) | js.Object): Self = this.set("strokeStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStrokeStyle: Self = this.set("strokeStyle", js.undefined)
+    @scala.inline
+    def setStrokeWidthVarargs(value: Double*): Self = this.set("strokeWidth", js.Array(value :_*))
     @scala.inline
     def setStrokeWidth(value: Double | js.Array[Double]): Self = this.set("strokeWidth", value.asInstanceOf[js.Any])
     @scala.inline

@@ -107,6 +107,8 @@ object FlatListProps {
     @scala.inline
     def setColumnWrapperStyleNull: Self = this.set("columnWrapperStyle", null)
     @scala.inline
+    def setDataVarargs(value: ItemT*): Self = this.set("data", js.Array(value :_*))
+    @scala.inline
     def setData(value: js.Array[ItemT]): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteData: Self = this.set("data", js.undefined)

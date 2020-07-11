@@ -48,6 +48,8 @@ object NavigationSwitchRouterConfig {
     @scala.inline
     def deleteInitialRouteParams: Self = this.set("initialRouteParams", js.undefined)
     @scala.inline
+    def setOrderVarargs(value: String*): Self = this.set("order", js.Array(value :_*))
+    @scala.inline
     def setOrder(value: js.Array[String]): Self = this.set("order", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOrder: Self = this.set("order", js.undefined)

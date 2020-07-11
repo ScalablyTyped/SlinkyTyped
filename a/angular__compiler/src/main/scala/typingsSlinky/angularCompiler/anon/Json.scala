@@ -27,6 +27,8 @@ object Json {
         x
     }
     @scala.inline
+    def setExportAsVarargs(value: ExportAs*): Self = this.set("exportAs", js.Array(value :_*))
+    @scala.inline
     def setExportAs(value: js.Array[ExportAs]): Self = this.set("exportAs", value.asInstanceOf[js.Any])
     @scala.inline
     def setJson(value: String): Self = this.set("json", value.asInstanceOf[js.Any])

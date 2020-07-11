@@ -43,6 +43,8 @@ object TableContextProps {
     @scala.inline
     def setDirection(value: ltr | rtl): Self = this.set("direction", value.asInstanceOf[js.Any])
     @scala.inline
+    def setFixedInfoListVarargs(value: FixedInfo*): Self = this.set("fixedInfoList", js.Array(value :_*))
+    @scala.inline
     def setFixedInfoList(value: js.Array[FixedInfo]): Self = this.set("fixedInfoList", value.asInstanceOf[js.Any])
     @scala.inline
     def setGetComponent(

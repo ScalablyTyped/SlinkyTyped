@@ -29,6 +29,8 @@ object GetCategoriesReturnType {
         x
     }
     @scala.inline
+    def setCategoriesVarargs(value: String*): Self = this.set("categories", js.Array(value :_*))
+    @scala.inline
     def setCategories(value: js.Array[String]): Self = this.set("categories", value.asInstanceOf[js.Any])
   }
   

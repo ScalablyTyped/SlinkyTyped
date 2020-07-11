@@ -40,6 +40,8 @@ object HeatmapLayerOptions {
     @scala.inline
     def deleteDissipating: Self = this.set("dissipating", js.undefined)
     @scala.inline
+    def setGradientVarargs(value: String*): Self = this.set("gradient", js.Array(value :_*))
+    @scala.inline
     def setGradient(value: js.Array[String]): Self = this.set("gradient", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteGradient: Self = this.set("gradient", js.undefined)

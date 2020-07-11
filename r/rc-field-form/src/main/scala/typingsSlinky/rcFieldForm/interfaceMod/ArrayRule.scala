@@ -48,6 +48,8 @@ object ArrayRule {
     @scala.inline
     def deleteDefaultField: Self = this.set("defaultField", js.undefined)
     @scala.inline
+    def setEnumVarargs(value: StoreValue*): Self = this.set("enum", js.Array(value :_*))
+    @scala.inline
     def setEnum(value: js.Array[StoreValue]): Self = this.set("enum", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEnum: Self = this.set("enum", js.undefined)
@@ -81,6 +83,8 @@ object ArrayRule {
     def setTransform(value: /* value */ StoreValue => StoreValue): Self = this.set("transform", js.Any.fromFunction1(value))
     @scala.inline
     def deleteTransform: Self = this.set("transform", js.undefined)
+    @scala.inline
+    def setValidateTriggerVarargs(value: String*): Self = this.set("validateTrigger", js.Array(value :_*))
     @scala.inline
     def setValidateTrigger(value: String | js.Array[String]): Self = this.set("validateTrigger", value.asInstanceOf[js.Any])
     @scala.inline

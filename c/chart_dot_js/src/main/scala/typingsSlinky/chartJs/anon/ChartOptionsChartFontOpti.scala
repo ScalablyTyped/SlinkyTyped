@@ -106,6 +106,8 @@ object ChartOptionsChartFontOpti {
     @scala.inline
     def deleteCutoutPercentage: Self = this.set("cutoutPercentage", js.undefined)
     @scala.inline
+    def setDefaultFontColorVarargs(value: String*): Self = this.set("defaultFontColor", js.Array(value :_*))
+    @scala.inline
     def setDefaultFontColorCanvasPattern(value: CanvasPattern): Self = this.set("defaultFontColor", value.asInstanceOf[js.Any])
     @scala.inline
     def setDefaultFontColorCanvasGradient(value: CanvasGradient): Self = this.set("defaultFontColor", value.asInstanceOf[js.Any])
@@ -133,6 +135,8 @@ object ChartOptionsChartFontOpti {
     def setElements(value: ChartElementsOptions): Self = this.set("elements", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteElements: Self = this.set("elements", js.undefined)
+    @scala.inline
+    def setEventsVarargs(value: String*): Self = this.set("events", js.Array(value :_*))
     @scala.inline
     def setEvents(value: js.Array[String]): Self = this.set("events", value.asInstanceOf[js.Any])
     @scala.inline

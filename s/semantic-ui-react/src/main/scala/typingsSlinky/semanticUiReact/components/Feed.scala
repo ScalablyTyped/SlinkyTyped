@@ -5,6 +5,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.feedEventMod.FeedEventProps
 import typingsSlinky.semanticUiReact.feedFeedMod.FeedProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.large
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.small
 import scala.scalajs.js
@@ -24,6 +25,8 @@ object Feed {
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def eventsVarargs(value: SemanticShorthandItem[FeedEventProps]*): this.type = set("events", js.Array(value :_*))
     @scala.inline
     def events(value: SemanticShorthandCollection[FeedEventProps]): this.type = set("events", value.asInstanceOf[js.Any])
     @scala.inline

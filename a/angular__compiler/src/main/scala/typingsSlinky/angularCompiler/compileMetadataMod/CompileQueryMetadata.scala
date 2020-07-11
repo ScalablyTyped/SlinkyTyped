@@ -45,6 +45,8 @@ object CompileQueryMetadata {
     @scala.inline
     def setRead(value: CompileTokenMetadata): Self = this.set("read", value.asInstanceOf[js.Any])
     @scala.inline
+    def setSelectorsVarargs(value: CompileTokenMetadata*): Self = this.set("selectors", js.Array(value :_*))
+    @scala.inline
     def setSelectors(value: js.Array[CompileTokenMetadata]): Self = this.set("selectors", value.asInstanceOf[js.Any])
     @scala.inline
     def setStatic(value: Boolean): Self = this.set("static", value.asInstanceOf[js.Any])

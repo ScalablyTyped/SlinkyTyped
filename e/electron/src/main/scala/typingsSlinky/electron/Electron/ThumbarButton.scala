@@ -44,6 +44,8 @@ object ThumbarButton {
     @scala.inline
     def setIcon(value: NativeImage_): Self = this.set("icon", value.asInstanceOf[js.Any])
     @scala.inline
+    def setFlagsVarargs(value: String*): Self = this.set("flags", js.Array(value :_*))
+    @scala.inline
     def setFlags(value: js.Array[String]): Self = this.set("flags", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFlags: Self = this.set("flags", js.undefined)

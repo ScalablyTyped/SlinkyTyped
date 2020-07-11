@@ -51,9 +51,13 @@ object NavigationTree {
     @scala.inline
     def setKindModifiers(value: java.lang.String): Self = this.set("kindModifiers", value.asInstanceOf[js.Any])
     @scala.inline
+    def setSpansVarargs(value: TextSpan*): Self = this.set("spans", js.Array(value :_*))
+    @scala.inline
     def setSpans(value: js.Array[TextSpan]): Self = this.set("spans", value.asInstanceOf[js.Any])
     @scala.inline
     def setText(value: java.lang.String): Self = this.set("text", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildItemsVarargs(value: NavigationTree*): Self = this.set("childItems", js.Array(value :_*))
     @scala.inline
     def setChildItems(value: js.Array[NavigationTree]): Self = this.set("childItems", value.asInstanceOf[js.Any])
     @scala.inline

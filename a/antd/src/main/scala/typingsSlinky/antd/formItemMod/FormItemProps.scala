@@ -57,6 +57,8 @@ object FormItemProps {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
+    def setFieldKeyVarargs(value: Key*): Self = this.set("fieldKey", js.Array(value :_*))
+    @scala.inline
     def setFieldKey(value: Key | js.Array[Key]): Self = this.set("fieldKey", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFieldKey: Self = this.set("fieldKey", js.undefined)

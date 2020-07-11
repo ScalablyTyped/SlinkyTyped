@@ -58,6 +58,8 @@ object PlaceResult {
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def setAddress_componentsVarargs(value: GeocoderAddressComponent*): Self = this.set("address_components", js.Array(value :_*))
+    @scala.inline
     def setAddress_components(value: js.Array[GeocoderAddressComponent]): Self = this.set("address_components", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAddress_components: Self = this.set("address_components", js.undefined)
@@ -65,6 +67,8 @@ object PlaceResult {
     def setAdr_address(value: String): Self = this.set("adr_address", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAdr_address: Self = this.set("adr_address", js.undefined)
+    @scala.inline
+    def setAspectsVarargs(value: PlaceAspectRating*): Self = this.set("aspects", js.Array(value :_*))
     @scala.inline
     def setAspects(value: js.Array[PlaceAspectRating]): Self = this.set("aspects", value.asInstanceOf[js.Any])
     @scala.inline
@@ -81,6 +85,8 @@ object PlaceResult {
     def setGeometry(value: PlaceGeometry): Self = this.set("geometry", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteGeometry: Self = this.set("geometry", js.undefined)
+    @scala.inline
+    def setHtml_attributionsVarargs(value: String*): Self = this.set("html_attributions", js.Array(value :_*))
     @scala.inline
     def setHtml_attributions(value: js.Array[String]): Self = this.set("html_attributions", value.asInstanceOf[js.Any])
     @scala.inline
@@ -106,6 +112,8 @@ object PlaceResult {
     @scala.inline
     def deletePermanently_closed: Self = this.set("permanently_closed", js.undefined)
     @scala.inline
+    def setPhotosVarargs(value: PlacePhoto*): Self = this.set("photos", js.Array(value :_*))
+    @scala.inline
     def setPhotos(value: js.Array[PlacePhoto]): Self = this.set("photos", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePhotos: Self = this.set("photos", js.undefined)
@@ -126,9 +134,13 @@ object PlaceResult {
     @scala.inline
     def deleteRating: Self = this.set("rating", js.undefined)
     @scala.inline
+    def setReviewsVarargs(value: PlaceReview*): Self = this.set("reviews", js.Array(value :_*))
+    @scala.inline
     def setReviews(value: js.Array[PlaceReview]): Self = this.set("reviews", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteReviews: Self = this.set("reviews", js.undefined)
+    @scala.inline
+    def setTypesVarargs(value: String*): Self = this.set("types", js.Array(value :_*))
     @scala.inline
     def setTypes(value: js.Array[String]): Self = this.set("types", value.asInstanceOf[js.Any])
     @scala.inline

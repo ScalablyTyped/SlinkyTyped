@@ -47,6 +47,8 @@ object CompileFunctionOptions {
     @scala.inline
     def deleteCachedData: Self = this.set("cachedData", js.undefined)
     @scala.inline
+    def setContextExtensionsVarargs(value: js.Object*): Self = this.set("contextExtensions", js.Array(value :_*))
+    @scala.inline
     def setContextExtensions(value: js.Array[js.Object]): Self = this.set("contextExtensions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContextExtensions: Self = this.set("contextExtensions", js.undefined)

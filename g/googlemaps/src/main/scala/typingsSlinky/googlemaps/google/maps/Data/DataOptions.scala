@@ -39,6 +39,8 @@ object DataOptions {
     @scala.inline
     def deleteControlPosition: Self = this.set("controlPosition", js.undefined)
     @scala.inline
+    def setControlsVarargs(value: DrawingMode*): Self = this.set("controls", js.Array(value :_*))
+    @scala.inline
     def setControls(value: js.Array[DrawingMode]): Self = this.set("controls", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteControls: Self = this.set("controls", js.undefined)

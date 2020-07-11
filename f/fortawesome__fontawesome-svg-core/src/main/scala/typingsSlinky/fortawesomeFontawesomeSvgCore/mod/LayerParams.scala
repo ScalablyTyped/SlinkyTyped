@@ -26,6 +26,8 @@ object LayerParams {
         x
     }
     @scala.inline
+    def setClassesVarargs(value: String*): Self = this.set("classes", js.Array(value :_*))
+    @scala.inline
     def setClasses(value: String | js.Array[String]): Self = this.set("classes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClasses: Self = this.set("classes", js.undefined)

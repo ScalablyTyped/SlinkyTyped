@@ -50,13 +50,19 @@ object Profile {
     @scala.inline
     def setEndTime(value: Double): Self = this.set("endTime", value.asInstanceOf[js.Any])
     @scala.inline
+    def setNodesVarargs(value: ProfileNode*): Self = this.set("nodes", js.Array(value :_*))
+    @scala.inline
     def setNodes(value: js.Array[ProfileNode]): Self = this.set("nodes", value.asInstanceOf[js.Any])
     @scala.inline
     def setStartTime(value: Double): Self = this.set("startTime", value.asInstanceOf[js.Any])
     @scala.inline
+    def setSamplesVarargs(value: Double*): Self = this.set("samples", js.Array(value :_*))
+    @scala.inline
     def setSamples(value: js.Array[Double]): Self = this.set("samples", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSamples: Self = this.set("samples", js.undefined)
+    @scala.inline
+    def setTimeDeltasVarargs(value: Double*): Self = this.set("timeDeltas", js.Array(value :_*))
     @scala.inline
     def setTimeDeltas(value: js.Array[Double]): Self = this.set("timeDeltas", value.asInstanceOf[js.Any])
     @scala.inline

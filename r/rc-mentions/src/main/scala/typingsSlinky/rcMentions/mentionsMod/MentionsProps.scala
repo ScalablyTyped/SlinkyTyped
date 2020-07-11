@@ -88,6 +88,8 @@ object MentionsProps {
     @scala.inline
     def deletePlacement: Self = this.set("placement", js.undefined)
     @scala.inline
+    def setPrefixVarargs(value: String*): Self = this.set("prefix", js.Array(value :_*))
+    @scala.inline
     def setPrefix(value: String | js.Array[String]): Self = this.set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePrefix: Self = this.set("prefix", js.undefined)

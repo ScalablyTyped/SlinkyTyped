@@ -32,9 +32,13 @@ object ModuleUrl {
     @scala.inline
     def deleteModuleUrl: Self = this.set("moduleUrl", js.undefined)
     @scala.inline
+    def setStyleUrlsVarargs(value: String*): Self = this.set("styleUrls", js.Array(value :_*))
+    @scala.inline
     def setStyleUrls(value: js.Array[String]): Self = this.set("styleUrls", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStyleUrls: Self = this.set("styleUrls", js.undefined)
+    @scala.inline
+    def setStylesVarargs(value: String*): Self = this.set("styles", js.Array(value :_*))
     @scala.inline
     def setStyles(value: js.Array[String]): Self = this.set("styles", value.asInstanceOf[js.Any])
     @scala.inline

@@ -357,6 +357,8 @@ object StrictDropdownProps {
     @scala.inline
     def deleteDefaultUpward: Self = this.set("defaultUpward", js.undefined)
     @scala.inline
+    def setDefaultValueVarargs(value: (Double | String | Boolean)*): Self = this.set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def setDefaultValue(value: String | Double | Boolean | (js.Array[Double | String | Boolean])): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
@@ -475,6 +477,8 @@ object StrictDropdownProps {
     @scala.inline
     def deleteOpenOnFocus: Self = this.set("openOnFocus", js.undefined)
     @scala.inline
+    def setOptionsVarargs(value: DropdownItemProps*): Self = this.set("options", js.Array(value :_*))
+    @scala.inline
     def setOptions(value: js.Array[DropdownItemProps]): Self = this.set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)
@@ -556,6 +560,8 @@ object StrictDropdownProps {
     def setUpward(value: Boolean): Self = this.set("upward", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUpward: Self = this.set("upward", js.undefined)
+    @scala.inline
+    def setValueVarargs(value: (Boolean | Double | String)*): Self = this.set("value", js.Array(value :_*))
     @scala.inline
     def setValue(value: Boolean | Double | String | (js.Array[Boolean | Double | String])): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline

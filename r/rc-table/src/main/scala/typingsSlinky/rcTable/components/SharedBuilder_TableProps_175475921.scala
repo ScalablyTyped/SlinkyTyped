@@ -5,6 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcTable.anon.X
+import typingsSlinky.rcTable.interfaceMod.ColumnGroupType
 import typingsSlinky.rcTable.interfaceMod.ColumnType
 import typingsSlinky.rcTable.interfaceMod.ColumnsType
 import typingsSlinky.rcTable.interfaceMod.ExpandableConfig
@@ -31,13 +32,19 @@ class SharedBuilder_TableProps_175475921[/* <: typingsSlinky.rcTable.interfaceMo
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   @scala.inline
+  def columnsVarargs(value: (ColumnGroupType[RecordType] | ColumnType[RecordType])*): this.type = set("columns", js.Array(value :_*))
+  @scala.inline
   def columns(value: ColumnsType[RecordType]): this.type = set("columns", value.asInstanceOf[js.Any])
   @scala.inline
   def components(value: TableComponents[RecordType]): this.type = set("components", value.asInstanceOf[js.Any])
   @scala.inline
+  def dataVarargs(value: RecordType*): this.type = set("data", js.Array(value :_*))
+  @scala.inline
   def data(value: js.Array[RecordType]): this.type = set("data", value.asInstanceOf[js.Any])
   @scala.inline
   def defaultExpandAllRows(value: Boolean): this.type = set("defaultExpandAllRows", value.asInstanceOf[js.Any])
+  @scala.inline
+  def defaultExpandedRowKeysVarargs(value: Key*): this.type = set("defaultExpandedRowKeys", js.Array(value :_*))
   @scala.inline
   def defaultExpandedRowKeys(value: js.Array[Key]): this.type = set("defaultExpandedRowKeys", value.asInstanceOf[js.Any])
   @scala.inline
@@ -58,6 +65,8 @@ class SharedBuilder_TableProps_175475921[/* <: typingsSlinky.rcTable.interfaceMo
   def expandable(value: ExpandableConfig[RecordType]): this.type = set("expandable", value.asInstanceOf[js.Any])
   @scala.inline
   def expandedRowClassName(value: (RecordType, /* index */ Double, /* indent */ Double) => String): this.type = set("expandedRowClassName", js.Any.fromFunction3(value))
+  @scala.inline
+  def expandedRowKeysVarargs(value: Key*): this.type = set("expandedRowKeys", js.Array(value :_*))
   @scala.inline
   def expandedRowKeys(value: js.Array[Key]): this.type = set("expandedRowKeys", value.asInstanceOf[js.Any])
   @scala.inline

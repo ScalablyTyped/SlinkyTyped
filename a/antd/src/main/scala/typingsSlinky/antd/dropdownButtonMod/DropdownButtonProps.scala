@@ -149,6 +149,8 @@ object DropdownButtonProps {
     @scala.inline
     def deleteTransitionName: Self = this.set("transitionName", js.undefined)
     @scala.inline
+    def setTriggerVarargs(value: (click | hover | contextMenu)*): Self = this.set("trigger", js.Array(value :_*))
+    @scala.inline
     def setTrigger(value: js.Array[click | hover | contextMenu]): Self = this.set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTrigger: Self = this.set("trigger", js.undefined)

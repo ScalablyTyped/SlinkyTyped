@@ -226,6 +226,8 @@ object AjaxSettingsBase {
     @scala.inline
     def deleteCache: Self = this.set("cache", js.undefined)
     @scala.inline
+    def setCompleteVarargs(value: CompleteCallback[TContext]*): Self = this.set("complete", js.Array(value :_*))
+    @scala.inline
     def setComplete(value: TypeOrArray[CompleteCallback[TContext]]): Self = this.set("complete", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteComplete: Self = this.set("complete", js.undefined)
@@ -265,6 +267,8 @@ object AjaxSettingsBase {
     def setEnctype(value: `applicationSlashx-www-form-urlencoded` | `multipartSlashform-data` | textSlashplain): Self = this.set("enctype", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEnctype: Self = this.set("enctype", js.undefined)
+    @scala.inline
+    def setErrorVarargs(value: ErrorCallback[TContext]*): Self = this.set("error", js.Array(value :_*))
     @scala.inline
     def setError(value: TypeOrArray[ErrorCallback[TContext]]): Self = this.set("error", value.asInstanceOf[js.Any])
     @scala.inline
@@ -317,6 +321,8 @@ object AjaxSettingsBase {
     def setStatusCode(value: StatusCodeCallbacks[TContext]): Self = this.set("statusCode", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStatusCode: Self = this.set("statusCode", js.undefined)
+    @scala.inline
+    def setSuccessVarargs(value: SuccessCallback[TContext]*): Self = this.set("success", js.Array(value :_*))
     @scala.inline
     def setSuccess(value: TypeOrArray[SuccessCallback[TContext]]): Self = this.set("success", value.asInstanceOf[js.Any])
     @scala.inline

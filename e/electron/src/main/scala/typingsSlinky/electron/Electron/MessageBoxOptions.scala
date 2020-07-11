@@ -89,6 +89,8 @@ object MessageBoxOptions {
     @scala.inline
     def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
     @scala.inline
+    def setButtonsVarargs(value: String*): Self = this.set("buttons", js.Array(value :_*))
+    @scala.inline
     def setButtons(value: js.Array[String]): Self = this.set("buttons", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteButtons: Self = this.set("buttons", js.undefined)

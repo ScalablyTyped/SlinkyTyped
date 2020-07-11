@@ -73,6 +73,8 @@ object Table {
     @scala.inline
     def headerRow(value: SemanticShorthandItem[TableRowProps]): this.type = set("headerRow", value.asInstanceOf[js.Any])
     @scala.inline
+    def headerRowsVarargs(value: SemanticShorthandItem[TableRowProps]*): this.type = set("headerRows", js.Array(value :_*))
+    @scala.inline
     def headerRows(value: SemanticShorthandCollection[TableRowProps]): this.type = set("headerRows", value.asInstanceOf[js.Any])
     @scala.inline
     def inverted(value: Boolean): this.type = set("inverted", value.asInstanceOf[js.Any])
@@ -94,6 +96,8 @@ object Table {
     def striped(value: Boolean): this.type = set("striped", value.asInstanceOf[js.Any])
     @scala.inline
     def structured(value: Boolean): this.type = set("structured", value.asInstanceOf[js.Any])
+    @scala.inline
+    def tableDataVarargs(value: js.Any*): this.type = set("tableData", js.Array(value :_*))
     @scala.inline
     def tableData(value: js.Array[_]): this.type = set("tableData", value.asInstanceOf[js.Any])
     @scala.inline

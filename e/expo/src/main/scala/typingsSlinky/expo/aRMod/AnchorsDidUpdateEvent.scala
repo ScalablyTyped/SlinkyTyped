@@ -27,6 +27,8 @@ object AnchorsDidUpdateEvent {
         x
     }
     @scala.inline
+    def setAnchorsVarargs(value: Anchor*): Self = this.set("anchors", js.Array(value :_*))
+    @scala.inline
     def setAnchors(value: js.Array[Anchor]): Self = this.set("anchors", value.asInstanceOf[js.Any])
     @scala.inline
     def setEventType(value: AnchorEventType): Self = this.set("eventType", value.asInstanceOf[js.Any])

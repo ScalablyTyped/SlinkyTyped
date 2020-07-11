@@ -35,6 +35,10 @@ object TouchBarConstructorOptions {
         x
     }
     @scala.inline
+    def setItemsVarargs(
+      value: (TouchBarButton | TouchBarColorPicker | TouchBarGroup | TouchBarLabel | TouchBarPopover | TouchBarScrubber | TouchBarSegmentedControl | TouchBarSlider | TouchBarSpacer)*
+    ): Self = this.set("items", js.Array(value :_*))
+    @scala.inline
     def setItems(
       value: js.Array[
           TouchBarButton | TouchBarColorPicker | TouchBarGroup | TouchBarLabel | TouchBarPopover | TouchBarScrubber | TouchBarSegmentedControl | TouchBarSlider | TouchBarSpacer

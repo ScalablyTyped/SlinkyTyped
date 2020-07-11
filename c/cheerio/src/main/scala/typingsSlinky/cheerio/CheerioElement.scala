@@ -64,7 +64,11 @@ object CheerioElement {
     @scala.inline
     def setAttribs(value: StringDictionary[String]): Self = this.set("attribs", value.asInstanceOf[js.Any])
     @scala.inline
+    def setChildNodesVarargs(value: CheerioElement*): Self = this.set("childNodes", js.Array(value :_*))
+    @scala.inline
     def setChildNodes(value: js.Array[CheerioElement]): Self = this.set("childNodes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildrenVarargs(value: CheerioElement*): Self = this.set("children", js.Array(value :_*))
     @scala.inline
     def setChildren(value: js.Array[CheerioElement]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline

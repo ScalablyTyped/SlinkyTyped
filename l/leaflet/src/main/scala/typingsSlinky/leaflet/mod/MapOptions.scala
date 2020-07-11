@@ -131,6 +131,8 @@ object MapOptions {
     @scala.inline
     def deleteKeyboardPanDelta: Self = this.set("keyboardPanDelta", js.undefined)
     @scala.inline
+    def setLayersVarargs(value: Layer*): Self = this.set("layers", js.Array(value :_*))
+    @scala.inline
     def setLayers(value: js.Array[Layer]): Self = this.set("layers", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLayers: Self = this.set("layers", js.undefined)
@@ -138,6 +140,8 @@ object MapOptions {
     def setMarkerZoomAnimation(value: Boolean): Self = this.set("markerZoomAnimation", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMarkerZoomAnimation: Self = this.set("markerZoomAnimation", js.undefined)
+    @scala.inline
+    def setMaxBoundsVarargs(value: LatLngTuple*): Self = this.set("maxBounds", js.Array(value :_*))
     @scala.inline
     def setMaxBounds(value: LatLngBoundsExpression): Self = this.set("maxBounds", value.asInstanceOf[js.Any])
     @scala.inline

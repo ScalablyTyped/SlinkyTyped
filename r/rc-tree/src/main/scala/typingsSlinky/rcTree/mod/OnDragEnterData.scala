@@ -32,6 +32,8 @@ object OnDragEnterData {
     @scala.inline
     def setEvent(value: Event): Self = this.set("event", value.asInstanceOf[js.Any])
     @scala.inline
+    def setExpandedKeysVarargs(value: String*): Self = this.set("expandedKeys", js.Array(value :_*))
+    @scala.inline
     def setExpandedKeys(value: js.Array[String]): Self = this.set("expandedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def setNode(value: ReactComponentClass[InternalTreeNodeProps]): Self = this.set("node", value.asInstanceOf[js.Any])

@@ -26,6 +26,8 @@ object BIF {
         x
     }
     @scala.inline
+    def setBIFVarargs(value: String*): Self = this.set("BIF", js.Array(value :_*))
+    @scala.inline
     def setBIF(value: js.Array[String]): Self = this.set("BIF", value.asInstanceOf[js.Any])
   }
   

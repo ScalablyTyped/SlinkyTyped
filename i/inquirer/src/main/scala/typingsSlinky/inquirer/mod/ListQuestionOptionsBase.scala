@@ -42,6 +42,8 @@ object ListQuestionOptionsBase {
         x
     }
     @scala.inline
+    def setChoicesVarargs(value: DistinctChoice[TChoiceMap]*): Self = this.set("choices", js.Array(value :_*))
+    @scala.inline
     def setChoicesFunction1(
       value: T => js.Array[DistinctChoice[TChoiceMap]] | js.Promise[js.Array[DistinctChoice[TChoiceMap]]]
     ): Self = this.set("choices", js.Any.fromFunction1(value))

@@ -61,6 +61,8 @@ object TouchBarSegmentedControlConstructorOptions {
     @scala.inline
     def setChange(value: (Double, Boolean) => Unit): Self = this.set("change", js.Any.fromFunction2(value))
     @scala.inline
+    def setSegmentsVarargs(value: SegmentedControlSegment*): Self = this.set("segments", js.Array(value :_*))
+    @scala.inline
     def setSegments(value: js.Array[SegmentedControlSegment]): Self = this.set("segments", value.asInstanceOf[js.Any])
     @scala.inline
     def setMode(value: single | multiple | buttons): Self = this.set("mode", value.asInstanceOf[js.Any])

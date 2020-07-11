@@ -252,6 +252,10 @@ object TView {
     @scala.inline
     def setBlueprint(value: ɵangularPackagesCoreCoreBj): Self = this.set("blueprint", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDataVarargs(
+      value: (TNode | ɵPipeDef[js.Any] | ɵDirectiveDef[js.Any] | ɵComponentDef[js.Any] | Double | Type[js.Any] | InjectionToken[js.Any] | TI18n | I18nUpdateOpCodes | Null | String)*
+    ): Self = this.set("data", js.Array(value :_*))
+    @scala.inline
     def setData(value: TData): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def setExpandoStartIndex(value: Double): Self = this.set("expandoStartIndex", value.asInstanceOf[js.Any])
@@ -264,33 +268,49 @@ object TView {
     @scala.inline
     def setStaticViewQueries(value: Boolean): Self = this.set("staticViewQueries", value.asInstanceOf[js.Any])
     @scala.inline
+    def setCleanupVarargs(value: js.Any*): Self = this.set("cleanup", js.Array(value :_*))
+    @scala.inline
     def setCleanup(value: js.Array[_]): Self = this.set("cleanup", value.asInstanceOf[js.Any])
     @scala.inline
     def setCleanupNull: Self = this.set("cleanup", null)
+    @scala.inline
+    def setComponentsVarargs(value: Double*): Self = this.set("components", js.Array(value :_*))
     @scala.inline
     def setComponents(value: js.Array[Double]): Self = this.set("components", value.asInstanceOf[js.Any])
     @scala.inline
     def setComponentsNull: Self = this.set("components", null)
     @scala.inline
+    def setContentCheckHooksVarargs(value: (Double | js.Function0[Unit])*): Self = this.set("contentCheckHooks", js.Array(value :_*))
+    @scala.inline
     def setContentCheckHooks(value: HookData): Self = this.set("contentCheckHooks", value.asInstanceOf[js.Any])
     @scala.inline
     def setContentCheckHooksNull: Self = this.set("contentCheckHooks", null)
+    @scala.inline
+    def setContentHooksVarargs(value: (Double | js.Function0[Unit])*): Self = this.set("contentHooks", js.Array(value :_*))
     @scala.inline
     def setContentHooks(value: HookData): Self = this.set("contentHooks", value.asInstanceOf[js.Any])
     @scala.inline
     def setContentHooksNull: Self = this.set("contentHooks", null)
     @scala.inline
+    def setContentQueriesVarargs(value: Double*): Self = this.set("contentQueries", js.Array(value :_*))
+    @scala.inline
     def setContentQueries(value: js.Array[Double]): Self = this.set("contentQueries", value.asInstanceOf[js.Any])
     @scala.inline
     def setContentQueriesNull: Self = this.set("contentQueries", null)
+    @scala.inline
+    def setDestroyHooksVarargs(value: (Double | js.Function0[Unit])*): Self = this.set("destroyHooks", js.Array(value :_*))
     @scala.inline
     def setDestroyHooks(value: HookData): Self = this.set("destroyHooks", value.asInstanceOf[js.Any])
     @scala.inline
     def setDestroyHooksNull: Self = this.set("destroyHooks", null)
     @scala.inline
+    def setDirectiveRegistryVarargs(value: (ɵDirectiveDef[js.Any] | ɵComponentDef[js.Any])*): Self = this.set("directiveRegistry", js.Array(value :_*))
+    @scala.inline
     def setDirectiveRegistry(value: DirectiveDefList): Self = this.set("directiveRegistry", value.asInstanceOf[js.Any])
     @scala.inline
     def setDirectiveRegistryNull: Self = this.set("directiveRegistry", null)
+    @scala.inline
+    def setExpandoInstructionsVarargs(value: (Double | HostBindingsFunction[js.Any] | Null)*): Self = this.set("expandoInstructions", js.Array(value :_*))
     @scala.inline
     def setExpandoInstructions(value: ExpandoInstructions): Self = this.set("expandoInstructions", value.asInstanceOf[js.Any])
     @scala.inline
@@ -304,13 +324,19 @@ object TView {
     @scala.inline
     def setNodeNull: Self = this.set("node", null)
     @scala.inline
+    def setPipeRegistryVarargs(value: ɵPipeDef[js.Any]*): Self = this.set("pipeRegistry", js.Array(value :_*))
+    @scala.inline
     def setPipeRegistry(value: PipeDefList): Self = this.set("pipeRegistry", value.asInstanceOf[js.Any])
     @scala.inline
     def setPipeRegistryNull: Self = this.set("pipeRegistry", null)
     @scala.inline
+    def setPreOrderCheckHooksVarargs(value: (Double | js.Function0[Unit])*): Self = this.set("preOrderCheckHooks", js.Array(value :_*))
+    @scala.inline
     def setPreOrderCheckHooks(value: HookData): Self = this.set("preOrderCheckHooks", value.asInstanceOf[js.Any])
     @scala.inline
     def setPreOrderCheckHooksNull: Self = this.set("preOrderCheckHooks", null)
+    @scala.inline
+    def setPreOrderHooksVarargs(value: (Double | js.Function0[Unit])*): Self = this.set("preOrderHooks", js.Array(value :_*))
     @scala.inline
     def setPreOrderHooks(value: HookData): Self = this.set("preOrderHooks", value.asInstanceOf[js.Any])
     @scala.inline
@@ -320,6 +346,8 @@ object TView {
     @scala.inline
     def setQueriesNull: Self = this.set("queries", null)
     @scala.inline
+    def setSchemasVarargs(value: SchemaMetadata*): Self = this.set("schemas", js.Array(value :_*))
+    @scala.inline
     def setSchemas(value: js.Array[SchemaMetadata]): Self = this.set("schemas", value.asInstanceOf[js.Any])
     @scala.inline
     def setSchemasNull: Self = this.set("schemas", null)
@@ -328,9 +356,13 @@ object TView {
     @scala.inline
     def setTemplateNull: Self = this.set("template", null)
     @scala.inline
+    def setViewCheckHooksVarargs(value: (Double | js.Function0[Unit])*): Self = this.set("viewCheckHooks", js.Array(value :_*))
+    @scala.inline
     def setViewCheckHooks(value: HookData): Self = this.set("viewCheckHooks", value.asInstanceOf[js.Any])
     @scala.inline
     def setViewCheckHooksNull: Self = this.set("viewCheckHooks", null)
+    @scala.inline
+    def setViewHooksVarargs(value: (Double | js.Function0[Unit])*): Self = this.set("viewHooks", js.Array(value :_*))
     @scala.inline
     def setViewHooks(value: HookData): Self = this.set("viewHooks", value.asInstanceOf[js.Any])
     @scala.inline

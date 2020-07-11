@@ -182,6 +182,8 @@ object IconMenuProps {
     @scala.inline
     def deleteUseLayerForClickAway: Self = this.set("useLayerForClickAway", js.undefined)
     @scala.inline
+    def setValueVarargs(value: js.Any*): Self = this.set("value", js.Array(value :_*))
+    @scala.inline
     def setValue(value: js.Any | js.Array[_]): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)

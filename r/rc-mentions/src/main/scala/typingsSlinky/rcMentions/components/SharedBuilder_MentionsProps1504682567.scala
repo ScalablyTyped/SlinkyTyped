@@ -424,6 +424,8 @@ class SharedBuilder_MentionsProps1504682567[R <: js.Object] (val args: js.Array[
   @scala.inline
   def placement(value: Placement): this.type = set("placement", value.asInstanceOf[js.Any])
   @scala.inline
+  def prefixVarargs(value: String*): this.type = set("prefix", js.Array(value :_*))
+  @scala.inline
   def prefix(value: String | js.Array[String]): this.type = set("prefix", value.asInstanceOf[js.Any])
   @scala.inline
   def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])

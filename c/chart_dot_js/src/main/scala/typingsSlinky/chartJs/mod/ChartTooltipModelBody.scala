@@ -28,9 +28,15 @@ object ChartTooltipModelBody {
         x
     }
     @scala.inline
+    def setAfterVarargs(value: String*): Self = this.set("after", js.Array(value :_*))
+    @scala.inline
     def setAfter(value: js.Array[String]): Self = this.set("after", value.asInstanceOf[js.Any])
     @scala.inline
+    def setBeforeVarargs(value: String*): Self = this.set("before", js.Array(value :_*))
+    @scala.inline
     def setBefore(value: js.Array[String]): Self = this.set("before", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLinesVarargs(value: String*): Self = this.set("lines", js.Array(value :_*))
     @scala.inline
     def setLines(value: js.Array[String]): Self = this.set("lines", value.asInstanceOf[js.Any])
   }

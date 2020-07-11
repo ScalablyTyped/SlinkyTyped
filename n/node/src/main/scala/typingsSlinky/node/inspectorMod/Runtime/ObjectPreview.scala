@@ -56,6 +56,8 @@ object ObjectPreview {
     @scala.inline
     def setOverflow(value: Boolean): Self = this.set("overflow", value.asInstanceOf[js.Any])
     @scala.inline
+    def setPropertiesVarargs(value: PropertyPreview*): Self = this.set("properties", js.Array(value :_*))
+    @scala.inline
     def setProperties(value: js.Array[PropertyPreview]): Self = this.set("properties", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
@@ -63,6 +65,8 @@ object ObjectPreview {
     def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
+    @scala.inline
+    def setEntriesVarargs(value: EntryPreview*): Self = this.set("entries", js.Array(value :_*))
     @scala.inline
     def setEntries(value: js.Array[EntryPreview]): Self = this.set("entries", value.asInstanceOf[js.Any])
     @scala.inline

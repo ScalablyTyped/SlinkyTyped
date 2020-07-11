@@ -51,6 +51,8 @@ object PermissionRequestHandlerDetails {
     @scala.inline
     def deleteExternalURL: Self = this.set("externalURL", js.undefined)
     @scala.inline
+    def setMediaTypesVarargs(value: (video | audio)*): Self = this.set("mediaTypes", js.Array(value :_*))
+    @scala.inline
     def setMediaTypes(value: js.Array[video | audio]): Self = this.set("mediaTypes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMediaTypes: Self = this.set("mediaTypes", js.undefined)

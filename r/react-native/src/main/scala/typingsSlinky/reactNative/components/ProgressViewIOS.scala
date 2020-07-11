@@ -46,6 +46,8 @@ object ProgressViewIOS {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNative.mod.ProgressViewIOS] {
     @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -63,6 +65,8 @@ object ProgressViewIOS {
     def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
@@ -136,6 +140,8 @@ object ProgressViewIOS {
     @scala.inline
     def progress(value: Double): this.type = set("progress", value.asInstanceOf[js.Any])
     @scala.inline
+    def progressImageVarargs(value: ImageURISource*): this.type = set("progressImage", js.Array(value :_*))
+    @scala.inline
     def progressImage(value: ImageURISource | js.Array[ImageURISource]): this.type = set("progressImage", value.asInstanceOf[js.Any])
     @scala.inline
     def progressTintColor(value: String): this.type = set("progressTintColor", value.asInstanceOf[js.Any])
@@ -153,6 +159,8 @@ object ProgressViewIOS {
     def styleNull: this.type = set("style", null)
     @scala.inline
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
+    @scala.inline
+    def trackImageVarargs(value: ImageURISource*): this.type = set("trackImage", js.Array(value :_*))
     @scala.inline
     def trackImage(value: ImageURISource | js.Array[ImageURISource]): this.type = set("trackImage", value.asInstanceOf[js.Any])
     @scala.inline

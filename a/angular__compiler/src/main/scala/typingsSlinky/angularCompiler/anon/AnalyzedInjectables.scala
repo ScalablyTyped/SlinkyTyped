@@ -29,6 +29,8 @@ object AnalyzedInjectables {
         x
     }
     @scala.inline
+    def setAnalyzedInjectablesVarargs(value: NgAnalyzedFileWithInjectables*): Self = this.set("analyzedInjectables", js.Array(value :_*))
+    @scala.inline
     def setAnalyzedInjectables(value: js.Array[NgAnalyzedFileWithInjectables]): Self = this.set("analyzedInjectables", value.asInstanceOf[js.Any])
     @scala.inline
     def setAnalyzedModules(value: NgAnalyzedModules): Self = this.set("analyzedModules", value.asInstanceOf[js.Any])

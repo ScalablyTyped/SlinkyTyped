@@ -28,6 +28,8 @@ object KV {
         x
     }
     @scala.inline
+    def setKeyVarargs(value: (String | Double)*): Self = this.set("key", js.Array(value :_*))
+    @scala.inline
     def setKey(value: InternalNamePath): Self = this.set("key", value.asInstanceOf[js.Any])
     @scala.inline
     def setValue(value: T): Self = this.set("value", value.asInstanceOf[js.Any])

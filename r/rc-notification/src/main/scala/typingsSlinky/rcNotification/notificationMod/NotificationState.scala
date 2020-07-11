@@ -27,6 +27,8 @@ object NotificationState {
         x
     }
     @scala.inline
+    def setNoticesVarargs(value: HolderCallback*): Self = this.set("notices", js.Array(value :_*))
+    @scala.inline
     def setNotices(value: js.Array[HolderCallback]): Self = this.set("notices", value.asInstanceOf[js.Any])
   }
   

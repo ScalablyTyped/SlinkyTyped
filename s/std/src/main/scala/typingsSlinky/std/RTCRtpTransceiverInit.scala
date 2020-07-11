@@ -32,9 +32,13 @@ object RTCRtpTransceiverInit {
     @scala.inline
     def deleteDirection: Self = this.set("direction", js.undefined)
     @scala.inline
+    def setSendEncodingsVarargs(value: RTCRtpEncodingParameters*): Self = this.set("sendEncodings", js.Array(value :_*))
+    @scala.inline
     def setSendEncodings(value: js.Array[RTCRtpEncodingParameters]): Self = this.set("sendEncodings", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSendEncodings: Self = this.set("sendEncodings", js.undefined)
+    @scala.inline
+    def setStreamsVarargs(value: org.scalajs.dom.experimental.mediastream.MediaStream*): Self = this.set("streams", js.Array(value :_*))
     @scala.inline
     def setStreams(value: js.Array[org.scalajs.dom.experimental.mediastream.MediaStream]): Self = this.set("streams", value.asInstanceOf[js.Any])
     @scala.inline

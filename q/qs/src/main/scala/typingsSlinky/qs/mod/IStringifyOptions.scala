@@ -101,6 +101,8 @@ object IStringifyOptions {
     @scala.inline
     def setFilterFunction2(value: (/* prefix */ String, /* value */ js.Any) => _): Self = this.set("filter", js.Any.fromFunction2(value))
     @scala.inline
+    def setFilterVarargs(value: (String | Double)*): Self = this.set("filter", js.Array(value :_*))
+    @scala.inline
     def setFilter(value: (js.Array[String | Double]) | (js.Function2[/* prefix */ String, /* value */ js.Any, _])): Self = this.set("filter", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFilter: Self = this.set("filter", js.undefined)

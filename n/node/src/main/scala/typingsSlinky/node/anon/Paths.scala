@@ -26,6 +26,8 @@ object Paths {
         x
     }
     @scala.inline
+    def setPathsVarargs(value: String*): Self = this.set("paths", js.Array(value :_*))
+    @scala.inline
     def setPaths(value: js.Array[String]): Self = this.set("paths", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePaths: Self = this.set("paths", js.undefined)

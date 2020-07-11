@@ -51,6 +51,8 @@ object UseSelectionConfig {
     @scala.inline
     def setChildrenColumnName(value: String): Self = this.set("childrenColumnName", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDataVarargs(value: RecordType*): Self = this.set("data", js.Array(value :_*))
+    @scala.inline
     def setData(value: js.Array[RecordType]): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def setGetRecordByKey(value: Key => RecordType): Self = this.set("getRecordByKey", js.Any.fromFunction1(value))
@@ -58,6 +60,8 @@ object UseSelectionConfig {
     def setGetRowKey(value: (RecordType, /* index */ js.UndefOr[Double]) => typingsSlinky.rcTable.interfaceMod.Key): Self = this.set("getRowKey", js.Any.fromFunction2(value))
     @scala.inline
     def setLocale(value: TableLocale): Self = this.set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPageDataVarargs(value: RecordType*): Self = this.set("pageData", js.Array(value :_*))
     @scala.inline
     def setPageData(value: js.Array[RecordType]): Self = this.set("pageData", value.asInstanceOf[js.Any])
     @scala.inline

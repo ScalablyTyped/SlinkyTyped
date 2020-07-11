@@ -59,9 +59,15 @@ object InterfaceTypeWithDeclaredMembers {
         x
     }
     @scala.inline
+    def setDeclaredCallSignaturesVarargs(value: Signature*): Self = this.set("declaredCallSignatures", js.Array(value :_*))
+    @scala.inline
     def setDeclaredCallSignatures(value: js.Array[Signature]): Self = this.set("declaredCallSignatures", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDeclaredConstructSignaturesVarargs(value: Signature*): Self = this.set("declaredConstructSignatures", js.Array(value :_*))
+    @scala.inline
     def setDeclaredConstructSignatures(value: js.Array[Signature]): Self = this.set("declaredConstructSignatures", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeclaredPropertiesVarargs(value: Symbol*): Self = this.set("declaredProperties", js.Array(value :_*))
     @scala.inline
     def setDeclaredProperties(value: js.Array[Symbol]): Self = this.set("declaredProperties", value.asInstanceOf[js.Any])
     @scala.inline

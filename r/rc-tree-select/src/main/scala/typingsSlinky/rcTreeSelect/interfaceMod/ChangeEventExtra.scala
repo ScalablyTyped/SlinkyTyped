@@ -42,7 +42,11 @@ object ChangeEventExtra {
         x
     }
     @scala.inline
+    def setAllCheckedNodesVarargs(value: LegacyCheckedNode*): Self = this.set("allCheckedNodes", js.Array(value :_*))
+    @scala.inline
     def setAllCheckedNodes(value: js.Array[LegacyCheckedNode]): Self = this.set("allCheckedNodes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPreValueVarargs(value: LabelValueType*): Self = this.set("preValue", js.Array(value :_*))
     @scala.inline
     def setPreValue(value: js.Array[LabelValueType]): Self = this.set("preValue", value.asInstanceOf[js.Any])
     @scala.inline

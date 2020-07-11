@@ -32,7 +32,11 @@ object RTCRtpParameters {
         x
     }
     @scala.inline
+    def setCodecsVarargs(value: RTCRtpCodecParameters*): Self = this.set("codecs", js.Array(value :_*))
+    @scala.inline
     def setCodecs(value: js.Array[RTCRtpCodecParameters]): Self = this.set("codecs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHeaderExtensionsVarargs(value: RTCRtpHeaderExtensionParameters*): Self = this.set("headerExtensions", js.Array(value :_*))
     @scala.inline
     def setHeaderExtensions(value: js.Array[RTCRtpHeaderExtensionParameters]): Self = this.set("headerExtensions", value.asInstanceOf[js.Any])
     @scala.inline

@@ -36,6 +36,8 @@ object MapTypeStyle {
     @scala.inline
     def deleteFeatureType: Self = this.set("featureType", js.undefined)
     @scala.inline
+    def setStylersVarargs(value: MapTypeStyler*): Self = this.set("stylers", js.Array(value :_*))
+    @scala.inline
     def setStylers(value: js.Array[MapTypeStyler]): Self = this.set("stylers", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStylers: Self = this.set("stylers", js.undefined)

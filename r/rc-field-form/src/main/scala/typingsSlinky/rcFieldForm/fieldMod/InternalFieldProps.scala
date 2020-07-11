@@ -71,6 +71,8 @@ object InternalFieldProps {
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     @scala.inline
+    def setDependenciesVarargs(value: NamePath*): Self = this.set("dependencies", js.Array(value :_*))
+    @scala.inline
     def setDependencies(value: js.Array[NamePath]): Self = this.set("dependencies", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDependencies: Self = this.set("dependencies", js.undefined)
@@ -91,6 +93,8 @@ object InternalFieldProps {
     @scala.inline
     def deleteMessageVariables: Self = this.set("messageVariables", js.undefined)
     @scala.inline
+    def setNameVarargs(value: (String | Double)*): Self = this.set("name", js.Array(value :_*))
+    @scala.inline
     def setName(value: InternalNamePath): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
@@ -102,6 +106,8 @@ object InternalFieldProps {
     def setOnReset(value: () => Unit): Self = this.set("onReset", js.Any.fromFunction0(value))
     @scala.inline
     def deleteOnReset: Self = this.set("onReset", js.undefined)
+    @scala.inline
+    def setRulesVarargs(value: Rule*): Self = this.set("rules", js.Array(value :_*))
     @scala.inline
     def setRules(value: js.Array[Rule]): Self = this.set("rules", value.asInstanceOf[js.Any])
     @scala.inline
@@ -120,6 +126,8 @@ object InternalFieldProps {
     def setValidateFirst(value: Boolean): Self = this.set("validateFirst", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValidateFirst: Self = this.set("validateFirst", js.undefined)
+    @scala.inline
+    def setValidateTriggerVarargs(value: String*): Self = this.set("validateTrigger", js.Array(value :_*))
     @scala.inline
     def setValidateTrigger(value: String | js.Array[String] | `false`): Self = this.set("validateTrigger", value.asInstanceOf[js.Any])
     @scala.inline

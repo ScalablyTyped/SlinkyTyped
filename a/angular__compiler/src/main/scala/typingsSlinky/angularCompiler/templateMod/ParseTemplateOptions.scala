@@ -78,6 +78,8 @@ object ParseTemplateOptions {
     @scala.inline
     def deleteInterpolationConfig: Self = this.set("interpolationConfig", js.undefined)
     @scala.inline
+    def setLeadingTriviaCharsVarargs(value: String*): Self = this.set("leadingTriviaChars", js.Array(value :_*))
+    @scala.inline
     def setLeadingTriviaChars(value: js.Array[String]): Self = this.set("leadingTriviaChars", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLeadingTriviaChars: Self = this.set("leadingTriviaChars", js.undefined)

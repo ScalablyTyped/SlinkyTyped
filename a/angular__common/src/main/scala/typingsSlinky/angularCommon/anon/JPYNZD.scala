@@ -36,13 +36,23 @@ object JPYNZD {
         x
     }
     @scala.inline
+    def setAUDVarargs(value: String*): Self = this.set("AUD", js.Array(value :_*))
+    @scala.inline
     def setAUD(value: js.Array[String]): Self = this.set("AUD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setJPYVarargs(value: String*): Self = this.set("JPY", js.Array(value :_*))
     @scala.inline
     def setJPY(value: js.Array[String]): Self = this.set("JPY", value.asInstanceOf[js.Any])
     @scala.inline
+    def setNZDVarargs(value: String*): Self = this.set("NZD", js.Array(value :_*))
+    @scala.inline
     def setNZD(value: js.Array[String]): Self = this.set("NZD", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTOPVarargs(value: String*): Self = this.set("TOP", js.Array(value :_*))
+    @scala.inline
     def setTOP(value: js.Array[String]): Self = this.set("TOP", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUSDVarargs(value: String*): Self = this.set("USD", js.Array(value :_*))
     @scala.inline
     def setUSD(value: js.Array[String]): Self = this.set("USD", value.asInstanceOf[js.Any])
   }

@@ -138,11 +138,17 @@ object ChartTooltipModel {
     @scala.inline
     def set_titleFontStyle(value: String): Self = this.set("_titleFontStyle", value.asInstanceOf[js.Any])
     @scala.inline
+    def setAfterBodyVarargs(value: String*): Self = this.set("afterBody", js.Array(value :_*))
+    @scala.inline
     def setAfterBody(value: js.Array[String]): Self = this.set("afterBody", value.asInstanceOf[js.Any])
     @scala.inline
     def setBackgroundColor(value: String): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
+    def setBeforeBodyVarargs(value: String*): Self = this.set("beforeBody", js.Array(value :_*))
+    @scala.inline
     def setBeforeBody(value: js.Array[String]): Self = this.set("beforeBody", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBodyVarargs(value: ChartTooltipModelBody*): Self = this.set("body", js.Array(value :_*))
     @scala.inline
     def setBody(value: js.Array[ChartTooltipModelBody]): Self = this.set("body", value.asInstanceOf[js.Any])
     @scala.inline
@@ -166,9 +172,13 @@ object ChartTooltipModel {
     @scala.inline
     def setCornerRadius(value: Double): Self = this.set("cornerRadius", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDataPointsVarargs(value: ChartTooltipItem*): Self = this.set("dataPoints", js.Array(value :_*))
+    @scala.inline
     def setDataPoints(value: js.Array[ChartTooltipItem]): Self = this.set("dataPoints", value.asInstanceOf[js.Any])
     @scala.inline
     def setDisplayColors(value: Boolean): Self = this.set("displayColors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFooterVarargs(value: String*): Self = this.set("footer", js.Array(value :_*))
     @scala.inline
     def setFooter(value: js.Array[String]): Self = this.set("footer", value.asInstanceOf[js.Any])
     @scala.inline
@@ -182,13 +192,19 @@ object ChartTooltipModel {
     @scala.inline
     def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
     @scala.inline
+    def setLabelColorsVarargs(value: String*): Self = this.set("labelColors", js.Array(value :_*))
+    @scala.inline
     def setLabelColors(value: js.Array[String]): Self = this.set("labelColors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLabelTextColorsVarargs(value: String*): Self = this.set("labelTextColors", js.Array(value :_*))
     @scala.inline
     def setLabelTextColors(value: js.Array[String]): Self = this.set("labelTextColors", value.asInstanceOf[js.Any])
     @scala.inline
     def setLegendColorBackground(value: String): Self = this.set("legendColorBackground", value.asInstanceOf[js.Any])
     @scala.inline
     def setOpacity(value: Double): Self = this.set("opacity", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTitleVarargs(value: String*): Self = this.set("title", js.Array(value :_*))
     @scala.inline
     def setTitle(value: js.Array[String]): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline

@@ -179,6 +179,8 @@ object MenuItemProps {
     @scala.inline
     def deleteRootPrefixCls: Self = this.set("rootPrefixCls", js.undefined)
     @scala.inline
+    def setSelectedKeysVarargs(value: String*): Self = this.set("selectedKeys", js.Array(value :_*))
+    @scala.inline
     def setSelectedKeys(value: js.Array[String]): Self = this.set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSelectedKeys: Self = this.set("selectedKeys", js.undefined)

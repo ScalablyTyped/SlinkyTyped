@@ -28,6 +28,8 @@ object CameraRollAssetInfo {
         x
     }
     @scala.inline
+    def setEdgesVarargs(value: CameraRollEdgeInfo*): Self = this.set("edges", js.Array(value :_*))
+    @scala.inline
     def setEdges(value: js.Array[CameraRollEdgeInfo]): Self = this.set("edges", value.asInstanceOf[js.Any])
     @scala.inline
     def setPage_info(value: Endcursor): Self = this.set("page_info", value.asInstanceOf[js.Any])

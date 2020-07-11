@@ -45,6 +45,8 @@ object MenuInfo {
     @scala.inline
     def setKey(value: Key): Self = this.set("key", value.asInstanceOf[js.Any])
     @scala.inline
+    def setKeyPathVarargs(value: Key*): Self = this.set("keyPath", js.Array(value :_*))
+    @scala.inline
     def setKeyPath(value: js.Array[Key]): Self = this.set("keyPath", value.asInstanceOf[js.Any])
   }
   

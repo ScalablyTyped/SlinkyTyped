@@ -34,7 +34,11 @@ object MenuState {
         x
     }
     @scala.inline
+    def setInlineOpenKeysVarargs(value: String*): Self = this.set("inlineOpenKeys", js.Array(value :_*))
+    @scala.inline
     def setInlineOpenKeys(value: js.Array[String]): Self = this.set("inlineOpenKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOpenKeysVarargs(value: String*): Self = this.set("openKeys", js.Array(value :_*))
     @scala.inline
     def setOpenKeys(value: js.Array[String]): Self = this.set("openKeys", value.asInstanceOf[js.Any])
     @scala.inline

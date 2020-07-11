@@ -5,6 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
 import typingsSlinky.semanticUiReact.menuItemMod.MenuItemProps
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.bottom
@@ -157,6 +158,8 @@ object StrictMenuProps {
     def setInverted(value: Boolean): Self = this.set("inverted", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInverted: Self = this.set("inverted", js.undefined)
+    @scala.inline
+    def setItemsVarargs(value: SemanticShorthandItem[MenuItemProps]*): Self = this.set("items", js.Array(value :_*))
     @scala.inline
     def setItems(value: SemanticShorthandCollection[MenuItemProps]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline

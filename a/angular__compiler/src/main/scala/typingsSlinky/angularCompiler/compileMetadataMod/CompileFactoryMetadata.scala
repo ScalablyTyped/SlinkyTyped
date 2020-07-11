@@ -26,6 +26,8 @@ object CompileFactoryMetadata {
         x
     }
     @scala.inline
+    def setDiDepsVarargs(value: CompileDiDependencyMetadata*): Self = this.set("diDeps", js.Array(value :_*))
+    @scala.inline
     def setDiDeps(value: js.Array[CompileDiDependencyMetadata]): Self = this.set("diDeps", value.asInstanceOf[js.Any])
   }
   

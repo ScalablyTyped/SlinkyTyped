@@ -28,7 +28,11 @@ object Changed {
         x
     }
     @scala.inline
+    def setChangedVarargs(value: ViewToken*): Self = this.set("changed", js.Array(value :_*))
+    @scala.inline
     def setChanged(value: js.Array[ViewToken]): Self = this.set("changed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setViewableItemsVarargs(value: ViewToken*): Self = this.set("viewableItems", js.Array(value :_*))
     @scala.inline
     def setViewableItems(value: js.Array[ViewToken]): Self = this.set("viewableItems", value.asInstanceOf[js.Any])
   }

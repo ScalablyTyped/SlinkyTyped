@@ -44,6 +44,8 @@ object Action {
     @scala.inline
     def setEnd(value: stringOrDate): Self = this.set("end", value.asInstanceOf[js.Any])
     @scala.inline
+    def setSlotsVarargs(value: (js.Date | String)*): Self = this.set("slots", js.Array(value :_*))
+    @scala.inline
     def setSlots(value: js.Array[js.Date | String]): Self = this.set("slots", value.asInstanceOf[js.Any])
     @scala.inline
     def setStartDate(value: js.Date): Self = this.set("start", value.asInstanceOf[js.Any])

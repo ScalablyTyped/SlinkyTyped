@@ -32,6 +32,8 @@ object AngleLineOptions {
         x
     }
     @scala.inline
+    def setBorderDashVarargs(value: Double*): Self = this.set("borderDash", js.Array(value :_*))
+    @scala.inline
     def setBorderDash(value: js.Array[Double]): Self = this.set("borderDash", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBorderDash: Self = this.set("borderDash", js.undefined)
@@ -39,6 +41,8 @@ object AngleLineOptions {
     def setBorderDashOffset(value: Double): Self = this.set("borderDashOffset", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBorderDashOffset: Self = this.set("borderDashOffset", js.undefined)
+    @scala.inline
+    def setColorVarargs(value: String*): Self = this.set("color", js.Array(value :_*))
     @scala.inline
     def setColorCanvasPattern(value: CanvasPattern): Self = this.set("color", value.asInstanceOf[js.Any])
     @scala.inline

@@ -96,9 +96,13 @@ object SelectProps {
     @scala.inline
     def deleteDefaultActiveFirstOption: Self = this.set("defaultActiveFirstOption", js.undefined)
     @scala.inline
+    def setDefaultLabelVarargs(value: String*): Self = this.set("defaultLabel", js.Array(value :_*))
+    @scala.inline
     def setDefaultLabel(value: String | js.Array[String]): Self = this.set("defaultLabel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultLabel: Self = this.set("defaultLabel", js.undefined)
+    @scala.inline
+    def setDefaultValueVarargs(value: String*): Self = this.set("defaultValue", js.Array(value :_*))
     @scala.inline
     def setDefaultValue(value: String | js.Array[String]): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -216,6 +220,8 @@ object SelectProps {
     @scala.inline
     def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
     @scala.inline
+    def setShowActionVarargs(value: String*): Self = this.set("showAction", js.Array(value :_*))
+    @scala.inline
     def setShowAction(value: js.Array[String]): Self = this.set("showAction", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteShowAction: Self = this.set("showAction", js.undefined)
@@ -232,6 +238,8 @@ object SelectProps {
     @scala.inline
     def deleteTags: Self = this.set("tags", js.undefined)
     @scala.inline
+    def setTokenSeparatorsVarargs(value: String*): Self = this.set("tokenSeparators", js.Array(value :_*))
+    @scala.inline
     def setTokenSeparators(value: js.Array[String]): Self = this.set("tokenSeparators", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTokenSeparators: Self = this.set("tokenSeparators", js.undefined)
@@ -239,6 +247,8 @@ object SelectProps {
     def setTransitionName(value: String): Self = this.set("transitionName", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTransitionName: Self = this.set("transitionName", js.undefined)
+    @scala.inline
+    def setValueVarargs(value: String*): Self = this.set("value", js.Array(value :_*))
     @scala.inline
     def setValue(value: String | js.Array[String]): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline

@@ -33,17 +33,25 @@ object NgModule {
         x
     }
     @scala.inline
+    def setBootstrapVarargs(value: (Type | js.Array[js.Any])*): Self = this.set("bootstrap", js.Array(value :_*))
+    @scala.inline
     def setBootstrap(value: js.Array[Type | js.Array[_]]): Self = this.set("bootstrap", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBootstrap: Self = this.set("bootstrap", js.undefined)
+    @scala.inline
+    def setDeclarationsVarargs(value: (Type | js.Array[js.Any])*): Self = this.set("declarations", js.Array(value :_*))
     @scala.inline
     def setDeclarations(value: js.Array[Type | js.Array[_]]): Self = this.set("declarations", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDeclarations: Self = this.set("declarations", js.undefined)
     @scala.inline
+    def setEntryComponentsVarargs(value: (Type | js.Array[js.Any])*): Self = this.set("entryComponents", js.Array(value :_*))
+    @scala.inline
     def setEntryComponents(value: js.Array[Type | js.Array[_]]): Self = this.set("entryComponents", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEntryComponents: Self = this.set("entryComponents", js.undefined)
+    @scala.inline
+    def setExportsVarargs(value: (Type | js.Array[js.Any])*): Self = this.set("exports", js.Array(value :_*))
     @scala.inline
     def setExports(value: js.Array[Type | js.Array[_]]): Self = this.set("exports", value.asInstanceOf[js.Any])
     @scala.inline
@@ -53,13 +61,19 @@ object NgModule {
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
     @scala.inline
+    def setImportsVarargs(value: (Type | ModuleWithProviders | js.Array[js.Any])*): Self = this.set("imports", js.Array(value :_*))
+    @scala.inline
     def setImports(value: js.Array[Type | ModuleWithProviders | js.Array[_]]): Self = this.set("imports", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteImports: Self = this.set("imports", js.undefined)
     @scala.inline
+    def setProvidersVarargs(value: Provider*): Self = this.set("providers", js.Array(value :_*))
+    @scala.inline
     def setProviders(value: js.Array[Provider]): Self = this.set("providers", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteProviders: Self = this.set("providers", js.undefined)
+    @scala.inline
+    def setSchemasVarargs(value: (SchemaMetadata | js.Array[js.Any])*): Self = this.set("schemas", js.Array(value :_*))
     @scala.inline
     def setSchemas(value: js.Array[SchemaMetadata | js.Array[_]]): Self = this.set("schemas", value.asInstanceOf[js.Any])
     @scala.inline

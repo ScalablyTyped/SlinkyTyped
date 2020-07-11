@@ -41,6 +41,8 @@ object DataNode {
     @scala.inline
     def deleteCheckable: Self = this.set("checkable", js.undefined)
     @scala.inline
+    def setChildrenVarargs(value: DataNode*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: js.Array[DataNode]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)

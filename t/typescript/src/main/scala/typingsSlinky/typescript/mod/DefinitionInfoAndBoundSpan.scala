@@ -29,6 +29,8 @@ object DefinitionInfoAndBoundSpan {
     @scala.inline
     def setTextSpan(value: TextSpan): Self = this.set("textSpan", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDefinitionsVarargs(value: DefinitionInfo*): Self = this.set("definitions", js.Array(value :_*))
+    @scala.inline
     def setDefinitions(value: js.Array[DefinitionInfo]): Self = this.set("definitions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefinitions: Self = this.set("definitions", js.undefined)

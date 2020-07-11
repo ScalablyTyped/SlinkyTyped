@@ -42,13 +42,21 @@ object R3NgModuleMetadataFacade {
         x
     }
     @scala.inline
+    def setBootstrapVarargs(value: js.Function*): Self = this.set("bootstrap", js.Array(value :_*))
+    @scala.inline
     def setBootstrap(value: js.Array[js.Function]): Self = this.set("bootstrap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeclarationsVarargs(value: js.Function*): Self = this.set("declarations", js.Array(value :_*))
     @scala.inline
     def setDeclarations(value: js.Array[js.Function]): Self = this.set("declarations", value.asInstanceOf[js.Any])
     @scala.inline
     def setEmitInline(value: Boolean): Self = this.set("emitInline", value.asInstanceOf[js.Any])
     @scala.inline
+    def setExportsVarargs(value: js.Function*): Self = this.set("exports", js.Array(value :_*))
+    @scala.inline
     def setExports(value: js.Array[js.Function]): Self = this.set("exports", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setImportsVarargs(value: js.Function*): Self = this.set("imports", js.Array(value :_*))
     @scala.inline
     def setImports(value: js.Array[js.Function]): Self = this.set("imports", value.asInstanceOf[js.Any])
     @scala.inline
@@ -57,6 +65,8 @@ object R3NgModuleMetadataFacade {
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
     def setIdNull: Self = this.set("id", null)
+    @scala.inline
+    def setSchemasVarargs(value: NameString*): Self = this.set("schemas", js.Array(value :_*))
     @scala.inline
     def setSchemas(value: js.Array[NameString]): Self = this.set("schemas", value.asInstanceOf[js.Any])
     @scala.inline

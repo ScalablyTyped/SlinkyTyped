@@ -42,6 +42,8 @@ object AnimationQueryMetadata {
         x
     }
     @scala.inline
+    def setAnimationVarargs(value: AnimationMetadata*): Self = this.set("animation", js.Array(value :_*))
+    @scala.inline
     def setAnimation(value: AnimationMetadata | js.Array[AnimationMetadata]): Self = this.set("animation", value.asInstanceOf[js.Any])
     @scala.inline
     def setSelector(value: String): Self = this.set("selector", value.asInstanceOf[js.Any])

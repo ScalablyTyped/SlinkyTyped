@@ -46,13 +46,19 @@ object Directive {
     @scala.inline
     def deleteHost: Self = this.set("host", js.undefined)
     @scala.inline
+    def setInputsVarargs(value: String*): Self = this.set("inputs", js.Array(value :_*))
+    @scala.inline
     def setInputs(value: js.Array[String]): Self = this.set("inputs", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInputs: Self = this.set("inputs", js.undefined)
     @scala.inline
+    def setOutputsVarargs(value: String*): Self = this.set("outputs", js.Array(value :_*))
+    @scala.inline
     def setOutputs(value: js.Array[String]): Self = this.set("outputs", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOutputs: Self = this.set("outputs", js.undefined)
+    @scala.inline
+    def setProvidersVarargs(value: Provider*): Self = this.set("providers", js.Array(value :_*))
     @scala.inline
     def setProviders(value: js.Array[Provider]): Self = this.set("providers", value.asInstanceOf[js.Any])
     @scala.inline

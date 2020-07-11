@@ -39,9 +39,13 @@ object AutoFitToViewport {
     @scala.inline
     def deleteAutoFitToViewport: Self = this.set("autoFitToViewport", js.undefined)
     @scala.inline
+    def setControlsVarargs(value: String*): Self = this.set("controls", js.Array(value :_*))
+    @scala.inline
     def setControls(value: js.Array[String]): Self = this.set("controls", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteControls: Self = this.set("controls", js.undefined)
+    @scala.inline
+    def setDirectionVarargs(value: Double*): Self = this.set("direction", js.Array(value :_*))
     @scala.inline
     def setDirection(value: js.Array[Double] | String): Self = this.set("direction", value.asInstanceOf[js.Any])
     @scala.inline
@@ -54,6 +58,8 @@ object AutoFitToViewport {
     def setScrollZoomBehavior(value: Boolean): Self = this.set("scrollZoomBehavior", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteScrollZoomBehavior: Self = this.set("scrollZoomBehavior", js.undefined)
+    @scala.inline
+    def setSpanVarargs(value: Double*): Self = this.set("span", js.Array(value :_*))
     @scala.inline
     def setSpan(value: js.Array[Double] | String): Self = this.set("span", value.asInstanceOf[js.Any])
     @scala.inline

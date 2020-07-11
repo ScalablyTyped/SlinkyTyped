@@ -38,6 +38,8 @@ object CompletionInfo {
         x
     }
     @scala.inline
+    def setEntriesVarargs(value: CompletionEntry*): Self = this.set("entries", js.Array(value :_*))
+    @scala.inline
     def setEntries(value: js.Array[CompletionEntry]): Self = this.set("entries", value.asInstanceOf[js.Any])
     @scala.inline
     def setIsGlobalCompletion(value: Boolean): Self = this.set("isGlobalCompletion", value.asInstanceOf[js.Any])

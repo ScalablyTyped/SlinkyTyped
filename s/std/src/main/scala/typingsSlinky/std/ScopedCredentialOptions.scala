@@ -29,6 +29,8 @@ object ScopedCredentialOptions {
         x
     }
     @scala.inline
+    def setExcludeListVarargs(value: ScopedCredentialDescriptor*): Self = this.set("excludeList", js.Array(value :_*))
+    @scala.inline
     def setExcludeList(value: js.Array[ScopedCredentialDescriptor]): Self = this.set("excludeList", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExcludeList: Self = this.set("excludeList", js.undefined)

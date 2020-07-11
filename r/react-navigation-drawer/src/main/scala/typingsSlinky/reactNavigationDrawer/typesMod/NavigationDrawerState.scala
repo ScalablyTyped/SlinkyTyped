@@ -51,6 +51,8 @@ object NavigationDrawerState {
     @scala.inline
     def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
     @scala.inline
+    def setRoutesVarargs(value: NavigationRoute[NavigationParams]*): Self = this.set("routes", js.Array(value :_*))
+    @scala.inline
     def setRoutes(value: js.Array[NavigationRoute[NavigationParams]]): Self = this.set("routes", value.asInstanceOf[js.Any])
     @scala.inline
     def setParams(value: NavigationParams): Self = this.set("params", value.asInstanceOf[js.Any])

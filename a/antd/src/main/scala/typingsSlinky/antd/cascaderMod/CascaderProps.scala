@@ -89,6 +89,8 @@ object CascaderProps {
         x
     }
     @scala.inline
+    def setOptionsVarargs(value: CascaderOptionType*): Self = this.set("options", js.Array(value :_*))
+    @scala.inline
     def setOptions(value: js.Array[CascaderOptionType]): Self = this.set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def setAllowClear(value: Boolean): Self = this.set("allowClear", value.asInstanceOf[js.Any])
@@ -110,6 +112,8 @@ object CascaderProps {
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDefaultValueVarargs(value: (String | Double)*): Self = this.set("defaultValue", js.Array(value :_*))
     @scala.inline
     def setDefaultValue(value: CascaderValueType): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -198,6 +202,8 @@ object CascaderProps {
     def setSuffixIcon(value: ReactElement): Self = this.set("suffixIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSuffixIcon: Self = this.set("suffixIcon", js.undefined)
+    @scala.inline
+    def setValueVarargs(value: (String | Double)*): Self = this.set("value", js.Array(value :_*))
     @scala.inline
     def setValue(value: CascaderValueType): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline

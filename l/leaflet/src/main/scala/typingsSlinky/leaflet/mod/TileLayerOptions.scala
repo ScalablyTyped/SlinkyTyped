@@ -64,6 +64,8 @@ object TileLayerOptions {
     @scala.inline
     def deleteMinNativeZoom: Self = this.set("minNativeZoom", js.undefined)
     @scala.inline
+    def setSubdomainsVarargs(value: String*): Self = this.set("subdomains", js.Array(value :_*))
+    @scala.inline
     def setSubdomains(value: String | js.Array[String]): Self = this.set("subdomains", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSubdomains: Self = this.set("subdomains", js.undefined)

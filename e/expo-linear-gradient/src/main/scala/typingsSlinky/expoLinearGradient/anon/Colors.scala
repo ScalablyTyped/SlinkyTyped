@@ -30,6 +30,8 @@ object Colors {
         x
     }
     @scala.inline
+    def setColorsVarargs(value: String*): Self = this.set("colors", js.Array(value :_*))
+    @scala.inline
     def setColors(value: js.Array[String]): Self = this.set("colors", value.asInstanceOf[js.Any])
     @scala.inline
     def setEnd(value: Point): Self = this.set("end", value.asInstanceOf[js.Any])
@@ -37,6 +39,8 @@ object Colors {
     def deleteEnd: Self = this.set("end", js.undefined)
     @scala.inline
     def setEndNull: Self = this.set("end", null)
+    @scala.inline
+    def setLocationsVarargs(value: Double*): Self = this.set("locations", js.Array(value :_*))
     @scala.inline
     def setLocations(value: js.Array[Double]): Self = this.set("locations", value.asInstanceOf[js.Any])
     @scala.inline

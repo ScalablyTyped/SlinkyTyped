@@ -32,13 +32,19 @@ object PropertyIndexedKeyframes {
         x
     }
     @scala.inline
+    def setCompositeVarargs(value: CompositeOperationOrAuto*): Self = this.set("composite", js.Array(value :_*))
+    @scala.inline
     def setComposite(value: CompositeOperationOrAuto | js.Array[CompositeOperationOrAuto]): Self = this.set("composite", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteComposite: Self = this.set("composite", js.undefined)
     @scala.inline
+    def setEasingVarargs(value: java.lang.String*): Self = this.set("easing", js.Array(value :_*))
+    @scala.inline
     def setEasing(value: java.lang.String | js.Array[java.lang.String]): Self = this.set("easing", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEasing: Self = this.set("easing", js.undefined)
+    @scala.inline
+    def setOffsetVarargs(value: (Double | Null)*): Self = this.set("offset", js.Array(value :_*))
     @scala.inline
     def setOffset(value: Double | (js.Array[Double | Null])): Self = this.set("offset", value.asInstanceOf[js.Any])
     @scala.inline

@@ -40,9 +40,13 @@ object CheckData {
     @scala.inline
     def setChecked(value: Boolean): Self = this.set("checked", value.asInstanceOf[js.Any])
     @scala.inline
+    def setCheckedNodesVarargs(value: ReactComponentClass[InternalTreeNodeProps]*): Self = this.set("checkedNodes", js.Array(value :_*))
+    @scala.inline
     def setCheckedNodes(value: js.Array[ReactComponentClass[InternalTreeNodeProps]]): Self = this.set("checkedNodes", value.asInstanceOf[js.Any])
     @scala.inline
     def setEvent(value: check): Self = this.set("event", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHalfCheckedKeysVarargs(value: String*): Self = this.set("halfCheckedKeys", js.Array(value :_*))
     @scala.inline
     def setHalfCheckedKeys(value: js.Array[String]): Self = this.set("halfCheckedKeys", value.asInstanceOf[js.Any])
     @scala.inline

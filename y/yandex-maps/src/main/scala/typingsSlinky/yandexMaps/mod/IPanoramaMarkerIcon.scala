@@ -35,6 +35,8 @@ object IPanoramaMarkerIcon {
     @scala.inline
     def setImage(value: HTMLCanvasElement | HTMLImageElement): Self = this.set("image", value.asInstanceOf[js.Any])
     @scala.inline
+    def setOffsetVarargs(value: Double*): Self = this.set("offset", js.Array(value :_*))
+    @scala.inline
     def setOffset(value: js.Array[Double]): Self = this.set("offset", value.asInstanceOf[js.Any])
   }
   

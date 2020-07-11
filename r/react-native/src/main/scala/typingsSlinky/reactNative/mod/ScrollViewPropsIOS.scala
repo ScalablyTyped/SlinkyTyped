@@ -264,6 +264,8 @@ object ScrollViewPropsIOS {
     @scala.inline
     def deleteScrollsToTop: Self = this.set("scrollsToTop", js.undefined)
     @scala.inline
+    def setStickyHeaderIndicesVarargs(value: Double*): Self = this.set("stickyHeaderIndices", js.Array(value :_*))
+    @scala.inline
     def setStickyHeaderIndices(value: js.Array[Double]): Self = this.set("stickyHeaderIndices", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStickyHeaderIndices: Self = this.set("stickyHeaderIndices", js.undefined)

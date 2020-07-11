@@ -117,6 +117,8 @@ object PolygonOptions {
     @scala.inline
     def deleteMap: Self = this.set("map", js.undefined)
     @scala.inline
+    def setPathsVarargs(value: ((js.Array[LatLng | LatLngLiteral]) | LatLng | LatLngLiteral)*): Self = this.set("paths", js.Array(value :_*))
+    @scala.inline
     def setPaths(
       value: (MVCArray[LatLng | MVCArray[LatLng]]) | (js.Array[(js.Array[LatLng | LatLngLiteral]) | LatLng | LatLngLiteral])
     ): Self = this.set("paths", value.asInstanceOf[js.Any])

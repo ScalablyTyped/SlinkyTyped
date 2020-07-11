@@ -29,11 +29,19 @@ object CNYILP {
         x
     }
     @scala.inline
+    def setCNYVarargs(value: String*): Self = this.set("CNY", js.Array(value :_*))
+    @scala.inline
     def setCNY(value: js.Array[String]): Self = this.set("CNY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setILPVarargs(value: String*): Self = this.set("ILP", js.Array(value :_*))
     @scala.inline
     def setILP(value: js.Array[String]): Self = this.set("ILP", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTHBVarargs(value: String*): Self = this.set("THB", js.Array(value :_*))
+    @scala.inline
     def setTHB(value: js.Array[String]): Self = this.set("THB", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTWDVarargs(value: String*): Self = this.set("TWD", js.Array(value :_*))
     @scala.inline
     def setTWD(value: js.Array[String]): Self = this.set("TWD", value.asInstanceOf[js.Any])
   }

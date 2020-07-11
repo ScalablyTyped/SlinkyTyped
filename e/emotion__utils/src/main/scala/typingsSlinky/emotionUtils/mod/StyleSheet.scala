@@ -47,6 +47,8 @@ object StyleSheet {
     @scala.inline
     def setKey(value: String): Self = this.set("key", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTagsVarargs(value: HTMLStyleElement*): Self = this.set("tags", js.Array(value :_*))
+    @scala.inline
     def setTags(value: js.Array[HTMLStyleElement]): Self = this.set("tags", value.asInstanceOf[js.Any])
     @scala.inline
     def setNonce(value: String): Self = this.set("nonce", value.asInstanceOf[js.Any])

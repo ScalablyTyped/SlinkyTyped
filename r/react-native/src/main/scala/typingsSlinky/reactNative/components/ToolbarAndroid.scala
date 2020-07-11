@@ -45,6 +45,8 @@ object ToolbarAndroid {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNative.mod.ToolbarAndroid] {
     @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -63,6 +65,8 @@ object ToolbarAndroid {
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
     @scala.inline
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
+    @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityValue(value: AccessibilityValue): this.type = set("accessibilityValue", value.asInstanceOf[js.Any])
@@ -70,6 +74,8 @@ object ToolbarAndroid {
     def accessibilityViewIsModal(value: Boolean): this.type = set("accessibilityViewIsModal", value.asInstanceOf[js.Any])
     @scala.inline
     def accessible(value: Boolean): this.type = set("accessible", value.asInstanceOf[js.Any])
+    @scala.inline
+    def actionsVarargs(value: ToolbarAndroidAction*): this.type = set("actions", js.Array(value :_*))
     @scala.inline
     def actions(value: js.Array[ToolbarAndroidAction]): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline

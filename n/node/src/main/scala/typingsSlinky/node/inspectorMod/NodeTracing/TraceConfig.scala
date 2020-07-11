@@ -33,6 +33,8 @@ object TraceConfig {
         x
     }
     @scala.inline
+    def setIncludedCategoriesVarargs(value: String*): Self = this.set("includedCategories", js.Array(value :_*))
+    @scala.inline
     def setIncludedCategories(value: js.Array[String]): Self = this.set("includedCategories", value.asInstanceOf[js.Any])
     @scala.inline
     def setRecordMode(value: String): Self = this.set("recordMode", value.asInstanceOf[js.Any])

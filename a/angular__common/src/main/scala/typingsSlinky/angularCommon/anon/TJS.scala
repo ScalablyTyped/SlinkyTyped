@@ -27,7 +27,11 @@ object TJS {
         x
     }
     @scala.inline
+    def setJPYVarargs(value: String*): Self = this.set("JPY", js.Array(value :_*))
+    @scala.inline
     def setJPY(value: js.Array[String]): Self = this.set("JPY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTJSVarargs(value: String*): Self = this.set("TJS", js.Array(value :_*))
     @scala.inline
     def setTJS(value: js.Array[String]): Self = this.set("TJS", value.asInstanceOf[js.Any])
   }

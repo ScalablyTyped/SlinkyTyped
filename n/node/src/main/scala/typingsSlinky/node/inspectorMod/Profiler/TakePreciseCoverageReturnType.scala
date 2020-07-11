@@ -29,6 +29,8 @@ object TakePreciseCoverageReturnType {
         x
     }
     @scala.inline
+    def setResultVarargs(value: ScriptCoverage*): Self = this.set("result", js.Array(value :_*))
+    @scala.inline
     def setResult(value: js.Array[ScriptCoverage]): Self = this.set("result", value.asInstanceOf[js.Any])
   }
   

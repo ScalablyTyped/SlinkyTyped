@@ -28,6 +28,8 @@ object StrictBounds {
         x
     }
     @scala.inline
+    def setBoundedByVarargs(value: js.Array[Double]*): Self = this.set("boundedBy", js.Array(value :_*))
+    @scala.inline
     def setBoundedBy(value: js.Array[js.Array[Double]]): Self = this.set("boundedBy", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBoundedBy: Self = this.set("boundedBy", js.undefined)

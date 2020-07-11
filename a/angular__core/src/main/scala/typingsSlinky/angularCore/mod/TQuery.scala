@@ -114,6 +114,8 @@ object TQuery {
     @scala.inline
     def setTemplate(value: (TView, TNode) => Unit): Self = this.set("template", js.Any.fromFunction2(value))
     @scala.inline
+    def setMatchesVarargs(value: Double*): Self = this.set("matches", js.Array(value :_*))
+    @scala.inline
     def setMatches(value: js.Array[Double]): Self = this.set("matches", value.asInstanceOf[js.Any])
     @scala.inline
     def setMatchesNull: Self = this.set("matches", null)

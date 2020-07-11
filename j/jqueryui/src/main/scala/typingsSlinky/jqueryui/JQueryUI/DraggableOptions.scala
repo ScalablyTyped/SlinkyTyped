@@ -76,6 +76,8 @@ object DraggableOptions {
     @scala.inline
     def deleteClasses: Self = this.set("classes", js.undefined)
     @scala.inline
+    def setConnectToSortableVarargs(value: Element*): Self = this.set("connectToSortable", js.Array(value :_*))
+    @scala.inline
     def setConnectToSortableElement(value: Element): Self = this.set("connectToSortable", value.asInstanceOf[js.Any])
     @scala.inline
     def setConnectToSortable(value: Element | js.Array[Element] | JQuery | String): Self = this.set("connectToSortable", value.asInstanceOf[js.Any])
@@ -105,6 +107,8 @@ object DraggableOptions {
     def setDistance(value: Double): Self = this.set("distance", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDistance: Self = this.set("distance", js.undefined)
+    @scala.inline
+    def setGridVarargs(value: Double*): Self = this.set("grid", js.Array(value :_*))
     @scala.inline
     def setGrid(value: js.Array[Double]): Self = this.set("grid", value.asInstanceOf[js.Any])
     @scala.inline

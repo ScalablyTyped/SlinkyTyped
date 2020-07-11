@@ -31,6 +31,8 @@ object SetBlackboxedRangesParameterType {
         x
     }
     @scala.inline
+    def setPositionsVarargs(value: ScriptPosition*): Self = this.set("positions", js.Array(value :_*))
+    @scala.inline
     def setPositions(value: js.Array[ScriptPosition]): Self = this.set("positions", value.asInstanceOf[js.Any])
     @scala.inline
     def setScriptId(value: ScriptId): Self = this.set("scriptId", value.asInstanceOf[js.Any])

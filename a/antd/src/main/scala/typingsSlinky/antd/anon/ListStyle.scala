@@ -28,6 +28,8 @@ object ListStyle {
         x
     }
     @scala.inline
+    def setDataSourceVarargs(value: scala.Nothing*): Self = this.set("dataSource", js.Array(value :_*))
+    @scala.inline
     def setDataSource(value: js.Array[scala.Nothing]): Self = this.set("dataSource", value.asInstanceOf[js.Any])
     @scala.inline
     def setListStyle(value: () => Unit): Self = this.set("listStyle", js.Any.fromFunction0(value))

@@ -80,6 +80,8 @@ object PartialTransferLocale {
     @scala.inline
     def deleteSelectInvert: Self = this.set("selectInvert", js.undefined)
     @scala.inline
+    def setTitlesVarargs(value: String*): Self = this.set("titles", js.Array(value :_*))
+    @scala.inline
     def setTitles(value: js.Array[String]): Self = this.set("titles", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitles: Self = this.set("titles", js.undefined)

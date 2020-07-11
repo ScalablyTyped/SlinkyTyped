@@ -253,6 +253,8 @@ object TablePagination {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -480,6 +482,8 @@ object TablePagination {
     def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
     @scala.inline
     def rowSpan(value: Double): this.type = set("rowSpan", value.asInstanceOf[js.Any])
+    @scala.inline
+    def rowsPerPageOptionsVarargs(value: Double*): this.type = set("rowsPerPageOptions", js.Array(value :_*))
     @scala.inline
     def rowsPerPageOptions(value: js.Array[Double]): this.type = set("rowsPerPageOptions", value.asInstanceOf[js.Any])
     @scala.inline

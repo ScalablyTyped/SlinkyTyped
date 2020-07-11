@@ -73,6 +73,8 @@ object NotificationConstructorOptions {
     @scala.inline
     def setTitle(value: String): Self = this.set("title", value.asInstanceOf[js.Any])
     @scala.inline
+    def setActionsVarargs(value: NotificationAction*): Self = this.set("actions", js.Array(value :_*))
+    @scala.inline
     def setActions(value: js.Array[NotificationAction]): Self = this.set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteActions: Self = this.set("actions", js.undefined)

@@ -58,6 +58,8 @@ object LegacyExpandableProps {
     @scala.inline
     def deleteDefaultExpandAllRows: Self = this.set("defaultExpandAllRows", js.undefined)
     @scala.inline
+    def setDefaultExpandedRowKeysVarargs(value: Key*): Self = this.set("defaultExpandedRowKeys", js.Array(value :_*))
+    @scala.inline
     def setDefaultExpandedRowKeys(value: js.Array[Key]): Self = this.set("defaultExpandedRowKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultExpandedRowKeys: Self = this.set("defaultExpandedRowKeys", js.undefined)
@@ -77,6 +79,8 @@ object LegacyExpandableProps {
     def setExpandedRowClassName(value: (RecordType, /* index */ Double, /* indent */ Double) => String): Self = this.set("expandedRowClassName", js.Any.fromFunction3(value))
     @scala.inline
     def deleteExpandedRowClassName: Self = this.set("expandedRowClassName", js.undefined)
+    @scala.inline
+    def setExpandedRowKeysVarargs(value: Key*): Self = this.set("expandedRowKeys", js.Array(value :_*))
     @scala.inline
     def setExpandedRowKeys(value: js.Array[Key]): Self = this.set("expandedRowKeys", value.asInstanceOf[js.Any])
     @scala.inline

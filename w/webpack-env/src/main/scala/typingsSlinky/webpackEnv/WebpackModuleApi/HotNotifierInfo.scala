@@ -78,6 +78,8 @@ object HotNotifierInfo {
       value: `self-declined` | declined | unaccepted | accepted | disposed | `accept-errored` | `self-accept-errored` | `self-accept-error-handler-errored`
     ): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
+    def setChainVarargs(value: Double*): Self = this.set("chain", js.Array(value :_*))
+    @scala.inline
     def setChain(value: js.Array[Double]): Self = this.set("chain", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChain: Self = this.set("chain", js.undefined)
@@ -97,6 +99,8 @@ object HotNotifierInfo {
     def setOutdatedDependencies(value: NumberDictionary[js.Array[Double]]): Self = this.set("outdatedDependencies", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOutdatedDependencies: Self = this.set("outdatedDependencies", js.undefined)
+    @scala.inline
+    def setOutdatedModulesVarargs(value: Double*): Self = this.set("outdatedModules", js.Array(value :_*))
     @scala.inline
     def setOutdatedModules(value: js.Array[Double]): Self = this.set("outdatedModules", value.asInstanceOf[js.Any])
     @scala.inline

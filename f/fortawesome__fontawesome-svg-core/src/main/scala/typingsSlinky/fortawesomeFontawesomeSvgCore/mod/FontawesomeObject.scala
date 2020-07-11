@@ -30,7 +30,11 @@ object FontawesomeObject {
         x
     }
     @scala.inline
+    def setAbstractVarargs(value: AbstractElement*): Self = this.set("abstract", js.Array(value :_*))
+    @scala.inline
     def setAbstract(value: js.Array[AbstractElement]): Self = this.set("abstract", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHtmlVarargs(value: String*): Self = this.set("html", js.Array(value :_*))
     @scala.inline
     def setHtml(value: js.Array[String]): Self = this.set("html", value.asInstanceOf[js.Any])
     @scala.inline

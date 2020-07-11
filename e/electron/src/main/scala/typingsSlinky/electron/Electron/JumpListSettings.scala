@@ -39,6 +39,8 @@ object JumpListSettings {
     @scala.inline
     def setMinItems(value: Double): Self = this.set("minItems", value.asInstanceOf[js.Any])
     @scala.inline
+    def setRemovedItemsVarargs(value: JumpListItem*): Self = this.set("removedItems", js.Array(value :_*))
+    @scala.inline
     def setRemovedItems(value: js.Array[JumpListItem]): Self = this.set("removedItems", value.asInstanceOf[js.Any])
   }
   

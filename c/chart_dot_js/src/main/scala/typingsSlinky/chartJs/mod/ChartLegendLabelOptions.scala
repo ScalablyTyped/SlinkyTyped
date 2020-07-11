@@ -44,6 +44,8 @@ object ChartLegendLabelOptions {
     @scala.inline
     def deleteFilter: Self = this.set("filter", js.undefined)
     @scala.inline
+    def setFontColorVarargs(value: String*): Self = this.set("fontColor", js.Array(value :_*))
+    @scala.inline
     def setFontColorCanvasPattern(value: CanvasPattern): Self = this.set("fontColor", value.asInstanceOf[js.Any])
     @scala.inline
     def setFontColorCanvasGradient(value: CanvasGradient): Self = this.set("fontColor", value.asInstanceOf[js.Any])

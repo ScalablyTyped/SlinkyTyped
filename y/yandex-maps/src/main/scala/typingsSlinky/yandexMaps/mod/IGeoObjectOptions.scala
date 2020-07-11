@@ -65,17 +65,25 @@ object IGeoObjectOptions {
     @scala.inline
     def deleteIconContentLayout: Self = this.set("iconContentLayout", js.undefined)
     @scala.inline
+    def setIconContentOffsetVarargs(value: Double*): Self = this.set("iconContentOffset", js.Array(value :_*))
+    @scala.inline
     def setIconContentOffset(value: js.Array[Double]): Self = this.set("iconContentOffset", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIconContentOffset: Self = this.set("iconContentOffset", js.undefined)
+    @scala.inline
+    def setIconContentPaddingVarargs(value: Double*): Self = this.set("iconContentPadding", js.Array(value :_*))
     @scala.inline
     def setIconContentPadding(value: js.Array[Double]): Self = this.set("iconContentPadding", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIconContentPadding: Self = this.set("iconContentPadding", js.undefined)
     @scala.inline
+    def setIconContentSizeVarargs(value: Double*): Self = this.set("iconContentSize", js.Array(value :_*))
+    @scala.inline
     def setIconContentSize(value: js.Array[Double]): Self = this.set("iconContentSize", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIconContentSize: Self = this.set("iconContentSize", js.undefined)
+    @scala.inline
+    def setIconImageClipRectVarargs(value: js.Array[Double]*): Self = this.set("iconImageClipRect", js.Array(value :_*))
     @scala.inline
     def setIconImageClipRect(value: js.Array[js.Array[Double]]): Self = this.set("iconImageClipRect", value.asInstanceOf[js.Any])
     @scala.inline
@@ -84,6 +92,8 @@ object IGeoObjectOptions {
     def setIconImageHref(value: String): Self = this.set("iconImageHref", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIconImageHref: Self = this.set("iconImageHref", js.undefined)
+    @scala.inline
+    def setIconImageOffsetVarargs(value: Double*): Self = this.set("iconImageOffset", js.Array(value :_*))
     @scala.inline
     def setIconImageOffset(value: js.Array[Double]): Self = this.set("iconImageOffset", value.asInstanceOf[js.Any])
     @scala.inline
@@ -94,6 +104,8 @@ object IGeoObjectOptions {
     def deleteIconImageShape: Self = this.set("iconImageShape", js.undefined)
     @scala.inline
     def setIconImageShapeNull: Self = this.set("iconImageShape", null)
+    @scala.inline
+    def setIconImageSizeVarargs(value: Double*): Self = this.set("iconImageSize", js.Array(value :_*))
     @scala.inline
     def setIconImageSize(value: js.Array[Double]): Self = this.set("iconImageSize", value.asInstanceOf[js.Any])
     @scala.inline
@@ -111,6 +123,8 @@ object IGeoObjectOptions {
     @scala.inline
     def deleteIconMaxWidth: Self = this.set("iconMaxWidth", js.undefined)
     @scala.inline
+    def setIconOffsetVarargs(value: Double*): Self = this.set("iconOffset", js.Array(value :_*))
+    @scala.inline
     def setIconOffset(value: js.Array[Double]): Self = this.set("iconOffset", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIconOffset: Self = this.set("iconOffset", js.undefined)
@@ -118,6 +132,8 @@ object IGeoObjectOptions {
     def setIconShadow(value: Boolean): Self = this.set("iconShadow", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIconShadow: Self = this.set("iconShadow", js.undefined)
+    @scala.inline
+    def setIconShadowImageClipRectVarargs(value: js.Array[Double]*): Self = this.set("iconShadowImageClipRect", js.Array(value :_*))
     @scala.inline
     def setIconShadowImageClipRect(value: js.Array[js.Array[Double]]): Self = this.set("iconShadowImageClipRect", value.asInstanceOf[js.Any])
     @scala.inline
@@ -127,9 +143,13 @@ object IGeoObjectOptions {
     @scala.inline
     def deleteIconShadowImageHref: Self = this.set("iconShadowImageHref", js.undefined)
     @scala.inline
+    def setIconShadowImageOffsetVarargs(value: Double*): Self = this.set("iconShadowImageOffset", js.Array(value :_*))
+    @scala.inline
     def setIconShadowImageOffset(value: js.Array[Double]): Self = this.set("iconShadowImageOffset", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIconShadowImageOffset: Self = this.set("iconShadowImageOffset", js.undefined)
+    @scala.inline
+    def setIconShadowImageSizeVarargs(value: Double*): Self = this.set("iconShadowImageSize", js.Array(value :_*))
     @scala.inline
     def setIconShadowImageSize(value: js.Array[Double]): Self = this.set("iconShadowImageSize", value.asInstanceOf[js.Any])
     @scala.inline
@@ -138,6 +158,8 @@ object IGeoObjectOptions {
     def setIconShadowLayout(value: String | IClassConstructor[ILayout]): Self = this.set("iconShadowLayout", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIconShadowLayout: Self = this.set("iconShadowLayout", js.undefined)
+    @scala.inline
+    def setIconShadowOffsetVarargs(value: Double*): Self = this.set("iconShadowOffset", js.Array(value :_*))
     @scala.inline
     def setIconShadowOffset(value: js.Array[Double]): Self = this.set("iconShadowOffset", value.asInstanceOf[js.Any])
     @scala.inline

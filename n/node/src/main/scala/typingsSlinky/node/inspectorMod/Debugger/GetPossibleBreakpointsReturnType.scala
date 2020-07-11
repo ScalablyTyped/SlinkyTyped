@@ -29,6 +29,8 @@ object GetPossibleBreakpointsReturnType {
         x
     }
     @scala.inline
+    def setLocationsVarargs(value: BreakLocation*): Self = this.set("locations", js.Array(value :_*))
+    @scala.inline
     def setLocations(value: js.Array[BreakLocation]): Self = this.set("locations", value.asInstanceOf[js.Any])
   }
   

@@ -158,19 +158,27 @@ object ICircleOptions {
     @scala.inline
     def deletePane: Self = this.set("pane", js.undefined)
     @scala.inline
+    def setStrokeColorVarargs(value: (js.Array[String] | String)*): Self = this.set("strokeColor", js.Array(value :_*))
+    @scala.inline
     def setStrokeColor(value: (js.Array[js.Array[String] | String]) | String): Self = this.set("strokeColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStrokeColor: Self = this.set("strokeColor", js.undefined)
     @scala.inline
+    def setStrokeOpacityVarargs(value: (js.Array[Double] | Double)*): Self = this.set("strokeOpacity", js.Array(value :_*))
+    @scala.inline
     def setStrokeOpacity(value: (js.Array[js.Array[Double] | Double]) | Double): Self = this.set("strokeOpacity", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStrokeOpacity: Self = this.set("strokeOpacity", js.undefined)
+    @scala.inline
+    def setStrokeStyleVarargs(value: ((js.Array[js.Array[String] | js.Object]) | js.Object | String)*): Self = this.set("strokeStyle", js.Array(value :_*))
     @scala.inline
     def setStrokeStyle(
       value: (js.Array[(js.Array[js.Array[String] | js.Object]) | js.Object | String]) | String | js.Object
     ): Self = this.set("strokeStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStrokeStyle: Self = this.set("strokeStyle", js.undefined)
+    @scala.inline
+    def setStrokeWidthVarargs(value: (js.Array[Double] | Double)*): Self = this.set("strokeWidth", js.Array(value :_*))
     @scala.inline
     def setStrokeWidth(value: (js.Array[js.Array[Double] | Double]) | Double): Self = this.set("strokeWidth", value.asInstanceOf[js.Any])
     @scala.inline

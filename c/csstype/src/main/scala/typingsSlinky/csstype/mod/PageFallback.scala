@@ -27,9 +27,13 @@ object PageFallback {
         x
     }
     @scala.inline
+    def setBleedVarargs(value: PageBleedProperty[TLength]*): Self = this.set("bleed", js.Array(value :_*))
+    @scala.inline
     def setBleed(value: PageBleedProperty[TLength] | js.Array[PageBleedProperty[TLength]]): Self = this.set("bleed", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBleed: Self = this.set("bleed", js.undefined)
+    @scala.inline
+    def setMarksVarargs(value: PageMarksProperty*): Self = this.set("marks", js.Array(value :_*))
     @scala.inline
     def setMarks(value: PageMarksProperty | js.Array[PageMarksProperty]): Self = this.set("marks", value.asInstanceOf[js.Any])
     @scala.inline

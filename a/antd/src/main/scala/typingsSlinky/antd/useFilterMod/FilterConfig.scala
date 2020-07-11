@@ -1,6 +1,8 @@
 package typingsSlinky.antd.useFilterMod
 
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.antd.tableInterfaceMod.ColumnGroupType
+import typingsSlinky.antd.tableInterfaceMod.ColumnType
 import typingsSlinky.antd.tableInterfaceMod.ColumnsType
 import typingsSlinky.antd.tableInterfaceMod.GetPopupContainer
 import typingsSlinky.antd.tableInterfaceMod.Key
@@ -46,6 +48,8 @@ object FilterConfig {
     def setDropdownPrefixCls(value: String): Self = this.set("dropdownPrefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def setLocale(value: TableLocale): Self = this.set("locale", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMergedColumnsVarargs(value: (ColumnGroupType[RecordType] | ColumnType[RecordType])*): Self = this.set("mergedColumns", js.Array(value :_*))
     @scala.inline
     def setMergedColumns(value: ColumnsType[RecordType]): Self = this.set("mergedColumns", value.asInstanceOf[js.Any])
     @scala.inline

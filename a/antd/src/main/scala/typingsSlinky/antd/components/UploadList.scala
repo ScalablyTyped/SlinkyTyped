@@ -33,6 +33,8 @@ object UploadList {
     @scala.inline
     def isImageUrl(value: /* file */ UploadFile[_] => Boolean): this.type = set("isImageUrl", js.Any.fromFunction1(value))
     @scala.inline
+    def itemsVarargs(value: UploadFile[js.Any]*): this.type = set("items", js.Array(value :_*))
+    @scala.inline
     def items(value: js.Array[UploadFile[js.Any]]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline
     def listType(value: UploadListType): this.type = set("listType", value.asInstanceOf[js.Any])

@@ -33,6 +33,8 @@ object IOptions {
     @scala.inline
     def deleteClassPrefix: Self = this.set("classPrefix", js.undefined)
     @scala.inline
+    def setLanguagesVarargs(value: String*): Self = this.set("languages", js.Array(value :_*))
+    @scala.inline
     def setLanguages(value: js.Array[String]): Self = this.set("languages", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLanguages: Self = this.set("languages", js.undefined)

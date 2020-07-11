@@ -76,6 +76,8 @@ object DrawerContentComponentProps {
     @scala.inline
     def setGetLabel(value: Scene => ReactElement): Self = this.set("getLabel", js.Any.fromFunction1(value))
     @scala.inline
+    def setItemsVarargs(value: NavigationRoute[NavigationParams]*): Self = this.set("items", js.Array(value :_*))
+    @scala.inline
     def setItems(value: js.Array[NavigationRoute[NavigationParams]]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline
     def setNavigation(value: NavigationScreenProp[NavigationDrawerState, NavigationParams]): Self = this.set("navigation", value.asInstanceOf[js.Any])

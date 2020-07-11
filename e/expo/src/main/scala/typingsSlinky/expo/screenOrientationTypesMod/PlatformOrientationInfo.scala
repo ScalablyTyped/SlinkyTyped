@@ -28,6 +28,8 @@ object PlatformOrientationInfo {
         x
     }
     @scala.inline
+    def setScreenOrientationArrayIOSVarargs(value: Orientation*): Self = this.set("screenOrientationArrayIOS", js.Array(value :_*))
+    @scala.inline
     def setScreenOrientationArrayIOS(value: js.Array[Orientation]): Self = this.set("screenOrientationArrayIOS", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteScreenOrientationArrayIOS: Self = this.set("screenOrientationArrayIOS", js.undefined)

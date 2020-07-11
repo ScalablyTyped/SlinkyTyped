@@ -27,6 +27,8 @@ object IMode {
         x
     }
     @scala.inline
+    def setContainsVarargs(value: IMode*): Self = this.set("contains", js.Array(value :_*))
+    @scala.inline
     def setContains(value: js.Array[IMode]): Self = this.set("contains", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteContains: Self = this.set("contains", js.undefined)

@@ -64,6 +64,8 @@ object AccessibilityProps {
         x
     }
     @scala.inline
+    def setAccessibilityActionsVarargs(value: AccessibilityActionInfo*): Self = this.set("accessibilityActions", js.Array(value :_*))
+    @scala.inline
     def setAccessibilityActions(value: js.Array[AccessibilityActionInfo]): Self = this.set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAccessibilityActions: Self = this.set("accessibilityActions", js.undefined)

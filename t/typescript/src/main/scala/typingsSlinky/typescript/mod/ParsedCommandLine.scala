@@ -34,7 +34,11 @@ object ParsedCommandLine {
         x
     }
     @scala.inline
+    def setErrorsVarargs(value: Diagnostic*): Self = this.set("errors", js.Array(value :_*))
+    @scala.inline
     def setErrors(value: js.Array[Diagnostic]): Self = this.set("errors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFileNamesVarargs(value: java.lang.String*): Self = this.set("fileNames", js.Array(value :_*))
     @scala.inline
     def setFileNames(value: js.Array[java.lang.String]): Self = this.set("fileNames", value.asInstanceOf[js.Any])
     @scala.inline
@@ -43,6 +47,8 @@ object ParsedCommandLine {
     def setCompileOnSave(value: Boolean): Self = this.set("compileOnSave", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCompileOnSave: Self = this.set("compileOnSave", js.undefined)
+    @scala.inline
+    def setProjectReferencesVarargs(value: ProjectReference*): Self = this.set("projectReferences", js.Array(value :_*))
     @scala.inline
     def setProjectReferences(value: js.Array[ProjectReference]): Self = this.set("projectReferences", value.asInstanceOf[js.Any])
     @scala.inline

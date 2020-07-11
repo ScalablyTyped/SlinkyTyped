@@ -49,6 +49,8 @@ object Item {
     @scala.inline
     def setKey(value: String | Double): Self = this.set("key", value.asInstanceOf[js.Any])
     @scala.inline
+    def setKeyPathVarargs(value: (String | Double)*): Self = this.set("keyPath", js.Array(value :_*))
+    @scala.inline
     def setKeyPath(value: js.Array[String | Double]): Self = this.set("keyPath", value.asInstanceOf[js.Any])
   }
   

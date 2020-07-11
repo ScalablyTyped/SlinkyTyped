@@ -42,6 +42,8 @@ object FilterDropdownProps {
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
+    def setSelectedKeysVarargs(value: typingsSlinky.react.mod.Key*): Self = this.set("selectedKeys", js.Array(value :_*))
+    @scala.inline
     def setSelectedKeys(value: js.Array[typingsSlinky.react.mod.Key]): Self = this.set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def setSetSelectedKeys(value: js.Array[typingsSlinky.react.mod.Key] => Unit): Self = this.set("setSelectedKeys", js.Any.fromFunction1(value))
@@ -51,6 +53,8 @@ object FilterDropdownProps {
     def setClearFilters(value: () => Unit): Self = this.set("clearFilters", js.Any.fromFunction0(value))
     @scala.inline
     def deleteClearFilters: Self = this.set("clearFilters", js.undefined)
+    @scala.inline
+    def setFiltersVarargs(value: ColumnFilterItem*): Self = this.set("filters", js.Array(value :_*))
     @scala.inline
     def setFilters(value: js.Array[ColumnFilterItem]): Self = this.set("filters", value.asInstanceOf[js.Any])
     @scala.inline

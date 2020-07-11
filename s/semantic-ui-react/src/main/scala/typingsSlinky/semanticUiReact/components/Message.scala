@@ -64,6 +64,8 @@ object Message {
     @scala.inline
     def info(value: Boolean): this.type = set("info", value.asInstanceOf[js.Any])
     @scala.inline
+    def listVarargs(value: SemanticShorthandItem[MessageItemProps]*): this.type = set("list", js.Array(value :_*))
+    @scala.inline
     def list(value: SemanticShorthandCollection[MessageItemProps]): this.type = set("list", value.asInstanceOf[js.Any])
     @scala.inline
     def negative(value: Boolean): this.type = set("negative", value.asInstanceOf[js.Any])

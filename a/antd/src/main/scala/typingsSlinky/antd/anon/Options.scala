@@ -26,6 +26,8 @@ object Options {
         x
     }
     @scala.inline
+    def setOptionsVarargs(value: scala.Nothing*): Self = this.set("options", js.Array(value :_*))
+    @scala.inline
     def setOptions(value: js.Array[scala.Nothing]): Self = this.set("options", value.asInstanceOf[js.Any])
   }
   

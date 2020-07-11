@@ -29,6 +29,8 @@ object AssertionOptions {
         x
     }
     @scala.inline
+    def setAllowListVarargs(value: ScopedCredentialDescriptor*): Self = this.set("allowList", js.Array(value :_*))
+    @scala.inline
     def setAllowList(value: js.Array[ScopedCredentialDescriptor]): Self = this.set("allowList", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAllowList: Self = this.set("allowList", js.undefined)

@@ -86,6 +86,8 @@ object StrictBreadcrumbProps {
     @scala.inline
     def deleteIcon: Self = this.set("icon", js.undefined)
     @scala.inline
+    def setSectionsVarargs(value: SemanticShorthandItem[BreadcrumbSectionProps]*): Self = this.set("sections", js.Array(value :_*))
+    @scala.inline
     def setSections(value: SemanticShorthandCollection[BreadcrumbSectionProps]): Self = this.set("sections", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSections: Self = this.set("sections", js.undefined)

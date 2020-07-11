@@ -35,6 +35,8 @@ object MapTypeControlOptions {
         x
     }
     @scala.inline
+    def setMapTypeIdsVarargs(value: (MapTypeId | String)*): Self = this.set("mapTypeIds", js.Array(value :_*))
+    @scala.inline
     def setMapTypeIds(value: js.Array[MapTypeId | String]): Self = this.set("mapTypeIds", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMapTypeIds: Self = this.set("mapTypeIds", js.undefined)

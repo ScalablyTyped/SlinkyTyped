@@ -114,6 +114,8 @@ object PaginationProps {
     @scala.inline
     def deletePageSize: Self = this.set("pageSize", js.undefined)
     @scala.inline
+    def setPageSizeOptionsVarargs(value: String*): Self = this.set("pageSizeOptions", js.Array(value :_*))
+    @scala.inline
     def setPageSizeOptions(value: js.Array[String]): Self = this.set("pageSizeOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePageSizeOptions: Self = this.set("pageSizeOptions", js.undefined)

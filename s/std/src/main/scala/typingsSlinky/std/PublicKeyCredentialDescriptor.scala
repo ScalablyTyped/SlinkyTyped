@@ -37,6 +37,8 @@ object PublicKeyCredentialDescriptor {
     @scala.inline
     def setType(value: PublicKeyCredentialType): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTransportsVarargs(value: AuthenticatorTransport*): Self = this.set("transports", js.Array(value :_*))
+    @scala.inline
     def setTransports(value: js.Array[AuthenticatorTransport]): Self = this.set("transports", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTransports: Self = this.set("transports", js.undefined)

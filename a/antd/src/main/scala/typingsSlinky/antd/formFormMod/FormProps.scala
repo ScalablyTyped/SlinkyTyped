@@ -591,6 +591,8 @@ object FormProps {
     @scala.inline
     def deleteDefaultChecked: Self = this.set("defaultChecked", js.undefined)
     @scala.inline
+    def setDefaultValueVarargs(value: String*): Self = this.set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def setDefaultValue(value: String | Double | js.Array[String]): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
@@ -606,6 +608,8 @@ object FormProps {
     def setEncType(value: String): Self = this.set("encType", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEncType: Self = this.set("encType", js.undefined)
+    @scala.inline
+    def setFieldsVarargs(value: FieldData*): Self = this.set("fields", js.Array(value :_*))
     @scala.inline
     def setFields(value: js.Array[FieldData]): Self = this.set("fields", value.asInstanceOf[js.Any])
     @scala.inline
@@ -1110,6 +1114,8 @@ object FormProps {
     def setValidateMessages(value: ValidateMessages): Self = this.set("validateMessages", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValidateMessages: Self = this.set("validateMessages", js.undefined)
+    @scala.inline
+    def setValidateTriggerVarargs(value: String*): Self = this.set("validateTrigger", js.Array(value :_*))
     @scala.inline
     def setValidateTrigger(value: String | js.Array[String] | `false`): Self = this.set("validateTrigger", value.asInstanceOf[js.Any])
     @scala.inline

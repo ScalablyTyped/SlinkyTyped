@@ -29,7 +29,11 @@ object FilteredItems {
         x
     }
     @scala.inline
+    def setFilteredItemsVarargs(value: TransferItem*): Self = this.set("filteredItems", js.Array(value :_*))
+    @scala.inline
     def setFilteredItems(value: js.Array[TransferItem]): Self = this.set("filteredItems", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFilteredRenderItemsVarargs(value: RenderedItem*): Self = this.set("filteredRenderItems", js.Array(value :_*))
     @scala.inline
     def setFilteredRenderItems(value: js.Array[RenderedItem]): Self = this.set("filteredRenderItems", value.asInstanceOf[js.Any])
   }

@@ -33,6 +33,8 @@ object HandleGeneratorInfo {
     @scala.inline
     def setIndex(value: Double): Self = this.set("index", value.asInstanceOf[js.Any])
     @scala.inline
+    def setRestVarargs(value: js.Any*): Self = this.set("rest", js.Array(value :_*))
+    @scala.inline
     def setRest(value: js.Array[_]): Self = this.set("rest", value.asInstanceOf[js.Any])
     @scala.inline
     def setValue(value: Double): Self = this.set("value", value.asInstanceOf[js.Any])

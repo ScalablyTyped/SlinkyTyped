@@ -29,7 +29,11 @@ object Meta {
         x
     }
     @scala.inline
+    def setErrorsVarargs(value: String*): Self = this.set("errors", js.Array(value :_*))
+    @scala.inline
     def setErrors(value: js.Array[String]): Self = this.set("errors", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNameVarargs(value: (String | Double)*): Self = this.set("name", js.Array(value :_*))
     @scala.inline
     def setName(value: InternalNamePath): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline

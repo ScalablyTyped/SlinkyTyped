@@ -35,6 +35,8 @@ object PartialCascaderState {
         x
     }
     @scala.inline
+    def setFlattenOptionsVarargs(value: js.Array[CascaderOptionType]*): Self = this.set("flattenOptions", js.Array(value :_*))
+    @scala.inline
     def setFlattenOptions(value: js.Array[js.Array[CascaderOptionType]]): Self = this.set("flattenOptions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFlattenOptions: Self = this.set("flattenOptions", js.undefined)
@@ -54,6 +56,8 @@ object PartialCascaderState {
     def setPrevProps(value: CascaderProps): Self = this.set("prevProps", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePrevProps: Self = this.set("prevProps", js.undefined)
+    @scala.inline
+    def setValueVarargs(value: (String | Double)*): Self = this.set("value", js.Array(value :_*))
     @scala.inline
     def setValue(value: CascaderValueType): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline

@@ -29,6 +29,8 @@ object IStorybookSection {
     @scala.inline
     def setKind(value: String): Self = this.set("kind", value.asInstanceOf[js.Any])
     @scala.inline
+    def setStoriesVarargs(value: IStorybookStory*): Self = this.set("stories", js.Array(value :_*))
+    @scala.inline
     def setStories(value: js.Array[IStorybookStory]): Self = this.set("stories", value.asInstanceOf[js.Any])
   }
   

@@ -105,6 +105,8 @@ object MenuProps {
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
     @scala.inline
+    def setValueVarargs(value: js.Any*): Self = this.set("value", js.Array(value :_*))
+    @scala.inline
     def setValue(value: js.Any | js.Array[_]): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)

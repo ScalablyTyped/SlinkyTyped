@@ -29,6 +29,8 @@ object IObserverTree {
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def setObserversVarargs(value: IObserverTree*): Self = this.set("observers", js.Array(value :_*))
+    @scala.inline
     def setObservers(value: js.Array[IObserverTree]): Self = this.set("observers", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteObservers: Self = this.set("observers", js.undefined)

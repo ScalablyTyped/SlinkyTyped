@@ -31,6 +31,8 @@ object BaseAnchor {
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTransformVarargs(value: Double*): Self = this.set("transform", js.Array(value :_*))
+    @scala.inline
     def setTransform(value: Matrix): Self = this.set("transform", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: AnchorType): Self = this.set("type", value.asInstanceOf[js.Any])

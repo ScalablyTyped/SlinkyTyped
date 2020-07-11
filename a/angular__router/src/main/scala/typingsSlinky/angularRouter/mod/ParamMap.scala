@@ -60,6 +60,8 @@ object ParamMap {
     @scala.inline
     def setHas(value: String => Boolean): Self = this.set("has", js.Any.fromFunction1(value))
     @scala.inline
+    def setKeysVarargs(value: String*): Self = this.set("keys", js.Array(value :_*))
+    @scala.inline
     def setKeys(value: js.Array[String]): Self = this.set("keys", value.asInstanceOf[js.Any])
   }
   

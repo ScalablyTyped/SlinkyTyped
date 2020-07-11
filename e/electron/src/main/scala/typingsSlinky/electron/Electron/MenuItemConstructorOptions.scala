@@ -169,17 +169,25 @@ object MenuItemConstructorOptions {
     @scala.inline
     def deleteAcceleratorWorksWhenHidden: Self = this.set("acceleratorWorksWhenHidden", js.undefined)
     @scala.inline
+    def setAfterVarargs(value: String*): Self = this.set("after", js.Array(value :_*))
+    @scala.inline
     def setAfter(value: js.Array[String]): Self = this.set("after", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAfter: Self = this.set("after", js.undefined)
+    @scala.inline
+    def setAfterGroupContainingVarargs(value: String*): Self = this.set("afterGroupContaining", js.Array(value :_*))
     @scala.inline
     def setAfterGroupContaining(value: js.Array[String]): Self = this.set("afterGroupContaining", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAfterGroupContaining: Self = this.set("afterGroupContaining", js.undefined)
     @scala.inline
+    def setBeforeVarargs(value: String*): Self = this.set("before", js.Array(value :_*))
+    @scala.inline
     def setBefore(value: js.Array[String]): Self = this.set("before", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBefore: Self = this.set("before", js.undefined)
+    @scala.inline
+    def setBeforeGroupContainingVarargs(value: String*): Self = this.set("beforeGroupContaining", js.Array(value :_*))
     @scala.inline
     def setBeforeGroupContaining(value: js.Array[String]): Self = this.set("beforeGroupContaining", value.asInstanceOf[js.Any])
     @scala.inline
@@ -224,6 +232,8 @@ object MenuItemConstructorOptions {
     def setSublabel(value: String): Self = this.set("sublabel", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSublabel: Self = this.set("sublabel", js.undefined)
+    @scala.inline
+    def setSubmenuVarargs(value: MenuItemConstructorOptions*): Self = this.set("submenu", js.Array(value :_*))
     @scala.inline
     def setSubmenu(value: js.Array[MenuItemConstructorOptions] | Menu): Self = this.set("submenu", value.asInstanceOf[js.Any])
     @scala.inline

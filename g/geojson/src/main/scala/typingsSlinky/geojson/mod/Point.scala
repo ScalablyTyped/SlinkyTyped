@@ -31,6 +31,8 @@ object Point {
         x
     }
     @scala.inline
+    def setCoordinatesVarargs(value: Double*): Self = this.set("coordinates", js.Array(value :_*))
+    @scala.inline
     def setCoordinates(value: Position): Self = this.set("coordinates", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: typingsSlinky.geojson.geojsonStrings.Point): Self = this.set("type", value.asInstanceOf[js.Any])

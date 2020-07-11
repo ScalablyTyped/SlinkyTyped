@@ -46,6 +46,8 @@ object RefreshControlPropsAndroid {
         x
     }
     @scala.inline
+    def setColorsVarargs(value: String*): Self = this.set("colors", js.Array(value :_*))
+    @scala.inline
     def setColors(value: js.Array[String]): Self = this.set("colors", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColors: Self = this.set("colors", js.undefined)

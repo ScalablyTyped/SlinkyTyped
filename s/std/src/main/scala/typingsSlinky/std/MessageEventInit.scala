@@ -42,6 +42,8 @@ object MessageEventInit {
     @scala.inline
     def deleteOrigin: Self = this.set("origin", js.undefined)
     @scala.inline
+    def setPortsVarargs(value: org.scalajs.dom.raw.MessagePort*): Self = this.set("ports", js.Array(value :_*))
+    @scala.inline
     def setPorts(value: js.Array[org.scalajs.dom.raw.MessagePort]): Self = this.set("ports", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePorts: Self = this.set("ports", js.undefined)

@@ -35,6 +35,8 @@ object DiagnosticMessageChain {
     @scala.inline
     def setMessageText(value: java.lang.String): Self = this.set("messageText", value.asInstanceOf[js.Any])
     @scala.inline
+    def setNextVarargs(value: DiagnosticMessageChain*): Self = this.set("next", js.Array(value :_*))
+    @scala.inline
     def setNext(value: js.Array[DiagnosticMessageChain]): Self = this.set("next", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNext: Self = this.set("next", js.undefined)

@@ -28,6 +28,8 @@ object SpawnOptionsWithoutStdio {
         x
     }
     @scala.inline
+    def setStdioVarargs(value: (js.UndefOr[Null | pipe])*): Self = this.set("stdio", js.Array(value :_*))
+    @scala.inline
     def setStdio(value: pipe | (js.Array[js.UndefOr[Null | pipe]])): Self = this.set("stdio", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStdio: Self = this.set("stdio", js.undefined)

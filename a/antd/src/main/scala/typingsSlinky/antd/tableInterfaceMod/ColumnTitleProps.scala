@@ -41,6 +41,8 @@ object ColumnTitleProps {
     @scala.inline
     def deleteSortColumn: Self = this.set("sortColumn", js.undefined)
     @scala.inline
+    def setSortColumnsVarargs(value: Column[RecordType]*): Self = this.set("sortColumns", js.Array(value :_*))
+    @scala.inline
     def setSortColumns(value: js.Array[Column[RecordType]]): Self = this.set("sortColumns", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSortColumns: Self = this.set("sortColumns", js.undefined)

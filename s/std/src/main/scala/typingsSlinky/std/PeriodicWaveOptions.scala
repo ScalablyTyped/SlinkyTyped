@@ -29,11 +29,15 @@ object PeriodicWaveOptions {
     @scala.inline
     def setImagFloat32Array(value: js.typedarray.Float32Array): Self = this.set("imag", value.asInstanceOf[js.Any])
     @scala.inline
+    def setImagVarargs(value: Double*): Self = this.set("imag", js.Array(value :_*))
+    @scala.inline
     def setImag(value: js.Array[Double] | js.typedarray.Float32Array): Self = this.set("imag", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteImag: Self = this.set("imag", js.undefined)
     @scala.inline
     def setRealFloat32Array(value: js.typedarray.Float32Array): Self = this.set("real", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRealVarargs(value: Double*): Self = this.set("real", js.Array(value :_*))
     @scala.inline
     def setReal(value: js.Array[Double] | js.typedarray.Float32Array): Self = this.set("real", value.asInstanceOf[js.Any])
     @scala.inline

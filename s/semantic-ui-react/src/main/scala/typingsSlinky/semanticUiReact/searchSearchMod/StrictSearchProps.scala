@@ -274,6 +274,8 @@ object StrictSearchProps {
     @scala.inline
     def deleteResultRenderer: Self = this.set("resultRenderer", js.undefined)
     @scala.inline
+    def setResultsVarargs(value: js.Any*): Self = this.set("results", js.Array(value :_*))
+    @scala.inline
     def setResults(value: js.Array[_] | js.Object): Self = this.set("results", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteResults: Self = this.set("results", js.undefined)

@@ -68,11 +68,15 @@ object ChangeDetection {
         x
     }
     @scala.inline
+    def setEntryComponentsVarargs(value: CompileEntryComponentMetadata*): Self = this.set("entryComponents", js.Array(value :_*))
+    @scala.inline
     def setEntryComponents(value: js.Array[CompileEntryComponentMetadata]): Self = this.set("entryComponents", value.asInstanceOf[js.Any])
     @scala.inline
     def setGuards(value: StringDictionary[js.Any]): Self = this.set("guards", value.asInstanceOf[js.Any])
     @scala.inline
     def setHost(value: StringDictionary[String]): Self = this.set("host", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setInputsVarargs(value: String*): Self = this.set("inputs", js.Array(value :_*))
     @scala.inline
     def setInputs(value: js.Array[String]): Self = this.set("inputs", value.asInstanceOf[js.Any])
     @scala.inline
@@ -80,9 +84,15 @@ object ChangeDetection {
     @scala.inline
     def setIsHost(value: Boolean): Self = this.set("isHost", value.asInstanceOf[js.Any])
     @scala.inline
+    def setOutputsVarargs(value: String*): Self = this.set("outputs", js.Array(value :_*))
+    @scala.inline
     def setOutputs(value: js.Array[String]): Self = this.set("outputs", value.asInstanceOf[js.Any])
     @scala.inline
+    def setProvidersVarargs(value: CompileProviderMetadata*): Self = this.set("providers", js.Array(value :_*))
+    @scala.inline
     def setProviders(value: js.Array[CompileProviderMetadata]): Self = this.set("providers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setQueriesVarargs(value: CompileQueryMetadata*): Self = this.set("queries", js.Array(value :_*))
     @scala.inline
     def setQueries(value: js.Array[CompileQueryMetadata]): Self = this.set("queries", value.asInstanceOf[js.Any])
     @scala.inline
@@ -90,7 +100,11 @@ object ChangeDetection {
     @scala.inline
     def setType(value: CompileTypeMetadata): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
+    def setViewProvidersVarargs(value: CompileProviderMetadata*): Self = this.set("viewProviders", js.Array(value :_*))
+    @scala.inline
     def setViewProviders(value: js.Array[CompileProviderMetadata]): Self = this.set("viewProviders", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setViewQueriesVarargs(value: CompileQueryMetadata*): Self = this.set("viewQueries", js.Array(value :_*))
     @scala.inline
     def setViewQueries(value: js.Array[CompileQueryMetadata]): Self = this.set("viewQueries", value.asInstanceOf[js.Any])
     @scala.inline

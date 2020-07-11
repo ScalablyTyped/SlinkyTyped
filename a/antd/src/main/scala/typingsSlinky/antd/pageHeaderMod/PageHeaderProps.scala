@@ -98,6 +98,8 @@ object PageHeaderProps {
     @scala.inline
     def setTagsReactElement(value: ReactElement): Self = this.set("tags", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTagsVarargs(value: ReactElement*): Self = this.set("tags", js.Array(value :_*))
+    @scala.inline
     def setTags(value: ReactElement | js.Array[ReactElement]): Self = this.set("tags", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTags: Self = this.set("tags", js.undefined)

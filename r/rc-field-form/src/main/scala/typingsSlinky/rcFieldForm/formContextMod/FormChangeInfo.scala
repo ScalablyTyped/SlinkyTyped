@@ -28,6 +28,8 @@ object FormChangeInfo {
         x
     }
     @scala.inline
+    def setChangedFieldsVarargs(value: FieldData*): Self = this.set("changedFields", js.Array(value :_*))
+    @scala.inline
     def setChangedFields(value: js.Array[FieldData]): Self = this.set("changedFields", value.asInstanceOf[js.Any])
     @scala.inline
     def setForms(value: Forms): Self = this.set("forms", value.asInstanceOf[js.Any])

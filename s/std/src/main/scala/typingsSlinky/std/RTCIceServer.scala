@@ -29,6 +29,8 @@ object RTCIceServer {
         x
     }
     @scala.inline
+    def setUrlsVarargs(value: java.lang.String*): Self = this.set("urls", js.Array(value :_*))
+    @scala.inline
     def setUrls(value: java.lang.String | js.Array[java.lang.String]): Self = this.set("urls", value.asInstanceOf[js.Any])
     @scala.inline
     def setCredential(value: java.lang.String | RTCOAuthCredential): Self = this.set("credential", value.asInstanceOf[js.Any])

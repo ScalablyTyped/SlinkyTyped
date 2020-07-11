@@ -27,7 +27,11 @@ object CheckboxGroupState {
         x
     }
     @scala.inline
+    def setRegisteredValuesVarargs(value: CheckboxValueType*): Self = this.set("registeredValues", js.Array(value :_*))
+    @scala.inline
     def setRegisteredValues(value: js.Array[CheckboxValueType]): Self = this.set("registeredValues", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setValueVarargs(value: CheckboxValueType*): Self = this.set("value", js.Array(value :_*))
     @scala.inline
     def setValue(value: js.Array[CheckboxValueType]): Self = this.set("value", value.asInstanceOf[js.Any])
   }

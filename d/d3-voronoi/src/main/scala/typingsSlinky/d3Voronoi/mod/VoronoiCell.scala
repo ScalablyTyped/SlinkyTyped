@@ -33,6 +33,8 @@ object VoronoiCell {
         x
     }
     @scala.inline
+    def setHalfedgesVarargs(value: Double*): Self = this.set("halfedges", js.Array(value :_*))
+    @scala.inline
     def setHalfedges(value: js.Array[Double]): Self = this.set("halfedges", value.asInstanceOf[js.Any])
     @scala.inline
     def setSite(value: VoronoiSite[T]): Self = this.set("site", value.asInstanceOf[js.Any])

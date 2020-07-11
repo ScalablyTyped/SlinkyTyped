@@ -30,6 +30,8 @@ object Nodes {
         x
     }
     @scala.inline
+    def setNodesVarargs(value: Node*): Self = this.set("nodes", js.Array(value :_*))
+    @scala.inline
     def setNodes(value: js.Array[Node]): Self = this.set("nodes", value.asInstanceOf[js.Any])
   }
   

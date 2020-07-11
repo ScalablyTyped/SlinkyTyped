@@ -28,9 +28,15 @@ object ARMatrices {
         x
     }
     @scala.inline
+    def setProjectionMatrixVarargs(value: Double*): Self = this.set("projectionMatrix", js.Array(value :_*))
+    @scala.inline
     def setProjectionMatrix(value: Matrix): Self = this.set("projectionMatrix", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTransformVarargs(value: Double*): Self = this.set("transform", js.Array(value :_*))
+    @scala.inline
     def setTransform(value: Matrix): Self = this.set("transform", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setViewMatrixVarargs(value: Double*): Self = this.set("viewMatrix", js.Array(value :_*))
     @scala.inline
     def setViewMatrix(value: Matrix): Self = this.set("viewMatrix", value.asInstanceOf[js.Any])
   }

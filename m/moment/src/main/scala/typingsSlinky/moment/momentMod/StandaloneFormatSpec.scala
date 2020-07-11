@@ -28,7 +28,11 @@ object StandaloneFormatSpec {
         x
     }
     @scala.inline
+    def setFormatVarargs(value: String*): Self = this.set("format", js.Array(value :_*))
+    @scala.inline
     def setFormat(value: js.Array[String]): Self = this.set("format", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStandaloneVarargs(value: String*): Self = this.set("standalone", js.Array(value :_*))
     @scala.inline
     def setStandalone(value: js.Array[String]): Self = this.set("standalone", value.asInstanceOf[js.Any])
     @scala.inline

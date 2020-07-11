@@ -53,6 +53,8 @@ object AutoCompleteProps {
         x
     }
     @scala.inline
+    def setDataSourceVarargs(value: DataItem*): Self = this.set("dataSource", js.Array(value :_*))
+    @scala.inline
     def setDataSource(value: js.Array[DataItem]): Self = this.set("dataSource", value.asInstanceOf[js.Any])
     @scala.inline
     def setAnchorOrigin(value: origin): Self = this.set("anchorOrigin", value.asInstanceOf[js.Any])

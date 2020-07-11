@@ -43,6 +43,8 @@ object IModeBase {
         x
     }
     @scala.inline
+    def setAliasesVarargs(value: String*): Self = this.set("aliases", js.Array(value :_*))
+    @scala.inline
     def setAliases(value: js.Array[String]): Self = this.set("aliases", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAliases: Self = this.set("aliases", js.undefined)
@@ -114,6 +116,8 @@ object IModeBase {
     def setSubLanguageMode(value: String): Self = this.set("subLanguageMode", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSubLanguageMode: Self = this.set("subLanguageMode", js.undefined)
+    @scala.inline
+    def setVariantsVarargs(value: IMode*): Self = this.set("variants", js.Array(value :_*))
     @scala.inline
     def setVariants(value: js.Array[IMode]): Self = this.set("variants", value.asInstanceOf[js.Any])
     @scala.inline

@@ -57,6 +57,8 @@ object ChartLegendItem {
     @scala.inline
     def deleteLineCap: Self = this.set("lineCap", js.undefined)
     @scala.inline
+    def setLineDashVarargs(value: Double*): Self = this.set("lineDash", js.Array(value :_*))
+    @scala.inline
     def setLineDash(value: js.Array[Double]): Self = this.set("lineDash", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLineDash: Self = this.set("lineDash", js.undefined)

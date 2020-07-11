@@ -47,6 +47,8 @@ object ColumnType {
         x
     }
     @scala.inline
+    def setDefaultFilteredValueVarargs(value: Key*): Self = this.set("defaultFilteredValue", js.Array(value :_*))
+    @scala.inline
     def setDefaultFilteredValue(value: js.Array[Key]): Self = this.set("defaultFilteredValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultFilteredValue: Self = this.set("defaultFilteredValue", js.undefined)
@@ -87,11 +89,15 @@ object ColumnType {
     @scala.inline
     def deleteFiltered: Self = this.set("filtered", js.undefined)
     @scala.inline
+    def setFilteredValueVarargs(value: Key*): Self = this.set("filteredValue", js.Array(value :_*))
+    @scala.inline
     def setFilteredValue(value: js.Array[Key]): Self = this.set("filteredValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFilteredValue: Self = this.set("filteredValue", js.undefined)
     @scala.inline
     def setFilteredValueNull: Self = this.set("filteredValue", null)
+    @scala.inline
+    def setFiltersVarargs(value: ColumnFilterItem*): Self = this.set("filters", js.Array(value :_*))
     @scala.inline
     def setFilters(value: js.Array[ColumnFilterItem]): Self = this.set("filters", value.asInstanceOf[js.Any])
     @scala.inline
@@ -105,6 +111,8 @@ object ColumnType {
     @scala.inline
     def deleteOnFilterDropdownVisibleChange: Self = this.set("onFilterDropdownVisibleChange", js.undefined)
     @scala.inline
+    def setResponsiveVarargs(value: Breakpoint*): Self = this.set("responsive", js.Array(value :_*))
+    @scala.inline
     def setResponsive(value: js.Array[Breakpoint]): Self = this.set("responsive", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteResponsive: Self = this.set("responsive", js.undefined)
@@ -112,6 +120,8 @@ object ColumnType {
     def setShowSorterTooltip(value: Boolean): Self = this.set("showSorterTooltip", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteShowSorterTooltip: Self = this.set("showSorterTooltip", js.undefined)
+    @scala.inline
+    def setSortDirectionsVarargs(value: SortOrder*): Self = this.set("sortDirections", js.Array(value :_*))
     @scala.inline
     def setSortDirections(value: js.Array[SortOrder]): Self = this.set("sortDirections", value.asInstanceOf[js.Any])
     @scala.inline

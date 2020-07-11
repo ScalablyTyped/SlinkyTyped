@@ -26,6 +26,8 @@ object DistanceMatrixResponseRow {
         x
     }
     @scala.inline
+    def setElementsVarargs(value: DistanceMatrixResponseElement*): Self = this.set("elements", js.Array(value :_*))
+    @scala.inline
     def setElements(value: js.Array[DistanceMatrixResponseElement]): Self = this.set("elements", value.asInstanceOf[js.Any])
   }
   

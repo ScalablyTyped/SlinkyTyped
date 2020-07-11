@@ -102,6 +102,8 @@ object ToolbarAndroidProps {
         x
     }
     @scala.inline
+    def setActionsVarargs(value: ToolbarAndroidAction*): Self = this.set("actions", js.Array(value :_*))
+    @scala.inline
     def setActions(value: js.Array[ToolbarAndroidAction]): Self = this.set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteActions: Self = this.set("actions", js.undefined)

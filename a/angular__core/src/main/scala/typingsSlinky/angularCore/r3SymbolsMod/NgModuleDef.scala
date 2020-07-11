@@ -55,17 +55,25 @@ object NgModuleDef {
         x
     }
     @scala.inline
+    def setBootstrapVarargs(value: Type[js.Any]*): Self = this.set("bootstrap", js.Array(value :_*))
+    @scala.inline
     def setBootstrapFunction0(value: () => js.Array[Type[_]]): Self = this.set("bootstrap", js.Any.fromFunction0(value))
     @scala.inline
     def setBootstrap(value: js.Array[Type[_]] | js.Function0[js.Array[Type[_]]]): Self = this.set("bootstrap", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDeclarationsVarargs(value: Type[js.Any]*): Self = this.set("declarations", js.Array(value :_*))
     @scala.inline
     def setDeclarationsFunction0(value: () => js.Array[Type[_]]): Self = this.set("declarations", js.Any.fromFunction0(value))
     @scala.inline
     def setDeclarations(value: js.Array[Type[_]] | js.Function0[js.Array[Type[_]]]): Self = this.set("declarations", value.asInstanceOf[js.Any])
     @scala.inline
+    def setExportsVarargs(value: Type[js.Any]*): Self = this.set("exports", js.Array(value :_*))
+    @scala.inline
     def setExportsFunction0(value: () => js.Array[Type[_]]): Self = this.set("exports", js.Any.fromFunction0(value))
     @scala.inline
     def setExports(value: js.Array[Type[_]] | js.Function0[js.Array[Type[_]]]): Self = this.set("exports", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setImportsVarargs(value: Type[js.Any]*): Self = this.set("imports", js.Array(value :_*))
     @scala.inline
     def setImportsFunction0(value: () => js.Array[Type[_]]): Self = this.set("imports", js.Any.fromFunction0(value))
     @scala.inline
@@ -76,6 +84,8 @@ object NgModuleDef {
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
     def setIdNull: Self = this.set("id", null)
+    @scala.inline
+    def setSchemasVarargs(value: SchemaMetadata*): Self = this.set("schemas", js.Array(value :_*))
     @scala.inline
     def setSchemas(value: js.Array[SchemaMetadata]): Self = this.set("schemas", value.asInstanceOf[js.Any])
     @scala.inline

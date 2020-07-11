@@ -68,6 +68,8 @@ object ColumnGroupProps {
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
+    def setChildrenVarargs(value: ReactElement*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: ReactElement | js.Array[ReactElement]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def setAlign(value: AlignType): Self = this.set("align", value.asInstanceOf[js.Any])
@@ -81,6 +83,8 @@ object ColumnGroupProps {
     def setColSpan(value: Double): Self = this.set("colSpan", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColSpan: Self = this.set("colSpan", js.undefined)
+    @scala.inline
+    def setDataIndexVarargs(value: (String | Double)*): Self = this.set("dataIndex", js.Array(value :_*))
     @scala.inline
     def setDataIndex(value: DataIndex): Self = this.set("dataIndex", value.asInstanceOf[js.Any])
     @scala.inline

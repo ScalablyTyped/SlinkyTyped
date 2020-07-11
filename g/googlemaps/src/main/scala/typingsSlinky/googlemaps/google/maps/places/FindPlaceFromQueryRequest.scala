@@ -28,6 +28,8 @@ object FindPlaceFromQueryRequest {
         x
     }
     @scala.inline
+    def setFieldsVarargs(value: String*): Self = this.set("fields", js.Array(value :_*))
+    @scala.inline
     def setFields(value: js.Array[String]): Self = this.set("fields", value.asInstanceOf[js.Any])
     @scala.inline
     def setQuery(value: String): Self = this.set("query", value.asInstanceOf[js.Any])

@@ -41,15 +41,23 @@ object NgAnalyzedFile {
         x
     }
     @scala.inline
+    def setDirectivesVarargs(value: StaticSymbol*): Self = this.set("directives", js.Array(value :_*))
+    @scala.inline
     def setDirectives(value: js.Array[StaticSymbol]): Self = this.set("directives", value.asInstanceOf[js.Any])
     @scala.inline
     def setExportsNonSourceFiles(value: Boolean): Self = this.set("exportsNonSourceFiles", value.asInstanceOf[js.Any])
     @scala.inline
     def setFileName(value: String): Self = this.set("fileName", value.asInstanceOf[js.Any])
     @scala.inline
+    def setInjectablesVarargs(value: CompileInjectableMetadata*): Self = this.set("injectables", js.Array(value :_*))
+    @scala.inline
     def setInjectables(value: js.Array[CompileInjectableMetadata]): Self = this.set("injectables", value.asInstanceOf[js.Any])
     @scala.inline
+    def setNgModulesVarargs(value: CompileNgModuleMetadata*): Self = this.set("ngModules", js.Array(value :_*))
+    @scala.inline
     def setNgModules(value: js.Array[CompileNgModuleMetadata]): Self = this.set("ngModules", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPipesVarargs(value: StaticSymbol*): Self = this.set("pipes", js.Array(value :_*))
     @scala.inline
     def setPipes(value: js.Array[StaticSymbol]): Self = this.set("pipes", value.asInstanceOf[js.Any])
   }

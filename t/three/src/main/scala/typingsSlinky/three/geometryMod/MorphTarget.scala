@@ -30,6 +30,8 @@ object MorphTarget {
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def setVerticesVarargs(value: Vector3*): Self = this.set("vertices", js.Array(value :_*))
+    @scala.inline
     def setVertices(value: js.Array[Vector3]): Self = this.set("vertices", value.asInstanceOf[js.Any])
   }
   

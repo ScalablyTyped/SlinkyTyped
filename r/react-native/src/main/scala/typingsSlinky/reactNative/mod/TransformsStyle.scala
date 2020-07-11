@@ -48,6 +48,10 @@ object TransformsStyle {
     @scala.inline
     def deleteScaleY: Self = this.set("scaleY", js.undefined)
     @scala.inline
+    def setTransformVarargs(
+      value: (PerpectiveTransform | RotateTransform | RotateXTransform | RotateYTransform | RotateZTransform | ScaleTransform | ScaleXTransform | ScaleYTransform | TranslateXTransform | TranslateYTransform | SkewXTransform | SkewYTransform)*
+    ): Self = this.set("transform", js.Array(value :_*))
+    @scala.inline
     def setTransform(
       value: js.Array[
           PerpectiveTransform | RotateTransform | RotateXTransform | RotateYTransform | RotateZTransform | ScaleTransform | ScaleXTransform | ScaleYTransform | TranslateXTransform | TranslateYTransform | SkewXTransform | SkewYTransform
@@ -55,6 +59,8 @@ object TransformsStyle {
     ): Self = this.set("transform", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTransform: Self = this.set("transform", js.undefined)
+    @scala.inline
+    def setTransformMatrixVarargs(value: Double*): Self = this.set("transformMatrix", js.Array(value :_*))
     @scala.inline
     def setTransformMatrix(value: js.Array[Double]): Self = this.set("transformMatrix", value.asInstanceOf[js.Any])
     @scala.inline

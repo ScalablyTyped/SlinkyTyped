@@ -46,23 +46,43 @@ object BYN {
         x
     }
     @scala.inline
+    def setBYNVarargs(value: scala.Nothing*): Self = this.set("BYN", js.Array(value :_*))
+    @scala.inline
     def setBYN(value: js.Array[scala.Nothing]): Self = this.set("BYN", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDKKVarargs(value: scala.Nothing*): Self = this.set("DKK", js.Array(value :_*))
     @scala.inline
     def setDKK(value: js.Array[scala.Nothing]): Self = this.set("DKK", value.asInstanceOf[js.Any])
     @scala.inline
+    def setHRKVarargs(value: scala.Nothing*): Self = this.set("HRK", js.Array(value :_*))
+    @scala.inline
     def setHRK(value: js.Array[scala.Nothing]): Self = this.set("HRK", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setISKVarargs(value: scala.Nothing*): Self = this.set("ISK", js.Array(value :_*))
     @scala.inline
     def setISK(value: js.Array[scala.Nothing]): Self = this.set("ISK", value.asInstanceOf[js.Any])
     @scala.inline
+    def setNOKVarargs(value: scala.Nothing*): Self = this.set("NOK", js.Array(value :_*))
+    @scala.inline
     def setNOK(value: js.Array[scala.Nothing]): Self = this.set("NOK", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPLNVarargs(value: scala.Nothing*): Self = this.set("PLN", js.Array(value :_*))
     @scala.inline
     def setPLN(value: js.Array[scala.Nothing]): Self = this.set("PLN", value.asInstanceOf[js.Any])
     @scala.inline
+    def setRURVarargs(value: scala.Nothing*): Self = this.set("RUR", js.Array(value :_*))
+    @scala.inline
     def setRUR(value: js.Array[scala.Nothing]): Self = this.set("RUR", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSEKVarargs(value: scala.Nothing*): Self = this.set("SEK", js.Array(value :_*))
     @scala.inline
     def setSEK(value: js.Array[scala.Nothing]): Self = this.set("SEK", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTHBVarargs(value: String*): Self = this.set("THB", js.Array(value :_*))
+    @scala.inline
     def setTHB(value: js.Array[String]): Self = this.set("THB", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTWDVarargs(value: String*): Self = this.set("TWD", js.Array(value :_*))
     @scala.inline
     def setTWD(value: js.Array[String]): Self = this.set("TWD", value.asInstanceOf[js.Any])
   }

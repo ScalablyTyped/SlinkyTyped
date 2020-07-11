@@ -28,6 +28,8 @@ object ResponseInit {
         x
     }
     @scala.inline
+    def setHeadersVarargs(value: js.Array[String]*): Self = this.set("headers", js.Array(value :_*))
+    @scala.inline
     def setHeaders(value: HeadersInit): Self = this.set("headers", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHeaders: Self = this.set("headers", js.undefined)

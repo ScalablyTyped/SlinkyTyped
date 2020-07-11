@@ -31,13 +31,19 @@ object CustomTransformers {
         x
     }
     @scala.inline
+    def setAfterVarargs(value: (TransformerFactory[SourceFile] | CustomTransformerFactory)*): Self = this.set("after", js.Array(value :_*))
+    @scala.inline
     def setAfter(value: js.Array[TransformerFactory[SourceFile] | CustomTransformerFactory]): Self = this.set("after", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAfter: Self = this.set("after", js.undefined)
     @scala.inline
+    def setAfterDeclarationsVarargs(value: ((TransformerFactory[Bundle | SourceFile]) | CustomTransformerFactory)*): Self = this.set("afterDeclarations", js.Array(value :_*))
+    @scala.inline
     def setAfterDeclarations(value: js.Array[(TransformerFactory[Bundle | SourceFile]) | CustomTransformerFactory]): Self = this.set("afterDeclarations", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAfterDeclarations: Self = this.set("afterDeclarations", js.undefined)
+    @scala.inline
+    def setBeforeVarargs(value: (TransformerFactory[SourceFile] | CustomTransformerFactory)*): Self = this.set("before", js.Array(value :_*))
     @scala.inline
     def setBefore(value: js.Array[TransformerFactory[SourceFile] | CustomTransformerFactory]): Self = this.set("before", value.asInstanceOf[js.Any])
     @scala.inline

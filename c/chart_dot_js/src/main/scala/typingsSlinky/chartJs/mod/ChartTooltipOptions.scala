@@ -72,6 +72,8 @@ object ChartTooltipOptions {
         x
     }
     @scala.inline
+    def setBackgroundColorVarargs(value: String*): Self = this.set("backgroundColor", js.Array(value :_*))
+    @scala.inline
     def setBackgroundColorCanvasPattern(value: CanvasPattern): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def setBackgroundColorCanvasGradient(value: CanvasGradient): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
@@ -83,6 +85,8 @@ object ChartTooltipOptions {
     def setBodyAlign(value: TextAlignment): Self = this.set("bodyAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBodyAlign: Self = this.set("bodyAlign", js.undefined)
+    @scala.inline
+    def setBodyFontColorVarargs(value: String*): Self = this.set("bodyFontColor", js.Array(value :_*))
     @scala.inline
     def setBodyFontColorCanvasPattern(value: CanvasPattern): Self = this.set("bodyFontColor", value.asInstanceOf[js.Any])
     @scala.inline
@@ -107,6 +111,8 @@ object ChartTooltipOptions {
     def setBodySpacing(value: Double): Self = this.set("bodySpacing", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBodySpacing: Self = this.set("bodySpacing", js.undefined)
+    @scala.inline
+    def setBorderColorVarargs(value: String*): Self = this.set("borderColor", js.Array(value :_*))
     @scala.inline
     def setBorderColorCanvasPattern(value: CanvasPattern): Self = this.set("borderColor", value.asInstanceOf[js.Any])
     @scala.inline
@@ -155,6 +161,8 @@ object ChartTooltipOptions {
     def setFooterAlign(value: TextAlignment): Self = this.set("footerAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFooterAlign: Self = this.set("footerAlign", js.undefined)
+    @scala.inline
+    def setFooterFontColorVarargs(value: String*): Self = this.set("footerFontColor", js.Array(value :_*))
     @scala.inline
     def setFooterFontColorCanvasPattern(value: CanvasPattern): Self = this.set("footerFontColor", value.asInstanceOf[js.Any])
     @scala.inline
@@ -209,6 +217,8 @@ object ChartTooltipOptions {
     def setTitleAlign(value: TextAlignment): Self = this.set("titleAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitleAlign: Self = this.set("titleAlign", js.undefined)
+    @scala.inline
+    def setTitleFontColorVarargs(value: String*): Self = this.set("titleFontColor", js.Array(value :_*))
     @scala.inline
     def setTitleFontColorCanvasPattern(value: CanvasPattern): Self = this.set("titleFontColor", value.asInstanceOf[js.Any])
     @scala.inline

@@ -33,6 +33,8 @@ object Module {
         x
     }
     @scala.inline
+    def setChildrenVarargs(value: NodeModule*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: js.Array[NodeModule]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def setExports(value: js.Any): Self = this.set("exports", value.asInstanceOf[js.Any])

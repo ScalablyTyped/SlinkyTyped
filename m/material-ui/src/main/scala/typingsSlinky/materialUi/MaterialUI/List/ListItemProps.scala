@@ -84,6 +84,8 @@ object ListItemProps {
     @scala.inline
     def deleteLeftIcon: Self = this.set("leftIcon", js.undefined)
     @scala.inline
+    def setNestedItemsVarargs(value: ReactElement*): Self = this.set("nestedItems", js.Array(value :_*))
+    @scala.inline
     def setNestedItems(value: js.Array[ReactElement]): Self = this.set("nestedItems", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteNestedItems: Self = this.set("nestedItems", js.undefined)

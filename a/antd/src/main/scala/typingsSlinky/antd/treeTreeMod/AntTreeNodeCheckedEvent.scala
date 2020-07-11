@@ -37,6 +37,8 @@ object AntTreeNodeCheckedEvent {
     @scala.inline
     def deleteChecked: Self = this.set("checked", js.undefined)
     @scala.inline
+    def setCheckedNodesVarargs(value: ReactComponentClass[AntTreeNodeProps]*): Self = this.set("checkedNodes", js.Array(value :_*))
+    @scala.inline
     def setCheckedNodes(value: js.Array[ReactComponentClass[AntTreeNodeProps]]): Self = this.set("checkedNodes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCheckedNodes: Self = this.set("checkedNodes", js.undefined)

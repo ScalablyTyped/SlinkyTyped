@@ -27,6 +27,8 @@ object FileList {
         x
     }
     @scala.inline
+    def setFileListVarargs(value: UploadFile[js.Any]*): Self = this.set("fileList", js.Array(value :_*))
+    @scala.inline
     def setFileList(value: js.Array[UploadFile[_]]): Self = this.set("fileList", value.asInstanceOf[js.Any])
   }
   

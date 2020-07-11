@@ -30,6 +30,8 @@ object Hook {
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDepsVarargs(value: js.Any*): Self = this.set("deps", js.Array(value :_*))
+    @scala.inline
     def setDeps(value: js.Array[_]): Self = this.set("deps", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDeps: Self = this.set("deps", js.undefined)

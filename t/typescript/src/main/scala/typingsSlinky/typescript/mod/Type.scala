@@ -129,6 +129,8 @@ object Type {
     @scala.inline
     def deleteAliasSymbol: Self = this.set("aliasSymbol", js.undefined)
     @scala.inline
+    def setAliasTypeArgumentsVarargs(value: Type*): Self = this.set("aliasTypeArguments", js.Array(value :_*))
+    @scala.inline
     def setAliasTypeArguments(value: js.Array[Type]): Self = this.set("aliasTypeArguments", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAliasTypeArguments: Self = this.set("aliasTypeArguments", js.undefined)

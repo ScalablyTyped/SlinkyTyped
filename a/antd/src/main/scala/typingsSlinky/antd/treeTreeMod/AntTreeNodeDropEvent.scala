@@ -46,6 +46,8 @@ object AntTreeNodeDropEvent {
     @scala.inline
     def setDragNode(value: ReactComponentClass[AntTreeNodeProps]): Self = this.set("dragNode", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDragNodesKeysVarargs(value: js.Any*): Self = this.set("dragNodesKeys", js.Array(value :_*))
+    @scala.inline
     def setDragNodesKeys(
       value: js.Array[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _

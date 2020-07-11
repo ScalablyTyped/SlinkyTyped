@@ -62,6 +62,8 @@ object IDerivation {
     @scala.inline
     def setIsTracing(value: TraceMode): Self = this.set("isTracing", value.asInstanceOf[js.Any])
     @scala.inline
+    def setObservingVarargs(value: IObservable*): Self = this.set("observing", js.Array(value :_*))
+    @scala.inline
     def setObserving(value: js.Array[IObservable]): Self = this.set("observing", value.asInstanceOf[js.Any])
     @scala.inline
     def setOnBecomeStale(value: () => Unit): Self = this.set("onBecomeStale", js.Any.fromFunction0(value))
@@ -69,6 +71,8 @@ object IDerivation {
     def setRunId(value: Double): Self = this.set("runId", value.asInstanceOf[js.Any])
     @scala.inline
     def setUnboundDepsCount(value: Double): Self = this.set("unboundDepsCount", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setNewObservingVarargs(value: IObservable*): Self = this.set("newObserving", js.Array(value :_*))
     @scala.inline
     def setNewObserving(value: js.Array[IObservable]): Self = this.set("newObserving", value.asInstanceOf[js.Any])
     @scala.inline

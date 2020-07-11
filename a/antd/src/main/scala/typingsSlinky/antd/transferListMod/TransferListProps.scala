@@ -83,7 +83,11 @@ object TransferListProps {
         x
     }
     @scala.inline
+    def setCheckedKeysVarargs(value: String*): Self = this.set("checkedKeys", js.Array(value :_*))
+    @scala.inline
     def setCheckedKeys(value: js.Array[String]): Self = this.set("checkedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDataSourceVarargs(value: TransferItem*): Self = this.set("dataSource", js.Array(value :_*))
     @scala.inline
     def setDataSource(value: js.Array[TransferItem]): Self = this.set("dataSource", value.asInstanceOf[js.Any])
     @scala.inline

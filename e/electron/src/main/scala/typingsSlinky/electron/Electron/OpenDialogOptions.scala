@@ -66,6 +66,8 @@ object OpenDialogOptions {
     @scala.inline
     def deleteDefaultPath: Self = this.set("defaultPath", js.undefined)
     @scala.inline
+    def setFiltersVarargs(value: FileFilter*): Self = this.set("filters", js.Array(value :_*))
+    @scala.inline
     def setFilters(value: js.Array[FileFilter]): Self = this.set("filters", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFilters: Self = this.set("filters", js.undefined)
@@ -73,6 +75,10 @@ object OpenDialogOptions {
     def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMessage: Self = this.set("message", js.undefined)
+    @scala.inline
+    def setPropertiesVarargs(
+      value: (openFile | openDirectory | multiSelections | showHiddenFiles | createDirectory | promptToCreate | noResolveAliases | treatPackageAsDirectory)*
+    ): Self = this.set("properties", js.Array(value :_*))
     @scala.inline
     def setProperties(
       value: js.Array[

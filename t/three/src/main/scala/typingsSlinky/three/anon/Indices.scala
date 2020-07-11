@@ -31,9 +31,13 @@ object Indices {
     @scala.inline
     def setDetail(value: Double): Self = this.set("detail", value.asInstanceOf[js.Any])
     @scala.inline
+    def setIndicesVarargs(value: Double*): Self = this.set("indices", js.Array(value :_*))
+    @scala.inline
     def setIndices(value: js.Array[Double]): Self = this.set("indices", value.asInstanceOf[js.Any])
     @scala.inline
     def setRadius(value: Double): Self = this.set("radius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVerticesVarargs(value: Double*): Self = this.set("vertices", js.Array(value :_*))
     @scala.inline
     def setVertices(value: js.Array[Double]): Self = this.set("vertices", value.asInstanceOf[js.Any])
   }

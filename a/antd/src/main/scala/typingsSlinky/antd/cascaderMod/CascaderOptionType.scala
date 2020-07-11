@@ -34,6 +34,8 @@ object CascaderOptionType {
         x
     }
     @scala.inline
+    def setChildrenVarargs(value: CascaderOptionType*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: js.Array[CascaderOptionType]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)

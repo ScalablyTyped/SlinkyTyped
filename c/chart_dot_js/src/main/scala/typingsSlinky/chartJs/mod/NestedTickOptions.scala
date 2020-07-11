@@ -82,6 +82,8 @@ object NestedTickOptions {
     @scala.inline
     def deleteAutoSkipPadding: Self = this.set("autoSkipPadding", js.undefined)
     @scala.inline
+    def setBackdropColorVarargs(value: String*): Self = this.set("backdropColor", js.Array(value :_*))
+    @scala.inline
     def setBackdropColorCanvasPattern(value: CanvasPattern): Self = this.set("backdropColor", value.asInstanceOf[js.Any])
     @scala.inline
     def setBackdropColorCanvasGradient(value: CanvasGradient): Self = this.set("backdropColor", value.asInstanceOf[js.Any])
@@ -111,6 +113,8 @@ object NestedTickOptions {
     def setDisplay(value: Boolean): Self = this.set("display", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDisplay: Self = this.set("display", js.undefined)
+    @scala.inline
+    def setFontColorVarargs(value: String*): Self = this.set("fontColor", js.Array(value :_*))
     @scala.inline
     def setFontColorCanvasPattern(value: CanvasPattern): Self = this.set("fontColor", value.asInstanceOf[js.Any])
     @scala.inline

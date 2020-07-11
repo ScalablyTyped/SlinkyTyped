@@ -38,6 +38,8 @@ object Data {
     @scala.inline
     def setEncapsulation(value: ViewEncapsulation): Self = this.set("encapsulation", value.asInstanceOf[js.Any])
     @scala.inline
+    def setStylesVarargs(value: (String | js.Array[js.Any])*): Self = this.set("styles", js.Array(value :_*))
+    @scala.inline
     def setStyles(value: js.Array[String | js.Array[_]]): Self = this.set("styles", value.asInstanceOf[js.Any])
   }
   

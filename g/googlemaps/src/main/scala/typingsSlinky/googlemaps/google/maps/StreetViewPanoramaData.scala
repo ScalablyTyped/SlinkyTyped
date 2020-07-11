@@ -38,6 +38,8 @@ object StreetViewPanoramaData {
     @scala.inline
     def deleteImageDate: Self = this.set("imageDate", js.undefined)
     @scala.inline
+    def setLinksVarargs(value: StreetViewLink*): Self = this.set("links", js.Array(value :_*))
+    @scala.inline
     def setLinks(value: js.Array[StreetViewLink]): Self = this.set("links", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLinks: Self = this.set("links", js.undefined)

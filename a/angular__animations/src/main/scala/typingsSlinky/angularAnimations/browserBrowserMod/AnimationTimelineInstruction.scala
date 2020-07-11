@@ -53,9 +53,15 @@ object AnimationTimelineInstruction {
     @scala.inline
     def setElement(value: js.Any): Self = this.set("element", value.asInstanceOf[js.Any])
     @scala.inline
+    def setKeyframesVarargs(value: ɵStyleData*): Self = this.set("keyframes", js.Array(value :_*))
+    @scala.inline
     def setKeyframes(value: js.Array[ɵStyleData]): Self = this.set("keyframes", value.asInstanceOf[js.Any])
     @scala.inline
+    def setPostStylePropsVarargs(value: String*): Self = this.set("postStyleProps", js.Array(value :_*))
+    @scala.inline
     def setPostStyleProps(value: js.Array[String]): Self = this.set("postStyleProps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPreStylePropsVarargs(value: String*): Self = this.set("preStyleProps", js.Array(value :_*))
     @scala.inline
     def setPreStyleProps(value: js.Array[String]): Self = this.set("preStyleProps", value.asInstanceOf[js.Any])
     @scala.inline

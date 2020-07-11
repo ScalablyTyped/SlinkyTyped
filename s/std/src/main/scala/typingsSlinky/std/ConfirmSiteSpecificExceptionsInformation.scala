@@ -26,6 +26,8 @@ object ConfirmSiteSpecificExceptionsInformation {
         x
     }
     @scala.inline
+    def setArrayOfDomainStringsVarargs(value: java.lang.String*): Self = this.set("arrayOfDomainStrings", js.Array(value :_*))
+    @scala.inline
     def setArrayOfDomainStrings(value: js.Array[java.lang.String]): Self = this.set("arrayOfDomainStrings", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteArrayOfDomainStrings: Self = this.set("arrayOfDomainStrings", js.undefined)

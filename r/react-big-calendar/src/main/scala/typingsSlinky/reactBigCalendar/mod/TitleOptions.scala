@@ -29,6 +29,8 @@ object TitleOptions {
         x
     }
     @scala.inline
+    def setFormatsVarargs(value: DateFormat*): Self = this.set("formats", js.Array(value :_*))
+    @scala.inline
     def setFormats(value: js.Array[DateFormat]): Self = this.set("formats", value.asInstanceOf[js.Any])
     @scala.inline
     def setCulture(value: String): Self = this.set("culture", value.asInstanceOf[js.Any])

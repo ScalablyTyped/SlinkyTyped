@@ -28,6 +28,8 @@ object FindPlaceFromPhoneNumberRequest {
         x
     }
     @scala.inline
+    def setFieldsVarargs(value: String*): Self = this.set("fields", js.Array(value :_*))
+    @scala.inline
     def setFields(value: js.Array[String]): Self = this.set("fields", value.asInstanceOf[js.Any])
     @scala.inline
     def setPhoneNumber(value: String): Self = this.set("phoneNumber", value.asInstanceOf[js.Any])

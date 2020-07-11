@@ -50,6 +50,8 @@ object SceneInterpolatorProps {
     @scala.inline
     def setScene(value: Scene): Self = this.set("scene", value.asInstanceOf[js.Any])
     @scala.inline
+    def setScenesVarargs(value: Scene*): Self = this.set("scenes", js.Array(value :_*))
+    @scala.inline
     def setScenes(value: js.Array[Scene]): Self = this.set("scenes", value.asInstanceOf[js.Any])
     @scala.inline
     def setCardOverlayEnabled(value: Boolean): Self = this.set("cardOverlayEnabled", value.asInstanceOf[js.Any])

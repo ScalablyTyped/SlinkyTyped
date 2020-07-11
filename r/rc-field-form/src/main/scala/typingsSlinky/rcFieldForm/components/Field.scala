@@ -38,6 +38,8 @@ object Field {
       value: ReactElement | (js.Function3[/* control */ ChildProps, /* meta */ Meta, /* form */ FormInstance, ReactElement])
     ): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
+    def dependenciesVarargs(value: NamePath*): this.type = set("dependencies", js.Array(value :_*))
+    @scala.inline
     def dependencies(value: js.Array[NamePath]): this.type = set("dependencies", value.asInstanceOf[js.Any])
     @scala.inline
     def getValueFromEvent(value: /* args */ EventArgs => StoreValue): this.type = set("getValueFromEvent", js.Any.fromFunction1(value))
@@ -50,11 +52,15 @@ object Field {
     @scala.inline
     def messageVariables(value: Record[String, String]): this.type = set("messageVariables", value.asInstanceOf[js.Any])
     @scala.inline
+    def nameVarargs(value: (String | Double)*): this.type = set("name", js.Array(value :_*))
+    @scala.inline
     def name(value: NamePath): this.type = set("name", value.asInstanceOf[js.Any])
     @scala.inline
     def normalize(value: (/* value */ StoreValue, /* prevValue */ StoreValue, /* allValues */ Store) => StoreValue): this.type = set("normalize", js.Any.fromFunction3(value))
     @scala.inline
     def onReset(value: () => Unit): this.type = set("onReset", js.Any.fromFunction0(value))
+    @scala.inline
+    def rulesVarargs(value: Rule*): this.type = set("rules", js.Array(value :_*))
     @scala.inline
     def rules(value: js.Array[Rule]): this.type = set("rules", value.asInstanceOf[js.Any])
     @scala.inline
@@ -65,6 +71,8 @@ object Field {
     def trigger(value: String): this.type = set("trigger", value.asInstanceOf[js.Any])
     @scala.inline
     def validateFirst(value: Boolean): this.type = set("validateFirst", value.asInstanceOf[js.Any])
+    @scala.inline
+    def validateTriggerVarargs(value: String*): this.type = set("validateTrigger", js.Array(value :_*))
     @scala.inline
     def validateTrigger(value: String | js.Array[String] | `false`): this.type = set("validateTrigger", value.asInstanceOf[js.Any])
     @scala.inline

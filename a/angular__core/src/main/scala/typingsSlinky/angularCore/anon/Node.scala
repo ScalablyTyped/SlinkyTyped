@@ -32,6 +32,8 @@ object Node {
     @scala.inline
     def setNodeNull: Self = this.set("node", null)
     @scala.inline
+    def setRequiredHelpersVarargs(value: HelperFunction*): Self = this.set("requiredHelpers", js.Array(value :_*))
+    @scala.inline
     def setRequiredHelpers(value: js.Array[HelperFunction]): Self = this.set("requiredHelpers", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRequiredHelpers: Self = this.set("requiredHelpers", js.undefined)

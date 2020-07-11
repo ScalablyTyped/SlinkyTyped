@@ -36,6 +36,8 @@ object ZDepthShadows {
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
     @scala.inline
+    def setZDepthShadowsVarargs(value: String*): Self = this.set("zDepthShadows", js.Array(value :_*))
+    @scala.inline
     def setZDepthShadows(value: js.Array[String]): Self = this.set("zDepthShadows", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteZDepthShadows: Self = this.set("zDepthShadows", js.undefined)

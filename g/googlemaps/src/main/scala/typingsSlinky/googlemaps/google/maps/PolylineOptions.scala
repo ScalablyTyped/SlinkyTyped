@@ -89,6 +89,8 @@ object PolylineOptions {
     @scala.inline
     def deleteGeodesic: Self = this.set("geodesic", js.undefined)
     @scala.inline
+    def setIconsVarargs(value: IconSequence*): Self = this.set("icons", js.Array(value :_*))
+    @scala.inline
     def setIcons(value: js.Array[IconSequence]): Self = this.set("icons", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIcons: Self = this.set("icons", js.undefined)
@@ -96,6 +98,8 @@ object PolylineOptions {
     def setMap(value: Map[Element]): Self = this.set("map", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMap: Self = this.set("map", js.undefined)
+    @scala.inline
+    def setPathVarargs(value: (LatLng | LatLngLiteral)*): Self = this.set("path", js.Array(value :_*))
     @scala.inline
     def setPath(value: MVCArray[LatLng] | (js.Array[LatLng | LatLngLiteral])): Self = this.set("path", value.asInstanceOf[js.Any])
     @scala.inline

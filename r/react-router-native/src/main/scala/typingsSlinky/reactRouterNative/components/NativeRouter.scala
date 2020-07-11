@@ -19,6 +19,8 @@ object NativeRouter {
     @scala.inline
     def getUserConfirmation(value: js.Function): this.type = set("getUserConfirmation", value.asInstanceOf[js.Any])
     @scala.inline
+    def initialEntriesVarargs(value: String*): this.type = set("initialEntries", js.Array(value :_*))
+    @scala.inline
     def initialEntries(value: js.Array[String]): this.type = set("initialEntries", value.asInstanceOf[js.Any])
     @scala.inline
     def initialIndex(value: Double): this.type = set("initialIndex", value.asInstanceOf[js.Any])

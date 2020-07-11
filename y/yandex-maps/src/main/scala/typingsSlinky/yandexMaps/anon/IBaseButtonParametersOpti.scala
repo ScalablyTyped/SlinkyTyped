@@ -60,6 +60,8 @@ object IBaseButtonParametersOpti {
     @scala.inline
     def deleteLayout: Self = this.set("layout", js.undefined)
     @scala.inline
+    def setMaxWidthVarargs(value: (js.Array[Double] | Double)*): Self = this.set("maxWidth", js.Array(value :_*))
+    @scala.inline
     def setMaxWidth(value: (js.Array[js.Array[Double] | Double]) | Double): Self = this.set("maxWidth", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMaxWidth: Self = this.set("maxWidth", js.undefined)

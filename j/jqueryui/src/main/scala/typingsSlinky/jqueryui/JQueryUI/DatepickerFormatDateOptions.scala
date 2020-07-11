@@ -29,17 +29,25 @@ object DatepickerFormatDateOptions {
         x
     }
     @scala.inline
+    def setDayNamesVarargs(value: String*): Self = this.set("dayNames", js.Array(value :_*))
+    @scala.inline
     def setDayNames(value: js.Array[String]): Self = this.set("dayNames", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDayNames: Self = this.set("dayNames", js.undefined)
+    @scala.inline
+    def setDayNamesShortVarargs(value: String*): Self = this.set("dayNamesShort", js.Array(value :_*))
     @scala.inline
     def setDayNamesShort(value: js.Array[String]): Self = this.set("dayNamesShort", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDayNamesShort: Self = this.set("dayNamesShort", js.undefined)
     @scala.inline
+    def setMonthNamesVarargs(value: String*): Self = this.set("monthNames", js.Array(value :_*))
+    @scala.inline
     def setMonthNames(value: js.Array[String]): Self = this.set("monthNames", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMonthNames: Self = this.set("monthNames", js.undefined)
+    @scala.inline
+    def setMonthNamesShortVarargs(value: String*): Self = this.set("monthNamesShort", js.Array(value :_*))
     @scala.inline
     def setMonthNamesShort(value: js.Array[String]): Self = this.set("monthNamesShort", value.asInstanceOf[js.Any])
     @scala.inline

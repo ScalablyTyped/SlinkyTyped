@@ -75,6 +75,8 @@ object CallFrame {
     @scala.inline
     def setLocation(value: Location): Self = this.set("location", value.asInstanceOf[js.Any])
     @scala.inline
+    def setScopeChainVarargs(value: Scope*): Self = this.set("scopeChain", js.Array(value :_*))
+    @scala.inline
     def setScopeChain(value: js.Array[Scope]): Self = this.set("scopeChain", value.asInstanceOf[js.Any])
     @scala.inline
     def setThis(value: RemoteObject): Self = this.set("this", value.asInstanceOf[js.Any])

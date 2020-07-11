@@ -49,6 +49,8 @@ object GetPhotosParamType {
     @scala.inline
     def deleteGroupTypes: Self = this.set("groupTypes", js.undefined)
     @scala.inline
+    def setMimeTypesVarargs(value: String*): Self = this.set("mimeTypes", js.Array(value :_*))
+    @scala.inline
     def setMimeTypes(value: js.Array[String]): Self = this.set("mimeTypes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMimeTypes: Self = this.set("mimeTypes", js.undefined)

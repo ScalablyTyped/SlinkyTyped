@@ -71,6 +71,8 @@ object R3QueryMetadata {
     @scala.inline
     def setFirst(value: Boolean): Self = this.set("first", value.asInstanceOf[js.Any])
     @scala.inline
+    def setPredicateVarargs(value: String*): Self = this.set("predicate", js.Array(value :_*))
+    @scala.inline
     def setPredicate(value: Expression | js.Array[String]): Self = this.set("predicate", value.asInstanceOf[js.Any])
     @scala.inline
     def setPropertyName(value: String): Self = this.set("propertyName", value.asInstanceOf[js.Any])

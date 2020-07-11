@@ -81,6 +81,8 @@ class SharedBuilder_ListItemProps_1246570549 (val args: js.Array[js.Any])
   @scala.inline
   def accessKey(value: String): this.type = set("accessKey", value.asInstanceOf[js.Any])
   @scala.inline
+  def actionsVarargs(value: ReactElement*): this.type = set("actions", js.Array(value :_*))
+  @scala.inline
   def actions(value: js.Array[ReactElement]): this.type = set("actions", value.asInstanceOf[js.Any])
   @scala.inline
   def `aria-activedescendant`(value: String): this.type = set("aria-activedescendant", value.asInstanceOf[js.Any])
@@ -200,6 +202,8 @@ class SharedBuilder_ListItemProps_1246570549 (val args: js.Array[js.Any])
   def datatype(value: String): this.type = set("datatype", value.asInstanceOf[js.Any])
   @scala.inline
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+  @scala.inline
+  def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
   @scala.inline
   def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
   @scala.inline

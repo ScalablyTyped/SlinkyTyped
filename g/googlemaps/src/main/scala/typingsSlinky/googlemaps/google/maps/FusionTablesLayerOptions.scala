@@ -49,6 +49,8 @@ object FusionTablesLayerOptions {
     @scala.inline
     def deleteQuery: Self = this.set("query", js.undefined)
     @scala.inline
+    def setStylesVarargs(value: FusionTablesStyle*): Self = this.set("styles", js.Array(value :_*))
+    @scala.inline
     def setStyles(value: js.Array[FusionTablesStyle]): Self = this.set("styles", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStyles: Self = this.set("styles", js.undefined)

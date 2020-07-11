@@ -106,6 +106,8 @@ object PartialPickPropsscenenavi {
     @scala.inline
     def deleteScene: Self = this.set("scene", js.undefined)
     @scala.inline
+    def setScenesVarargs(value: Scene*): Self = this.set("scenes", js.Array(value :_*))
+    @scala.inline
     def setScenes(value: js.Array[Scene]): Self = this.set("scenes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteScenes: Self = this.set("scenes", js.undefined)

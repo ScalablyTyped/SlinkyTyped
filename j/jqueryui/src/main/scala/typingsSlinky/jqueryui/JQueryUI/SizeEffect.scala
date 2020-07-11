@@ -28,6 +28,8 @@ object SizeEffect {
         x
     }
     @scala.inline
+    def setOriginVarargs(value: String*): Self = this.set("origin", js.Array(value :_*))
+    @scala.inline
     def setOrigin(value: js.Array[String]): Self = this.set("origin", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOrigin: Self = this.set("origin", js.undefined)

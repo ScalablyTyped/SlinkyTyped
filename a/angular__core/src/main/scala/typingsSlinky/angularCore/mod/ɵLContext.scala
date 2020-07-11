@@ -63,6 +63,8 @@ object ɵLContext {
     @scala.inline
     def setComponentNull: Self = this.set("component", null)
     @scala.inline
+    def setDirectivesVarargs(value: js.Any*): Self = this.set("directives", js.Array(value :_*))
+    @scala.inline
     def setDirectives(value: js.Array[_]): Self = this.set("directives", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDirectives: Self = this.set("directives", js.undefined)

@@ -30,6 +30,8 @@ object ValueTextConfig {
         x
     }
     @scala.inline
+    def setFormatListVarargs(value: String*): Self = this.set("formatList", js.Array(value :_*))
+    @scala.inline
     def setFormatList(value: js.Array[String]): Self = this.set("formatList", value.asInstanceOf[js.Any])
     @scala.inline
     def setGenerateConfig(value: GenerateConfig[DateType]): Self = this.set("generateConfig", value.asInstanceOf[js.Any])

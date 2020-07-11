@@ -27,6 +27,8 @@ object ModuleWithComponentFactories {
         x
     }
     @scala.inline
+    def setComponentFactoriesVarargs(value: js.Object*): Self = this.set("componentFactories", js.Array(value :_*))
+    @scala.inline
     def setComponentFactories(value: js.Array[js.Object]): Self = this.set("componentFactories", value.asInstanceOf[js.Any])
     @scala.inline
     def setNgModuleFactory(value: js.Object): Self = this.set("ngModuleFactory", value.asInstanceOf[js.Any])

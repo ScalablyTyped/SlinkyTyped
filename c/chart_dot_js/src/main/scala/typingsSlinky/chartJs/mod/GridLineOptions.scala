@@ -43,6 +43,8 @@ object GridLineOptions {
         x
     }
     @scala.inline
+    def setBorderDashVarargs(value: Double*): Self = this.set("borderDash", js.Array(value :_*))
+    @scala.inline
     def setBorderDash(value: js.Array[Double]): Self = this.set("borderDash", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBorderDash: Self = this.set("borderDash", js.undefined)
@@ -54,6 +56,8 @@ object GridLineOptions {
     def setCircular(value: Boolean): Self = this.set("circular", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCircular: Self = this.set("circular", js.undefined)
+    @scala.inline
+    def setColorVarargs(value: String*): Self = this.set("color", js.Array(value :_*))
     @scala.inline
     def setColorCanvasPattern(value: CanvasPattern): Self = this.set("color", value.asInstanceOf[js.Any])
     @scala.inline
@@ -79,6 +83,8 @@ object GridLineOptions {
     @scala.inline
     def deleteDrawTicks: Self = this.set("drawTicks", js.undefined)
     @scala.inline
+    def setLineWidthVarargs(value: Double*): Self = this.set("lineWidth", js.Array(value :_*))
+    @scala.inline
     def setLineWidth(value: Double | js.Array[Double]): Self = this.set("lineWidth", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLineWidth: Self = this.set("lineWidth", js.undefined)
@@ -95,6 +101,8 @@ object GridLineOptions {
     @scala.inline
     def deleteZ: Self = this.set("z", js.undefined)
     @scala.inline
+    def setZeroLineBorderDashVarargs(value: Double*): Self = this.set("zeroLineBorderDash", js.Array(value :_*))
+    @scala.inline
     def setZeroLineBorderDash(value: js.Array[Double]): Self = this.set("zeroLineBorderDash", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteZeroLineBorderDash: Self = this.set("zeroLineBorderDash", js.undefined)
@@ -102,6 +110,8 @@ object GridLineOptions {
     def setZeroLineBorderDashOffset(value: Double): Self = this.set("zeroLineBorderDashOffset", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteZeroLineBorderDashOffset: Self = this.set("zeroLineBorderDashOffset", js.undefined)
+    @scala.inline
+    def setZeroLineColorVarargs(value: String*): Self = this.set("zeroLineColor", js.Array(value :_*))
     @scala.inline
     def setZeroLineColorCanvasPattern(value: CanvasPattern): Self = this.set("zeroLineColor", value.asInstanceOf[js.Any])
     @scala.inline

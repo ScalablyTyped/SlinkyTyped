@@ -94,17 +94,29 @@ object TIcu {
         x
     }
     @scala.inline
+    def setCasesVarargs(value: js.Any*): Self = this.set("cases", js.Array(value :_*))
+    @scala.inline
     def setCases(value: js.Array[_]): Self = this.set("cases", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setChildIcusVarargs(value: js.Array[Double]*): Self = this.set("childIcus", js.Array(value :_*))
     @scala.inline
     def setChildIcus(value: js.Array[js.Array[Double]]): Self = this.set("childIcus", value.asInstanceOf[js.Any])
     @scala.inline
+    def setCreateVarargs(value: I18nMutateOpCodes*): Self = this.set("create", js.Array(value :_*))
+    @scala.inline
     def setCreate(value: js.Array[I18nMutateOpCodes]): Self = this.set("create", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRemoveVarargs(value: I18nMutateOpCodes*): Self = this.set("remove", js.Array(value :_*))
     @scala.inline
     def setRemove(value: js.Array[I18nMutateOpCodes]): Self = this.set("remove", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: IcuType): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
+    def setUpdateVarargs(value: I18nUpdateOpCodes*): Self = this.set("update", js.Array(value :_*))
+    @scala.inline
     def setUpdate(value: js.Array[I18nUpdateOpCodes]): Self = this.set("update", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVarsVarargs(value: Double*): Self = this.set("vars", js.Array(value :_*))
     @scala.inline
     def setVars(value: js.Array[Double]): Self = this.set("vars", value.asInstanceOf[js.Any])
   }

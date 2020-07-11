@@ -40,6 +40,8 @@ object RestartFrameReturnType {
         x
     }
     @scala.inline
+    def setCallFramesVarargs(value: CallFrame*): Self = this.set("callFrames", js.Array(value :_*))
+    @scala.inline
     def setCallFrames(value: js.Array[CallFrame]): Self = this.set("callFrames", value.asInstanceOf[js.Any])
     @scala.inline
     def setAsyncStackTrace(value: StackTrace): Self = this.set("asyncStackTrace", value.asInstanceOf[js.Any])

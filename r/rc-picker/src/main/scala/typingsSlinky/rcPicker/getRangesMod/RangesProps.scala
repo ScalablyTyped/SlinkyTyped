@@ -1,5 +1,6 @@
 package typingsSlinky.rcPicker.getRangesMod
 
+import typingsSlinky.rcPicker.anon.Label
 import typingsSlinky.rcPicker.interfaceMod.Components
 import typingsSlinky.rcPicker.interfaceMod.Locale
 import typingsSlinky.rcPicker.interfaceMod.RangeList
@@ -66,6 +67,8 @@ object RangesProps {
     def deleteOnOk: Self = this.set("onOk", js.undefined)
     @scala.inline
     def setOnOkNull: Self = this.set("onOk", null)
+    @scala.inline
+    def setRangeListVarargs(value: Label*): Self = this.set("rangeList", js.Array(value :_*))
     @scala.inline
     def setRangeList(value: RangeList): Self = this.set("rangeList", value.asInstanceOf[js.Any])
     @scala.inline

@@ -70,6 +70,8 @@ object TouchBarScrubberConstructorOptions {
     @scala.inline
     def setHighlight(value: Double => Unit): Self = this.set("highlight", js.Any.fromFunction1(value))
     @scala.inline
+    def setItemsVarargs(value: ScrubberItem*): Self = this.set("items", js.Array(value :_*))
+    @scala.inline
     def setItems(value: js.Array[ScrubberItem]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline
     def setMode(value: String): Self = this.set("mode", value.asInstanceOf[js.Any])

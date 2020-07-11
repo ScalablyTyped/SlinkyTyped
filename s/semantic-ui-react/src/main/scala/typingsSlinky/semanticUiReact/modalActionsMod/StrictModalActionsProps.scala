@@ -6,6 +6,7 @@ import slinky.web.SyntheticMouseEvent
 import typingsSlinky.semanticUiReact.buttonButtonMod.ButtonProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,6 +50,8 @@ object StrictModalActionsProps {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setActionsVarargs(value: SemanticShorthandItem[ButtonProps]*): Self = this.set("actions", js.Array(value :_*))
     @scala.inline
     def setActions(value: SemanticShorthandCollection[ButtonProps]): Self = this.set("actions", value.asInstanceOf[js.Any])
     @scala.inline

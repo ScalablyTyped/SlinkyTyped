@@ -35,7 +35,11 @@ object RcSelect {
     @scala.inline
     def defaultActiveFirstOption(value: Boolean): this.type = set("defaultActiveFirstOption", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultLabelVarargs(value: String*): this.type = set("defaultLabel", js.Array(value :_*))
+    @scala.inline
     def defaultLabel(value: String | js.Array[String]): this.type = set("defaultLabel", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
     @scala.inline
     def defaultValue(value: String | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -93,6 +97,8 @@ object RcSelect {
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
+    def showActionVarargs(value: String*): this.type = set("showAction", js.Array(value :_*))
+    @scala.inline
     def showAction(value: js.Array[String]): this.type = set("showAction", value.asInstanceOf[js.Any])
     @scala.inline
     def showArrow(value: Boolean): this.type = set("showArrow", value.asInstanceOf[js.Any])
@@ -101,9 +107,13 @@ object RcSelect {
     @scala.inline
     def tags(value: Boolean): this.type = set("tags", value.asInstanceOf[js.Any])
     @scala.inline
+    def tokenSeparatorsVarargs(value: String*): this.type = set("tokenSeparators", js.Array(value :_*))
+    @scala.inline
     def tokenSeparators(value: js.Array[String]): this.type = set("tokenSeparators", value.asInstanceOf[js.Any])
     @scala.inline
     def transitionName(value: String): this.type = set("transitionName", value.asInstanceOf[js.Any])
+    @scala.inline
+    def valueVarargs(value: String*): this.type = set("value", js.Array(value :_*))
     @scala.inline
     def value(value: String | js.Array[String]): this.type = set("value", value.asInstanceOf[js.Any])
   }

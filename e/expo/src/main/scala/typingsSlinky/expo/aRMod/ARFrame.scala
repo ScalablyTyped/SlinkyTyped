@@ -32,6 +32,8 @@ object ARFrame {
     @scala.inline
     def setTimestamp(value: Double): Self = this.set("timestamp", value.asInstanceOf[js.Any])
     @scala.inline
+    def setAnchorsVarargs(value: Anchor*): Self = this.set("anchors", js.Array(value :_*))
+    @scala.inline
     def setAnchors(value: js.Array[Anchor]): Self = this.set("anchors", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAnchors: Self = this.set("anchors", js.undefined)
@@ -49,6 +51,8 @@ object ARFrame {
     def deleteLightEstimation: Self = this.set("lightEstimation", js.undefined)
     @scala.inline
     def setLightEstimationNull: Self = this.set("lightEstimation", null)
+    @scala.inline
+    def setRawFeaturePointsVarargs(value: RawFeaturePoint*): Self = this.set("rawFeaturePoints", js.Array(value :_*))
     @scala.inline
     def setRawFeaturePoints(value: js.Array[RawFeaturePoint]): Self = this.set("rawFeaturePoints", value.asInstanceOf[js.Any])
     @scala.inline

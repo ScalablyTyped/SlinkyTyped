@@ -47,6 +47,8 @@ object SetTypings {
     @scala.inline
     def setTypeAcquisition(value: TypeAcquisition): Self = this.set("typeAcquisition", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTypingsVarargs(value: String*): Self = this.set("typings", js.Array(value :_*))
+    @scala.inline
     def setTypings(value: js.Array[String]): Self = this.set("typings", value.asInstanceOf[js.Any])
     @scala.inline
     def setUnresolvedImports(value: SortedReadonlyArray[String]): Self = this.set("unresolvedImports", value.asInstanceOf[js.Any])

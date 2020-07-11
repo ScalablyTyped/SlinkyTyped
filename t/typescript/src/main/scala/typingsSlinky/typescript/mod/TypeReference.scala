@@ -61,6 +61,8 @@ object TypeReference {
     @scala.inline
     def deleteNode: Self = this.set("node", js.undefined)
     @scala.inline
+    def setTypeArgumentsVarargs(value: Type*): Self = this.set("typeArguments", js.Array(value :_*))
+    @scala.inline
     def setTypeArguments(value: js.Array[Type]): Self = this.set("typeArguments", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTypeArguments: Self = this.set("typeArguments", js.undefined)

@@ -3,6 +3,7 @@ package typingsSlinky.semanticUiReact.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.genericMod.SemanticVERTICALALIGNMENTS
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.center
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
@@ -28,6 +29,8 @@ object TableRow {
     def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
     @scala.inline
     def cellAs(value: js.Any): this.type = set("cellAs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def cellsVarargs(value: SemanticShorthandItem[TableCellProps]*): this.type = set("cells", js.Array(value :_*))
     @scala.inline
     def cells(value: SemanticShorthandCollection[TableCellProps]): this.type = set("cells", value.asInstanceOf[js.Any])
     @scala.inline

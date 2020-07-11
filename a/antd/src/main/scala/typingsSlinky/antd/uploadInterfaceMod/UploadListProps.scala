@@ -62,6 +62,8 @@ object UploadListProps {
     @scala.inline
     def deleteIsImageUrl: Self = this.set("isImageUrl", js.undefined)
     @scala.inline
+    def setItemsVarargs(value: UploadFile[T]*): Self = this.set("items", js.Array(value :_*))
+    @scala.inline
     def setItems(value: js.Array[UploadFile[T]]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteItems: Self = this.set("items", js.undefined)

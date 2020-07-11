@@ -83,13 +83,19 @@ class SharedBuilder_TreeSelectProps_1571959893[R <: js.Object, ValueType] (val a
   @scala.inline
   def treeCheckable(value: Boolean | ReactElement): this.type = set("treeCheckable", value.asInstanceOf[js.Any])
   @scala.inline
+  def treeDataVarargs(value: DataNode*): this.type = set("treeData", js.Array(value :_*))
+  @scala.inline
   def treeData(value: js.Array[DataNode]): this.type = set("treeData", value.asInstanceOf[js.Any])
   @scala.inline
   def treeDataSimpleMode(value: Boolean | SimpleModeConfig): this.type = set("treeDataSimpleMode", value.asInstanceOf[js.Any])
   @scala.inline
   def treeDefaultExpandAll(value: Boolean): this.type = set("treeDefaultExpandAll", value.asInstanceOf[js.Any])
   @scala.inline
+  def treeDefaultExpandedKeysVarargs(value: Key*): this.type = set("treeDefaultExpandedKeys", js.Array(value :_*))
+  @scala.inline
   def treeDefaultExpandedKeys(value: js.Array[Key]): this.type = set("treeDefaultExpandedKeys", value.asInstanceOf[js.Any])
+  @scala.inline
+  def treeExpandedKeysVarargs(value: Key*): this.type = set("treeExpandedKeys", js.Array(value :_*))
   @scala.inline
   def treeExpandedKeys(value: js.Array[Key]): this.type = set("treeExpandedKeys", value.asInstanceOf[js.Any])
   @scala.inline
@@ -98,6 +104,8 @@ class SharedBuilder_TreeSelectProps_1571959893[R <: js.Object, ValueType] (val a
   ): this.type = set("treeIcon", value.asInstanceOf[js.Any])
   @scala.inline
   def treeLine(value: Boolean): this.type = set("treeLine", value.asInstanceOf[js.Any])
+  @scala.inline
+  def treeLoadedKeysVarargs(value: Key*): this.type = set("treeLoadedKeys", js.Array(value :_*))
   @scala.inline
   def treeLoadedKeys(value: js.Array[Key]): this.type = set("treeLoadedKeys", value.asInstanceOf[js.Any])
   @scala.inline

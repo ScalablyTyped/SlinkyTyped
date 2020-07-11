@@ -88,13 +88,21 @@ object DirectionsRoute {
     @scala.inline
     def setFare(value: TransitFare): Self = this.set("fare", value.asInstanceOf[js.Any])
     @scala.inline
+    def setLegsVarargs(value: DirectionsLeg*): Self = this.set("legs", js.Array(value :_*))
+    @scala.inline
     def setLegs(value: js.Array[DirectionsLeg]): Self = this.set("legs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOverview_pathVarargs(value: LatLng*): Self = this.set("overview_path", js.Array(value :_*))
     @scala.inline
     def setOverview_path(value: js.Array[LatLng]): Self = this.set("overview_path", value.asInstanceOf[js.Any])
     @scala.inline
     def setOverview_polyline(value: String): Self = this.set("overview_polyline", value.asInstanceOf[js.Any])
     @scala.inline
+    def setWarningsVarargs(value: String*): Self = this.set("warnings", js.Array(value :_*))
+    @scala.inline
     def setWarnings(value: js.Array[String]): Self = this.set("warnings", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setWaypoint_orderVarargs(value: Double*): Self = this.set("waypoint_order", js.Array(value :_*))
     @scala.inline
     def setWaypoint_order(value: js.Array[Double]): Self = this.set("waypoint_order", value.asInstanceOf[js.Any])
   }

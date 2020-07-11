@@ -67,9 +67,15 @@ object MomentParsingFlags {
     @scala.inline
     def setOverflow(value: Double): Self = this.set("overflow", value.asInstanceOf[js.Any])
     @scala.inline
+    def setParsedDatePartsVarargs(value: js.Any*): Self = this.set("parsedDateParts", js.Array(value :_*))
+    @scala.inline
     def setParsedDateParts(value: js.Array[_]): Self = this.set("parsedDateParts", value.asInstanceOf[js.Any])
     @scala.inline
+    def setUnusedInputVarargs(value: String*): Self = this.set("unusedInput", js.Array(value :_*))
+    @scala.inline
     def setUnusedInput(value: js.Array[String]): Self = this.set("unusedInput", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setUnusedTokensVarargs(value: String*): Self = this.set("unusedTokens", js.Array(value :_*))
     @scala.inline
     def setUnusedTokens(value: js.Array[String]): Self = this.set("unusedTokens", value.asInstanceOf[js.Any])
     @scala.inline

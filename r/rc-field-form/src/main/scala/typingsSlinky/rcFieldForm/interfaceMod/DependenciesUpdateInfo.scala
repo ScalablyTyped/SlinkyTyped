@@ -34,6 +34,8 @@ object DependenciesUpdateInfo {
         x
     }
     @scala.inline
+    def setRelatedFieldsVarargs(value: InternalNamePath*): Self = this.set("relatedFields", js.Array(value :_*))
+    @scala.inline
     def setRelatedFields(value: js.Array[InternalNamePath]): Self = this.set("relatedFields", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: dependenciesUpdate): Self = this.set("type", value.asInstanceOf[js.Any])

@@ -269,6 +269,8 @@ object ScrollViewProps {
     @scala.inline
     def deleteSnapToInterval: Self = this.set("snapToInterval", js.undefined)
     @scala.inline
+    def setSnapToOffsetsVarargs(value: Double*): Self = this.set("snapToOffsets", js.Array(value :_*))
+    @scala.inline
     def setSnapToOffsets(value: js.Array[Double]): Self = this.set("snapToOffsets", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSnapToOffsets: Self = this.set("snapToOffsets", js.undefined)

@@ -42,13 +42,19 @@ object AssetMetadata {
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def setScalesVarargs(value: Double*): Self = this.set("scales", js.Array(value :_*))
+    @scala.inline
     def setScales(value: js.Array[Double]): Self = this.set("scales", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
+    def setFileHashesVarargs(value: String*): Self = this.set("fileHashes", js.Array(value :_*))
+    @scala.inline
     def setFileHashes(value: js.Array[String]): Self = this.set("fileHashes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFileHashes: Self = this.set("fileHashes", js.undefined)
+    @scala.inline
+    def setFileUrisVarargs(value: String*): Self = this.set("fileUris", js.Array(value :_*))
     @scala.inline
     def setFileUris(value: js.Array[String]): Self = this.set("fileUris", value.asInstanceOf[js.Any])
     @scala.inline

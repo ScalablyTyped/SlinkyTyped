@@ -63,6 +63,8 @@ object DialogOptions {
     @scala.inline
     def deleteAutoOpen: Self = this.set("autoOpen", js.undefined)
     @scala.inline
+    def setButtonsVarargs(value: DialogButtonOptions*): Self = this.set("buttons", js.Array(value :_*))
+    @scala.inline
     def setButtons(
       value: (StringDictionary[js.Function1[/* event */ js.UndefOr[Event], Unit]]) | js.Array[DialogButtonOptions]
     ): Self = this.set("buttons", value.asInstanceOf[js.Any])

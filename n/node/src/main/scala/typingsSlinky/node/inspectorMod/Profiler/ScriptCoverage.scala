@@ -41,6 +41,8 @@ object ScriptCoverage {
         x
     }
     @scala.inline
+    def setFunctionsVarargs(value: FunctionCoverage*): Self = this.set("functions", js.Array(value :_*))
+    @scala.inline
     def setFunctions(value: js.Array[FunctionCoverage]): Self = this.set("functions", value.asInstanceOf[js.Any])
     @scala.inline
     def setScriptId(value: ScriptId): Self = this.set("scriptId", value.asInstanceOf[js.Any])

@@ -95,6 +95,8 @@ object WebSocketSubjectConfig {
     @scala.inline
     def deleteOpenObserver: Self = this.set("openObserver", js.undefined)
     @scala.inline
+    def setProtocolVarargs(value: String*): Self = this.set("protocol", js.Array(value :_*))
+    @scala.inline
     def setProtocol(value: String | js.Array[String]): Self = this.set("protocol", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteProtocol: Self = this.set("protocol", js.undefined)

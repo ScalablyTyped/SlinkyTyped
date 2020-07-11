@@ -86,6 +86,8 @@ object RateProps {
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
     @scala.inline
+    def setTooltipsVarargs(value: String*): Self = this.set("tooltips", js.Array(value :_*))
+    @scala.inline
     def setTooltips(value: js.Array[String]): Self = this.set("tooltips", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTooltips: Self = this.set("tooltips", js.undefined)

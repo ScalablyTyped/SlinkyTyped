@@ -44,6 +44,8 @@ object FunctionCoverage {
     @scala.inline
     def setIsBlockCoverage(value: Boolean): Self = this.set("isBlockCoverage", value.asInstanceOf[js.Any])
     @scala.inline
+    def setRangesVarargs(value: CoverageRange*): Self = this.set("ranges", js.Array(value :_*))
+    @scala.inline
     def setRanges(value: js.Array[CoverageRange]): Self = this.set("ranges", value.asInstanceOf[js.Any])
   }
   

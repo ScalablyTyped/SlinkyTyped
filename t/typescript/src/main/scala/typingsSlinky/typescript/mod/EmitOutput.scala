@@ -29,6 +29,8 @@ object EmitOutput {
     @scala.inline
     def setEmitSkipped(value: Boolean): Self = this.set("emitSkipped", value.asInstanceOf[js.Any])
     @scala.inline
+    def setOutputFilesVarargs(value: OutputFile*): Self = this.set("outputFiles", js.Array(value :_*))
+    @scala.inline
     def setOutputFiles(value: js.Array[OutputFile]): Self = this.set("outputFiles", value.asInstanceOf[js.Any])
   }
   

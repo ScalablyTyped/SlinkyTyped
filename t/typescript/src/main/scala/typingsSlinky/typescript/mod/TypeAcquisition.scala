@@ -43,9 +43,13 @@ object TypeAcquisition {
     @scala.inline
     def deleteEnableAutoDiscovery: Self = this.set("enableAutoDiscovery", js.undefined)
     @scala.inline
+    def setExcludeVarargs(value: java.lang.String*): Self = this.set("exclude", js.Array(value :_*))
+    @scala.inline
     def setExclude(value: js.Array[java.lang.String]): Self = this.set("exclude", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExclude: Self = this.set("exclude", js.undefined)
+    @scala.inline
+    def setIncludeVarargs(value: java.lang.String*): Self = this.set("include", js.Array(value :_*))
     @scala.inline
     def setInclude(value: js.Array[java.lang.String]): Self = this.set("include", value.asInstanceOf[js.Any])
     @scala.inline

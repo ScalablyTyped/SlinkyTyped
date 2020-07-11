@@ -62,9 +62,13 @@ object MenuProps {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
+    def setDefaultOpenKeysVarargs(value: String*): Self = this.set("defaultOpenKeys", js.Array(value :_*))
+    @scala.inline
     def setDefaultOpenKeys(value: js.Array[String]): Self = this.set("defaultOpenKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultOpenKeys: Self = this.set("defaultOpenKeys", js.undefined)
+    @scala.inline
+    def setDefaultSelectedKeysVarargs(value: String*): Self = this.set("defaultSelectedKeys", js.Array(value :_*))
     @scala.inline
     def setDefaultSelectedKeys(value: js.Array[String]): Self = this.set("defaultSelectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -130,6 +134,8 @@ object MenuProps {
     @scala.inline
     def deleteOpenAnimation: Self = this.set("openAnimation", js.undefined)
     @scala.inline
+    def setOpenKeysVarargs(value: String*): Self = this.set("openKeys", js.Array(value :_*))
+    @scala.inline
     def setOpenKeys(value: js.Array[String]): Self = this.set("openKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOpenKeys: Self = this.set("openKeys", js.undefined)
@@ -151,6 +157,8 @@ object MenuProps {
     def setSelectable(value: Boolean): Self = this.set("selectable", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSelectable: Self = this.set("selectable", js.undefined)
+    @scala.inline
+    def setSelectedKeysVarargs(value: String*): Self = this.set("selectedKeys", js.Array(value :_*))
     @scala.inline
     def setSelectedKeys(value: js.Array[String]): Self = this.set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline

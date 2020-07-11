@@ -29,6 +29,8 @@ object DocumentHighlights {
     @scala.inline
     def setFileName(value: java.lang.String): Self = this.set("fileName", value.asInstanceOf[js.Any])
     @scala.inline
+    def setHighlightSpansVarargs(value: HighlightSpan*): Self = this.set("highlightSpans", js.Array(value :_*))
+    @scala.inline
     def setHighlightSpans(value: js.Array[HighlightSpan]): Self = this.set("highlightSpans", value.asInstanceOf[js.Any])
   }
   

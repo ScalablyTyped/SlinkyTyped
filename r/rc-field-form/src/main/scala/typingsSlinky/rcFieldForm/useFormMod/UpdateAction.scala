@@ -32,6 +32,8 @@ object UpdateAction {
         x
     }
     @scala.inline
+    def setNamePathVarargs(value: (String | Double)*): Self = this.set("namePath", js.Array(value :_*))
+    @scala.inline
     def setNamePath(value: InternalNamePath): Self = this.set("namePath", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: updateValue): Self = this.set("type", value.asInstanceOf[js.Any])

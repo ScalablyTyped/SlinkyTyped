@@ -42,6 +42,8 @@ object AutocompleteOptions {
     @scala.inline
     def deleteComponentRestrictions: Self = this.set("componentRestrictions", js.undefined)
     @scala.inline
+    def setFieldsVarargs(value: String*): Self = this.set("fields", js.Array(value :_*))
+    @scala.inline
     def setFields(value: js.Array[String]): Self = this.set("fields", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFields: Self = this.set("fields", js.undefined)
@@ -57,6 +59,8 @@ object AutocompleteOptions {
     def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
+    @scala.inline
+    def setTypesVarargs(value: String*): Self = this.set("types", js.Array(value :_*))
     @scala.inline
     def setTypes(value: js.Array[String]): Self = this.set("types", value.asInstanceOf[js.Any])
     @scala.inline

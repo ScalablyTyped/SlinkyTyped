@@ -41,6 +41,8 @@ object ResolvedReflectiveProvider {
     @scala.inline
     def setMultiProvider(value: Boolean): Self = this.set("multiProvider", value.asInstanceOf[js.Any])
     @scala.inline
+    def setResolvedFactoriesVarargs(value: ResolvedReflectiveFactory*): Self = this.set("resolvedFactories", js.Array(value :_*))
+    @scala.inline
     def setResolvedFactories(value: js.Array[ResolvedReflectiveFactory]): Self = this.set("resolvedFactories", value.asInstanceOf[js.Any])
   }
   

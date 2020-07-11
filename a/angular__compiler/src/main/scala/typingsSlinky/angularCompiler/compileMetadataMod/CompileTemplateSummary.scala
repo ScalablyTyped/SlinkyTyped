@@ -30,9 +30,15 @@ object CompileTemplateSummary {
         x
     }
     @scala.inline
+    def setNgContentSelectorsVarargs(value: String*): Self = this.set("ngContentSelectors", js.Array(value :_*))
+    @scala.inline
     def setNgContentSelectors(value: js.Array[String]): Self = this.set("ngContentSelectors", value.asInstanceOf[js.Any])
     @scala.inline
+    def setStylesVarargs(value: String*): Self = this.set("styles", js.Array(value :_*))
+    @scala.inline
     def setStyles(value: js.Array[String]): Self = this.set("styles", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAnimationsVarargs(value: js.Any*): Self = this.set("animations", js.Array(value :_*))
     @scala.inline
     def setAnimations(value: js.Array[_]): Self = this.set("animations", value.asInstanceOf[js.Any])
     @scala.inline

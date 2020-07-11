@@ -60,6 +60,8 @@ object BreadcrumbProps {
     @scala.inline
     def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
     @scala.inline
+    def setRoutesVarargs(value: Route*): Self = this.set("routes", js.Array(value :_*))
+    @scala.inline
     def setRoutes(value: js.Array[Route]): Self = this.set("routes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRoutes: Self = this.set("routes", js.undefined)

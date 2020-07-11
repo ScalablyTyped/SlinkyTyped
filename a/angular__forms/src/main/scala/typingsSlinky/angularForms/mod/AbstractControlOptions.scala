@@ -44,6 +44,8 @@ object AbstractControlOptions {
         x
     }
     @scala.inline
+    def setAsyncValidatorsVarargs(value: AsyncValidatorFn*): Self = this.set("asyncValidators", js.Array(value :_*))
+    @scala.inline
     def setAsyncValidatorsFunction1(
       value: /* control */ AbstractControl => (js.Promise[ValidationErrors | Null]) | (Observable_[ValidationErrors | Null])
     ): Self = this.set("asyncValidators", js.Any.fromFunction1(value))
@@ -57,6 +59,8 @@ object AbstractControlOptions {
     def setUpdateOn(value: change | blur | submit): Self = this.set("updateOn", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUpdateOn: Self = this.set("updateOn", js.undefined)
+    @scala.inline
+    def setValidatorsVarargs(value: ValidatorFn*): Self = this.set("validators", js.Array(value :_*))
     @scala.inline
     def setValidatorsFunction1(value: /* control */ AbstractControl => ValidationErrors | Null): Self = this.set("validators", js.Any.fromFunction1(value))
     @scala.inline

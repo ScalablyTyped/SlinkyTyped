@@ -42,9 +42,13 @@ object RcTree {
     @scala.inline
     def checkable(value: Boolean | ReactElement): this.type = set("checkable", value.asInstanceOf[js.Any])
     @scala.inline
+    def checkedKeysVarargs(value: String*): this.type = set("checkedKeys", js.Array(value :_*))
+    @scala.inline
     def checkedKeys(value: js.Array[String] | Checked): this.type = set("checkedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultCheckedKeysVarargs(value: String*): this.type = set("defaultCheckedKeys", js.Array(value :_*))
     @scala.inline
     def defaultCheckedKeys(value: js.Array[String]): this.type = set("defaultCheckedKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -52,13 +56,19 @@ object RcTree {
     @scala.inline
     def defaultExpandParent(value: Boolean): this.type = set("defaultExpandParent", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultExpandedKeysVarargs(value: String*): this.type = set("defaultExpandedKeys", js.Array(value :_*))
+    @scala.inline
     def defaultExpandedKeys(value: js.Array[String]): this.type = set("defaultExpandedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSelectedKeysVarargs(value: String*): this.type = set("defaultSelectedKeys", js.Array(value :_*))
     @scala.inline
     def defaultSelectedKeys(value: js.Array[String]): this.type = set("defaultSelectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
     def draggable(value: Boolean): this.type = set("draggable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandedKeysVarargs(value: String*): this.type = set("expandedKeys", js.Array(value :_*))
     @scala.inline
     def expandedKeys(value: js.Array[String]): this.type = set("expandedKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -101,6 +111,8 @@ object RcTree {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
     @scala.inline
     def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline

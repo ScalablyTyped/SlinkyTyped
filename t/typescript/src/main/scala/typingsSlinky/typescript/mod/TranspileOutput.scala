@@ -30,6 +30,8 @@ object TranspileOutput {
     @scala.inline
     def setOutputText(value: java.lang.String): Self = this.set("outputText", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDiagnosticsVarargs(value: Diagnostic*): Self = this.set("diagnostics", js.Array(value :_*))
+    @scala.inline
     def setDiagnostics(value: js.Array[Diagnostic]): Self = this.set("diagnostics", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDiagnostics: Self = this.set("diagnostics", js.undefined)

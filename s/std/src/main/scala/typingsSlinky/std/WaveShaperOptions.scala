@@ -29,6 +29,8 @@ object WaveShaperOptions {
     @scala.inline
     def setCurveFloat32Array(value: js.typedarray.Float32Array): Self = this.set("curve", value.asInstanceOf[js.Any])
     @scala.inline
+    def setCurveVarargs(value: Double*): Self = this.set("curve", js.Array(value :_*))
+    @scala.inline
     def setCurve(value: js.Array[Double] | js.typedarray.Float32Array): Self = this.set("curve", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCurve: Self = this.set("curve", js.undefined)

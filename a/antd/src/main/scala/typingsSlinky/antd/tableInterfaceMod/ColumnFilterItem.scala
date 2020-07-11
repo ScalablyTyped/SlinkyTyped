@@ -31,6 +31,8 @@ object ColumnFilterItem {
     @scala.inline
     def setValue(value: String | Double | Boolean): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
+    def setChildrenVarargs(value: ColumnFilterItem*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: js.Array[ColumnFilterItem]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)

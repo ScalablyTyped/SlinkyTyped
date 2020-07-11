@@ -59,6 +59,8 @@ object R3ComponentMetadataFacade {
         x
     }
     @scala.inline
+    def setDirectivesVarargs(value: Selector*): Self = this.set("directives", js.Array(value :_*))
+    @scala.inline
     def setDirectives(value: js.Array[Selector]): Self = this.set("directives", value.asInstanceOf[js.Any])
     @scala.inline
     def setEncapsulation(value: ViewEncapsulation): Self = this.set("encapsulation", value.asInstanceOf[js.Any])
@@ -67,9 +69,13 @@ object R3ComponentMetadataFacade {
     @scala.inline
     def setPreserveWhitespaces(value: Boolean): Self = this.set("preserveWhitespaces", value.asInstanceOf[js.Any])
     @scala.inline
+    def setStylesVarargs(value: String*): Self = this.set("styles", js.Array(value :_*))
+    @scala.inline
     def setStyles(value: js.Array[String]): Self = this.set("styles", value.asInstanceOf[js.Any])
     @scala.inline
     def setTemplate(value: String): Self = this.set("template", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAnimationsVarargs(value: js.Any*): Self = this.set("animations", js.Array(value :_*))
     @scala.inline
     def setAnimations(value: js.Array[_]): Self = this.set("animations", value.asInstanceOf[js.Any])
     @scala.inline
@@ -82,6 +88,8 @@ object R3ComponentMetadataFacade {
     def setInterpolation(value: js.Tuple2[String, String]): Self = this.set("interpolation", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInterpolation: Self = this.set("interpolation", js.undefined)
+    @scala.inline
+    def setViewProvidersVarargs(value: Provider*): Self = this.set("viewProviders", js.Array(value :_*))
     @scala.inline
     def setViewProviders(value: js.Array[Provider]): Self = this.set("viewProviders", value.asInstanceOf[js.Any])
     @scala.inline

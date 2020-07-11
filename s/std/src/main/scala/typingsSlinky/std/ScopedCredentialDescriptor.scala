@@ -59,6 +59,8 @@ object ScopedCredentialDescriptor {
     @scala.inline
     def setIdNull: Self = this.set("id", null)
     @scala.inline
+    def setTransportsVarargs(value: Transport*): Self = this.set("transports", js.Array(value :_*))
+    @scala.inline
     def setTransports(value: js.Array[Transport]): Self = this.set("transports", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTransports: Self = this.set("transports", js.undefined)

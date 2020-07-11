@@ -67,6 +67,8 @@ object RouteProps {
     @scala.inline
     def deleteLocation: Self = this.set("location", js.undefined)
     @scala.inline
+    def setPathVarargs(value: String*): Self = this.set("path", js.Array(value :_*))
+    @scala.inline
     def setPath(value: String | js.Array[String]): Self = this.set("path", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePath: Self = this.set("path", js.undefined)

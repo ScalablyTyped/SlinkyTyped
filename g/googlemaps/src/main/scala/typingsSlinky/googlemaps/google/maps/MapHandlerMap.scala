@@ -157,39 +157,75 @@ object MapHandlerMap {
         x
     }
     @scala.inline
+    def setBounds_changedVarargs(value: js.Any*): Self = this.set("bounds_changed", js.Array(value :_*))
+    @scala.inline
     def setBounds_changed(value: js.Array[js.Any]): Self = this.set("bounds_changed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCenter_changedVarargs(value: js.Any*): Self = this.set("center_changed", js.Array(value :_*))
     @scala.inline
     def setCenter_changed(value: js.Array[js.Any]): Self = this.set("center_changed", value.asInstanceOf[js.Any])
     @scala.inline
+    def setClickVarargs(value: (MouseEvent | IconMouseEvent)*): Self = this.set("click", js.Array(value :_*))
+    @scala.inline
     def setClick(value: js.Array[MouseEvent | IconMouseEvent]): Self = this.set("click", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDblclickVarargs(value: MouseEvent*): Self = this.set("dblclick", js.Array(value :_*))
     @scala.inline
     def setDblclick(value: js.Array[MouseEvent]): Self = this.set("dblclick", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDragVarargs(value: js.Any*): Self = this.set("drag", js.Array(value :_*))
+    @scala.inline
     def setDrag(value: js.Array[js.Any]): Self = this.set("drag", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDragendVarargs(value: js.Any*): Self = this.set("dragend", js.Array(value :_*))
     @scala.inline
     def setDragend(value: js.Array[js.Any]): Self = this.set("dragend", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDragstartVarargs(value: js.Any*): Self = this.set("dragstart", js.Array(value :_*))
+    @scala.inline
     def setDragstart(value: js.Array[js.Any]): Self = this.set("dragstart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHeading_changedVarargs(value: js.Any*): Self = this.set("heading_changed", js.Array(value :_*))
     @scala.inline
     def setHeading_changed(value: js.Array[js.Any]): Self = this.set("heading_changed", value.asInstanceOf[js.Any])
     @scala.inline
+    def setIdleVarargs(value: js.Any*): Self = this.set("idle", js.Array(value :_*))
+    @scala.inline
     def setIdle(value: js.Array[js.Any]): Self = this.set("idle", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMaptypeid_changedVarargs(value: js.Any*): Self = this.set("maptypeid_changed", js.Array(value :_*))
     @scala.inline
     def setMaptypeid_changed(value: js.Array[js.Any]): Self = this.set("maptypeid_changed", value.asInstanceOf[js.Any])
     @scala.inline
+    def setMousemoveVarargs(value: MouseEvent*): Self = this.set("mousemove", js.Array(value :_*))
+    @scala.inline
     def setMousemove(value: js.Array[MouseEvent]): Self = this.set("mousemove", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setMouseoutVarargs(value: MouseEvent*): Self = this.set("mouseout", js.Array(value :_*))
     @scala.inline
     def setMouseout(value: js.Array[MouseEvent]): Self = this.set("mouseout", value.asInstanceOf[js.Any])
     @scala.inline
+    def setMouseoverVarargs(value: MouseEvent*): Self = this.set("mouseover", js.Array(value :_*))
+    @scala.inline
     def setMouseover(value: js.Array[MouseEvent]): Self = this.set("mouseover", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setProjection_changedVarargs(value: js.Any*): Self = this.set("projection_changed", js.Array(value :_*))
     @scala.inline
     def setProjection_changed(value: js.Array[js.Any]): Self = this.set("projection_changed", value.asInstanceOf[js.Any])
     @scala.inline
+    def setRightclickVarargs(value: MouseEvent*): Self = this.set("rightclick", js.Array(value :_*))
+    @scala.inline
     def setRightclick(value: js.Array[MouseEvent]): Self = this.set("rightclick", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTilesloadedVarargs(value: js.Any*): Self = this.set("tilesloaded", js.Array(value :_*))
     @scala.inline
     def setTilesloaded(value: js.Array[js.Any]): Self = this.set("tilesloaded", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTilt_changedVarargs(value: js.Any*): Self = this.set("tilt_changed", js.Array(value :_*))
+    @scala.inline
     def setTilt_changed(value: js.Array[js.Any]): Self = this.set("tilt_changed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setZoom_changedVarargs(value: js.Any*): Self = this.set("zoom_changed", js.Array(value :_*))
     @scala.inline
     def setZoom_changed(value: js.Array[js.Any]): Self = this.set("zoom_changed", value.asInstanceOf[js.Any])
   }

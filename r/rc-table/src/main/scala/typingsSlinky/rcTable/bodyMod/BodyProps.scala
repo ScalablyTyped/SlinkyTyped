@@ -50,6 +50,8 @@ object BodyProps {
     @scala.inline
     def setChildrenColumnName(value: String): Self = this.set("childrenColumnName", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDataVarargs(value: RecordType*): Self = this.set("data", js.Array(value :_*))
+    @scala.inline
     def setData(value: js.Array[RecordType]): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def setExpandedKeys(value: Set[Key]): Self = this.set("expandedKeys", value.asInstanceOf[js.Any])

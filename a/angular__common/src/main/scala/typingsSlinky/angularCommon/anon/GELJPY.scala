@@ -27,7 +27,11 @@ object GELJPY {
         x
     }
     @scala.inline
+    def setGELVarargs(value: String*): Self = this.set("GEL", js.Array(value :_*))
+    @scala.inline
     def setGEL(value: js.Array[String]): Self = this.set("GEL", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setJPYVarargs(value: String*): Self = this.set("JPY", js.Array(value :_*))
     @scala.inline
     def setJPY(value: js.Array[String]): Self = this.set("JPY", value.asInstanceOf[js.Any])
   }

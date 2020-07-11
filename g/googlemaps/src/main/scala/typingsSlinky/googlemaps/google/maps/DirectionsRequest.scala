@@ -142,6 +142,8 @@ object DirectionsRequest {
     @scala.inline
     def deleteUnitSystem: Self = this.set("unitSystem", js.undefined)
     @scala.inline
+    def setWaypointsVarargs(value: DirectionsWaypoint*): Self = this.set("waypoints", js.Array(value :_*))
+    @scala.inline
     def setWaypoints(value: js.Array[DirectionsWaypoint]): Self = this.set("waypoints", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteWaypoints: Self = this.set("waypoints", js.undefined)

@@ -32,6 +32,8 @@ object SectionBase {
         x
     }
     @scala.inline
+    def setDataVarargs(value: ItemT*): Self = this.set("data", js.Array(value :_*))
+    @scala.inline
     def setData(value: js.Array[ItemT]): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def setItemSeparatorComponentFunctionComponent(value: ReactComponentClass[_]): Self = this.set("ItemSeparatorComponent", value.asInstanceOf[js.Any])

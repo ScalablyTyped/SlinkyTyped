@@ -44,6 +44,8 @@ object ChartLineOptions {
         x
     }
     @scala.inline
+    def setBackgroundColorVarargs(value: String*): Self = this.set("backgroundColor", js.Array(value :_*))
+    @scala.inline
     def setBackgroundColorCanvasPattern(value: CanvasPattern): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def setBackgroundColorCanvasGradient(value: CanvasGradient): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
@@ -56,6 +58,8 @@ object ChartLineOptions {
     @scala.inline
     def deleteBorderCapStyle: Self = this.set("borderCapStyle", js.undefined)
     @scala.inline
+    def setBorderColorVarargs(value: String*): Self = this.set("borderColor", js.Array(value :_*))
+    @scala.inline
     def setBorderColorCanvasPattern(value: CanvasPattern): Self = this.set("borderColor", value.asInstanceOf[js.Any])
     @scala.inline
     def setBorderColorCanvasGradient(value: CanvasGradient): Self = this.set("borderColor", value.asInstanceOf[js.Any])
@@ -63,6 +67,8 @@ object ChartLineOptions {
     def setBorderColor(value: ChartColor): Self = this.set("borderColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBorderColor: Self = this.set("borderColor", js.undefined)
+    @scala.inline
+    def setBorderDashVarargs(value: js.Any*): Self = this.set("borderDash", js.Array(value :_*))
     @scala.inline
     def setBorderDash(value: js.Array[_]): Self = this.set("borderDash", value.asInstanceOf[js.Any])
     @scala.inline

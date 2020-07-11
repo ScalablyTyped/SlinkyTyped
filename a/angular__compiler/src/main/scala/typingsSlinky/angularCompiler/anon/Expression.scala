@@ -34,6 +34,8 @@ object Expression {
     @scala.inline
     def setExpression(value: InvokeFunctionExpr): Self = this.set("expression", value.asInstanceOf[js.Any])
     @scala.inline
+    def setStatementsVarargs(value: Statement*): Self = this.set("statements", js.Array(value :_*))
+    @scala.inline
     def setStatements(value: js.Array[Statement]): Self = this.set("statements", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: ExpressionType_): Self = this.set("type", value.asInstanceOf[js.Any])

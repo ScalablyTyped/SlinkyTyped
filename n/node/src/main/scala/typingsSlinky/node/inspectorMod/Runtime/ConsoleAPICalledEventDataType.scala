@@ -56,6 +56,8 @@ object ConsoleAPICalledEventDataType {
         x
     }
     @scala.inline
+    def setArgsVarargs(value: RemoteObject*): Self = this.set("args", js.Array(value :_*))
+    @scala.inline
     def setArgs(value: js.Array[RemoteObject]): Self = this.set("args", value.asInstanceOf[js.Any])
     @scala.inline
     def setExecutionContextId(value: ExecutionContextId): Self = this.set("executionContextId", value.asInstanceOf[js.Any])

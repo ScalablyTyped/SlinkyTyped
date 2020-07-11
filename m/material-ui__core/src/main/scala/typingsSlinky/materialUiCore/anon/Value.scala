@@ -31,6 +31,8 @@ object Value {
     @scala.inline
     def setNode(value: HTMLInputElement): Self = this.set("node", value.asInstanceOf[js.Any])
     @scala.inline
+    def setValueVarargs(value: (String | Double | Boolean)*): Self = this.set("value", js.Array(value :_*))
+    @scala.inline
     def setValue(value: String | Double | Boolean | (js.Array[String | Double | Boolean])): Self = this.set("value", value.asInstanceOf[js.Any])
   }
   

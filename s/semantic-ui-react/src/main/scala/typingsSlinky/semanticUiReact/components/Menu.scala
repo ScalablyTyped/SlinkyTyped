@@ -6,6 +6,7 @@ import slinky.web.html.a.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.genericMod.SemanticWIDTHS
 import typingsSlinky.semanticUiReact.menuItemMod.MenuItemProps
 import typingsSlinky.semanticUiReact.menuMenuMod.MenuProps
@@ -60,6 +61,8 @@ object Menu {
     def icon(value: Boolean | labeled): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def inverted(value: Boolean): this.type = set("inverted", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemsVarargs(value: SemanticShorthandItem[MenuItemProps]*): this.type = set("items", js.Array(value :_*))
     @scala.inline
     def items(value: SemanticShorthandCollection[MenuItemProps]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline

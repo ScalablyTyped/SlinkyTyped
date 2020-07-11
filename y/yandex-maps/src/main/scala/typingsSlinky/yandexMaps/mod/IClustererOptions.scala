@@ -53,9 +53,13 @@ object IClustererOptions {
     @scala.inline
     def deleteHasHint: Self = this.set("hasHint", js.undefined)
     @scala.inline
+    def setMarginVarargs(value: (js.Array[Double] | Double)*): Self = this.set("margin", js.Array(value :_*))
+    @scala.inline
     def setMargin(value: (js.Array[js.Array[Double] | Double]) | Double): Self = this.set("margin", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMargin: Self = this.set("margin", js.undefined)
+    @scala.inline
+    def setMaxZoomVarargs(value: Double*): Self = this.set("maxZoom", js.Array(value :_*))
     @scala.inline
     def setMaxZoom(value: js.Array[Double] | Double): Self = this.set("maxZoom", value.asInstanceOf[js.Any])
     @scala.inline
@@ -77,9 +81,13 @@ object IClustererOptions {
     @scala.inline
     def deleteUseMapMargin: Self = this.set("useMapMargin", js.undefined)
     @scala.inline
+    def setViewportMarginVarargs(value: (js.Array[Double] | Double)*): Self = this.set("viewportMargin", js.Array(value :_*))
+    @scala.inline
     def setViewportMargin(value: (js.Array[js.Array[Double] | Double]) | Double): Self = this.set("viewportMargin", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteViewportMargin: Self = this.set("viewportMargin", js.undefined)
+    @scala.inline
+    def setZoomMarginVarargs(value: (js.Array[Double] | Double)*): Self = this.set("zoomMargin", js.Array(value :_*))
     @scala.inline
     def setZoomMargin(value: (js.Array[js.Array[Double] | Double]) | Double): Self = this.set("zoomMargin", value.asInstanceOf[js.Any])
     @scala.inline

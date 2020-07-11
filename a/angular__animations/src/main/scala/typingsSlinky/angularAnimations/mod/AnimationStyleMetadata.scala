@@ -39,6 +39,8 @@ object AnimationStyleMetadata {
         x
     }
     @scala.inline
+    def setStylesVarargs(value: ((StringDictionary[String | Double]) | Asterisk)*): Self = this.set("styles", js.Array(value :_*))
+    @scala.inline
     def setStyles(
       value: Asterisk | (StringDictionary[String | Double]) | (js.Array[(StringDictionary[String | Double]) | Asterisk])
     ): Self = this.set("styles", value.asInstanceOf[js.Any])

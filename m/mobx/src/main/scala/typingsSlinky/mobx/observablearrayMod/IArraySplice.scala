@@ -43,6 +43,8 @@ object IArraySplice {
         x
     }
     @scala.inline
+    def setAddedVarargs(value: T*): Self = this.set("added", js.Array(value :_*))
+    @scala.inline
     def setAdded(value: js.Array[T]): Self = this.set("added", value.asInstanceOf[js.Any])
     @scala.inline
     def setAddedCount(value: Double): Self = this.set("addedCount", value.asInstanceOf[js.Any])
@@ -50,6 +52,8 @@ object IArraySplice {
     def setIndex(value: Double): Self = this.set("index", value.asInstanceOf[js.Any])
     @scala.inline
     def setObject(value: IObservableArray[T]): Self = this.set("object", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRemovedVarargs(value: T*): Self = this.set("removed", js.Array(value :_*))
     @scala.inline
     def setRemoved(value: js.Array[T]): Self = this.set("removed", value.asInstanceOf[js.Any])
     @scala.inline

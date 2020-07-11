@@ -28,9 +28,13 @@ object Offset {
         x
     }
     @scala.inline
+    def setOffsetVarargs(value: Double*): Self = this.set("offset", js.Array(value :_*))
+    @scala.inline
     def setOffset(value: js.Array[Double]): Self = this.set("offset", value.asInstanceOf[js.Any])
     @scala.inline
     def setOverflow(value: AdjustX): Self = this.set("overflow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPointsVarargs(value: String*): Self = this.set("points", js.Array(value :_*))
     @scala.inline
     def setPoints(value: js.Array[String]): Self = this.set("points", value.asInstanceOf[js.Any])
   }

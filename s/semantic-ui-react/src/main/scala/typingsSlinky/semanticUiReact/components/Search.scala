@@ -92,6 +92,8 @@ object Search {
     @scala.inline
     def resultRenderer(value: /* props */ SearchResultProps => ReactElement): this.type = set("resultRenderer", js.Any.fromFunction1(value))
     @scala.inline
+    def resultsVarargs(value: js.Any*): this.type = set("results", js.Array(value :_*))
+    @scala.inline
     def results(value: js.Array[_] | js.Object): this.type = set("results", value.asInstanceOf[js.Any])
     @scala.inline
     def selectFirstResult(value: Boolean): this.type = set("selectFirstResult", value.asInstanceOf[js.Any])

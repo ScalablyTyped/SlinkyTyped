@@ -44,6 +44,8 @@ object PrenormalizedTemplateMetadata {
         x
     }
     @scala.inline
+    def setAnimationsVarargs(value: js.Any*): Self = this.set("animations", js.Array(value :_*))
+    @scala.inline
     def setAnimations(value: js.Array[_]): Self = this.set("animations", value.asInstanceOf[js.Any])
     @scala.inline
     def setComponentType(value: js.Any): Self = this.set("componentType", value.asInstanceOf[js.Any])
@@ -52,7 +54,11 @@ object PrenormalizedTemplateMetadata {
     @scala.inline
     def setNgModuleType(value: js.Any): Self = this.set("ngModuleType", value.asInstanceOf[js.Any])
     @scala.inline
+    def setStyleUrlsVarargs(value: String*): Self = this.set("styleUrls", js.Array(value :_*))
+    @scala.inline
     def setStyleUrls(value: js.Array[String]): Self = this.set("styleUrls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setStylesVarargs(value: String*): Self = this.set("styles", js.Array(value :_*))
     @scala.inline
     def setStyles(value: js.Array[String]): Self = this.set("styles", value.asInstanceOf[js.Any])
     @scala.inline

@@ -35,6 +35,8 @@ object ClusterSettings {
         x
     }
     @scala.inline
+    def setArgsVarargs(value: String*): Self = this.set("args", js.Array(value :_*))
+    @scala.inline
     def setArgs(value: js.Array[String]): Self = this.set("args", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteArgs: Self = this.set("args", js.undefined)
@@ -42,6 +44,8 @@ object ClusterSettings {
     def setExec(value: String): Self = this.set("exec", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExec: Self = this.set("exec", js.undefined)
+    @scala.inline
+    def setExecArgvVarargs(value: String*): Self = this.set("execArgv", js.Array(value :_*))
     @scala.inline
     def setExecArgv(value: js.Array[String]): Self = this.set("execArgv", value.asInstanceOf[js.Any])
     @scala.inline
@@ -60,6 +64,8 @@ object ClusterSettings {
     def setSilent(value: Boolean): Self = this.set("silent", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSilent: Self = this.set("silent", js.undefined)
+    @scala.inline
+    def setStdioVarargs(value: js.Any*): Self = this.set("stdio", js.Array(value :_*))
     @scala.inline
     def setStdio(value: js.Array[_]): Self = this.set("stdio", value.asInstanceOf[js.Any])
     @scala.inline

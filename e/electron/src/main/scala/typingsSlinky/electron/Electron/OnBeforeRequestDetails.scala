@@ -51,6 +51,8 @@ object OnBeforeRequestDetails {
     @scala.inline
     def setTimestamp(value: Double): Self = this.set("timestamp", value.asInstanceOf[js.Any])
     @scala.inline
+    def setUploadDataVarargs(value: UploadData*): Self = this.set("uploadData", js.Array(value :_*))
+    @scala.inline
     def setUploadData(value: js.Array[UploadData]): Self = this.set("uploadData", value.asInstanceOf[js.Any])
     @scala.inline
     def setUrl(value: String): Self = this.set("url", value.asInstanceOf[js.Any])

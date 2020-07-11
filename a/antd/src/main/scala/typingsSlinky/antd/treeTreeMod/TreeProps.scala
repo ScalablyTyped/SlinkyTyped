@@ -144,6 +144,8 @@ object TreeProps {
     @scala.inline
     def deleteCheckable: Self = this.set("checkable", js.undefined)
     @scala.inline
+    def setCheckedKeysVarargs(value: js.Any*): Self = this.set("checkedKeys", js.Array(value :_*))
+    @scala.inline
     def setCheckedKeys(
       value: (js.Array[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
@@ -162,6 +164,8 @@ object TreeProps {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
+    def setDefaultCheckedKeysVarargs(value: js.Any*): Self = this.set("defaultCheckedKeys", js.Array(value :_*))
+    @scala.inline
     def setDefaultCheckedKeys(
       value: js.Array[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
@@ -178,6 +182,8 @@ object TreeProps {
     @scala.inline
     def deleteDefaultExpandParent: Self = this.set("defaultExpandParent", js.undefined)
     @scala.inline
+    def setDefaultExpandedKeysVarargs(value: js.Any*): Self = this.set("defaultExpandedKeys", js.Array(value :_*))
+    @scala.inline
     def setDefaultExpandedKeys(
       value: js.Array[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
@@ -185,6 +191,8 @@ object TreeProps {
     ): Self = this.set("defaultExpandedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultExpandedKeys: Self = this.set("defaultExpandedKeys", js.undefined)
+    @scala.inline
+    def setDefaultSelectedKeysVarargs(value: js.Any*): Self = this.set("defaultSelectedKeys", js.Array(value :_*))
     @scala.inline
     def setDefaultSelectedKeys(
       value: js.Array[
@@ -201,6 +209,8 @@ object TreeProps {
     def setDraggable(value: Boolean): Self = this.set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDraggable: Self = this.set("draggable", js.undefined)
+    @scala.inline
+    def setExpandedKeysVarargs(value: js.Any*): Self = this.set("expandedKeys", js.Array(value :_*))
     @scala.inline
     def setExpandedKeys(
       value: js.Array[
@@ -229,6 +239,8 @@ object TreeProps {
     def setLoadData(value: ReactComponentClass[InternalTreeNodeProps] => js.Promise[_]): Self = this.set("loadData", js.Any.fromFunction1(value))
     @scala.inline
     def deleteLoadData: Self = this.set("loadData", js.undefined)
+    @scala.inline
+    def setLoadedKeysVarargs(value: js.Any*): Self = this.set("loadedKeys", js.Array(value :_*))
     @scala.inline
     def setLoadedKeys(
       value: js.Array[
@@ -297,6 +309,8 @@ object TreeProps {
     def setSelectable(value: Boolean): Self = this.set("selectable", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSelectable: Self = this.set("selectable", js.undefined)
+    @scala.inline
+    def setSelectedKeysVarargs(value: js.Any*): Self = this.set("selectedKeys", js.Array(value :_*))
     @scala.inline
     def setSelectedKeys(
       value: js.Array[

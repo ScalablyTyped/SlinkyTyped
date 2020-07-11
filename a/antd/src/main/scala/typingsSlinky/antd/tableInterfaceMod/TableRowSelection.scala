@@ -124,9 +124,13 @@ object TableRowSelection {
     @scala.inline
     def deleteRenderCell: Self = this.set("renderCell", js.undefined)
     @scala.inline
+    def setSelectedRowKeysVarargs(value: Key*): Self = this.set("selectedRowKeys", js.Array(value :_*))
+    @scala.inline
     def setSelectedRowKeys(value: js.Array[Key]): Self = this.set("selectedRowKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSelectedRowKeys: Self = this.set("selectedRowKeys", js.undefined)
+    @scala.inline
+    def setSelectionsVarargs(value: INTERNAL_SELECTION_ITEM*): Self = this.set("selections", js.Array(value :_*))
     @scala.inline
     def setSelections(value: js.Array[INTERNAL_SELECTION_ITEM] | Boolean): Self = this.set("selections", value.asInstanceOf[js.Any])
     @scala.inline

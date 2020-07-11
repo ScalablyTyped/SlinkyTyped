@@ -1,7 +1,9 @@
 package typingsSlinky.inquirer.anon
 
+import typingsSlinky.inquirer.mod.AllChoiceMap
 import typingsSlinky.inquirer.mod.Answers
 import typingsSlinky.inquirer.mod.ChoiceCollection
+import typingsSlinky.inquirer.mod.DistinctChoice
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,6 +45,8 @@ object Default {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setChoicesVarargs(value: DistinctChoice[AllChoiceMap[Answers]]*): Self = this.set("choices", js.Array(value :_*))
     @scala.inline
     def setChoices(value: ChoiceCollection[T]): Self = this.set("choices", value.asInstanceOf[js.Any])
     @scala.inline

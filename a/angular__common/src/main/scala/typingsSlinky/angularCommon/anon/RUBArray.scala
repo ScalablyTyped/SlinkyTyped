@@ -27,7 +27,11 @@ object RUBArray {
         x
     }
     @scala.inline
+    def setJPYVarargs(value: String*): Self = this.set("JPY", js.Array(value :_*))
+    @scala.inline
     def setJPY(value: js.Array[String]): Self = this.set("JPY", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRUBVarargs(value: String*): Self = this.set("RUB", js.Array(value :_*))
     @scala.inline
     def setRUB(value: js.Array[String]): Self = this.set("RUB", value.asInstanceOf[js.Any])
   }

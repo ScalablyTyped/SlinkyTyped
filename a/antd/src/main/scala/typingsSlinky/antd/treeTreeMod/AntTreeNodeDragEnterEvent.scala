@@ -37,6 +37,8 @@ object AntTreeNodeDragEnterEvent {
         x
     }
     @scala.inline
+    def setExpandedKeysVarargs(value: js.Any*): Self = this.set("expandedKeys", js.Array(value :_*))
+    @scala.inline
     def setExpandedKeys(
       value: js.Array[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _

@@ -26,6 +26,8 @@ object Children {
         x
     }
     @scala.inline
+    def setChildrenVarargs(value: RecordType*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: js.Array[RecordType]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)

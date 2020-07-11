@@ -43,6 +43,8 @@ object FunctionalComponentOptions {
     @scala.inline
     def setFunctional(value: Boolean): Self = this.set("functional", value.asInstanceOf[js.Any])
     @scala.inline
+    def setInjectVarargs(value: String*): Self = this.set("inject", js.Array(value :_*))
+    @scala.inline
     def setInject(value: InjectOptions): Self = this.set("inject", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInject: Self = this.set("inject", js.undefined)

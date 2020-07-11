@@ -27,6 +27,8 @@ object Value {
         x
     }
     @scala.inline
+    def setValueVarargs(value: CheckboxValueType*): Self = this.set("value", js.Array(value :_*))
+    @scala.inline
     def setValue(value: js.Array[CheckboxValueType]): Self = this.set("value", value.asInstanceOf[js.Any])
   }
   

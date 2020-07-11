@@ -69,6 +69,8 @@ object ɵangularPackagesCoreCoreBf {
     @scala.inline
     def setParentNull: Self = this.set("parent", null)
     @scala.inline
+    def setProjectionVarargs(value: (TNode | js.Array[RNode])*): Self = this.set("projection", js.Array(value :_*))
+    @scala.inline
     def setProjection(value: js.Array[TNode | js.Array[RNode]]): Self = this.set("projection", value.asInstanceOf[js.Any])
     @scala.inline
     def setProjectionNull: Self = this.set("projection", null)

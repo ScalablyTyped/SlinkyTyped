@@ -31,6 +31,8 @@ object TreeDataNode {
     @scala.inline
     def setKey(value: Key): Self = this.set("key", value.asInstanceOf[js.Any])
     @scala.inline
+    def setChildrenVarargs(value: TreeDataNode*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: js.Array[TreeDataNode]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)

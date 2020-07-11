@@ -61,6 +61,8 @@ object Options {
     @scala.inline
     def deleteLimit: Self = this.set("limit", js.undefined)
     @scala.inline
+    def setTypeVarargs(value: String*): Self = this.set("type", js.Array(value :_*))
+    @scala.inline
     def setTypeFunction1(value: /* req */ IncomingMessage => _): Self = this.set("type", js.Any.fromFunction1(value))
     @scala.inline
     def setType(value: String | js.Array[String] | (js.Function1[/* req */ IncomingMessage, _])): Self = this.set("type", value.asInstanceOf[js.Any])

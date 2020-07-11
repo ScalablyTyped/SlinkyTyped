@@ -54,6 +54,8 @@ object Menu {
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
+    def valueVarargs(value: js.Any*): this.type = set("value", js.Array(value :_*))
+    @scala.inline
     def value(value: js.Any | js.Array[_]): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline
     def valueLink(value: ReactLink[_ | js.Array[_]]): this.type = set("valueLink", value.asInstanceOf[js.Any])

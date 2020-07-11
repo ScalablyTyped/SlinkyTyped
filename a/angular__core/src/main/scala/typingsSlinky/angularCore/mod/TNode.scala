@@ -303,6 +303,8 @@ object TNode {
     @scala.inline
     def setType(value: TNodeType): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
+    def setAttrsVarargs(value: (String | ɵAttributeMarker | CssSelector)*): Self = this.set("attrs", js.Array(value :_*))
+    @scala.inline
     def setAttrs(value: TAttributes): Self = this.set("attrs", value.asInstanceOf[js.Any])
     @scala.inline
     def setAttrsNull: Self = this.set("attrs", null)
@@ -315,6 +317,8 @@ object TNode {
     @scala.inline
     def setClassesNull: Self = this.set("classes", null)
     @scala.inline
+    def setInitialInputsVarargs(value: (InitialInputs | Null)*): Self = this.set("initialInputs", js.Array(value :_*))
+    @scala.inline
     def setInitialInputs(value: InitialInputData): Self = this.set("initialInputs", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInitialInputs: Self = this.set("initialInputs", js.undefined)
@@ -326,6 +330,8 @@ object TNode {
     def deleteInputs: Self = this.set("inputs", js.undefined)
     @scala.inline
     def setInputsNull: Self = this.set("inputs", null)
+    @scala.inline
+    def setLocalNamesVarargs(value: (String | Double)*): Self = this.set("localNames", js.Array(value :_*))
     @scala.inline
     def setLocalNames(value: js.Array[String | Double]): Self = this.set("localNames", value.asInstanceOf[js.Any])
     @scala.inline
@@ -345,6 +351,8 @@ object TNode {
     @scala.inline
     def setParentNull: Self = this.set("parent", null)
     @scala.inline
+    def setProjectionVarargs(value: (TNode | js.Array[RNode])*): Self = this.set("projection", js.Array(value :_*))
+    @scala.inline
     def setProjection(value: (js.Array[TNode | js.Array[RNode]]) | Double): Self = this.set("projection", value.asInstanceOf[js.Any])
     @scala.inline
     def setProjectionNull: Self = this.set("projection", null)
@@ -356,6 +364,8 @@ object TNode {
     def setStyles(value: StylingMapArray | TStylingContext): Self = this.set("styles", value.asInstanceOf[js.Any])
     @scala.inline
     def setStylesNull: Self = this.set("styles", null)
+    @scala.inline
+    def setTViewsVarargs(value: TView*): Self = this.set("tViews", js.Array(value :_*))
     @scala.inline
     def setTViews(value: TView | js.Array[TView]): Self = this.set("tViews", value.asInstanceOf[js.Any])
     @scala.inline

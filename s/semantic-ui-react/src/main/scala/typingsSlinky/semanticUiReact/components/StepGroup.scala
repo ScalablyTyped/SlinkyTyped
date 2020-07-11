@@ -5,6 +5,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.semanticUiReactNumbers.`1`
 import typingsSlinky.semanticUiReact.semanticUiReactNumbers.`2`
 import typingsSlinky.semanticUiReact.semanticUiReactNumbers.`3`
@@ -58,6 +59,8 @@ object StepGroup {
     def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
     @scala.inline
     def fluid(value: Boolean): this.type = set("fluid", value.asInstanceOf[js.Any])
+    @scala.inline
+    def itemsVarargs(value: SemanticShorthandItem[StepProps]*): this.type = set("items", js.Array(value :_*))
     @scala.inline
     def items(value: SemanticShorthandCollection[StepProps]): this.type = set("items", value.asInstanceOf[js.Any])
     @scala.inline

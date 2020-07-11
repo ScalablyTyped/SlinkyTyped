@@ -47,6 +47,8 @@ object R3InjectableMetadata {
     @scala.inline
     def setTypeArgumentCount(value: Double): Self = this.set("typeArgumentCount", value.asInstanceOf[js.Any])
     @scala.inline
+    def setCtorDepsVarargs(value: R3DependencyMetadata*): Self = this.set("ctorDeps", js.Array(value :_*))
+    @scala.inline
     def setCtorDeps(value: js.Array[R3DependencyMetadata] | invalid): Self = this.set("ctorDeps", value.asInstanceOf[js.Any])
     @scala.inline
     def setCtorDepsNull: Self = this.set("ctorDeps", null)
@@ -66,6 +68,8 @@ object R3InjectableMetadata {
     def setUseValue(value: Expression): Self = this.set("useValue", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUseValue: Self = this.set("useValue", js.undefined)
+    @scala.inline
+    def setUserDepsVarargs(value: R3DependencyMetadata*): Self = this.set("userDeps", js.Array(value :_*))
     @scala.inline
     def setUserDeps(value: js.Array[R3DependencyMetadata]): Self = this.set("userDeps", value.asInstanceOf[js.Any])
     @scala.inline

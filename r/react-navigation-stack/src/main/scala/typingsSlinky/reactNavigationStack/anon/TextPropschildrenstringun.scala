@@ -252,6 +252,8 @@ object TextPropschildrenstringun {
         x
     }
     @scala.inline
+    def setAccessibilityActionsVarargs(value: AccessibilityActionInfo*): Self = this.set("accessibilityActions", js.Array(value :_*))
+    @scala.inline
     def setAccessibilityActions(value: js.Array[AccessibilityActionInfo]): Self = this.set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAccessibilityActions: Self = this.set("accessibilityActions", js.undefined)
@@ -287,6 +289,8 @@ object TextPropschildrenstringun {
     def setAccessibilityState(value: AccessibilityState): Self = this.set("accessibilityState", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAccessibilityState: Self = this.set("accessibilityState", js.undefined)
+    @scala.inline
+    def setAccessibilityTraitsVarargs(value: AccessibilityTrait*): Self = this.set("accessibilityTraits", js.Array(value :_*))
     @scala.inline
     def setAccessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): Self = this.set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline

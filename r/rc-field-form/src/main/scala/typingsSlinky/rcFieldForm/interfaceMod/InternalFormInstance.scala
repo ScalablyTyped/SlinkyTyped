@@ -108,9 +108,13 @@ object InternalFormInstance {
       value: (/* nameList */ js.UndefOr[js.Array[NamePath]], /* options */ js.UndefOr[ValidateOptions]) => js.Promise[Store]
     ): Self = this.set("validateFields", js.Any.fromFunction2(value))
     @scala.inline
+    def setPrefixNameVarargs(value: (String | Double)*): Self = this.set("prefixName", js.Array(value :_*))
+    @scala.inline
     def setPrefixName(value: InternalNamePath): Self = this.set("prefixName", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePrefixName: Self = this.set("prefixName", js.undefined)
+    @scala.inline
+    def setValidateTriggerVarargs(value: String*): Self = this.set("validateTrigger", js.Array(value :_*))
     @scala.inline
     def setValidateTrigger(value: String | js.Array[String] | `false`): Self = this.set("validateTrigger", value.asInstanceOf[js.Any])
     @scala.inline

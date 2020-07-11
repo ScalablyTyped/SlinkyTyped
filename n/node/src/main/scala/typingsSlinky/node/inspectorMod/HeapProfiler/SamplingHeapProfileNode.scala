@@ -43,6 +43,8 @@ object SamplingHeapProfileNode {
     @scala.inline
     def setCallFrame(value: CallFrame): Self = this.set("callFrame", value.asInstanceOf[js.Any])
     @scala.inline
+    def setChildrenVarargs(value: SamplingHeapProfileNode*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: js.Array[SamplingHeapProfileNode]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def setSelfSize(value: Double): Self = this.set("selfSize", value.asInstanceOf[js.Any])

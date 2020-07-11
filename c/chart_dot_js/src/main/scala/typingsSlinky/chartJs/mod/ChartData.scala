@@ -32,9 +32,13 @@ object ChartData {
         x
     }
     @scala.inline
+    def setDatasetsVarargs(value: ChartDataSets*): Self = this.set("datasets", js.Array(value :_*))
+    @scala.inline
     def setDatasets(value: js.Array[ChartDataSets]): Self = this.set("datasets", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDatasets: Self = this.set("datasets", js.undefined)
+    @scala.inline
+    def setLabelsVarargs(value: (String | (js.Array[js.Date | Double | Moment | String]) | Double | js.Date | Moment)*): Self = this.set("labels", js.Array(value :_*))
     @scala.inline
     def setLabels(
       value: js.Array[

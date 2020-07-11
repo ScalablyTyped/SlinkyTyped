@@ -45,6 +45,8 @@ object PublicKeyCredentialCreationOptions {
     @scala.inline
     def setChallenge(value: BufferSource): Self = this.set("challenge", value.asInstanceOf[js.Any])
     @scala.inline
+    def setPubKeyCredParamsVarargs(value: PublicKeyCredentialParameters*): Self = this.set("pubKeyCredParams", js.Array(value :_*))
+    @scala.inline
     def setPubKeyCredParams(value: js.Array[PublicKeyCredentialParameters]): Self = this.set("pubKeyCredParams", value.asInstanceOf[js.Any])
     @scala.inline
     def setRp(value: PublicKeyCredentialRpEntity): Self = this.set("rp", value.asInstanceOf[js.Any])
@@ -58,6 +60,8 @@ object PublicKeyCredentialCreationOptions {
     def setAuthenticatorSelection(value: AuthenticatorSelectionCriteria): Self = this.set("authenticatorSelection", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAuthenticatorSelection: Self = this.set("authenticatorSelection", js.undefined)
+    @scala.inline
+    def setExcludeCredentialsVarargs(value: PublicKeyCredentialDescriptor*): Self = this.set("excludeCredentials", js.Array(value :_*))
     @scala.inline
     def setExcludeCredentials(value: js.Array[PublicKeyCredentialDescriptor]): Self = this.set("excludeCredentials", value.asInstanceOf[js.Any])
     @scala.inline

@@ -44,6 +44,8 @@ object ForceTouchGestureHandler {
     @scala.inline
     def shouldCancelWhenOutside(value: Boolean): this.type = set("shouldCancelWhenOutside", value.asInstanceOf[js.Any])
     @scala.inline
+    def simultaneousHandlersVarargs(value: Ref[js.Any]*): this.type = set("simultaneousHandlers", js.Array(value :_*))
+    @scala.inline
     def simultaneousHandlersRefObject(value: ReactRef[_]): this.type = set("simultaneousHandlers", value.asInstanceOf[js.Any])
     @scala.inline
     def simultaneousHandlersFunction1(value: /* instance */ _ | Null => Unit): this.type = set("simultaneousHandlers", js.Any.fromFunction1(value))
@@ -51,6 +53,8 @@ object ForceTouchGestureHandler {
     def simultaneousHandlers(value: Ref[_] | js.Array[Ref[_]]): this.type = set("simultaneousHandlers", value.asInstanceOf[js.Any])
     @scala.inline
     def simultaneousHandlersNull: this.type = set("simultaneousHandlers", null)
+    @scala.inline
+    def waitForVarargs(value: Ref[js.Any]*): this.type = set("waitFor", js.Array(value :_*))
     @scala.inline
     def waitForRefObject(value: ReactRef[_]): this.type = set("waitFor", value.asInstanceOf[js.Any])
     @scala.inline

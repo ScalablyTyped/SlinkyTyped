@@ -176,6 +176,8 @@ object TextInputIOSProps {
     @scala.inline
     def deleteClearTextOnFocus: Self = this.set("clearTextOnFocus", js.undefined)
     @scala.inline
+    def setDataDetectorTypesVarargs(value: DataDetectorTypes*): Self = this.set("dataDetectorTypes", js.Array(value :_*))
+    @scala.inline
     def setDataDetectorTypes(value: DataDetectorTypes | js.Array[DataDetectorTypes]): Self = this.set("dataDetectorTypes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDataDetectorTypes: Self = this.set("dataDetectorTypes", js.undefined)

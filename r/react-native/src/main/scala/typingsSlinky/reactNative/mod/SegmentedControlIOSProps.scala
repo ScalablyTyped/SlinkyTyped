@@ -82,6 +82,8 @@ object SegmentedControlIOSProps {
     @scala.inline
     def deleteTintColor: Self = this.set("tintColor", js.undefined)
     @scala.inline
+    def setValuesVarargs(value: String*): Self = this.set("values", js.Array(value :_*))
+    @scala.inline
     def setValues(value: js.Array[String]): Self = this.set("values", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValues: Self = this.set("values", js.undefined)

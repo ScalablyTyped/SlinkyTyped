@@ -75,6 +75,8 @@ object BoundedBy {
     @scala.inline
     def deleteAdjustMapMargin: Self = this.set("adjustMapMargin", js.undefined)
     @scala.inline
+    def setBoundedByVarargs(value: js.Array[Double]*): Self = this.set("boundedBy", js.Array(value :_*))
+    @scala.inline
     def setBoundedBy(value: js.Array[js.Array[Double]]): Self = this.set("boundedBy", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBoundedBy: Self = this.set("boundedBy", js.undefined)
@@ -102,6 +104,8 @@ object BoundedBy {
     def setLayout(value: String | IClassConstructor[ISearchControlLayout]): Self = this.set("layout", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLayout: Self = this.set("layout", js.undefined)
+    @scala.inline
+    def setMaxWidthVarargs(value: (js.Array[Double] | Double)*): Self = this.set("maxWidth", js.Array(value :_*))
     @scala.inline
     def setMaxWidth(value: (js.Array[js.Array[Double] | Double]) | Double): Self = this.set("maxWidth", value.asInstanceOf[js.Any])
     @scala.inline

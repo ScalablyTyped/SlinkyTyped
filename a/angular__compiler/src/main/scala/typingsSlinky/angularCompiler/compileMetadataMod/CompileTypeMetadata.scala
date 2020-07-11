@@ -32,7 +32,11 @@ object CompileTypeMetadata {
         x
     }
     @scala.inline
+    def setDiDepsVarargs(value: CompileDiDependencyMetadata*): Self = this.set("diDeps", js.Array(value :_*))
+    @scala.inline
     def setDiDeps(value: js.Array[CompileDiDependencyMetadata]): Self = this.set("diDeps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLifecycleHooksVarargs(value: LifecycleHooks*): Self = this.set("lifecycleHooks", js.Array(value :_*))
     @scala.inline
     def setLifecycleHooks(value: js.Array[LifecycleHooks]): Self = this.set("lifecycleHooks", value.asInstanceOf[js.Any])
   }

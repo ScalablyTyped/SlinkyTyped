@@ -30,6 +30,8 @@ object MorphNormals {
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def setNormalsVarargs(value: Vector3*): Self = this.set("normals", js.Array(value :_*))
+    @scala.inline
     def setNormals(value: js.Array[Vector3]): Self = this.set("normals", value.asInstanceOf[js.Any])
   }
   

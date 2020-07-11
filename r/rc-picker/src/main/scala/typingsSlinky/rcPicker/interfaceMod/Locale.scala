@@ -145,9 +145,13 @@ object Locale {
     @scala.inline
     def deleteQuarterFormat: Self = this.set("quarterFormat", js.undefined)
     @scala.inline
+    def setShortMonthsVarargs(value: String*): Self = this.set("shortMonths", js.Array(value :_*))
+    @scala.inline
     def setShortMonths(value: js.Array[String]): Self = this.set("shortMonths", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteShortMonths: Self = this.set("shortMonths", js.undefined)
+    @scala.inline
+    def setShortWeekDaysVarargs(value: String*): Self = this.set("shortWeekDays", js.Array(value :_*))
     @scala.inline
     def setShortWeekDays(value: js.Array[String]): Self = this.set("shortWeekDays", value.asInstanceOf[js.Any])
     @scala.inline

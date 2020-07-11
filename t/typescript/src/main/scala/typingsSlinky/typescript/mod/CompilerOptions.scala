@@ -244,6 +244,8 @@ object CompilerOptions {
     @scala.inline
     def deleteKeyofStringsOnly: Self = this.set("keyofStringsOnly", js.undefined)
     @scala.inline
+    def setLibVarargs(value: java.lang.String*): Self = this.set("lib", js.Array(value :_*))
+    @scala.inline
     def setLib(value: js.Array[java.lang.String]): Self = this.set("lib", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLib: Self = this.set("lib", js.undefined)
@@ -372,6 +374,8 @@ object CompilerOptions {
     @scala.inline
     def deleteRootDir: Self = this.set("rootDir", js.undefined)
     @scala.inline
+    def setRootDirsVarargs(value: java.lang.String*): Self = this.set("rootDirs", js.Array(value :_*))
+    @scala.inline
     def setRootDirs(value: js.Array[java.lang.String]): Self = this.set("rootDirs", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRootDirs: Self = this.set("rootDirs", js.undefined)
@@ -436,9 +440,13 @@ object CompilerOptions {
     @scala.inline
     def deleteTsBuildInfoFile: Self = this.set("tsBuildInfoFile", js.undefined)
     @scala.inline
+    def setTypeRootsVarargs(value: java.lang.String*): Self = this.set("typeRoots", js.Array(value :_*))
+    @scala.inline
     def setTypeRoots(value: js.Array[java.lang.String]): Self = this.set("typeRoots", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTypeRoots: Self = this.set("typeRoots", js.undefined)
+    @scala.inline
+    def setTypesVarargs(value: java.lang.String*): Self = this.set("types", js.Array(value :_*))
     @scala.inline
     def setTypes(value: js.Array[java.lang.String]): Self = this.set("types", value.asInstanceOf[js.Any])
     @scala.inline

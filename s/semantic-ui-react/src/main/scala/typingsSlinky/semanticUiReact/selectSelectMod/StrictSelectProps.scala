@@ -30,6 +30,8 @@ object StrictSelectProps {
         x
     }
     @scala.inline
+    def setOptionsVarargs(value: DropdownItemProps*): Self = this.set("options", js.Array(value :_*))
+    @scala.inline
     def setOptions(value: js.Array[DropdownItemProps]): Self = this.set("options", value.asInstanceOf[js.Any])
   }
   

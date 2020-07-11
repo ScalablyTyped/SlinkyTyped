@@ -57,9 +57,13 @@ object R3BaseRefMetaData {
     @scala.inline
     def deleteOutputs: Self = this.set("outputs", js.undefined)
     @scala.inline
+    def setQueriesVarargs(value: R3QueryMetadata*): Self = this.set("queries", js.Array(value :_*))
+    @scala.inline
     def setQueries(value: js.Array[R3QueryMetadata]): Self = this.set("queries", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteQueries: Self = this.set("queries", js.undefined)
+    @scala.inline
+    def setViewQueriesVarargs(value: R3QueryMetadata*): Self = this.set("viewQueries", js.Array(value :_*))
     @scala.inline
     def setViewQueries(value: js.Array[R3QueryMetadata]): Self = this.set("viewQueries", value.asInstanceOf[js.Any])
     @scala.inline

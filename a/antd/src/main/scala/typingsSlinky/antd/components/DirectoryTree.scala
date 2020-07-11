@@ -45,6 +45,8 @@ object DirectoryTree {
     @scala.inline
     def checkable(value: Boolean): this.type = set("checkable", value.asInstanceOf[js.Any])
     @scala.inline
+    def checkedKeysVarargs(value: js.Any*): this.type = set("checkedKeys", js.Array(value :_*))
+    @scala.inline
     def checkedKeys(
       value: (js.Array[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
@@ -52,6 +54,8 @@ object DirectoryTree {
     ): this.type = set("checkedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultCheckedKeysVarargs(value: js.Any*): this.type = set("defaultCheckedKeys", js.Array(value :_*))
     @scala.inline
     def defaultCheckedKeys(
       value: js.Array[
@@ -63,11 +67,15 @@ object DirectoryTree {
     @scala.inline
     def defaultExpandParent(value: Boolean): this.type = set("defaultExpandParent", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultExpandedKeysVarargs(value: js.Any*): this.type = set("defaultExpandedKeys", js.Array(value :_*))
+    @scala.inline
     def defaultExpandedKeys(
       value: js.Array[
           /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
         ]
     ): this.type = set("defaultExpandedKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def defaultSelectedKeysVarargs(value: js.Any*): this.type = set("defaultSelectedKeys", js.Array(value :_*))
     @scala.inline
     def defaultSelectedKeys(
       value: js.Array[
@@ -80,6 +88,8 @@ object DirectoryTree {
     def draggable(value: Boolean): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
     def expandAction(value: ExpandAction): this.type = set("expandAction", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandedKeysVarargs(value: js.Any*): this.type = set("expandedKeys", js.Array(value :_*))
     @scala.inline
     def expandedKeys(
       value: js.Array[
@@ -98,6 +108,8 @@ object DirectoryTree {
     def icon(value: (js.Function1[/* nodeProps */ AntdTreeNodeAttribute, ReactElement]) | ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
     @scala.inline
     def loadData(value: ReactComponentClass[InternalTreeNodeProps] => js.Promise[_]): this.type = set("loadData", js.Any.fromFunction1(value))
+    @scala.inline
+    def loadedKeysVarargs(value: js.Any*): this.type = set("loadedKeys", js.Array(value :_*))
     @scala.inline
     def loadedKeys(
       value: js.Array[
@@ -134,6 +146,8 @@ object DirectoryTree {
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedKeysVarargs(value: js.Any*): this.type = set("selectedKeys", js.Array(value :_*))
     @scala.inline
     def selectedKeys(
       value: js.Array[

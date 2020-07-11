@@ -29,6 +29,7 @@ import typingsSlinky.reactNative.mod.ScrollViewProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.TVParallaxProperties
 import typingsSlinky.reactNative.mod.ViewStyle
+import typingsSlinky.reactNative.mod.ViewabilityConfigCallbackPair
 import typingsSlinky.reactNative.mod.ViewabilityConfigCallbackPairs
 import typingsSlinky.reactNative.reactNativeStrings.`box-none`
 import typingsSlinky.reactNative.reactNativeStrings.`box-only`
@@ -131,6 +132,8 @@ object FlatList {
     @scala.inline
     def ListHeaderComponentStyleNull: this.type = set("ListHeaderComponentStyle", null)
     @scala.inline
+    def accessibilityActionsVarargs(value: AccessibilityActionInfo*): this.type = set("accessibilityActions", js.Array(value :_*))
+    @scala.inline
     def accessibilityActions(value: js.Array[AccessibilityActionInfo]): this.type = set("accessibilityActions", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityComponentType(value: none | button | radiobutton_checked | radiobutton_unchecked): this.type = set("accessibilityComponentType", value.asInstanceOf[js.Any])
@@ -148,6 +151,8 @@ object FlatList {
     def accessibilityRole(value: AccessibilityRole): this.type = set("accessibilityRole", value.asInstanceOf[js.Any])
     @scala.inline
     def accessibilityState(value: AccessibilityState): this.type = set("accessibilityState", value.asInstanceOf[js.Any])
+    @scala.inline
+    def accessibilityTraitsVarargs(value: AccessibilityTrait*): this.type = set("accessibilityTraits", js.Array(value :_*))
     @scala.inline
     def accessibilityTraits(value: AccessibilityTrait | js.Array[AccessibilityTrait]): this.type = set("accessibilityTraits", value.asInstanceOf[js.Any])
     @scala.inline
@@ -186,6 +191,8 @@ object FlatList {
     def contentInsetAdjustmentBehavior(value: automatic | scrollableAxes | never | always): this.type = set("contentInsetAdjustmentBehavior", value.asInstanceOf[js.Any])
     @scala.inline
     def contentOffset(value: PointPropType): this.type = set("contentOffset", value.asInstanceOf[js.Any])
+    @scala.inline
+    def dataVarargs(value: ItemT*): this.type = set("data", js.Array(value :_*))
     @scala.inline
     def data(value: js.Array[ItemT]): this.type = set("data", value.asInstanceOf[js.Any])
     @scala.inline
@@ -405,6 +412,8 @@ object FlatList {
     @scala.inline
     def showsVerticalScrollIndicator(value: Boolean): this.type = set("showsVerticalScrollIndicator", value.asInstanceOf[js.Any])
     @scala.inline
+    def simultaneousHandlersVarargs(value: Ref[js.Any]*): this.type = set("simultaneousHandlers", js.Array(value :_*))
+    @scala.inline
     def simultaneousHandlersRefObject(value: ReactRef[_]): this.type = set("simultaneousHandlers", value.asInstanceOf[js.Any])
     @scala.inline
     def simultaneousHandlersFunction1(value: /* instance */ _ | Null => Unit): this.type = set("simultaneousHandlers", js.Any.fromFunction1(value))
@@ -419,9 +428,13 @@ object FlatList {
     @scala.inline
     def snapToInterval(value: Double): this.type = set("snapToInterval", value.asInstanceOf[js.Any])
     @scala.inline
+    def snapToOffsetsVarargs(value: Double*): this.type = set("snapToOffsets", js.Array(value :_*))
+    @scala.inline
     def snapToOffsets(value: js.Array[Double]): this.type = set("snapToOffsets", value.asInstanceOf[js.Any])
     @scala.inline
     def snapToStart(value: Boolean): this.type = set("snapToStart", value.asInstanceOf[js.Any])
+    @scala.inline
+    def stickyHeaderIndicesVarargs(value: Double*): this.type = set("stickyHeaderIndices", js.Array(value :_*))
     @scala.inline
     def stickyHeaderIndices(value: js.Array[Double]): this.type = set("stickyHeaderIndices", value.asInstanceOf[js.Any])
     @scala.inline
@@ -445,7 +458,11 @@ object FlatList {
     @scala.inline
     def viewabilityConfig(value: js.Any): this.type = set("viewabilityConfig", value.asInstanceOf[js.Any])
     @scala.inline
+    def viewabilityConfigCallbackPairsVarargs(value: ViewabilityConfigCallbackPair*): this.type = set("viewabilityConfigCallbackPairs", js.Array(value :_*))
+    @scala.inline
     def viewabilityConfigCallbackPairs(value: ViewabilityConfigCallbackPairs): this.type = set("viewabilityConfigCallbackPairs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def waitForVarargs(value: Ref[js.Any]*): this.type = set("waitFor", js.Array(value :_*))
     @scala.inline
     def waitForRefObject(value: ReactRef[_]): this.type = set("waitFor", value.asInstanceOf[js.Any])
     @scala.inline

@@ -39,6 +39,8 @@ object AbstractCheckboxGroupProps {
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     @scala.inline
+    def setOptionsVarargs(value: (CheckboxOptionType | String)*): Self = this.set("options", js.Array(value :_*))
+    @scala.inline
     def setOptions(value: js.Array[CheckboxOptionType | String]): Self = this.set("options", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)

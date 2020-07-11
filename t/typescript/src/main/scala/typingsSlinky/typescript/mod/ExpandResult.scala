@@ -27,6 +27,8 @@ object ExpandResult {
         x
     }
     @scala.inline
+    def setFileNamesVarargs(value: java.lang.String*): Self = this.set("fileNames", js.Array(value :_*))
+    @scala.inline
     def setFileNames(value: js.Array[java.lang.String]): Self = this.set("fileNames", value.asInstanceOf[js.Any])
     @scala.inline
     def setWildcardDirectories(value: MapLike[WatchDirectoryFlags]): Self = this.set("wildcardDirectories", value.asInstanceOf[js.Any])

@@ -29,6 +29,8 @@ object ChannelEvent {
         x
     }
     @scala.inline
+    def setArgsVarargs(value: js.Any*): Self = this.set("args", js.Array(value :_*))
+    @scala.inline
     def setArgs(value: js.Array[_]): Self = this.set("args", value.asInstanceOf[js.Any])
     @scala.inline
     def setFrom(value: String): Self = this.set("from", value.asInstanceOf[js.Any])

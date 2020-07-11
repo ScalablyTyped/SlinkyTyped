@@ -213,6 +213,8 @@ object SubMenuProps {
     @scala.inline
     def deleteOnTitleMouseLeave: Self = this.set("onTitleMouseLeave", js.undefined)
     @scala.inline
+    def setOpenKeysVarargs(value: String*): Self = this.set("openKeys", js.Array(value :_*))
+    @scala.inline
     def setOpenKeys(value: js.Array[String]): Self = this.set("openKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOpenKeys: Self = this.set("openKeys", js.undefined)
@@ -225,6 +227,8 @@ object SubMenuProps {
     @scala.inline
     def deletePopupClassName: Self = this.set("popupClassName", js.undefined)
     @scala.inline
+    def setPopupOffsetVarargs(value: Double*): Self = this.set("popupOffset", js.Array(value :_*))
+    @scala.inline
     def setPopupOffset(value: js.Array[Double]): Self = this.set("popupOffset", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePopupOffset: Self = this.set("popupOffset", js.undefined)
@@ -232,6 +236,8 @@ object SubMenuProps {
     def setRootPrefixCls(value: String): Self = this.set("rootPrefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRootPrefixCls: Self = this.set("rootPrefixCls", js.undefined)
+    @scala.inline
+    def setSelectedKeysVarargs(value: String*): Self = this.set("selectedKeys", js.Array(value :_*))
     @scala.inline
     def setSelectedKeys(value: js.Array[String]): Self = this.set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline

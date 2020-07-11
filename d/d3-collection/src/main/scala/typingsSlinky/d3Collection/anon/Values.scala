@@ -35,6 +35,8 @@ object Values {
     @scala.inline
     def deleteValue: Self = this.set("value", js.undefined)
     @scala.inline
+    def setValuesVarargs(value: Datum*): Self = this.set("values", js.Array(value :_*))
+    @scala.inline
     def setValues(value: (NestedArray[Datum, RollupType]) | js.Array[Datum]): Self = this.set("values", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValues: Self = this.set("values", js.undefined)

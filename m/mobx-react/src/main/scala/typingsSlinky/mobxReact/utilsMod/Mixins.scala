@@ -30,6 +30,8 @@ object Mixins {
     @scala.inline
     def setLocks(value: Double): Self = this.set("locks", value.asInstanceOf[js.Any])
     @scala.inline
+    def setMethodsVarargs(value: js.Function*): Self = this.set("methods", js.Array(value :_*))
+    @scala.inline
     def setMethods(value: js.Array[js.Function]): Self = this.set("methods", value.asInstanceOf[js.Any])
   }
   

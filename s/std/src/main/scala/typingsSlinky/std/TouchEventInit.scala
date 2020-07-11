@@ -28,13 +28,19 @@ object TouchEventInit {
         x
     }
     @scala.inline
+    def setChangedTouchesVarargs(value: org.scalajs.dom.raw.Touch*): Self = this.set("changedTouches", js.Array(value :_*))
+    @scala.inline
     def setChangedTouches(value: js.Array[org.scalajs.dom.raw.Touch]): Self = this.set("changedTouches", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChangedTouches: Self = this.set("changedTouches", js.undefined)
     @scala.inline
+    def setTargetTouchesVarargs(value: org.scalajs.dom.raw.Touch*): Self = this.set("targetTouches", js.Array(value :_*))
+    @scala.inline
     def setTargetTouches(value: js.Array[org.scalajs.dom.raw.Touch]): Self = this.set("targetTouches", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTargetTouches: Self = this.set("targetTouches", js.undefined)
+    @scala.inline
+    def setTouchesVarargs(value: org.scalajs.dom.raw.Touch*): Self = this.set("touches", js.Array(value :_*))
     @scala.inline
     def setTouches(value: js.Array[org.scalajs.dom.raw.Touch]): Self = this.set("touches", value.asInstanceOf[js.Any])
     @scala.inline

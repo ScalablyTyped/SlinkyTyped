@@ -65,6 +65,8 @@ object DirectiveMeta {
     @scala.inline
     def setOutputs(value: StringDictionary[String]): Self = this.set("outputs", value.asInstanceOf[js.Any])
     @scala.inline
+    def setExportAsVarargs(value: String*): Self = this.set("exportAs", js.Array(value :_*))
+    @scala.inline
     def setExportAs(value: js.Array[String]): Self = this.set("exportAs", value.asInstanceOf[js.Any])
     @scala.inline
     def setExportAsNull: Self = this.set("exportAs", null)

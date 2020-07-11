@@ -36,6 +36,8 @@ object ObserverEntity {
         x
     }
     @scala.inline
+    def setAffixListVarargs(value: default*): Self = this.set("affixList", js.Array(value :_*))
+    @scala.inline
     def setAffixList(value: js.Array[default]): Self = this.set("affixList", value.asInstanceOf[js.Any])
     @scala.inline
     def setEventHandlers(value: StringDictionary[js.Any]): Self = this.set("eventHandlers", value.asInstanceOf[js.Any])

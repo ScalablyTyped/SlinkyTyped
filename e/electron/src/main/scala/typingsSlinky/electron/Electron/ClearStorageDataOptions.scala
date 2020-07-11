@@ -42,9 +42,13 @@ object ClearStorageDataOptions {
     @scala.inline
     def deleteOrigin: Self = this.set("origin", js.undefined)
     @scala.inline
+    def setQuotasVarargs(value: String*): Self = this.set("quotas", js.Array(value :_*))
+    @scala.inline
     def setQuotas(value: js.Array[String]): Self = this.set("quotas", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteQuotas: Self = this.set("quotas", js.undefined)
+    @scala.inline
+    def setStoragesVarargs(value: String*): Self = this.set("storages", js.Array(value :_*))
     @scala.inline
     def setStorages(value: js.Array[String]): Self = this.set("storages", value.asInstanceOf[js.Any])
     @scala.inline

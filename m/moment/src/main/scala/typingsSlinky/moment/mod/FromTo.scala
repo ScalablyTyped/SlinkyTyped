@@ -27,9 +27,13 @@ object FromTo {
         x
     }
     @scala.inline
+    def setFromVarargs(value: (Double | String)*): Self = this.set("from", js.Array(value :_*))
+    @scala.inline
     def setFromDate(value: js.Date): Self = this.set("from", value.asInstanceOf[js.Any])
     @scala.inline
     def setFrom(value: MomentInput): Self = this.set("from", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setToVarargs(value: (Double | String)*): Self = this.set("to", js.Array(value :_*))
     @scala.inline
     def setToDate(value: js.Date): Self = this.set("to", value.asInstanceOf[js.Any])
     @scala.inline

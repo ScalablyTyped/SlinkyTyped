@@ -30,6 +30,8 @@ object Name {
         x
     }
     @scala.inline
+    def setProvidersVarargs(value: StaticProvider*): Self = this.set("providers", js.Array(value :_*))
+    @scala.inline
     def setProviders(value: js.Array[StaticProvider]): Self = this.set("providers", value.asInstanceOf[js.Any])
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

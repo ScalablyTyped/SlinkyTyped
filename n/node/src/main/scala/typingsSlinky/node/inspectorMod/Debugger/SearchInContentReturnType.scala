@@ -29,6 +29,8 @@ object SearchInContentReturnType {
         x
     }
     @scala.inline
+    def setResultVarargs(value: SearchMatch*): Self = this.set("result", js.Array(value :_*))
+    @scala.inline
     def setResult(value: js.Array[SearchMatch]): Self = this.set("result", value.asInstanceOf[js.Any])
   }
   

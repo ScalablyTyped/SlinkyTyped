@@ -38,6 +38,8 @@ object IntersectionObserverInit {
     @scala.inline
     def deleteRootMargin: Self = this.set("rootMargin", js.undefined)
     @scala.inline
+    def setThresholdVarargs(value: Double*): Self = this.set("threshold", js.Array(value :_*))
+    @scala.inline
     def setThreshold(value: Double | js.Array[Double]): Self = this.set("threshold", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteThreshold: Self = this.set("threshold", js.undefined)

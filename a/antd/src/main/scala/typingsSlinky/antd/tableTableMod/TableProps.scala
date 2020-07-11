@@ -8,6 +8,7 @@ import typingsSlinky.antd.antdStrings.ltr
 import typingsSlinky.antd.antdStrings.rtl
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.antd.spinMod.SpinProps
+import typingsSlinky.antd.tableInterfaceMod.ColumnGroupType
 import typingsSlinky.antd.tableInterfaceMod.ColumnsType
 import typingsSlinky.antd.tableInterfaceMod.GetPopupContainer
 import typingsSlinky.antd.tableInterfaceMod.SortOrder
@@ -127,6 +128,10 @@ object TableProps {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
+    def setColumnsVarargs(
+      value: (ColumnGroupType[RecordType] | typingsSlinky.antd.tableInterfaceMod.ColumnType[RecordType])*
+    ): Self = this.set("columns", js.Array(value :_*))
+    @scala.inline
     def setColumns(value: ColumnsType[RecordType]): Self = this.set("columns", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColumns: Self = this.set("columns", js.undefined)
@@ -135,6 +140,8 @@ object TableProps {
     @scala.inline
     def deleteComponents: Self = this.set("components", js.undefined)
     @scala.inline
+    def setDataSourceVarargs(value: RecordType*): Self = this.set("dataSource", js.Array(value :_*))
+    @scala.inline
     def setDataSource(value: js.Array[RecordType]): Self = this.set("dataSource", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDataSource: Self = this.set("dataSource", js.undefined)
@@ -142,6 +149,8 @@ object TableProps {
     def setDefaultExpandAllRows(value: Boolean): Self = this.set("defaultExpandAllRows", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultExpandAllRows: Self = this.set("defaultExpandAllRows", js.undefined)
+    @scala.inline
+    def setDefaultExpandedRowKeysVarargs(value: Key*): Self = this.set("defaultExpandedRowKeys", js.Array(value :_*))
     @scala.inline
     def setDefaultExpandedRowKeys(value: js.Array[Key]): Self = this.set("defaultExpandedRowKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -174,6 +183,8 @@ object TableProps {
     def setExpandedRowClassName(value: (RecordType, /* index */ Double, /* indent */ Double) => String): Self = this.set("expandedRowClassName", js.Any.fromFunction3(value))
     @scala.inline
     def deleteExpandedRowClassName: Self = this.set("expandedRowClassName", js.undefined)
+    @scala.inline
+    def setExpandedRowKeysVarargs(value: Key*): Self = this.set("expandedRowKeys", js.Array(value :_*))
     @scala.inline
     def setExpandedRowKeys(value: js.Array[Key]): Self = this.set("expandedRowKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -272,6 +283,8 @@ object TableProps {
     def setSize(value: SizeType): Self = this.set("size", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSize: Self = this.set("size", js.undefined)
+    @scala.inline
+    def setSortDirectionsVarargs(value: SortOrder*): Self = this.set("sortDirections", js.Array(value :_*))
     @scala.inline
     def setSortDirections(value: js.Array[SortOrder]): Self = this.set("sortDirections", value.asInstanceOf[js.Any])
     @scala.inline

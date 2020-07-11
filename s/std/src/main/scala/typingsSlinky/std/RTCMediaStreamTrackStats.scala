@@ -88,6 +88,8 @@ object RTCMediaStreamTrackStats {
     @scala.inline
     def deleteRemoteSource: Self = this.set("remoteSource", js.undefined)
     @scala.inline
+    def setSsrcIdsVarargs(value: java.lang.String*): Self = this.set("ssrcIds", js.Array(value :_*))
+    @scala.inline
     def setSsrcIds(value: js.Array[java.lang.String]): Self = this.set("ssrcIds", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSsrcIds: Self = this.set("ssrcIds", js.undefined)

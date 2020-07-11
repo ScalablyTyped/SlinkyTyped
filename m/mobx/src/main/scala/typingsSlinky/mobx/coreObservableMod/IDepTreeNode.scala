@@ -29,6 +29,8 @@ object IDepTreeNode {
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def setObservingVarargs(value: IObservable*): Self = this.set("observing", js.Array(value :_*))
+    @scala.inline
     def setObserving(value: js.Array[IObservable]): Self = this.set("observing", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteObserving: Self = this.set("observing", js.undefined)

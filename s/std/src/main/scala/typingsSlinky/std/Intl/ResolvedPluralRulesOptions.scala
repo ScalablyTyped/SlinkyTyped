@@ -49,6 +49,8 @@ object ResolvedPluralRulesOptions {
     @scala.inline
     def setMinimumIntegerDigits(value: Double): Self = this.set("minimumIntegerDigits", value.asInstanceOf[js.Any])
     @scala.inline
+    def setPluralCategoriesVarargs(value: LDMLPluralRule*): Self = this.set("pluralCategories", js.Array(value :_*))
+    @scala.inline
     def setPluralCategories(value: js.Array[LDMLPluralRule]): Self = this.set("pluralCategories", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: PluralRuleType): Self = this.set("type", value.asInstanceOf[js.Any])

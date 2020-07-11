@@ -77,6 +77,8 @@ object NavigationLeafRouteNavigaIndex {
     @scala.inline
     def setRouteName(value: String): Self = this.set("routeName", value.asInstanceOf[js.Any])
     @scala.inline
+    def setRoutesVarargs(value: NavigationRoute[NavigationParams]*): Self = this.set("routes", js.Array(value :_*))
+    @scala.inline
     def setRoutes(value: js.Array[NavigationRoute[NavigationParams]]): Self = this.set("routes", value.asInstanceOf[js.Any])
     @scala.inline
     def setIsDrawerOpen(value: js.Any): Self = this.set("isDrawerOpen", value.asInstanceOf[js.Any])

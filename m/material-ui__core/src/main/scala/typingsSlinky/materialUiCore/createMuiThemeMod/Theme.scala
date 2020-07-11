@@ -68,6 +68,8 @@ object Theme {
     @scala.inline
     def setPalette(value: Palette): Self = this.set("palette", value.asInstanceOf[js.Any])
     @scala.inline
+    def setShadowsVarargs(value: js.Any*): Self = this.set("shadows", js.Array(value :_*))
+    @scala.inline
     def setShadows(value: Shadows): Self = this.set("shadows", value.asInstanceOf[js.Any])
     @scala.inline
     def setShape(value: Shape): Self = this.set("shape", value.asInstanceOf[js.Any])

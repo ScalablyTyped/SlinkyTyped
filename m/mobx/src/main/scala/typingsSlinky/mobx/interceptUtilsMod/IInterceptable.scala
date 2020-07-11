@@ -30,6 +30,8 @@ object IInterceptable {
     @scala.inline
     def setIntercept(value: IInterceptor[T] => Lambda): Self = this.set("intercept", js.Any.fromFunction1(value))
     @scala.inline
+    def setInterceptorsVarargs(value: IInterceptor[T]*): Self = this.set("interceptors", js.Array(value :_*))
+    @scala.inline
     def setInterceptors(value: js.Array[IInterceptor[T]]): Self = this.set("interceptors", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInterceptors: Self = this.set("interceptors", js.undefined)

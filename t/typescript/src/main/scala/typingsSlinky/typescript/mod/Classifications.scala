@@ -29,6 +29,8 @@ object Classifications {
     @scala.inline
     def setEndOfLineState(value: EndOfLineState): Self = this.set("endOfLineState", value.asInstanceOf[js.Any])
     @scala.inline
+    def setSpansVarargs(value: Double*): Self = this.set("spans", js.Array(value :_*))
+    @scala.inline
     def setSpans(value: js.Array[Double]): Self = this.set("spans", value.asInstanceOf[js.Any])
   }
   

@@ -39,6 +39,8 @@ object BaseRule {
         x
     }
     @scala.inline
+    def setEnumVarargs(value: StoreValue*): Self = this.set("enum", js.Array(value :_*))
+    @scala.inline
     def setEnum(value: js.Array[StoreValue]): Self = this.set("enum", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEnum: Self = this.set("enum", js.undefined)
@@ -76,6 +78,8 @@ object BaseRule {
     def setType(value: RuleType): Self = this.set("type", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
+    @scala.inline
+    def setValidateTriggerVarargs(value: String*): Self = this.set("validateTrigger", js.Array(value :_*))
     @scala.inline
     def setValidateTrigger(value: String | js.Array[String]): Self = this.set("validateTrigger", value.asInstanceOf[js.Any])
     @scala.inline

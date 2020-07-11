@@ -38,6 +38,8 @@ object CompletionEntryDetails {
         x
     }
     @scala.inline
+    def setDisplayPartsVarargs(value: SymbolDisplayPart*): Self = this.set("displayParts", js.Array(value :_*))
+    @scala.inline
     def setDisplayParts(value: js.Array[SymbolDisplayPart]): Self = this.set("displayParts", value.asInstanceOf[js.Any])
     @scala.inline
     def setKind(value: ScriptElementKind): Self = this.set("kind", value.asInstanceOf[js.Any])
@@ -46,17 +48,25 @@ object CompletionEntryDetails {
     @scala.inline
     def setName(value: java.lang.String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def setCodeActionsVarargs(value: CodeAction*): Self = this.set("codeActions", js.Array(value :_*))
+    @scala.inline
     def setCodeActions(value: js.Array[CodeAction]): Self = this.set("codeActions", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCodeActions: Self = this.set("codeActions", js.undefined)
+    @scala.inline
+    def setDocumentationVarargs(value: SymbolDisplayPart*): Self = this.set("documentation", js.Array(value :_*))
     @scala.inline
     def setDocumentation(value: js.Array[SymbolDisplayPart]): Self = this.set("documentation", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDocumentation: Self = this.set("documentation", js.undefined)
     @scala.inline
+    def setSourceVarargs(value: SymbolDisplayPart*): Self = this.set("source", js.Array(value :_*))
+    @scala.inline
     def setSource(value: js.Array[SymbolDisplayPart]): Self = this.set("source", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSource: Self = this.set("source", js.undefined)
+    @scala.inline
+    def setTagsVarargs(value: JSDocTagInfo*): Self = this.set("tags", js.Array(value :_*))
     @scala.inline
     def setTags(value: js.Array[JSDocTagInfo]): Self = this.set("tags", value.asInstanceOf[js.Any])
     @scala.inline

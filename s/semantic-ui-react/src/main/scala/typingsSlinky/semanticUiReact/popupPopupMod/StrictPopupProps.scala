@@ -206,6 +206,8 @@ object StrictPopupProps {
     @scala.inline
     def deleteOffset: Self = this.set("offset", js.undefined)
     @scala.inline
+    def setOnVarargs(value: (hover | click | focus)*): Self = this.set("on", js.Array(value :_*))
+    @scala.inline
     def setOn(value: hover | click | focus | (js.Array[hover | click | focus])): Self = this.set("on", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOn: Self = this.set("on", js.undefined)
@@ -229,6 +231,8 @@ object StrictPopupProps {
     def setPinned(value: Boolean): Self = this.set("pinned", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePinned: Self = this.set("pinned", js.undefined)
+    @scala.inline
+    def setPopperDependenciesVarargs(value: js.Any*): Self = this.set("popperDependencies", js.Array(value :_*))
     @scala.inline
     def setPopperDependencies(value: js.Array[_]): Self = this.set("popperDependencies", value.asInstanceOf[js.Any])
     @scala.inline

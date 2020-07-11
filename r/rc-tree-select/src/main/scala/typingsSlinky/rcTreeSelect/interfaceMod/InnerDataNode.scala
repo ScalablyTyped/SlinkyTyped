@@ -35,6 +35,8 @@ object InnerDataNode {
     @scala.inline
     def setValue(value: RawValueType): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline
+    def setChildrenVarargs(value: InnerDataNode*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: js.Array[InnerDataNode]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)

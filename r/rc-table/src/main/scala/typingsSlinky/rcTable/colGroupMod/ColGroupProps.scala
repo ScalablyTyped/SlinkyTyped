@@ -29,11 +29,15 @@ object ColGroupProps {
         x
     }
     @scala.inline
+    def setColWidthsVarargs(value: (Double | String)*): Self = this.set("colWidths", js.Array(value :_*))
+    @scala.inline
     def setColWidths(value: js.Array[Double | String]): Self = this.set("colWidths", value.asInstanceOf[js.Any])
     @scala.inline
     def setColumCount(value: Double): Self = this.set("columCount", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColumCount: Self = this.set("columCount", js.undefined)
+    @scala.inline
+    def setColumnsVarargs(value: ColumnType[RecordType]*): Self = this.set("columns", js.Array(value :_*))
     @scala.inline
     def setColumns(value: js.Array[ColumnType[RecordType]]): Self = this.set("columns", value.asInstanceOf[js.Any])
     @scala.inline

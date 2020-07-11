@@ -56,33 +56,63 @@ object ATS {
         x
     }
     @scala.inline
+    def setATSVarargs(value: String*): Self = this.set("ATS", js.Array(value :_*))
+    @scala.inline
     def setATS(value: js.Array[String]): Self = this.set("ATS", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAUDVarargs(value: String*): Self = this.set("AUD", js.Array(value :_*))
     @scala.inline
     def setAUD(value: js.Array[String]): Self = this.set("AUD", value.asInstanceOf[js.Any])
     @scala.inline
+    def setBGMVarargs(value: String*): Self = this.set("BGM", js.Array(value :_*))
+    @scala.inline
     def setBGM(value: js.Array[String]): Self = this.set("BGM", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setBGOVarargs(value: String*): Self = this.set("BGO", js.Array(value :_*))
     @scala.inline
     def setBGO(value: js.Array[String]): Self = this.set("BGO", value.asInstanceOf[js.Any])
     @scala.inline
+    def setCUCVarargs(value: js.UndefOr[String]*): Self = this.set("CUC", js.Array(value :_*))
+    @scala.inline
     def setCUC(value: js.Array[js.UndefOr[String]]): Self = this.set("CUC", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDEMVarargs(value: String*): Self = this.set("DEM", js.Array(value :_*))
     @scala.inline
     def setDEM(value: js.Array[String]): Self = this.set("DEM", value.asInstanceOf[js.Any])
     @scala.inline
+    def setFKPVarargs(value: js.UndefOr[String]*): Self = this.set("FKP", js.Array(value :_*))
+    @scala.inline
     def setFKP(value: js.Array[js.UndefOr[String]]): Self = this.set("FKP", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setGNFVarargs(value: js.UndefOr[String]*): Self = this.set("GNF", js.Array(value :_*))
     @scala.inline
     def setGNF(value: js.Array[js.UndefOr[String]]): Self = this.set("GNF", value.asInstanceOf[js.Any])
     @scala.inline
+    def setKMFVarargs(value: js.UndefOr[String]*): Self = this.set("KMF", js.Array(value :_*))
+    @scala.inline
     def setKMF(value: js.Array[js.UndefOr[String]]): Self = this.set("KMF", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRONVarargs(value: js.UndefOr[String]*): Self = this.set("RON", js.Array(value :_*))
     @scala.inline
     def setRON(value: js.Array[js.UndefOr[String]]): Self = this.set("RON", value.asInstanceOf[js.Any])
     @scala.inline
+    def setRWFVarargs(value: js.UndefOr[String]*): Self = this.set("RWF", js.Array(value :_*))
+    @scala.inline
     def setRWF(value: js.Array[js.UndefOr[String]]): Self = this.set("RWF", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSYPVarargs(value: scala.Nothing*): Self = this.set("SYP", js.Array(value :_*))
     @scala.inline
     def setSYP(value: js.Array[scala.Nothing]): Self = this.set("SYP", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTHBVarargs(value: String*): Self = this.set("THB", js.Array(value :_*))
+    @scala.inline
     def setTHB(value: js.Array[String]): Self = this.set("THB", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTWDVarargs(value: String*): Self = this.set("TWD", js.Array(value :_*))
+    @scala.inline
     def setTWD(value: js.Array[String]): Self = this.set("TWD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setZMWVarargs(value: js.UndefOr[String]*): Self = this.set("ZMW", js.Array(value :_*))
     @scala.inline
     def setZMW(value: js.Array[js.UndefOr[String]]): Self = this.set("ZMW", value.asInstanceOf[js.Any])
   }

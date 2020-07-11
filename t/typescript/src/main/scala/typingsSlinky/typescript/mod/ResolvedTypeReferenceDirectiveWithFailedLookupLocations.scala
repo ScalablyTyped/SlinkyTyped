@@ -27,6 +27,8 @@ object ResolvedTypeReferenceDirectiveWithFailedLookupLocations {
         x
     }
     @scala.inline
+    def setFailedLookupLocationsVarargs(value: java.lang.String*): Self = this.set("failedLookupLocations", js.Array(value :_*))
+    @scala.inline
     def setFailedLookupLocations(value: js.Array[java.lang.String]): Self = this.set("failedLookupLocations", value.asInstanceOf[js.Any])
     @scala.inline
     def setResolvedTypeReferenceDirective(value: ResolvedTypeReferenceDirective): Self = this.set("resolvedTypeReferenceDirective", value.asInstanceOf[js.Any])

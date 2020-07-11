@@ -44,6 +44,8 @@ object FixedHeaderProps {
         x
     }
     @scala.inline
+    def setColWidthsVarargs(value: Double*): Self = this.set("colWidths", js.Array(value :_*))
+    @scala.inline
     def setColWidths(value: js.Array[Double]): Self = this.set("colWidths", value.asInstanceOf[js.Any])
     @scala.inline
     def setColumCount(value: Double): Self = this.set("columCount", value.asInstanceOf[js.Any])

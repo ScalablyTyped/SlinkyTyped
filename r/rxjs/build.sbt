@@ -1,13 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "rxjs"
-version := "6.5.5-fda3d4"
+version := "6.5.5-6aca83"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "rxjs-compat" % "6.5.5-8e1e9a",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-18eec6")
+  "org.scalablytyped.slinky" %%% "rxjs-compat" % "6.5.5-b15df4",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

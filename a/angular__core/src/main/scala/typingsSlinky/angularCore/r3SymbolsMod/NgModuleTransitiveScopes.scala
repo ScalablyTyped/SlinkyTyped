@@ -42,6 +42,8 @@ object NgModuleTransitiveScopes {
     @scala.inline
     def setExported(value: Directives): Self = this.set("exported", value.asInstanceOf[js.Any])
     @scala.inline
+    def setSchemasVarargs(value: SchemaMetadata*): Self = this.set("schemas", js.Array(value :_*))
+    @scala.inline
     def setSchemas(value: js.Array[SchemaMetadata]): Self = this.set("schemas", value.asInstanceOf[js.Any])
     @scala.inline
     def setSchemasNull: Self = this.set("schemas", null)

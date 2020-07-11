@@ -31,6 +31,8 @@ object GeometryCollection {
         x
     }
     @scala.inline
+    def setGeometriesVarargs(value: Geometry*): Self = this.set("geometries", js.Array(value :_*))
+    @scala.inline
     def setGeometries(value: js.Array[Geometry]): Self = this.set("geometries", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: typingsSlinky.geojson.geojsonStrings.GeometryCollection): Self = this.set("type", value.asInstanceOf[js.Any])

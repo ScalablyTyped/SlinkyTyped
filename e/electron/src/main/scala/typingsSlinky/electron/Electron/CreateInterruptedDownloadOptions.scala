@@ -71,6 +71,8 @@ object CreateInterruptedDownloadOptions {
     @scala.inline
     def setPath(value: String): Self = this.set("path", value.asInstanceOf[js.Any])
     @scala.inline
+    def setUrlChainVarargs(value: String*): Self = this.set("urlChain", js.Array(value :_*))
+    @scala.inline
     def setUrlChain(value: js.Array[String]): Self = this.set("urlChain", value.asInstanceOf[js.Any])
     @scala.inline
     def setMimeType(value: String): Self = this.set("mimeType", value.asInstanceOf[js.Any])

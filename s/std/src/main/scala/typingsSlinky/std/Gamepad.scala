@@ -46,13 +46,19 @@ object Gamepad {
         x
     }
     @scala.inline
+    def setAxesVarargs(value: Double*): Self = this.set("axes", js.Array(value :_*))
+    @scala.inline
     def setAxes(value: js.Array[Double]): Self = this.set("axes", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setButtonsVarargs(value: org.scalajs.dom.experimental.gamepad.GamepadButton*): Self = this.set("buttons", js.Array(value :_*))
     @scala.inline
     def setButtons(value: js.Array[org.scalajs.dom.experimental.gamepad.GamepadButton]): Self = this.set("buttons", value.asInstanceOf[js.Any])
     @scala.inline
     def setConnected(value: scala.Boolean): Self = this.set("connected", value.asInstanceOf[js.Any])
     @scala.inline
     def setHand(value: GamepadHand): Self = this.set("hand", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setHapticActuatorsVarargs(value: GamepadHapticActuator*): Self = this.set("hapticActuators", js.Array(value :_*))
     @scala.inline
     def setHapticActuators(value: js.Array[GamepadHapticActuator]): Self = this.set("hapticActuators", value.asInstanceOf[js.Any])
     @scala.inline

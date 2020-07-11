@@ -30,6 +30,8 @@ object Breadcrumb {
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
+    def routesVarargs(value: Route*): this.type = set("routes", js.Array(value :_*))
+    @scala.inline
     def routes(value: js.Array[Route]): this.type = set("routes", value.asInstanceOf[js.Any])
     @scala.inline
     def separatorReactElement(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])

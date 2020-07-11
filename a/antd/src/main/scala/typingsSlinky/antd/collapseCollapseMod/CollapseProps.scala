@@ -43,6 +43,8 @@ object CollapseProps {
     @scala.inline
     def deleteAccordion: Self = this.set("accordion", js.undefined)
     @scala.inline
+    def setActiveKeyVarargs(value: (String | Double)*): Self = this.set("activeKey", js.Array(value :_*))
+    @scala.inline
     def setActiveKey(value: (js.Array[String | Double]) | String | Double): Self = this.set("activeKey", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteActiveKey: Self = this.set("activeKey", js.undefined)
@@ -54,6 +56,8 @@ object CollapseProps {
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
+    @scala.inline
+    def setDefaultActiveKeyVarargs(value: (String | Double)*): Self = this.set("defaultActiveKey", js.Array(value :_*))
     @scala.inline
     def setDefaultActiveKey(value: (js.Array[String | Double]) | String | Double): Self = this.set("defaultActiveKey", value.asInstanceOf[js.Any])
     @scala.inline

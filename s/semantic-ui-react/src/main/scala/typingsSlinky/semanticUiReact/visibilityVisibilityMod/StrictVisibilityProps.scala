@@ -169,6 +169,8 @@ object StrictVisibilityProps {
     @scala.inline
     def deleteFireOnMount: Self = this.set("fireOnMount", js.undefined)
     @scala.inline
+    def setOffsetVarargs(value: (Double | String)*): Self = this.set("offset", js.Array(value :_*))
+    @scala.inline
     def setOffset(value: Double | String | (js.Array[Double | String])): Self = this.set("offset", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOffset: Self = this.set("offset", js.undefined)

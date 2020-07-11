@@ -34,6 +34,8 @@ object CompileProviderMetadata {
     @scala.inline
     def setToken(value: CompileTokenMetadata): Self = this.set("token", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDepsVarargs(value: CompileDiDependencyMetadata*): Self = this.set("deps", js.Array(value :_*))
+    @scala.inline
     def setDeps(value: js.Array[CompileDiDependencyMetadata]): Self = this.set("deps", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDeps: Self = this.set("deps", js.undefined)

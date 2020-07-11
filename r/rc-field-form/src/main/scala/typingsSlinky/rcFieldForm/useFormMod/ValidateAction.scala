@@ -31,6 +31,8 @@ object ValidateAction {
         x
     }
     @scala.inline
+    def setNamePathVarargs(value: (String | Double)*): Self = this.set("namePath", js.Array(value :_*))
+    @scala.inline
     def setNamePath(value: InternalNamePath): Self = this.set("namePath", value.asInstanceOf[js.Any])
     @scala.inline
     def setTriggerName(value: String): Self = this.set("triggerName", value.asInstanceOf[js.Any])

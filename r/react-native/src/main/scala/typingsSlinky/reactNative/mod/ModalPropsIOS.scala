@@ -69,6 +69,8 @@ object ModalPropsIOS {
     @scala.inline
     def deletePresentationStyle: Self = this.set("presentationStyle", js.undefined)
     @scala.inline
+    def setSupportedOrientationsVarargs(value: (portrait | `portrait-upside-down` | landscape | `landscape-left` | `landscape-right`)*): Self = this.set("supportedOrientations", js.Array(value :_*))
+    @scala.inline
     def setSupportedOrientations(
       value: js.Array[
           portrait | `portrait-upside-down` | landscape | `landscape-left` | `landscape-right`

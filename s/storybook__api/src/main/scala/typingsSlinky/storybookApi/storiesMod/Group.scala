@@ -42,6 +42,8 @@ object Group {
         x
     }
     @scala.inline
+    def setChildrenVarargs(value: StoryId*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: js.Array[StoryId]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def setDepth(value: Double): Self = this.set("depth", value.asInstanceOf[js.Any])

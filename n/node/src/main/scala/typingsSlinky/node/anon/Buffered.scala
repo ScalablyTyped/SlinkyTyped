@@ -28,6 +28,8 @@ object Buffered {
         x
     }
     @scala.inline
+    def setEntryTypesVarargs(value: EntryType*): Self = this.set("entryTypes", js.Array(value :_*))
+    @scala.inline
     def setEntryTypes(value: js.Array[EntryType]): Self = this.set("entryTypes", value.asInstanceOf[js.Any])
     @scala.inline
     def setBuffered(value: Boolean): Self = this.set("buffered", value.asInstanceOf[js.Any])

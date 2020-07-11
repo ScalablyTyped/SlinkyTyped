@@ -56,9 +56,13 @@ object CssProps {
     @scala.inline
     def deleteInputTarget: Self = this.set("inputTarget", js.undefined)
     @scala.inline
+    def setPresetVarargs(value: js.Any*): Self = this.set("preset", js.Array(value :_*))
+    @scala.inline
     def setPreset(value: js.Array[_]): Self = this.set("preset", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePreset: Self = this.set("preset", js.undefined)
+    @scala.inline
+    def setRecognizersVarargs(value: js.Any*): Self = this.set("recognizers", js.Array(value :_*))
     @scala.inline
     def setRecognizers(value: js.Array[_]): Self = this.set("recognizers", value.asInstanceOf[js.Any])
     @scala.inline

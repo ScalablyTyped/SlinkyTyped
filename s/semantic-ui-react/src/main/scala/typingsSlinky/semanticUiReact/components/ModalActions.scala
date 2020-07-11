@@ -8,6 +8,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.buttonButtonMod.ButtonProps
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.modalActionsMod.ModalActionsProps
 import typingsSlinky.semanticUiReact.modalActionsMod.default
 import scala.scalajs.js
@@ -23,6 +24,8 @@ object ModalActions {
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
        with StBuildingComponent[tag.type, default] {
+    @scala.inline
+    def actionsVarargs(value: SemanticShorthandItem[ButtonProps]*): this.type = set("actions", js.Array(value :_*))
     @scala.inline
     def actions(value: SemanticShorthandCollection[ButtonProps]): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline

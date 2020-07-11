@@ -42,45 +42,67 @@ object FontFaceFallback {
         x
     }
     @scala.inline
+    def setMozFontFeatureSettingsVarargs(value: FontFaceFontFeatureSettingsProperty*): Self = this.set("MozFontFeatureSettings", js.Array(value :_*))
+    @scala.inline
     def setMozFontFeatureSettings(value: FontFaceFontFeatureSettingsProperty | js.Array[FontFaceFontFeatureSettingsProperty]): Self = this.set("MozFontFeatureSettings", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMozFontFeatureSettings: Self = this.set("MozFontFeatureSettings", js.undefined)
+    @scala.inline
+    def setFontDisplayVarargs(value: FontFaceFontDisplayProperty*): Self = this.set("fontDisplay", js.Array(value :_*))
     @scala.inline
     def setFontDisplay(value: FontFaceFontDisplayProperty | js.Array[FontFaceFontDisplayProperty]): Self = this.set("fontDisplay", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFontDisplay: Self = this.set("fontDisplay", js.undefined)
     @scala.inline
+    def setFontFamilyVarargs(value: String*): Self = this.set("fontFamily", js.Array(value :_*))
+    @scala.inline
     def setFontFamily(value: String | js.Array[String]): Self = this.set("fontFamily", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFontFamily: Self = this.set("fontFamily", js.undefined)
+    @scala.inline
+    def setFontFeatureSettingsVarargs(value: FontFaceFontFeatureSettingsProperty*): Self = this.set("fontFeatureSettings", js.Array(value :_*))
     @scala.inline
     def setFontFeatureSettings(value: FontFaceFontFeatureSettingsProperty | js.Array[FontFaceFontFeatureSettingsProperty]): Self = this.set("fontFeatureSettings", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFontFeatureSettings: Self = this.set("fontFeatureSettings", js.undefined)
     @scala.inline
+    def setFontStretchVarargs(value: FontFaceFontStretchProperty*): Self = this.set("fontStretch", js.Array(value :_*))
+    @scala.inline
     def setFontStretch(value: FontFaceFontStretchProperty | js.Array[FontFaceFontStretchProperty]): Self = this.set("fontStretch", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFontStretch: Self = this.set("fontStretch", js.undefined)
+    @scala.inline
+    def setFontStyleVarargs(value: FontFaceFontStyleProperty*): Self = this.set("fontStyle", js.Array(value :_*))
     @scala.inline
     def setFontStyle(value: FontFaceFontStyleProperty | js.Array[FontFaceFontStyleProperty]): Self = this.set("fontStyle", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFontStyle: Self = this.set("fontStyle", js.undefined)
     @scala.inline
+    def setFontVariantVarargs(value: FontFaceFontVariantProperty*): Self = this.set("fontVariant", js.Array(value :_*))
+    @scala.inline
     def setFontVariant(value: FontFaceFontVariantProperty | js.Array[FontFaceFontVariantProperty]): Self = this.set("fontVariant", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFontVariant: Self = this.set("fontVariant", js.undefined)
+    @scala.inline
+    def setFontVariationSettingsVarargs(value: FontFaceFontVariationSettingsProperty*): Self = this.set("fontVariationSettings", js.Array(value :_*))
     @scala.inline
     def setFontVariationSettings(value: FontFaceFontVariationSettingsProperty | js.Array[FontFaceFontVariationSettingsProperty]): Self = this.set("fontVariationSettings", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFontVariationSettings: Self = this.set("fontVariationSettings", js.undefined)
     @scala.inline
+    def setFontWeightVarargs(value: FontFaceFontWeightProperty*): Self = this.set("fontWeight", js.Array(value :_*))
+    @scala.inline
     def setFontWeight(value: FontFaceFontWeightProperty | js.Array[FontFaceFontWeightProperty]): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFontWeight: Self = this.set("fontWeight", js.undefined)
     @scala.inline
+    def setSrcVarargs(value: String*): Self = this.set("src", js.Array(value :_*))
+    @scala.inline
     def setSrc(value: String | js.Array[String]): Self = this.set("src", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSrc: Self = this.set("src", js.undefined)
+    @scala.inline
+    def setUnicodeRangeVarargs(value: String*): Self = this.set("unicodeRange", js.Array(value :_*))
     @scala.inline
     def setUnicodeRange(value: String | js.Array[String]): Self = this.set("unicodeRange", value.asInstanceOf[js.Any])
     @scala.inline

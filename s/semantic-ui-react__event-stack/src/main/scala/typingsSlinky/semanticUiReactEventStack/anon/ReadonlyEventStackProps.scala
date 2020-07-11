@@ -8,6 +8,7 @@ import slinky.core.facade.ReactRef
 import typingsSlinky.semanticUiReactEventStack.typesMod.InputEventListener
 import typingsSlinky.semanticUiReactEventStack.typesMod.InputTargetElement
 import typingsSlinky.semanticUiReactEventStack.typesMod.TargetElement
+import typingsSlinky.std.EventListener
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,6 +40,8 @@ object ReadonlyEventStackProps {
     }
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setOnVarargs(value: EventListener*): Self = this.set("on", js.Array(value :_*))
     @scala.inline
     def setOnFunction1(value: /* evt */ Event => Unit): Self = this.set("on", js.Any.fromFunction1(value))
     @scala.inline

@@ -26,6 +26,8 @@ object MediaTrackConstraints {
         x
     }
     @scala.inline
+    def setAdvancedVarargs(value: org.scalajs.dom.experimental.mediastream.MediaTrackConstraintSet*): Self = this.set("advanced", js.Array(value :_*))
+    @scala.inline
     def setAdvanced(value: js.Array[org.scalajs.dom.experimental.mediastream.MediaTrackConstraintSet]): Self = this.set("advanced", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAdvanced: Self = this.set("advanced", js.undefined)

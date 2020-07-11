@@ -44,21 +44,39 @@ object DKK {
         x
     }
     @scala.inline
+    def setAUDVarargs(value: String*): Self = this.set("AUD", js.Array(value :_*))
+    @scala.inline
     def setAUD(value: js.Array[String]): Self = this.set("AUD", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDKKVarargs(value: String*): Self = this.set("DKK", js.Array(value :_*))
     @scala.inline
     def setDKK(value: js.Array[String]): Self = this.set("DKK", value.asInstanceOf[js.Any])
     @scala.inline
+    def setISKVarargs(value: js.UndefOr[String]*): Self = this.set("ISK", js.Array(value :_*))
+    @scala.inline
     def setISK(value: js.Array[js.UndefOr[String]]): Self = this.set("ISK", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setJPYVarargs(value: String*): Self = this.set("JPY", js.Array(value :_*))
     @scala.inline
     def setJPY(value: js.Array[String]): Self = this.set("JPY", value.asInstanceOf[js.Any])
     @scala.inline
+    def setNOKVarargs(value: js.UndefOr[String]*): Self = this.set("NOK", js.Array(value :_*))
+    @scala.inline
     def setNOK(value: js.Array[js.UndefOr[String]]): Self = this.set("NOK", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setRONVarargs(value: js.UndefOr[String]*): Self = this.set("RON", js.Array(value :_*))
     @scala.inline
     def setRON(value: js.Array[js.UndefOr[String]]): Self = this.set("RON", value.asInstanceOf[js.Any])
     @scala.inline
+    def setSEKVarargs(value: js.UndefOr[String]*): Self = this.set("SEK", js.Array(value :_*))
+    @scala.inline
     def setSEK(value: js.Array[js.UndefOr[String]]): Self = this.set("SEK", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTHBVarargs(value: String*): Self = this.set("THB", js.Array(value :_*))
+    @scala.inline
     def setTHB(value: js.Array[String]): Self = this.set("THB", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTWDVarargs(value: String*): Self = this.set("TWD", js.Array(value :_*))
     @scala.inline
     def setTWD(value: js.Array[String]): Self = this.set("TWD", value.asInstanceOf[js.Any])
   }

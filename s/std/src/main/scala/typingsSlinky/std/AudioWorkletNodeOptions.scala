@@ -38,6 +38,8 @@ object AudioWorkletNodeOptions {
     @scala.inline
     def deleteNumberOfOutputs: Self = this.set("numberOfOutputs", js.undefined)
     @scala.inline
+    def setOutputChannelCountVarargs(value: Double*): Self = this.set("outputChannelCount", js.Array(value :_*))
+    @scala.inline
     def setOutputChannelCount(value: js.Array[Double]): Self = this.set("outputChannelCount", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOutputChannelCount: Self = this.set("outputChannelCount", js.undefined)

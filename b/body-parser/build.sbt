@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "body-parser"
-version := "1.19-dt-20200210Z-adf09d"
+version := "1.19-dt-20200210Z-2d871c"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20200515Z-805708",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200609Z-5ab0d9",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-18eec6")
+  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20200515Z-da6c99",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200609Z-439deb",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

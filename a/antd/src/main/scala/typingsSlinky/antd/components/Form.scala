@@ -236,6 +236,8 @@ object Form {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def dir(value: String): this.type = set("dir", value.asInstanceOf[js.Any])
@@ -243,6 +245,8 @@ object Form {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     @scala.inline
     def encType(value: String): this.type = set("encType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def fieldsVarargs(value: FieldData*): this.type = set("fields", js.Array(value :_*))
     @scala.inline
     def fields(value: js.Array[FieldData]): this.type = set("fields", value.asInstanceOf[js.Any])
     @scala.inline
@@ -495,6 +499,8 @@ object Form {
     def unselectable(value: on | off): this.type = set("unselectable", value.asInstanceOf[js.Any])
     @scala.inline
     def validateMessages(value: ValidateMessages): this.type = set("validateMessages", value.asInstanceOf[js.Any])
+    @scala.inline
+    def validateTriggerVarargs(value: String*): this.type = set("validateTrigger", js.Array(value :_*))
     @scala.inline
     def validateTrigger(value: String | js.Array[String] | `false`): this.type = set("validateTrigger", value.asInstanceOf[js.Any])
     @scala.inline

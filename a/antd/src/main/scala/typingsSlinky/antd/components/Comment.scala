@@ -19,6 +19,8 @@ object Comment {
     extends AnyVal
        with StBuildingComponent[tag.type, js.Object] {
     @scala.inline
+    def actionsVarargs(value: ReactElement*): this.type = set("actions", js.Array(value :_*))
+    @scala.inline
     def actions(value: js.Array[ReactElement]): this.type = set("actions", value.asInstanceOf[js.Any])
     @scala.inline
     def authorReactElement(value: ReactElement): this.type = set("author", value.asInstanceOf[js.Any])

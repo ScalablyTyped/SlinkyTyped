@@ -37,6 +37,8 @@ object SearchCategory {
     @scala.inline
     def renderer(value: /* props */ SearchCategoryProps => ReactElement): this.type = set("renderer", js.Any.fromFunction1(value))
     @scala.inline
+    def resultsVarargs(value: ReactComponentClass[SearchResultProps]*): this.type = set("results", js.Array(value :_*))
+    @scala.inline
     def results(value: js.Array[ReactComponentClass[SearchResultProps]]): this.type = set("results", value.asInstanceOf[js.Any])
   }
   

@@ -172,6 +172,8 @@ object HierarchyNode {
     @scala.inline
     def setSum(value: js.Function1[/* d */ Datum, Double] => HierarchyNode[Datum]): Self = this.set("sum", js.Any.fromFunction1(value))
     @scala.inline
+    def setChildrenVarargs(value: HierarchyNode[Datum]*): Self = this.set("children", js.Array(value :_*))
+    @scala.inline
     def setChildren(value: js.Array[HierarchyNode[Datum]]): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)

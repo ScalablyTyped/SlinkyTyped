@@ -50,6 +50,8 @@ object NavigationBarItem {
     @scala.inline
     def setBolded(value: Boolean): Self = this.set("bolded", value.asInstanceOf[js.Any])
     @scala.inline
+    def setChildItemsVarargs(value: NavigationBarItem*): Self = this.set("childItems", js.Array(value :_*))
+    @scala.inline
     def setChildItems(value: js.Array[NavigationBarItem]): Self = this.set("childItems", value.asInstanceOf[js.Any])
     @scala.inline
     def setGrayed(value: Boolean): Self = this.set("grayed", value.asInstanceOf[js.Any])
@@ -59,6 +61,8 @@ object NavigationBarItem {
     def setKind(value: ScriptElementKind): Self = this.set("kind", value.asInstanceOf[js.Any])
     @scala.inline
     def setKindModifiers(value: java.lang.String): Self = this.set("kindModifiers", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSpansVarargs(value: TextSpan*): Self = this.set("spans", js.Array(value :_*))
     @scala.inline
     def setSpans(value: js.Array[TextSpan]): Self = this.set("spans", value.asInstanceOf[js.Any])
     @scala.inline

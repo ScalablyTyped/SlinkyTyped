@@ -123,21 +123,31 @@ object Route {
         x
     }
     @scala.inline
+    def setCanActivateVarargs(value: js.Any*): Self = this.set("canActivate", js.Array(value :_*))
+    @scala.inline
     def setCanActivate(value: js.Array[_]): Self = this.set("canActivate", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCanActivate: Self = this.set("canActivate", js.undefined)
+    @scala.inline
+    def setCanActivateChildVarargs(value: js.Any*): Self = this.set("canActivateChild", js.Array(value :_*))
     @scala.inline
     def setCanActivateChild(value: js.Array[_]): Self = this.set("canActivateChild", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCanActivateChild: Self = this.set("canActivateChild", js.undefined)
     @scala.inline
+    def setCanDeactivateVarargs(value: js.Any*): Self = this.set("canDeactivate", js.Array(value :_*))
+    @scala.inline
     def setCanDeactivate(value: js.Array[_]): Self = this.set("canDeactivate", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCanDeactivate: Self = this.set("canDeactivate", js.undefined)
     @scala.inline
+    def setCanLoadVarargs(value: js.Any*): Self = this.set("canLoad", js.Array(value :_*))
+    @scala.inline
     def setCanLoad(value: js.Array[_]): Self = this.set("canLoad", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCanLoad: Self = this.set("canLoad", js.undefined)
+    @scala.inline
+    def setChildrenVarargs(value: Route*): Self = this.set("children", js.Array(value :_*))
     @scala.inline
     def setChildren(value: Routes): Self = this.set("children", value.asInstanceOf[js.Any])
     @scala.inline

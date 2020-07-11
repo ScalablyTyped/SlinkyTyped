@@ -29,6 +29,8 @@ object CallHierarchyIncomingCall {
     @scala.inline
     def setFrom(value: CallHierarchyItem): Self = this.set("from", value.asInstanceOf[js.Any])
     @scala.inline
+    def setFromSpansVarargs(value: TextSpan*): Self = this.set("fromSpans", js.Array(value :_*))
+    @scala.inline
     def setFromSpans(value: js.Array[TextSpan]): Self = this.set("fromSpans", value.asInstanceOf[js.Any])
   }
   

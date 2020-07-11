@@ -42,6 +42,8 @@ object ScriptTypeProfile {
         x
     }
     @scala.inline
+    def setEntriesVarargs(value: TypeProfileEntry*): Self = this.set("entries", js.Array(value :_*))
+    @scala.inline
     def setEntries(value: js.Array[TypeProfileEntry]): Self = this.set("entries", value.asInstanceOf[js.Any])
     @scala.inline
     def setScriptId(value: ScriptId): Self = this.set("scriptId", value.asInstanceOf[js.Any])

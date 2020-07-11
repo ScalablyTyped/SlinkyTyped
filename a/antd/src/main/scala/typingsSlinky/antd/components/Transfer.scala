@@ -62,6 +62,8 @@ object Transfer {
     @scala.inline
     def operationStyle(value: CSSProperties): this.type = set("operationStyle", value.asInstanceOf[js.Any])
     @scala.inline
+    def operationsVarargs(value: String*): this.type = set("operations", js.Array(value :_*))
+    @scala.inline
     def operations(value: js.Array[String]): this.type = set("operations", value.asInstanceOf[js.Any])
     @scala.inline
     def pagination(value: PaginationType): this.type = set("pagination", value.asInstanceOf[js.Any])
@@ -72,7 +74,11 @@ object Transfer {
     @scala.inline
     def rowKey(value: /* record */ TransferItem => String): this.type = set("rowKey", js.Any.fromFunction1(value))
     @scala.inline
+    def selectAllLabelsVarargs(value: SelectAllLabel*): this.type = set("selectAllLabels", js.Array(value :_*))
+    @scala.inline
     def selectAllLabels(value: js.Array[SelectAllLabel]): this.type = set("selectAllLabels", value.asInstanceOf[js.Any])
+    @scala.inline
+    def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
     @scala.inline
     def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -82,7 +88,11 @@ object Transfer {
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
+    def targetKeysVarargs(value: String*): this.type = set("targetKeys", js.Array(value :_*))
+    @scala.inline
     def targetKeys(value: js.Array[String]): this.type = set("targetKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def titlesVarargs(value: String*): this.type = set("titles", js.Array(value :_*))
     @scala.inline
     def titles(value: js.Array[String]): this.type = set("titles", value.asInstanceOf[js.Any])
   }

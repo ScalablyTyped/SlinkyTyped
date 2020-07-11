@@ -27,6 +27,8 @@ object RTCDtlsParameters {
         x
     }
     @scala.inline
+    def setFingerprintsVarargs(value: RTCDtlsFingerprint*): Self = this.set("fingerprints", js.Array(value :_*))
+    @scala.inline
     def setFingerprints(value: js.Array[RTCDtlsFingerprint]): Self = this.set("fingerprints", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFingerprints: Self = this.set("fingerprints", js.undefined)

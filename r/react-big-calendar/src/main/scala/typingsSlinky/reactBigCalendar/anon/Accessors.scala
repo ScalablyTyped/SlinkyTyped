@@ -31,6 +31,8 @@ object Accessors {
     @scala.inline
     def setAccessors(value: js.Any): Self = this.set("accessors", value.asInstanceOf[js.Any])
     @scala.inline
+    def setEventsVarargs(value: TEvent*): Self = this.set("events", js.Array(value :_*))
+    @scala.inline
     def setEvents(value: js.Array[TEvent]): Self = this.set("events", value.asInstanceOf[js.Any])
     @scala.inline
     def setMinimumStartDifference(value: Double): Self = this.set("minimumStartDifference", value.asInstanceOf[js.Any])

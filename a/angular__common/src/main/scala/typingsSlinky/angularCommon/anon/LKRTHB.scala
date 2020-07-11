@@ -28,9 +28,15 @@ object LKRTHB {
         x
     }
     @scala.inline
+    def setLKRVarargs(value: String*): Self = this.set("LKR", js.Array(value :_*))
+    @scala.inline
     def setLKR(value: js.Array[String]): Self = this.set("LKR", value.asInstanceOf[js.Any])
     @scala.inline
+    def setTHBVarargs(value: String*): Self = this.set("THB", js.Array(value :_*))
+    @scala.inline
     def setTHB(value: js.Array[String]): Self = this.set("THB", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTWDVarargs(value: String*): Self = this.set("TWD", js.Array(value :_*))
     @scala.inline
     def setTWD(value: js.Array[String]): Self = this.set("TWD", value.asInstanceOf[js.Any])
   }

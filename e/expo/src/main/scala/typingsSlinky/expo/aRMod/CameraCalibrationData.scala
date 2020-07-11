@@ -40,7 +40,11 @@ object CameraCalibrationData {
         x
     }
     @scala.inline
+    def setExtrinsicMatrixVarargs(value: Double*): Self = this.set("extrinsicMatrix", js.Array(value :_*))
+    @scala.inline
     def setExtrinsicMatrix(value: Matrix): Self = this.set("extrinsicMatrix", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIntrinsicMatrixVarargs(value: Double*): Self = this.set("intrinsicMatrix", js.Array(value :_*))
     @scala.inline
     def setIntrinsicMatrix(value: Matrix): Self = this.set("intrinsicMatrix", value.asInstanceOf[js.Any])
     @scala.inline

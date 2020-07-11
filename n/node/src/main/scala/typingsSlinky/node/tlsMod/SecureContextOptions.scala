@@ -172,9 +172,13 @@ object SecureContextOptions {
         x
     }
     @scala.inline
+    def setCaVarargs(value: (String | Buffer)*): Self = this.set("ca", js.Array(value :_*))
+    @scala.inline
     def setCa(value: String | Buffer | (js.Array[String | Buffer])): Self = this.set("ca", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCa: Self = this.set("ca", js.undefined)
+    @scala.inline
+    def setCertVarargs(value: (String | Buffer)*): Self = this.set("cert", js.Array(value :_*))
     @scala.inline
     def setCert(value: String | Buffer | (js.Array[String | Buffer])): Self = this.set("cert", value.asInstanceOf[js.Any])
     @scala.inline
@@ -187,6 +191,8 @@ object SecureContextOptions {
     def setClientCertEngine(value: String): Self = this.set("clientCertEngine", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClientCertEngine: Self = this.set("clientCertEngine", js.undefined)
+    @scala.inline
+    def setCrlVarargs(value: (String | Buffer)*): Self = this.set("crl", js.Array(value :_*))
     @scala.inline
     def setCrl(value: String | Buffer | (js.Array[String | Buffer])): Self = this.set("crl", value.asInstanceOf[js.Any])
     @scala.inline
@@ -204,6 +210,8 @@ object SecureContextOptions {
     @scala.inline
     def deleteHonorCipherOrder: Self = this.set("honorCipherOrder", js.undefined)
     @scala.inline
+    def setKeyVarargs(value: (Buffer | KeyObject)*): Self = this.set("key", js.Array(value :_*))
+    @scala.inline
     def setKey(value: String | Buffer | (js.Array[Buffer | KeyObject])): Self = this.set("key", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
@@ -219,6 +227,8 @@ object SecureContextOptions {
     def setPassphrase(value: String): Self = this.set("passphrase", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePassphrase: Self = this.set("passphrase", js.undefined)
+    @scala.inline
+    def setPfxVarargs(value: (String | Buffer | PxfObject)*): Self = this.set("pfx", js.Array(value :_*))
     @scala.inline
     def setPfx(value: String | Buffer | (js.Array[String | Buffer | PxfObject])): Self = this.set("pfx", value.asInstanceOf[js.Any])
     @scala.inline

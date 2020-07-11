@@ -53,6 +53,8 @@ object Dictindex {
     @scala.inline
     def deleteUseMapMargin: Self = this.set("useMapMargin", js.undefined)
     @scala.inline
+    def setZoomMarginVarargs(value: (js.Array[Double] | Double)*): Self = this.set("zoomMargin", js.Array(value :_*))
+    @scala.inline
     def setZoomMargin(value: (js.Array[js.Array[Double] | Double]) | Double): Self = this.set("zoomMargin", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteZoomMargin: Self = this.set("zoomMargin", js.undefined)

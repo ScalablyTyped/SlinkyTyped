@@ -39,6 +39,8 @@ object Meta {
     @scala.inline
     def setController(value: StringDictionary[js.Any]): Self = this.set("controller", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDataVarargs(value: MetaData*): Self = this.set("data", js.Array(value :_*))
+    @scala.inline
     def setData(value: js.Array[MetaData]): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline
     def setType(value: ChartType): Self = this.set("type", value.asInstanceOf[js.Any])

@@ -47,6 +47,8 @@ object TimeUnitColumnProps {
     @scala.inline
     def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
     @scala.inline
+    def setUnitsVarargs(value: Unit*): Self = this.set("units", js.Array(value :_*))
+    @scala.inline
     def setUnits(value: js.Array[Unit]): Self = this.set("units", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUnits: Self = this.set("units", js.undefined)

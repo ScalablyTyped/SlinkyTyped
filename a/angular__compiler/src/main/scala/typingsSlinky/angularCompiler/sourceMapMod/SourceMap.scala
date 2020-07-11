@@ -41,7 +41,11 @@ object SourceMap {
     @scala.inline
     def setSourceRoot(value: String): Self = this.set("sourceRoot", value.asInstanceOf[js.Any])
     @scala.inline
+    def setSourcesVarargs(value: String*): Self = this.set("sources", js.Array(value :_*))
+    @scala.inline
     def setSources(value: js.Array[String]): Self = this.set("sources", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSourcesContentVarargs(value: (String | Null)*): Self = this.set("sourcesContent", js.Array(value :_*))
     @scala.inline
     def setSourcesContent(value: js.Array[String | Null]): Self = this.set("sourcesContent", value.asInstanceOf[js.Any])
     @scala.inline

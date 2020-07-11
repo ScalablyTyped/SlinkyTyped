@@ -29,6 +29,8 @@ object TakeTypeProfileReturnType {
         x
     }
     @scala.inline
+    def setResultVarargs(value: ScriptTypeProfile*): Self = this.set("result", js.Array(value :_*))
+    @scala.inline
     def setResult(value: js.Array[ScriptTypeProfile]): Self = this.set("result", value.asInstanceOf[js.Any])
   }
   

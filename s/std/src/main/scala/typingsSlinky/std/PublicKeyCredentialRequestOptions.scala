@@ -37,6 +37,8 @@ object PublicKeyCredentialRequestOptions {
     @scala.inline
     def setChallenge(value: BufferSource): Self = this.set("challenge", value.asInstanceOf[js.Any])
     @scala.inline
+    def setAllowCredentialsVarargs(value: PublicKeyCredentialDescriptor*): Self = this.set("allowCredentials", js.Array(value :_*))
+    @scala.inline
     def setAllowCredentials(value: js.Array[PublicKeyCredentialDescriptor]): Self = this.set("allowCredentials", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAllowCredentials: Self = this.set("allowCredentials", js.undefined)

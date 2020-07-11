@@ -41,6 +41,8 @@ object AuthenticationExtensionsClientOutputs {
     @scala.inline
     def deleteAuthnSel: Self = this.set("authnSel", js.undefined)
     @scala.inline
+    def setExtsVarargs(value: java.lang.String*): Self = this.set("exts", js.Array(value :_*))
+    @scala.inline
     def setExts(value: AuthenticationExtensionsSupported): Self = this.set("exts", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExts: Self = this.set("exts", js.undefined)
@@ -60,6 +62,8 @@ object AuthenticationExtensionsClientOutputs {
     def setUvi(value: js.typedarray.ArrayBuffer): Self = this.set("uvi", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUvi: Self = this.set("uvi", js.undefined)
+    @scala.inline
+    def setUvmVarargs(value: UvmEntry*): Self = this.set("uvm", js.Array(value :_*))
     @scala.inline
     def setUvm(value: UvmEntries): Self = this.set("uvm", value.asInstanceOf[js.Any])
     @scala.inline

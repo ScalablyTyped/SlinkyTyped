@@ -59,15 +59,21 @@ object R3DirectiveMetadataFacade {
     @scala.inline
     def setHost(value: StringDictionary[String]): Self = this.set("host", value.asInstanceOf[js.Any])
     @scala.inline
+    def setInputsVarargs(value: String*): Self = this.set("inputs", js.Array(value :_*))
+    @scala.inline
     def setInputs(value: js.Array[String]): Self = this.set("inputs", value.asInstanceOf[js.Any])
     @scala.inline
     def setLifecycle(value: UsesOnChanges): Self = this.set("lifecycle", value.asInstanceOf[js.Any])
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
+    def setOutputsVarargs(value: String*): Self = this.set("outputs", js.Array(value :_*))
+    @scala.inline
     def setOutputs(value: js.Array[String]): Self = this.set("outputs", value.asInstanceOf[js.Any])
     @scala.inline
     def setPropMetadata(value: StringDictionary[js.Array[_]]): Self = this.set("propMetadata", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setQueriesVarargs(value: R3QueryMetadataFacade*): Self = this.set("queries", js.Array(value :_*))
     @scala.inline
     def setQueries(value: js.Array[R3QueryMetadataFacade]): Self = this.set("queries", value.asInstanceOf[js.Any])
     @scala.inline
@@ -79,15 +85,23 @@ object R3DirectiveMetadataFacade {
     @scala.inline
     def setUsesInheritance(value: Boolean): Self = this.set("usesInheritance", value.asInstanceOf[js.Any])
     @scala.inline
+    def setViewQueriesVarargs(value: R3QueryMetadataFacade*): Self = this.set("viewQueries", js.Array(value :_*))
+    @scala.inline
     def setViewQueries(value: js.Array[R3QueryMetadataFacade]): Self = this.set("viewQueries", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setDepsVarargs(value: R3DependencyMetadataFacade*): Self = this.set("deps", js.Array(value :_*))
     @scala.inline
     def setDeps(value: js.Array[R3DependencyMetadataFacade]): Self = this.set("deps", value.asInstanceOf[js.Any])
     @scala.inline
     def setDepsNull: Self = this.set("deps", null)
     @scala.inline
+    def setExportAsVarargs(value: String*): Self = this.set("exportAs", js.Array(value :_*))
+    @scala.inline
     def setExportAs(value: js.Array[String]): Self = this.set("exportAs", value.asInstanceOf[js.Any])
     @scala.inline
     def setExportAsNull: Self = this.set("exportAs", null)
+    @scala.inline
+    def setProvidersVarargs(value: Provider*): Self = this.set("providers", js.Array(value :_*))
     @scala.inline
     def setProviders(value: js.Array[Provider]): Self = this.set("providers", value.asInstanceOf[js.Any])
     @scala.inline

@@ -26,6 +26,8 @@ object GlobalLexicalScopeNamesReturnType {
         x
     }
     @scala.inline
+    def setNamesVarargs(value: String*): Self = this.set("names", js.Array(value :_*))
+    @scala.inline
     def setNames(value: js.Array[String]): Self = this.set("names", value.asInstanceOf[js.Any])
   }
   

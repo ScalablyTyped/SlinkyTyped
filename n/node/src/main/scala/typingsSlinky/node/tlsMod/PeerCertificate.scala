@@ -56,6 +56,8 @@ object PeerCertificate {
     @scala.inline
     def setExponent(value: String): Self = this.set("exponent", value.asInstanceOf[js.Any])
     @scala.inline
+    def setExt_key_usageVarargs(value: String*): Self = this.set("ext_key_usage", js.Array(value :_*))
+    @scala.inline
     def setExt_key_usage(value: js.Array[String]): Self = this.set("ext_key_usage", value.asInstanceOf[js.Any])
     @scala.inline
     def setFingerprint(value: String): Self = this.set("fingerprint", value.asInstanceOf[js.Any])

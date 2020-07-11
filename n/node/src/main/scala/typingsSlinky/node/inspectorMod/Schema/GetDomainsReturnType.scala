@@ -29,6 +29,8 @@ object GetDomainsReturnType {
         x
     }
     @scala.inline
+    def setDomainsVarargs(value: Domain*): Self = this.set("domains", js.Array(value :_*))
+    @scala.inline
     def setDomains(value: js.Array[Domain]): Self = this.set("domains", value.asInstanceOf[js.Any])
   }
   

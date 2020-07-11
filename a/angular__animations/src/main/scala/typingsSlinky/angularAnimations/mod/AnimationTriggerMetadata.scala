@@ -41,6 +41,8 @@ object AnimationTriggerMetadata {
         x
     }
     @scala.inline
+    def setDefinitionsVarargs(value: AnimationMetadata*): Self = this.set("definitions", js.Array(value :_*))
+    @scala.inline
     def setDefinitions(value: js.Array[AnimationMetadata]): Self = this.set("definitions", value.asInstanceOf[js.Any])
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])

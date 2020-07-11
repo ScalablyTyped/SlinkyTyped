@@ -30,6 +30,8 @@ object PlaceDetailsRequest {
     @scala.inline
     def setPlaceId(value: String): Self = this.set("placeId", value.asInstanceOf[js.Any])
     @scala.inline
+    def setFieldsVarargs(value: String*): Self = this.set("fields", js.Array(value :_*))
+    @scala.inline
     def setFields(value: js.Array[String]): Self = this.set("fields", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFields: Self = this.set("fields", js.undefined)

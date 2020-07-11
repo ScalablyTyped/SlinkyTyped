@@ -66,7 +66,11 @@ object DirectionsLeg {
     @scala.inline
     def setStart_location(value: LatLng): Self = this.set("start_location", value.asInstanceOf[js.Any])
     @scala.inline
+    def setStepsVarargs(value: DirectionsStep*): Self = this.set("steps", js.Array(value :_*))
+    @scala.inline
     def setSteps(value: js.Array[DirectionsStep]): Self = this.set("steps", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setVia_waypointsVarargs(value: LatLng*): Self = this.set("via_waypoints", js.Array(value :_*))
     @scala.inline
     def setVia_waypoints(value: js.Array[LatLng]): Self = this.set("via_waypoints", value.asInstanceOf[js.Any])
   }

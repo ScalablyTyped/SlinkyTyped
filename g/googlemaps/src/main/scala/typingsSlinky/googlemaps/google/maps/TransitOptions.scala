@@ -37,6 +37,8 @@ object TransitOptions {
     @scala.inline
     def deleteDepartureTime: Self = this.set("departureTime", js.undefined)
     @scala.inline
+    def setModesVarargs(value: TransitMode*): Self = this.set("modes", js.Array(value :_*))
+    @scala.inline
     def setModes(value: js.Array[TransitMode]): Self = this.set("modes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteModes: Self = this.set("modes", js.undefined)

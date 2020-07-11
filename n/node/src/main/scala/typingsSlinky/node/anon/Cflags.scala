@@ -36,13 +36,21 @@ object Cflags {
         x
     }
     @scala.inline
+    def setCflagsVarargs(value: js.Any*): Self = this.set("cflags", js.Array(value :_*))
+    @scala.inline
     def setCflags(value: js.Array[_]): Self = this.set("cflags", value.asInstanceOf[js.Any])
     @scala.inline
     def setDefault_configuration(value: String): Self = this.set("default_configuration", value.asInstanceOf[js.Any])
     @scala.inline
+    def setDefinesVarargs(value: String*): Self = this.set("defines", js.Array(value :_*))
+    @scala.inline
     def setDefines(value: js.Array[String]): Self = this.set("defines", value.asInstanceOf[js.Any])
     @scala.inline
+    def setInclude_dirsVarargs(value: String*): Self = this.set("include_dirs", js.Array(value :_*))
+    @scala.inline
     def setInclude_dirs(value: js.Array[String]): Self = this.set("include_dirs", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setLibrariesVarargs(value: String*): Self = this.set("libraries", js.Array(value :_*))
     @scala.inline
     def setLibraries(value: js.Array[String]): Self = this.set("libraries", value.asInstanceOf[js.Any])
   }

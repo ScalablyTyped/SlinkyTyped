@@ -35,21 +35,31 @@ object IMapState {
         x
     }
     @scala.inline
+    def setBehaviorsVarargs(value: String*): Self = this.set("behaviors", js.Array(value :_*))
+    @scala.inline
     def setBehaviors(value: js.Array[String]): Self = this.set("behaviors", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBehaviors: Self = this.set("behaviors", js.undefined)
+    @scala.inline
+    def setBoundsVarargs(value: js.Array[Double]*): Self = this.set("bounds", js.Array(value :_*))
     @scala.inline
     def setBounds(value: js.Array[js.Array[Double]]): Self = this.set("bounds", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBounds: Self = this.set("bounds", js.undefined)
     @scala.inline
+    def setCenterVarargs(value: Double*): Self = this.set("center", js.Array(value :_*))
+    @scala.inline
     def setCenter(value: js.Array[Double]): Self = this.set("center", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCenter: Self = this.set("center", js.undefined)
     @scala.inline
+    def setControlsVarargs(value: String*): Self = this.set("controls", js.Array(value :_*))
+    @scala.inline
     def setControls(value: js.Array[String]): Self = this.set("controls", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteControls: Self = this.set("controls", js.undefined)
+    @scala.inline
+    def setMarginVarargs(value: (js.Array[Double] | Double)*): Self = this.set("margin", js.Array(value :_*))
     @scala.inline
     def setMargin(value: js.Array[js.Array[Double] | Double]): Self = this.set("margin", value.asInstanceOf[js.Any])
     @scala.inline

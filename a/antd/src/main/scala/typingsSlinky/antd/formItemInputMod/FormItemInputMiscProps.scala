@@ -33,6 +33,8 @@ object FormItemInputMiscProps {
         x
     }
     @scala.inline
+    def setErrorsVarargs(value: ReactElement*): Self = this.set("errors", js.Array(value :_*))
+    @scala.inline
     def setErrors(value: js.Array[ReactElement]): Self = this.set("errors", value.asInstanceOf[js.Any])
     @scala.inline
     def setOnDomErrorVisibleChange(value: Boolean => Unit): Self = this.set("onDomErrorVisibleChange", js.Any.fromFunction1(value))

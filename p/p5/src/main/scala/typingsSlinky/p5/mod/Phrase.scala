@@ -33,6 +33,8 @@ object Phrase {
         x
     }
     @scala.inline
+    def setSequenceVarargs(value: js.Any*): Self = this.set("sequence", js.Array(value :_*))
+    @scala.inline
     def setSequence(value: js.Array[_]): Self = this.set("sequence", value.asInstanceOf[js.Any])
   }
   

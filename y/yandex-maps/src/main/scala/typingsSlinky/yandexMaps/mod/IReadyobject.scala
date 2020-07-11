@@ -37,6 +37,8 @@ object IReadyobject {
     @scala.inline
     def deleteErrorCallback: Self = this.set("errorCallback", js.undefined)
     @scala.inline
+    def setRequireVarargs(value: String*): Self = this.set("require", js.Array(value :_*))
+    @scala.inline
     def setRequire(value: js.Array[String]): Self = this.set("require", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRequire: Self = this.set("require", js.undefined)

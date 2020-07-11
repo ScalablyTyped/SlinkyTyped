@@ -3,6 +3,7 @@ package typingsSlinky.semanticUiReact.itemGroupMod
 import slinky.core.facade.ReactElement
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.itemItemMod.ItemProps
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.very
 import scala.scalajs.js
@@ -71,6 +72,8 @@ object StrictItemGroupProps {
     def setDivided(value: Boolean): Self = this.set("divided", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDivided: Self = this.set("divided", js.undefined)
+    @scala.inline
+    def setItemsVarargs(value: SemanticShorthandItem[ItemProps]*): Self = this.set("items", js.Array(value :_*))
     @scala.inline
     def setItems(value: SemanticShorthandCollection[ItemProps]): Self = this.set("items", value.asInstanceOf[js.Any])
     @scala.inline

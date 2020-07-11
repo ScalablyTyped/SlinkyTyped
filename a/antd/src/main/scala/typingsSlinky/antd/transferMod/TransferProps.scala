@@ -82,6 +82,8 @@ object TransferProps {
         x
     }
     @scala.inline
+    def setDataSourceVarargs(value: TransferItem*): Self = this.set("dataSource", js.Array(value :_*))
+    @scala.inline
     def setDataSource(value: js.Array[TransferItem]): Self = this.set("dataSource", value.asInstanceOf[js.Any])
     @scala.inline
     def setListStyleFunction1(value: /* style */ ListStyle => CSSProperties): Self = this.set("listStyle", js.Any.fromFunction1(value))
@@ -142,6 +144,8 @@ object TransferProps {
     @scala.inline
     def deleteOperationStyle: Self = this.set("operationStyle", js.undefined)
     @scala.inline
+    def setOperationsVarargs(value: String*): Self = this.set("operations", js.Array(value :_*))
+    @scala.inline
     def setOperations(value: js.Array[String]): Self = this.set("operations", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOperations: Self = this.set("operations", js.undefined)
@@ -162,9 +166,13 @@ object TransferProps {
     @scala.inline
     def deleteRowKey: Self = this.set("rowKey", js.undefined)
     @scala.inline
+    def setSelectAllLabelsVarargs(value: SelectAllLabel*): Self = this.set("selectAllLabels", js.Array(value :_*))
+    @scala.inline
     def setSelectAllLabels(value: js.Array[SelectAllLabel]): Self = this.set("selectAllLabels", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSelectAllLabels: Self = this.set("selectAllLabels", js.undefined)
+    @scala.inline
+    def setSelectedKeysVarargs(value: String*): Self = this.set("selectedKeys", js.Array(value :_*))
     @scala.inline
     def setSelectedKeys(value: js.Array[String]): Self = this.set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
@@ -182,9 +190,13 @@ object TransferProps {
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
     @scala.inline
+    def setTargetKeysVarargs(value: String*): Self = this.set("targetKeys", js.Array(value :_*))
+    @scala.inline
     def setTargetKeys(value: js.Array[String]): Self = this.set("targetKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTargetKeys: Self = this.set("targetKeys", js.undefined)
+    @scala.inline
+    def setTitlesVarargs(value: String*): Self = this.set("titles", js.Array(value :_*))
     @scala.inline
     def setTitles(value: js.Array[String]): Self = this.set("titles", value.asInstanceOf[js.Any])
     @scala.inline

@@ -211,6 +211,8 @@ object Link {
     @scala.inline
     def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
+    def defaultValueVarargs(value: String*): this.type = set("defaultValue", js.Array(value :_*))
+    @scala.inline
     def defaultValue(value: String | Double | js.Array[String]): this.type = set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
     def delete(value: Boolean): this.type = set("delete", value.asInstanceOf[js.Any])

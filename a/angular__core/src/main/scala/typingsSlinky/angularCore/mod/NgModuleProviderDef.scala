@@ -30,6 +30,8 @@ object NgModuleProviderDef {
         x
     }
     @scala.inline
+    def setDepsVarargs(value: DepDef*): Self = this.set("deps", js.Array(value :_*))
+    @scala.inline
     def setDeps(value: js.Array[DepDef]): Self = this.set("deps", value.asInstanceOf[js.Any])
     @scala.inline
     def setFlags(value: ɵNodeFlags): Self = this.set("flags", value.asInstanceOf[js.Any])
