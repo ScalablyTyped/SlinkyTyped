@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "react-navigation-stack"
-version := "1.10.3-6cee53"
+version := "1.10.3-4099c7"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -9,9 +9,9 @@ libraryDependencies ++= Seq(
   "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-9fcfdc",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-77dff4",
   "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200617Z-0ab4bf",
-  "org.scalablytyped.slinky" %%% "react-native" % "0.62-dt-20200604Z-de772d",
-  "org.scalablytyped.slinky" %%% "react-native-gesture-handler" % "1.6.1-0ad600",
-  "org.scalablytyped.slinky" %%% "react-navigation" % "4.3.9-40547f",
+  "org.scalablytyped.slinky" %%% "react-native" % "0.62-dt-20200604Z-2b2d28",
+  "org.scalablytyped.slinky" %%% "react-native-gesture-handler" % "1.6.1-dad486",
+  "org.scalablytyped.slinky" %%% "react-navigation" % "4.3.9-f38fef",
   "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")

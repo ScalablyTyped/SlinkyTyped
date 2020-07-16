@@ -18,7 +18,7 @@ object Select {
   @scala.inline
   class Builder[/* <: typingsSlinky.antd.selectMod.SelectValue */ ValueType] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, default[ValueType]] {
     @scala.inline
     def mode(value: multiple | tags): this.type = set("mode", value.asInstanceOf[js.Any])
   }

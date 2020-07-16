@@ -5,7 +5,6 @@ import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.antd.hookModalMod.HookModalProps
 import typingsSlinky.antd.hookModalMod.HookModalRef
 import typingsSlinky.antd.modalModalMod.ModalFuncProps
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,11 +15,11 @@ object HookModal {
   @js.native
   object component extends js.Object
   
-  def withProps(p: HookModalProps with RefAttributes[HookModalRef]): Default[tag.type, Ref[js.Any] with js.Object] = new Default[tag.type, Ref[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: HookModalProps with RefAttributes[HookModalRef]): Default[tag.type, HookModalRef] = new Default[tag.type, HookModalRef](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(afterClose: () => Unit, config: ModalFuncProps): Default[tag.type, Ref[js.Any] with js.Object] = {
+  def apply(afterClose: () => Unit, config: ModalFuncProps): Default[tag.type, HookModalRef] = {
     val __props = js.Dynamic.literal(afterClose = js.Any.fromFunction0(afterClose), config = config.asInstanceOf[js.Any])
-    new Default[tag.type, Ref[js.Any] with js.Object](js.Array(this.component, __props.asInstanceOf[HookModalProps with RefAttributes[HookModalRef]]))
+    new Default[tag.type, HookModalRef](js.Array(this.component, __props.asInstanceOf[HookModalProps with RefAttributes[HookModalRef]]))
   }
 }
 

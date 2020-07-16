@@ -5,7 +5,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.rateMod.RateProps
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +18,7 @@ object Rate {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, js.Any with js.Object] {
     @scala.inline
     def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
     @scala.inline

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "material-ui__icons"
-version := "4.9.1-0867d5"
+version := "4.9.1-ef5722"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -10,7 +10,7 @@ libraryDependencies ++= Seq(
   "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-9fcfdc",
   "org.scalablytyped.slinky" %%% "enzyme" % "3.10-dt-20200515Z-84e7d2",
   "org.scalablytyped.slinky" %%% "jss" % "10.3.0-4741e8",
-  "org.scalablytyped.slinky" %%% "material-ui__core" % "3.9.3-fe6c73",
+  "org.scalablytyped.slinky" %%% "material-ui__core" % "3.9.3-d5fb32",
   "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200609Z-439deb",
   "org.scalablytyped.slinky" %%% "popper_dot_js" % "1.16.1-f648b0",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-77dff4",

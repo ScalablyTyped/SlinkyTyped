@@ -8,7 +8,6 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.radioButtonMod.RadioButtonProps
 import typingsSlinky.antd.radioInterfaceMod.RadioChangeEvent
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,7 +21,7 @@ object RadioButton {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, js.Any with js.Object] {
     @scala.inline
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
     @scala.inline

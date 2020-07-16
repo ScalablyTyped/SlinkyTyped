@@ -67,12 +67,12 @@ import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
 import typingsSlinky.antd.formFormMod.FormLayout
 import typingsSlinky.antd.formFormMod.FormProps
+import typingsSlinky.antd.formUtilMod.FormInstance
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.rcFieldForm.formMod.RenderProps
 import typingsSlinky.rcFieldForm.interfaceMod.FieldData
-import typingsSlinky.rcFieldForm.interfaceMod.FormInstance
 import typingsSlinky.rcFieldForm.interfaceMod.Store
 import typingsSlinky.rcFieldForm.interfaceMod.ValidateErrorEntity
 import typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages
@@ -80,7 +80,6 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -94,7 +93,7 @@ object Form {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, FormInstance] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -210,7 +209,9 @@ object Form {
     @scala.inline
     def childrenReactElement(value: ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
-    def childrenFunction2(value: (/* values */ Store, /* form */ FormInstance) => ReactElement): this.type = set("children", js.Any.fromFunction2(value))
+    def childrenFunction2(
+      value: (/* values */ Store, /* form */ typingsSlinky.rcFieldForm.interfaceMod.FormInstance) => ReactElement
+    ): this.type = set("children", js.Any.fromFunction2(value))
     @scala.inline
     def children(value: RenderProps | ReactElement): this.type = set("children", value.asInstanceOf[js.Any])
     @scala.inline
@@ -250,7 +251,7 @@ object Form {
     @scala.inline
     def fields(value: js.Array[FieldData]): this.type = set("fields", value.asInstanceOf[js.Any])
     @scala.inline
-    def form(value: typingsSlinky.antd.formUtilMod.FormInstance): this.type = set("form", value.asInstanceOf[js.Any])
+    def form(value: FormInstance): this.type = set("form", value.asInstanceOf[js.Any])
     @scala.inline
     def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
     @scala.inline
@@ -509,7 +510,7 @@ object Form {
     def wrapperCol(value: ColProps): this.type = set("wrapperCol", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: FormProps with RefAttributes[typingsSlinky.antd.formUtilMod.FormInstance]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: FormProps with RefAttributes[FormInstance]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Form.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

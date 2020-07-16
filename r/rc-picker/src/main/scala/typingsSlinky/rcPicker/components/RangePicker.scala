@@ -78,7 +78,7 @@ object RangePicker {
     @scala.inline
     class Builder[DateType] (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default[js.Any]] {
+         with StBuildingComponent[tag.type, default[DateType]] {
       @scala.inline
       def activePickerIndex(value: `0` | `1`): this.type = set("activePickerIndex", value.asInstanceOf[js.Any])
       @scala.inline
@@ -332,7 +332,7 @@ object RangePicker {
     @scala.inline
     class Builder[DateType] (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default[js.Any]] {
+         with StBuildingComponent[tag.type, default[DateType]] {
       @scala.inline
       def activePickerIndex(value: `0` | `1`): this.type = set("activePickerIndex", value.asInstanceOf[js.Any])
       @scala.inline
@@ -590,7 +590,7 @@ object RangePicker {
     @scala.inline
     class Builder[DateType] (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default[js.Any]] {
+         with StBuildingComponent[tag.type, default[DateType]] {
       @scala.inline
       def activePickerIndex(value: `0` | `1`): this.type = set("activePickerIndex", value.asInstanceOf[js.Any])
       @scala.inline

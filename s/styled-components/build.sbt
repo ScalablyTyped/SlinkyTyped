@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "styled-components"
-version := "5.1-dt-20200515Z-45d5cc"
+version := "5.1-dt-20200515Z-a73fad"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -10,7 +10,7 @@ libraryDependencies ++= Seq(
   "org.scalablytyped.slinky" %%% "hoist-non-react-statics" % "3.3-dt-20190402Z-82c2b4",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-77dff4",
   "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200617Z-0ab4bf",
-  "org.scalablytyped.slinky" %%% "react-native" % "0.62-dt-20200604Z-de772d",
+  "org.scalablytyped.slinky" %%% "react-native" % "0.62-dt-20200604Z-2b2d28",
   "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")

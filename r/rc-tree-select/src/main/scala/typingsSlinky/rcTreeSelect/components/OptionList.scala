@@ -10,7 +10,6 @@ import typingsSlinky.rcTreeSelect.interfaceMod.DataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.FlattenDataNode
 import typingsSlinky.rcTreeSelect.interfaceMod.RawValueType
 import typingsSlinky.rcTreeSelect.optionListMod.OptionListProps
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
 import typingsSlinky.std.Set
 import scala.scalajs.js
@@ -25,7 +24,7 @@ object OptionList {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, js.Any with js.Object] {
     @scala.inline
     def defaultActiveFirstOption(value: Boolean): this.type = set("defaultActiveFirstOption", value.asInstanceOf[js.Any])
     @scala.inline

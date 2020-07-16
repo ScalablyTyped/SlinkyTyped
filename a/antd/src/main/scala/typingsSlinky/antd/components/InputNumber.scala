@@ -68,7 +68,6 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -82,7 +81,7 @@ object InputNumber {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, js.Any with js.Object] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline

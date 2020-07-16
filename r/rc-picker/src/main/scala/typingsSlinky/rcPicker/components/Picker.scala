@@ -17,11 +17,11 @@ object Picker {
     @js.native
     object component extends js.Object
     
-    def withProps[DateType](p: typingsSlinky.rcPicker.pickerMod.PickerBaseProps[DateType]): SharedBuilder_PickerProps1272396767[default[js.Any], DateType] = new SharedBuilder_PickerProps1272396767[default[js.Any], DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps[DateType](p: typingsSlinky.rcPicker.pickerMod.PickerBaseProps[DateType]): SharedBuilder_PickerProps1272396767[default[DateType], DateType] = new SharedBuilder_PickerProps1272396767[default[DateType], DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
     @scala.inline
-    def apply[DateType](generateConfig: GenerateConfig[DateType], locale: Locale, picker: Exclude[PickerMode, date | time]): SharedBuilder_PickerProps1272396767[default[js.Any], DateType] = {
+    def apply[DateType](generateConfig: GenerateConfig[DateType], locale: Locale, picker: Exclude[PickerMode, date | time]): SharedBuilder_PickerProps1272396767[default[DateType], DateType] = {
         val __props = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], picker = picker.asInstanceOf[js.Any])
-        new SharedBuilder_PickerProps1272396767[default[js.Any], DateType](js.Array(this.component, __props.asInstanceOf[typingsSlinky.rcPicker.pickerMod.PickerBaseProps[DateType]]))
+        new SharedBuilder_PickerProps1272396767[default[DateType], DateType](js.Array(this.component, __props.asInstanceOf[typingsSlinky.rcPicker.pickerMod.PickerBaseProps[DateType]]))
     }
   }
   
@@ -30,11 +30,11 @@ object Picker {
     @js.native
     object component extends js.Object
     
-    def withProps[DateType](p: typingsSlinky.rcPicker.pickerMod.PickerDateProps[DateType]): SharedBuilder_PickerProps1272396767[default[js.Any], DateType] = new SharedBuilder_PickerProps1272396767[default[js.Any], DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps[DateType](p: typingsSlinky.rcPicker.pickerMod.PickerDateProps[DateType]): SharedBuilder_PickerProps1272396767[default[DateType], DateType] = new SharedBuilder_PickerProps1272396767[default[DateType], DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
     @scala.inline
-    def apply[DateType](generateConfig: GenerateConfig[DateType], locale: Locale): SharedBuilder_PickerProps1272396767[default[js.Any], DateType] = {
+    def apply[DateType](generateConfig: GenerateConfig[DateType], locale: Locale): SharedBuilder_PickerProps1272396767[default[DateType], DateType] = {
         val __props = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any])
-        new SharedBuilder_PickerProps1272396767[default[js.Any], DateType](js.Array(this.component, __props.asInstanceOf[typingsSlinky.rcPicker.pickerMod.PickerDateProps[DateType]]))
+        new SharedBuilder_PickerProps1272396767[default[DateType], DateType](js.Array(this.component, __props.asInstanceOf[typingsSlinky.rcPicker.pickerMod.PickerDateProps[DateType]]))
     }
   }
   
@@ -43,11 +43,11 @@ object Picker {
     @js.native
     object component extends js.Object
     
-    def withProps[DateType](p: typingsSlinky.rcPicker.pickerMod.PickerTimeProps[DateType]): SharedBuilder_PickerProps1272396767[default[js.Any], DateType] = new SharedBuilder_PickerProps1272396767[default[js.Any], DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
+    def withProps[DateType](p: typingsSlinky.rcPicker.pickerMod.PickerTimeProps[DateType]): SharedBuilder_PickerProps1272396767[default[DateType], DateType] = new SharedBuilder_PickerProps1272396767[default[DateType], DateType](js.Array(this.component, p.asInstanceOf[js.Any]))
     @scala.inline
-    def apply[DateType](generateConfig: GenerateConfig[DateType], locale: Locale, picker: time): SharedBuilder_PickerProps1272396767[default[js.Any], DateType] = {
+    def apply[DateType](generateConfig: GenerateConfig[DateType], locale: Locale, picker: time): SharedBuilder_PickerProps1272396767[default[DateType], DateType] = {
         val __props = js.Dynamic.literal(generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any], picker = picker.asInstanceOf[js.Any])
-        new SharedBuilder_PickerProps1272396767[default[js.Any], DateType](js.Array(this.component, __props.asInstanceOf[typingsSlinky.rcPicker.pickerMod.PickerTimeProps[DateType]]))
+        new SharedBuilder_PickerProps1272396767[default[DateType], DateType](js.Array(this.component, __props.asInstanceOf[typingsSlinky.rcPicker.pickerMod.PickerTimeProps[DateType]]))
     }
   }
   

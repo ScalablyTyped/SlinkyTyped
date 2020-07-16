@@ -15,7 +15,6 @@ import typingsSlinky.antd.placementsMod.AdjustOverflow
 import typingsSlinky.antd.popconfirmMod.PopconfirmProps
 import typingsSlinky.antd.tooltipMod.TooltipPlacement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,7 +28,7 @@ object Popconfirm {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, js.Any with js.Object] {
     @scala.inline
     def arrowPointAtCenter(value: Boolean): this.type = set("arrowPointAtCenter", value.asInstanceOf[js.Any])
     @scala.inline

@@ -69,7 +69,7 @@ object VirtualizedList {
   @scala.inline
   class Builder[ItemT] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactNative.mod.VirtualizedList[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactNative.mod.VirtualizedList[ItemT]] {
     @scala.inline
     def CellRendererComponentFunctionComponent(value: ReactComponentClass[_]): this.type = set("CellRendererComponent", value.asInstanceOf[js.Any])
     @scala.inline

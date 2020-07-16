@@ -19,7 +19,7 @@ object Redirect {
   @scala.inline
   class Builder[TState] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reachRouter.mod.Redirect[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reachRouter.mod.Redirect[TState]] {
     @scala.inline
     def default(value: Boolean): this.type = set("default", value.asInstanceOf[js.Any])
     @scala.inline

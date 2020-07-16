@@ -19,7 +19,7 @@ object Provider {
   @scala.inline
   class Builder[/* <: typingsSlinky.redux.mod.Action[js.Any] */ A] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactRedux.mod.Provider[js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactRedux.mod.Provider[A]] {
     @scala.inline
     def context(value: Context[ReactReduxContextValue[_, AnyAction]]): this.type = set("context", value.asInstanceOf[js.Any])
   }

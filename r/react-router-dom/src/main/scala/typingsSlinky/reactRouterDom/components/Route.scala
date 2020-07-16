@@ -15,7 +15,7 @@ object Route {
   @scala.inline
   class Builder[/* <: typingsSlinky.reactRouter.mod.RouteProps */ T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactRouterDom.mod.Route[js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reactRouterDom.mod.Route[T]]
   
   def apply[/* <: typingsSlinky.reactRouter.mod.RouteProps */ T](p: T): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make[/* <: typingsSlinky.reactRouter.mod.RouteProps */ T](companion: Route.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()

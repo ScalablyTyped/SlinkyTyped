@@ -17,7 +17,7 @@ object Match {
   @scala.inline
   class Builder[TParams] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reachRouter.mod.Match[js.Any]]
+       with StBuildingComponent[tag.type, typingsSlinky.reachRouter.mod.Match[TParams]]
   
   def withProps[TParams](p: MatchProps[TParams]): Builder[TParams] = new Builder[TParams](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline

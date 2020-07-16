@@ -9,7 +9,6 @@ import typingsSlinky.antd.sliderMod.SliderProps
 import typingsSlinky.antd.sliderMod.SliderValue
 import typingsSlinky.antd.tooltipMod.TooltipPlacement
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +22,7 @@ object Slider {
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, Ref[js.Any] with js.Object] {
+       with StBuildingComponent[tag.type, js.Any with js.Object] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

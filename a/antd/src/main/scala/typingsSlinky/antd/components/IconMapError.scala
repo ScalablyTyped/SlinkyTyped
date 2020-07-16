@@ -1,7 +1,7 @@
 package typingsSlinky.antd.components
 
+import org.scalajs.dom.raw.HTMLSpanElement
 import typingsSlinky.antd.anon.Pickanychildrensizeciteda
-import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ object IconMapError {
   @js.native
   object component extends js.Object
   
-  def withProps(p: Pickanychildrensizeciteda): SharedBuilder_Pickanychildrensizeciteda1894765969[Ref[js.Any] with js.Object] = new SharedBuilder_Pickanychildrensizeciteda1894765969[Ref[js.Any] with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: IconMapError.type): SharedBuilder_Pickanychildrensizeciteda1894765969[Ref[js.Any] with js.Object] = new SharedBuilder_Pickanychildrensizeciteda1894765969[Ref[js.Any] with js.Object](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: Pickanychildrensizeciteda): SharedBuilder_Pickanychildrensizeciteda1894765969[HTMLSpanElement] = new SharedBuilder_Pickanychildrensizeciteda1894765969[HTMLSpanElement](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: IconMapError.type): SharedBuilder_Pickanychildrensizeciteda1894765969[HTMLSpanElement] = new SharedBuilder_Pickanychildrensizeciteda1894765969[HTMLSpanElement](js.Array(this.component, js.Dictionary.empty))()
 }
 

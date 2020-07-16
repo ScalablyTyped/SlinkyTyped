@@ -18,7 +18,7 @@ object TreeSelect {
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[js.Any]] {
+       with StBuildingComponent[tag.type, default[T]] {
     @scala.inline
     def bordered(value: Boolean): this.type = set("bordered", value.asInstanceOf[js.Any])
     @scala.inline

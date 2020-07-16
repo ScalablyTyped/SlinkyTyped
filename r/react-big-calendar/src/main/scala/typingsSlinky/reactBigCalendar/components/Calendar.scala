@@ -35,7 +35,7 @@ object Calendar {
   @scala.inline
   class Builder[/* <: js.Object */ TEvent, /* <: js.Object */ TResource] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, typingsSlinky.reactBigCalendar.mod.Calendar[js.Any, js.Any]] {
+       with StBuildingComponent[tag.type, typingsSlinky.reactBigCalendar.mod.Calendar[TEvent, TResource]] {
     @scala.inline
     def allDayAccessorFunction1(value: TEvent => Boolean): this.type = set("allDayAccessor", js.Any.fromFunction1(value))
     @scala.inline

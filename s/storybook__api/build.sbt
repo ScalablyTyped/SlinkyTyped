@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "storybook__api"
-version := "5.3.19-9c8a40"
+version := "5.3.19-76ce6e"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -15,11 +15,11 @@ libraryDependencies ++= Seq(
   "org.scalablytyped.slinky" %%% "emotion__utils" % "0.11.2-98e365",
   "org.scalablytyped.slinky" %%% "history" % "4.7.2-dt-20200518Z-e57a1c",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-77dff4",
-  "org.scalablytyped.slinky" %%% "reach__router" % "1.3-dt-20200426Z-95d736",
+  "org.scalablytyped.slinky" %%% "reach__router" % "1.3-dt-20200426Z-ab7b3d",
   "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200617Z-0ab4bf",
   "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0",
   "org.scalablytyped.slinky" %%% "storybook__channels" % "5.3.19-fee168",
-  "org.scalablytyped.slinky" %%% "storybook__router" % "5.3.19-0c09e3",
+  "org.scalablytyped.slinky" %%% "storybook__router" % "5.3.19-031aa1",
   "org.scalablytyped.slinky" %%% "storybook__theming" % "5.3.19-276239")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
