@@ -1,12 +1,12 @@
 organization := "org.scalablytyped.slinky"
 name := "express-serve-static-core"
-version := "4.17-dt-20200515Z-16684b"
+version := "4.17-dt-20200722Z-28b253"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200609Z-439deb",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-051843",
   "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20200519Z-ad8cdd",
   "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-c86e67",
   "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")

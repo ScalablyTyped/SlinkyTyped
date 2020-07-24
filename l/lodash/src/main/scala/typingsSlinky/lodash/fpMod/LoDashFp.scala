@@ -5780,9 +5780,14 @@ trait LoDashFp extends js.Object {
   def sortedUniqBy_T_LodashSortedUniqBy1x1[T](iteratee: ValueIteratee[T]): LodashSortedUniqBy1x1[T] = js.native
   def split(separator: String): LodashSplit1x1 = js.native
   def split(separator: String, string: String): js.Array[String] = js.native
+  def split(separator: __): LodashSplit1x2 = js.native
   def split(separator: __, string: String): LodashSplit1x2 = js.native
   def split(separator: js.RegExp): LodashSplit1x1 = js.native
   def split(separator: js.RegExp, string: String): js.Array[String] = js.native
+  @JSName("split")
+  def split_Array(separator: String): js.Array[String] = js.native
+  @JSName("split")
+  def split_Array(separator: js.RegExp): js.Array[String] = js.native
   def spread[TResult](func: js.Function1[/* repeated */ js.Any, TResult]): js.Function1[/* repeated */ js.Any, TResult] = js.native
   def spreadFrom(start: Double): LodashSpreadFrom1x1 = js.native
   def spreadFrom[TResult](start: Double, func: js.Function1[/* repeated */ js.Any, TResult]): js.Function1[/* repeated */ js.Any, TResult] = js.native

@@ -197,6 +197,10 @@ object Tag {
     @scala.inline
     def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
     @scala.inline
+    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
     def color(value: LiteralUnion[PresetColorType | PresetStatusColorType, String]): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])

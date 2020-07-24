@@ -1,8 +1,8 @@
 package typingsSlinky.node.anon
 
-import typingsSlinky.node.NodeJS.ProcessEnv
-import typingsSlinky.node.NodeJS.Signals
 import typingsSlinky.node.nodeStrings.buffer_
+import typingsSlinky.node.processMod.global.NodeJS.ProcessEnv
+import typingsSlinky.node.processMod.global.NodeJS.Signals
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

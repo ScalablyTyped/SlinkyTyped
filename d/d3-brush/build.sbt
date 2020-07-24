@@ -1,12 +1,12 @@
 organization := "org.scalablytyped.slinky"
 name := "d3-brush"
-version := "1.1-dt-20200605Z-b02656"
+version := "1.1-dt-20200605Z-669155"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "d3-selection" % "1.4-dt-20200515Z-007441",
+  "org.scalablytyped.slinky" %%% "d3-selection" % "1.4-dt-20200707Z-40d2e1",
   "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")

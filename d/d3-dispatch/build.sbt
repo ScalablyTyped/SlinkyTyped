@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "d3-dispatch"
-version := "1.0-dt-20200515Z-ceb973"
+version := "1.0-dt-20200707Z-5a0013"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

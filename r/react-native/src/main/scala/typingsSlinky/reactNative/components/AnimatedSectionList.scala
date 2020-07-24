@@ -1,39 +1,25 @@
 package typingsSlinky.reactNative.components
 
-import org.scalablytyped.runtime.Instantiable0
 import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.react.mod.ComponentPropsWithRef
+import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.Animated.AnimatedProps
+import typingsSlinky.reactNative.mod.SectionListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.reactNative.mod.Animated.AnimatedProps[
-typingsSlinky.react.mod.ComponentPropsWithRef[
-  org.scalablytyped.runtime.Instantiable0[typingsSlinky.reactNative.mod.SectionList[js.Object]]
-]] because: IArray(Not a trait, Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree., Couldn't find props for (js.Object | (/ * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any) | (/ * import warning: importer.ImportType#apply c Unsupported type mapping: 
-{[ P in K ]: T[P]}
-  * / typingsSlinky.std.stdStrings.Pick with (js.Object | (/ * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any)))) with typingsSlinky.react.anon.`0` because: IArray(Not a trait, Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree., Couldn't find props for / * import warning: importer.ImportType#apply c Unsupported type mapping: 
-{[ P in K ]: T[P]}
-  * / typingsSlinky.std.stdStrings.Pick with (js.Object | (/ * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any)) because: IArray(Not a trait, Could't extract props from / * import warning: importer.ImportType#apply Failed type conversion: react.react.<global>.JSX.IntrinsicElements[T] * / js.Any because couldn't resolve ClassTree.)), Couldn't find props for (js.Any | (/ * import warning: importer.ImportType#apply c Unsupported type mapping: 
-{[ P in K ]: T[P]}
-  * / typingsSlinky.std.stdStrings.Pick with js.Any)) with (typingsSlinky.react.mod.RefAttributes[
-typingsSlinky.std.InstanceType[
-  org.scalablytyped.runtime.Instantiable0[typingsSlinky.reactNative.mod.SectionList[js.Object]]
-]]) because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree., Couldn't find props for / * import warning: importer.ImportType#apply c Unsupported type mapping: 
-{[ P in K ]: T[P]}
-  * / typingsSlinky.std.stdStrings.Pick with js.Any because: IArray(Could't extract props from js.Any because couldn't resolve ClassTree.))), IArray(Not a trait) */
+/* The props of this component has an unsupported shape. You can use `set` manually to use it, but with no compiler support :/ . Couldn't find props for typingsSlinky.reactNative.reactNativeStrings.AnimatedProps with typingsSlinky.reactNative.mod.SectionListProps[SectionT] with (js.Object | typingsSlinky.reactNative.anon.`2`) because: IArray(Not a trait) */
 object AnimatedSectionList {
   @JSImport("react-native", "Animated.SectionList")
   @js.native
   object component extends js.Object
   
-  def apply(
-    p: AnimatedProps[
-      ComponentPropsWithRef[Instantiable0[typingsSlinky.reactNative.mod.SectionList[js.Object]]]
-    ]
-  ): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: AnimatedSectionList.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
+  @scala.inline
+  class Builder[SectionT] (val args: js.Array[js.Any])
+    extends AnyVal
+       with StBuildingComponent[tag.type, typingsSlinky.reactNative.mod.Animated.SectionList[SectionT]]
+  
+  def apply[SectionT](p: SectionListProps[SectionT] | AnimatedProps[SectionListProps[SectionT]]): Builder[SectionT] = new Builder[SectionT](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make[SectionT](companion: AnimatedSectionList.type): Builder[SectionT] = new Builder[SectionT](js.Array(this.component, js.Dictionary.empty))()
 }
 

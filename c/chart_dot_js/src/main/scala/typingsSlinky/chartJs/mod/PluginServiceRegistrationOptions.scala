@@ -23,7 +23,7 @@ trait PluginServiceRegistrationOptions extends js.Object {
   var afterInit: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
   var afterLayout: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
   var afterRender: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
-  /** @deprecated since version 2.5.0. Use `afterLayout` instead. */
+  /** Deprecated since version 2.5.0. Use `afterLayout` instead. */
   var afterScaleUpdate: js.UndefOr[js.Function2[/* chartInstance */ Chart, /* options */ js.UndefOr[js.Any], Unit]] = js.undefined
   // Called after drawing the `tooltip`. Note that this hook will not,
   // be called if the tooltip drawing has been previously cancelled.

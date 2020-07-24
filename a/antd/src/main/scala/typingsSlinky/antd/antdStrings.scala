@@ -33,6 +33,7 @@ import typingsSlinky.antd.paginationPaginationMod.PaginationPosition
 import typingsSlinky.antd.progressProgressMod.ProgressSize
 import typingsSlinky.antd.progressProgressMod.ProgressType
 import typingsSlinky.antd.radioInterfaceMod.RadioGroupButtonStyle
+import typingsSlinky.antd.radioInterfaceMod.RadioGroupOptionType
 import typingsSlinky.antd.responsiveObserveMod.Breakpoint
 import typingsSlinky.antd.resultMod.ExceptionStatusType
 import typingsSlinky.antd.resultMod.ResultStatusType
@@ -43,6 +44,7 @@ import typingsSlinky.antd.spinMod.SpinSize
 import typingsSlinky.antd.statisticUtilsMod._Formatter
 import typingsSlinky.antd.switchMod.SwitchSize
 import typingsSlinky.antd.tableInterfaceMod.RowSelectionType
+import typingsSlinky.antd.tableInterfaceMod.TableAction
 import typingsSlinky.antd.tableInterfaceMod.TablePaginationPosition
 import typingsSlinky.antd.tableInterfaceMod._ExpandType
 import typingsSlinky.antd.tableInterfaceMod._SortOrder
@@ -66,7 +68,7 @@ object antdStrings {
   sealed trait `404` extends ExceptionStatusType
   
   @js.native
-  sealed trait `4Dot3Dot4` extends js.Object
+  sealed trait `4Dot4Dot3` extends js.Object
   
   @js.native
   sealed trait `500` extends ExceptionStatusType
@@ -319,7 +321,9 @@ object antdStrings {
   sealed trait butt extends js.Object
   
   @js.native
-  sealed trait button extends ButtonHTMLType
+  sealed trait button
+    extends ButtonHTMLType
+       with RadioGroupOptionType
   
   @js.native
   sealed trait cancel extends js.Object
@@ -421,6 +425,7 @@ object antdStrings {
        with CardSize
        with ListSize
        with ProgressSize
+       with RadioGroupOptionType
        with SpinSize
        with SwitchSize
   
@@ -509,6 +514,9 @@ object antdStrings {
   
   @js.native
   sealed trait file extends js.Object
+  
+  @js.native
+  sealed trait filter extends TableAction
   
   @js.native
   sealed trait finish extends js.Object
@@ -806,6 +814,9 @@ object antdStrings {
   sealed trait page extends js.Object
   
   @js.native
+  sealed trait paginate extends TableAction
+  
+  @js.native
   sealed trait part extends js.Object
   
   @js.native
@@ -950,6 +961,9 @@ object antdStrings {
   sealed trait showMinute extends js.Object
   
   @js.native
+  sealed trait showNow extends js.Object
+  
+  @js.native
   sealed trait showSecond extends js.Object
   
   @js.native
@@ -977,6 +991,9 @@ object antdStrings {
   
   @js.native
   sealed trait solid extends RadioGroupButtonStyle
+  
+  @js.native
+  sealed trait sort extends TableAction
   
   @js.native
   sealed trait `space-around` extends js.Object
@@ -1146,7 +1163,7 @@ object antdStrings {
   @scala.inline
   def `404`: `404` = "404".asInstanceOf[`404`]
   @scala.inline
-  def `4Dot3Dot4`: `4Dot3Dot4` = "4.3.4".asInstanceOf[`4Dot3Dot4`]
+  def `4Dot4Dot3`: `4Dot4Dot3` = "4.4.3".asInstanceOf[`4Dot4Dot3`]
   @scala.inline
   def `500`: `500` = "500".asInstanceOf[`500`]
   @scala.inline
@@ -1418,6 +1435,8 @@ object antdStrings {
   @scala.inline
   def file: file = "file".asInstanceOf[file]
   @scala.inline
+  def filter: filter = "filter".asInstanceOf[filter]
+  @scala.inline
   def finish: finish = "finish".asInstanceOf[finish]
   @scala.inline
   def footer: footer = "footer".asInstanceOf[footer]
@@ -1596,6 +1615,8 @@ object antdStrings {
   @scala.inline
   def page: page = "page".asInstanceOf[page]
   @scala.inline
+  def paginate: paginate = "paginate".asInstanceOf[paginate]
+  @scala.inline
   def part: part = "part".asInstanceOf[part]
   @scala.inline
   def password: password = "password".asInstanceOf[password]
@@ -1686,6 +1707,8 @@ object antdStrings {
   @scala.inline
   def showMinute: showMinute = "showMinute".asInstanceOf[showMinute]
   @scala.inline
+  def showNow: showNow = "showNow".asInstanceOf[showNow]
+  @scala.inline
   def showSecond: showSecond = "showSecond".asInstanceOf[showSecond]
   @scala.inline
   def showTime: showTime = "showTime".asInstanceOf[showTime]
@@ -1699,6 +1722,8 @@ object antdStrings {
   def small: small = "small".asInstanceOf[small]
   @scala.inline
   def solid: solid = "solid".asInstanceOf[solid]
+  @scala.inline
+  def sort: sort = "sort".asInstanceOf[sort]
   @scala.inline
   def `space-around`: `space-around` = "space-around".asInstanceOf[`space-around`]
   @scala.inline

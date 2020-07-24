@@ -8,7 +8,7 @@ trait RefreshControlPropsIOS extends ViewProps {
   /**
     * The color of the refresh indicator.
     */
-  var tintColor: js.UndefOr[String] = js.undefined
+  var tintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * The title displayed under the refresh indicator.
     */
@@ -16,7 +16,7 @@ trait RefreshControlPropsIOS extends ViewProps {
   /**
     * Title color.
     */
-  var titleColor: js.UndefOr[String] = js.undefined
+  var titleColor: js.UndefOr[ColorValue] = js.undefined
 }
 
 object RefreshControlPropsIOS {
@@ -37,7 +37,7 @@ object RefreshControlPropsIOS {
         x
     }
     @scala.inline
-    def setTintColor(value: String): Self = this.set("tintColor", value.asInstanceOf[js.Any])
+    def setTintColor(value: ColorValue): Self = this.set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTintColor: Self = this.set("tintColor", js.undefined)
     @scala.inline
@@ -45,7 +45,7 @@ object RefreshControlPropsIOS {
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline
-    def setTitleColor(value: String): Self = this.set("titleColor", value.asInstanceOf[js.Any])
+    def setTitleColor(value: ColorValue): Self = this.set("titleColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitleColor: Self = this.set("titleColor", js.undefined)
   }

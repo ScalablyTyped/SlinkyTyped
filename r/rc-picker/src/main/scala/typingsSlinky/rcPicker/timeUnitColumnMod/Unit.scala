@@ -6,15 +6,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Unit extends js.Object {
-  var disabled: js.UndefOr[Boolean] = js.undefined
+  var disabled: Boolean
   var label: ReactText
   var value: Double
 }
 
 object Unit {
   @scala.inline
-  def apply(label: ReactText, value: Double): Unit = {
-    val __obj = js.Dynamic.literal(label = label.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply(disabled: Boolean, label: ReactText, value: Double): Unit = {
+    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[Unit]
   }
   @scala.inline
@@ -29,13 +29,11 @@ object Unit {
         x
     }
     @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
+    @scala.inline
     def setLabel(value: ReactText): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def setValue(value: Double): Self = this.set("value", value.asInstanceOf[js.Any])
-    @scala.inline
-    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
-    @scala.inline
-    def deleteDisabled: Self = this.set("disabled", js.undefined)
   }
   
 }

@@ -41,6 +41,8 @@ object Collapse {
     @scala.inline
     def expandIconPosition(value: ExpandIconPosition): this.type = set("expandIconPosition", value.asInstanceOf[js.Any])
     @scala.inline
+    def ghost(value: Boolean): this.type = set("ghost", value.asInstanceOf[js.Any])
+    @scala.inline
     def onChange(value: /* key */ String | js.Array[String] => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])

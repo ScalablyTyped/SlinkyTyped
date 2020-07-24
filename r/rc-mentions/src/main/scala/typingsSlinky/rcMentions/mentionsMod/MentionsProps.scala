@@ -1,33 +1,41 @@
 package typingsSlinky.rcMentions.mentionsMod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.facade.ReactElement
+import slinky.web.SyntheticFocusEvent
 import typingsSlinky.rcMentions.optionMod.OptionProps
 import typingsSlinky.rcMentions.rcMentionsBooleans.`false`
+import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.FocusEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait MentionsProps extends BaseTextareaAttrs {
-  @JSName("defaultValue")
-  var defaultValue_MentionsProps: js.UndefOr[String] = js.undefined
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped {[ P in std.Exclude<keyof / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TextAreaProps * / any, 'prefix' | 'onChange' | 'onSelect'> ]: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TextAreaProps * / any[P]} */ trait MentionsProps extends js.Object {
+  var autoFocus: js.UndefOr[Boolean] = js.undefined
+  var className: js.UndefOr[String] = js.undefined
+  var defaultValue: js.UndefOr[String] = js.undefined
   var direction: js.UndefOr[Direction] = js.undefined
   var filterOption: js.UndefOr[
     `false` | (js.Function2[/* input */ String, /* hasValue */ OptionProps, Boolean])
   ] = js.undefined
   var getPopupContainer: js.UndefOr[js.Function0[HTMLElement]] = js.undefined
   var notFoundContent: js.UndefOr[ReactElement] = js.undefined
+  var onBlur: js.UndefOr[FocusEventHandler[HTMLTextAreaElement]] = js.undefined
   var onChange: js.UndefOr[js.Function1[/* text */ String, Unit]] = js.undefined
+  var onFocus: js.UndefOr[FocusEventHandler[HTMLTextAreaElement]] = js.undefined
   var onSearch: js.UndefOr[js.Function2[/* text */ String, /* prefix */ String, Unit]] = js.undefined
   var onSelect: js.UndefOr[js.Function2[/* option */ OptionProps, /* prefix */ String, Unit]] = js.undefined
   var placement: js.UndefOr[Placement] = js.undefined
   var prefix: js.UndefOr[String | js.Array[String]] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var split: js.UndefOr[String] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
   var transitionName: js.UndefOr[String] = js.undefined
   var validateSearch: js.UndefOr[js.Function2[/* text */ String, /* props */ this.type, Boolean]] = js.undefined
-  @JSName("value")
-  var value_MentionsProps: js.UndefOr[String] = js.undefined
+  var value: js.UndefOr[String] = js.undefined
 }
 
 object MentionsProps {
@@ -47,6 +55,14 @@ object MentionsProps {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setAutoFocus(value: Boolean): Self = this.set("autoFocus", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAutoFocus: Self = this.set("autoFocus", js.undefined)
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
     def setDefaultValue(value: String): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -72,9 +88,17 @@ object MentionsProps {
     @scala.inline
     def deleteNotFoundContent: Self = this.set("notFoundContent", js.undefined)
     @scala.inline
+    def setOnBlur(value: SyntheticFocusEvent[HTMLTextAreaElement] => Unit): Self = this.set("onBlur", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnBlur: Self = this.set("onBlur", js.undefined)
+    @scala.inline
     def setOnChange(value: /* text */ String => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setOnFocus(value: SyntheticFocusEvent[HTMLTextAreaElement] => Unit): Self = this.set("onFocus", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnFocus: Self = this.set("onFocus", js.undefined)
     @scala.inline
     def setOnSearch(value: (/* text */ String, /* prefix */ String) => Unit): Self = this.set("onSearch", js.Any.fromFunction2(value))
     @scala.inline
@@ -101,6 +125,10 @@ object MentionsProps {
     def setSplit(value: String): Self = this.set("split", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSplit: Self = this.set("split", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
     @scala.inline
     def setTransitionName(value: String): Self = this.set("transitionName", value.asInstanceOf[js.Any])
     @scala.inline

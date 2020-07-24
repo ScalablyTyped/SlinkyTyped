@@ -14,6 +14,7 @@ import typingsSlinky.antd.getRenderPropValueMod.RenderFunction
 import typingsSlinky.antd.placementsMod.AdjustOverflow
 import typingsSlinky.antd.popconfirmMod.PopconfirmProps
 import typingsSlinky.antd.tooltipMod.TooltipPlacement
+import typingsSlinky.antd.typeMod.LiteralUnion
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
@@ -46,7 +47,7 @@ object Popconfirm {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
-    def color(value: PresetColorType): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: LiteralUnion[PresetColorType, String]): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline

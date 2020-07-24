@@ -19,6 +19,7 @@ trait RadioGroupProps extends AbstractCheckboxGroupProps {
   var onChange: js.UndefOr[js.Function1[/* e */ RadioChangeEvent, Unit]] = js.undefined
   var onMouseEnter: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
   var onMouseLeave: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.undefined
+  var optionType: js.UndefOr[RadioGroupOptionType] = js.undefined
   var size: js.UndefOr[SizeType] = js.undefined
   var value: js.UndefOr[js.Any] = js.undefined
 }
@@ -74,6 +75,10 @@ object RadioGroupProps {
     def setOnMouseLeave(value: SyntheticMouseEvent[HTMLDivElement] => Unit): Self = this.set("onMouseLeave", js.Any.fromFunction1(value))
     @scala.inline
     def deleteOnMouseLeave: Self = this.set("onMouseLeave", js.undefined)
+    @scala.inline
+    def setOptionType(value: RadioGroupOptionType): Self = this.set("optionType", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteOptionType: Self = this.set("optionType", js.undefined)
     @scala.inline
     def setSize(value: SizeType): Self = this.set("size", value.asInstanceOf[js.Any])
     @scala.inline

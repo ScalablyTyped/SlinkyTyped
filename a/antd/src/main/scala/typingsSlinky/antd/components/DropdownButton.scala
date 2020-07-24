@@ -33,6 +33,8 @@ object DropdownButton {
     @scala.inline
     def align(value: Align): this.type = set("align", value.asInstanceOf[js.Any])
     @scala.inline
+    def arrow(value: Boolean): this.type = set("arrow", value.asInstanceOf[js.Any])
+    @scala.inline
     def buttonsRender(value: /* buttons */ js.Array[ReactElement] => js.Array[ReactElement]): this.type = set("buttonsRender", js.Any.fromFunction1(value))
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])

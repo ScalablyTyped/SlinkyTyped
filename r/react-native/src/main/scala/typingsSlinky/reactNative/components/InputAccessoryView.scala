@@ -2,6 +2,7 @@ package typingsSlinky.reactNative.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.InputAccessoryViewProps
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -19,7 +20,7 @@ object InputAccessoryView {
     extends AnyVal
        with StBuildingComponent[tag.type, typingsSlinky.reactNative.mod.InputAccessoryView] {
     @scala.inline
-    def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    def backgroundColor(value: ColorValue): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def nativeID(value: String): this.type = set("nativeID", value.asInstanceOf[js.Any])
     @scala.inline

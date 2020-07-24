@@ -20,8 +20,11 @@ trait Question[T /* <: Answers */] extends js.Object {
     *
     * @param input
     * The answer provided by the user.
+    *
+    * @param answers
+    * The answers provided by the user.
     */
-  var filter: js.UndefOr[js.Function1[/* input */ js.Any, _]] = js.undefined
+  var filter: js.UndefOr[js.Function2[/* input */ js.Any, /* answers */ T, _]] = js.undefined
   /**
     * The message to show to the user.
     */
@@ -91,7 +94,7 @@ object Question {
     @scala.inline
     def deleteDefault: Self = this.set("default", js.undefined)
     @scala.inline
-    def setFilter(value: /* input */ js.Any => _): Self = this.set("filter", js.Any.fromFunction1(value))
+    def setFilter(value: (/* input */ js.Any, /* answers */ T) => _): Self = this.set("filter", js.Any.fromFunction2(value))
     @scala.inline
     def deleteFilter: Self = this.set("filter", js.undefined)
     @scala.inline

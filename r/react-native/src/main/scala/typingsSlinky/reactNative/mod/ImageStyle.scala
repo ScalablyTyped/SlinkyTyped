@@ -11,19 +11,19 @@ trait ImageStyle
      with ShadowStyleIOS
      with TransformsStyle {
   var backfaceVisibility: js.UndefOr[visible | hidden] = js.undefined
-  var backgroundColor: js.UndefOr[String] = js.undefined
+  var backgroundColor: js.UndefOr[ColorValue] = js.undefined
   var borderBottomLeftRadius: js.UndefOr[Double] = js.undefined
   var borderBottomRightRadius: js.UndefOr[Double] = js.undefined
-  var borderColor: js.UndefOr[String] = js.undefined
+  var borderColor: js.UndefOr[ColorValue] = js.undefined
   var borderRadius: js.UndefOr[Double] = js.undefined
   var borderTopLeftRadius: js.UndefOr[Double] = js.undefined
   var borderTopRightRadius: js.UndefOr[Double] = js.undefined
   var opacity: js.UndefOr[Double] = js.undefined
   @JSName("overflow")
   var overflow_ImageStyle: js.UndefOr[visible | hidden] = js.undefined
-  var overlayColor: js.UndefOr[String] = js.undefined
+  var overlayColor: js.UndefOr[ColorValue] = js.undefined
   var resizeMode: js.UndefOr[ImageResizeMode] = js.undefined
-  var tintColor: js.UndefOr[String] = js.undefined
+  var tintColor: js.UndefOr[ColorValue] = js.undefined
 }
 
 object ImageStyle {
@@ -48,7 +48,7 @@ object ImageStyle {
     @scala.inline
     def deleteBackfaceVisibility: Self = this.set("backfaceVisibility", js.undefined)
     @scala.inline
-    def setBackgroundColor(value: String): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    def setBackgroundColor(value: ColorValue): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
     @scala.inline
@@ -60,7 +60,7 @@ object ImageStyle {
     @scala.inline
     def deleteBorderBottomRightRadius: Self = this.set("borderBottomRightRadius", js.undefined)
     @scala.inline
-    def setBorderColor(value: String): Self = this.set("borderColor", value.asInstanceOf[js.Any])
+    def setBorderColor(value: ColorValue): Self = this.set("borderColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBorderColor: Self = this.set("borderColor", js.undefined)
     @scala.inline
@@ -84,7 +84,7 @@ object ImageStyle {
     @scala.inline
     def deleteOverflow: Self = this.set("overflow", js.undefined)
     @scala.inline
-    def setOverlayColor(value: String): Self = this.set("overlayColor", value.asInstanceOf[js.Any])
+    def setOverlayColor(value: ColorValue): Self = this.set("overlayColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOverlayColor: Self = this.set("overlayColor", js.undefined)
     @scala.inline
@@ -92,7 +92,7 @@ object ImageStyle {
     @scala.inline
     def deleteResizeMode: Self = this.set("resizeMode", js.undefined)
     @scala.inline
-    def setTintColor(value: String): Self = this.set("tintColor", value.asInstanceOf[js.Any])
+    def setTintColor(value: ColorValue): Self = this.set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTintColor: Self = this.set("tintColor", js.undefined)
   }

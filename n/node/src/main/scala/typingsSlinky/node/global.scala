@@ -3,7 +3,6 @@ package typingsSlinky.node
 import typingsSlinky.node.NodeJS.ArrayBufferView
 import typingsSlinky.node.NodeJS.Global
 import typingsSlinky.node.NodeJS.Immediate
-import typingsSlinky.node.NodeJS.Process
 import typingsSlinky.node.NodeJS.Timeout
 import typingsSlinky.node.anon.ToPrimitive
 import typingsSlinky.node.anon.ValueOf
@@ -71,7 +70,6 @@ object global extends js.Object {
     def this(str: java.lang.String, encoding: BufferEncoding) = this()
   }
   
-  var console: Console = js.native
   @JSName("__dirname")
   var dirname: java.lang.String = js.native
   // Same as module.exports
@@ -80,7 +78,6 @@ object global extends js.Object {
   var filename: java.lang.String = js.native
   var global: Global = js.native
   var module: NodeModule = js.native
-  var process: Process = js.native
   var require: NodeRequire = js.native
   def clearImmediate(immediateId: Immediate): Unit = js.native
   def clearInterval(intervalId: Timeout): Unit = js.native

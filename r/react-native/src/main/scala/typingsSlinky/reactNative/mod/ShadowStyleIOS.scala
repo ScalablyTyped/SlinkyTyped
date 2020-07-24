@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ShadowStyleIOS extends js.Object {
-  var shadowColor: js.UndefOr[String] = js.undefined
+  var shadowColor: js.UndefOr[ColorValue] = js.undefined
   var shadowOffset: js.UndefOr[Height] = js.undefined
   var shadowOpacity: js.UndefOr[Double] = js.undefined
   var shadowRadius: js.UndefOr[Double] = js.undefined
@@ -30,7 +30,7 @@ object ShadowStyleIOS {
         x
     }
     @scala.inline
-    def setShadowColor(value: String): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
+    def setShadowColor(value: ColorValue): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteShadowColor: Self = this.set("shadowColor", js.undefined)
     @scala.inline

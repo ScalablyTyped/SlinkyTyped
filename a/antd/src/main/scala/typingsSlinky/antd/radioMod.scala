@@ -17,11 +17,11 @@ object radioMod extends js.Object {
   @js.native
   trait CompoundedComponent extends ForwardRefExoticComponent[RadioProps with RefAttributes[HTMLElement]] {
     var Button: ForwardRefExoticComponent[RadioButtonProps with RefAttributes[_]] = js.native
-    var Group: ReactComponentClass[RadioGroupProps] = js.native
+    var Group: ReactComponentClass[ForwardRefExoticComponent[RadioGroupProps with RefAttributes[_]]] = js.native
   }
   
   val Button: ForwardRefExoticComponent[RadioButtonProps with RefAttributes[_]] = js.native
-  val Group: ReactComponentClass[RadioGroupProps] = js.native
+  val Group: ReactComponentClass[ForwardRefExoticComponent[RadioGroupProps with RefAttributes[_]]] = js.native
   val default: CompoundedComponent = js.native
 }
 

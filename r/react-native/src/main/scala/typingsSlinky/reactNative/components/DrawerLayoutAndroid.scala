@@ -10,6 +10,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.DrawerLayoutAndroidProps
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
@@ -83,7 +84,7 @@ object DrawerLayoutAndroid {
     @scala.inline
     def collapsable(value: Boolean): this.type = set("collapsable", value.asInstanceOf[js.Any])
     @scala.inline
-    def drawerBackgroundColor(value: String): this.type = set("drawerBackgroundColor", value.asInstanceOf[js.Any])
+    def drawerBackgroundColor(value: ColorValue): this.type = set("drawerBackgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def drawerLockMode(value: unlocked | `locked-closed` | `locked-open`): this.type = set("drawerLockMode", value.asInstanceOf[js.Any])
     @scala.inline
@@ -167,7 +168,7 @@ object DrawerLayoutAndroid {
     @scala.inline
     def shouldRasterizeIOS(value: Boolean): this.type = set("shouldRasterizeIOS", value.asInstanceOf[js.Any])
     @scala.inline
-    def statusBarBackgroundColor(value: String): this.type = set("statusBarBackgroundColor", value.asInstanceOf[js.Any])
+    def statusBarBackgroundColor(value: ColorValue): this.type = set("statusBarBackgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: StyleProp[ViewStyle]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

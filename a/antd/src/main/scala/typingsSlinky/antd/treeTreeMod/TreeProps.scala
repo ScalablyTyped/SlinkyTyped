@@ -3,6 +3,7 @@ package typingsSlinky.antd.treeTreeMod
 import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.Checked
+import typingsSlinky.antd.anon.ShowLeafIcon
 import typingsSlinky.rcTree.mod.CheckData
 import typingsSlinky.rcTree.mod.ExpandData
 import typingsSlinky.rcTree.mod.InternalTreeNodeProps
@@ -21,7 +22,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined parent std.Omit<rc-tree.rc-tree.TreeProps, 'prefixCls'> */
+/* Inlined parent std.Omit<rc-tree.rc-tree.TreeProps, 'prefixCls' | 'showLine'> */
 trait TreeProps extends js.Object {
   /** 是否自动展开父节点 */
   var autoExpandParent: js.UndefOr[Boolean] = js.undefined
@@ -105,7 +106,7 @@ trait TreeProps extends js.Object {
     ]
   ] = js.undefined
   var showIcon: js.UndefOr[Boolean] = js.undefined
-  var showLine: js.UndefOr[Boolean] = js.undefined
+  var showLine: js.UndefOr[Boolean | ShowLeafIcon] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var switcherIcon: js.UndefOr[ReactElement] = js.undefined
 }
@@ -324,7 +325,7 @@ object TreeProps {
     @scala.inline
     def deleteShowIcon: Self = this.set("showIcon", js.undefined)
     @scala.inline
-    def setShowLine(value: Boolean): Self = this.set("showLine", value.asInstanceOf[js.Any])
+    def setShowLine(value: Boolean | ShowLeafIcon): Self = this.set("showLine", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteShowLine: Self = this.set("showLine", js.undefined)
     @scala.inline

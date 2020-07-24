@@ -14,11 +14,12 @@ trait FormItemProps
   extends FormItemLabelProps
      with FormItemInputProps
      with RcFieldProps {
-  var children: ChildrenType
+  var children: js.UndefOr[ChildrenType] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   /** Auto passed by List render props. User should not use this. */
   var fieldKey: js.UndefOr[Key | js.Array[Key]] = js.undefined
   var hasFeedback: js.UndefOr[Boolean] = js.undefined
+  var hidden: js.UndefOr[Boolean] = js.undefined
   var id: js.UndefOr[String] = js.undefined
   var noStyle: js.UndefOr[Boolean] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
@@ -66,6 +67,10 @@ object FormItemProps {
     def setHasFeedback(value: Boolean): Self = this.set("hasFeedback", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHasFeedback: Self = this.set("hasFeedback", js.undefined)
+    @scala.inline
+    def setHidden(value: Boolean): Self = this.set("hidden", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteHidden: Self = this.set("hidden", js.undefined)
     @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline

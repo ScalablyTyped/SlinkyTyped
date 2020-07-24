@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined {[ key in node.NodeJS.Signals ]: number} */
+/* Inlined {[ key in node.process.<global>.NodeJS.Signals ]: number} */
 trait SignalConstants extends js.Object {
   var SIGABRT: Double
   var SIGALRM: Double

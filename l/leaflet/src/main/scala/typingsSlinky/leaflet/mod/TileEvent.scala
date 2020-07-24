@@ -6,14 +6,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait TileEvent extends LeafletEvent {
-  var coords: Point_
+  var coords: Coords
   var tile: HTMLImageElement
 }
 
 object TileEvent {
   @scala.inline
   def apply(
-    coords: Point_,
+    coords: Coords,
     layer: js.Any,
     propagatedFrom: js.Any,
     sourceTarget: js.Any,
@@ -37,7 +37,7 @@ object TileEvent {
         x
     }
     @scala.inline
-    def setCoords(value: Point_): Self = this.set("coords", value.asInstanceOf[js.Any])
+    def setCoords(value: Coords): Self = this.set("coords", value.asInstanceOf[js.Any])
     @scala.inline
     def setTile(value: HTMLImageElement): Self = this.set("tile", value.asInstanceOf[js.Any])
   }

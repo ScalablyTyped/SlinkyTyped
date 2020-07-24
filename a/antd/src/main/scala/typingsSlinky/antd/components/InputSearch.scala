@@ -1,5 +1,6 @@
 package typingsSlinky.antd.components
 
+import typingsSlinky.antd.inputInputMod.default
 import typingsSlinky.antd.searchMod.SearchProps
 import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
@@ -11,7 +12,7 @@ object InputSearch {
   @js.native
   object component extends js.Object
   
-  def withProps(p: SearchProps with RefAttributes[js.Any]): SharedBuilder_SearchPropsRefAttributes1904739986[js.Any with js.Object] = new SharedBuilder_SearchPropsRefAttributes1904739986[js.Any with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: InputSearch.type): SharedBuilder_SearchPropsRefAttributes1904739986[js.Any with js.Object] = new SharedBuilder_SearchPropsRefAttributes1904739986[js.Any with js.Object](js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: SearchProps with RefAttributes[default]): SharedBuilder_SearchPropsRefAttributes1736756751[default] = new SharedBuilder_SearchPropsRefAttributes1736756751[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: InputSearch.type): SharedBuilder_SearchPropsRefAttributes1736756751[default] = new SharedBuilder_SearchPropsRefAttributes1736756751[default](js.Array(this.component, js.Dictionary.empty))()
 }
 

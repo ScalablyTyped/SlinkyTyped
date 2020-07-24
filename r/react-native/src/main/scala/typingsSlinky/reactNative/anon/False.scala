@@ -1,17 +1,18 @@
 package typingsSlinky.reactNative.anon
 
+import typingsSlinky.reactNative.mod.ColorValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait False extends js.Object {
-  var `false`: String
-  var `true`: String
+  var `false`: ColorValue
+  var `true`: ColorValue
 }
 
 object False {
   @scala.inline
-  def apply(`false`: String, `true`: String): False = {
+  def apply(`false`: ColorValue, `true`: ColorValue): False = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("false")(`false`.asInstanceOf[js.Any])
     __obj.updateDynamic("true")(`true`.asInstanceOf[js.Any])
@@ -29,9 +30,9 @@ object False {
         x
     }
     @scala.inline
-    def setFalse(value: String): Self = this.set("false", value.asInstanceOf[js.Any])
+    def setFalse(value: ColorValue): Self = this.set("false", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTrue(value: String): Self = this.set("true", value.asInstanceOf[js.Any])
+    def setTrue(value: ColorValue): Self = this.set("true", value.asInstanceOf[js.Any])
   }
   
 }

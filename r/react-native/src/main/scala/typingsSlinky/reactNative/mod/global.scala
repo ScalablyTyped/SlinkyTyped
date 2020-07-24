@@ -13,7 +13,13 @@ object global extends js.Object {
     */
   @js.native
   trait Console_ extends js.Object {
+    /**
+      * @deprecated Use LogBox.ignoreAllLogs(disable) instead
+      */
     var disableYellowBox: Boolean = js.native
+    /**
+      * @deprecated Use LogBox.ignoreLogs(patterns) instead
+      */
     var ignoredYellowBox: js.Array[String] = js.native
     def debug(message: js.UndefOr[scala.Nothing], optionalParams: js.Any*): Unit = js.native
     def debug(message: js.Any, optionalParams: js.Any*): Unit = js.native

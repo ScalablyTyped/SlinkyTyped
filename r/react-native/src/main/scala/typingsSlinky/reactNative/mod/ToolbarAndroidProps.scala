@@ -73,7 +73,7 @@ trait ToolbarAndroidProps extends ViewProps {
   /**
     * Sets the toolbar subtitle color.
     */
-  var subtitleColor: js.UndefOr[String] = js.undefined
+  var subtitleColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Sets the toolbar title.
     */
@@ -81,7 +81,7 @@ trait ToolbarAndroidProps extends ViewProps {
   /**
     * Sets the toolbar title color.
     */
-  var titleColor: js.UndefOr[String] = js.undefined
+  var titleColor: js.UndefOr[ColorValue] = js.undefined
 }
 
 object ToolbarAndroidProps {
@@ -144,7 +144,7 @@ object ToolbarAndroidProps {
     @scala.inline
     def deleteSubtitle: Self = this.set("subtitle", js.undefined)
     @scala.inline
-    def setSubtitleColor(value: String): Self = this.set("subtitleColor", value.asInstanceOf[js.Any])
+    def setSubtitleColor(value: ColorValue): Self = this.set("subtitleColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSubtitleColor: Self = this.set("subtitleColor", js.undefined)
     @scala.inline
@@ -152,7 +152,7 @@ object ToolbarAndroidProps {
     @scala.inline
     def deleteTitle: Self = this.set("title", js.undefined)
     @scala.inline
-    def setTitleColor(value: String): Self = this.set("titleColor", value.asInstanceOf[js.Any])
+    def setTitleColor(value: ColorValue): Self = this.set("titleColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitleColor: Self = this.set("titleColor", js.undefined)
   }

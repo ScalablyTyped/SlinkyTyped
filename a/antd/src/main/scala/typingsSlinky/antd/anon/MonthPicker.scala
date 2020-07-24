@@ -14,26 +14,26 @@ trait MonthPicker[DateType] extends js.Object {
   var MonthPicker: ReactComponentClass[
     Pick[
       InjectDefaultProps[PickerDateProps[DateType]], 
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
     ]
   ]
   var RangePicker: ReactComponentClass[RangePickerProps[DateType]]
   var TimePicker: ReactComponentClass[
     Pick[
       InjectDefaultProps[PickerTimeProps[DateType]], 
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 109 */ js.Any
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 110 */ js.Any
     ]
   ]
   var WeekPicker: ReactComponentClass[
     Pick[
       InjectDefaultProps[PickerDateProps[DateType]], 
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
     ]
   ]
   var YearPicker: ReactComponentClass[
     Pick[
       InjectDefaultProps[PickerDateProps[DateType]], 
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
     ]
   ]
 }
@@ -44,26 +44,26 @@ object MonthPicker {
     MonthPicker: ReactComponentClass[
       Pick[
         InjectDefaultProps[PickerDateProps[DateType]], 
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
       ]
     ],
     RangePicker: ReactComponentClass[RangePickerProps[DateType]],
     TimePicker: ReactComponentClass[
       Pick[
         InjectDefaultProps[PickerTimeProps[DateType]], 
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 109 */ js.Any
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 110 */ js.Any
       ]
     ],
     WeekPicker: ReactComponentClass[
       Pick[
         InjectDefaultProps[PickerDateProps[DateType]], 
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
       ]
     ],
     YearPicker: ReactComponentClass[
       Pick[
         InjectDefaultProps[PickerDateProps[DateType]], 
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
       ]
     ]
   ): MonthPicker[DateType] = {
@@ -86,7 +86,7 @@ object MonthPicker {
       value: ReactComponentClass[
           Pick[
             InjectDefaultProps[PickerDateProps[DateType]], 
-            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
           ]
         ]
     ): Self = this.set("MonthPicker", value.asInstanceOf[js.Any])
@@ -97,7 +97,7 @@ object MonthPicker {
       value: ReactComponentClass[
           Pick[
             InjectDefaultProps[PickerTimeProps[DateType]], 
-            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 109 */ js.Any
+            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 110 */ js.Any
           ]
         ]
     ): Self = this.set("TimePicker", value.asInstanceOf[js.Any])
@@ -106,7 +106,7 @@ object MonthPicker {
       value: ReactComponentClass[
           Pick[
             InjectDefaultProps[PickerDateProps[DateType]], 
-            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
           ]
         ]
     ): Self = this.set("WeekPicker", value.asInstanceOf[js.Any])
@@ -115,7 +115,7 @@ object MonthPicker {
       value: ReactComponentClass[
           Pick[
             InjectDefaultProps[PickerDateProps[DateType]], 
-            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
           ]
         ]
     ): Self = this.set("YearPicker", value.asInstanceOf[js.Any])

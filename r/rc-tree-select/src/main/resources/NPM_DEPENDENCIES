@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "rc-tree-select" : "4.0.1"
+      "rc-tree-select" : "4.0.3"
     }
   ],
   "test-dependencies" : [
     {
-      "rc-tree-select" : "4.0.1"
+      "rc-tree-select" : "4.0.3"
     }
   ],
   "compile-devDependencies" : [

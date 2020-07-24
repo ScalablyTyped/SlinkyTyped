@@ -33,7 +33,7 @@ trait SegmentedControlIOSProps extends ViewProps {
   /**
     * Accent color of the control.
     */
-  var tintColor: js.UndefOr[String] = js.undefined
+  var tintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * The labels for the control's segment buttons, in order.
     */
@@ -78,7 +78,7 @@ object SegmentedControlIOSProps {
     @scala.inline
     def deleteSelectedIndex: Self = this.set("selectedIndex", js.undefined)
     @scala.inline
-    def setTintColor(value: String): Self = this.set("tintColor", value.asInstanceOf[js.Any])
+    def setTintColor(value: ColorValue): Self = this.set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTintColor: Self = this.set("tintColor", js.undefined)
     @scala.inline

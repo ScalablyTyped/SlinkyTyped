@@ -9,6 +9,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
@@ -163,13 +164,13 @@ class SharedBuilder_ToolbarAndroidProps2005905226[R <: js.Object] (val args: js.
   @scala.inline
   def subtitle(value: String): this.type = set("subtitle", value.asInstanceOf[js.Any])
   @scala.inline
-  def subtitleColor(value: String): this.type = set("subtitleColor", value.asInstanceOf[js.Any])
+  def subtitleColor(value: ColorValue): this.type = set("subtitleColor", value.asInstanceOf[js.Any])
   @scala.inline
   def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
   @scala.inline
   def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
   @scala.inline
-  def titleColor(value: String): this.type = set("titleColor", value.asInstanceOf[js.Any])
+  def titleColor(value: ColorValue): this.type = set("titleColor", value.asInstanceOf[js.Any])
   @scala.inline
   def tvParallaxMagnification(value: Double): this.type = set("tvParallaxMagnification", value.asInstanceOf[js.Any])
   @scala.inline

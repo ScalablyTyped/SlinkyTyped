@@ -13,6 +13,7 @@ trait DrawerProps extends js.Object {
   var bodyStyle: js.UndefOr[CSSProperties] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var closable: js.UndefOr[Boolean] = js.undefined
+  var closeIcon: js.UndefOr[ReactElement] = js.undefined
   var destroyOnClose: js.UndefOr[Boolean] = js.undefined
   /** wrapper dom node style of header and body */
   var drawerStyle: js.UndefOr[CSSProperties] = js.undefined
@@ -71,6 +72,12 @@ object DrawerProps {
     def setClosable(value: Boolean): Self = this.set("closable", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClosable: Self = this.set("closable", js.undefined)
+    @scala.inline
+    def setCloseIconReactElement(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCloseIcon(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCloseIcon: Self = this.set("closeIcon", js.undefined)
     @scala.inline
     def setDestroyOnClose(value: Boolean): Self = this.set("destroyOnClose", value.asInstanceOf[js.Any])
     @scala.inline

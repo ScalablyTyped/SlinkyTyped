@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "unimodules__react-native-adapter"
-version := "4.0.0-a66822"
+version := "4.0.0-e46ae0"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -8,8 +8,8 @@ libraryDependencies ++= Seq(
   "me.shadaj" %%% "slinky-web" % "0.6.5",
   "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-9fcfdc",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-77dff4",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200617Z-0ab4bf",
-  "org.scalablytyped.slinky" %%% "react-native" % "0.62-dt-20200604Z-2b2d28",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-014bc6",
+  "org.scalablytyped.slinky" %%% "react-native" % "0.63-dt-20200723Z-b14abf",
   "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")

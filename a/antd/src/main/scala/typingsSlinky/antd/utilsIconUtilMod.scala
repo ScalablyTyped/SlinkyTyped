@@ -1,6 +1,7 @@
 package typingsSlinky.antd
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.anon.ShowLeafIcon
 import typingsSlinky.antd.treeTreeMod.AntTreeNodeProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,6 +24,12 @@ object utilsIconUtilMod extends js.Object {
   ): js.Object | Null = js.native
   def default(
     prefixCls: String,
+    switcherIcon: js.UndefOr[ReactElement],
+    showLine: ShowLeafIcon,
+    hasIsLeafExpandedLoading: AntTreeNodeProps
+  ): js.Object | Null = js.native
+  def default(
+    prefixCls: String,
     switcherIcon: Null,
     showLine: js.UndefOr[scala.Nothing],
     hasIsLeafExpandedLoading: AntTreeNodeProps
@@ -31,6 +38,12 @@ object utilsIconUtilMod extends js.Object {
     prefixCls: String,
     switcherIcon: Null,
     showLine: Boolean,
+    hasIsLeafExpandedLoading: AntTreeNodeProps
+  ): js.Object | Null = js.native
+  def default(
+    prefixCls: String,
+    switcherIcon: Null,
+    showLine: ShowLeafIcon,
     hasIsLeafExpandedLoading: AntTreeNodeProps
   ): js.Object | Null = js.native
 }

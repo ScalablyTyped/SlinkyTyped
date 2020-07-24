@@ -185,6 +185,7 @@ trait WeakValidationMapTimePick extends js.Object {
   var secondStep: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
   var showHour: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var showMinute: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var showNow: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var showSecond: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var size: js.UndefOr[Validator[js.UndefOr[Null | SizeType]]] = js.undefined
   var style: js.UndefOr[Validator[js.UndefOr[CSSProperties | Null]]] = js.undefined
@@ -642,6 +643,10 @@ object WeakValidationMapTimePick {
     def setShowMinute(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("showMinute", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteShowMinute: Self = this.set("showMinute", js.undefined)
+    @scala.inline
+    def setShowNow(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("showNow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowNow: Self = this.set("showNow", js.undefined)
     @scala.inline
     def setShowSecond(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("showSecond", value.asInstanceOf[js.Any])
     @scala.inline

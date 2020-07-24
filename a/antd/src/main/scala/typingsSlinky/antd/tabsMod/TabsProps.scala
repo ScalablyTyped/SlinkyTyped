@@ -1,6 +1,7 @@
 package typingsSlinky.antd.tabsMod
 
 import org.scalajs.dom.raw.Element
+import slinky.core.facade.ReactElement
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.antdStrings.add
@@ -12,6 +13,8 @@ import scala.scalajs.js.annotation._
 
 /* import warning: RemoveDifficultInheritance.summarizeChanges 
 - Dropped {[ P in std.Exclude<keyof / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RcTabsProps * / any, 'editable'> ]: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RcTabsProps * / any[P]} */ trait TabsProps extends js.Object {
+  var addIcon: js.UndefOr[ReactElement] = js.undefined
+  var centered: js.UndefOr[Boolean] = js.undefined
   var hideAdd: js.UndefOr[Boolean] = js.undefined
   var onEdit: js.UndefOr[
     js.Function2[
@@ -41,6 +44,16 @@ object TabsProps {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setAddIconReactElement(value: ReactElement): Self = this.set("addIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setAddIcon(value: ReactElement): Self = this.set("addIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteAddIcon: Self = this.set("addIcon", js.undefined)
+    @scala.inline
+    def setCentered(value: Boolean): Self = this.set("centered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCentered: Self = this.set("centered", js.undefined)
     @scala.inline
     def setHideAdd(value: Boolean): Self = this.set("hideAdd", value.asInstanceOf[js.Any])
     @scala.inline

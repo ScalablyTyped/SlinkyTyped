@@ -41,6 +41,8 @@ object GetRanges {
     def rangeListVarargs(value: Label*): this.type = set("rangeList", js.Array(value :_*))
     @scala.inline
     def rangeList(value: RangeList): this.type = set("rangeList", value.asInstanceOf[js.Any])
+    @scala.inline
+    def showNow(value: Boolean): this.type = set("showNow", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: RangesProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

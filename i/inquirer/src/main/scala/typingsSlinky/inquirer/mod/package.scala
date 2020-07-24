@@ -77,13 +77,6 @@ package object mod {
     java.lang.String
   ]
   /**
-    * Provides options for a question for the `ListPrompt`.
-    *
-    * @template T
-    * The type of the answers.
-    */
-  type ListQuestionOptions[T /* <: typingsSlinky.inquirer.mod.Answers */] = typingsSlinky.inquirer.mod.ListQuestionOptionsBase[T, typingsSlinky.inquirer.mod.ListChoiceMap[T]]
-  /**
     * Represents a union which preserves autocompletion.
     *
     * @template T
@@ -107,6 +100,10 @@ package object mod {
     * The type of the answers.
     */
   type QuestionCollection[T /* <: typingsSlinky.inquirer.mod.Answers */] = typingsSlinky.inquirer.mod.DistinctQuestion[T] | js.Array[typingsSlinky.inquirer.mod.DistinctQuestion[T]] | typingsSlinky.rxjs.mod.Observable_[typingsSlinky.inquirer.mod.DistinctQuestion[T]]
+  /**
+    * Indicates the type of a question
+    */
+  type QuestionTypeName = /* import warning: importer.ImportType#apply Failed type conversion: inquirer.inquirer.DistinctQuestion<inquirer.inquirer.Answers>['type'] */ js.Any
   /**
     * Provides options for a question for the `RawListPrompt`.
     *

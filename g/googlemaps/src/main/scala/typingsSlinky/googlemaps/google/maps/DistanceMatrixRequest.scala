@@ -8,10 +8,10 @@ trait DistanceMatrixRequest extends js.Object {
   var avoidFerries: js.UndefOr[Boolean] = js.undefined
   var avoidHighways: js.UndefOr[Boolean] = js.undefined
   var avoidTolls: js.UndefOr[Boolean] = js.undefined
-  var destinations: js.UndefOr[js.Array[LatLng | LatLngLiteral | Place | String]] = js.undefined
+  var destinations: js.UndefOr[js.Array[String | LatLng | LatLngLiteral | Place]] = js.undefined
   var drivingOptions: js.UndefOr[DrivingOptions] = js.undefined
   var durationInTraffic: js.UndefOr[Boolean] = js.undefined
-  var origins: js.UndefOr[js.Array[LatLng | LatLngLiteral | Place | String]] = js.undefined
+  var origins: js.UndefOr[js.Array[String | LatLng | LatLngLiteral | Place]] = js.undefined
   var region: js.UndefOr[String] = js.undefined
   var transitOptions: js.UndefOr[TransitOptions] = js.undefined
   var travelMode: js.UndefOr[TravelMode] = js.undefined
@@ -48,9 +48,9 @@ object DistanceMatrixRequest {
     @scala.inline
     def deleteAvoidTolls: Self = this.set("avoidTolls", js.undefined)
     @scala.inline
-    def setDestinationsVarargs(value: (LatLng | LatLngLiteral | Place | String)*): Self = this.set("destinations", js.Array(value :_*))
+    def setDestinationsVarargs(value: (String | LatLng | LatLngLiteral | Place)*): Self = this.set("destinations", js.Array(value :_*))
     @scala.inline
-    def setDestinations(value: js.Array[LatLng | LatLngLiteral | Place | String]): Self = this.set("destinations", value.asInstanceOf[js.Any])
+    def setDestinations(value: js.Array[String | LatLng | LatLngLiteral | Place]): Self = this.set("destinations", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDestinations: Self = this.set("destinations", js.undefined)
     @scala.inline
@@ -62,9 +62,9 @@ object DistanceMatrixRequest {
     @scala.inline
     def deleteDurationInTraffic: Self = this.set("durationInTraffic", js.undefined)
     @scala.inline
-    def setOriginsVarargs(value: (LatLng | LatLngLiteral | Place | String)*): Self = this.set("origins", js.Array(value :_*))
+    def setOriginsVarargs(value: (String | LatLng | LatLngLiteral | Place)*): Self = this.set("origins", js.Array(value :_*))
     @scala.inline
-    def setOrigins(value: js.Array[LatLng | LatLngLiteral | Place | String]): Self = this.set("origins", value.asInstanceOf[js.Any])
+    def setOrigins(value: js.Array[String | LatLng | LatLngLiteral | Place]): Self = this.set("origins", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOrigins: Self = this.set("origins", js.undefined)
     @scala.inline

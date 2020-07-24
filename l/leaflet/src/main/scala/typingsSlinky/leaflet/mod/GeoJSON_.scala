@@ -22,6 +22,7 @@ class GeoJSON_[P] () extends FeatureGroup_[P] {
     * Resets the given vector layer's style to the original GeoJSON style,
     * useful for resetting style after hover events.
     */
+  def resetStyle(): Layer = js.native
   def resetStyle(layer: Layer): Layer = js.native
   def setStyle(style: StyleFunction[P]): this.type = js.native
 }

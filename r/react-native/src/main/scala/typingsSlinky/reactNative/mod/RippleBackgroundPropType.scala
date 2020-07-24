@@ -9,7 +9,8 @@ trait RippleBackgroundPropType
   extends BaseBackgroundPropType
      with BackgroundPropType {
   var borderless: js.UndefOr[Boolean] = js.undefined
-  var color: js.UndefOr[Double] = js.undefined
+  var color: js.UndefOr[ColorValue] = js.undefined
+  var radius: js.UndefOr[Double] = js.undefined
   @JSName("type")
   var type_RippleBackgroundPropType: RippleAndroid
 }
@@ -39,9 +40,13 @@ object RippleBackgroundPropType {
     @scala.inline
     def deleteBorderless: Self = this.set("borderless", js.undefined)
     @scala.inline
-    def setColor(value: Double): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: ColorValue): Self = this.set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
+    @scala.inline
+    def setRadius(value: Double): Self = this.set("radius", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRadius: Self = this.set("radius", js.undefined)
   }
   
 }

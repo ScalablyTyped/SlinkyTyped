@@ -5,6 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anon.Checked
+import typingsSlinky.antd.anon.ShowLeafIcon
 import typingsSlinky.antd.treeTreeMod.AntTreeNodeProps
 import typingsSlinky.antd.treeTreeMod.AntdTreeNodeAttribute
 import typingsSlinky.antd.treeTreeMod.TreeProps
@@ -156,7 +157,7 @@ object Tree {
     @scala.inline
     def showIcon(value: Boolean): this.type = set("showIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def showLine(value: Boolean): this.type = set("showLine", value.asInstanceOf[js.Any])
+    def showLine(value: Boolean | ShowLeafIcon): this.type = set("showLine", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

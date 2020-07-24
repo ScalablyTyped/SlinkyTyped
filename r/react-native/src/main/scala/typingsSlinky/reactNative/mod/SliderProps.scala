@@ -24,7 +24,7 @@ import scala.scalajs.js.annotation._
     * The color used for the track to the right of the button.
     * Overrides the default blue gradient image.
     */
-  var maximumTrackTintColor: js.UndefOr[String] = js.undefined
+  var maximumTrackTintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Initial maximum value of the slider. Default value is 1.
     */
@@ -33,7 +33,7 @@ import scala.scalajs.js.annotation._
     * The color used for the track to the left of the button.
     * Overrides the default blue gradient image.
     */
-  var minimumTrackTintColor: js.UndefOr[String] = js.undefined
+  var minimumTrackTintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Initial minimum value of the slider. Default value is 0.
     */
@@ -53,7 +53,7 @@ import scala.scalajs.js.annotation._
   /**
     * Color of the foreground switch grip.
     */
-  var thumbTintColor: js.UndefOr[String] = js.undefined
+  var thumbTintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Initial value of the slider. The value should be between minimumValue
     * and maximumValue, which default to 0 and 1 respectively.
@@ -86,7 +86,7 @@ object SliderProps {
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     @scala.inline
-    def setMaximumTrackTintColor(value: String): Self = this.set("maximumTrackTintColor", value.asInstanceOf[js.Any])
+    def setMaximumTrackTintColor(value: ColorValue): Self = this.set("maximumTrackTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMaximumTrackTintColor: Self = this.set("maximumTrackTintColor", js.undefined)
     @scala.inline
@@ -94,7 +94,7 @@ object SliderProps {
     @scala.inline
     def deleteMaximumValue: Self = this.set("maximumValue", js.undefined)
     @scala.inline
-    def setMinimumTrackTintColor(value: String): Self = this.set("minimumTrackTintColor", value.asInstanceOf[js.Any])
+    def setMinimumTrackTintColor(value: ColorValue): Self = this.set("minimumTrackTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMinimumTrackTintColor: Self = this.set("minimumTrackTintColor", js.undefined)
     @scala.inline
@@ -114,7 +114,7 @@ object SliderProps {
     @scala.inline
     def deleteStep: Self = this.set("step", js.undefined)
     @scala.inline
-    def setThumbTintColor(value: String): Self = this.set("thumbTintColor", value.asInstanceOf[js.Any])
+    def setThumbTintColor(value: ColorValue): Self = this.set("thumbTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteThumbTintColor: Self = this.set("thumbTintColor", js.undefined)
     @scala.inline

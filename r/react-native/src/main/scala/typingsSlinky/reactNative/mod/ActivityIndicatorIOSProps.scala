@@ -15,7 +15,7 @@ trait ActivityIndicatorIOSProps extends ViewProps {
   /**
     * The foreground color of the spinner (default is gray).
     */
-  var color: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[ColorValue] = js.undefined
   /**
     * Whether the indicator should hide when not animating (true by default).
     */
@@ -56,7 +56,7 @@ object ActivityIndicatorIOSProps {
     @scala.inline
     def deleteAnimating: Self = this.set("animating", js.undefined)
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: ColorValue): Self = this.set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
     @scala.inline

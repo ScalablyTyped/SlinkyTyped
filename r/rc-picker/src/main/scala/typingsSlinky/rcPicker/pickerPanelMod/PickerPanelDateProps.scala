@@ -15,6 +15,7 @@ trait PickerPanelDateProps[DateType]
      with PickerPanelProps[DateType] {
   var disabledTime: js.UndefOr[DisabledTime[DateType]] = js.undefined
   var picker: js.UndefOr[date] = js.undefined
+  var showNow: js.UndefOr[Boolean] = js.undefined
   var showTime: js.UndefOr[Boolean | SharedTimeProps[DateType]] = js.undefined
   var showToday: js.UndefOr[Boolean] = js.undefined
 }
@@ -44,6 +45,10 @@ object PickerPanelDateProps {
     def setPicker(value: date): Self = this.set("picker", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePicker: Self = this.set("picker", js.undefined)
+    @scala.inline
+    def setShowNow(value: Boolean): Self = this.set("showNow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowNow: Self = this.set("showNow", js.undefined)
     @scala.inline
     def setShowTime(value: Boolean | SharedTimeProps[DateType]): Self = this.set("showTime", value.asInstanceOf[js.Any])
     @scala.inline

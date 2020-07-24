@@ -111,7 +111,7 @@ trait TextInputAndroidProps extends js.Object {
   /**
     * The color of the textInput underline.
     */
-  var underlineColorAndroid: js.UndefOr[String] = js.undefined
+  var underlineColorAndroid: js.UndefOr[ColorValue] = js.undefined
 }
 
 object TextInputAndroidProps {
@@ -174,7 +174,7 @@ object TextInputAndroidProps {
     @scala.inline
     def deleteTextBreakStrategy: Self = this.set("textBreakStrategy", js.undefined)
     @scala.inline
-    def setUnderlineColorAndroid(value: String): Self = this.set("underlineColorAndroid", value.asInstanceOf[js.Any])
+    def setUnderlineColorAndroid(value: ColorValue): Self = this.set("underlineColorAndroid", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUnderlineColorAndroid: Self = this.set("underlineColorAndroid", js.undefined)
   }

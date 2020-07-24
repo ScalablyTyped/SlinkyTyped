@@ -14,20 +14,20 @@ trait ViewStyle
      with ShadowStyleIOS
      with TransformsStyle {
   var backfaceVisibility: js.UndefOr[visible | hidden] = js.undefined
-  var backgroundColor: js.UndefOr[String] = js.undefined
-  var borderBottomColor: js.UndefOr[String] = js.undefined
+  var backgroundColor: js.UndefOr[ColorValue] = js.undefined
+  var borderBottomColor: js.UndefOr[ColorValue] = js.undefined
   var borderBottomEndRadius: js.UndefOr[Double] = js.undefined
   var borderBottomLeftRadius: js.UndefOr[Double] = js.undefined
   var borderBottomRightRadius: js.UndefOr[Double] = js.undefined
   var borderBottomStartRadius: js.UndefOr[Double] = js.undefined
-  var borderColor: js.UndefOr[String] = js.undefined
-  var borderEndColor: js.UndefOr[String] = js.undefined
-  var borderLeftColor: js.UndefOr[String] = js.undefined
+  var borderColor: js.UndefOr[ColorValue] = js.undefined
+  var borderEndColor: js.UndefOr[ColorValue] = js.undefined
+  var borderLeftColor: js.UndefOr[ColorValue] = js.undefined
   var borderRadius: js.UndefOr[Double] = js.undefined
-  var borderRightColor: js.UndefOr[String] = js.undefined
-  var borderStartColor: js.UndefOr[String] = js.undefined
+  var borderRightColor: js.UndefOr[ColorValue] = js.undefined
+  var borderStartColor: js.UndefOr[ColorValue] = js.undefined
   var borderStyle: js.UndefOr[solid | dotted | dashed] = js.undefined
-  var borderTopColor: js.UndefOr[String] = js.undefined
+  var borderTopColor: js.UndefOr[ColorValue] = js.undefined
   var borderTopEndRadius: js.UndefOr[Double] = js.undefined
   var borderTopLeftRadius: js.UndefOr[Double] = js.undefined
   var borderTopRightRadius: js.UndefOr[Double] = js.undefined
@@ -67,11 +67,11 @@ object ViewStyle {
     @scala.inline
     def deleteBackfaceVisibility: Self = this.set("backfaceVisibility", js.undefined)
     @scala.inline
-    def setBackgroundColor(value: String): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    def setBackgroundColor(value: ColorValue): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
     @scala.inline
-    def setBorderBottomColor(value: String): Self = this.set("borderBottomColor", value.asInstanceOf[js.Any])
+    def setBorderBottomColor(value: ColorValue): Self = this.set("borderBottomColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBorderBottomColor: Self = this.set("borderBottomColor", js.undefined)
     @scala.inline
@@ -91,15 +91,15 @@ object ViewStyle {
     @scala.inline
     def deleteBorderBottomStartRadius: Self = this.set("borderBottomStartRadius", js.undefined)
     @scala.inline
-    def setBorderColor(value: String): Self = this.set("borderColor", value.asInstanceOf[js.Any])
+    def setBorderColor(value: ColorValue): Self = this.set("borderColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBorderColor: Self = this.set("borderColor", js.undefined)
     @scala.inline
-    def setBorderEndColor(value: String): Self = this.set("borderEndColor", value.asInstanceOf[js.Any])
+    def setBorderEndColor(value: ColorValue): Self = this.set("borderEndColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBorderEndColor: Self = this.set("borderEndColor", js.undefined)
     @scala.inline
-    def setBorderLeftColor(value: String): Self = this.set("borderLeftColor", value.asInstanceOf[js.Any])
+    def setBorderLeftColor(value: ColorValue): Self = this.set("borderLeftColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBorderLeftColor: Self = this.set("borderLeftColor", js.undefined)
     @scala.inline
@@ -107,11 +107,11 @@ object ViewStyle {
     @scala.inline
     def deleteBorderRadius: Self = this.set("borderRadius", js.undefined)
     @scala.inline
-    def setBorderRightColor(value: String): Self = this.set("borderRightColor", value.asInstanceOf[js.Any])
+    def setBorderRightColor(value: ColorValue): Self = this.set("borderRightColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBorderRightColor: Self = this.set("borderRightColor", js.undefined)
     @scala.inline
-    def setBorderStartColor(value: String): Self = this.set("borderStartColor", value.asInstanceOf[js.Any])
+    def setBorderStartColor(value: ColorValue): Self = this.set("borderStartColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBorderStartColor: Self = this.set("borderStartColor", js.undefined)
     @scala.inline
@@ -119,7 +119,7 @@ object ViewStyle {
     @scala.inline
     def deleteBorderStyle: Self = this.set("borderStyle", js.undefined)
     @scala.inline
-    def setBorderTopColor(value: String): Self = this.set("borderTopColor", value.asInstanceOf[js.Any])
+    def setBorderTopColor(value: ColorValue): Self = this.set("borderTopColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBorderTopColor: Self = this.set("borderTopColor", js.undefined)
     @scala.inline

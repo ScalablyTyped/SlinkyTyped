@@ -549,6 +549,8 @@ object RangePicker {
       @scala.inline
       def separator(value: ReactElement): this.type = set("separator", value.asInstanceOf[js.Any])
       @scala.inline
+      def showNow(value: Boolean): this.type = set("showNow", value.asInstanceOf[js.Any])
+      @scala.inline
       def showTime(value: Boolean | RangeShowTimeObject[DateType]): this.type = set("showTime", value.asInstanceOf[js.Any])
       @scala.inline
       def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
@@ -826,6 +828,8 @@ object RangePicker {
       def showHour(value: Boolean): this.type = set("showHour", value.asInstanceOf[js.Any])
       @scala.inline
       def showMinute(value: Boolean): this.type = set("showMinute", value.asInstanceOf[js.Any])
+      @scala.inline
+      def showNow(value: Boolean): this.type = set("showNow", value.asInstanceOf[js.Any])
       @scala.inline
       def showSecond(value: Boolean): this.type = set("showSecond", value.asInstanceOf[js.Any])
       @scala.inline

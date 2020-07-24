@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "moment"
-version := "2.26.0-705ed0"
+version := "2.27.0-53fa1b"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

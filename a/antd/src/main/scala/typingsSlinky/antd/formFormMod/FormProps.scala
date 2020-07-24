@@ -63,10 +63,10 @@ import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
-import typingsSlinky.antd.formUtilMod.FormInstance
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
 import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.useFormMod.FormInstance
 import typingsSlinky.rcFieldForm.formMod.RenderProps
 import typingsSlinky.rcFieldForm.interfaceMod.FieldData
 import typingsSlinky.rcFieldForm.interfaceMod.Store
@@ -274,6 +274,7 @@ trait FormProps extends js.Object {
   var placeholder: js.UndefOr[String] = js.undefined
   var prefix: js.UndefOr[String] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
+  var preserve: js.UndefOr[Boolean] = js.undefined
   var property: js.UndefOr[String] = js.undefined
   var radioGroup: js.UndefOr[String] = js.undefined
   var resource: js.UndefOr[String] = js.undefined
@@ -1034,6 +1035,10 @@ object FormProps {
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
+    @scala.inline
+    def setPreserve(value: Boolean): Self = this.set("preserve", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePreserve: Self = this.set("preserve", js.undefined)
     @scala.inline
     def setProperty(value: String): Self = this.set("property", value.asInstanceOf[js.Any])
     @scala.inline

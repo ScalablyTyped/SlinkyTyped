@@ -3,6 +3,7 @@ package typingsSlinky.reactBigCalendar.mod
 import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.mod.Props
 import typingsSlinky.reactBigCalendar.anon.Accessors
@@ -85,6 +86,7 @@ trait CalendarProps[TEvent /* <: js.Object */, TResource /* <: js.Object */] ext
   var slotPropGetter: js.UndefOr[SlotPropGetter] = js.undefined
   var startAccessor: js.UndefOr[(/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, js.Date])] = js.undefined
   var step: js.UndefOr[Double] = js.undefined
+  var style: js.UndefOr[CSSProperties] = js.undefined
   var timeslots: js.UndefOr[Double] = js.undefined
   var titleAccessor: js.UndefOr[(/* keyof TEvent */ String) | (js.Function1[/* event */ TEvent, String])] = js.undefined
   var toolbar: js.UndefOr[Boolean] = js.undefined
@@ -336,6 +338,10 @@ object CalendarProps {
     def setStep(value: Double): Self = this.set("step", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStep: Self = this.set("step", js.undefined)
+    @scala.inline
+    def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStyle: Self = this.set("style", js.undefined)
     @scala.inline
     def setTimeslots(value: Double): Self = this.set("timeslots", value.asInstanceOf[js.Any])
     @scala.inline

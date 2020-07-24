@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait PickerItemProps extends js.Object {
-  var color: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[ColorValue] = js.undefined
   var label: String
   var testID: js.UndefOr[String] = js.undefined
   var value: js.UndefOr[js.Any] = js.undefined
@@ -31,7 +31,7 @@ object PickerItemProps {
     @scala.inline
     def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: ColorValue): Self = this.set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
     @scala.inline

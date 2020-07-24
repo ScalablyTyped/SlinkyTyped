@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 trait TextStyleIOS extends ViewStyle {
   var fontVariant: js.UndefOr[js.Array[FontVariant]] = js.undefined
   var letterSpacing: js.UndefOr[Double] = js.undefined
-  var textDecorationColor: js.UndefOr[String] = js.undefined
+  var textDecorationColor: js.UndefOr[ColorValue] = js.undefined
   var textDecorationStyle: js.UndefOr[solid | double | dotted | dashed] = js.undefined
   var writingDirection: js.UndefOr[auto | ltr | rtl] = js.undefined
 }
@@ -47,7 +47,7 @@ object TextStyleIOS {
     @scala.inline
     def deleteLetterSpacing: Self = this.set("letterSpacing", js.undefined)
     @scala.inline
-    def setTextDecorationColor(value: String): Self = this.set("textDecorationColor", value.asInstanceOf[js.Any])
+    def setTextDecorationColor(value: ColorValue): Self = this.set("textDecorationColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTextDecorationColor: Self = this.set("textDecorationColor", js.undefined)
     @scala.inline

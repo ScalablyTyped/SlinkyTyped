@@ -9,6 +9,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
@@ -88,7 +89,7 @@ object TabBarIOSItem {
     @scala.inline
     def badge(value: String | Double): this.type = set("badge", value.asInstanceOf[js.Any])
     @scala.inline
-    def badgeColor(value: String): this.type = set("badgeColor", value.asInstanceOf[js.Any])
+    def badgeColor(value: ColorValue): this.type = set("badgeColor", value.asInstanceOf[js.Any])
     @scala.inline
     def collapsable(value: Boolean): this.type = set("collapsable", value.asInstanceOf[js.Any])
     @scala.inline

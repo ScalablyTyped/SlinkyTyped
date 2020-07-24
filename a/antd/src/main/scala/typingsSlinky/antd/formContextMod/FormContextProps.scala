@@ -1,5 +1,6 @@
 package typingsSlinky.antd.formContextMod
 
+import slinky.core.facade.ReactElement
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
 import scala.scalajs.js
@@ -13,12 +14,16 @@ trait FormContextProps extends js.Object {
   var name: js.UndefOr[String] = js.undefined
   var vertical: Boolean
   var wrapperCol: js.UndefOr[ColProps] = js.undefined
+  def itemRef(name: js.Array[String | Double]): js.Function1[/* node */ ReactElement, Unit]
 }
 
 object FormContextProps {
   @scala.inline
-  def apply(vertical: Boolean): FormContextProps = {
-    val __obj = js.Dynamic.literal(vertical = vertical.asInstanceOf[js.Any])
+  def apply(
+    itemRef: js.Array[String | Double] => js.Function1[/* node */ ReactElement, Unit],
+    vertical: Boolean
+  ): FormContextProps = {
+    val __obj = js.Dynamic.literal(itemRef = js.Any.fromFunction1(itemRef), vertical = vertical.asInstanceOf[js.Any])
     __obj.asInstanceOf[FormContextProps]
   }
   @scala.inline
@@ -32,6 +37,8 @@ object FormContextProps {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setItemRef(value: js.Array[String | Double] => js.Function1[/* node */ ReactElement, Unit]): Self = this.set("itemRef", js.Any.fromFunction1(value))
     @scala.inline
     def setVertical(value: Boolean): Self = this.set("vertical", value.asInstanceOf[js.Any])
     @scala.inline

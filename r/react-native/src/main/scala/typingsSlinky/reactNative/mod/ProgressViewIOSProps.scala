@@ -18,7 +18,7 @@ trait ProgressViewIOSProps extends ViewProps {
   /**
     * The tint color of the progress bar itself.
     */
-  var progressTintColor: js.UndefOr[String] = js.undefined
+  var progressTintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * The progress bar style.
     */
@@ -30,7 +30,7 @@ trait ProgressViewIOSProps extends ViewProps {
   /**
     * The tint color of the progress bar track.
     */
-  var trackTintColor: js.UndefOr[String] = js.undefined
+  var trackTintColor: js.UndefOr[ColorValue] = js.undefined
 }
 
 object ProgressViewIOSProps {
@@ -61,7 +61,7 @@ object ProgressViewIOSProps {
     @scala.inline
     def deleteProgressImage: Self = this.set("progressImage", js.undefined)
     @scala.inline
-    def setProgressTintColor(value: String): Self = this.set("progressTintColor", value.asInstanceOf[js.Any])
+    def setProgressTintColor(value: ColorValue): Self = this.set("progressTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteProgressTintColor: Self = this.set("progressTintColor", js.undefined)
     @scala.inline
@@ -75,7 +75,7 @@ object ProgressViewIOSProps {
     @scala.inline
     def deleteTrackImage: Self = this.set("trackImage", js.undefined)
     @scala.inline
-    def setTrackTintColor(value: String): Self = this.set("trackTintColor", value.asInstanceOf[js.Any])
+    def setTrackTintColor(value: ColorValue): Self = this.set("trackTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTrackTintColor: Self = this.set("trackTintColor", js.undefined)
   }

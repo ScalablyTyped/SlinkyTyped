@@ -8,7 +8,7 @@ trait SliderPropsAndroid extends ViewProps {
   /**
     * Color of the foreground switch grip.
     */
-  var thumbTintColor: js.UndefOr[String] = js.undefined
+  var thumbTintColor: js.UndefOr[ColorValue] = js.undefined
 }
 
 object SliderPropsAndroid {
@@ -29,7 +29,7 @@ object SliderPropsAndroid {
         x
     }
     @scala.inline
-    def setThumbTintColor(value: String): Self = this.set("thumbTintColor", value.asInstanceOf[js.Any])
+    def setThumbTintColor(value: ColorValue): Self = this.set("thumbTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteThumbTintColor: Self = this.set("thumbTintColor", js.undefined)
   }

@@ -1,6 +1,5 @@
 package typingsSlinky.d3Dispatch
 
-import org.scalajs.dom.raw.EventTarget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object mod extends js.Object {
   @js.native
-  trait Dispatch_[T /* <: EventTarget */] extends js.Object {
+  trait Dispatch_[T /* <: js.Object */] extends js.Object {
     /**
       * Like `function.apply`, invokes each registered callback for the specified type,
       * passing the callback the specified arguments, with `that` as the `this` context.
@@ -71,6 +70,6 @@ object mod extends js.Object {
     def on(typenames: String, callback: Null): this.type = js.native
   }
   
-  def dispatch[T /* <: EventTarget */](types: String*): Dispatch_[T] = js.native
+  def dispatch[T /* <: js.Object */](types: String*): Dispatch_[T] = js.native
 }
 

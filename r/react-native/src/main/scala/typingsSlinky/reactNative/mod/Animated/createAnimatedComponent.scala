@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @JSImport("react-native", "Animated.createAnimatedComponent")
 @js.native
 object createAnimatedComponent extends js.Object {
-  def apply[T /* <: ReactComponentClass[_] */](component: T): ReactComponentClass[AnimatedProps[ComponentPropsWithRef[T]]] = js.native
+  def apply[T /* <: ReactComponentClass[_] */](component: T): ReactComponentClass[ComponentProps[T] | AnimatedProps[ComponentPropsWithRef[T]]] = js.native
 }
 

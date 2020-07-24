@@ -10,19 +10,19 @@ trait SwitchPropsIOS extends ViewProps {
     *
     * @deprecated use trackColor instead
     */
-  var onTintColor: js.UndefOr[String] = js.undefined
+  var onTintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Color of the foreground switch grip.
     *
     * @deprecated use thumbColor instead
     */
-  var thumbTintColor: js.UndefOr[String] = js.undefined
+  var thumbTintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Background color when the switch is turned off.
     *
     * @deprecated use trackColor instead
     */
-  var tintColor: js.UndefOr[String] = js.undefined
+  var tintColor: js.UndefOr[ColorValue] = js.undefined
 }
 
 object SwitchPropsIOS {
@@ -43,15 +43,15 @@ object SwitchPropsIOS {
         x
     }
     @scala.inline
-    def setOnTintColor(value: String): Self = this.set("onTintColor", value.asInstanceOf[js.Any])
+    def setOnTintColor(value: ColorValue): Self = this.set("onTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnTintColor: Self = this.set("onTintColor", js.undefined)
     @scala.inline
-    def setThumbTintColor(value: String): Self = this.set("thumbTintColor", value.asInstanceOf[js.Any])
+    def setThumbTintColor(value: ColorValue): Self = this.set("thumbTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteThumbTintColor: Self = this.set("thumbTintColor", js.undefined)
     @scala.inline
-    def setTintColor(value: String): Self = this.set("tintColor", value.asInstanceOf[js.Any])
+    def setTintColor(value: ColorValue): Self = this.set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTintColor: Self = this.set("tintColor", js.undefined)
   }

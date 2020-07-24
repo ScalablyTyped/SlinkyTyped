@@ -16,6 +16,7 @@ trait CollapseProps extends js.Object {
   var destroyInactivePanel: js.UndefOr[Boolean] = js.undefined
   var expandIcon: js.UndefOr[js.Function1[/* panelProps */ PanelProps, ReactElement]] = js.undefined
   var expandIconPosition: js.UndefOr[ExpandIconPosition] = js.undefined
+  var ghost: js.UndefOr[Boolean] = js.undefined
   var onChange: js.UndefOr[js.Function1[/* key */ String | js.Array[String], Unit]] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
@@ -74,6 +75,10 @@ object CollapseProps {
     def setExpandIconPosition(value: ExpandIconPosition): Self = this.set("expandIconPosition", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExpandIconPosition: Self = this.set("expandIconPosition", js.undefined)
+    @scala.inline
+    def setGhost(value: Boolean): Self = this.set("ghost", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteGhost: Self = this.set("ghost", js.undefined)
     @scala.inline
     def setOnChange(value: /* key */ String | js.Array[String] => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
     @scala.inline

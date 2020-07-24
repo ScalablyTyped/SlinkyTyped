@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 object createSecurePair extends js.Object {
   /**
-    * @deprecated
+    * @deprecated since v0.11.3 Use `tls.TLSSocket` instead.
     */
   def apply(): SecurePair = js.native
   def apply(

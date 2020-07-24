@@ -9,6 +9,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
@@ -75,9 +76,9 @@ object RefreshControl {
     @scala.inline
     def collapsable(value: Boolean): this.type = set("collapsable", value.asInstanceOf[js.Any])
     @scala.inline
-    def colorsVarargs(value: String*): this.type = set("colors", js.Array(value :_*))
+    def colorsVarargs(value: ColorValue*): this.type = set("colors", js.Array(value :_*))
     @scala.inline
-    def colors(value: js.Array[String]): this.type = set("colors", value.asInstanceOf[js.Any])
+    def colors(value: js.Array[ColorValue]): this.type = set("colors", value.asInstanceOf[js.Any])
     @scala.inline
     def enabled(value: Boolean): this.type = set("enabled", value.asInstanceOf[js.Any])
     @scala.inline
@@ -143,7 +144,7 @@ object RefreshControl {
     @scala.inline
     def pointerEvents(value: `box-none` | none | `box-only` | auto): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     @scala.inline
-    def progressBackgroundColor(value: String): this.type = set("progressBackgroundColor", value.asInstanceOf[js.Any])
+    def progressBackgroundColor(value: ColorValue): this.type = set("progressBackgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def progressViewOffset(value: Double): this.type = set("progressViewOffset", value.asInstanceOf[js.Any])
     @scala.inline
@@ -161,11 +162,11 @@ object RefreshControl {
     @scala.inline
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
     @scala.inline
-    def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
+    def tintColor(value: ColorValue): this.type = set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def title(value: String): this.type = set("title", value.asInstanceOf[js.Any])
     @scala.inline
-    def titleColor(value: String): this.type = set("titleColor", value.asInstanceOf[js.Any])
+    def titleColor(value: ColorValue): this.type = set("titleColor", value.asInstanceOf[js.Any])
     @scala.inline
     def tvParallaxMagnification(value: Double): this.type = set("tvParallaxMagnification", value.asInstanceOf[js.Any])
     @scala.inline

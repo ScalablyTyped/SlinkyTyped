@@ -7,6 +7,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
@@ -213,7 +214,7 @@ trait TextPropschildrenstringun extends js.Object {
   /**
     * The highlight color of the text.
     */
-  var selectionColor: js.UndefOr[String] = js.undefined
+  var selectionColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * @see https://facebook.github.io/react-native/docs/text.html#style
     */
@@ -382,7 +383,7 @@ object TextPropschildrenstringun {
     @scala.inline
     def deleteSelectable: Self = this.set("selectable", js.undefined)
     @scala.inline
-    def setSelectionColor(value: String): Self = this.set("selectionColor", value.asInstanceOf[js.Any])
+    def setSelectionColor(value: ColorValue): Self = this.set("selectionColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSelectionColor: Self = this.set("selectionColor", js.undefined)
     @scala.inline

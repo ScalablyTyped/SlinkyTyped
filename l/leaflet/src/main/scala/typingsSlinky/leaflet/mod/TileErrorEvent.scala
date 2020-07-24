@@ -12,7 +12,7 @@ trait TileErrorEvent extends TileEvent {
 object TileErrorEvent {
   @scala.inline
   def apply(
-    coords: Point_,
+    coords: Coords,
     error: js.Error,
     layer: js.Any,
     propagatedFrom: js.Any,

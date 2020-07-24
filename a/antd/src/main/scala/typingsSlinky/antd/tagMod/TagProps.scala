@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
 
 trait TagProps extends HTMLAttributes[HTMLSpanElement] {
   var closable: js.UndefOr[Boolean] = js.undefined
+  var closeIcon: js.UndefOr[ReactElement] = js.undefined
   @JSName("color")
   var color_TagProps: js.UndefOr[LiteralUnion[PresetColorType | PresetStatusColorType, String]] = js.undefined
   var icon: js.UndefOr[ReactElement] = js.undefined
@@ -41,6 +42,12 @@ object TagProps {
     def setClosable(value: Boolean): Self = this.set("closable", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteClosable: Self = this.set("closable", js.undefined)
+    @scala.inline
+    def setCloseIconReactElement(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setCloseIcon(value: ReactElement): Self = this.set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCloseIcon: Self = this.set("closeIcon", js.undefined)
     @scala.inline
     def setColor(value: LiteralUnion[PresetColorType | PresetStatusColorType, String]): Self = this.set("color", value.asInstanceOf[js.Any])
     @scala.inline

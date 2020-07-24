@@ -1,6 +1,7 @@
 package typingsSlinky.antd.motionMod
 
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.TransitionEvent
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,13 +16,13 @@ trait Motion extends js.Object {
   var motionLeaveImmediately: js.UndefOr[Boolean] = js.undefined
   var motionName: js.UndefOr[String] = js.undefined
   var onAppearActive: js.UndefOr[MotionFunc] = js.undefined
-  var onAppearEnd: js.UndefOr[MotionFunc] = js.undefined
+  var onAppearEnd: js.UndefOr[MotionEndFunc] = js.undefined
   var onAppearStart: js.UndefOr[MotionFunc] = js.undefined
   var onEnterActive: js.UndefOr[MotionFunc] = js.undefined
-  var onEnterEnd: js.UndefOr[MotionFunc] = js.undefined
+  var onEnterEnd: js.UndefOr[MotionEndFunc] = js.undefined
   var onEnterStart: js.UndefOr[MotionFunc] = js.undefined
   var onLeaveActive: js.UndefOr[MotionFunc] = js.undefined
-  var onLeaveEnd: js.UndefOr[MotionFunc] = js.undefined
+  var onLeaveEnd: js.UndefOr[MotionEndFunc] = js.undefined
   var onLeaveStart: js.UndefOr[MotionFunc] = js.undefined
   var removeOnLeave: js.UndefOr[Boolean] = js.undefined
   var visible: js.UndefOr[Boolean] = js.undefined
@@ -77,7 +78,7 @@ object Motion {
     @scala.inline
     def deleteOnAppearActive: Self = this.set("onAppearActive", js.undefined)
     @scala.inline
-    def setOnAppearEnd(value: /* element */ HTMLElement => CSSProperties): Self = this.set("onAppearEnd", js.Any.fromFunction1(value))
+    def setOnAppearEnd(value: (/* element */ HTMLElement, /* event */ TransitionEvent) => Boolean): Self = this.set("onAppearEnd", js.Any.fromFunction2(value))
     @scala.inline
     def deleteOnAppearEnd: Self = this.set("onAppearEnd", js.undefined)
     @scala.inline
@@ -89,7 +90,7 @@ object Motion {
     @scala.inline
     def deleteOnEnterActive: Self = this.set("onEnterActive", js.undefined)
     @scala.inline
-    def setOnEnterEnd(value: /* element */ HTMLElement => CSSProperties): Self = this.set("onEnterEnd", js.Any.fromFunction1(value))
+    def setOnEnterEnd(value: (/* element */ HTMLElement, /* event */ TransitionEvent) => Boolean): Self = this.set("onEnterEnd", js.Any.fromFunction2(value))
     @scala.inline
     def deleteOnEnterEnd: Self = this.set("onEnterEnd", js.undefined)
     @scala.inline
@@ -101,7 +102,7 @@ object Motion {
     @scala.inline
     def deleteOnLeaveActive: Self = this.set("onLeaveActive", js.undefined)
     @scala.inline
-    def setOnLeaveEnd(value: /* element */ HTMLElement => CSSProperties): Self = this.set("onLeaveEnd", js.Any.fromFunction1(value))
+    def setOnLeaveEnd(value: (/* element */ HTMLElement, /* event */ TransitionEvent) => Boolean): Self = this.set("onLeaveEnd", js.Any.fromFunction2(value))
     @scala.inline
     def deleteOnLeaveEnd: Self = this.set("onLeaveEnd", js.undefined)
     @scala.inline

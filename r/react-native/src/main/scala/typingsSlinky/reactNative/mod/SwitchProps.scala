@@ -15,7 +15,7 @@ trait SwitchProps extends SwitchPropsIOS {
     * On iOS, custom color for the background.
     * Can be seen when the switch value is false or when the switch is disabled.
     */
-  var ios_backgroundColor: js.UndefOr[String] = js.undefined
+  var ios_backgroundColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Invoked with the new value when the value changes.
     */
@@ -23,7 +23,7 @@ trait SwitchProps extends SwitchPropsIOS {
   /**
     * Color of the foreground switch grip.
     */
-  var thumbColor: js.UndefOr[String] = js.undefined
+  var thumbColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Custom colors for the switch track
     *
@@ -59,7 +59,7 @@ object SwitchProps {
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     @scala.inline
-    def setIos_backgroundColor(value: String): Self = this.set("ios_backgroundColor", value.asInstanceOf[js.Any])
+    def setIos_backgroundColor(value: ColorValue): Self = this.set("ios_backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteIos_backgroundColor: Self = this.set("ios_backgroundColor", js.undefined)
     @scala.inline
@@ -67,7 +67,7 @@ object SwitchProps {
     @scala.inline
     def deleteOnValueChange: Self = this.set("onValueChange", js.undefined)
     @scala.inline
-    def setThumbColor(value: String): Self = this.set("thumbColor", value.asInstanceOf[js.Any])
+    def setThumbColor(value: ColorValue): Self = this.set("thumbColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteThumbColor: Self = this.set("thumbColor", js.undefined)
     @scala.inline

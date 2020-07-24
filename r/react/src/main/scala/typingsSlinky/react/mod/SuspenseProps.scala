@@ -9,12 +9,6 @@ trait SuspenseProps extends js.Object {
   var children: js.UndefOr[slinky.core.facade.ReactElement] = js.undefined
   /** A fallback react tree to show when a Suspense child (like React.lazy) suspends */
   var fallback: NonNullable[slinky.core.facade.ReactElement] | Null
-  /**
-    * Tells React whether to “skip” revealing this boundary during the initial load.
-    * This API will likely be removed in a future release.
-    */
-  // NOTE: this is unflagged and is respected even in stable builds
-  var unstable_avoidThisFallback: js.UndefOr[Boolean] = js.undefined
 }
 
 object SuspenseProps {
@@ -44,10 +38,6 @@ object SuspenseProps {
     def setFallback(value: NonNullable[slinky.core.facade.ReactElement]): Self = this.set("fallback", value.asInstanceOf[js.Any])
     @scala.inline
     def setFallbackNull: Self = this.set("fallback", null)
-    @scala.inline
-    def setUnstable_avoidThisFallback(value: Boolean): Self = this.set("unstable_avoidThisFallback", value.asInstanceOf[js.Any])
-    @scala.inline
-    def deleteUnstable_avoidThisFallback: Self = this.set("unstable_avoidThisFallback", js.undefined)
   }
   
 }

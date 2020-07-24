@@ -12,9 +12,9 @@ import scala.scalajs.js.annotation._
 
 // Note: Duplex extends both Readable and Writable.
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.node.NodeJS.EventEmitter because Already inherited
+- typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter because Already inherited
 - typingsSlinky.node.eventsMod.EventEmitter because Already inherited
-- typingsSlinky.node.NodeJS.EventEmitter because Already inherited
+- typingsSlinky.node.eventsMod.global.NodeJS.EventEmitter because Already inherited
 - typingsSlinky.node.childProcessMod.StdioNull because Already inherited
 - typingsSlinky.node.streamMod.internal because Already inherited
 - typingsSlinky.node.NodeJS.WritableStream because var conflicts: writable. Inlined 

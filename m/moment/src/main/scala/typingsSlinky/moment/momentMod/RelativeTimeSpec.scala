@@ -17,6 +17,7 @@ trait RelativeTimeSpec extends js.Object {
   var past: js.UndefOr[RelativeTimeFuturePastVal] = js.undefined
   var s: js.UndefOr[RelativeTimeSpecVal] = js.undefined
   var ss: js.UndefOr[RelativeTimeSpecVal] = js.undefined
+  var w: js.UndefOr[RelativeTimeSpecVal] = js.undefined
   var y: js.UndefOr[RelativeTimeSpecVal] = js.undefined
   var yy: js.UndefOr[RelativeTimeSpecVal] = js.undefined
 }
@@ -114,6 +115,14 @@ object RelativeTimeSpec {
     def setSs(value: RelativeTimeSpecVal): Self = this.set("ss", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSs: Self = this.set("ss", js.undefined)
+    @scala.inline
+    def setWFunction4(
+      value: (/* n */ Double, /* withoutSuffix */ Boolean, /* key */ RelativeTimeKey, /* isFuture */ Boolean) => String
+    ): Self = this.set("w", js.Any.fromFunction4(value))
+    @scala.inline
+    def setW(value: RelativeTimeSpecVal): Self = this.set("w", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteW: Self = this.set("w", js.undefined)
     @scala.inline
     def setYFunction4(
       value: (/* n */ Double, /* withoutSuffix */ Boolean, /* key */ RelativeTimeKey, /* isFuture */ Boolean) => String

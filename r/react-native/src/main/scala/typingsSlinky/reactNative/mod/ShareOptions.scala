@@ -8,7 +8,7 @@ trait ShareOptions extends js.Object {
   var dialogTitle: js.UndefOr[String] = js.undefined
   var excludedActivityTypes: js.UndefOr[js.Array[String]] = js.undefined
   var subject: js.UndefOr[String] = js.undefined
-  var tintColor: js.UndefOr[String] = js.undefined
+  var tintColor: js.UndefOr[ColorValue] = js.undefined
 }
 
 object ShareOptions {
@@ -43,7 +43,7 @@ object ShareOptions {
     @scala.inline
     def deleteSubject: Self = this.set("subject", js.undefined)
     @scala.inline
-    def setTintColor(value: String): Self = this.set("tintColor", value.asInstanceOf[js.Any])
+    def setTintColor(value: ColorValue): Self = this.set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTintColor: Self = this.set("tintColor", js.undefined)
   }

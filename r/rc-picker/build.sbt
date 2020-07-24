@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "rc-picker"
-version := "1.6.4-ef52d3"
+version := "1.10.7-607cfd"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -8,9 +8,9 @@ libraryDependencies ++= Seq(
   "me.shadaj" %%% "slinky-web" % "0.6.5",
   "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-9fcfdc",
   "org.scalablytyped.slinky" %%% "dayjs" % "1.8.28-884040",
-  "org.scalablytyped.slinky" %%% "moment" % "2.26.0-705ed0",
+  "org.scalablytyped.slinky" %%% "moment" % "2.27.0-53fa1b",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-77dff4",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200617Z-0ab4bf",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-014bc6",
   "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")

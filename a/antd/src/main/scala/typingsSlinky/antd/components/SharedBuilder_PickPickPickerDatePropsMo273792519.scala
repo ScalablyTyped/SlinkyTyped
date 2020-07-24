@@ -254,6 +254,8 @@ class SharedBuilder_PickPickPickerDatePropsMo273792519 (val args: js.Array[js.An
   @scala.inline
   def role(value: String): this.type = set("role", value.asInstanceOf[js.Any])
   @scala.inline
+  def showNow(value: Boolean): this.type = set("showNow", value.asInstanceOf[js.Any])
+  @scala.inline
   def showTime(value: Boolean | SharedTimeProps[Moment]): this.type = set("showTime", value.asInstanceOf[js.Any])
   @scala.inline
   def showToday(value: Boolean): this.type = set("showToday", value.asInstanceOf[js.Any])

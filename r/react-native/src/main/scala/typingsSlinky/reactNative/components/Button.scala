@@ -4,6 +4,7 @@ import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.reactNative.mod.ButtonProps
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import scala.scalajs.js
@@ -22,7 +23,7 @@ object Button {
     @scala.inline
     def accessibilityLabel(value: String): this.type = set("accessibilityLabel", value.asInstanceOf[js.Any])
     @scala.inline
-    def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
+    def color(value: ColorValue): this.type = set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
     @scala.inline

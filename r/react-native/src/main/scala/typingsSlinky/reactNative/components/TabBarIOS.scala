@@ -9,6 +9,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
@@ -75,7 +76,7 @@ object TabBarIOS {
     @scala.inline
     def accessible(value: Boolean): this.type = set("accessible", value.asInstanceOf[js.Any])
     @scala.inline
-    def barTintColor(value: String): this.type = set("barTintColor", value.asInstanceOf[js.Any])
+    def barTintColor(value: ColorValue): this.type = set("barTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def collapsable(value: Boolean): this.type = set("collapsable", value.asInstanceOf[js.Any])
     @scala.inline
@@ -153,7 +154,7 @@ object TabBarIOS {
     @scala.inline
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
     @scala.inline
-    def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
+    def tintColor(value: ColorValue): this.type = set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def translucent(value: Boolean): this.type = set("translucent", value.asInstanceOf[js.Any])
     @scala.inline
@@ -167,9 +168,9 @@ object TabBarIOS {
     @scala.inline
     def tvParallaxTiltAngle(value: Double): this.type = set("tvParallaxTiltAngle", value.asInstanceOf[js.Any])
     @scala.inline
-    def unselectedItemTintColor(value: String): this.type = set("unselectedItemTintColor", value.asInstanceOf[js.Any])
+    def unselectedItemTintColor(value: ColorValue): this.type = set("unselectedItemTintColor", value.asInstanceOf[js.Any])
     @scala.inline
-    def unselectedTintColor(value: String): this.type = set("unselectedTintColor", value.asInstanceOf[js.Any])
+    def unselectedTintColor(value: ColorValue): this.type = set("unselectedTintColor", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: TabBarIOSProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

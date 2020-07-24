@@ -10,6 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait TableRowSelection[T] extends js.Object {
+  var checkStrictly: js.UndefOr[Boolean] = js.undefined
   var columnTitle: js.UndefOr[String | ReactElement] = js.undefined
   var columnWidth: js.UndefOr[String | Double] = js.undefined
   var fixed: js.UndefOr[Boolean] = js.undefined
@@ -38,6 +39,8 @@ trait TableRowSelection[T] extends js.Object {
       Unit
     ]
   ] = js.undefined
+  /** Keep the selection keys in list even the key not exist in `dataSource` anymore */
+  var preserveSelectedRowKeys: js.UndefOr[Boolean] = js.undefined
   var renderCell: js.UndefOr[
     js.Function4[
       /* value */ Boolean, 
@@ -69,6 +72,10 @@ object TableRowSelection {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setCheckStrictly(value: Boolean): Self = this.set("checkStrictly", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCheckStrictly: Self = this.set("checkStrictly", js.undefined)
     @scala.inline
     def setColumnTitleReactElement(value: ReactElement): Self = this.set("columnTitle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -117,6 +124,10 @@ object TableRowSelection {
     ): Self = this.set("onSelectMultiple", js.Any.fromFunction3(value))
     @scala.inline
     def deleteOnSelectMultiple: Self = this.set("onSelectMultiple", js.undefined)
+    @scala.inline
+    def setPreserveSelectedRowKeys(value: Boolean): Self = this.set("preserveSelectedRowKeys", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePreserveSelectedRowKeys: Self = this.set("preserveSelectedRowKeys", js.undefined)
     @scala.inline
     def setRenderCell(
       value: (/* value */ Boolean, /* record */ T, /* index */ Double, /* originNode */ ReactElement) => ReactElement | RenderedCell[T]

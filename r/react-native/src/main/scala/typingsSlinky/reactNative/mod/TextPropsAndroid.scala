@@ -15,7 +15,7 @@ trait TextPropsAndroid extends js.Object {
   /**
     * The highlight color of the text.
     */
-  var selectionColor: js.UndefOr[String] = js.undefined
+  var selectionColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Set text break strategy on Android API Level 23+
     * default is `highQuality`.
@@ -45,7 +45,7 @@ object TextPropsAndroid {
     @scala.inline
     def deleteSelectable: Self = this.set("selectable", js.undefined)
     @scala.inline
-    def setSelectionColor(value: String): Self = this.set("selectionColor", value.asInstanceOf[js.Any])
+    def setSelectionColor(value: ColorValue): Self = this.set("selectionColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSelectionColor: Self = this.set("selectionColor", js.undefined)
     @scala.inline

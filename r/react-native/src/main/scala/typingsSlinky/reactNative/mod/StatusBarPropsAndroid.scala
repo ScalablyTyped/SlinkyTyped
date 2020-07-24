@@ -10,7 +10,7 @@ trait StatusBarPropsAndroid extends js.Object {
     *
     * @platform android
     */
-  var backgroundColor: js.UndefOr[String] = js.undefined
+  var backgroundColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * If the status bar is translucent. When translucent is set to true,
     * the app will draw under the status bar. This is useful when using a
@@ -37,7 +37,7 @@ object StatusBarPropsAndroid {
         x
     }
     @scala.inline
-    def setBackgroundColor(value: String): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    def setBackgroundColor(value: ColorValue): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
     @scala.inline

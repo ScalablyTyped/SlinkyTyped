@@ -47,6 +47,12 @@ object Cascader {
       value: (/* label */ js.Array[String], /* selectedOptions */ js.UndefOr[js.Array[CascaderOptionType]]) => ReactElement
     ): this.type = set("displayRender", js.Any.fromFunction2(value))
     @scala.inline
+    def dropdownRender(value: /* menus */ ReactElement => ReactElement): this.type = set("dropdownRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def expandIconReactElement(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def expandIcon(value: ReactElement): this.type = set("expandIcon", value.asInstanceOf[js.Any])
+    @scala.inline
     def expandTrigger(value: CascaderExpandTrigger): this.type = set("expandTrigger", value.asInstanceOf[js.Any])
     @scala.inline
     def fieldNames(value: FieldNamesType): this.type = set("fieldNames", value.asInstanceOf[js.Any])

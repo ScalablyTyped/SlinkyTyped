@@ -1,12 +1,12 @@
 package typingsSlinky.node.childProcessMod
 
-import typingsSlinky.node.NodeJS.Signals
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.nodeStrings.close
 import typingsSlinky.node.nodeStrings.disconnect
 import typingsSlinky.node.nodeStrings.error
 import typingsSlinky.node.nodeStrings.exit
 import typingsSlinky.node.nodeStrings.message
+import typingsSlinky.node.processMod.global.NodeJS.Signals
 import typingsSlinky.node.streamMod.Pipe
 import typingsSlinky.node.streamMod.Readable
 import typingsSlinky.node.streamMod.Writable

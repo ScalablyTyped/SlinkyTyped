@@ -190,6 +190,7 @@ trait RangePickerDateProps[DateType] extends RangePickerProps[DateType] {
   var renderExtraFooter: js.UndefOr[js.Function1[/* mode */ PanelMode, ReactElement]] = js.undefined
   var role: js.UndefOr[String] = js.undefined
   var separator: js.UndefOr[ReactElement] = js.undefined
+  var showNow: js.UndefOr[Boolean] = js.undefined
   var showTime: js.UndefOr[Boolean | RangeShowTimeObject[DateType]] = js.undefined
   var size: js.UndefOr[SizeType] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
@@ -619,6 +620,10 @@ object RangePickerDateProps {
     def setSeparator(value: ReactElement): Self = this.set("separator", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSeparator: Self = this.set("separator", js.undefined)
+    @scala.inline
+    def setShowNow(value: Boolean): Self = this.set("showNow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowNow: Self = this.set("showNow", js.undefined)
     @scala.inline
     def setShowTime(value: Boolean | RangeShowTimeObject[DateType]): Self = this.set("showTime", value.asInstanceOf[js.Any])
     @scala.inline

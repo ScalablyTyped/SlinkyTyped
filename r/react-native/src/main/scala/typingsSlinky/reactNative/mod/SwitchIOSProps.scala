@@ -12,7 +12,7 @@ trait SwitchIOSProps extends ViewProps {
   /**
     * Background color when the switch is turned on.
     */
-  var onTintColor: js.UndefOr[String] = js.undefined
+  var onTintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Callback that is called when the user toggles the switch.
     */
@@ -20,11 +20,11 @@ trait SwitchIOSProps extends ViewProps {
   /**
     * Background color for the switch round button.
     */
-  var thumbTintColor: js.UndefOr[String] = js.undefined
+  var thumbTintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Background color when the switch is turned off.
     */
-  var tintColor: js.UndefOr[String] = js.undefined
+  var tintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * The value of the switch, if true the switch will be turned on. Default value is false.
     */
@@ -53,7 +53,7 @@ object SwitchIOSProps {
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     @scala.inline
-    def setOnTintColor(value: String): Self = this.set("onTintColor", value.asInstanceOf[js.Any])
+    def setOnTintColor(value: ColorValue): Self = this.set("onTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOnTintColor: Self = this.set("onTintColor", js.undefined)
     @scala.inline
@@ -61,11 +61,11 @@ object SwitchIOSProps {
     @scala.inline
     def deleteOnValueChange: Self = this.set("onValueChange", js.undefined)
     @scala.inline
-    def setThumbTintColor(value: String): Self = this.set("thumbTintColor", value.asInstanceOf[js.Any])
+    def setThumbTintColor(value: ColorValue): Self = this.set("thumbTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteThumbTintColor: Self = this.set("thumbTintColor", js.undefined)
     @scala.inline
-    def setTintColor(value: String): Self = this.set("tintColor", value.asInstanceOf[js.Any])
+    def setTintColor(value: ColorValue): Self = this.set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTintColor: Self = this.set("tintColor", js.undefined)
     @scala.inline

@@ -4,15 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Readonly<{  name :react-native.react-native.AccessibilityActionName,   label :string | undefined}> */
+/* Inlined std.Readonly<{  name :react-native.react-native.AccessibilityActionName | string,   label :string | undefined}> */
 trait AccessibilityActionInfo extends js.Object {
   val label: js.UndefOr[String] = js.undefined
-  val name: AccessibilityActionName
+  val name: AccessibilityActionName | String
 }
 
 object AccessibilityActionInfo {
   @scala.inline
-  def apply(name: AccessibilityActionName): AccessibilityActionInfo = {
+  def apply(name: AccessibilityActionName | String): AccessibilityActionInfo = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[AccessibilityActionInfo]
   }
@@ -28,7 +28,7 @@ object AccessibilityActionInfo {
         x
     }
     @scala.inline
-    def setName(value: AccessibilityActionName): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setName(value: AccessibilityActionName | String): Self = this.set("name", value.asInstanceOf[js.Any])
     @scala.inline
     def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline

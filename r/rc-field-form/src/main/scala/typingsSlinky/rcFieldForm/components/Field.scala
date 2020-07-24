@@ -60,6 +60,8 @@ object Field {
     @scala.inline
     def onReset(value: () => Unit): this.type = set("onReset", js.Any.fromFunction0(value))
     @scala.inline
+    def preserve(value: Boolean): this.type = set("preserve", value.asInstanceOf[js.Any])
+    @scala.inline
     def rulesVarargs(value: Rule*): this.type = set("rules", js.Array(value :_*))
     @scala.inline
     def rules(value: js.Array[Rule]): this.type = set("rules", value.asInstanceOf[js.Any])

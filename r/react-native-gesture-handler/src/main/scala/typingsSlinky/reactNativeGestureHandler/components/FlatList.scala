@@ -17,6 +17,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.FlatListProperties
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
@@ -214,7 +215,7 @@ object FlatList {
     @scala.inline
     def enabled(value: Boolean): this.type = set("enabled", value.asInstanceOf[js.Any])
     @scala.inline
-    def endFillColor(value: String): this.type = set("endFillColor", value.asInstanceOf[js.Any])
+    def endFillColor(value: ColorValue): this.type = set("endFillColor", value.asInstanceOf[js.Any])
     @scala.inline
     def extraData(value: js.Any): this.type = set("extraData", value.asInstanceOf[js.Any])
     @scala.inline

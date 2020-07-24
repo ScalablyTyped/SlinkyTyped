@@ -19,6 +19,7 @@ import typingsSlinky.antd.progressProgressMod.ProgressGradient
 import typingsSlinky.antd.progressProgressMod.ProgressProps
 import typingsSlinky.antd.progressProgressMod.ProgressSize
 import typingsSlinky.antd.progressProgressMod.ProgressType
+import typingsSlinky.antd.progressProgressMod.SuccessProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -61,6 +62,8 @@ object Progress {
     def strokeWidth(value: Double): this.type = set("strokeWidth", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    @scala.inline
+    def success(value: SuccessProps): this.type = set("success", value.asInstanceOf[js.Any])
     @scala.inline
     def successPercent(value: Double): this.type = set("successPercent", value.asInstanceOf[js.Any])
     @scala.inline

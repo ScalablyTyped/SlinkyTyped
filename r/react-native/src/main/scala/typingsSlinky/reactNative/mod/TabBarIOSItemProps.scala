@@ -24,7 +24,7 @@ trait TabBarIOSItemProps extends ViewProps {
   /**
     * Background color for the badge. Available since iOS 10.
     */
-  var badgeColor: js.UndefOr[String] = js.undefined
+  var badgeColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * A custom icon for the tab. It is ignored when a system icon is defined.
     */
@@ -85,7 +85,7 @@ object TabBarIOSItemProps {
     @scala.inline
     def deleteBadge: Self = this.set("badge", js.undefined)
     @scala.inline
-    def setBadgeColor(value: String): Self = this.set("badgeColor", value.asInstanceOf[js.Any])
+    def setBadgeColor(value: ColorValue): Self = this.set("badgeColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBadgeColor: Self = this.set("badgeColor", js.undefined)
     @scala.inline

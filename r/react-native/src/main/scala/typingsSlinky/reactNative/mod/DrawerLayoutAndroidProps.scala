@@ -24,7 +24,7 @@ trait DrawerLayoutAndroidProps extends ViewProps {
     *   </DrawerLayoutAndroid>
     *);
     */
-  var drawerBackgroundColor: js.UndefOr[String] = js.undefined
+  var drawerBackgroundColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Specifies the lock mode of the drawer. The drawer can be locked
     * in 3 states:
@@ -85,7 +85,7 @@ trait DrawerLayoutAndroidProps extends ViewProps {
     * the status bar to allow it to open over the status bar. It will
     * only have an effect on API 21+.
     */
-  var statusBarBackgroundColor: js.UndefOr[String] = js.undefined
+  var statusBarBackgroundColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * The navigation view that will be rendered to the side of the
     * screen and can be pulled in.
@@ -113,7 +113,7 @@ object DrawerLayoutAndroidProps {
     @scala.inline
     def setRenderNavigationView(value: () => ReactElement): Self = this.set("renderNavigationView", js.Any.fromFunction0(value))
     @scala.inline
-    def setDrawerBackgroundColor(value: String): Self = this.set("drawerBackgroundColor", value.asInstanceOf[js.Any])
+    def setDrawerBackgroundColor(value: ColorValue): Self = this.set("drawerBackgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDrawerBackgroundColor: Self = this.set("drawerBackgroundColor", js.undefined)
     @scala.inline
@@ -149,7 +149,7 @@ object DrawerLayoutAndroidProps {
     @scala.inline
     def deleteOnDrawerStateChanged: Self = this.set("onDrawerStateChanged", js.undefined)
     @scala.inline
-    def setStatusBarBackgroundColor(value: String): Self = this.set("statusBarBackgroundColor", value.asInstanceOf[js.Any])
+    def setStatusBarBackgroundColor(value: ColorValue): Self = this.set("statusBarBackgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStatusBarBackgroundColor: Self = this.set("statusBarBackgroundColor", js.undefined)
   }

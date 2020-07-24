@@ -6,6 +6,7 @@ import scala.scalajs.js.annotation._
 
 trait PickerIOSItemProps extends js.Object {
   var label: js.UndefOr[String] = js.undefined
+  var textColor: js.UndefOr[ProcessedColorValue] = js.undefined
   var value: js.UndefOr[String | Double] = js.undefined
 }
 
@@ -30,6 +31,10 @@ object PickerIOSItemProps {
     def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)
+    @scala.inline
+    def setTextColor(value: ProcessedColorValue): Self = this.set("textColor", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTextColor: Self = this.set("textColor", js.undefined)
     @scala.inline
     def setValue(value: String | Double): Self = this.set("value", value.asInstanceOf[js.Any])
     @scala.inline

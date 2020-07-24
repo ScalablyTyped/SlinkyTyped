@@ -9,6 +9,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
@@ -90,13 +91,13 @@ object Slider {
     @scala.inline
     def maximumTrackImage(value: ImageURISource): this.type = set("maximumTrackImage", value.asInstanceOf[js.Any])
     @scala.inline
-    def maximumTrackTintColor(value: String): this.type = set("maximumTrackTintColor", value.asInstanceOf[js.Any])
+    def maximumTrackTintColor(value: ColorValue): this.type = set("maximumTrackTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def maximumValue(value: Double): this.type = set("maximumValue", value.asInstanceOf[js.Any])
     @scala.inline
     def minimumTrackImage(value: ImageURISource): this.type = set("minimumTrackImage", value.asInstanceOf[js.Any])
     @scala.inline
-    def minimumTrackTintColor(value: String): this.type = set("minimumTrackTintColor", value.asInstanceOf[js.Any])
+    def minimumTrackTintColor(value: ColorValue): this.type = set("minimumTrackTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def minimumValue(value: Double): this.type = set("minimumValue", value.asInstanceOf[js.Any])
     @scala.inline
@@ -170,7 +171,7 @@ object Slider {
     @scala.inline
     def thumbImage(value: ImageURISource): this.type = set("thumbImage", value.asInstanceOf[js.Any])
     @scala.inline
-    def thumbTintColor(value: String): this.type = set("thumbTintColor", value.asInstanceOf[js.Any])
+    def thumbTintColor(value: ColorValue): this.type = set("thumbTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def trackImage(value: ImageURISource): this.type = set("trackImage", value.asInstanceOf[js.Any])
     @scala.inline

@@ -8,7 +8,7 @@ trait RefreshControlPropsAndroid extends ViewProps {
   /**
     * The colors (at least one) that will be used to draw the refresh indicator.
     */
-  var colors: js.UndefOr[js.Array[String]] = js.undefined
+  var colors: js.UndefOr[js.Array[ColorValue]] = js.undefined
   /**
     * Whether the pull to refresh functionality is enabled.
     */
@@ -16,7 +16,7 @@ trait RefreshControlPropsAndroid extends ViewProps {
   /**
     * The background color of the refresh indicator.
     */
-  var progressBackgroundColor: js.UndefOr[String] = js.undefined
+  var progressBackgroundColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Progress view top offset
     * @platform android
@@ -46,9 +46,9 @@ object RefreshControlPropsAndroid {
         x
     }
     @scala.inline
-    def setColorsVarargs(value: String*): Self = this.set("colors", js.Array(value :_*))
+    def setColorsVarargs(value: ColorValue*): Self = this.set("colors", js.Array(value :_*))
     @scala.inline
-    def setColors(value: js.Array[String]): Self = this.set("colors", value.asInstanceOf[js.Any])
+    def setColors(value: js.Array[ColorValue]): Self = this.set("colors", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColors: Self = this.set("colors", js.undefined)
     @scala.inline
@@ -56,7 +56,7 @@ object RefreshControlPropsAndroid {
     @scala.inline
     def deleteEnabled: Self = this.set("enabled", js.undefined)
     @scala.inline
-    def setProgressBackgroundColor(value: String): Self = this.set("progressBackgroundColor", value.asInstanceOf[js.Any])
+    def setProgressBackgroundColor(value: ColorValue): Self = this.set("progressBackgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteProgressBackgroundColor: Self = this.set("progressBackgroundColor", js.undefined)
     @scala.inline

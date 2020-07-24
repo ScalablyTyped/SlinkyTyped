@@ -28,6 +28,8 @@ object Dropdown {
     @scala.inline
     def align(value: Align): this.type = set("align", value.asInstanceOf[js.Any])
     @scala.inline
+    def arrow(value: Boolean): this.type = set("arrow", value.asInstanceOf[js.Any])
+    @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline
     def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])

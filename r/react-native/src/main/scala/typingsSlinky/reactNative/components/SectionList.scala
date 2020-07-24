@@ -16,6 +16,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeScrollEvent
@@ -197,7 +198,7 @@ object SectionList {
     @scala.inline
     def disableVirtualization(value: Boolean): this.type = set("disableVirtualization", value.asInstanceOf[js.Any])
     @scala.inline
-    def endFillColor(value: String): this.type = set("endFillColor", value.asInstanceOf[js.Any])
+    def endFillColor(value: ColorValue): this.type = set("endFillColor", value.asInstanceOf[js.Any])
     @scala.inline
     def extraData(value: js.Any): this.type = set("extraData", value.asInstanceOf[js.Any])
     @scala.inline

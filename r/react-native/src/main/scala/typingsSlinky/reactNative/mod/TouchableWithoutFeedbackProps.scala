@@ -7,7 +7,8 @@ import scala.scalajs.js.annotation._
 
 trait TouchableWithoutFeedbackProps
   extends AccessibilityProps
-     with TouchableWithoutFeedbackPropsIOS {
+     with TouchableWithoutFeedbackPropsIOS
+     with TouchableWithoutFeedbackPropsAndroid {
   /**
     * Delay in ms, from onPressIn, before onLongPress is called.
     */
@@ -23,7 +24,7 @@ trait TouchableWithoutFeedbackProps
   /**
     * If true, disable all interactions for this component.
     */
-  var disabled: js.UndefOr[Boolean] = js.undefined
+  var disabled: js.UndefOr[Boolean | Null] = js.undefined
   /**
     * This defines how far your touch can start away from the button.
     * This is added to pressRetentionOffset when moving off of the button.
@@ -109,6 +110,8 @@ object TouchableWithoutFeedbackProps {
     def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
+    @scala.inline
+    def setDisabledNull: Self = this.set("disabled", null)
     @scala.inline
     def setHitSlop(value: Insets): Self = this.set("hitSlop", value.asInstanceOf[js.Any])
     @scala.inline

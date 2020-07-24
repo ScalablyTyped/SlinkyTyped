@@ -99,14 +99,16 @@ package object styledComponentsMod {
     P, 
     typingsSlinky.styledComponents.styledComponentsMod.AnyIfEmpty[typingsSlinky.styledComponents.styledComponentsMod.DefaultTheme]
   ]
-  type StylisPlugin = js.Function7[
+  type StylisPlugin = js.Function9[
     /* context */ scala.Double, 
+    /* content */ java.lang.String, 
     /* selector */ js.Array[java.lang.String], 
     /* parent */ js.Array[java.lang.String], 
-    /* content */ java.lang.String, 
     /* line */ scala.Double, 
     /* column */ scala.Double, 
     /* length */ scala.Double, 
+    /* at */ scala.Double, 
+    /* depth */ scala.Double, 
     java.lang.String | scala.Unit
   ]
   type ThemeProviderComponent[T /* <: js.Object */, U /* <: js.Object */] = slinky.core.ReactComponentClass[

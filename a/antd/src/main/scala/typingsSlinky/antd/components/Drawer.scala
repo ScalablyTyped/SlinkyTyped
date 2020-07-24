@@ -32,6 +32,10 @@ object Drawer {
     @scala.inline
     def closable(value: Boolean): this.type = set("closable", value.asInstanceOf[js.Any])
     @scala.inline
+    def closeIconReactElement(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def closeIcon(value: ReactElement): this.type = set("closeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
     def destroyOnClose(value: Boolean): this.type = set("destroyOnClose", value.asInstanceOf[js.Any])
     @scala.inline
     def drawerStyle(value: CSSProperties): this.type = set("drawerStyle", value.asInstanceOf[js.Any])

@@ -174,7 +174,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
     * the duplicate elements are put into the exit selection; if multiple data have the same key, the duplicate data are put into the enter selection.
     */
   def data[NewDatum](data: js.Array[NewDatum]): Selection_[GElement, NewDatum, PElement, PDatum] = js.native
-  def data[NewDatum](data: js.Array[NewDatum], key: ValueFn[GElement | PElement, Datum | NewDatum, String]): Selection_[GElement, NewDatum, PElement, PDatum] = js.native
+  def data[NewDatum](data: js.Array[NewDatum], key: ValueFn[GElement | PElement, Datum | NewDatum, KeyType]): Selection_[GElement, NewDatum, PElement, PDatum] = js.native
   /**
     * Joins the data returned by the specified value function with the selected elements, returning a new selection that it represents
     * the update selection: the elements successfully bound to data. Also defines the enter and exit selections on
@@ -210,7 +210,7 @@ trait Selection_[GElement /* <: BaseType */, Datum, PElement /* <: BaseType */, 
   def data[NewDatum](data: ValueFn[PElement, PDatum, js.Array[NewDatum]]): Selection_[GElement, NewDatum, PElement, PDatum] = js.native
   def data[NewDatum](
     data: ValueFn[PElement, PDatum, js.Array[NewDatum]],
-    key: ValueFn[GElement | PElement, Datum | NewDatum, String]
+    key: ValueFn[GElement | PElement, Datum | NewDatum, KeyType]
   ): Selection_[GElement, NewDatum, PElement, PDatum] = js.native
   // Data Join ---------------------------------
   /**

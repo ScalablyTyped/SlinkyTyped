@@ -9,6 +9,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeSegmentedControlIOSChangeEvent
@@ -158,7 +159,7 @@ object SegmentedControlIOS {
     @scala.inline
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
     @scala.inline
-    def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
+    def tintColor(value: ColorValue): this.type = set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def tvParallaxMagnification(value: Double): this.type = set("tvParallaxMagnification", value.asInstanceOf[js.Any])
     @scala.inline

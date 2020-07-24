@@ -10,7 +10,7 @@ trait ActionSheetIOSOptions extends js.Object {
   var destructiveButtonIndex: js.UndefOr[Double] = js.undefined
   var message: js.UndefOr[String] = js.undefined
   var options: js.Array[String]
-  var tintColor: js.UndefOr[String] = js.undefined
+  var tintColor: js.UndefOr[ColorValue | ProcessedColorValue] = js.undefined
   var title: js.UndefOr[String] = js.undefined
 }
 
@@ -52,7 +52,7 @@ object ActionSheetIOSOptions {
     @scala.inline
     def deleteMessage: Self = this.set("message", js.undefined)
     @scala.inline
-    def setTintColor(value: String): Self = this.set("tintColor", value.asInstanceOf[js.Any])
+    def setTintColor(value: ColorValue | ProcessedColorValue): Self = this.set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTintColor: Self = this.set("tintColor", js.undefined)
     @scala.inline

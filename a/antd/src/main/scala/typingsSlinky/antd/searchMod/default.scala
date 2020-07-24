@@ -9,5 +9,8 @@ import scala.scalajs.js.annotation._
 
 @JSImport("antd/lib/input/Search", JSImport.Default)
 @js.native
-object default extends TopLevel[ForwardRefExoticComponent[SearchProps with RefAttributes[_]]]
+object default
+  extends TopLevel[
+      ForwardRefExoticComponent[SearchProps with RefAttributes[typingsSlinky.antd.inputInputMod.default]]
+    ]
 

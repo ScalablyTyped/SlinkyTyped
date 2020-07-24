@@ -140,6 +140,8 @@ object PickerPanel {
       @scala.inline
       def renderExtraFooter(value: /* mode */ PanelMode => ReactElement): this.type = set("renderExtraFooter", js.Any.fromFunction1(value))
       @scala.inline
+      def showNow(value: Boolean): this.type = set("showNow", value.asInstanceOf[js.Any])
+      @scala.inline
       def showTime(value: Boolean | SharedTimeProps[DateType]): this.type = set("showTime", value.asInstanceOf[js.Any])
       @scala.inline
       def showToday(value: Boolean): this.type = set("showToday", value.asInstanceOf[js.Any])
@@ -228,6 +230,8 @@ object PickerPanel {
       def showHour(value: Boolean): this.type = set("showHour", value.asInstanceOf[js.Any])
       @scala.inline
       def showMinute(value: Boolean): this.type = set("showMinute", value.asInstanceOf[js.Any])
+      @scala.inline
+      def showNow(value: Boolean): this.type = set("showNow", value.asInstanceOf[js.Any])
       @scala.inline
       def showSecond(value: Boolean): this.type = set("showSecond", value.asInstanceOf[js.Any])
       @scala.inline

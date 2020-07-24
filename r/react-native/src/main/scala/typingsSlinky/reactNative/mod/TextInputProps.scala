@@ -152,13 +152,20 @@ trait TextInputProps
     */
   var onSubmitEditing: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TextInputSubmitEditingEventData], Unit]] = js.undefined
   /**
+    * Callback that is called on new text input with the argument
+    *  `{ nativeEvent: { text, previousText, range: { start, end } } }`.
+    *
+    * This prop requires multiline={true} to be set.
+    */
+  var onTextInput: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, TextInputTextInputEventData], Unit]] = js.undefined
+  /**
     * The string that will be rendered before text input has been entered
     */
   var placeholder: js.UndefOr[String] = js.undefined
   /**
     * The text color of the placeholder string
     */
-  var placeholderTextColor: js.UndefOr[String] = js.undefined
+  var placeholderTextColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * enum('default', 'go', 'google', 'join', 'next', 'route', 'search', 'send', 'yahoo', 'done', 'emergency-call')
     * Determines how the return key should look.
@@ -181,7 +188,7 @@ trait TextInputProps
   /**
     * The highlight (and cursor on ios) color of the text input
     */
-  var selectionColor: js.UndefOr[String] = js.undefined
+  var selectionColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Styles
     */
@@ -313,11 +320,15 @@ object TextInputProps {
     @scala.inline
     def deleteOnSubmitEditing: Self = this.set("onSubmitEditing", js.undefined)
     @scala.inline
+    def setOnTextInput(value: SyntheticEvent[NodeHandle, TextInputTextInputEventData] => Unit): Self = this.set("onTextInput", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnTextInput: Self = this.set("onTextInput", js.undefined)
+    @scala.inline
     def setPlaceholder(value: String): Self = this.set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePlaceholder: Self = this.set("placeholder", js.undefined)
     @scala.inline
-    def setPlaceholderTextColor(value: String): Self = this.set("placeholderTextColor", value.asInstanceOf[js.Any])
+    def setPlaceholderTextColor(value: ColorValue): Self = this.set("placeholderTextColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePlaceholderTextColor: Self = this.set("placeholderTextColor", js.undefined)
     @scala.inline
@@ -337,7 +348,7 @@ object TextInputProps {
     @scala.inline
     def deleteSelection: Self = this.set("selection", js.undefined)
     @scala.inline
-    def setSelectionColor(value: String): Self = this.set("selectionColor", value.asInstanceOf[js.Any])
+    def setSelectionColor(value: ColorValue): Self = this.set("selectionColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSelectionColor: Self = this.set("selectionColor", js.undefined)
     @scala.inline

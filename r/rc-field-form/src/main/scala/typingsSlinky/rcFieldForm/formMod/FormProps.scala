@@ -25,6 +25,7 @@ trait FormProps extends BaseFormProps {
   var onFinish: js.UndefOr[js.Function1[/* values */ Store, Unit]] = js.undefined
   var onFinishFailed: js.UndefOr[js.Function1[/* errorInfo */ ValidateErrorEntity, Unit]] = js.undefined
   var onValuesChange: js.UndefOr[js.Function2[/* changedValues */ Store, /* values */ Store, Unit]] = js.undefined
+  var preserve: js.UndefOr[Boolean] = js.undefined
   var validateMessages: js.UndefOr[ValidateMessages] = js.undefined
   var validateTrigger: js.UndefOr[String | js.Array[String] | `false`] = js.undefined
 }
@@ -92,6 +93,10 @@ object FormProps {
     def setOnValuesChange(value: (/* changedValues */ Store, /* values */ Store) => Unit): Self = this.set("onValuesChange", js.Any.fromFunction2(value))
     @scala.inline
     def deleteOnValuesChange: Self = this.set("onValuesChange", js.undefined)
+    @scala.inline
+    def setPreserve(value: Boolean): Self = this.set("preserve", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePreserve: Self = this.set("preserve", js.undefined)
     @scala.inline
     def setValidateMessages(value: ValidateMessages): Self = this.set("validateMessages", value.asInstanceOf[js.Any])
     @scala.inline

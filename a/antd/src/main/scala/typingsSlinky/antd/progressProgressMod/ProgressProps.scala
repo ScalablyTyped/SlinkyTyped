@@ -38,6 +38,8 @@ trait ProgressProps extends js.Object {
   var strokeLinecap: js.UndefOr[butt | square | round] = js.undefined
   var strokeWidth: js.UndefOr[Double] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
+  var success: js.UndefOr[SuccessProps] = js.undefined
+  /** @deprecated Use `success` instead */
   var successPercent: js.UndefOr[Double] = js.undefined
   var trailColor: js.UndefOr[String] = js.undefined
   var `type`: js.UndefOr[ProgressType] = js.undefined
@@ -117,6 +119,10 @@ object ProgressProps {
     def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
+    @scala.inline
+    def setSuccess(value: SuccessProps): Self = this.set("success", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSuccess: Self = this.set("success", js.undefined)
     @scala.inline
     def setSuccessPercent(value: Double): Self = this.set("successPercent", value.asInstanceOf[js.Any])
     @scala.inline

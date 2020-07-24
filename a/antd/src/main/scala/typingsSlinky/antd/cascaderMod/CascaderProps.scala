@@ -31,6 +31,8 @@ trait CascaderProps extends js.Object {
       ReactElement
     ]
   ] = js.undefined
+  var dropdownRender: js.UndefOr[js.Function1[/* menus */ ReactElement, ReactElement]] = js.undefined
+  var expandIcon: js.UndefOr[ReactElement] = js.undefined
   /** 次级菜单的展开方式，可选 'click' 和 'hover' */
   var expandTrigger: js.UndefOr[CascaderExpandTrigger] = js.undefined
   /** use this after antd@3.7.0 */
@@ -128,6 +130,16 @@ object CascaderProps {
     ): Self = this.set("displayRender", js.Any.fromFunction2(value))
     @scala.inline
     def deleteDisplayRender: Self = this.set("displayRender", js.undefined)
+    @scala.inline
+    def setDropdownRender(value: /* menus */ ReactElement => ReactElement): Self = this.set("dropdownRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteDropdownRender: Self = this.set("dropdownRender", js.undefined)
+    @scala.inline
+    def setExpandIconReactElement(value: ReactElement): Self = this.set("expandIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExpandIcon(value: ReactElement): Self = this.set("expandIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExpandIcon: Self = this.set("expandIcon", js.undefined)
     @scala.inline
     def setExpandTrigger(value: CascaderExpandTrigger): Self = this.set("expandTrigger", value.asInstanceOf[js.Any])
     @scala.inline

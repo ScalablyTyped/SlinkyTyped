@@ -12,6 +12,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.DataDetectorTypes
 import typingsSlinky.reactNative.mod.DocumentSelectionState
 import typingsSlinky.reactNative.mod.KeyboardTypeOptions
@@ -30,6 +31,7 @@ import typingsSlinky.reactNative.mod.TextInputProperties
 import typingsSlinky.reactNative.mod.TextInputScrollEventData
 import typingsSlinky.reactNative.mod.TextInputSelectionChangeEventData
 import typingsSlinky.reactNative.mod.TextInputSubmitEditingEventData
+import typingsSlinky.reactNative.mod.TextInputTextInputEventData
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.reactNativeStrings.URL
 import typingsSlinky.reactNative.reactNativeStrings.`box-none`
@@ -286,6 +288,8 @@ object TextInput {
     @scala.inline
     def onSubmitEditing(value: SyntheticEvent[NodeHandle, TextInputSubmitEditingEventData] => Unit): this.type = set("onSubmitEditing", js.Any.fromFunction1(value))
     @scala.inline
+    def onTextInput(value: SyntheticEvent[NodeHandle, TextInputTextInputEventData] => Unit): this.type = set("onTextInput", js.Any.fromFunction1(value))
+    @scala.inline
     def onTouchCancel(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
     @scala.inline
     def onTouchEnd(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))
@@ -302,7 +306,7 @@ object TextInput {
     @scala.inline
     def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline
-    def placeholderTextColor(value: String): this.type = set("placeholderTextColor", value.asInstanceOf[js.Any])
+    def placeholderTextColor(value: ColorValue): this.type = set("placeholderTextColor", value.asInstanceOf[js.Any])
     @scala.inline
     def pointerEvents(value: `box-none` | none | `box-only` | auto): this.type = set("pointerEvents", value.asInstanceOf[js.Any])
     @scala.inline
@@ -326,7 +330,7 @@ object TextInput {
     @scala.inline
     def selection(value: Start): this.type = set("selection", value.asInstanceOf[js.Any])
     @scala.inline
-    def selectionColor(value: String): this.type = set("selectionColor", value.asInstanceOf[js.Any])
+    def selectionColor(value: ColorValue): this.type = set("selectionColor", value.asInstanceOf[js.Any])
     @scala.inline
     def selectionState(value: DocumentSelectionState): this.type = set("selectionState", value.asInstanceOf[js.Any])
     @scala.inline
@@ -374,7 +378,7 @@ object TextInput {
     @scala.inline
     def tvParallaxTiltAngle(value: Double): this.type = set("tvParallaxTiltAngle", value.asInstanceOf[js.Any])
     @scala.inline
-    def underlineColorAndroid(value: String): this.type = set("underlineColorAndroid", value.asInstanceOf[js.Any])
+    def underlineColorAndroid(value: ColorValue): this.type = set("underlineColorAndroid", value.asInstanceOf[js.Any])
     @scala.inline
     def value(value: String): this.type = set("value", value.asInstanceOf[js.Any])
     @scala.inline

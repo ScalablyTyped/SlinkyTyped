@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 
 trait ButtonProps extends js.Object {
   var accessibilityLabel: js.UndefOr[String] = js.undefined
-  var color: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[ColorValue] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
   /**
     * Used to locate this button in end-to-end tests.
@@ -43,7 +43,7 @@ object ButtonProps {
     @scala.inline
     def deleteAccessibilityLabel: Self = this.set("accessibilityLabel", js.undefined)
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: ColorValue): Self = this.set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
     @scala.inline

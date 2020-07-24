@@ -9,6 +9,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
@@ -125,7 +126,7 @@ object SwitchIOS {
     @scala.inline
     def onStartShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onStartShouldSetResponderCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onTintColor(value: String): this.type = set("onTintColor", value.asInstanceOf[js.Any])
+    def onTintColor(value: ColorValue): this.type = set("onTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def onTouchCancel(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
     @scala.inline
@@ -153,9 +154,9 @@ object SwitchIOS {
     @scala.inline
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
     @scala.inline
-    def thumbTintColor(value: String): this.type = set("thumbTintColor", value.asInstanceOf[js.Any])
+    def thumbTintColor(value: ColorValue): this.type = set("thumbTintColor", value.asInstanceOf[js.Any])
     @scala.inline
-    def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
+    def tintColor(value: ColorValue): this.type = set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def tvParallaxMagnification(value: Double): this.type = set("tvParallaxMagnification", value.asInstanceOf[js.Any])
     @scala.inline

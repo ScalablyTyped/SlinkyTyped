@@ -1,11 +1,13 @@
 package typingsSlinky.rcMenu.legacyUtilMod
 
+import typingsSlinky.rcMenu.anon.PartialkeyinMenuModeother
 import typingsSlinky.rcMenu.interfaceMod.OpenAnimation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait GetMotionProps extends js.Object {
+  var defaultMotions: js.UndefOr[PartialkeyinMenuModeother] = js.undefined
   var motion: js.UndefOr[
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
   ] = js.undefined
@@ -33,6 +35,10 @@ object GetMotionProps {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setDefaultMotions(value: PartialkeyinMenuModeother): Self = this.set("defaultMotions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultMotions: Self = this.set("defaultMotions", js.undefined)
     @scala.inline
     def setMotion(
       value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any

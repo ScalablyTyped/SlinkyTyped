@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "serve-static"
-version := "1.13-dt-20200519Z-18ad07"
+version := "1.13-dt-20200519Z-56a083"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200515Z-16684b",
-  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20200515Z-093ccf",
-  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200609Z-439deb",
+  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200722Z-28b253",
+  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20200722Z-699d00",
+  "org.scalablytyped.slinky" %%% "node" % "14.0-dt-20200724Z-051843",
   "org.scalablytyped.slinky" %%% "qs" % "6.9-dt-20200519Z-ad8cdd",
   "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-c86e67",
   "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")

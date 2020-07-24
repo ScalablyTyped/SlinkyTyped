@@ -8,6 +8,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.node.nodeStrings.rsa
   - typingsSlinky.node.nodeStrings.dsa
   - typingsSlinky.node.nodeStrings.ec
+  - typingsSlinky.node.nodeStrings.ed25519
 */
 trait KeyType extends js.Object
 
@@ -16,6 +17,8 @@ object KeyType {
   def dsa: typingsSlinky.node.nodeStrings.dsa = "dsa".asInstanceOf[typingsSlinky.node.nodeStrings.dsa]
   @scala.inline
   def ec: typingsSlinky.node.nodeStrings.ec = "ec".asInstanceOf[typingsSlinky.node.nodeStrings.ec]
+  @scala.inline
+  def ed25519: typingsSlinky.node.nodeStrings.ed25519 = "ed25519".asInstanceOf[typingsSlinky.node.nodeStrings.ed25519]
   @scala.inline
   def rsa: typingsSlinky.node.nodeStrings.rsa = "rsa".asInstanceOf[typingsSlinky.node.nodeStrings.rsa]
 }

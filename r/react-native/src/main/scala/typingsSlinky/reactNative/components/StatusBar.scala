@@ -2,6 +2,7 @@ package typingsSlinky.reactNative.components
 
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.StatusBarProps
 import typingsSlinky.reactNative.mod.StatusBarStyle
 import typingsSlinky.reactNative.reactNativeStrings.fade
@@ -22,7 +23,7 @@ object StatusBar {
     @scala.inline
     def animated(value: Boolean): this.type = set("animated", value.asInstanceOf[js.Any])
     @scala.inline
-    def backgroundColor(value: String): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
+    def backgroundColor(value: ColorValue): this.type = set("backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def barStyle(value: StatusBarStyle): this.type = set("barStyle", value.asInstanceOf[js.Any])
     @scala.inline

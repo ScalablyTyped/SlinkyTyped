@@ -75,5 +75,37 @@ object mergeMapMod extends js.Object {
     ],
     concurrent: Double
   ): OperatorFunction[T, R] = js.native
+  @js.native
+  object flatMap extends js.Object {
+    def apply[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
+    def apply[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O], concurrent: Double): OperatorFunction[T, ObservedValueOf[O]] = js.native
+    def apply[T, O /* <: ObservableInput[_] */](
+      project: js.Function2[/* value */ T, /* index */ Double, O],
+      resultSelector: js.UndefOr[scala.Nothing],
+      concurrent: Double
+    ): OperatorFunction[T, ObservedValueOf[O]] = js.native
+    def apply[T, R, O /* <: ObservableInput[_] */](
+      project: js.Function2[/* value */ T, /* index */ Double, O],
+      resultSelector: js.Function4[
+          /* outerValue */ T, 
+          /* innerValue */ ObservedValueOf[O], 
+          /* outerIndex */ Double, 
+          /* innerIndex */ Double, 
+          R
+        ]
+    ): OperatorFunction[T, R] = js.native
+    def apply[T, R, O /* <: ObservableInput[_] */](
+      project: js.Function2[/* value */ T, /* index */ Double, O],
+      resultSelector: js.Function4[
+          /* outerValue */ T, 
+          /* innerValue */ ObservedValueOf[O], 
+          /* outerIndex */ Double, 
+          /* innerIndex */ Double, 
+          R
+        ],
+      concurrent: Double
+    ): OperatorFunction[T, R] = js.native
+  }
+  
 }
 

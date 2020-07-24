@@ -167,6 +167,7 @@ trait TimePickerProps extends js.Object {
   var secondStep: js.UndefOr[Double] = js.undefined
   var showHour: js.UndefOr[Boolean] = js.undefined
   var showMinute: js.UndefOr[Boolean] = js.undefined
+  var showNow: js.UndefOr[Boolean] = js.undefined
   var showSecond: js.UndefOr[Boolean] = js.undefined
   var size: js.UndefOr[SizeType] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
@@ -612,6 +613,10 @@ object TimePickerProps {
     def setShowMinute(value: Boolean): Self = this.set("showMinute", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteShowMinute: Self = this.set("showMinute", js.undefined)
+    @scala.inline
+    def setShowNow(value: Boolean): Self = this.set("showNow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowNow: Self = this.set("showNow", js.undefined)
     @scala.inline
     def setShowSecond(value: Boolean): Self = this.set("showSecond", value.asInstanceOf[js.Any])
     @scala.inline

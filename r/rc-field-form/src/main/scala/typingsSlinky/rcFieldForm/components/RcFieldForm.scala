@@ -443,6 +443,8 @@ object RcFieldForm {
     @scala.inline
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
+    def preserve(value: Boolean): this.type = set("preserve", value.asInstanceOf[js.Any])
+    @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
     @scala.inline
     def radioGroup(value: String): this.type = set("radioGroup", value.asInstanceOf[js.Any])

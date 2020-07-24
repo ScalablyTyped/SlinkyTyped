@@ -26,6 +26,7 @@ trait RcFieldProps extends js.Object {
     js.Function3[/* value */ StoreValue, /* prevValue */ StoreValue, /* allValues */ Store, StoreValue]
   ] = js.undefined
   var onReset: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var preserve: js.UndefOr[Boolean] = js.undefined
   var rules: js.UndefOr[js.Array[Rule]] = js.undefined
   var shouldUpdate: js.UndefOr[ShouldUpdate] = js.undefined
   var trigger: js.UndefOr[String] = js.undefined
@@ -91,6 +92,10 @@ object RcFieldProps {
     def setOnReset(value: () => Unit): Self = this.set("onReset", js.Any.fromFunction0(value))
     @scala.inline
     def deleteOnReset: Self = this.set("onReset", js.undefined)
+    @scala.inline
+    def setPreserve(value: Boolean): Self = this.set("preserve", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePreserve: Self = this.set("preserve", js.undefined)
     @scala.inline
     def setRulesVarargs(value: Rule*): Self = this.set("rules", js.Array(value :_*))
     @scala.inline

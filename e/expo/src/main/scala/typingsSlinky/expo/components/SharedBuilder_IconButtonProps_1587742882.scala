@@ -10,6 +10,7 @@ import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.BackgroundPropType
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
@@ -96,6 +97,8 @@ class SharedBuilder_IconButtonProps_1587742882[R <: js.Object] (val args: js.Arr
   @scala.inline
   def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
   @scala.inline
+  def disabledNull: this.type = set("disabled", null)
+  @scala.inline
   def ellipsizeMode(value: head | middle | tail | clip): this.type = set("ellipsizeMode", value.asInstanceOf[js.Any])
   @scala.inline
   def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
@@ -148,7 +151,7 @@ class SharedBuilder_IconButtonProps_1587742882[R <: js.Object] (val args: js.Arr
   @scala.inline
   def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
   @scala.inline
-  def selectionColor(value: String): this.type = set("selectionColor", value.asInstanceOf[js.Any])
+  def selectionColor(value: ColorValue): this.type = set("selectionColor", value.asInstanceOf[js.Any])
   @scala.inline
   def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
   @scala.inline
@@ -160,9 +163,13 @@ class SharedBuilder_IconButtonProps_1587742882[R <: js.Object] (val args: js.Arr
   @scala.inline
   def textBreakStrategy(value: simple | highQuality | balanced): this.type = set("textBreakStrategy", value.asInstanceOf[js.Any])
   @scala.inline
+  def touchSoundDisabled(value: Boolean): this.type = set("touchSoundDisabled", value.asInstanceOf[js.Any])
+  @scala.inline
+  def touchSoundDisabledNull: this.type = set("touchSoundDisabled", null)
+  @scala.inline
   def tvParallaxProperties(value: TVParallaxProperties): this.type = set("tvParallaxProperties", value.asInstanceOf[js.Any])
   @scala.inline
-  def underlayColor(value: String): this.type = set("underlayColor", value.asInstanceOf[js.Any])
+  def underlayColor(value: ColorValue): this.type = set("underlayColor", value.asInstanceOf[js.Any])
   @scala.inline
   def useForeground(value: Boolean): this.type = set("useForeground", value.asInstanceOf[js.Any])
 }

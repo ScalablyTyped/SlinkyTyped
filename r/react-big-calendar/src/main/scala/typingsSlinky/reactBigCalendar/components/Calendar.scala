@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.reactBigCalendar.anon.Accessors
 import typingsSlinky.reactBigCalendar.anon.Action
@@ -164,6 +165,8 @@ object Calendar {
     def startAccessor(value: (/* keyof TEvent */ String) | (js.Function1[TEvent, js.Date])): this.type = set("startAccessor", value.asInstanceOf[js.Any])
     @scala.inline
     def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
+    @scala.inline
+    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline
     def timeslots(value: Double): this.type = set("timeslots", value.asInstanceOf[js.Any])
     @scala.inline

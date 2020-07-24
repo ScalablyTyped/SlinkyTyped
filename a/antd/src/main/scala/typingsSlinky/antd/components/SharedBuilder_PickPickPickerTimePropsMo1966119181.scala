@@ -270,6 +270,8 @@ class SharedBuilder_PickPickPickerTimePropsMo1966119181 (val args: js.Array[js.A
   @scala.inline
   def showMinute(value: Boolean): this.type = set("showMinute", value.asInstanceOf[js.Any])
   @scala.inline
+  def showNow(value: Boolean): this.type = set("showNow", value.asInstanceOf[js.Any])
+  @scala.inline
   def showSecond(value: Boolean): this.type = set("showSecond", value.asInstanceOf[js.Any])
   @scala.inline
   def size(value: SizeType): this.type = set("size", value.asInstanceOf[js.Any])

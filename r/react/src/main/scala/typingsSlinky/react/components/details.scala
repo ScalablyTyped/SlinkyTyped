@@ -370,6 +370,8 @@ object details {
     @scala.inline
     def onTimeUpdate(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onTimeUpdate", js.Any.fromFunction1(value))
     @scala.inline
+    def onToggle(value: SyntheticEvent[Event, HTMLElement] => Unit): this.type = set("onToggle", js.Any.fromFunction1(value))
+    @scala.inline
     def onTouchCancel(value: SyntheticTouchEvent[HTMLElement] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
     @scala.inline
     def onTouchEnd(value: SyntheticTouchEvent[HTMLElement] => Unit): this.type = set("onTouchEnd", js.Any.fromFunction1(value))

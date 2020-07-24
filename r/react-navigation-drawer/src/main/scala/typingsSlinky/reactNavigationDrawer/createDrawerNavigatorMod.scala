@@ -1,9 +1,12 @@
 package typingsSlinky.reactNavigationDrawer
 
 import typingsSlinky.reactNavigation.mod.CreateNavigatorConfig
+import typingsSlinky.reactNavigation.mod.NavigationNavigator
 import typingsSlinky.reactNavigation.mod.NavigationParams
+import typingsSlinky.reactNavigation.mod.NavigationProp
 import typingsSlinky.reactNavigation.mod.NavigationRoute
 import typingsSlinky.reactNavigation.mod.NavigationRouteConfigMap
+import typingsSlinky.reactNavigation.mod.NavigationState
 import typingsSlinky.reactNavigationDrawer.typesMod.NavigationDrawerConfig
 import typingsSlinky.reactNavigationDrawer.typesMod.NavigationDrawerOptions
 import typingsSlinky.reactNavigationDrawer.typesMod.NavigationDrawerProp
@@ -21,7 +24,7 @@ object createDrawerNavigatorMod extends js.Object {
       NavigationDrawerProp[NavigationRoute[NavigationParams], _], 
       _
     ]
-  ): js.Any = js.native
+  ): NavigationNavigator[_, NavigationProp[NavigationState]] = js.native
   def default(
     routeConfigs: NavigationRouteConfigMap[
       NavigationDrawerOptions, 
@@ -34,6 +37,6 @@ object createDrawerNavigatorMod extends js.Object {
       NavigationDrawerOptions, 
       NavigationDrawerProp[NavigationRoute[NavigationParams], _]
     ]
-  ): js.Any = js.native
+  ): NavigationNavigator[_, NavigationProp[NavigationState]] = js.native
 }
 

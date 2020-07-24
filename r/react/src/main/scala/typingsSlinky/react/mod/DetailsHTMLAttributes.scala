@@ -1,10 +1,12 @@
 package typingsSlinky.react.mod
 
+import org.scalajs.dom.raw.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait DetailsHTMLAttributes[T] extends HTMLAttributes[T] {
+  var onToggle: js.UndefOr[ReactEventHandler[T]] = js.undefined
   var open: js.UndefOr[Boolean] = js.undefined
 }
 
@@ -25,6 +27,10 @@ object DetailsHTMLAttributes {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setOnToggle(value: slinky.core.SyntheticEvent[Event, T] => Unit): Self = this.set("onToggle", js.Any.fromFunction1(value))
+    @scala.inline
+    def deleteOnToggle: Self = this.set("onToggle", js.undefined)
     @scala.inline
     def setOpen(value: Boolean): Self = this.set("open", value.asInstanceOf[js.Any])
     @scala.inline

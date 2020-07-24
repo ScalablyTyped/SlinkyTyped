@@ -1,12 +1,15 @@
 package typingsSlinky.antd.baseMod
 
+import slinky.core.facade.ReactElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait CopyConfig extends js.Object {
+  var icon: js.UndefOr[ReactElement] = js.undefined
   var onCopy: js.UndefOr[js.Function0[Unit]] = js.undefined
   var text: js.UndefOr[String] = js.undefined
+  var tooltips: js.UndefOr[js.Tuple2[ReactElement, ReactElement]] = js.undefined
 }
 
 object CopyConfig {
@@ -27,6 +30,12 @@ object CopyConfig {
         x
     }
     @scala.inline
+    def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    @scala.inline
     def setOnCopy(value: () => Unit): Self = this.set("onCopy", js.Any.fromFunction0(value))
     @scala.inline
     def deleteOnCopy: Self = this.set("onCopy", js.undefined)
@@ -34,6 +43,10 @@ object CopyConfig {
     def setText(value: String): Self = this.set("text", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteText: Self = this.set("text", js.undefined)
+    @scala.inline
+    def setTooltips(value: js.Tuple2[ReactElement, ReactElement]): Self = this.set("tooltips", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTooltips: Self = this.set("tooltips", js.undefined)
   }
   
 }

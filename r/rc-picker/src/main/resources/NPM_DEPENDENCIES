@@ -1,12 +1,12 @@
 {
   "compile-dependencies" : [
     {
-      "rc-picker" : "1.6.4"
+      "rc-picker" : "1.10.7"
     }
   ],
   "test-dependencies" : [
     {
-      "rc-picker" : "1.6.4"
+      "rc-picker" : "1.10.7"
     }
   ],
   "compile-devDependencies" : [

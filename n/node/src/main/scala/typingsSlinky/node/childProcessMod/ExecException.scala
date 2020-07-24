@@ -1,6 +1,6 @@
 package typingsSlinky.node.childProcessMod
 
-import typingsSlinky.node.NodeJS.Signals
+import typingsSlinky.node.processMod.global.NodeJS.Signals
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`

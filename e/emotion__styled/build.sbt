@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "emotion__styled"
-version := "10.0.23-26b4fc"
+version := "10.0.23-115435"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -8,10 +8,10 @@ libraryDependencies ++= Seq(
   "me.shadaj" %%% "slinky-web" % "0.6.5",
   "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-9fcfdc",
   "org.scalablytyped.slinky" %%% "emotion__serialize" % "0.11.11-6ca6c2",
-  "org.scalablytyped.slinky" %%% "emotion__styled-base" % "10.0.24-910bd9",
+  "org.scalablytyped.slinky" %%% "emotion__styled-base" % "10.0.24-d273f9",
   "org.scalablytyped.slinky" %%% "emotion__utils" % "0.11.2-98e365",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-77dff4",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200617Z-0ab4bf",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-014bc6",
   "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")

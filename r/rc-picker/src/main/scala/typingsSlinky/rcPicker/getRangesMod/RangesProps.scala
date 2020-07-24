@@ -18,6 +18,7 @@ trait RangesProps extends js.Object {
   var onOk: js.UndefOr[Null | js.Function0[Unit] | `false`] = js.undefined
   var prefixCls: String
   var rangeList: js.UndefOr[RangeList] = js.undefined
+  var showNow: js.UndefOr[Boolean] = js.undefined
 }
 
 object RangesProps {
@@ -73,6 +74,10 @@ object RangesProps {
     def setRangeList(value: RangeList): Self = this.set("rangeList", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRangeList: Self = this.set("rangeList", js.undefined)
+    @scala.inline
+    def setShowNow(value: Boolean): Self = this.set("showNow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowNow: Self = this.set("showNow", js.undefined)
   }
   
 }

@@ -46,6 +46,8 @@ object TimeBody {
     @scala.inline
     def showMinute(value: Boolean): this.type = set("showMinute", value.asInstanceOf[js.Any])
     @scala.inline
+    def showNow(value: Boolean): this.type = set("showNow", value.asInstanceOf[js.Any])
+    @scala.inline
     def showSecond(value: Boolean): this.type = set("showSecond", value.asInstanceOf[js.Any])
     @scala.inline
     def use12Hours(value: Boolean): this.type = set("use12Hours", value.asInstanceOf[js.Any])

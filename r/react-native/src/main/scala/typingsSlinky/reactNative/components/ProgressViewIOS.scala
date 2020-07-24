@@ -9,6 +9,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
@@ -144,7 +145,7 @@ object ProgressViewIOS {
     @scala.inline
     def progressImage(value: ImageURISource | js.Array[ImageURISource]): this.type = set("progressImage", value.asInstanceOf[js.Any])
     @scala.inline
-    def progressTintColor(value: String): this.type = set("progressTintColor", value.asInstanceOf[js.Any])
+    def progressTintColor(value: ColorValue): this.type = set("progressTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def progressViewStyle(value: default | bar): this.type = set("progressViewStyle", value.asInstanceOf[js.Any])
     @scala.inline
@@ -164,7 +165,7 @@ object ProgressViewIOS {
     @scala.inline
     def trackImage(value: ImageURISource | js.Array[ImageURISource]): this.type = set("trackImage", value.asInstanceOf[js.Any])
     @scala.inline
-    def trackTintColor(value: String): this.type = set("trackTintColor", value.asInstanceOf[js.Any])
+    def trackTintColor(value: ColorValue): this.type = set("trackTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def tvParallaxMagnification(value: Double): this.type = set("tvParallaxMagnification", value.asInstanceOf[js.Any])
     @scala.inline

@@ -10,14 +10,15 @@ trait ClearIcon extends js.Object {
   var loading: js.UndefOr[Boolean] = js.undefined
   var menuItemSelectedIcon: js.UndefOr[ReactElement] = js.undefined
   var multiple: js.UndefOr[Boolean] = js.undefined
+  var prefixCls: String
   var removeIcon: js.UndefOr[ReactElement] = js.undefined
   var suffixIcon: js.UndefOr[ReactElement] = js.undefined
 }
 
 object ClearIcon {
   @scala.inline
-  def apply(): ClearIcon = {
-    val __obj = js.Dynamic.literal()
+  def apply(prefixCls: String): ClearIcon = {
+    val __obj = js.Dynamic.literal(prefixCls = prefixCls.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClearIcon]
   }
   @scala.inline
@@ -31,6 +32,8 @@ object ClearIcon {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def setClearIconReactElement(value: ReactElement): Self = this.set("clearIcon", value.asInstanceOf[js.Any])
     @scala.inline

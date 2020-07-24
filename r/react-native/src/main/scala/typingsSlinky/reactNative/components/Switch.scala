@@ -10,6 +10,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
@@ -86,7 +87,7 @@ object Switch {
     @scala.inline
     def importantForAccessibility(value: auto | yes | no | `no-hide-descendants`): this.type = set("importantForAccessibility", value.asInstanceOf[js.Any])
     @scala.inline
-    def ios_backgroundColor(value: String): this.type = set("ios_backgroundColor", value.asInstanceOf[js.Any])
+    def ios_backgroundColor(value: ColorValue): this.type = set("ios_backgroundColor", value.asInstanceOf[js.Any])
     @scala.inline
     def isTVSelectable(value: Boolean): this.type = set("isTVSelectable", value.asInstanceOf[js.Any])
     @scala.inline
@@ -128,7 +129,7 @@ object Switch {
     @scala.inline
     def onStartShouldSetResponderCapture(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Boolean): this.type = set("onStartShouldSetResponderCapture", js.Any.fromFunction1(value))
     @scala.inline
-    def onTintColor(value: String): this.type = set("onTintColor", value.asInstanceOf[js.Any])
+    def onTintColor(value: ColorValue): this.type = set("onTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def onTouchCancel(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onTouchCancel", js.Any.fromFunction1(value))
     @scala.inline
@@ -156,11 +157,11 @@ object Switch {
     @scala.inline
     def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
     @scala.inline
-    def thumbColor(value: String): this.type = set("thumbColor", value.asInstanceOf[js.Any])
+    def thumbColor(value: ColorValue): this.type = set("thumbColor", value.asInstanceOf[js.Any])
     @scala.inline
-    def thumbTintColor(value: String): this.type = set("thumbTintColor", value.asInstanceOf[js.Any])
+    def thumbTintColor(value: ColorValue): this.type = set("thumbTintColor", value.asInstanceOf[js.Any])
     @scala.inline
-    def tintColor(value: String): this.type = set("tintColor", value.asInstanceOf[js.Any])
+    def tintColor(value: ColorValue): this.type = set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def trackColor(value: False): this.type = set("trackColor", value.asInstanceOf[js.Any])
     @scala.inline

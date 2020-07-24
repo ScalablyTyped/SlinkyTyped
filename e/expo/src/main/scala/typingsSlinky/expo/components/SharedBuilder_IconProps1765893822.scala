@@ -9,6 +9,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
@@ -108,7 +109,7 @@ class SharedBuilder_IconProps1765893822[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
   @scala.inline
-  def selectionColor(value: String): this.type = set("selectionColor", value.asInstanceOf[js.Any])
+  def selectionColor(value: ColorValue): this.type = set("selectionColor", value.asInstanceOf[js.Any])
   @scala.inline
   def size(value: Double): this.type = set("size", value.asInstanceOf[js.Any])
   @scala.inline

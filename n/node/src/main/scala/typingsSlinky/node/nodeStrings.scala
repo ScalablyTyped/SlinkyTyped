@@ -1,8 +1,5 @@
 package typingsSlinky.node
 
-import typingsSlinky.node.NodeJS.MultipleResolveType
-import typingsSlinky.node.NodeJS.Platform
-import typingsSlinky.node.NodeJS.Signals
 import typingsSlinky.node.bufferMod.TranscodeEncoding
 import typingsSlinky.node.childProcessMod.SerializationType
 import typingsSlinky.node.childProcessMod.StdioNull
@@ -21,6 +18,9 @@ import typingsSlinky.node.dgramMod.SocketType
 import typingsSlinky.node.fsMod.BufferEncodingOption
 import typingsSlinky.node.fsMod.symlink.Type
 import typingsSlinky.node.perfHooksMod.EntryType
+import typingsSlinky.node.processMod.global.NodeJS.MultipleResolveType
+import typingsSlinky.node.processMod.global.NodeJS.Platform
+import typingsSlinky.node.processMod.global.NodeJS.Signals
 import typingsSlinky.node.tlsMod.SecureVersion
 import typingsSlinky.node.utilMod.Style
 import typingsSlinky.node.vmMod.MeasureMemoryMode
@@ -654,6 +654,9 @@ object nodeStrings {
   
   @js.native
   sealed trait ec extends KeyType
+  
+  @js.native
+  sealed trait ed25519 extends KeyType
   
   @js.native
   sealed trait end extends js.Object
@@ -1414,6 +1417,8 @@ object nodeStrings {
   def dsa: dsa = "dsa".asInstanceOf[dsa]
   @scala.inline
   def ec: ec = "ec".asInstanceOf[ec]
+  @scala.inline
+  def ed25519: ed25519 = "ed25519".asInstanceOf[ed25519]
   @scala.inline
   def end: end = "end".asInstanceOf[end]
   @scala.inline

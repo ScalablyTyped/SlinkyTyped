@@ -4,9 +4,9 @@ import org.scalablytyped.runtime.Instantiable0
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.react.mod.ComponentPropsWithRef
 import typingsSlinky.reactNative.mod.Animated.AnimatedProps
+import typingsSlinky.reactNative.mod.Animated.ComponentProps
 import typingsSlinky.reactNative.mod.Text
 import typingsSlinky.reactNavigationStack.headerTitleMod.default
 import scala.scalajs.js
@@ -19,7 +19,13 @@ object HeaderTitle {
   @js.native
   object component extends js.Object
   
-  def apply(p: ComponentProps[ReactComponentClass[AnimatedProps[ComponentPropsWithRef[Instantiable0[Text]]]]]): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def apply(
+    p: typingsSlinky.react.mod.ComponentProps[
+      ReactComponentClass[
+        ComponentProps[Instantiable0[Text]] | AnimatedProps[ComponentPropsWithRef[Instantiable0[Text]]]
+      ]
+    ]
+  ): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: HeaderTitle.type): Default[tag.type, default] = new Default[tag.type, default](js.Array(this.component, js.Dictionary.empty))()
 }
 

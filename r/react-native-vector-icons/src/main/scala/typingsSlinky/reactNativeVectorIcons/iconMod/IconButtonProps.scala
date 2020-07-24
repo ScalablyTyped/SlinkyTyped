@@ -2,11 +2,13 @@ package typingsSlinky.reactNativeVectorIcons.iconMod
 
 import slinky.core.SyntheticEvent
 import typingsSlinky.reactNative.mod.BackgroundPropType
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.Insets
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.TargetedEvent
 import typingsSlinky.reactNative.mod.TextStyle
+import typingsSlinky.reactNative.mod.TouchableWithoutFeedbackPropsAndroid
 import typingsSlinky.reactNative.mod.TouchableWithoutFeedbackPropsIOS
 import typingsSlinky.reactNative.mod.ViewStyle
 import scala.scalajs.js
@@ -21,7 +23,8 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.reactNative.mod.TouchableNativeFeedbackProps because var conflicts: accessibilityActions, accessibilityComponentType, accessibilityElementsHidden, accessibilityHint, accessibilityIgnoresInvertColors, accessibilityLabel, accessibilityLiveRegion, accessibilityRole, accessibilityState, accessibilityTraits, accessibilityValue, accessibilityViewIsModal, accessible, importantForAccessibility, onAccessibilityAction, onAccessibilityEscape, onAccessibilityTap, onLayout, onLongPress, onMagicTap, onPress, style, testID. Inlined background, useForeground
 - typingsSlinky.reactNative.mod.TouchableHighlightProps because var conflicts: accessibilityActions, accessibilityComponentType, accessibilityElementsHidden, accessibilityHint, accessibilityIgnoresInvertColors, accessibilityLabel, accessibilityLiveRegion, accessibilityRole, accessibilityState, accessibilityTraits, accessibilityValue, accessibilityViewIsModal, accessible, importantForAccessibility, onAccessibilityAction, onAccessibilityEscape, onAccessibilityTap, onLayout, onLongPress, onMagicTap, onPress, style, testID. Inlined activeOpacity, onHideUnderlay, onShowUnderlay, underlayColor */ trait IconButtonProps
   extends IconProps
-     with TouchableWithoutFeedbackPropsIOS {
+     with TouchableWithoutFeedbackPropsIOS
+     with TouchableWithoutFeedbackPropsAndroid {
   /**
     * Determines what the opacity of the wrapped view should be when touch is active.
     */
@@ -69,7 +72,7 @@ import scala.scalajs.js.annotation._
   /**
     * If true, disable all interactions for this component.
     */
-  var disabled: js.UndefOr[Boolean] = js.undefined
+  var disabled: js.UndefOr[Boolean | Null] = js.undefined
   /**
     * This defines how far your touch can start away from the button.
     * This is added to pressRetentionOffset when moving off of the button.
@@ -127,7 +130,7 @@ import scala.scalajs.js.annotation._
   /**
     * The color of the underlay that will show through when the touch is active.
     */
-  var underlayColor: js.UndefOr[String] = js.undefined
+  var underlayColor: js.UndefOr[ColorValue] = js.undefined
   var useForeground: js.UndefOr[Boolean] = js.undefined
 }
 
@@ -181,6 +184,8 @@ object IconButtonProps {
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     @scala.inline
+    def setDisabledNull: Self = this.set("disabled", null)
+    @scala.inline
     def setHitSlop(value: Insets): Self = this.set("hitSlop", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHitSlop: Self = this.set("hitSlop", js.undefined)
@@ -221,7 +226,7 @@ object IconButtonProps {
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
     @scala.inline
-    def setUnderlayColor(value: String): Self = this.set("underlayColor", value.asInstanceOf[js.Any])
+    def setUnderlayColor(value: ColorValue): Self = this.set("underlayColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUnderlayColor: Self = this.set("underlayColor", js.undefined)
     @scala.inline

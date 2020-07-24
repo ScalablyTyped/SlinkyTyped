@@ -9,6 +9,7 @@ import typingsSlinky.reactNative.mod.AccessibilityRole
 import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
+import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
@@ -112,7 +113,7 @@ object Text {
     @scala.inline
     def selectable(value: Boolean): this.type = set("selectable", value.asInstanceOf[js.Any])
     @scala.inline
-    def selectionColor(value: String): this.type = set("selectionColor", value.asInstanceOf[js.Any])
+    def selectionColor(value: ColorValue): this.type = set("selectionColor", value.asInstanceOf[js.Any])
     @scala.inline
     def style(value: StyleProp[TextStyle]): this.type = set("style", value.asInstanceOf[js.Any])
     @scala.inline

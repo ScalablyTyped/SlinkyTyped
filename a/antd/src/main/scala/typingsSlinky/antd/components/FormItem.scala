@@ -66,6 +66,8 @@ object FormItem {
     @scala.inline
     def help(value: ReactElement): this.type = set("help", value.asInstanceOf[js.Any])
     @scala.inline
+    def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
+    @scala.inline
     def htmlFor(value: String): this.type = set("htmlFor", value.asInstanceOf[js.Any])
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
@@ -95,6 +97,8 @@ object FormItem {
     def onReset(value: () => Unit): this.type = set("onReset", js.Any.fromFunction0(value))
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preserve(value: Boolean): this.type = set("preserve", value.asInstanceOf[js.Any])
     @scala.inline
     def required(value: Boolean): this.type = set("required", value.asInstanceOf[js.Any])
     @scala.inline

@@ -11,6 +11,7 @@ trait TableLocale extends js.Object {
   var emptyText: js.UndefOr[ReactElement | js.Function0[ReactElement]] = js.undefined
   var expand: js.UndefOr[String] = js.undefined
   var filterConfirm: js.UndefOr[ReactElement] = js.undefined
+  var filterEmptyText: js.UndefOr[ReactElement] = js.undefined
   var filterReset: js.UndefOr[ReactElement] = js.undefined
   var filterTitle: js.UndefOr[String] = js.undefined
   var selectAll: js.UndefOr[ReactElement] = js.undefined
@@ -64,6 +65,12 @@ object TableLocale {
     def setFilterConfirm(value: ReactElement): Self = this.set("filterConfirm", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteFilterConfirm: Self = this.set("filterConfirm", js.undefined)
+    @scala.inline
+    def setFilterEmptyTextReactElement(value: ReactElement): Self = this.set("filterEmptyText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setFilterEmptyText(value: ReactElement): Self = this.set("filterEmptyText", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteFilterEmptyText: Self = this.set("filterEmptyText", js.undefined)
     @scala.inline
     def setFilterResetReactElement(value: ReactElement): Self = this.set("filterReset", value.asInstanceOf[js.Any])
     @scala.inline

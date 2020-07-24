@@ -11,7 +11,7 @@ trait AutocompletePrediction extends js.Object {
     * @see {@link https://developers.google.com/maps/documentation/javascript/reference/places-autocomplete-service#AutocompletePrediction.distance_meters Maps JavaScript API}
     */
   var distance_meters: js.UndefOr[Double] = js.undefined
-  var id: String
+  var id: js.UndefOr[String] = js.undefined
   var matched_substrings: js.Array[PredictionSubstring]
   var place_id: String
   var reference: String
@@ -24,7 +24,6 @@ object AutocompletePrediction {
   @scala.inline
   def apply(
     description: String,
-    id: String,
     matched_substrings: js.Array[PredictionSubstring],
     place_id: String,
     reference: String,
@@ -32,7 +31,7 @@ object AutocompletePrediction {
     terms: js.Array[PredictionTerm],
     types: js.Array[String]
   ): AutocompletePrediction = {
-    val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], matched_substrings = matched_substrings.asInstanceOf[js.Any], place_id = place_id.asInstanceOf[js.Any], reference = reference.asInstanceOf[js.Any], structured_formatting = structured_formatting.asInstanceOf[js.Any], terms = terms.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(description = description.asInstanceOf[js.Any], matched_substrings = matched_substrings.asInstanceOf[js.Any], place_id = place_id.asInstanceOf[js.Any], reference = reference.asInstanceOf[js.Any], structured_formatting = structured_formatting.asInstanceOf[js.Any], terms = terms.asInstanceOf[js.Any], types = types.asInstanceOf[js.Any])
     __obj.asInstanceOf[AutocompletePrediction]
   }
   @scala.inline
@@ -48,8 +47,6 @@ object AutocompletePrediction {
     }
     @scala.inline
     def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
-    @scala.inline
-    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
     def setMatched_substringsVarargs(value: PredictionSubstring*): Self = this.set("matched_substrings", js.Array(value :_*))
     @scala.inline
@@ -72,6 +69,10 @@ object AutocompletePrediction {
     def setDistance_meters(value: Double): Self = this.set("distance_meters", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDistance_meters: Self = this.set("distance_meters", js.undefined)
+    @scala.inline
+    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteId: Self = this.set("id", js.undefined)
   }
   
 }

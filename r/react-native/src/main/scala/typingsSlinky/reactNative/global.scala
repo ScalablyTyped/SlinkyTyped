@@ -169,7 +169,45 @@ object global extends js.Object {
   }
   
   /**
-    * Based on definitions of lib.dom and  lib.dom.iteralbe
+    * Based on definition from lib.dom but using class syntax.
+    * The properties are mutable to support users that use a `URL` polyfill, but the implementation
+    * built into React Native (as of 0.63) does not implement all the properties.
+    */
+  @js.native
+  class URL protected ()
+    extends typingsSlinky.reactNative.URL {
+    def this(url: String) = this()
+    def this(url: String, base: String) = this()
+    /* CompleteClass */
+    override var hash: String = js.native
+    /* CompleteClass */
+    override var host: String = js.native
+    /* CompleteClass */
+    override var hostname: String = js.native
+    /* CompleteClass */
+    override var href: String = js.native
+    /* CompleteClass */
+    override val origin: String = js.native
+    /* CompleteClass */
+    override var password: String = js.native
+    /* CompleteClass */
+    override var pathname: String = js.native
+    /* CompleteClass */
+    override var port: String = js.native
+    /* CompleteClass */
+    override var protocol: String = js.native
+    /* CompleteClass */
+    override var search: String = js.native
+    /* CompleteClass */
+    override val searchParams: typingsSlinky.reactNative.URLSearchParams = js.native
+    /* CompleteClass */
+    override var username: String = js.native
+    /* CompleteClass */
+    override def toJSON(): String = js.native
+  }
+  
+  /**
+    * Based on definitions of lib.dom and lib.dom.iterable
     */
   @js.native
   class URLSearchParams ()
@@ -251,6 +289,13 @@ object global extends js.Object {
     def error(): typingsSlinky.reactNative.Response = js.native
     def redirect(url: String): typingsSlinky.reactNative.Response = js.native
     def redirect(url: String, status: Double): typingsSlinky.reactNative.Response = js.native
+  }
+  
+  /* static members */
+  @js.native
+  object URL extends js.Object {
+    def createObjectURL(blob: Blob): typingsSlinky.reactNative.URL = js.native
+    def revokeObjectURL(url: String): Unit = js.native
   }
   
   @js.native

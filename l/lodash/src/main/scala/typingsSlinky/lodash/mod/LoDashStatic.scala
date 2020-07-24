@@ -361,10 +361,11 @@ trait LoDashStatic extends js.Object {
   @JSName("first")
   var first_Original: FnCall = js.native
   /**
-    * Creates a function that memoizes the result of func. If resolver is provided it determines the cache key for
-    * storing the result based on the arguments provided to the memoized function. By default, the first argument
-    * provided to the memoized function is coerced to a string and used as the cache key. The func is invoked with
-    * the this binding of the memoized function.
+    * Creates a function that memoizes the result of `func`. If `resolver` is
+    * provided, it determines the cache key for storing the result based on the
+    * arguments provided to the memoized function. By default, the first argument
+    * provided to the memoized function is used as the map cache key. The `func`
+    * is invoked with the `this` binding of the memoized function.
     *
     * @param func The function to have its output memoized.
     * @param resolver The function to resolve the cache key.
@@ -3558,7 +3559,7 @@ trait LoDashStatic extends js.Object {
     * @param arrays The arrays to inspect.
     * @return Returns the new array of shared values.
     */
-  def intersection[T](arrays: List[T]*): js.Array[T] = js.native
+  def intersection[T](arrays: (js.UndefOr[List[T] | Null])*): js.Array[T] = js.native
   def intersectionBy[T](array: js.UndefOr[scala.Nothing], values: List[T]*): js.Array[T] = js.native
   def intersectionBy[T](array: Null, values: List[T]*): js.Array[T] = js.native
   /**
@@ -4803,10 +4804,11 @@ trait LoDashStatic extends js.Object {
   def meanBy[T](collection: List[T]): Double = js.native
   def meanBy[T](collection: List[T], iteratee: ValueIteratee[T]): Double = js.native
   /**
-    * Creates a function that memoizes the result of func. If resolver is provided it determines the cache key for
-    * storing the result based on the arguments provided to the memoized function. By default, the first argument
-    * provided to the memoized function is coerced to a string and used as the cache key. The func is invoked with
-    * the this binding of the memoized function.
+    * Creates a function that memoizes the result of `func`. If `resolver` is
+    * provided, it determines the cache key for storing the result based on the
+    * arguments provided to the memoized function. By default, the first argument
+    * provided to the memoized function is used as the map cache key. The `func`
+    * is invoked with the `this` binding of the memoized function.
     *
     * @param func The function to have its output memoized.
     * @param resolver The function to resolve the cache key.
@@ -7041,11 +7043,19 @@ trait LoDashStatic extends js.Object {
     *
     * Note: This method is based on String#split.
     *
-    * @param string The string to trim.
+    * @param string The string to split.
     * @param separator The separator pattern to split by.
     * @param limit The length to truncate results to.
     * @return Returns the new array of string segments.
     */
+  def split(): js.Array[String] = js.native
+  def split(string: js.UndefOr[scala.Nothing], index: String, guard: js.Object): js.Array[String] = js.native
+  def split(string: js.UndefOr[scala.Nothing], index: Double, guard: js.Object): js.Array[String] = js.native
+  def split(string: js.UndefOr[scala.Nothing], separator: js.UndefOr[scala.Nothing], limit: Double): js.Array[String] = js.native
+  def split(string: js.UndefOr[scala.Nothing], separator: String): js.Array[String] = js.native
+  def split(string: js.UndefOr[scala.Nothing], separator: String, limit: Double): js.Array[String] = js.native
+  def split(string: js.UndefOr[scala.Nothing], separator: js.RegExp): js.Array[String] = js.native
+  def split(string: js.UndefOr[scala.Nothing], separator: js.RegExp, limit: Double): js.Array[String] = js.native
   def split(string: String): js.Array[String] = js.native
   /**
     * Splits string by separator.
@@ -7064,6 +7074,13 @@ trait LoDashStatic extends js.Object {
   def split(string: String, separator: String, limit: Double): js.Array[String] = js.native
   def split(string: String, separator: js.RegExp): js.Array[String] = js.native
   def split(string: String, separator: js.RegExp, limit: Double): js.Array[String] = js.native
+  def split(string: Null, index: String, guard: js.Object): js.Array[String] = js.native
+  def split(string: Null, index: Double, guard: js.Object): js.Array[String] = js.native
+  def split(string: Null, separator: js.UndefOr[scala.Nothing], limit: Double): js.Array[String] = js.native
+  def split(string: Null, separator: String): js.Array[String] = js.native
+  def split(string: Null, separator: String, limit: Double): js.Array[String] = js.native
+  def split(string: Null, separator: js.RegExp): js.Array[String] = js.native
+  def split(string: Null, separator: js.RegExp, limit: Double): js.Array[String] = js.native
   /**
     * Creates a function that invokes func with the this binding of the created function and an array of arguments
     * much like Function#apply.

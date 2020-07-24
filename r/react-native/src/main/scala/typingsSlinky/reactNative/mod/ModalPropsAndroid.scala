@@ -9,6 +9,10 @@ trait ModalPropsAndroid extends js.Object {
     *  Controls whether to force hardware acceleration for the underlying window.
     */
   var hardwareAccelerated: js.UndefOr[Boolean] = js.undefined
+  /**
+    *  Determines whether your modal should go under the system statusbar.
+    */
+  var statusBarTranslucent: js.UndefOr[Boolean] = js.undefined
 }
 
 object ModalPropsAndroid {
@@ -32,6 +36,10 @@ object ModalPropsAndroid {
     def setHardwareAccelerated(value: Boolean): Self = this.set("hardwareAccelerated", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHardwareAccelerated: Self = this.set("hardwareAccelerated", js.undefined)
+    @scala.inline
+    def setStatusBarTranslucent(value: Boolean): Self = this.set("statusBarTranslucent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteStatusBarTranslucent: Self = this.set("statusBarTranslucent", js.undefined)
   }
   
 }

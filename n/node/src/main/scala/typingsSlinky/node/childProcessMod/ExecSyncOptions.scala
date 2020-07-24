@@ -1,12 +1,12 @@
 package typingsSlinky.node.childProcessMod
 
 import typingsSlinky.node.BufferEncoding
-import typingsSlinky.node.NodeJS.Signals
 import typingsSlinky.node.nodeStrings.buffer_
 import typingsSlinky.node.nodeStrings.ignore
 import typingsSlinky.node.nodeStrings.inherit
 import typingsSlinky.node.nodeStrings.ipc
 import typingsSlinky.node.nodeStrings.pipe
+import typingsSlinky.node.processMod.global.NodeJS.Signals
 import typingsSlinky.node.streamMod.Stream
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -186,6 +186,8 @@ object geometry extends js.Object {
     def getClosest(anchorPosition: js.Array[Double]): js.Object = js.native
     def getCoordinates(): js.Array[js.Array[js.Array[Double]]] = js.native
     def getFillRule(): String = js.native
+    @JSName("getFillRule")
+    def getFillRule_Union(): evenOdd | nonZero = js.native
     def getLength(): Double = js.native
     def getParent(): js.Object | Null = js.native
     /* CompleteClass */
@@ -197,6 +199,10 @@ object geometry extends js.Object {
     def set(index: Double, path: js.Array[js.Array[Double]]): IPolygonGeometryAccess = js.native
     def setCoordinates(coordinates: js.Array[js.Array[js.Array[Double]]]): IPolygonGeometryAccess = js.native
     def setFillRule(fillRule: String): IPolygonGeometryAccess = js.native
+    @JSName("setFillRule")
+    def setFillRule_evenOdd(fillRule: evenOdd): IPolygonGeometryAccess = js.native
+    @JSName("setFillRule")
+    def setFillRule_nonZero(fillRule: nonZero): IPolygonGeometryAccess = js.native
     def setParent(): this.type = js.native
     def setParent(parent: js.Object): this.type = js.native
     def splice(index: Double, number: Double): js.Array[ILinearRingGeometryAccess] = js.native
@@ -347,7 +353,7 @@ object geometry extends js.Object {
       override def getBounds(): js.Array[js.Array[Double]] | Null = js.native
       def getChildGeometry(index: Double): ILinearRingGeometryAccess = js.native
       def getClosest(anchorPosition: js.Array[Double]): js.Object = js.native
-      def getFillRule(): String = js.native
+      def getFillRule(): evenOdd | nonZero = js.native
       def getLength(): Double = js.native
       /* CompleteClass */
       override def getType(): String = js.native
@@ -355,7 +361,10 @@ object geometry extends js.Object {
       def isFrozen(): Boolean = js.native
       def remove(index: Double): ILinearRingGeometryAccess = js.native
       def set(index: Double, path: js.Array[js.Array[Double]]): IPolygonGeometryAccess = js.native
-      def setFillRule(fillRule: String): IPolygonGeometryAccess = js.native
+      @JSName("setFillRule")
+      def setFillRule_evenOdd(fillRule: evenOdd): IPolygonGeometryAccess = js.native
+      @JSName("setFillRule")
+      def setFillRule_nonZero(fillRule: nonZero): IPolygonGeometryAccess = js.native
       def splice(index: Double, number: Double): js.Array[ILinearRingGeometryAccess] = js.native
       def unfreeze(): IFreezable = js.native
     }
@@ -374,6 +383,208 @@ object geometry extends js.Object {
       def fromEncodedCoordinates(encodedCoordinates: String): typingsSlinky.yandexMaps.mod.geometry.base.Polygon = js.native
        //tslint:disable-line function-name
       def toEncodedCoordinates(geometry: typingsSlinky.yandexMaps.mod.geometry.base.Polygon): String = js.native
+    }
+    
+  }
+  
+  @js.native
+  object pixel extends js.Object {
+    @js.native
+    class Circle protected () extends IPixelCircleGeometry {
+      def this(coordinates: js.Array[Double], radius: Double) = this()
+      def this(coordinates: Null, radius: Double) = this()
+      def this(coordinates: js.Array[Double], radius: Double, metaData: js.Object) = this()
+      def this(coordinates: Null, radius: Double, metaData: js.Object) = this()
+      /* CompleteClass */
+      override var events: IEventManager = js.native
+      /* CompleteClass */
+      override def equals(geometry: IPixelGeometry): Boolean = js.native
+      /* CompleteClass */
+      override def getBounds(): js.Array[js.Array[Double]] | Null = js.native
+      /* CompleteClass */
+      override def getCoordinates(): js.Array[Double] = js.native
+      /* CompleteClass */
+      override def getMetaData(): js.Object = js.native
+      /* CompleteClass */
+      override def getRadius(): Double = js.native
+      /* CompleteClass */
+      override def getType(): String = js.native
+      /* CompleteClass */
+      override def scale(factor: Double): IPixelGeometry = js.native
+      /* CompleteClass */
+      override def shift(offset: js.Array[Double]): IPixelGeometry = js.native
+    }
+    
+    @js.native
+    class LineString protected () extends IPixelLineStringGeometry {
+      def this(coordinates: js.Array[js.Array[Double]]) = this()
+      def this(coordinates: js.Array[js.Array[Double]], metaData: js.Object) = this()
+      /* CompleteClass */
+      override var events: IEventManager = js.native
+      /* CompleteClass */
+      override def equals(geometry: IPixelGeometry): Boolean = js.native
+      /* CompleteClass */
+      override def getBounds(): js.Array[js.Array[Double]] | Null = js.native
+      /* CompleteClass */
+      override def getClosest(anchorPosition: js.Array[Double]): js.Object = js.native
+      /* CompleteClass */
+      override def getCoordinates(): js.Array[js.Array[Double]] = js.native
+      /* CompleteClass */
+      override def getLength(): Double = js.native
+      /* CompleteClass */
+      override def getMetaData(): js.Object = js.native
+      /* CompleteClass */
+      override def getType(): String = js.native
+      /* CompleteClass */
+      override def scale(factor: Double): IPixelGeometry = js.native
+      /* CompleteClass */
+      override def shift(offset: js.Array[Double]): IPixelGeometry = js.native
+    }
+    
+    @js.native
+    class MultiLineString protected () extends IPixelMultiLineGeometry {
+      def this(coordinates: js.Array[js.Array[js.Array[Double]]]) = this()
+      def this(coordinates: js.Array[js.Array[js.Array[Double]]], metaData: js.Object) = this()
+      /* CompleteClass */
+      override var events: IEventManager = js.native
+      /* CompleteClass */
+      override def equals(geometry: IPixelGeometry): Boolean = js.native
+      /* CompleteClass */
+      override def getBounds(): js.Array[js.Array[Double]] | Null = js.native
+      /* CompleteClass */
+      override def getClosest(anchorPosition: js.Array[Double]): js.Object = js.native
+      /* CompleteClass */
+      override def getCoordinates(): js.Array[js.Array[js.Array[Double]]] = js.native
+      /* CompleteClass */
+      override def getLength(): Double = js.native
+      /* CompleteClass */
+      override def getMetaData(): js.Object = js.native
+      /* CompleteClass */
+      override def getType(): String = js.native
+      /* CompleteClass */
+      override def scale(factor: Double): IPixelGeometry = js.native
+      /* CompleteClass */
+      override def shift(offset: js.Array[Double]): IPixelGeometry = js.native
+    }
+    
+    @js.native
+    class MultiPolygon protected () extends IPixelMultiPolygonGeometry {
+      def this(coordinates: js.Array[js.Array[js.Array[js.Array[Double]]]], fillRule: evenOdd) = this()
+      def this(coordinates: js.Array[js.Array[js.Array[js.Array[Double]]]], fillRule: nonZero) = this()
+      def this(
+        coordinates: js.Array[js.Array[js.Array[js.Array[Double]]]],
+        fillRule: evenOdd,
+        metaData: js.Object
+      ) = this()
+      def this(
+        coordinates: js.Array[js.Array[js.Array[js.Array[Double]]]],
+        fillRule: nonZero,
+        metaData: js.Object
+      ) = this()
+      /* CompleteClass */
+      override var events: IEventManager = js.native
+      /* CompleteClass */
+      override def contains(position: js.Array[Double]): Boolean = js.native
+      /* CompleteClass */
+      override def equals(geometry: IPixelGeometry): Boolean = js.native
+      /* CompleteClass */
+      override def getBounds(): js.Array[js.Array[Double]] | Null = js.native
+      /* CompleteClass */
+      override def getClosest(anchorPosition: js.Array[Double]): js.Object = js.native
+      /* CompleteClass */
+      override def getCoordinates(): js.Array[js.Array[js.Array[js.Array[Double]]]] = js.native
+      /* CompleteClass */
+      override def getFillRule(): evenOdd | nonZero = js.native
+      /* CompleteClass */
+      override def getLength(): Double = js.native
+      /* CompleteClass */
+      override def getMetaData(): js.Object = js.native
+      /* CompleteClass */
+      override def getType(): String = js.native
+      /* CompleteClass */
+      override def scale(factor: Double): IPixelGeometry = js.native
+      /* CompleteClass */
+      override def shift(offset: js.Array[Double]): IPixelGeometry = js.native
+    }
+    
+    @js.native
+    class Point () extends IPixelPointGeometry {
+      def this(position: js.Array[Double]) = this()
+      def this(position: js.Array[Double], metaData: js.Object) = this()
+      def this(position: Null, metaData: js.Object) = this()
+      /* CompleteClass */
+      override var events: IEventManager = js.native
+      /* CompleteClass */
+      override def equals(geometry: IPixelGeometry): Boolean = js.native
+      /* CompleteClass */
+      override def getBounds(): js.Array[js.Array[Double]] | Null = js.native
+      /* CompleteClass */
+      override def getCoordinates(): js.Array[Double] = js.native
+      /* CompleteClass */
+      override def getMetaData(): js.Object = js.native
+      /* CompleteClass */
+      override def getType(): String = js.native
+      /* CompleteClass */
+      override def scale(factor: Double): IPixelGeometry = js.native
+      /* CompleteClass */
+      override def shift(offset: js.Array[Double]): IPixelGeometry = js.native
+    }
+    
+    @js.native
+    class Polygon protected () extends IPixelPolygonGeometry {
+      def this(coordinates: js.Array[js.Array[js.Array[Double]]], fillRule: evenOdd) = this()
+      def this(coordinates: js.Array[js.Array[js.Array[Double]]], fillRule: nonZero) = this()
+      def this(coordinates: js.Array[js.Array[js.Array[Double]]], fillRule: evenOdd, metaData: js.Object) = this()
+      def this(coordinates: js.Array[js.Array[js.Array[Double]]], fillRule: nonZero, metaData: js.Object) = this()
+      /* CompleteClass */
+      override var events: IEventManager = js.native
+      /* CompleteClass */
+      override def contains(position: js.Array[Double]): Boolean = js.native
+      /* CompleteClass */
+      override def equals(geometry: IPixelGeometry): Boolean = js.native
+      /* CompleteClass */
+      override def getBounds(): js.Array[js.Array[Double]] | Null = js.native
+      /* CompleteClass */
+      override def getClosest(anchorPosition: js.Array[Double]): js.Object = js.native
+      /* CompleteClass */
+      override def getCoordinates(): js.Array[js.Array[js.Array[Double]]] = js.native
+      /* CompleteClass */
+      override def getFillRule(): evenOdd | nonZero = js.native
+      /* CompleteClass */
+      override def getLength(): Double = js.native
+      /* CompleteClass */
+      override def getMetaData(): js.Object = js.native
+      /* CompleteClass */
+      override def getType(): String = js.native
+      /* CompleteClass */
+      override def scale(factor: Double): IPixelGeometry = js.native
+      /* CompleteClass */
+      override def shift(offset: js.Array[Double]): IPixelGeometry = js.native
+    }
+    
+    @js.native
+    class Rectangle () extends IPixelRectangleGeometry {
+      def this(coordinates: js.Array[js.Array[Double]]) = this()
+      def this(coordinates: js.Array[js.Array[Double]], metaData: js.Object) = this()
+      def this(coordinates: Null, metaData: js.Object) = this()
+      /* CompleteClass */
+      override var events: IEventManager = js.native
+      /* CompleteClass */
+      override def equals(geometry: IPixelGeometry): Boolean = js.native
+      /* CompleteClass */
+      override def getBounds(): js.Array[js.Array[Double]] | Null = js.native
+      /* CompleteClass */
+      override def getClosest(anchorPosition: js.Array[Double]): js.Object = js.native
+      /* CompleteClass */
+      override def getCoordinates(): js.Array[js.Array[Double]] = js.native
+      /* CompleteClass */
+      override def getMetaData(): js.Object = js.native
+      /* CompleteClass */
+      override def getType(): String = js.native
+      /* CompleteClass */
+      override def scale(factor: Double): IPixelGeometry = js.native
+      /* CompleteClass */
+      override def shift(offset: js.Array[Double]): IPixelGeometry = js.native
     }
     
   }

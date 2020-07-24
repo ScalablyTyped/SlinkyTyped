@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.Call
 import typingsSlinky.antd.anon.CallDefaultProps
 import typingsSlinky.antd.anon.DefaultProps
+import typingsSlinky.antd.imageMod.SkeletonImageProps
 import typingsSlinky.antd.skeletonSkeletonMod.SkeletonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,5 +18,6 @@ object Skeleton extends js.Object {
   var Input: CallDefaultProps = js.native
   var defaultProps: typingsSlinky.antd.anon.Avatar = js.native
   def apply(props: SkeletonProps): ReactElement = js.native
+  def Image(props: SkeletonImageProps): ReactElement = js.native
 }
 

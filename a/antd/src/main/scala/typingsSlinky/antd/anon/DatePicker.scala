@@ -15,36 +15,36 @@ trait DatePicker[DateType] extends js.Object {
     Pick[
       (Pick[
         PickerDateProps[DateType], 
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 99 */ js.Any
       ]) with Bordered, 
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
     ]
   ]
   var TimePicker: ReactComponentClass[
     Pick[
       (Pick[
         PickerTimeProps[DateType], 
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 107 */ js.Any
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 108 */ js.Any
       ]) with Bordered, 
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 109 */ js.Any
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 110 */ js.Any
     ]
   ]
   var WeekPicker: ReactComponentClass[
     Pick[
       (Pick[
         PickerDateProps[DateType], 
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 99 */ js.Any
       ]) with Bordered, 
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
     ]
   ]
   var YearPicker: ReactComponentClass[
     Pick[
       (Pick[
         PickerDateProps[DateType], 
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 99 */ js.Any
       ]) with Bordered, 
-      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+      /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
     ]
   ]
 }
@@ -57,36 +57,36 @@ object DatePicker {
       Pick[
         (Pick[
           PickerDateProps[DateType], 
-          /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
+          /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 99 */ js.Any
         ]) with Bordered, 
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
       ]
     ],
     TimePicker: ReactComponentClass[
       Pick[
         (Pick[
           PickerTimeProps[DateType], 
-          /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 107 */ js.Any
+          /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 108 */ js.Any
         ]) with Bordered, 
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 109 */ js.Any
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 110 */ js.Any
       ]
     ],
     WeekPicker: ReactComponentClass[
       Pick[
         (Pick[
           PickerDateProps[DateType], 
-          /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
+          /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 99 */ js.Any
         ]) with Bordered, 
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
       ]
     ],
     YearPicker: ReactComponentClass[
       Pick[
         (Pick[
           PickerDateProps[DateType], 
-          /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
+          /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 99 */ js.Any
         ]) with Bordered, 
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
       ]
     ]
   ): DatePicker[DateType] = {
@@ -112,9 +112,9 @@ object DatePicker {
           Pick[
             (Pick[
               PickerDateProps[DateType], 
-              /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
+              /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 99 */ js.Any
             ]) with Bordered, 
-            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
           ]
         ]
     ): Self = this.set("MonthPicker", value.asInstanceOf[js.Any])
@@ -124,9 +124,9 @@ object DatePicker {
           Pick[
             (Pick[
               PickerTimeProps[DateType], 
-              /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 107 */ js.Any
+              /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 108 */ js.Any
             ]) with Bordered, 
-            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 109 */ js.Any
+            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 110 */ js.Any
           ]
         ]
     ): Self = this.set("TimePicker", value.asInstanceOf[js.Any])
@@ -136,9 +136,9 @@ object DatePicker {
           Pick[
             (Pick[
               PickerDateProps[DateType], 
-              /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
+              /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 99 */ js.Any
             ]) with Bordered, 
-            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
           ]
         ]
     ): Self = this.set("WeekPicker", value.asInstanceOf[js.Any])
@@ -148,9 +148,9 @@ object DatePicker {
           Pick[
             (Pick[
               PickerDateProps[DateType], 
-              /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 98 */ js.Any
+              /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 99 */ js.Any
             ]) with Bordered, 
-            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 100 */ js.Any
+            /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 101 */ js.Any
           ]
         ]
     ): Self = this.set("YearPicker", value.asInstanceOf[js.Any])

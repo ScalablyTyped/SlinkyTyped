@@ -82,6 +82,8 @@ object TouchableOpacity {
       @scala.inline
       def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
       @scala.inline
+      def disabledNull: this.type = set("disabled", null)
+      @scala.inline
       def hasTVPreferredFocus(value: Boolean): this.type = set("hasTVPreferredFocus", value.asInstanceOf[js.Any])
       @scala.inline
       def hitSlop(value: Insets): this.type = set("hitSlop", value.asInstanceOf[js.Any])
@@ -117,6 +119,10 @@ object TouchableOpacity {
       def styleNull: this.type = set("style", null)
       @scala.inline
       def testID(value: String): this.type = set("testID", value.asInstanceOf[js.Any])
+      @scala.inline
+      def touchSoundDisabled(value: Boolean): this.type = set("touchSoundDisabled", value.asInstanceOf[js.Any])
+      @scala.inline
+      def touchSoundDisabledNull: this.type = set("touchSoundDisabled", null)
       @scala.inline
       def tvParallaxProperties(value: TVParallaxProperties): this.type = set("tvParallaxProperties", value.asInstanceOf[js.Any])
     }

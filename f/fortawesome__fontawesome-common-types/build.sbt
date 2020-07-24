@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "fortawesome__fontawesome-common-types"
-version := "0.2.28-cf32fc"
+version := "0.2.30-ea8b0e"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

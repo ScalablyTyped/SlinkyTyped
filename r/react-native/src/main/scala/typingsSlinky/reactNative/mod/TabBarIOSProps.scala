@@ -11,7 +11,7 @@ trait TabBarIOSProps extends ViewProps {
   /**
     * Background color of the tab bar
     */
-  var barTintColor: js.UndefOr[String] = js.undefined
+  var barTintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Specifies tab bar item positioning. Available values are:
     * - fill - distributes items across the entire width of the tab bar
@@ -25,7 +25,7 @@ trait TabBarIOSProps extends ViewProps {
   /**
     * Color of the currently selected tab icon
     */
-  var tintColor: js.UndefOr[String] = js.undefined
+  var tintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * A Boolean value that indicates whether the tab bar is translucent
     */
@@ -33,11 +33,11 @@ trait TabBarIOSProps extends ViewProps {
   /**
     * Color of unselected tab icons. Available since iOS 10.
     */
-  var unselectedItemTintColor: js.UndefOr[String] = js.undefined
+  var unselectedItemTintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Color of text on unselected tabs
     */
-  var unselectedTintColor: js.UndefOr[String] = js.undefined
+  var unselectedTintColor: js.UndefOr[ColorValue] = js.undefined
 }
 
 object TabBarIOSProps {
@@ -58,7 +58,7 @@ object TabBarIOSProps {
         x
     }
     @scala.inline
-    def setBarTintColor(value: String): Self = this.set("barTintColor", value.asInstanceOf[js.Any])
+    def setBarTintColor(value: ColorValue): Self = this.set("barTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBarTintColor: Self = this.set("barTintColor", js.undefined)
     @scala.inline
@@ -66,7 +66,7 @@ object TabBarIOSProps {
     @scala.inline
     def deleteItemPositioning: Self = this.set("itemPositioning", js.undefined)
     @scala.inline
-    def setTintColor(value: String): Self = this.set("tintColor", value.asInstanceOf[js.Any])
+    def setTintColor(value: ColorValue): Self = this.set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTintColor: Self = this.set("tintColor", js.undefined)
     @scala.inline
@@ -74,11 +74,11 @@ object TabBarIOSProps {
     @scala.inline
     def deleteTranslucent: Self = this.set("translucent", js.undefined)
     @scala.inline
-    def setUnselectedItemTintColor(value: String): Self = this.set("unselectedItemTintColor", value.asInstanceOf[js.Any])
+    def setUnselectedItemTintColor(value: ColorValue): Self = this.set("unselectedItemTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUnselectedItemTintColor: Self = this.set("unselectedItemTintColor", js.undefined)
     @scala.inline
-    def setUnselectedTintColor(value: String): Self = this.set("unselectedTintColor", value.asInstanceOf[js.Any])
+    def setUnselectedTintColor(value: ColorValue): Self = this.set("unselectedTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUnselectedTintColor: Self = this.set("unselectedTintColor", js.undefined)
   }

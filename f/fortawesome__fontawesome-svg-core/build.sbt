@@ -1,12 +1,12 @@
 organization := "org.scalablytyped.slinky"
 name := "fortawesome__fontawesome-svg-core"
-version := "1.2.28-05d49d"
+version := "1.2.30-2f3d0f"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "fortawesome__fontawesome-common-types" % "0.2.28-cf32fc",
+  "org.scalablytyped.slinky" %%% "fortawesome__fontawesome-common-types" % "0.2.30-ea8b0e",
   "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")

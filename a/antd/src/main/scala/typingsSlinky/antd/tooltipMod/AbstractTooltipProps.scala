@@ -3,6 +3,7 @@ package typingsSlinky.antd.tooltipMod
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.antd.colorsMod.PresetColorType
 import typingsSlinky.antd.placementsMod.AdjustOverflow
+import typingsSlinky.antd.typeMod.LiteralUnion
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -16,7 +17,7 @@ import scala.scalajs.js.annotation._
     /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BuildInPlacements */ js.Any
   ] = js.undefined
   var className: js.UndefOr[String] = js.undefined
-  var color: js.UndefOr[PresetColorType] = js.undefined
+  var color: js.UndefOr[LiteralUnion[PresetColorType, String]] = js.undefined
   var getPopupContainer: js.UndefOr[js.Function1[/* triggerNode */ HTMLElement, HTMLElement]] = js.undefined
   var openClassName: js.UndefOr[String] = js.undefined
   var placement: js.UndefOr[TooltipPlacement] = js.undefined
@@ -59,7 +60,7 @@ object AbstractTooltipProps {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
-    def setColor(value: PresetColorType): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: LiteralUnion[PresetColorType, String]): Self = this.set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
     @scala.inline

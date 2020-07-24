@@ -18,6 +18,7 @@ import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import typingsSlinky.rcMenu.anon.Open
+import typingsSlinky.rcMenu.anon.PartialkeyinMenuModeother
 import typingsSlinky.rcMenu.interfaceMod.BuiltinPlacements
 import typingsSlinky.rcMenu.interfaceMod.DestroyEventHandler
 import typingsSlinky.rcMenu.interfaceMod.MenuClickEventHandler
@@ -158,6 +159,7 @@ trait MenuProps extends js.Object {
   var builtinPlacements: js.UndefOr[BuiltinPlacements] = js.undefined
   var children: js.UndefOr[ReactElement] = js.undefined
   var className: js.UndefOr[String] = js.undefined
+  var collapsedWidth: js.UndefOr[String | Double] = js.undefined
   var color: js.UndefOr[String] = js.undefined
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.undefined
   var contextMenu: js.UndefOr[String] = js.undefined
@@ -165,6 +167,8 @@ trait MenuProps extends js.Object {
   var datatype: js.UndefOr[String] = js.undefined
   var defaultActiveFirst: js.UndefOr[Boolean] = js.undefined
   var defaultChecked: js.UndefOr[Boolean] = js.undefined
+  /** Default menu motion of each mode */
+  var defaultMotions: js.UndefOr[PartialkeyinMenuModeother] = js.undefined
   var defaultOpenKeys: js.UndefOr[js.Array[String]] = js.undefined
   var defaultSelectedKeys: js.UndefOr[js.Array[String]] = js.undefined
   var defaultValue: js.UndefOr[String | Double | js.Array[String]] = js.undefined
@@ -177,6 +181,7 @@ trait MenuProps extends js.Object {
   var getPopupContainer: js.UndefOr[js.Function1[/* node */ HTMLElement, HTMLElement]] = js.undefined
   var hidden: js.UndefOr[Boolean] = js.undefined
   var id: js.UndefOr[String] = js.undefined
+  var inlineCollapsed: js.UndefOr[Boolean] = js.undefined
   var inlist: js.UndefOr[js.Any] = js.undefined
   var inputMode: js.UndefOr[none | text | tel | url | email | numeric | decimal | search] = js.undefined
   var is: js.UndefOr[String] = js.undefined
@@ -293,6 +298,8 @@ trait MenuProps extends js.Object {
   var security: js.UndefOr[String] = js.undefined
   var selectable: js.UndefOr[Boolean] = js.undefined
   var selectedKeys: js.UndefOr[js.Array[String]] = js.undefined
+  /** SiderContextProps of layout in ant design */
+  var siderCollapsed: js.UndefOr[Boolean] = js.undefined
   var slot: js.UndefOr[String] = js.undefined
   var spellCheck: js.UndefOr[Booleanish] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
@@ -557,6 +564,10 @@ object MenuProps {
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
     @scala.inline
+    def setCollapsedWidth(value: String | Double): Self = this.set("collapsedWidth", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteCollapsedWidth: Self = this.set("collapsedWidth", js.undefined)
+    @scala.inline
     def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
@@ -584,6 +595,10 @@ object MenuProps {
     def setDefaultChecked(value: Boolean): Self = this.set("defaultChecked", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDefaultChecked: Self = this.set("defaultChecked", js.undefined)
+    @scala.inline
+    def setDefaultMotions(value: PartialkeyinMenuModeother): Self = this.set("defaultMotions", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteDefaultMotions: Self = this.set("defaultMotions", js.undefined)
     @scala.inline
     def setDefaultOpenKeysVarargs(value: String*): Self = this.set("defaultOpenKeys", js.Array(value :_*))
     @scala.inline
@@ -638,6 +653,10 @@ object MenuProps {
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteId: Self = this.set("id", js.undefined)
+    @scala.inline
+    def setInlineCollapsed(value: Boolean): Self = this.set("inlineCollapsed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteInlineCollapsed: Self = this.set("inlineCollapsed", js.undefined)
     @scala.inline
     def setInlist(value: js.Any): Self = this.set("inlist", value.asInstanceOf[js.Any])
     @scala.inline
@@ -1094,6 +1113,10 @@ object MenuProps {
     def setSelectedKeys(value: js.Array[String]): Self = this.set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSelectedKeys: Self = this.set("selectedKeys", js.undefined)
+    @scala.inline
+    def setSiderCollapsed(value: Boolean): Self = this.set("siderCollapsed", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSiderCollapsed: Self = this.set("siderCollapsed", js.undefined)
     @scala.inline
     def setSlot(value: String): Self = this.set("slot", value.asInstanceOf[js.Any])
     @scala.inline

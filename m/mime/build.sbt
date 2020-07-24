@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "mime"
-version := "2.0-dt-20200515Z-093ccf"
+version := "2.0-dt-20200722Z-699d00"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

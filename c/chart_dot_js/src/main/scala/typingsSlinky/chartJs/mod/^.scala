@@ -6,6 +6,7 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.chartJs.anon.Dictkey
 import typingsSlinky.chartJs.anon.DisableCSSInjection
 import typingsSlinky.chartJs.anon.TypeofChart
+import typingsSlinky.chartJs.anon.UpdateScaleDefaults
 import typingsSlinky.std.ArrayLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,5 +34,6 @@ object ^ extends js.Object {
   var platform: DisableCSSInjection = js.native
   var pluginService: PluginServiceStatic = js.native
   var plugins: PluginServiceStatic = js.native
+  var scaleService: UpdateScaleDefaults = js.native
 }
 

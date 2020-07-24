@@ -8,7 +8,7 @@ trait NavigatorIOSProps extends js.Object {
   /**
     * The default background color of the navigation bar.
     */
-  var barTintColor: js.UndefOr[String] = js.undefined
+  var barTintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * NavigatorIOS uses "route" objects to identify child views, their props, and navigation bar configuration.
     * "push" and all the other navigation operations expect routes to be like this
@@ -46,11 +46,11 @@ trait NavigatorIOSProps extends js.Object {
   /**
     * The color used for buttons in the navigation bar
     */
-  var tintColor: js.UndefOr[String] = js.undefined
+  var tintColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * The text color of the navigation bar title
     */
-  var titleTextColor: js.UndefOr[String] = js.undefined
+  var titleTextColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * A Boolean value that indicates whether the navigation bar is translucent
     */
@@ -77,7 +77,7 @@ object NavigatorIOSProps {
     @scala.inline
     def setInitialRoute(value: Route): Self = this.set("initialRoute", value.asInstanceOf[js.Any])
     @scala.inline
-    def setBarTintColor(value: String): Self = this.set("barTintColor", value.asInstanceOf[js.Any])
+    def setBarTintColor(value: ColorValue): Self = this.set("barTintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteBarTintColor: Self = this.set("barTintColor", js.undefined)
     @scala.inline
@@ -105,11 +105,11 @@ object NavigatorIOSProps {
     @scala.inline
     def setStyleNull: Self = this.set("style", null)
     @scala.inline
-    def setTintColor(value: String): Self = this.set("tintColor", value.asInstanceOf[js.Any])
+    def setTintColor(value: ColorValue): Self = this.set("tintColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTintColor: Self = this.set("tintColor", js.undefined)
     @scala.inline
-    def setTitleTextColor(value: String): Self = this.set("titleTextColor", value.asInstanceOf[js.Any])
+    def setTitleTextColor(value: ColorValue): Self = this.set("titleTextColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTitleTextColor: Self = this.set("titleTextColor", js.undefined)
     @scala.inline

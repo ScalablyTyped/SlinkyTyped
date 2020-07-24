@@ -10,7 +10,7 @@ trait ShadowPropTypesIOSStatic extends js.Object {
     * Sets the drop shadow color
     * @platform ios
     */
-  var shadowColor: String
+  var shadowColor: ColorValue
   /**
     * Sets the drop shadow offset
     * @platform ios
@@ -30,7 +30,7 @@ trait ShadowPropTypesIOSStatic extends js.Object {
 
 object ShadowPropTypesIOSStatic {
   @scala.inline
-  def apply(shadowColor: String, shadowOffset: Height, shadowOpacity: Double, shadowRadius: Double): ShadowPropTypesIOSStatic = {
+  def apply(shadowColor: ColorValue, shadowOffset: Height, shadowOpacity: Double, shadowRadius: Double): ShadowPropTypesIOSStatic = {
     val __obj = js.Dynamic.literal(shadowColor = shadowColor.asInstanceOf[js.Any], shadowOffset = shadowOffset.asInstanceOf[js.Any], shadowOpacity = shadowOpacity.asInstanceOf[js.Any], shadowRadius = shadowRadius.asInstanceOf[js.Any])
     __obj.asInstanceOf[ShadowPropTypesIOSStatic]
   }
@@ -46,7 +46,7 @@ object ShadowPropTypesIOSStatic {
         x
     }
     @scala.inline
-    def setShadowColor(value: String): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
+    def setShadowColor(value: ColorValue): Self = this.set("shadowColor", value.asInstanceOf[js.Any])
     @scala.inline
     def setShadowOffset(value: Height): Self = this.set("shadowOffset", value.asInstanceOf[js.Any])
     @scala.inline

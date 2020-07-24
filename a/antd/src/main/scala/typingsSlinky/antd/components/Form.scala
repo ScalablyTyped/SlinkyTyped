@@ -67,10 +67,10 @@ import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
 import typingsSlinky.antd.formFormMod.FormLayout
 import typingsSlinky.antd.formFormMod.FormProps
-import typingsSlinky.antd.formUtilMod.FormInstance
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
 import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.useFormMod.FormInstance
 import typingsSlinky.rcFieldForm.formMod.RenderProps
 import typingsSlinky.rcFieldForm.interfaceMod.FieldData
 import typingsSlinky.rcFieldForm.interfaceMod.Store
@@ -460,6 +460,8 @@ object Form {
     def prefix(value: String): this.type = set("prefix", value.asInstanceOf[js.Any])
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def preserve(value: Boolean): this.type = set("preserve", value.asInstanceOf[js.Any])
     @scala.inline
     def property(value: String): this.type = set("property", value.asInstanceOf[js.Any])
     @scala.inline

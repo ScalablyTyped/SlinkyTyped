@@ -1728,7 +1728,7 @@ package object fpMod {
   ]
   type LodashSortedUniqBy1x1[T] = js.Function1[/* array */ js.UndefOr[typingsSlinky.lodash.mod.List[T] | scala.Null], js.Array[T]]
   type LodashSortedUniqBy1x2[T] = js.Function1[/* iteratee */ typingsSlinky.lodash.mod.ValueIteratee[T], js.Array[T]]
-  type LodashSplit1x1 = js.Function1[/* string */ java.lang.String, js.Array[java.lang.String]]
+  type LodashSplit1x1 = js.Function1[/* string */ js.UndefOr[java.lang.String | scala.Null], js.Array[java.lang.String]]
   type LodashSplit1x2 = js.Function1[/* separator */ js.RegExp | java.lang.String, js.Array[java.lang.String]]
   type LodashSpread = js.Function1[
     /* func */ js.Function1[/* repeated */ js.Any, js.Any], 

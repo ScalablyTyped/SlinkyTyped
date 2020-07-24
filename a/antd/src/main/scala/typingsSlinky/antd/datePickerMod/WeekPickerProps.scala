@@ -159,6 +159,7 @@ trait WeekPickerProps extends js.Object {
   var prefixCls: js.UndefOr[String] = js.undefined
   var renderExtraFooter: js.UndefOr[js.Function1[/* mode */ PanelMode, ReactElement]] = js.undefined
   var role: js.UndefOr[String] = js.undefined
+  var showNow: js.UndefOr[Boolean] = js.undefined
   var showTime: js.UndefOr[Boolean | SharedTimeProps[Moment]] = js.undefined
   var showToday: js.UndefOr[Boolean] = js.undefined
   var size: js.UndefOr[SizeType] = js.undefined
@@ -560,6 +561,10 @@ object WeekPickerProps {
     def setRole(value: String): Self = this.set("role", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRole: Self = this.set("role", js.undefined)
+    @scala.inline
+    def setShowNow(value: Boolean): Self = this.set("showNow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowNow: Self = this.set("showNow", js.undefined)
     @scala.inline
     def setShowTime(value: Boolean | SharedTimeProps[Moment]): Self = this.set("showTime", value.asInstanceOf[js.Any])
     @scala.inline

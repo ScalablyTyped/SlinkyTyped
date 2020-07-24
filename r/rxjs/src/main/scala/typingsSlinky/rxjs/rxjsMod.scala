@@ -335,34 +335,6 @@ object rxjsMod extends js.Object {
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean],
     defaultValue: D
   ): OperatorFunction[T, T | D] = js.native
-  def flatMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
-  def flatMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O], concurrent: Double): OperatorFunction[T, ObservedValueOf[O]] = js.native
-  def flatMap[T, O /* <: ObservableInput[_] */](
-    project: js.Function2[/* value */ T, /* index */ Double, O],
-    resultSelector: js.UndefOr[scala.Nothing],
-    concurrent: Double
-  ): OperatorFunction[T, ObservedValueOf[O]] = js.native
-  def flatMap[T, R, O /* <: ObservableInput[_] */](
-    project: js.Function2[/* value */ T, /* index */ Double, O],
-    resultSelector: js.Function4[
-      /* outerValue */ T, 
-      /* innerValue */ ObservedValueOf[O], 
-      /* outerIndex */ Double, 
-      /* innerIndex */ Double, 
-      R
-    ]
-  ): OperatorFunction[T, R] = js.native
-  def flatMap[T, R, O /* <: ObservableInput[_] */](
-    project: js.Function2[/* value */ T, /* index */ Double, O],
-    resultSelector: js.Function4[
-      /* outerValue */ T, 
-      /* innerValue */ ObservedValueOf[O], 
-      /* outerIndex */ Double, 
-      /* innerIndex */ Double, 
-      R
-    ],
-    concurrent: Double
-  ): OperatorFunction[T, R] = js.native
   def groupBy[T, K](keySelector: js.Function1[/* value */ T, K]): OperatorFunction[T, GroupedObservable[K, T]] = js.native
   def groupBy[T, K](
     keySelector: js.Function1[/* value */ T, K],
@@ -1054,5 +1026,37 @@ object rxjsMod extends js.Object {
   def zipAll[R](project: js.Function1[/* repeated */ js.Any, R]): OperatorFunction[_, R] = js.native
   @JSName("zipAll")
   def zipAll_TR[T, R](project: js.Function1[/* repeated */ T, R]): OperatorFunction[ObservableInput[T], R] = js.native
+  @js.native
+  object flatMap extends js.Object {
+    def apply[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
+    def apply[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O], concurrent: Double): OperatorFunction[T, ObservedValueOf[O]] = js.native
+    def apply[T, O /* <: ObservableInput[_] */](
+      project: js.Function2[/* value */ T, /* index */ Double, O],
+      resultSelector: js.UndefOr[scala.Nothing],
+      concurrent: Double
+    ): OperatorFunction[T, ObservedValueOf[O]] = js.native
+    def apply[T, R, O /* <: ObservableInput[_] */](
+      project: js.Function2[/* value */ T, /* index */ Double, O],
+      resultSelector: js.Function4[
+          /* outerValue */ T, 
+          /* innerValue */ ObservedValueOf[O], 
+          /* outerIndex */ Double, 
+          /* innerIndex */ Double, 
+          R
+        ]
+    ): OperatorFunction[T, R] = js.native
+    def apply[T, R, O /* <: ObservableInput[_] */](
+      project: js.Function2[/* value */ T, /* index */ Double, O],
+      resultSelector: js.Function4[
+          /* outerValue */ T, 
+          /* innerValue */ ObservedValueOf[O], 
+          /* outerIndex */ Double, 
+          /* innerIndex */ Double, 
+          R
+        ],
+      concurrent: Double
+    ): OperatorFunction[T, R] = js.native
+  }
+  
 }
 

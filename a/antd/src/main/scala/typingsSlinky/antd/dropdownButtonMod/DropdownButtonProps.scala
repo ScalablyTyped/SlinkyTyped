@@ -19,8 +19,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
-- typingsSlinky.antd.dropdownDropdownMod.DropDownProps because var conflicts: className, prefixCls. Inlined trigger, overlay, onVisibleChange, visible, disabled, align, getPopupContainer, transitionName, placement, overlayClassName, overlayStyle, forceRender, mouseEnterDelay, mouseLeaveDelay, openClassName */ trait DropdownButtonProps extends ButtonGroupProps {
+- typingsSlinky.antd.dropdownDropdownMod.DropDownProps because var conflicts: className, prefixCls. Inlined arrow, trigger, overlay, onVisibleChange, visible, disabled, align, getPopupContainer, transitionName, placement, overlayClassName, overlayStyle, forceRender, mouseEnterDelay, mouseLeaveDelay, openClassName */ trait DropdownButtonProps extends ButtonGroupProps {
   var align: js.UndefOr[Align] = js.undefined
+  var arrow: js.UndefOr[Boolean] = js.undefined
   var buttonsRender: js.UndefOr[js.Function1[/* buttons */ js.Array[ReactElement], js.Array[ReactElement]]] = js.undefined
   var children: js.UndefOr[ReactElement] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
@@ -72,6 +73,10 @@ object DropdownButtonProps {
     def setAlign(value: Align): Self = this.set("align", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAlign: Self = this.set("align", js.undefined)
+    @scala.inline
+    def setArrow(value: Boolean): Self = this.set("arrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteArrow: Self = this.set("arrow", js.undefined)
     @scala.inline
     def setButtonsRender(value: /* buttons */ js.Array[ReactElement] => js.Array[ReactElement]): Self = this.set("buttonsRender", js.Any.fromFunction1(value))
     @scala.inline

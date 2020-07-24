@@ -37,7 +37,7 @@ import scala.scalajs.js.annotation._
 - typingsSlinky.reactNative.mod.FlexStyle because Already inherited
 - typingsSlinky.reactNative.mod.ViewStyle because Already inherited
 - typingsSlinky.reactNative.mod.TextStyleAndroid because var conflicts: alignContent, alignItems, alignSelf, aspectRatio, backfaceVisibility, backgroundColor, borderBottomColor, borderBottomEndRadius, borderBottomLeftRadius, borderBottomRightRadius, borderBottomStartRadius, borderBottomWidth, borderColor, borderEndColor, borderEndWidth, borderLeftColor, borderLeftWidth, borderRadius, borderRightColor, borderRightWidth, borderStartColor, borderStartWidth, borderStyle, borderTopColor, borderTopEndRadius, borderTopLeftRadius, borderTopRightRadius, borderTopStartRadius, borderTopWidth, borderWidth, bottom, direction, display, elevation, end, flex, flexBasis, flexDirection, flexGrow, flexShrink, flexWrap, height, justifyContent, left, margin, marginBottom, marginEnd, marginHorizontal, marginLeft, marginRight, marginStart, marginTop, marginVertical, maxHeight, maxWidth, minHeight, minWidth, opacity, overflow, padding, paddingBottom, paddingEnd, paddingHorizontal, paddingLeft, paddingRight, paddingStart, paddingTop, paddingVertical, position, right, rotation, scaleX, scaleY, shadowColor, shadowOffset, shadowOpacity, shadowRadius, start, testID, top, transform, transformMatrix, translateX, translateY, width, zIndex. Inlined textAlignVertical, includeFontPadding */ trait TextStyle extends TextStyleIOS {
-  var color: js.UndefOr[String] = js.undefined
+  var color: js.UndefOr[ColorValue] = js.undefined
   var fontFamily: js.UndefOr[String] = js.undefined
   var fontSize: js.UndefOr[Double] = js.undefined
   var fontStyle: js.UndefOr[normal_ | italic] = js.undefined
@@ -54,7 +54,7 @@ import scala.scalajs.js.annotation._
   var textAlign: js.UndefOr[auto | left | right | center | justify] = js.undefined
   var textAlignVertical: js.UndefOr[auto | top | bottom | center] = js.undefined
   var textDecorationLine: js.UndefOr[none | underline | `line-through` | (`underline line-through`)] = js.undefined
-  var textShadowColor: js.UndefOr[String] = js.undefined
+  var textShadowColor: js.UndefOr[ColorValue] = js.undefined
   var textShadowOffset: js.UndefOr[Height] = js.undefined
   var textShadowRadius: js.UndefOr[Double] = js.undefined
   var textTransform: js.UndefOr[none | capitalize | uppercase | lowercase] = js.undefined
@@ -78,7 +78,7 @@ object TextStyle {
         x
     }
     @scala.inline
-    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: ColorValue): Self = this.set("color", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
     @scala.inline
@@ -118,7 +118,7 @@ object TextStyle {
     @scala.inline
     def deleteTextDecorationLine: Self = this.set("textDecorationLine", js.undefined)
     @scala.inline
-    def setTextShadowColor(value: String): Self = this.set("textShadowColor", value.asInstanceOf[js.Any])
+    def setTextShadowColor(value: ColorValue): Self = this.set("textShadowColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteTextShadowColor: Self = this.set("textShadowColor", js.undefined)
     @scala.inline

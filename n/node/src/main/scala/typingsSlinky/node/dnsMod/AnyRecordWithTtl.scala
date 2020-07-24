@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/** @deprecated Use AnyARecord or AnyAaaaRecord instead. */
+/** @deprecated Use `AnyARecord` or `AnyAaaaRecord` instead. */
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.node.dnsMod.AnyARecord
   - typingsSlinky.node.dnsMod.AnyAaaaRecord

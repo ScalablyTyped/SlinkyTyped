@@ -12,6 +12,7 @@ import scala.scalajs.js.annotation._
 
 trait DropDownProps extends js.Object {
   var align: js.UndefOr[Align] = js.undefined
+  var arrow: js.UndefOr[Boolean] = js.undefined
   var className: js.UndefOr[String] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
   var forceRender: js.UndefOr[Boolean] = js.undefined
@@ -57,6 +58,10 @@ object DropDownProps {
     def setAlign(value: Align): Self = this.set("align", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAlign: Self = this.set("align", js.undefined)
+    @scala.inline
+    def setArrow(value: Boolean): Self = this.set("arrow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteArrow: Self = this.set("arrow", js.undefined)
     @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     @scala.inline

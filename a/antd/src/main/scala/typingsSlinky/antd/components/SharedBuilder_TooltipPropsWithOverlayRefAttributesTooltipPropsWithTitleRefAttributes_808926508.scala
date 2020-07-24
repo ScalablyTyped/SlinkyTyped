@@ -8,6 +8,7 @@ import typingsSlinky.antd.colorsMod.PresetColorType
 import typingsSlinky.antd.placementsMod.AdjustOverflow
 import typingsSlinky.antd.tooltipMod.RenderFunction
 import typingsSlinky.antd.tooltipMod.TooltipPlacement
+import typingsSlinky.antd.typeMod.LiteralUnion
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,7 +29,7 @@ class SharedBuilder_TooltipPropsWithOverlayRefAttributesTooltipPropsWithTitleRef
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   @scala.inline
-  def color(value: PresetColorType): this.type = set("color", value.asInstanceOf[js.Any])
+  def color(value: LiteralUnion[PresetColorType, String]): this.type = set("color", value.asInstanceOf[js.Any])
   @scala.inline
   def getPopupContainer(value: /* triggerNode */ HTMLElement => HTMLElement): this.type = set("getPopupContainer", js.Any.fromFunction1(value))
   @scala.inline

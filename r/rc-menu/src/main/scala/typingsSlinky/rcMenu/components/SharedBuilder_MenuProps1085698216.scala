@@ -20,6 +20,7 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.rcMenu.anon.Open
+import typingsSlinky.rcMenu.anon.PartialkeyinMenuModeother
 import typingsSlinky.rcMenu.interfaceMod.BuiltinPlacements
 import typingsSlinky.rcMenu.interfaceMod.MenuInfo
 import typingsSlinky.rcMenu.interfaceMod.MenuMode
@@ -200,6 +201,8 @@ class SharedBuilder_MenuProps1085698216[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
   @scala.inline
+  def collapsedWidth(value: String | Double): this.type = set("collapsedWidth", value.asInstanceOf[js.Any])
+  @scala.inline
   def color(value: String): this.type = set("color", value.asInstanceOf[js.Any])
   @scala.inline
   def contentEditable(value: Booleanish | inherit): this.type = set("contentEditable", value.asInstanceOf[js.Any])
@@ -213,6 +216,8 @@ class SharedBuilder_MenuProps1085698216[R <: js.Object] (val args: js.Array[js.A
   def defaultActiveFirst(value: Boolean): this.type = set("defaultActiveFirst", value.asInstanceOf[js.Any])
   @scala.inline
   def defaultChecked(value: Boolean): this.type = set("defaultChecked", value.asInstanceOf[js.Any])
+  @scala.inline
+  def defaultMotions(value: PartialkeyinMenuModeother): this.type = set("defaultMotions", value.asInstanceOf[js.Any])
   @scala.inline
   def defaultOpenKeysVarargs(value: String*): this.type = set("defaultOpenKeys", js.Array(value :_*))
   @scala.inline
@@ -245,6 +250,8 @@ class SharedBuilder_MenuProps1085698216[R <: js.Object] (val args: js.Array[js.A
   def hidden(value: Boolean): this.type = set("hidden", value.asInstanceOf[js.Any])
   @scala.inline
   def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
+  @scala.inline
+  def inlineCollapsed(value: Boolean): this.type = set("inlineCollapsed", value.asInstanceOf[js.Any])
   @scala.inline
   def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
   @scala.inline
@@ -479,6 +486,8 @@ class SharedBuilder_MenuProps1085698216[R <: js.Object] (val args: js.Array[js.A
   def selectedKeysVarargs(value: String*): this.type = set("selectedKeys", js.Array(value :_*))
   @scala.inline
   def selectedKeys(value: js.Array[String]): this.type = set("selectedKeys", value.asInstanceOf[js.Any])
+  @scala.inline
+  def siderCollapsed(value: Boolean): this.type = set("siderCollapsed", value.asInstanceOf[js.Any])
   @scala.inline
   def slot(value: String): this.type = set("slot", value.asInstanceOf[js.Any])
   @scala.inline

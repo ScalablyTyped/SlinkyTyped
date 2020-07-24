@@ -1,6 +1,5 @@
 package typingsSlinky.antd.uploadInterfaceMod
 
-import org.scalajs.dom.raw.File
 import typingsSlinky.antd.anon.Percent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,13 +8,13 @@ import scala.scalajs.js.annotation._
 trait RcCustomRequestOptions extends js.Object {
   var action: String
   var data: js.Object
-  var file: File
+  var file: RcFile
   var filename: String
   var headers: js.Object
   var withCredentials: Boolean
   def onError(error: js.Error): Unit
-  def onProgress(event: Percent, file: File): Unit
-  def onSuccess(response: js.Object, file: File): Unit
+  def onProgress(event: Percent, file: RcFile): Unit
+  def onSuccess(response: js.Object, file: RcFile): Unit
 }
 
 object RcCustomRequestOptions {
@@ -23,12 +22,12 @@ object RcCustomRequestOptions {
   def apply(
     action: String,
     data: js.Object,
-    file: File,
+    file: RcFile,
     filename: String,
     headers: js.Object,
     onError: js.Error => Unit,
-    onProgress: (Percent, File) => Unit,
-    onSuccess: (js.Object, File) => Unit,
+    onProgress: (Percent, RcFile) => Unit,
+    onSuccess: (js.Object, RcFile) => Unit,
     withCredentials: Boolean
   ): RcCustomRequestOptions = {
     val __obj = js.Dynamic.literal(action = action.asInstanceOf[js.Any], data = data.asInstanceOf[js.Any], file = file.asInstanceOf[js.Any], filename = filename.asInstanceOf[js.Any], headers = headers.asInstanceOf[js.Any], onError = js.Any.fromFunction1(onError), onProgress = js.Any.fromFunction2(onProgress), onSuccess = js.Any.fromFunction2(onSuccess), withCredentials = withCredentials.asInstanceOf[js.Any])
@@ -50,7 +49,7 @@ object RcCustomRequestOptions {
     @scala.inline
     def setData(value: js.Object): Self = this.set("data", value.asInstanceOf[js.Any])
     @scala.inline
-    def setFile(value: File): Self = this.set("file", value.asInstanceOf[js.Any])
+    def setFile(value: RcFile): Self = this.set("file", value.asInstanceOf[js.Any])
     @scala.inline
     def setFilename(value: String): Self = this.set("filename", value.asInstanceOf[js.Any])
     @scala.inline
@@ -58,9 +57,9 @@ object RcCustomRequestOptions {
     @scala.inline
     def setOnError(value: js.Error => Unit): Self = this.set("onError", js.Any.fromFunction1(value))
     @scala.inline
-    def setOnProgress(value: (Percent, File) => Unit): Self = this.set("onProgress", js.Any.fromFunction2(value))
+    def setOnProgress(value: (Percent, RcFile) => Unit): Self = this.set("onProgress", js.Any.fromFunction2(value))
     @scala.inline
-    def setOnSuccess(value: (js.Object, File) => Unit): Self = this.set("onSuccess", js.Any.fromFunction2(value))
+    def setOnSuccess(value: (js.Object, RcFile) => Unit): Self = this.set("onSuccess", js.Any.fromFunction2(value))
     @scala.inline
     def setWithCredentials(value: Boolean): Self = this.set("withCredentials", value.asInstanceOf[js.Any])
   }

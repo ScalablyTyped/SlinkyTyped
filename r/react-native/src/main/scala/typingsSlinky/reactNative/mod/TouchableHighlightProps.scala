@@ -21,7 +21,7 @@ trait TouchableHighlightProps extends TouchableWithoutFeedbackProps {
   /**
     * The color of the underlay that will show through when the touch is active.
     */
-  var underlayColor: js.UndefOr[String] = js.undefined
+  var underlayColor: js.UndefOr[ColorValue] = js.undefined
 }
 
 object TouchableHighlightProps {
@@ -54,7 +54,7 @@ object TouchableHighlightProps {
     @scala.inline
     def deleteOnShowUnderlay: Self = this.set("onShowUnderlay", js.undefined)
     @scala.inline
-    def setUnderlayColor(value: String): Self = this.set("underlayColor", value.asInstanceOf[js.Any])
+    def setUnderlayColor(value: ColorValue): Self = this.set("underlayColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteUnderlayColor: Self = this.set("underlayColor", js.undefined)
   }

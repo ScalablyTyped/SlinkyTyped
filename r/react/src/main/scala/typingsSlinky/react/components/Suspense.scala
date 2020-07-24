@@ -22,8 +22,6 @@ object Suspense {
     def fallback(value: NonNullable[ReactElement]): this.type = set("fallback", value.asInstanceOf[js.Any])
     @scala.inline
     def fallbackNull: this.type = set("fallback", null)
-    @scala.inline
-    def unstable_avoidThisFallback(value: Boolean): this.type = set("unstable_avoidThisFallback", value.asInstanceOf[js.Any])
   }
   
   def withProps(p: SuspenseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))

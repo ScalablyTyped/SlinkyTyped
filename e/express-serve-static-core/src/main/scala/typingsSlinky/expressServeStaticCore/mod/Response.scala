@@ -3,6 +3,7 @@ package typingsSlinky.expressServeStaticCore.mod
 import typingsSlinky.node.httpMod.IncomingMessage
 import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.qs.mod.ParsedQs
+import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,7 +39,7 @@ trait Response[ResBody]
     */
   @JSName("jsonp")
   var jsonp_Original: Send[ResBody, this.type] = js.native
-  var locals: js.Any = js.native
+  var locals: Record[String, _] = js.native
   /**
     * After middleware.init executed, Response will contain req property
     * See: express/lib/middleware/init.js

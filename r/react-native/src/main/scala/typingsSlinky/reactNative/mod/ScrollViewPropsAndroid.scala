@@ -15,7 +15,7 @@ trait ScrollViewPropsAndroid extends js.Object {
     * unnecessary overdraw. This is an advanced optimization that is not
     * needed in the general case.
     */
-  var endFillColor: js.UndefOr[String] = js.undefined
+  var endFillColor: js.UndefOr[ColorValue] = js.undefined
   /**
     * Fades out the edges of the the scroll content.
     *
@@ -71,7 +71,7 @@ object ScrollViewPropsAndroid {
         x
     }
     @scala.inline
-    def setEndFillColor(value: String): Self = this.set("endFillColor", value.asInstanceOf[js.Any])
+    def setEndFillColor(value: ColorValue): Self = this.set("endFillColor", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEndFillColor: Self = this.set("endFillColor", js.undefined)
     @scala.inline

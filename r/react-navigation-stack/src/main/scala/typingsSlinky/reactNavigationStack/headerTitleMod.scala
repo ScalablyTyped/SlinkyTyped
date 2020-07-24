@@ -3,11 +3,11 @@ package typingsSlinky.reactNavigationStack
 import org.scalablytyped.runtime.Instantiable0
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.Component
-import typingsSlinky.react.mod.ComponentProps
 import typingsSlinky.react.mod.ComponentPropsWithRef
 import typingsSlinky.react.mod.Context
 import typingsSlinky.react.mod.ContextType
 import typingsSlinky.reactNative.mod.Animated.AnimatedProps
+import typingsSlinky.reactNative.mod.Animated.ComponentProps
 import typingsSlinky.reactNative.mod.Text
 import typingsSlinky.reactNavigation.mod.SupportedThemes
 import scala.scalajs.js
@@ -20,7 +20,11 @@ object headerTitleMod extends js.Object {
   @js.native
   trait HeaderTitle
     extends Component[
-          ComponentProps[ReactComponentClass[AnimatedProps[ComponentPropsWithRef[Instantiable0[Text]]]]], 
+          typingsSlinky.react.mod.ComponentProps[
+            ReactComponentClass[
+              ComponentProps[Instantiable0[Text]] | AnimatedProps[ComponentPropsWithRef[Instantiable0[Text]]]
+            ]
+          ], 
           js.Object, 
           js.Any
         ] {

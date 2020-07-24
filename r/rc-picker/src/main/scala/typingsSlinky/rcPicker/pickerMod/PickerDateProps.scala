@@ -300,6 +300,7 @@ trait PickerDateProps[DateType] extends PickerProps[DateType] {
   var prevIcon: js.UndefOr[ReactElement] = js.undefined
   var renderExtraFooter: js.UndefOr[js.Function1[/* mode */ PanelMode, ReactElement]] = js.undefined
   var role: js.UndefOr[String] = js.undefined
+  var showNow: js.UndefOr[Boolean] = js.undefined
   var showTime: js.UndefOr[Boolean | SharedTimeProps[DateType]] = js.undefined
   var showToday: js.UndefOr[Boolean] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
@@ -718,6 +719,10 @@ object PickerDateProps {
     def setRole(value: String): Self = this.set("role", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteRole: Self = this.set("role", js.undefined)
+    @scala.inline
+    def setShowNow(value: Boolean): Self = this.set("showNow", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteShowNow: Self = this.set("showNow", js.undefined)
     @scala.inline
     def setShowTime(value: Boolean | SharedTimeProps[DateType]): Self = this.set("showTime", value.asInstanceOf[js.Any])
     @scala.inline

@@ -47,6 +47,7 @@ object OptionList {
     itemHeight: Double,
     multiple: Boolean,
     onActiveValue: (RawValueType, Double) => Unit,
+    onMouseEnter: () => Unit,
     onScroll: SyntheticUIEvent[HTMLDivElement] => Unit,
     onSelect: (RawValueType, Selected) => Unit,
     onToggleOpen: js.UndefOr[Boolean] => Unit,
@@ -56,7 +57,7 @@ object OptionList {
     searchValue: String,
     values: Set[RawValueType]
   ): Builder = {
-    val __props = js.Dynamic.literal(childrenAsData = childrenAsData.asInstanceOf[js.Any], flattenOptions = flattenOptions.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], itemHeight = itemHeight.asInstanceOf[js.Any], multiple = multiple.asInstanceOf[js.Any], onActiveValue = js.Any.fromFunction2(onActiveValue), onScroll = js.Any.fromFunction1(onScroll), onSelect = js.Any.fromFunction2(onSelect), onToggleOpen = js.Any.fromFunction1(onToggleOpen), open = open.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], searchValue = searchValue.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
+    val __props = js.Dynamic.literal(childrenAsData = childrenAsData.asInstanceOf[js.Any], flattenOptions = flattenOptions.asInstanceOf[js.Any], height = height.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], itemHeight = itemHeight.asInstanceOf[js.Any], multiple = multiple.asInstanceOf[js.Any], onActiveValue = js.Any.fromFunction2(onActiveValue), onMouseEnter = js.Any.fromFunction0(onMouseEnter), onScroll = js.Any.fromFunction1(onScroll), onSelect = js.Any.fromFunction2(onSelect), onToggleOpen = js.Any.fromFunction1(onToggleOpen), open = open.asInstanceOf[js.Any], options = options.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], searchValue = searchValue.asInstanceOf[js.Any], values = values.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[OptionListProps[js.Array[DataNode]] with RefAttributes[js.Any]]))
   }
 }
