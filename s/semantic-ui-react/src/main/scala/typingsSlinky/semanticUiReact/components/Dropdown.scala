@@ -8,10 +8,14 @@ import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.semanticUiReact.dropdownDividerMod.DropdownDividerProps
 import typingsSlinky.semanticUiReact.dropdownDropdownMod.DropdownOnSearchChangeData
 import typingsSlinky.semanticUiReact.dropdownDropdownMod.DropdownProps
+import typingsSlinky.semanticUiReact.dropdownHeaderMod.DropdownHeaderProps
 import typingsSlinky.semanticUiReact.dropdownItemMod.DropdownItemProps
+import typingsSlinky.semanticUiReact.dropdownMenuMod.DropdownMenuProps
 import typingsSlinky.semanticUiReact.dropdownMod.default
+import typingsSlinky.semanticUiReact.dropdownSearchInputMod.DropdownSearchInputProps
 import typingsSlinky.semanticUiReact.labelLabelMod.LabelProps
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom left`
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom right`
@@ -194,5 +198,68 @@ object Dropdown {
   
   def withProps(p: DropdownProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Dropdown.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Divider {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Dropdown", "Divider")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: DropdownDividerProps): SharedBuilder_DropdownDividerProps1707744239 = new SharedBuilder_DropdownDividerProps1707744239(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Divider.type): SharedBuilder_DropdownDividerProps1707744239 = new SharedBuilder_DropdownDividerProps1707744239(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Header {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Dropdown", "Header")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: DropdownHeaderProps): SharedBuilder_DropdownHeaderProps_361301233 = new SharedBuilder_DropdownHeaderProps_361301233(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Header.type): SharedBuilder_DropdownHeaderProps_361301233 = new SharedBuilder_DropdownHeaderProps_361301233(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Item {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Dropdown", "Item")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: DropdownItemProps): SharedBuilder_DropdownItemProps_1338970085 = new SharedBuilder_DropdownItemProps_1338970085(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Item.type): SharedBuilder_DropdownItemProps_1338970085 = new SharedBuilder_DropdownItemProps_1338970085(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Menu {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Dropdown", "Menu")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: DropdownMenuProps): SharedBuilder_DropdownMenuProps188553549 = new SharedBuilder_DropdownMenuProps188553549(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Menu.type): SharedBuilder_DropdownMenuProps188553549 = new SharedBuilder_DropdownMenuProps188553549(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object SearchInput {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Dropdown", "SearchInput")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, js.Object] {
+      @scala.inline
+      def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+      @scala.inline
+      def autoComplete(value: String): this.type = set("autoComplete", value.asInstanceOf[js.Any])
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      @scala.inline
+      def tabIndex(value: Double | String): this.type = set("tabIndex", value.asInstanceOf[js.Any])
+      @scala.inline
+      def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])
+      @scala.inline
+      def value(value: Double | String): this.type = set("value", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: DropdownSearchInputProps): typingsSlinky.semanticUiReact.components.Dropdown.SearchInput.Builder = new typingsSlinky.semanticUiReact.components.Dropdown.SearchInput.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: SearchInput.type): typingsSlinky.semanticUiReact.components.Dropdown.SearchInput.Builder = new typingsSlinky.semanticUiReact.components.Dropdown.SearchInput.Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

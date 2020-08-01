@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.alternate
 import typingsSlinky.antd.antdStrings.left
 import typingsSlinky.antd.antdStrings.right
+import typingsSlinky.antd.timelineItemMod.TimeLineItemProps
 import typingsSlinky.antd.timelineTimelineMod.TimelineProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -43,5 +44,14 @@ object Timeline {
   
   def withProps(p: TimelineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Timeline.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Item {
+    @JSImport("antd/lib/timeline", "default.Item")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: TimeLineItemProps): SharedBuilder_TimeLineItemProps_1225119422 = new SharedBuilder_TimeLineItemProps_1225119422(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Item.type): SharedBuilder_TimeLineItemProps_1225119422 = new SharedBuilder_TimeLineItemProps_1225119422(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

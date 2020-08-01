@@ -7,6 +7,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdStrings.click
 import typingsSlinky.antd.antdStrings.contextMenu
 import typingsSlinky.antd.antdStrings.hover
+import typingsSlinky.antd.dropdownButtonMod.DropdownButtonProps
 import typingsSlinky.antd.dropdownDropdownMod.Align
 import typingsSlinky.antd.dropdownDropdownMod.DropDownProps
 import typingsSlinky.antd.dropdownDropdownMod.OverlayFunc
@@ -69,5 +70,18 @@ object Dropdown {
     val __props = js.Dynamic.literal(overlay = overlay.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[DropDownProps]))
   }
+  object Button {
+    @JSImport("antd/lib/dropdown", "default.Button")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: DropdownButtonProps): SharedBuilder_DropdownButtonProps_944754699 = new SharedBuilder_DropdownButtonProps_944754699(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(overlay: ReactElement | OverlayFunc): SharedBuilder_DropdownButtonProps_944754699 = {
+        val __props = js.Dynamic.literal(overlay = overlay.asInstanceOf[js.Any])
+        new SharedBuilder_DropdownButtonProps_944754699(js.Array(this.component, __props.asInstanceOf[DropdownButtonProps]))
+    }
+  }
+  
 }
 

@@ -8,7 +8,9 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.cardCardMod.CardProps
+import typingsSlinky.semanticUiReact.cardContentMod.CardContentProps
 import typingsSlinky.semanticUiReact.cardDescriptionMod.CardDescriptionProps
+import typingsSlinky.semanticUiReact.cardGroupMod.CardGroupProps
 import typingsSlinky.semanticUiReact.cardHeaderMod.CardHeaderProps
 import typingsSlinky.semanticUiReact.cardMetaMod.CardMetaProps
 import typingsSlinky.semanticUiReact.cardMod.default
@@ -91,5 +93,50 @@ object Card {
   
   def withProps(p: CardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Card.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Content {
+    @JSImport("semantic-ui-react/dist/commonjs/views/Card", "Content")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CardContentProps): SharedBuilder_CardContentProps516196698 = new SharedBuilder_CardContentProps516196698(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Content.type): SharedBuilder_CardContentProps516196698 = new SharedBuilder_CardContentProps516196698(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Description {
+    @JSImport("semantic-ui-react/dist/commonjs/views/Card", "Description")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CardDescriptionProps): SharedBuilder_CardDescriptionProps1426981333 = new SharedBuilder_CardDescriptionProps1426981333(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Description.type): SharedBuilder_CardDescriptionProps1426981333 = new SharedBuilder_CardDescriptionProps1426981333(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Group {
+    @JSImport("semantic-ui-react/dist/commonjs/views/Card", "Group")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CardGroupProps): SharedBuilder_CardGroupProps495383547 = new SharedBuilder_CardGroupProps495383547(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Group.type): SharedBuilder_CardGroupProps495383547 = new SharedBuilder_CardGroupProps495383547(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Header {
+    @JSImport("semantic-ui-react/dist/commonjs/views/Card", "Header")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CardHeaderProps): SharedBuilder_CardHeaderProps899634192 = new SharedBuilder_CardHeaderProps899634192(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Header.type): SharedBuilder_CardHeaderProps899634192 = new SharedBuilder_CardHeaderProps899634192(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Meta {
+    @JSImport("semantic-ui-react/dist/commonjs/views/Card", "Meta")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CardMetaProps): SharedBuilder_CardMetaProps_1971303307 = new SharedBuilder_CardMetaProps_1971303307(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Meta.type): SharedBuilder_CardMetaProps_1971303307 = new SharedBuilder_CardMetaProps_1971303307(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

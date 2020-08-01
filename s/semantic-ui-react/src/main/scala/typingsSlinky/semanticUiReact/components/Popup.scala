@@ -161,5 +161,23 @@ object Popup {
   
   def withProps(p: PopupProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Popup.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Content {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Popup", "Content")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: PopupContentProps): SharedBuilder_PopupContentProps183580496 = new SharedBuilder_PopupContentProps183580496(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Content.type): SharedBuilder_PopupContentProps183580496 = new SharedBuilder_PopupContentProps183580496(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Header {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Popup", "Header")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: PopupHeaderProps): SharedBuilder_PopupHeaderProps244003214 = new SharedBuilder_PopupHeaderProps244003214(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Header.type): SharedBuilder_PopupHeaderProps244003214 = new SharedBuilder_PopupHeaderProps244003214(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

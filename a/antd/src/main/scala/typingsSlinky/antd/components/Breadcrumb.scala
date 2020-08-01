@@ -3,8 +3,10 @@ package typingsSlinky.antd.components
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.antd.breadcrumbBreadcrumbMod.BreadcrumbProps
 import typingsSlinky.antd.breadcrumbBreadcrumbMod.Route
+import typingsSlinky.antd.breadcrumbItemMod.BreadcrumbItemProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -43,5 +45,23 @@ object Breadcrumb {
   
   def withProps(p: BreadcrumbProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Breadcrumb.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Item {
+    @JSImport("antd/lib/breadcrumb", "default.Item")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: BreadcrumbItemProps): SharedBuilder_BreadcrumbItemProps_2017195058 = new SharedBuilder_BreadcrumbItemProps_2017195058(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Item.type): SharedBuilder_BreadcrumbItemProps_2017195058 = new SharedBuilder_BreadcrumbItemProps_2017195058(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Separator {
+    @JSImport("antd/lib/breadcrumb", "default.Separator")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: js.Object): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Separator.type): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

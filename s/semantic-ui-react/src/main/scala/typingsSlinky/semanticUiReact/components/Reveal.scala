@@ -4,6 +4,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
+import typingsSlinky.semanticUiReact.revealContentMod.RevealContentProps
 import typingsSlinky.semanticUiReact.revealRevealMod.RevealProps
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`move down`
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`move right`
@@ -48,5 +49,14 @@ object Reveal {
   
   def withProps(p: RevealProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Reveal.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Content {
+    @JSImport("semantic-ui-react/dist/commonjs/elements/Reveal", "default.Content")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: RevealContentProps): SharedBuilder_RevealContentProps2098528121 = new SharedBuilder_RevealContentProps2098528121(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Content.type): SharedBuilder_RevealContentProps2098528121 = new SharedBuilder_RevealContentProps2098528121(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

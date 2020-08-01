@@ -10,7 +10,9 @@ import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.iconIconMod.IconProps
+import typingsSlinky.semanticUiReact.stepContentMod.StepContentProps
 import typingsSlinky.semanticUiReact.stepDescriptionMod.StepDescriptionProps
+import typingsSlinky.semanticUiReact.stepGroupMod.StepGroupProps
 import typingsSlinky.semanticUiReact.stepMod.default
 import typingsSlinky.semanticUiReact.stepStepMod.StepProps
 import typingsSlinky.semanticUiReact.stepTitleMod.StepTitleProps
@@ -77,5 +79,41 @@ object Step {
   
   def withProps(p: StepProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Step.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Content {
+    @JSImport("semantic-ui-react/dist/commonjs/elements/Step", "Content")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: StepContentProps): SharedBuilder_StepContentProps774867170 = new SharedBuilder_StepContentProps774867170(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Content.type): SharedBuilder_StepContentProps774867170 = new SharedBuilder_StepContentProps774867170(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Description {
+    @JSImport("semantic-ui-react/dist/commonjs/elements/Step", "Description")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: StepDescriptionProps): SharedBuilder_StepDescriptionProps_1229748384 = new SharedBuilder_StepDescriptionProps_1229748384(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Description.type): SharedBuilder_StepDescriptionProps_1229748384 = new SharedBuilder_StepDescriptionProps_1229748384(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Group {
+    @JSImport("semantic-ui-react/dist/commonjs/elements/Step", "Group")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: StepGroupProps): SharedBuilder_StepGroupProps1201670136 = new SharedBuilder_StepGroupProps1201670136(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Group.type): SharedBuilder_StepGroupProps1201670136 = new SharedBuilder_StepGroupProps1201670136(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Title {
+    @JSImport("semantic-ui-react/dist/commonjs/elements/Step", "Title")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: StepTitleProps): SharedBuilder_StepTitleProps1252644081 = new SharedBuilder_StepTitleProps1252644081(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Title.type): SharedBuilder_StepTitleProps1252644081 = new SharedBuilder_StepTitleProps1252644081(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

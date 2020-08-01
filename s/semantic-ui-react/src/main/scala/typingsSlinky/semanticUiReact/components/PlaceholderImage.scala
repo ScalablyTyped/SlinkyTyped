@@ -1,7 +1,5 @@
 package typingsSlinky.semanticUiReact.components
 
-import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.placeholderImageMod.PlaceholderImageProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,21 +10,7 @@ object PlaceholderImage {
   @js.native
   object component extends js.Object
   
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
-    @scala.inline
-    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
-    @scala.inline
-    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-    @scala.inline
-    def rectangular(value: Boolean): this.type = set("rectangular", value.asInstanceOf[js.Any])
-    @scala.inline
-    def square(value: Boolean): this.type = set("square", value.asInstanceOf[js.Any])
-  }
-  
-  def withProps(p: PlaceholderImageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: PlaceholderImage.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: PlaceholderImageProps): SharedBuilder_PlaceholderImageProps758767587 = new SharedBuilder_PlaceholderImageProps758767587(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: PlaceholderImage.type): SharedBuilder_PlaceholderImageProps758767587 = new SharedBuilder_PlaceholderImageProps758767587(js.Array(this.component, js.Dictionary.empty))()
 }
 

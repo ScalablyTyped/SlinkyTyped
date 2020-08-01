@@ -19,13 +19,17 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.form.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.rcFieldForm.fieldMod.FieldProps
+import typingsSlinky.rcFieldForm.formContextMod.FormProviderProps
 import typingsSlinky.rcFieldForm.formMod.FormProps
 import typingsSlinky.rcFieldForm.formMod.RenderProps
 import typingsSlinky.rcFieldForm.interfaceMod.FieldData
 import typingsSlinky.rcFieldForm.interfaceMod.FormInstance
+import typingsSlinky.rcFieldForm.interfaceMod.NamePath
 import typingsSlinky.rcFieldForm.interfaceMod.Store
 import typingsSlinky.rcFieldForm.interfaceMod.ValidateErrorEntity
 import typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages
+import typingsSlinky.rcFieldForm.listMod.ListProps
 import typingsSlinky.rcFieldForm.rcFieldFormBooleans.`false`
 import typingsSlinky.rcFieldForm.rcFieldFormStrings.`additions text`
 import typingsSlinky.rcFieldForm.rcFieldFormStrings.`inline`
@@ -490,5 +494,36 @@ object RcFieldForm {
   
   def withProps(p: FormProps with RefAttributes[FormInstance]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: RcFieldForm.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object FormProvider {
+    @JSImport("rc-field-form", "default.FormProvider")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: FormProviderProps): SharedBuilder_FormProviderProps1295524528 = new SharedBuilder_FormProviderProps1295524528(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: FormProvider.type): SharedBuilder_FormProviderProps1295524528 = new SharedBuilder_FormProviderProps1295524528(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Field {
+    @JSImport("rc-field-form", "default.Field")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: FieldProps): SharedBuilder_FieldProps1867252267 = new SharedBuilder_FieldProps1867252267(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Field.type): SharedBuilder_FieldProps1867252267 = new SharedBuilder_FieldProps1867252267(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object List {
+    @JSImport("rc-field-form", "default.List")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: ListProps): SharedBuilder_ListProps425441958 = new SharedBuilder_ListProps425441958(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(name: NamePath): SharedBuilder_ListProps425441958 = {
+        val __props = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
+        new SharedBuilder_ListProps425441958(js.Array(this.component, __props.asInstanceOf[ListProps]))
+    }
+  }
+  
 }
 

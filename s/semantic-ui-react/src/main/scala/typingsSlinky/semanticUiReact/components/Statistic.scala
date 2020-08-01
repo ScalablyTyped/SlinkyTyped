@@ -6,8 +6,11 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
+import typingsSlinky.semanticUiReact.statisticGroupMod.StatisticGroupProps
+import typingsSlinky.semanticUiReact.statisticLabelMod.StatisticLabelProps
 import typingsSlinky.semanticUiReact.statisticStatisticMod.StatisticProps
 import typingsSlinky.semanticUiReact.statisticStatisticMod.StatisticSizeProp
+import typingsSlinky.semanticUiReact.statisticValueMod.StatisticValueProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,5 +56,32 @@ object Statistic {
   
   def withProps(p: StatisticProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Statistic.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Value {
+    @JSImport("semantic-ui-react/dist/commonjs/views/Statistic", "default.Value")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: StatisticValueProps): SharedBuilder_StatisticValueProps1818019187 = new SharedBuilder_StatisticValueProps1818019187(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Value.type): SharedBuilder_StatisticValueProps1818019187 = new SharedBuilder_StatisticValueProps1818019187(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Group {
+    @JSImport("semantic-ui-react/dist/commonjs/views/Statistic", "default.Group")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: StatisticGroupProps): SharedBuilder_StatisticGroupProps_674403293 = new SharedBuilder_StatisticGroupProps_674403293(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Group.type): SharedBuilder_StatisticGroupProps_674403293 = new SharedBuilder_StatisticGroupProps_674403293(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Label {
+    @JSImport("semantic-ui-react/dist/commonjs/views/Statistic", "default.Label")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: StatisticLabelProps): SharedBuilder_StatisticLabelProps_60047603 = new SharedBuilder_StatisticLabelProps_60047603(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Label.type): SharedBuilder_StatisticLabelProps_60047603 = new SharedBuilder_StatisticLabelProps_60047603(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

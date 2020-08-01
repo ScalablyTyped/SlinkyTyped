@@ -7,6 +7,8 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticTEXTALIGNMENTS
+import typingsSlinky.semanticUiReact.segmentGroupMod.SegmentGroupProps
+import typingsSlinky.semanticUiReact.segmentInlineMod.SegmentInlineProps
 import typingsSlinky.semanticUiReact.segmentSegmentMod.SegmentProps
 import typingsSlinky.semanticUiReact.segmentSegmentMod.SegmentSizeProp
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.bottom
@@ -77,5 +79,23 @@ object Segment {
   
   def withProps(p: SegmentProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Segment.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Inline {
+    @JSImport("semantic-ui-react/dist/commonjs/elements/Segment", "default.Inline")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: SegmentInlineProps): SharedBuilder_SegmentInlineProps1003700032 = new SharedBuilder_SegmentInlineProps1003700032(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Inline.type): SharedBuilder_SegmentInlineProps1003700032 = new SharedBuilder_SegmentInlineProps1003700032(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Group {
+    @JSImport("semantic-ui-react/dist/commonjs/elements/Segment", "default.Group")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: SegmentGroupProps): SharedBuilder_SegmentGroupProps1911915083 = new SharedBuilder_SegmentGroupProps1911915083(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Group.type): SharedBuilder_SegmentGroupProps1911915083 = new SharedBuilder_SegmentGroupProps1911915083(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

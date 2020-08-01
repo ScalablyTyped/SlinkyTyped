@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.collapseCollapseMod.CollapseProps
 import typingsSlinky.antd.collapseCollapseMod.ExpandIconPosition
 import typingsSlinky.antd.collapseCollapseMod.PanelProps
+import typingsSlinky.antd.collapsePanelMod.CollapsePanelProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -52,5 +53,14 @@ object Collapse {
   
   def withProps(p: CollapseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Collapse.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Panel {
+    @JSImport("antd/lib/collapse", "default.Panel")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CollapsePanelProps): SharedBuilder_CollapsePanelProps_1625560543 = new SharedBuilder_CollapsePanelProps_1625560543(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Panel.type): SharedBuilder_CollapsePanelProps_1625560543 = new SharedBuilder_CollapsePanelProps_1625560543(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

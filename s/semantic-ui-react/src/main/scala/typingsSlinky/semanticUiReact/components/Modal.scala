@@ -1,5 +1,6 @@
 package typingsSlinky.semanticUiReact.components
 
+import org.scalajs.dom.raw.HTMLAnchorElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
@@ -9,9 +10,13 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactNodeArray
 import typingsSlinky.react.mod.ReactType
+import typingsSlinky.semanticUiReact.buttonButtonMod.ButtonProps
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
+import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.modalActionsMod.ModalActionsProps
 import typingsSlinky.semanticUiReact.modalContentMod.ModalContentProps
+import typingsSlinky.semanticUiReact.modalDescriptionMod.ModalDescriptionProps
 import typingsSlinky.semanticUiReact.modalHeaderMod.ModalHeaderProps
 import typingsSlinky.semanticUiReact.modalMod.default
 import typingsSlinky.semanticUiReact.modalModalMod.ModalProps
@@ -134,5 +139,61 @@ object Modal {
   
   def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Modal.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Actions {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Modal", "Actions")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[slinky.web.html.a.tag.type, js.Object] {
+      @scala.inline
+      def actionsVarargs(value: SemanticShorthandItem[ButtonProps]*): this.type = set("actions", js.Array(value :_*))
+      @scala.inline
+      def actions(value: SemanticShorthandCollection[ButtonProps]): this.type = set("actions", value.asInstanceOf[js.Any])
+      @scala.inline
+      def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      @scala.inline
+      def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
+      @scala.inline
+      def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
+      @scala.inline
+      def onActionClick(value: (/* event */ SyntheticMouseEvent[HTMLAnchorElement], /* data */ ButtonProps) => Unit): this.type = set("onActionClick", js.Any.fromFunction2(value))
+    }
+    
+    def withProps(p: ModalActionsProps): typingsSlinky.semanticUiReact.components.Modal.Actions.Builder = new typingsSlinky.semanticUiReact.components.Modal.Actions.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Actions.type): typingsSlinky.semanticUiReact.components.Modal.Actions.Builder = new typingsSlinky.semanticUiReact.components.Modal.Actions.Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Content {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Modal", "Content")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: ModalContentProps): SharedBuilder_ModalContentProps2067565862 = new SharedBuilder_ModalContentProps2067565862(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Content.type): SharedBuilder_ModalContentProps2067565862 = new SharedBuilder_ModalContentProps2067565862(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Description {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Modal", "Description")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: ModalDescriptionProps): SharedBuilder_ModalDescriptionProps155144246 = new SharedBuilder_ModalDescriptionProps155144246(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Description.type): SharedBuilder_ModalDescriptionProps155144246 = new SharedBuilder_ModalDescriptionProps155144246(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Header {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Modal", "Header")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: ModalHeaderProps): SharedBuilder_ModalHeaderProps557306730 = new SharedBuilder_ModalHeaderProps557306730(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Header.type): SharedBuilder_ModalHeaderProps557306730 = new SharedBuilder_ModalHeaderProps557306730(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

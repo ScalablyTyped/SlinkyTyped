@@ -11,7 +11,6 @@ import typingsSlinky.rxjs.typesMod.SubscribableOrPromise
 import typingsSlinky.rxjs.typesMod.TeardownLogic
 import typingsSlinky.std.PromiseConstructor
 import typingsSlinky.std.PromiseConstructorLike
-import typingsSlinky.std.global.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -136,7 +135,7 @@ object internalObservableMod extends js.Object {
             /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
             Unit
           ], 
-          Promise[js.Object]
+          js.Promise[js.Object]
         ])
     ): js.Promise[T] = js.native
     def toPromise[T](PromiseCtor: PromiseConstructorLike): js.Promise[T] = js.native

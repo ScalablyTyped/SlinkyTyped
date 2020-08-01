@@ -19,6 +19,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.span.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antd.checkableTagMod.CheckableTagProps
 import typingsSlinky.antd.colorsMod.PresetColorType
 import typingsSlinky.antd.colorsMod.PresetStatusColorType
 import typingsSlinky.antd.tagMod.TagProps
@@ -452,5 +453,18 @@ object Tag {
   
   def withProps(p: TagProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Tag.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object CheckableTag {
+    @JSImport("antd/lib/tag", "default.CheckableTag")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CheckableTagProps): SharedBuilder_CheckableTagProps2088584901 = new SharedBuilder_CheckableTagProps2088584901(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(checked: Boolean): SharedBuilder_CheckableTagProps2088584901 = {
+        val __props = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any])
+        new SharedBuilder_CheckableTagProps2088584901(js.Array(this.component, __props.asInstanceOf[CheckableTagProps]))
+    }
+  }
+  
 }
 

@@ -12,6 +12,7 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
 import typingsSlinky.semanticUiReact.iconIconMod.IconProps
 import typingsSlinky.semanticUiReact.labelDetailMod.LabelDetailProps
+import typingsSlinky.semanticUiReact.labelGroupMod.LabelGroupProps
 import typingsSlinky.semanticUiReact.labelLabelMod.LabelProps
 import typingsSlinky.semanticUiReact.labelMod.default
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom left`
@@ -107,5 +108,23 @@ object Label {
   
   def withProps(p: LabelProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Label.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Detail {
+    @JSImport("semantic-ui-react/dist/commonjs/elements/Label", "Detail")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: LabelDetailProps): SharedBuilder_LabelDetailProps_543902875 = new SharedBuilder_LabelDetailProps_543902875(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Detail.type): SharedBuilder_LabelDetailProps_543902875 = new SharedBuilder_LabelDetailProps_543902875(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Group {
+    @JSImport("semantic-ui-react/dist/commonjs/elements/Label", "Group")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: LabelGroupProps): SharedBuilder_LabelGroupProps1387370830 = new SharedBuilder_LabelGroupProps1387370830(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Group.type): SharedBuilder_LabelGroupProps1387370830 = new SharedBuilder_LabelGroupProps1387370830(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

@@ -7,6 +7,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.left
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.right
 import typingsSlinky.semanticUiReact.tabMod.default
+import typingsSlinky.semanticUiReact.tabPaneMod.TabPaneProps
 import typingsSlinky.semanticUiReact.tabTabMod.TabProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -45,5 +46,14 @@ object Tab {
   
   def withProps(p: TabProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Tab.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Pane {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Tab", "Pane")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: TabPaneProps): SharedBuilder_TabPaneProps1810713740 = new SharedBuilder_TabPaneProps1810713740(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Pane.type): SharedBuilder_TabPaneProps1810713740 = new SharedBuilder_TabPaneProps1810713740(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

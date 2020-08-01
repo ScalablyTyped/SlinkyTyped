@@ -68,6 +68,7 @@ import typingsSlinky.antd.buttonButtonMod.ButtonHTMLType
 import typingsSlinky.antd.buttonButtonMod.ButtonProps
 import typingsSlinky.antd.buttonButtonMod.ButtonShape
 import typingsSlinky.antd.buttonButtonMod.ButtonType
+import typingsSlinky.antd.buttonGroupMod.ButtonGroupProps
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -497,5 +498,14 @@ object Button {
   
   def withProps(p: ButtonProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Button.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Group {
+    @JSImport("antd/lib/button", "default.Group")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: ButtonGroupProps): SharedBuilder_ButtonGroupProps48614785 = new SharedBuilder_ButtonGroupProps48614785(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Group.type): SharedBuilder_ButtonGroupProps48614785 = new SharedBuilder_ButtonGroupProps48614785(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

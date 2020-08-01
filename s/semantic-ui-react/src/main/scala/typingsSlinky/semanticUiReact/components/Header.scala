@@ -6,7 +6,9 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticFLOATS
 import typingsSlinky.semanticUiReact.genericMod.SemanticTEXTALIGNMENTS
+import typingsSlinky.semanticUiReact.headerContentMod.HeaderContentProps
 import typingsSlinky.semanticUiReact.headerHeaderMod.HeaderProps
+import typingsSlinky.semanticUiReact.headerSubheaderMod.HeaderSubheaderProps
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.bottom
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.huge
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.large
@@ -65,5 +67,23 @@ object Header {
   
   def withProps(p: HeaderProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Header.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Content {
+    @JSImport("semantic-ui-react/dist/commonjs/elements/Header", "default.Content")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: HeaderContentProps): SharedBuilder_HeaderContentProps252036383 = new SharedBuilder_HeaderContentProps252036383(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Content.type): SharedBuilder_HeaderContentProps252036383 = new SharedBuilder_HeaderContentProps252036383(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Subheader {
+    @JSImport("semantic-ui-react/dist/commonjs/elements/Header", "default.Subheader")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: HeaderSubheaderProps): SharedBuilder_HeaderSubheaderProps_656978477 = new SharedBuilder_HeaderSubheaderProps_656978477(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Subheader.type): SharedBuilder_HeaderSubheaderProps_656978477 = new SharedBuilder_HeaderSubheaderProps_656978477(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

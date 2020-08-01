@@ -1,11 +1,6 @@
 package typingsSlinky.antd.components
 
-import org.scalajs.dom.raw.HTMLElement
-import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.checkableTagMod.CheckableTagProps
-import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,27 +10,11 @@ object CheckableTag {
   @js.native
   object component extends js.Object
   
+  def withProps(p: CheckableTagProps): SharedBuilder_CheckableTagProps2088584901 = new SharedBuilder_CheckableTagProps2088584901(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
-    @scala.inline
-    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-    @scala.inline
-    def onChange(value: /* checked */ Boolean => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
-    @scala.inline
-    def onClick(value: /* e */ MouseEventHandler[HTMLElement] => Unit): this.type = set("onClick", js.Any.fromFunction1(value))
-    @scala.inline
-    def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
-    @scala.inline
-    def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
-  }
-  
-  def withProps(p: CheckableTagProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  @scala.inline
-  def apply(checked: Boolean): Builder = {
+  def apply(checked: Boolean): SharedBuilder_CheckableTagProps2088584901 = {
     val __props = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any])
-    new Builder(js.Array(this.component, __props.asInstanceOf[CheckableTagProps]))
+    new SharedBuilder_CheckableTagProps2088584901(js.Array(this.component, __props.asInstanceOf[CheckableTagProps]))
   }
 }
 

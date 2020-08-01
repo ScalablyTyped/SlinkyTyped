@@ -8,9 +8,12 @@ import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.semanticUiReact.dropdownDividerMod.DropdownDividerProps
 import typingsSlinky.semanticUiReact.dropdownDropdownMod.DropdownOnSearchChangeData
 import typingsSlinky.semanticUiReact.dropdownDropdownMod.DropdownProps
+import typingsSlinky.semanticUiReact.dropdownHeaderMod.DropdownHeaderProps
 import typingsSlinky.semanticUiReact.dropdownItemMod.DropdownItemProps
+import typingsSlinky.semanticUiReact.dropdownMenuMod.DropdownMenuProps
 import typingsSlinky.semanticUiReact.labelLabelMod.LabelProps
 import typingsSlinky.semanticUiReact.selectSelectMod.SelectProps
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.`bottom left`
@@ -194,5 +197,41 @@ object Select {
     val __props = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[SelectProps]))
   }
+  object Header {
+    @JSImport("semantic-ui-react/dist/commonjs/addons/Select", "default.Header")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: DropdownHeaderProps): SharedBuilder_DropdownHeaderProps_361301233 = new SharedBuilder_DropdownHeaderProps_361301233(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Header.type): SharedBuilder_DropdownHeaderProps_361301233 = new SharedBuilder_DropdownHeaderProps_361301233(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Item {
+    @JSImport("semantic-ui-react/dist/commonjs/addons/Select", "default.Item")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: DropdownItemProps): SharedBuilder_DropdownItemProps_1338970085 = new SharedBuilder_DropdownItemProps_1338970085(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Item.type): SharedBuilder_DropdownItemProps_1338970085 = new SharedBuilder_DropdownItemProps_1338970085(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Divider {
+    @JSImport("semantic-ui-react/dist/commonjs/addons/Select", "default.Divider")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: DropdownDividerProps): SharedBuilder_DropdownDividerProps1707744239 = new SharedBuilder_DropdownDividerProps1707744239(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Divider.type): SharedBuilder_DropdownDividerProps1707744239 = new SharedBuilder_DropdownDividerProps1707744239(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Menu {
+    @JSImport("semantic-ui-react/dist/commonjs/addons/Select", "default.Menu")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: DropdownMenuProps): SharedBuilder_DropdownMenuProps188553549 = new SharedBuilder_DropdownMenuProps188553549(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Menu.type): SharedBuilder_DropdownMenuProps188553549 = new SharedBuilder_DropdownMenuProps188553549(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

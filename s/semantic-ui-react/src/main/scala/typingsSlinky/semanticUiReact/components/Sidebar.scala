@@ -22,6 +22,8 @@ import typingsSlinky.semanticUiReact.semanticUiReactStrings.top
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.uncover
 import typingsSlinky.semanticUiReact.semanticUiReactStrings.wide
 import typingsSlinky.semanticUiReact.sidebarMod.default
+import typingsSlinky.semanticUiReact.sidebarPushableMod.SidebarPushableProps
+import typingsSlinky.semanticUiReact.sidebarPusherMod.SidebarPusherProps
 import typingsSlinky.semanticUiReact.sidebarSidebarMod.SidebarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -68,5 +70,23 @@ object Sidebar {
   
   def withProps(p: SidebarProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Sidebar.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Pushable {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Sidebar", "Pushable")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: SidebarPushableProps): SharedBuilder_SidebarPushableProps_269623663 = new SharedBuilder_SidebarPushableProps_269623663(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Pushable.type): SharedBuilder_SidebarPushableProps_269623663 = new SharedBuilder_SidebarPushableProps_269623663(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Pusher {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Sidebar", "Pusher")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: SidebarPusherProps): SharedBuilder_SidebarPusherProps_1793364942 = new SharedBuilder_SidebarPusherProps_1793364942(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Pusher.type): SharedBuilder_SidebarPusherProps_1793364942 = new SharedBuilder_SidebarPusherProps_1793364942(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

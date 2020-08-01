@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "stardust-ui__react-component-ref"
-version := "0.38.0-bb0e30"
+version := "0.38.0-ce5e29"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -8,6 +8,7 @@ import slinky.web.html.ul.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anon.PartialTransferLocale
 import typingsSlinky.antd.listBodyMod.TransferListBodyProps
+import typingsSlinky.antd.operationMod.TransferOperationProps
 import typingsSlinky.antd.transferInterfaceMod.PaginationType
 import typingsSlinky.antd.transferListMod.TransferListProps
 import typingsSlinky.antd.transferMod.ListStyle
@@ -106,5 +107,14 @@ object Transfer {
     val __props = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], listStyle = listStyle.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[TransferProps]))
   }
+  object Operation {
+    @JSImport("antd/lib/transfer", "Operation")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: TransferOperationProps): SharedBuilder_TransferOperationProps1870046190 = new SharedBuilder_TransferOperationProps1870046190(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Operation.type): SharedBuilder_TransferOperationProps1870046190 = new SharedBuilder_TransferOperationProps1870046190(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

@@ -6,6 +6,7 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anon.Checked
 import typingsSlinky.antd.anon.ShowLeafIcon
+import typingsSlinky.antd.directoryTreeMod.DirectoryTreeProps
 import typingsSlinky.antd.treeTreeMod.AntTreeNodeProps
 import typingsSlinky.antd.treeTreeMod.AntdTreeNodeAttribute
 import typingsSlinky.antd.treeTreeMod.TreeProps
@@ -22,6 +23,7 @@ import typingsSlinky.rcTree.mod.OnMouseEnterData
 import typingsSlinky.rcTree.mod.OnMouseLeaveData
 import typingsSlinky.rcTree.mod.OnRightClickData
 import typingsSlinky.rcTree.mod.SelectData
+import typingsSlinky.rcTree.mod.TreeNodeProps
 import typingsSlinky.rcTree.mod.default
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.RefAttributes
@@ -166,5 +168,47 @@ object Tree {
   
   def withProps(p: TreeProps with RefAttributes[default]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Tree.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object DirectoryTree {
+    @JSImport("antd/lib/tree", "default.DirectoryTree")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: DirectoryTreeProps): SharedBuilder_DirectoryTreeProps934662521 = new SharedBuilder_DirectoryTreeProps934662521(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: DirectoryTree.type): SharedBuilder_DirectoryTreeProps934662521 = new SharedBuilder_DirectoryTreeProps934662521(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object TreeNode {
+    @JSImport("antd/lib/tree", "default.TreeNode")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, typingsSlinky.antd.treeMod.default.TreeNode] {
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      @scala.inline
+      def disableCheckbox(value: Boolean): this.type = set("disableCheckbox", value.asInstanceOf[js.Any])
+      @scala.inline
+      def disabled(value: Boolean): this.type = set("disabled", value.asInstanceOf[js.Any])
+      @scala.inline
+      def iconReactElement(value: ReactElement): this.type = set("icon", value.asInstanceOf[js.Any])
+      @scala.inline
+      def iconFunction1(value: /* props */ InternalTreeNodeProps => ReactElement): this.type = set("icon", js.Any.fromFunction1(value))
+      @scala.inline
+      def icon(value: ReactElement | (js.Function1[/* props */ InternalTreeNodeProps, ReactElement])): this.type = set("icon", value.asInstanceOf[js.Any])
+      @scala.inline
+      def isLeaf(value: Boolean): this.type = set("isLeaf", value.asInstanceOf[js.Any])
+      @scala.inline
+      def titleReactElement(value: ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+      @scala.inline
+      def title(value: String | ReactElement): this.type = set("title", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: TreeNodeProps): typingsSlinky.antd.components.Tree.TreeNode.Builder = new typingsSlinky.antd.components.Tree.TreeNode.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: TreeNode.type): typingsSlinky.antd.components.Tree.TreeNode.Builder = new typingsSlinky.antd.components.Tree.TreeNode.Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

@@ -19,6 +19,7 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.form.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.StBuildingComponent.Default
 import typingsSlinky.antd.antdBooleans.`false`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
@@ -65,8 +66,11 @@ import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
+import typingsSlinky.antd.formContextMod.FormProviderProps
 import typingsSlinky.antd.formFormMod.FormLayout
 import typingsSlinky.antd.formFormMod.FormProps
+import typingsSlinky.antd.formItemMod.FormItemProps
+import typingsSlinky.antd.formListMod.FormListProps
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
 import typingsSlinky.antd.sizeContextMod.SizeType
@@ -514,5 +518,39 @@ object Form {
   
   def withProps(p: FormProps with RefAttributes[FormInstance]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Form.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Item {
+    @JSImport("antd/lib/form", "default.Item")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: /* props */ FormItemProps): SharedBuilder_FormItemProps1002017227 = new SharedBuilder_FormItemProps1002017227(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Item.type): SharedBuilder_FormItemProps1002017227 = new SharedBuilder_FormItemProps1002017227(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object List {
+    @JSImport("antd/lib/form", "default.List")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: FormListProps): Default[slinky.web.html.`*`.tag.type, js.Object] = new Default[slinky.web.html.`*`.tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(
+      children: (js.Array[typingsSlinky.antd.formListMod.FieldData], typingsSlinky.antd.formListMod.Operation) => ReactElement,
+      name: String | Double | (js.Array[String | Double])
+    ): Default[slinky.web.html.`*`.tag.type, js.Object] = {
+        val __props = js.Dynamic.literal(children = js.Any.fromFunction2(children), name = name.asInstanceOf[js.Any])
+        new Default[slinky.web.html.`*`.tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[FormListProps]))
+    }
+  }
+  
+  object Provider {
+    @JSImport("antd/lib/form", "default.Provider")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: FormProviderProps): SharedBuilder_FormProviderProps461694305 = new SharedBuilder_FormProviderProps461694305(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Provider.type): SharedBuilder_FormProviderProps461694305 = new SharedBuilder_FormProviderProps461694305(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

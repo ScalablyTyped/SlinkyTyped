@@ -11,8 +11,10 @@ import typingsSlinky.semanticUiReact.genericMod.SemanticCOLORS
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandItem
+import typingsSlinky.semanticUiReact.messageContentMod.MessageContentProps
 import typingsSlinky.semanticUiReact.messageHeaderMod.MessageHeaderProps
 import typingsSlinky.semanticUiReact.messageItemMod.MessageItemProps
+import typingsSlinky.semanticUiReact.messageListMod.MessageListProps
 import typingsSlinky.semanticUiReact.messageMessageMod.MessageProps
 import typingsSlinky.semanticUiReact.messageMessageMod.MessageSizeProp
 import typingsSlinky.semanticUiReact.messageMod.default
@@ -85,5 +87,41 @@ object Message {
   
   def withProps(p: MessageProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Message.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Content {
+    @JSImport("semantic-ui-react/dist/commonjs/collections/Message", "Content")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: MessageContentProps): SharedBuilder_MessageContentProps596902138 = new SharedBuilder_MessageContentProps596902138(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Content.type): SharedBuilder_MessageContentProps596902138 = new SharedBuilder_MessageContentProps596902138(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Header {
+    @JSImport("semantic-ui-react/dist/commonjs/collections/Message", "Header")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: MessageHeaderProps): SharedBuilder_MessageHeaderProps325359624 = new SharedBuilder_MessageHeaderProps325359624(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Header.type): SharedBuilder_MessageHeaderProps325359624 = new SharedBuilder_MessageHeaderProps325359624(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Item {
+    @JSImport("semantic-ui-react/dist/commonjs/collections/Message", "Item")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: MessageItemProps): SharedBuilder_MessageItemProps_528637509 = new SharedBuilder_MessageItemProps_528637509(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Item.type): SharedBuilder_MessageItemProps_528637509 = new SharedBuilder_MessageItemProps_528637509(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object List {
+    @JSImport("semantic-ui-react/dist/commonjs/collections/Message", "List")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: MessageListProps): SharedBuilder_MessageListProps1781517395 = new SharedBuilder_MessageListProps1781517395(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: List.type): SharedBuilder_MessageListProps1781517395 = new SharedBuilder_MessageListProps1781517395(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

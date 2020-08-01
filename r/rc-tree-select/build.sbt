@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "rc-tree-select"
-version := "4.0.3-0b747e"
+version := "4.0.3-289bae"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -4,6 +4,8 @@ import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.antdBooleans.`false`
+import typingsSlinky.antd.listItemMod.ListItemMetaProps
+import typingsSlinky.antd.listItemMod.ListItemProps
 import typingsSlinky.antd.listMod.ListGridType
 import typingsSlinky.antd.listMod.ListItemLayout
 import typingsSlinky.antd.listMod.ListLocale
@@ -84,5 +86,23 @@ object List {
     new Builder[T](js.Array(this.component, __props.asInstanceOf[ListProps[T]]))
   }
   implicit def make[T](companion: List.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
+  object Item {
+    @JSImport("antd/lib/list", "default.Item")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: ListItemProps): SharedBuilder_ListItemProps_1246570549 = new SharedBuilder_ListItemProps_1246570549(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Item.type): SharedBuilder_ListItemProps_1246570549 = new SharedBuilder_ListItemProps_1246570549(js.Array(this.component, js.Dictionary.empty))()
+    object Meta {
+      @JSImport("antd/lib/list", "default.Item.Meta")
+      @js.native
+      object component extends js.Object
+      
+      def withProps(p: ListItemMetaProps): SharedBuilder_ListItemMetaProps1028006195 = new SharedBuilder_ListItemMetaProps1028006195(js.Array(this.component, p.asInstanceOf[js.Any]))
+      implicit def make(companion: Meta.type): SharedBuilder_ListItemMetaProps1028006195 = new SharedBuilder_ListItemMetaProps1028006195(js.Array(this.component, js.Dictionary.empty))()
+    }
+    
+  }
+  
 }
 

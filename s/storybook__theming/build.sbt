@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "storybook__theming"
-version := "5.3.19-428475"
+version := "5.3.19-f8aa10"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -8,7 +8,7 @@ libraryDependencies ++= Seq(
   "me.shadaj" %%% "slinky-web" % "0.6.5",
   "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-9fcfdc",
   "org.scalablytyped.slinky" %%% "emotion-theming" % "10.0.27-53bf82",
-  "org.scalablytyped.slinky" %%% "emotion__core" % "10.0.20-289e9f",
+  "org.scalablytyped.slinky" %%% "emotion__core" % "10.0.20-fe882e",
   "org.scalablytyped.slinky" %%% "emotion__serialize" % "0.11.11-6ca6c2",
   "org.scalablytyped.slinky" %%% "emotion__styled" % "10.0.23-115435",
   "org.scalablytyped.slinky" %%% "emotion__styled-base" % "10.0.24-d273f9",

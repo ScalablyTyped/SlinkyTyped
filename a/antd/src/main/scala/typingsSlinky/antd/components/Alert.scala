@@ -11,6 +11,7 @@ import typingsSlinky.antd.antdStrings.error
 import typingsSlinky.antd.antdStrings.info
 import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.warning
+import typingsSlinky.antd.errorBoundaryMod.ErrorBoundaryProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -69,5 +70,14 @@ object Alert {
   
   def withProps(p: AlertProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Alert.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object ErrorBoundary {
+    @JSImport("antd/lib/alert", "default.ErrorBoundary")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: ErrorBoundaryProps): SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.alertMod.default.ErrorBoundary] = new SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.alertMod.default.ErrorBoundary](js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: ErrorBoundary.type): SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.alertMod.default.ErrorBoundary] = new SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.alertMod.default.ErrorBoundary](js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

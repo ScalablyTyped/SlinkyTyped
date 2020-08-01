@@ -3,6 +3,7 @@ package typingsSlinky.semanticUiReact.components
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.genericMod.SemanticTRANSITIONS
+import typingsSlinky.semanticUiReact.transitionGroupMod.TransitionGroupProps
 import typingsSlinky.semanticUiReact.transitionMod.default
 import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionEventData
 import typingsSlinky.semanticUiReact.transitionTransitionMod.TransitionPropDuration
@@ -48,5 +49,28 @@ object Transition {
   
   def withProps(p: TransitionProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Transition.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Group {
+    @JSImport("semantic-ui-react/dist/commonjs/modules/Transition", "Group")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, js.Object] {
+      @scala.inline
+      def animation(value: SemanticTRANSITIONS | String): this.type = set("animation", value.asInstanceOf[js.Any])
+      @scala.inline
+      def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
+      @scala.inline
+      def directional(value: Boolean): this.type = set("directional", value.asInstanceOf[js.Any])
+      @scala.inline
+      def duration(value: Double | String | TransitionPropDuration): this.type = set("duration", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: TransitionGroupProps): typingsSlinky.semanticUiReact.components.Transition.Group.Builder = new typingsSlinky.semanticUiReact.components.Transition.Group.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Group.type): typingsSlinky.semanticUiReact.components.Transition.Group.Builder = new typingsSlinky.semanticUiReact.components.Transition.Group.Builder(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

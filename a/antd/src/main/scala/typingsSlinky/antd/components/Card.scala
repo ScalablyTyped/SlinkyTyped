@@ -67,6 +67,8 @@ import typingsSlinky.antd.cardMod.CardProps
 import typingsSlinky.antd.cardMod.CardSize
 import typingsSlinky.antd.cardMod.CardTabListType
 import typingsSlinky.antd.cardMod.CardType
+import typingsSlinky.antd.gridMod.CardGridProps
+import typingsSlinky.antd.metaMod.CardMetaProps
 import typingsSlinky.antd.tabsMod.TabsProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
@@ -483,5 +485,23 @@ object Card {
   
   def withProps(p: CardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Card.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Grid {
+    @JSImport("antd/lib/card", "default.Grid")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CardGridProps): SharedBuilder_CardGridProps552494094 = new SharedBuilder_CardGridProps552494094(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Grid.type): SharedBuilder_CardGridProps552494094 = new SharedBuilder_CardGridProps552494094(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Meta {
+    @JSImport("antd/lib/card", "default.Meta")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: CardMetaProps): SharedBuilder_CardMetaProps1450922115 = new SharedBuilder_CardMetaProps1450922115(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Meta.type): SharedBuilder_CardMetaProps1450922115 = new SharedBuilder_CardMetaProps1450922115(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

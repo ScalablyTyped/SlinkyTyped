@@ -5,10 +5,15 @@ import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antd.radioButtonMod.RadioButtonProps
 import typingsSlinky.antd.radioInterfaceMod.RadioChangeEvent
+import typingsSlinky.antd.radioInterfaceMod.RadioGroupProps
 import typingsSlinky.antd.radioInterfaceMod.RadioProps
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.ForwardRefExoticComponent
 import typingsSlinky.react.mod.RefAttributes
+import typingsSlinky.react.mod.WeakValidationMap
+import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -62,5 +67,40 @@ object Radio {
   
   def withProps(p: RadioProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Radio.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Button {
+    @JSImport("antd/lib/radio", "default.Button")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: RadioButtonProps with RefAttributes[js.Any]): SharedBuilder_RadioButtonPropsRefAttributes209272430[js.Any with js.Object] = new SharedBuilder_RadioButtonPropsRefAttributes209272430[js.Any with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Button.type): SharedBuilder_RadioButtonPropsRefAttributes209272430[js.Any with js.Object] = new SharedBuilder_RadioButtonPropsRefAttributes209272430[js.Any with js.Object](js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Group {
+    @JSImport("antd/lib/radio", "default.Group")
+    @js.native
+    object component extends js.Object
+    
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, js.Object] {
+      @scala.inline
+      def defaultProps(value: Partial[RadioGroupProps with RefAttributes[js.Any]]): this.type = set("defaultProps", value.asInstanceOf[js.Any])
+      @scala.inline
+      def displayName(value: String): this.type = set("displayName", value.asInstanceOf[js.Any])
+      @scala.inline
+      def propTypes(value: WeakValidationMap[RadioGroupProps with RefAttributes[js.Any]]): this.type = set("propTypes", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: ForwardRefExoticComponent[RadioGroupProps with RefAttributes[js.Any]]): typingsSlinky.antd.components.Radio.Group.Builder = new typingsSlinky.antd.components.Radio.Group.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    @scala.inline
+    def apply(DollarDollartypeof: js.Symbol): typingsSlinky.antd.components.Radio.Group.Builder = {
+        val __props = js.Dynamic.literal()
+        __props.updateDynamic("$$typeof")(DollarDollartypeof.asInstanceOf[js.Any])
+        new typingsSlinky.antd.components.Radio.Group.Builder(js.Array(this.component, __props.asInstanceOf[ForwardRefExoticComponent[RadioGroupProps with RefAttributes[js.Any]]]))
+    }
+  }
+  
 }
 

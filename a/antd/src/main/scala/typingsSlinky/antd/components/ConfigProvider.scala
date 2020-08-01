@@ -4,7 +4,6 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.anon.AutoComplete
 import typingsSlinky.antd.anon.Ghost
 import typingsSlinky.antd.anon.Size
 import typingsSlinky.antd.anon.ValidateMessages
@@ -44,7 +43,7 @@ object ConfigProvider {
     @scala.inline
     def getTargetContainer(value: () => HTMLElement): this.type = set("getTargetContainer", js.Any.fromFunction0(value))
     @scala.inline
-    def input(value: AutoComplete): this.type = set("input", value.asInstanceOf[js.Any])
+    def input(value: typingsSlinky.antd.anon.AutoComplete): this.type = set("input", value.asInstanceOf[js.Any])
     @scala.inline
     def locale(value: Locale): this.type = set("locale", value.asInstanceOf[js.Any])
     @scala.inline

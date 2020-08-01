@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "react-redux"
-version := "7.1-dt-20200519Z-4cd957"
+version := "7.1-dt-20200519Z-155791"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

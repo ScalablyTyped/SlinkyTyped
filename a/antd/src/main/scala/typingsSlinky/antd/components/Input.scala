@@ -78,8 +78,11 @@ import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.week
 import typingsSlinky.antd.antdStrings.yes
+import typingsSlinky.antd.inputGroupMod.GroupProps
 import typingsSlinky.antd.inputInputMod.InputProps
 import typingsSlinky.antd.inputMod.default
+import typingsSlinky.antd.passwordMod.PasswordProps
+import typingsSlinky.antd.searchMod.SearchProps
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.antd.typeMod.LiteralUnion
 import typingsSlinky.react.anon.Html
@@ -87,6 +90,7 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.RefAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -539,5 +543,32 @@ object Input {
   
   def withProps(p: InputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Input.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Group {
+    @JSImport("antd/lib/input", "Group")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: GroupProps): SharedBuilder_GroupProps_418259250 = new SharedBuilder_GroupProps_418259250(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Group.type): SharedBuilder_GroupProps_418259250 = new SharedBuilder_GroupProps_418259250(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Password {
+    @JSImport("antd/lib/input", "Password")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: PasswordProps with RefAttributes[js.Any]): SharedBuilder_PasswordPropsRefAttributes1788206810[js.Any with js.Object] = new SharedBuilder_PasswordPropsRefAttributes1788206810[js.Any with js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Password.type): SharedBuilder_PasswordPropsRefAttributes1788206810[js.Any with js.Object] = new SharedBuilder_PasswordPropsRefAttributes1788206810[js.Any with js.Object](js.Array(this.component, js.Dictionary.empty))()
+  }
+  
+  object Search {
+    @JSImport("antd/lib/input", "Search")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: SearchProps with RefAttributes[typingsSlinky.antd.inputInputMod.default]): SharedBuilder_SearchPropsRefAttributes1736756751[typingsSlinky.antd.inputInputMod.default] = new SharedBuilder_SearchPropsRefAttributes1736756751[typingsSlinky.antd.inputInputMod.default](js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Search.type): SharedBuilder_SearchPropsRefAttributes1736756751[typingsSlinky.antd.inputInputMod.default] = new SharedBuilder_SearchPropsRefAttributes1736756751[typingsSlinky.antd.inputInputMod.default](js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

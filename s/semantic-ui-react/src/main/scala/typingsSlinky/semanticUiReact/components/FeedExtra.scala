@@ -1,12 +1,6 @@
 package typingsSlinky.semanticUiReact.components
 
-import slinky.core.facade.ReactElement
-import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.feedExtraMod.FeedExtraProps
-import typingsSlinky.semanticUiReact.genericMod.HtmlImageProps
-import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandCollection
-import typingsSlinky.semanticUiReact.genericMod.SemanticShorthandContent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,27 +10,7 @@ object FeedExtra {
   @js.native
   object component extends js.Object
   
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
-    @scala.inline
-    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
-    @scala.inline
-    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-    @scala.inline
-    def contentReactElement(value: ReactElement): this.type = set("content", value.asInstanceOf[js.Any])
-    @scala.inline
-    def content(value: SemanticShorthandContent): this.type = set("content", value.asInstanceOf[js.Any])
-    @scala.inline
-    def imagesVarargs(value: SemanticShorthandCollection[HtmlImageProps]*): this.type = set("images", js.Array(value :_*))
-    @scala.inline
-    def images(value: Boolean | js.Array[SemanticShorthandCollection[HtmlImageProps]]): this.type = set("images", value.asInstanceOf[js.Any])
-    @scala.inline
-    def text(value: Boolean): this.type = set("text", value.asInstanceOf[js.Any])
-  }
-  
-  def withProps(p: FeedExtraProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: FeedExtra.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: FeedExtraProps): SharedBuilder_FeedExtraProps_1691549295 = new SharedBuilder_FeedExtraProps_1691549295(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: FeedExtra.type): SharedBuilder_FeedExtraProps_1691549295 = new SharedBuilder_FeedExtraProps_1691549295(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,7 +1,5 @@
 package typingsSlinky.semanticUiReact.components
 
-import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent
 import typingsSlinky.semanticUiReact.tableBodyMod.TableBodyProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,17 +10,7 @@ object TableBody {
   @js.native
   object component extends js.Object
   
-  @scala.inline
-  class Builder (val args: js.Array[js.Any])
-    extends AnyVal
-       with StBuildingComponent[tag.type, js.Object] {
-    @scala.inline
-    def as(value: js.Any): this.type = set("as", value.asInstanceOf[js.Any])
-    @scala.inline
-    def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
-  }
-  
-  def withProps(p: TableBodyProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
-  implicit def make(companion: TableBody.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  def withProps(p: TableBodyProps): SharedBuilder_TableBodyProps_274813113 = new SharedBuilder_TableBodyProps_274813113(js.Array(this.component, p.asInstanceOf[js.Any]))
+  implicit def make(companion: TableBody.type): SharedBuilder_TableBodyProps_274813113 = new SharedBuilder_TableBodyProps_274813113(js.Array(this.component, js.Dictionary.empty))()
 }
 

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "semantic-ui-react"
-version := "0.88.2-74d2e4"
+version := "0.88.2-89c6d4"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -9,7 +9,7 @@ libraryDependencies ++= Seq(
   "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-9fcfdc",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-77dff4",
   "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-014bc6",
-  "org.scalablytyped.slinky" %%% "stardust-ui__react-component-ref" % "0.38.0-bb0e30",
+  "org.scalablytyped.slinky" %%% "stardust-ui__react-component-ref" % "0.38.0-ce5e29",
   "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
