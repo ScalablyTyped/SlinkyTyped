@@ -17,6 +17,7 @@ trait DescriptionsProps extends js.Object {
   var className: js.UndefOr[String] = js.undefined
   var colon: js.UndefOr[Boolean] = js.undefined
   var column: js.UndefOr[Double | PartialRecordBreakpointnu] = js.undefined
+  var extra: js.UndefOr[ReactElement] = js.undefined
   var layout: js.UndefOr[horizontal | vertical] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var size: js.UndefOr[middle | small | typingsSlinky.antd.antdStrings.default] = js.undefined
@@ -63,6 +64,12 @@ object DescriptionsProps {
     def setColumn(value: Double | PartialRecordBreakpointnu): Self = this.set("column", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteColumn: Self = this.set("column", js.undefined)
+    @scala.inline
+    def setExtraReactElement(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setExtra(value: ReactElement): Self = this.set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteExtra: Self = this.set("extra", js.undefined)
     @scala.inline
     def setLayout(value: horizontal | vertical): Self = this.set("layout", value.asInstanceOf[js.Any])
     @scala.inline

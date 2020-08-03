@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Provider {
-  @JSImport("rc-picker/lib/PanelContext", "default.Provider")
+  @JSImport("rc-picker/es/PanelContext", "default.Provider")
   @js.native
   object component extends js.Object
   

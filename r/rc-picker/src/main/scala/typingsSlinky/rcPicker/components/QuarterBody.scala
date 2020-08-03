@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object QuarterBody {
-  @JSImport("rc-picker/lib/panels/QuarterPanel/QuarterBody", JSImport.Default)
+  @JSImport("rc-picker/es/panels/QuarterPanel/QuarterBody", JSImport.Default)
   @js.native
   object component extends js.Object
   

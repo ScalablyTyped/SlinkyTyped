@@ -14,7 +14,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("rc-menu/lib/SubPopupMenu", JSImport.Default)
+@JSImport("rc-menu/es/SubPopupMenu", JSImport.Default)
 @js.native
 class default protected ()
   extends Component[SubPopupMenuProps, js.Any, js.Any] {
@@ -22,7 +22,7 @@ class default protected ()
   def this(props: SubPopupMenuProps, context: js.Any) = this()
 }
 
-@JSImport("rc-menu/lib/SubPopupMenu", JSImport.Default)
+@JSImport("rc-menu/es/SubPopupMenu", JSImport.Default)
 @js.native
 object default
   extends Instantiable1[/* props */ SubPopupMenuProps, ReactComponentClass[SubPopupMenuProps]]

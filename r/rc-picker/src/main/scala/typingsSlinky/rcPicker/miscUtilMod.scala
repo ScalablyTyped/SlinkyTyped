@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("rc-picker/lib/utils/miscUtil", JSImport.Namespace)
+@JSImport("rc-picker/es/utils/miscUtil", JSImport.Namespace)
 @js.native
 object miscUtilMod extends js.Object {
   def default(props: js.Any): js.Any = js.native

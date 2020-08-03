@@ -14,6 +14,7 @@ import typingsSlinky.rcFieldForm.interfaceMod.Rule
 import typingsSlinky.rcFieldForm.interfaceMod.Store
 import typingsSlinky.rcFieldForm.interfaceMod.StoreValue
 import typingsSlinky.rcFieldForm.rcFieldFormBooleans.`false`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.parallel
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -66,7 +67,7 @@ class SharedBuilder_FieldProps1867252267 (val args: js.Array[js.Any])
   @scala.inline
   def trigger(value: String): this.type = set("trigger", value.asInstanceOf[js.Any])
   @scala.inline
-  def validateFirst(value: Boolean): this.type = set("validateFirst", value.asInstanceOf[js.Any])
+  def validateFirst(value: Boolean | parallel): this.type = set("validateFirst", value.asInstanceOf[js.Any])
   @scala.inline
   def validateTriggerVarargs(value: String*): this.type = set("validateTrigger", js.Array(value :_*))
   @scala.inline

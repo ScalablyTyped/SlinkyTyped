@@ -24,7 +24,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined antd.antd/lib/calendar/generateCalendar.InjectDefaultProps<rc-picker.rc-picker/lib/PickerPanel.PickerPanelBaseProps<DateType>> */
+/* Inlined antd.antd/lib/calendar/generateCalendar.InjectDefaultProps<rc-picker.rc-picker/es/PickerPanel.PickerPanelBaseProps<DateType>> */
 trait PickerPanelBaseProps[DateType] extends PickerProps[DateType] {
   var className: js.UndefOr[String] = js.undefined
   var components: js.UndefOr[Components] = js.undefined

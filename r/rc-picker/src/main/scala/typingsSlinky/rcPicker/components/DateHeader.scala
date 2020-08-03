@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DateHeader {
-  @JSImport("rc-picker/lib/panels/DatePanel/DateHeader", JSImport.Default)
+  @JSImport("rc-picker/es/panels/DatePanel/DateHeader", JSImport.Default)
   @js.native
   object component extends js.Object
   

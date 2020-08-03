@@ -77,6 +77,7 @@ import typingsSlinky.rcMenu.rcMenuStrings.tree
 import typingsSlinky.rcMenu.rcMenuStrings.url
 import typingsSlinky.rcMenu.rcMenuStrings.vertical
 import typingsSlinky.rcMenu.rcMenuStrings.yes
+import typingsSlinky.rcTrigger.interfaceMod.MotionType
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.AnimationEventHandler
 import typingsSlinky.react.mod.Booleanish
@@ -195,9 +196,7 @@ trait MenuProps extends js.Object {
   var level: js.UndefOr[Double] = js.undefined
   var mode: js.UndefOr[MenuMode] = js.undefined
   /** Menu motion define */
-  var motion: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-  ] = js.undefined
+  var motion: js.UndefOr[MotionType] = js.undefined
   var multiple: js.UndefOr[Boolean] = js.undefined
   var onAbort: js.UndefOr[ReactEventHandler[HTMLDivElement]] = js.undefined
   var onAnimationEnd: js.UndefOr[AnimationEventHandler[HTMLDivElement]] = js.undefined
@@ -710,9 +709,7 @@ object MenuProps {
     @scala.inline
     def deleteMode: Self = this.set("mode", js.undefined)
     @scala.inline
-    def setMotion(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-    ): Self = this.set("motion", value.asInstanceOf[js.Any])
+    def setMotion(value: MotionType): Self = this.set("motion", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMotion: Self = this.set("motion", js.undefined)
     @scala.inline

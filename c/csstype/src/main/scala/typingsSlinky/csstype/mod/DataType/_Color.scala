@@ -1,0 +1,119 @@
+package typingsSlinky.csstype.mod.DataType
+
+import typingsSlinky.csstype.mod.Property._BackgroundColor
+import typingsSlinky.csstype.mod.Property._Border
+import typingsSlinky.csstype.mod.Property._BorderBlock
+import typingsSlinky.csstype.mod.Property._BorderBlockColor
+import typingsSlinky.csstype.mod.Property._BorderBlockEnd
+import typingsSlinky.csstype.mod.Property._BorderBlockEndColor
+import typingsSlinky.csstype.mod.Property._BorderBlockStart
+import typingsSlinky.csstype.mod.Property._BorderBlockStartColor
+import typingsSlinky.csstype.mod.Property._BorderBottom
+import typingsSlinky.csstype.mod.Property._BorderBottomColor
+import typingsSlinky.csstype.mod.Property._BorderColor
+import typingsSlinky.csstype.mod.Property._BorderInline
+import typingsSlinky.csstype.mod.Property._BorderInlineColor
+import typingsSlinky.csstype.mod.Property._BorderInlineEnd
+import typingsSlinky.csstype.mod.Property._BorderInlineEndColor
+import typingsSlinky.csstype.mod.Property._BorderInlineStart
+import typingsSlinky.csstype.mod.Property._BorderInlineStartColor
+import typingsSlinky.csstype.mod.Property._BorderLeft
+import typingsSlinky.csstype.mod.Property._BorderLeftColor
+import typingsSlinky.csstype.mod.Property._BorderRight
+import typingsSlinky.csstype.mod.Property._BorderRightColor
+import typingsSlinky.csstype.mod.Property._BorderTop
+import typingsSlinky.csstype.mod.Property._BorderTopColor
+import typingsSlinky.csstype.mod.Property._CaretColor
+import typingsSlinky.csstype.mod.Property._ColumnRule
+import typingsSlinky.csstype.mod.Property._ColumnRuleColor
+import typingsSlinky.csstype.mod.Property._FloodColor
+import typingsSlinky.csstype.mod.Property._LightingColor
+import typingsSlinky.csstype.mod.Property._MozBorderBottomColors
+import typingsSlinky.csstype.mod.Property._MozBorderLeftColors
+import typingsSlinky.csstype.mod.Property._MozBorderRightColors
+import typingsSlinky.csstype.mod.Property._MozBorderTopColors
+import typingsSlinky.csstype.mod.Property._MsScrollbar3dlightColor
+import typingsSlinky.csstype.mod.Property._MsScrollbarArrowColor
+import typingsSlinky.csstype.mod.Property._MsScrollbarBaseColor
+import typingsSlinky.csstype.mod.Property._MsScrollbarDarkshadowColor
+import typingsSlinky.csstype.mod.Property._MsScrollbarFaceColor
+import typingsSlinky.csstype.mod.Property._MsScrollbarHighlightColor
+import typingsSlinky.csstype.mod.Property._MsScrollbarShadowColor
+import typingsSlinky.csstype.mod.Property._MsScrollbarTrackColor
+import typingsSlinky.csstype.mod.Property._Outline
+import typingsSlinky.csstype.mod.Property._OutlineColor
+import typingsSlinky.csstype.mod.Property._ScrollbarColor
+import typingsSlinky.csstype.mod.Property._StopColor
+import typingsSlinky.csstype.mod.Property._TextDecoration
+import typingsSlinky.csstype.mod.Property._TextDecorationColor
+import typingsSlinky.csstype.mod.Property._TextEmphasis
+import typingsSlinky.csstype.mod.Property._TextEmphasisColor
+import typingsSlinky.csstype.mod.Property._WebkitBorderBefore
+import typingsSlinky.csstype.mod.Property._WebkitBorderBeforeColor
+import typingsSlinky.csstype.mod.Property._WebkitTapHighlightColor
+import typingsSlinky.csstype.mod.Property._WebkitTextFillColor
+import typingsSlinky.csstype.mod.Property._WebkitTextStroke
+import typingsSlinky.csstype.mod.Property._WebkitTextStrokeColor
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait _Color
+  extends _Paint
+     with _BackgroundColor
+     with _Border[js.Any]
+     with _BorderBlock[js.Any]
+     with _BorderBlockColor
+     with _BorderBlockEnd[js.Any]
+     with _BorderBlockEndColor
+     with _BorderBlockStart[js.Any]
+     with _BorderBlockStartColor
+     with _BorderBottom[js.Any]
+     with _BorderBottomColor
+     with _BorderColor
+     with _BorderInline[js.Any]
+     with _BorderInlineColor
+     with _BorderInlineEnd[js.Any]
+     with _BorderInlineEndColor
+     with _BorderInlineStart[js.Any]
+     with _BorderInlineStartColor
+     with _BorderLeft[js.Any]
+     with _BorderLeftColor
+     with _BorderRight[js.Any]
+     with _BorderRightColor
+     with _BorderTop[js.Any]
+     with _BorderTopColor
+     with _CaretColor
+     with typingsSlinky.csstype.mod.Property._Color
+     with _ColumnRule[js.Any]
+     with _ColumnRuleColor
+     with _FinalBgLayer[js.Any]
+     with _FloodColor
+     with _LightingColor
+     with _MozBorderBottomColors
+     with _MozBorderLeftColors
+     with _MozBorderRightColors
+     with _MozBorderTopColors
+     with _MsScrollbar3dlightColor
+     with _MsScrollbarArrowColor
+     with _MsScrollbarBaseColor
+     with _MsScrollbarDarkshadowColor
+     with _MsScrollbarFaceColor
+     with _MsScrollbarHighlightColor
+     with _MsScrollbarShadowColor
+     with _MsScrollbarTrackColor
+     with _Outline[js.Any]
+     with _OutlineColor
+     with _ScrollbarColor
+     with _StopColor
+     with _TextDecoration[js.Any]
+     with _TextDecorationColor
+     with _TextEmphasis
+     with _TextEmphasisColor
+     with _WebkitBorderBefore[js.Any]
+     with _WebkitBorderBeforeColor
+     with _WebkitTapHighlightColor
+     with _WebkitTextFillColor
+     with _WebkitTextStroke[js.Any]
+     with _WebkitTextStrokeColor
+

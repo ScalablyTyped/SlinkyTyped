@@ -1,6 +1,8 @@
 package typingsSlinky.rcTreeSelect.contextMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.rcTree.interfaceMod.IconType
+import typingsSlinky.rcTree.treeNodeMod.TreeNodeProps
 import typingsSlinky.rcTreeSelect.interfaceMod.Key
 import typingsSlinky.rcTreeSelect.interfaceMod.LegacyDataNode
 import scala.scalajs.js
@@ -12,11 +14,11 @@ trait ContextProps extends js.Object {
   var checkedKeys: js.Array[Key]
   var halfCheckedKeys: js.Array[Key]
   var showTreeIcon: Boolean
-  var switcherIcon: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any
+  var switcherIcon: IconType
   var treeDefaultExpandAll: Boolean
   var treeDefaultExpandedKeys: js.Array[Key]
   var treeExpandedKeys: js.Array[Key]
-  var treeIcon: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any
+  var treeIcon: IconType
   var treeLine: Boolean
   var treeLoadedKeys: js.Array[Key]
   var treeMotion: js.Any
@@ -35,17 +37,15 @@ object ContextProps {
     onTreeExpand: js.Array[Key] => Unit,
     onTreeLoad: js.Array[Key] => Unit,
     showTreeIcon: Boolean,
-    switcherIcon: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any,
     treeDefaultExpandAll: Boolean,
     treeDefaultExpandedKeys: js.Array[Key],
     treeExpandedKeys: js.Array[Key],
-    treeIcon: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any,
     treeLine: Boolean,
     treeLoadedKeys: js.Array[Key],
     treeMotion: js.Any,
     treeNodeFilterProp: String
   ): ContextProps = {
-    val __obj = js.Dynamic.literal(checkedKeys = checkedKeys.asInstanceOf[js.Any], halfCheckedKeys = halfCheckedKeys.asInstanceOf[js.Any], loadData = js.Any.fromFunction1(loadData), onTreeExpand = js.Any.fromFunction1(onTreeExpand), onTreeLoad = js.Any.fromFunction1(onTreeLoad), showTreeIcon = showTreeIcon.asInstanceOf[js.Any], switcherIcon = switcherIcon.asInstanceOf[js.Any], treeDefaultExpandAll = treeDefaultExpandAll.asInstanceOf[js.Any], treeDefaultExpandedKeys = treeDefaultExpandedKeys.asInstanceOf[js.Any], treeExpandedKeys = treeExpandedKeys.asInstanceOf[js.Any], treeIcon = treeIcon.asInstanceOf[js.Any], treeLine = treeLine.asInstanceOf[js.Any], treeLoadedKeys = treeLoadedKeys.asInstanceOf[js.Any], treeMotion = treeMotion.asInstanceOf[js.Any], treeNodeFilterProp = treeNodeFilterProp.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(checkedKeys = checkedKeys.asInstanceOf[js.Any], halfCheckedKeys = halfCheckedKeys.asInstanceOf[js.Any], loadData = js.Any.fromFunction1(loadData), onTreeExpand = js.Any.fromFunction1(onTreeExpand), onTreeLoad = js.Any.fromFunction1(onTreeLoad), showTreeIcon = showTreeIcon.asInstanceOf[js.Any], treeDefaultExpandAll = treeDefaultExpandAll.asInstanceOf[js.Any], treeDefaultExpandedKeys = treeDefaultExpandedKeys.asInstanceOf[js.Any], treeExpandedKeys = treeExpandedKeys.asInstanceOf[js.Any], treeLine = treeLine.asInstanceOf[js.Any], treeLoadedKeys = treeLoadedKeys.asInstanceOf[js.Any], treeMotion = treeMotion.asInstanceOf[js.Any], treeNodeFilterProp = treeNodeFilterProp.asInstanceOf[js.Any])
     __obj.asInstanceOf[ContextProps]
   }
   @scala.inline
@@ -76,10 +76,6 @@ object ContextProps {
     @scala.inline
     def setShowTreeIcon(value: Boolean): Self = this.set("showTreeIcon", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSwitcherIcon(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any
-    ): Self = this.set("switcherIcon", value.asInstanceOf[js.Any])
-    @scala.inline
     def setTreeDefaultExpandAll(value: Boolean): Self = this.set("treeDefaultExpandAll", value.asInstanceOf[js.Any])
     @scala.inline
     def setTreeDefaultExpandedKeysVarargs(value: Key*): Self = this.set("treeDefaultExpandedKeys", js.Array(value :_*))
@@ -89,10 +85,6 @@ object ContextProps {
     def setTreeExpandedKeysVarargs(value: Key*): Self = this.set("treeExpandedKeys", js.Array(value :_*))
     @scala.inline
     def setTreeExpandedKeys(value: js.Array[Key]): Self = this.set("treeExpandedKeys", value.asInstanceOf[js.Any])
-    @scala.inline
-    def setTreeIcon(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify IconType */ js.Any
-    ): Self = this.set("treeIcon", value.asInstanceOf[js.Any])
     @scala.inline
     def setTreeLine(value: Boolean): Self = this.set("treeLine", value.asInstanceOf[js.Any])
     @scala.inline
@@ -109,6 +101,22 @@ object ContextProps {
     def setCheckable(value: Boolean | ReactElement): Self = this.set("checkable", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteCheckable: Self = this.set("checkable", js.undefined)
+    @scala.inline
+    def setSwitcherIconReactElement(value: ReactElement): Self = this.set("switcherIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setSwitcherIconFunction1(value: /* props */ TreeNodeProps => ReactElement): Self = this.set("switcherIcon", js.Any.fromFunction1(value))
+    @scala.inline
+    def setSwitcherIcon(value: IconType): Self = this.set("switcherIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteSwitcherIcon: Self = this.set("switcherIcon", js.undefined)
+    @scala.inline
+    def setTreeIconReactElement(value: ReactElement): Self = this.set("treeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setTreeIconFunction1(value: /* props */ TreeNodeProps => ReactElement): Self = this.set("treeIcon", js.Any.fromFunction1(value))
+    @scala.inline
+    def setTreeIcon(value: IconType): Self = this.set("treeIcon", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteTreeIcon: Self = this.set("treeIcon", js.undefined)
   }
   
 }

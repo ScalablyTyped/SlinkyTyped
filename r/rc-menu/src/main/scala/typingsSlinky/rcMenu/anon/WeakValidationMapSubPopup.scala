@@ -12,6 +12,7 @@ import typingsSlinky.rcMenu.interfaceMod.SelectEventHandler
 import typingsSlinky.rcMenu.interfaceMod.TriggerSubMenuAction
 import typingsSlinky.rcMenu.rcMenuStrings.ltr
 import typingsSlinky.rcMenu.rcMenuStrings.rtl
+import typingsSlinky.rcTrigger.interfaceMod.MotionType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.ReactInstance
 import typingsSlinky.react.mod.Validator
@@ -19,7 +20,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined react.react.WeakValidationMap<rc-menu.rc-menu/lib/SubPopupMenu.SubPopupMenuProps> */
+/* Inlined react.react.WeakValidationMap<rc-menu.rc-menu/es/SubPopupMenu.SubPopupMenuProps> */
 trait WeakValidationMapSubPopup extends js.Object {
   var activeKey: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var builtinPlacements: js.UndefOr[
@@ -41,13 +42,7 @@ trait WeakValidationMapSubPopup extends js.Object {
   var level: js.UndefOr[Validator[js.UndefOr[Double | Null]]] = js.undefined
   var manualRef: js.UndefOr[Validator[js.UndefOr[LegacyFunctionRef | Null]]] = js.undefined
   var mode: js.UndefOr[Validator[js.UndefOr[MenuMode | Null]]] = js.undefined
-  var motion: js.UndefOr[
-    Validator[
-      js.UndefOr[
-        (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ _) | Null
-      ]
-    ]
-  ] = js.undefined
+  var motion: js.UndefOr[Validator[js.UndefOr[MotionType | Null]]] = js.undefined
   var multiple: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
   var onClick: js.UndefOr[Validator[js.UndefOr[MenuClickEventHandler | Null]]] = js.undefined
   var onDeselect: js.UndefOr[Validator[js.UndefOr[Null | SelectEventHandler]]] = js.undefined
@@ -159,13 +154,7 @@ object WeakValidationMapSubPopup {
     @scala.inline
     def deleteMode: Self = this.set("mode", js.undefined)
     @scala.inline
-    def setMotion(
-      value: Validator[
-          js.UndefOr[
-            (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ _) | Null
-          ]
-        ]
-    ): Self = this.set("motion", value.asInstanceOf[js.Any])
+    def setMotion(value: Validator[js.UndefOr[MotionType | Null]]): Self = this.set("motion", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMotion: Self = this.set("motion", js.undefined)
     @scala.inline

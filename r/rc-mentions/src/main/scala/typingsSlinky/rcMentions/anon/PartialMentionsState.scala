@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Partial<rc-mentions.rc-mentions/lib/Mentions.MentionsState> */
+/* Inlined std.Partial<rc-mentions.rc-mentions/es/Mentions.MentionsState> */
 trait PartialMentionsState extends js.Object {
   var activeIndex: js.UndefOr[Double] = js.undefined
   var isFocus: js.UndefOr[Boolean] = js.undefined

@@ -2,24 +2,21 @@ package typingsSlinky.antd.treeTreeMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
+import typingsSlinky.rcTree.interfaceMod.Key
 import typingsSlinky.react.mod.DragEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait AntTreeNodeDragEnterEvent extends AntTreeNodeMouseEvent {
-  var expandedKeys: js.Array[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-  ]
+  var expandedKeys: js.Array[Key]
 }
 
 object AntTreeNodeDragEnterEvent {
   @scala.inline
   def apply(
     event: DragEvent[HTMLElement],
-    expandedKeys: js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-    ],
+    expandedKeys: js.Array[Key],
     node: ReactComponentClass[AntTreeNodeProps]
   ): AntTreeNodeDragEnterEvent = {
     val __obj = js.Dynamic.literal(event = event.asInstanceOf[js.Any], expandedKeys = expandedKeys.asInstanceOf[js.Any], node = node.asInstanceOf[js.Any])
@@ -37,13 +34,9 @@ object AntTreeNodeDragEnterEvent {
         x
     }
     @scala.inline
-    def setExpandedKeysVarargs(value: js.Any*): Self = this.set("expandedKeys", js.Array(value :_*))
+    def setExpandedKeysVarargs(value: Key*): Self = this.set("expandedKeys", js.Array(value :_*))
     @scala.inline
-    def setExpandedKeys(
-      value: js.Array[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-        ]
-    ): Self = this.set("expandedKeys", value.asInstanceOf[js.Any])
+    def setExpandedKeys(value: js.Array[Key]): Self = this.set("expandedKeys", value.asInstanceOf[js.Any])
   }
   
 }

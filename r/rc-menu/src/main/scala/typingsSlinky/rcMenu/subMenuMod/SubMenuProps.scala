@@ -21,6 +21,7 @@ import typingsSlinky.rcMenu.interfaceMod.SelectInfo
 import typingsSlinky.rcMenu.interfaceMod.TriggerSubMenuAction
 import typingsSlinky.rcMenu.rcMenuStrings.ltr
 import typingsSlinky.rcMenu.rcMenuStrings.rtl
+import typingsSlinky.rcTrigger.interfaceMod.MotionType
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.ReactInstance
 import scala.scalajs.js
@@ -43,9 +44,7 @@ trait SubMenuProps extends js.Object {
   var level: js.UndefOr[Double] = js.undefined
   var manualRef: js.UndefOr[LegacyFunctionRef] = js.undefined
   var mode: js.UndefOr[MenuMode] = js.undefined
-  var motion: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-  ] = js.undefined
+  var motion: js.UndefOr[MotionType] = js.undefined
   var multiple: js.UndefOr[Boolean] = js.undefined
   var onClick: js.UndefOr[MenuClickEventHandler] = js.undefined
   var onDeselect: js.UndefOr[SelectEventHandler] = js.undefined
@@ -159,9 +158,7 @@ object SubMenuProps {
     @scala.inline
     def deleteMode: Self = this.set("mode", js.undefined)
     @scala.inline
-    def setMotion(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-    ): Self = this.set("motion", value.asInstanceOf[js.Any])
+    def setMotion(value: MotionType): Self = this.set("motion", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMotion: Self = this.set("motion", js.undefined)
     @scala.inline

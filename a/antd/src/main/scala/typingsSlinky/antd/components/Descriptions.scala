@@ -34,6 +34,10 @@ object Descriptions {
     @scala.inline
     def column(value: Double | PartialRecordBreakpointnu): this.type = set("column", value.asInstanceOf[js.Any])
     @scala.inline
+    def extraReactElement(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
+    def extra(value: ReactElement): this.type = set("extra", value.asInstanceOf[js.Any])
+    @scala.inline
     def layout(value: horizontal | vertical): this.type = set("layout", value.asInstanceOf[js.Any])
     @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])

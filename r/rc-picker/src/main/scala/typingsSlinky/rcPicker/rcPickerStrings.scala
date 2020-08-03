@@ -3,6 +3,7 @@ package typingsSlinky.rcPicker
 import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import typingsSlinky.rcPicker.interfaceMod.PickerMode
 import typingsSlinky.rcPicker.pickerTriggerMod.Placement
+import typingsSlinky.rcPicker.rangePickerMod.RangeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -65,7 +66,7 @@ object rcPickerStrings {
   sealed trait disabledTime extends js.Object
   
   @js.native
-  sealed trait end extends js.Object
+  sealed trait end extends RangeType
   
   @js.native
   sealed trait execute extends js.Object
@@ -189,7 +190,7 @@ object rcPickerStrings {
   sealed trait spelling extends js.Object
   
   @js.native
-  sealed trait start extends js.Object
+  sealed trait start extends RangeType
   
   @js.native
   sealed trait step extends js.Object

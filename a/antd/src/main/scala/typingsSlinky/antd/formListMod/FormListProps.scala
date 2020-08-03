@@ -7,13 +7,13 @@ import scala.scalajs.js.annotation._
 
 trait FormListProps extends js.Object {
   var name: String | Double | (js.Array[String | Double])
-  def children(fields: js.Array[FieldData], operation: Operation): ReactElement
+  def children(fields: js.Array[FormListFieldData], operation: FormListOperation): ReactElement
 }
 
 object FormListProps {
   @scala.inline
   def apply(
-    children: (js.Array[FieldData], Operation) => ReactElement,
+    children: (js.Array[FormListFieldData], FormListOperation) => ReactElement,
     name: String | Double | (js.Array[String | Double])
   ): FormListProps = {
     val __obj = js.Dynamic.literal(children = js.Any.fromFunction2(children), name = name.asInstanceOf[js.Any])
@@ -31,7 +31,7 @@ object FormListProps {
         x
     }
     @scala.inline
-    def setChildren(value: (js.Array[FieldData], Operation) => ReactElement): Self = this.set("children", js.Any.fromFunction2(value))
+    def setChildren(value: (js.Array[FormListFieldData], FormListOperation) => ReactElement): Self = this.set("children", js.Any.fromFunction2(value))
     @scala.inline
     def setNameVarargs(value: (String | Double)*): Self = this.set("name", js.Array(value :_*))
     @scala.inline

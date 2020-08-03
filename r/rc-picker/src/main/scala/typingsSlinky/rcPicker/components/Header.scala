@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Header {
-  @JSImport("rc-picker/lib/panels/Header", JSImport.Default)
+  @JSImport("rc-picker/es/panels/Header", JSImport.Default)
   @js.native
   object component extends js.Object
   

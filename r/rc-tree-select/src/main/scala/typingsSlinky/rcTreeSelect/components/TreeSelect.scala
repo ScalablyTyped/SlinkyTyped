@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TreeSelect {
-  @JSImport("rc-tree-select/lib/TreeSelect", JSImport.Default)
+  @JSImport("rc-tree-select/es/TreeSelect", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -21,7 +21,7 @@ object TreeSelect {
   }
   implicit def make[ValueType](companion: TreeSelect.type): SharedBuilder_TreeSelectProps_1571959893[default[ValueType], ValueType] = new SharedBuilder_TreeSelectProps_1571959893[default[ValueType], ValueType](js.Array(this.component, js.Dictionary.empty))()
   object TreeNode {
-    @JSImport("rc-tree-select/lib/TreeSelect", "TreeNode")
+    @JSImport("rc-tree-select/es/TreeSelect", "TreeNode")
     @js.native
     object component extends js.Object
     

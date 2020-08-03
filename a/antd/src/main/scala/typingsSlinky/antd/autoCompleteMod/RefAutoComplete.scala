@@ -1,11 +1,11 @@
 package typingsSlinky.antd.autoCompleteMod
 
 import slinky.core.facade.ReactElement
+import typingsSlinky.antd.anon.PartialAutoCompletePropsR
+import typingsSlinky.antd.anon.WeakValidationMapAutoComp
 import typingsSlinky.antd.selectMod.OptionType
 import typingsSlinky.antd.selectMod.SelectValue
 import typingsSlinky.react.mod.RefAttributes
-import typingsSlinky.react.mod.WeakValidationMap
-import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,17 +16,9 @@ trait RefAutoComplete extends js.Object {
   @JSName("$$typeof")
   val DollarDollartypeof: js.Symbol = js.native
   var Option: OptionType = js.native
-  var defaultProps: js.UndefOr[
-    Partial[
-      AutoCompleteProps with RefAttributes[typingsSlinky.antd.selectMod.default[SelectValue]]
-    ]
-  ] = js.native
+  var defaultProps: js.UndefOr[PartialAutoCompletePropsR] = js.native
   var displayName: js.UndefOr[String] = js.native
-  var propTypes: js.UndefOr[
-    WeakValidationMap[
-      AutoCompleteProps with RefAttributes[typingsSlinky.antd.selectMod.default[SelectValue]]
-    ]
-  ] = js.native
+  var propTypes: js.UndefOr[WeakValidationMapAutoComp] = js.native
   /**
     * **NOTE**: Exotic components are not callable.
     */

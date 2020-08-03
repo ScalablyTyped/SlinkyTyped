@@ -1,28 +1,18 @@
 package typingsSlinky.antd.anon
 
+import typingsSlinky.rcTree.interfaceMod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Checked extends js.Object {
-  var checked: js.Array[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-  ]
-  var halfChecked: js.Array[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-  ]
+  var checked: js.Array[Key]
+  var halfChecked: js.Array[Key]
 }
 
 object Checked {
   @scala.inline
-  def apply(
-    checked: js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-    ],
-    halfChecked: js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-    ]
-  ): Checked = {
+  def apply(checked: js.Array[Key], halfChecked: js.Array[Key]): Checked = {
     val __obj = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any], halfChecked = halfChecked.asInstanceOf[js.Any])
     __obj.asInstanceOf[Checked]
   }
@@ -38,21 +28,13 @@ object Checked {
         x
     }
     @scala.inline
-    def setCheckedVarargs(value: js.Any*): Self = this.set("checked", js.Array(value :_*))
+    def setCheckedVarargs(value: Key*): Self = this.set("checked", js.Array(value :_*))
     @scala.inline
-    def setChecked(
-      value: js.Array[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-        ]
-    ): Self = this.set("checked", value.asInstanceOf[js.Any])
+    def setChecked(value: js.Array[Key]): Self = this.set("checked", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHalfCheckedVarargs(value: js.Any*): Self = this.set("halfChecked", js.Array(value :_*))
+    def setHalfCheckedVarargs(value: Key*): Self = this.set("halfChecked", js.Array(value :_*))
     @scala.inline
-    def setHalfChecked(
-      value: js.Array[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-        ]
-    ): Self = this.set("halfChecked", value.asInstanceOf[js.Any])
+    def setHalfChecked(value: js.Array[Key]): Self = this.set("halfChecked", value.asInstanceOf[js.Any])
   }
   
 }

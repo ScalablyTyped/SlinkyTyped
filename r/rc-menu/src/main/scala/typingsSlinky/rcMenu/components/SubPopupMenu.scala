@@ -17,6 +17,7 @@ import typingsSlinky.rcMenu.rcMenuStrings.ltr
 import typingsSlinky.rcMenu.rcMenuStrings.rtl
 import typingsSlinky.rcMenu.subPopupMenuMod.SubPopupMenuProps
 import typingsSlinky.rcMenu.subPopupMenuMod.default
+import typingsSlinky.rcTrigger.interfaceMod.MotionType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.Key
 import typingsSlinky.react.mod.ReactInstance
@@ -25,7 +26,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object SubPopupMenu {
-  @JSImport("rc-menu/lib/SubPopupMenu", JSImport.Default)
+  @JSImport("rc-menu/es/SubPopupMenu", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -80,9 +81,7 @@ object SubPopupMenu {
     @scala.inline
     def mode(value: MenuMode): this.type = set("mode", value.asInstanceOf[js.Any])
     @scala.inline
-    def motion(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-    ): this.type = set("motion", value.asInstanceOf[js.Any])
+    def motion(value: MotionType): this.type = set("motion", value.asInstanceOf[js.Any])
     @scala.inline
     def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
     @scala.inline

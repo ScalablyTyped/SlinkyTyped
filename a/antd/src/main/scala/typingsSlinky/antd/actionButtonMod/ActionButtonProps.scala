@@ -11,13 +11,14 @@ trait ActionButtonProps extends js.Object {
   var autoFocus: js.UndefOr[Boolean] = js.undefined
   var buttonProps: js.UndefOr[ButtonProps] = js.undefined
   var closeModal: js.Function
+  var prefixCls: String
   var `type`: js.UndefOr[LegacyButtonType] = js.undefined
 }
 
 object ActionButtonProps {
   @scala.inline
-  def apply(closeModal: js.Function): ActionButtonProps = {
-    val __obj = js.Dynamic.literal(closeModal = closeModal.asInstanceOf[js.Any])
+  def apply(closeModal: js.Function, prefixCls: String): ActionButtonProps = {
+    val __obj = js.Dynamic.literal(closeModal = closeModal.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
     __obj.asInstanceOf[ActionButtonProps]
   }
   @scala.inline
@@ -33,6 +34,8 @@ object ActionButtonProps {
     }
     @scala.inline
     def setCloseModal(value: js.Function): Self = this.set("closeModal", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def setActionFn(value: /* repeated */ js.Any => _ | js.Thenable[_]): Self = this.set("actionFn", js.Any.fromFunction1(value))
     @scala.inline

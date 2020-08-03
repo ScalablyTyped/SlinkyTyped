@@ -1,6 +1,6 @@
 package typingsSlinky.antd.anon
 
-import typingsSlinky.antd.groupMod.CheckboxValueType
+import typingsSlinky.antd.checkboxGroupMod.CheckboxValueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

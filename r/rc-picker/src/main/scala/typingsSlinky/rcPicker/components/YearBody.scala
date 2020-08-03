@@ -11,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object YearBody {
-  @JSImport("rc-picker/lib/panels/YearPanel/YearBody", JSImport.Default)
+  @JSImport("rc-picker/es/panels/YearPanel/YearBody", JSImport.Default)
   @js.native
   object component extends js.Object
   

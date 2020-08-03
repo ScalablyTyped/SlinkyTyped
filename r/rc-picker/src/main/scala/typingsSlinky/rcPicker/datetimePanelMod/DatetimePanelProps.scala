@@ -20,7 +20,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined parent std.Omit<rc-picker.rc-picker/lib/panels/DatePanel.DatePanelProps<DateType>, 'disabledHours' | 'disabledMinutes' | 'disabledSeconds'> */
+/* Inlined parent std.Omit<rc-picker.rc-picker/es/panels/DatePanel.DatePanelProps<DateType>, 'disabledHours' | 'disabledMinutes' | 'disabledSeconds'> */
 trait DatetimePanelProps[DateType] extends js.Object {
   var active: js.UndefOr[Boolean] = js.undefined
   var dateRender: js.UndefOr[DateRender[DateType]] = js.undefined

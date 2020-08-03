@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DecadeBody {
-  @JSImport("rc-picker/lib/panels/DecadePanel/DecadeBody", JSImport.Default)
+  @JSImport("rc-picker/es/panels/DecadePanel/DecadeBody", JSImport.Default)
   @js.native
   object component extends js.Object
   

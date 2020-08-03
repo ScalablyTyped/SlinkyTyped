@@ -45,6 +45,8 @@ object Steps {
     @scala.inline
     def onChange(value: /* current */ Double => Unit): this.type = set("onChange", js.Any.fromFunction1(value))
     @scala.inline
+    def percent(value: Double): this.type = set("percent", value.asInstanceOf[js.Any])
+    @scala.inline
     def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline
     def progressDot(value: Boolean | js.Function): this.type = set("progressDot", value.asInstanceOf[js.Any])

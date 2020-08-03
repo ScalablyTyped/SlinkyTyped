@@ -3,7 +3,7 @@ package typingsSlinky.antd.radioInterfaceMod
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.groupMod.AbstractCheckboxGroupProps
+import typingsSlinky.antd.checkboxGroupMod.AbstractCheckboxGroupProps
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js

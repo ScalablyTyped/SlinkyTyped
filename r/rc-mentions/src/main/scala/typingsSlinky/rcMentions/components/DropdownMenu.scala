@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DropdownMenu {
-  @JSImport("rc-mentions/lib/DropdownMenu", JSImport.Default)
+  @JSImport("rc-mentions/es/DropdownMenu", JSImport.Default)
   @js.native
   object component extends js.Object
   

@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MentionsContextConsumer {
-  @JSImport("rc-mentions/lib/MentionsContext", "MentionsContextConsumer")
+  @JSImport("rc-mentions/es/MentionsContext", "MentionsContextConsumer")
   @js.native
   object component extends js.Object
   

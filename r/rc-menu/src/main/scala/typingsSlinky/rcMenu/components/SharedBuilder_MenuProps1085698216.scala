@@ -75,6 +75,7 @@ import typingsSlinky.rcMenu.rcMenuStrings.tree
 import typingsSlinky.rcMenu.rcMenuStrings.url
 import typingsSlinky.rcMenu.rcMenuStrings.vertical
 import typingsSlinky.rcMenu.rcMenuStrings.yes
+import typingsSlinky.rcTrigger.interfaceMod.MotionType
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -281,9 +282,7 @@ class SharedBuilder_MenuProps1085698216[R <: js.Object] (val args: js.Array[js.A
   @scala.inline
   def mode(value: MenuMode): this.type = set("mode", value.asInstanceOf[js.Any])
   @scala.inline
-  def motion(
-    value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-  ): this.type = set("motion", value.asInstanceOf[js.Any])
+  def motion(value: MotionType): this.type = set("motion", value.asInstanceOf[js.Any])
   @scala.inline
   def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
   @scala.inline

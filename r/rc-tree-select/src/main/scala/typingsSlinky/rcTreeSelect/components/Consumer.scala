@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Consumer {
-  @JSImport("rc-tree-select/lib/Context", "SelectContext.Consumer")
+  @JSImport("rc-tree-select/es/Context", "SelectContext.Consumer")
   @js.native
   object component extends js.Object
   

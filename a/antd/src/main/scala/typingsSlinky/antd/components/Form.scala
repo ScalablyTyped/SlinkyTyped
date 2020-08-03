@@ -70,6 +70,8 @@ import typingsSlinky.antd.formContextMod.FormProviderProps
 import typingsSlinky.antd.formFormMod.FormLayout
 import typingsSlinky.antd.formFormMod.FormProps
 import typingsSlinky.antd.formItemMod.FormItemProps
+import typingsSlinky.antd.formListMod.FormListFieldData
+import typingsSlinky.antd.formListMod.FormListOperation
 import typingsSlinky.antd.formListMod.FormListProps
 import typingsSlinky.antd.gridColMod.ColProps
 import typingsSlinky.antd.interfaceMod.FormLabelAlign
@@ -535,7 +537,7 @@ object Form {
     def withProps(p: FormListProps): Default[slinky.web.html.`*`.tag.type, js.Object] = new Default[slinky.web.html.`*`.tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
     @scala.inline
     def apply(
-      children: (js.Array[typingsSlinky.antd.formListMod.FieldData], typingsSlinky.antd.formListMod.Operation) => ReactElement,
+      children: (js.Array[FormListFieldData], FormListOperation) => ReactElement,
       name: String | Double | (js.Array[String | Double])
     ): Default[slinky.web.html.`*`.tag.type, js.Object] = {
         val __props = js.Dynamic.literal(children = js.Any.fromFunction2(children), name = name.asInstanceOf[js.Any])

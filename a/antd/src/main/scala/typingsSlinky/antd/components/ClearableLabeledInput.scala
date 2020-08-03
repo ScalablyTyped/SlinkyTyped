@@ -62,13 +62,14 @@ object ClearableLabeledInput {
   def withProps(p: ClearableInputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
   def apply(
+    bordered: Boolean,
     element: ReactElement,
     handleReset: SyntheticMouseEvent[HTMLElement] => Unit,
     inputType: text | input,
     prefixCls: String,
     triggerFocus: () => Unit
   ): Builder = {
-    val __props = js.Dynamic.literal(element = element.asInstanceOf[js.Any], handleReset = js.Any.fromFunction1(handleReset), inputType = inputType.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], triggerFocus = js.Any.fromFunction0(triggerFocus))
+    val __props = js.Dynamic.literal(bordered = bordered.asInstanceOf[js.Any], element = element.asInstanceOf[js.Any], handleReset = js.Any.fromFunction1(handleReset), inputType = inputType.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], triggerFocus = js.Any.fromFunction0(triggerFocus))
     new Builder(js.Array(this.component, __props.asInstanceOf[ClearableInputProps]))
   }
 }

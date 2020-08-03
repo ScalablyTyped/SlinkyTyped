@@ -14,6 +14,7 @@ import scala.scalajs.js.annotation._
   */
 trait BasicProps extends js.Object {
   var allowClear: js.UndefOr[Boolean] = js.undefined
+  var bordered: Boolean
   var className: js.UndefOr[String] = js.undefined
   var direction: js.UndefOr[js.Any] = js.undefined
   var disabled: js.UndefOr[Boolean] = js.undefined
@@ -30,12 +31,13 @@ trait BasicProps extends js.Object {
 object BasicProps {
   @scala.inline
   def apply(
+    bordered: Boolean,
     element: ReactElement,
     handleReset: SyntheticMouseEvent[HTMLElement] => Unit,
     inputType: text | input,
     prefixCls: String
   ): BasicProps = {
-    val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], handleReset = js.Any.fromFunction1(handleReset), inputType = inputType.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(bordered = bordered.asInstanceOf[js.Any], element = element.asInstanceOf[js.Any], handleReset = js.Any.fromFunction1(handleReset), inputType = inputType.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
     __obj.asInstanceOf[BasicProps]
   }
   @scala.inline
@@ -49,6 +51,8 @@ object BasicProps {
         x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
         x
     }
+    @scala.inline
+    def setBordered(value: Boolean): Self = this.set("bordered", value.asInstanceOf[js.Any])
     @scala.inline
     def setElement(value: ReactElement): Self = this.set("element", value.asInstanceOf[js.Any])
     @scala.inline

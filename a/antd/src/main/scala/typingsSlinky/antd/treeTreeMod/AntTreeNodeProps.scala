@@ -2,6 +2,7 @@ package typingsSlinky.antd.treeTreeMod
 
 import org.scalablytyped.runtime.StringDictionary
 import slinky.core.facade.ReactElement
+import typingsSlinky.rcTree.interfaceMod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,9 +21,7 @@ trait AntTreeNodeProps
     (js.Function1[/* treeNode */ AntdTreeNodeAttribute, ReactElement]) | ReactElement
   ] = js.undefined
   var isLeaf: js.UndefOr[Boolean] = js.undefined
-  var key: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ js.Any
-  ] = js.undefined
+  var key: js.UndefOr[Key] = js.undefined
   var loading: js.UndefOr[Boolean] = js.undefined
   var selectable: js.UndefOr[Boolean] = js.undefined
   var selected: js.UndefOr[Boolean] = js.undefined
@@ -93,9 +92,7 @@ object AntTreeNodeProps {
     @scala.inline
     def deleteIsLeaf: Self = this.set("isLeaf", js.undefined)
     @scala.inline
-    def setKey(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ js.Any
-    ): Self = this.set("key", value.asInstanceOf[js.Any])
+    def setKey(value: Key): Self = this.set("key", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
     @scala.inline

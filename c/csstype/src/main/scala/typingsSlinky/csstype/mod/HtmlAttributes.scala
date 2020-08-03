@@ -7,7 +7,6 @@ import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.csstype.csstypeStrings.`[-webkit-dropzone]`
-  - typingsSlinky.csstype.csstypeStrings.`[-webkit-slot]`
   - typingsSlinky.csstype.csstypeStrings.`[abbr]`
   - typingsSlinky.csstype.csstypeStrings.`[accept-charset]`
   - typingsSlinky.csstype.csstypeStrings.`[accept]`
@@ -72,6 +71,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`[draggable]`
   - typingsSlinky.csstype.csstypeStrings.`[dropzone]`
   - typingsSlinky.csstype.csstypeStrings.`[enctype]`
+  - typingsSlinky.csstype.csstypeStrings.`[enterkeyhint]`
   - typingsSlinky.csstype.csstypeStrings.`[exportparts]`
   - typingsSlinky.csstype.csstypeStrings.`[face]`
   - typingsSlinky.csstype.csstypeStrings.`[for]`
@@ -109,6 +109,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`[language]`
   - typingsSlinky.csstype.csstypeStrings.`[leftmargin]`
   - typingsSlinky.csstype.csstypeStrings.`[link]`
+  - typingsSlinky.csstype.csstypeStrings.`[loading]`
   - typingsSlinky.csstype.csstypeStrings.`[longdesc]`
   - typingsSlinky.csstype.csstypeStrings.`[loop]`
   - typingsSlinky.csstype.csstypeStrings.`[low]`
@@ -125,7 +126,6 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`[minlength]`
   - typingsSlinky.csstype.csstypeStrings.`[moz-opaque]`
   - typingsSlinky.csstype.csstypeStrings.`[mozallowfullscreen]`
-  - typingsSlinky.csstype.csstypeStrings.`[mozbrowser]`
   - typingsSlinky.csstype.csstypeStrings.`[mozcurrentsampleoffset]`
   - typingsSlinky.csstype.csstypeStrings.`[msallowfullscreen]`
   - typingsSlinky.csstype.csstypeStrings.`[multiple]`
@@ -233,8 +233,6 @@ trait HtmlAttributes extends js.Object
 object HtmlAttributes {
   @scala.inline
   def `[-webkit-dropzone]`: typingsSlinky.csstype.csstypeStrings.`[-webkit-dropzone]` = "[-webkit-dropzone]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[-webkit-dropzone]`]
-  @scala.inline
-  def `[-webkit-slot]`: typingsSlinky.csstype.csstypeStrings.`[-webkit-slot]` = "[-webkit-slot]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[-webkit-slot]`]
   @scala.inline
   def `[abbr]`: typingsSlinky.csstype.csstypeStrings.`[abbr]` = "[abbr]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[abbr]`]
   @scala.inline
@@ -364,6 +362,8 @@ object HtmlAttributes {
   @scala.inline
   def `[enctype]`: typingsSlinky.csstype.csstypeStrings.`[enctype]` = "[enctype]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[enctype]`]
   @scala.inline
+  def `[enterkeyhint]`: typingsSlinky.csstype.csstypeStrings.`[enterkeyhint]` = "[enterkeyhint]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[enterkeyhint]`]
+  @scala.inline
   def `[exportparts]`: typingsSlinky.csstype.csstypeStrings.`[exportparts]` = "[exportparts]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[exportparts]`]
   @scala.inline
   def `[face]`: typingsSlinky.csstype.csstypeStrings.`[face]` = "[face]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[face]`]
@@ -438,6 +438,8 @@ object HtmlAttributes {
   @scala.inline
   def `[link]`: typingsSlinky.csstype.csstypeStrings.`[link]` = "[link]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[link]`]
   @scala.inline
+  def `[loading]`: typingsSlinky.csstype.csstypeStrings.`[loading]` = "[loading]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[loading]`]
+  @scala.inline
   def `[longdesc]`: typingsSlinky.csstype.csstypeStrings.`[longdesc]` = "[longdesc]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[longdesc]`]
   @scala.inline
   def `[loop]`: typingsSlinky.csstype.csstypeStrings.`[loop]` = "[loop]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[loop]`]
@@ -469,8 +471,6 @@ object HtmlAttributes {
   def `[moz-opaque]`: typingsSlinky.csstype.csstypeStrings.`[moz-opaque]` = "[moz-opaque]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[moz-opaque]`]
   @scala.inline
   def `[mozallowfullscreen]`: typingsSlinky.csstype.csstypeStrings.`[mozallowfullscreen]` = "[mozallowfullscreen]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[mozallowfullscreen]`]
-  @scala.inline
-  def `[mozbrowser]`: typingsSlinky.csstype.csstypeStrings.`[mozbrowser]` = "[mozbrowser]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[mozbrowser]`]
   @scala.inline
   def `[mozcurrentsampleoffset]`: typingsSlinky.csstype.csstypeStrings.`[mozcurrentsampleoffset]` = "[mozcurrentsampleoffset]".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`[mozcurrentsampleoffset]`]
   @scala.inline

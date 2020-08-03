@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PanelBody {
-  @JSImport("rc-picker/lib/panels/PanelBody", JSImport.Default)
+  @JSImport("rc-picker/es/panels/PanelBody", JSImport.Default)
   @js.native
   object component extends js.Object
   

@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TimeUnitColumn {
-  @JSImport("rc-picker/lib/panels/TimePanel/TimeUnitColumn", JSImport.Default)
+  @JSImport("rc-picker/es/panels/TimePanel/TimeUnitColumn", JSImport.Default)
   @js.native
   object component extends js.Object
   

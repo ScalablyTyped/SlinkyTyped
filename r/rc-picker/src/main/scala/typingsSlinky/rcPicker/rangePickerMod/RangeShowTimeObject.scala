@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Omit<rc-picker.rc-picker/lib/panels/TimePanel.SharedTimeProps<DateType>, 'defaultValue'> & {  defaultValue :std.Array<DateType> | undefined} */
+/* Inlined std.Omit<rc-picker.rc-picker/es/panels/TimePanel.SharedTimeProps<DateType>, 'defaultValue'> & {  defaultValue :std.Array<DateType> | undefined} */
 trait RangeShowTimeObject[DateType] extends js.Object {
   var defaultValue: js.UndefOr[js.Array[DateType]] = js.undefined
   var disabledHours: js.UndefOr[js.Function0[js.Array[Double]]] = js.undefined

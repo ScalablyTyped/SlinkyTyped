@@ -13,6 +13,7 @@ trait ArgsProps extends js.Object {
   var icon: js.UndefOr[ReactElement] = js.undefined
   var key: js.UndefOr[String | Double] = js.undefined
   var onClose: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var prefixCls: js.UndefOr[String] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var `type`: NoticeType
 }
@@ -63,6 +64,10 @@ object ArgsProps {
     def setOnClose(value: () => Unit): Self = this.set("onClose", js.Any.fromFunction0(value))
     @scala.inline
     def deleteOnClose: Self = this.set("onClose", js.undefined)
+    @scala.inline
+    def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
     @scala.inline
     def setStyle(value: CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
     @scala.inline

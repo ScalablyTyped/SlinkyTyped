@@ -4,6 +4,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcPicker.rcPickerStrings.ltr
 import typingsSlinky.rcPicker.rcPickerStrings.rtl
+import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,9 +13,7 @@ import scala.scalajs.js.annotation._
 trait PickerTriggerProps extends js.Object {
   var children: ReactElement
   var direction: js.UndefOr[ltr | rtl] = js.undefined
-  var dropdownAlign: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-  ] = js.undefined
+  var dropdownAlign: js.UndefOr[AlignType] = js.undefined
   var dropdownClassName: js.UndefOr[String] = js.undefined
   var getPopupContainer: js.UndefOr[js.Function1[/* node */ HTMLElement, HTMLElement]] = js.undefined
   var popupElement: ReactElement
@@ -56,9 +55,7 @@ object PickerTriggerProps {
     @scala.inline
     def deleteDirection: Self = this.set("direction", js.undefined)
     @scala.inline
-    def setDropdownAlign(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-    ): Self = this.set("dropdownAlign", value.asInstanceOf[js.Any])
+    def setDropdownAlign(value: AlignType): Self = this.set("dropdownAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDropdownAlign: Self = this.set("dropdownAlign", js.undefined)
     @scala.inline

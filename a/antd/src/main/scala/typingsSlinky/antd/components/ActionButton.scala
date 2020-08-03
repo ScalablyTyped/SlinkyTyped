@@ -30,8 +30,8 @@ object ActionButton {
   
   def withProps(p: ActionButtonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply(closeModal: js.Function): Builder = {
-    val __props = js.Dynamic.literal(closeModal = closeModal.asInstanceOf[js.Any])
+  def apply(closeModal: js.Function, prefixCls: String): Builder = {
+    val __props = js.Dynamic.literal(closeModal = closeModal.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[ActionButtonProps]))
   }
 }

@@ -5,7 +5,7 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.antd.avatarMod.AvatarProps
+import typingsSlinky.antd.avatarAvatarMod.AvatarProps
 import typingsSlinky.antd.breadcrumbBreadcrumbMod.BreadcrumbProps
 import typingsSlinky.antd.pageHeaderMod.PageHeaderProps
 import typingsSlinky.react.mod.CSSProperties

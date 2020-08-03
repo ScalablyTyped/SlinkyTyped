@@ -4,9 +4,10 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RcTextAreaProps * / any */ trait TextAreaProps extends js.Object {
+trait TextAreaProps
+  extends typingsSlinky.rcTextarea.mod.TextAreaProps {
   var allowClear: js.UndefOr[Boolean] = js.undefined
+  var bordered: js.UndefOr[Boolean] = js.undefined
 }
 
 object TextAreaProps {
@@ -30,6 +31,10 @@ object TextAreaProps {
     def setAllowClear(value: Boolean): Self = this.set("allowClear", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAllowClear: Self = this.set("allowClear", js.undefined)
+    @scala.inline
+    def setBordered(value: Boolean): Self = this.set("bordered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBordered: Self = this.set("bordered", js.undefined)
   }
   
 }

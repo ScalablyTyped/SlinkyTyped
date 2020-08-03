@@ -54,6 +54,7 @@ import typingsSlinky.rcPicker.rcPickerStrings.time
 import typingsSlinky.rcPicker.rcPickerStrings.tree
 import typingsSlinky.rcPicker.rcPickerStrings.vertical
 import typingsSlinky.rcPicker.timePanelMod.SharedTimeProps
+import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MutableRefObject
 import typingsSlinky.std.Exclude
@@ -63,7 +64,7 @@ import scala.scalajs.js.annotation._
 
 object Picker {
   object PickerBaseProps {
-    @JSImport("rc-picker/lib/Picker", JSImport.Default)
+    @JSImport("rc-picker/es/Picker", JSImport.Default)
     @js.native
     object component extends js.Object
     
@@ -196,9 +197,7 @@ object Picker {
       @scala.inline
       def disabledDate(value: DateType => Boolean): this.type = set("disabledDate", js.Any.fromFunction1(value))
       @scala.inline
-      def dropdownAlign(
-        value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-      ): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
+      def dropdownAlign(value: AlignType): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
       @scala.inline
       def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
       @scala.inline
@@ -250,6 +249,8 @@ object Picker {
       @scala.inline
       def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
       @scala.inline
+      def panelRender(value: /* originPanel */ ReactElement => ReactElement): this.type = set("panelRender", js.Any.fromFunction1(value))
+      @scala.inline
       def pickerRef(value: MutableRefObject[PickerRefConfig]): this.type = set("pickerRef", value.asInstanceOf[js.Any])
       @scala.inline
       def placeholder(value: String): this.type = set("placeholder", value.asInstanceOf[js.Any])
@@ -298,7 +299,7 @@ object Picker {
   }
   
   object PickerDateProps {
-    @JSImport("rc-picker/lib/Picker", JSImport.Default)
+    @JSImport("rc-picker/es/Picker", JSImport.Default)
     @js.native
     object component extends js.Object
     
@@ -433,9 +434,7 @@ object Picker {
       @scala.inline
       def disabledTime(value: /* date */ DateType | Null => DisabledTimes): this.type = set("disabledTime", js.Any.fromFunction1(value))
       @scala.inline
-      def dropdownAlign(
-        value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-      ): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
+      def dropdownAlign(value: AlignType): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
       @scala.inline
       def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
       @scala.inline
@@ -486,6 +485,8 @@ object Picker {
       def onSelect(value: DateType => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
       @scala.inline
       def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+      @scala.inline
+      def panelRender(value: /* originPanel */ ReactElement => ReactElement): this.type = set("panelRender", js.Any.fromFunction1(value))
       @scala.inline
       def picker(value: date): this.type = set("picker", value.asInstanceOf[js.Any])
       @scala.inline
@@ -543,7 +544,7 @@ object Picker {
   }
   
   object PickerTimeProps {
-    @JSImport("rc-picker/lib/Picker", JSImport.Default)
+    @JSImport("rc-picker/es/Picker", JSImport.Default)
     @js.native
     object component extends js.Object
     
@@ -684,9 +685,7 @@ object Picker {
       @scala.inline
       def disabledSeconds(value: (/* hour */ Double, /* minute */ Double) => js.Array[Double]): this.type = set("disabledSeconds", js.Any.fromFunction2(value))
       @scala.inline
-      def dropdownAlign(
-        value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-      ): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
+      def dropdownAlign(value: AlignType): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
       @scala.inline
       def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
       @scala.inline
@@ -743,6 +742,8 @@ object Picker {
       def onSelect(value: DateType => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
       @scala.inline
       def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+      @scala.inline
+      def panelRender(value: /* originPanel */ ReactElement => ReactElement): this.type = set("panelRender", js.Any.fromFunction1(value))
       @scala.inline
       def pickerRef(value: MutableRefObject[PickerRefConfig]): this.type = set("pickerRef", value.asInstanceOf[js.Any])
       @scala.inline

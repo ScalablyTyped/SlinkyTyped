@@ -229,6 +229,8 @@ object Input {
     @scala.inline
     def autoSave(value: String): this.type = set("autoSave", value.asInstanceOf[js.Any])
     @scala.inline
+    def bordered(value: Boolean): this.type = set("bordered", value.asInstanceOf[js.Any])
+    @scala.inline
     def capture(value: Boolean | String): this.type = set("capture", value.asInstanceOf[js.Any])
     @scala.inline
     def checked(value: Boolean): this.type = set("checked", value.asInstanceOf[js.Any])

@@ -31,7 +31,7 @@ trait DrawerProps extends js.Object {
   var onClose: js.UndefOr[js.Function1[/* e */ EventType, Unit]] = js.undefined
   var placement: js.UndefOr[placementType] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
-  var push: js.UndefOr[Boolean] = js.undefined
+  var push: js.UndefOr[Boolean | PushState] = js.undefined
   var style: js.UndefOr[CSSProperties] = js.undefined
   var title: js.UndefOr[ReactElement] = js.undefined
   var visible: js.UndefOr[Boolean] = js.undefined
@@ -151,7 +151,7 @@ object DrawerProps {
     @scala.inline
     def deletePrefixCls: Self = this.set("prefixCls", js.undefined)
     @scala.inline
-    def setPush(value: Boolean): Self = this.set("push", value.asInstanceOf[js.Any])
+    def setPush(value: Boolean | PushState): Self = this.set("push", value.asInstanceOf[js.Any])
     @scala.inline
     def deletePush: Self = this.set("push", js.undefined)
     @scala.inline

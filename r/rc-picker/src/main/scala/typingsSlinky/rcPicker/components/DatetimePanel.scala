@@ -21,7 +21,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DatetimePanel {
-  @JSImport("rc-picker/lib/panels/DatetimePanel", JSImport.Default)
+  @JSImport("rc-picker/es/panels/DatetimePanel", JSImport.Default)
   @js.native
   object component extends js.Object
   

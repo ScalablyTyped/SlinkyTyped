@@ -4,15 +4,15 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait VendorPropertiesHyphenFallback[TLength]
-  extends VendorLonghandPropertiesHyphenFallback[TLength]
-     with VendorShorthandPropertiesHyphenFallback[TLength]
+trait VendorPropertiesHyphenFallback[TLength, TTime]
+  extends VendorLonghandPropertiesHyphenFallback[TLength, TTime]
+     with VendorShorthandPropertiesHyphenFallback[TLength, TTime]
 
 object VendorPropertiesHyphenFallback {
   @scala.inline
-  def apply[TLength](): VendorPropertiesHyphenFallback[TLength] = {
+  def apply[TLength, TTime](): VendorPropertiesHyphenFallback[TLength, TTime] = {
     val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[VendorPropertiesHyphenFallback[TLength]]
+    __obj.asInstanceOf[VendorPropertiesHyphenFallback[TLength, TTime]]
   }
 }
 

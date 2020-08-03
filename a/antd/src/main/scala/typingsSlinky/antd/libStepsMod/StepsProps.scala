@@ -21,6 +21,7 @@ trait StepsProps extends js.Object {
   var initial: js.UndefOr[Double] = js.undefined
   var labelPlacement: js.UndefOr[horizontal | vertical] = js.undefined
   var onChange: js.UndefOr[js.Function1[/* current */ Double, Unit]] = js.undefined
+  var percent: js.UndefOr[Double] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
   var progressDot: js.UndefOr[Boolean | js.Function] = js.undefined
   var size: js.UndefOr[typingsSlinky.antd.antdStrings.default | small] = js.undefined
@@ -74,6 +75,10 @@ object StepsProps {
     def setOnChange(value: /* current */ Double => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
     @scala.inline
     def deleteOnChange: Self = this.set("onChange", js.undefined)
+    @scala.inline
+    def setPercent(value: Double): Self = this.set("percent", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePercent: Self = this.set("percent", js.undefined)
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
     @scala.inline

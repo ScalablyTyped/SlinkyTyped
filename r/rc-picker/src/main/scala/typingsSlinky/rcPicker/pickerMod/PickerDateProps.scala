@@ -53,6 +53,7 @@ import typingsSlinky.rcPicker.rcPickerStrings.time
 import typingsSlinky.rcPicker.rcPickerStrings.tree
 import typingsSlinky.rcPicker.rcPickerStrings.vertical
 import typingsSlinky.rcPicker.timePanelMod.SharedTimeProps
+import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
@@ -61,8 +62,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined parent rc-picker.rc-picker/lib/Picker.PickerSharedProps<DateType> */
-/* Inlined parent rc-picker.rc-picker/lib/Picker.OmitPanelProps<rc-picker.rc-picker/lib/PickerPanel.PickerPanelDateProps<DateType>> */
+/* Inlined parent rc-picker.rc-picker/es/Picker.PickerSharedProps<DateType> */
+/* Inlined parent rc-picker.rc-picker/es/Picker.OmitPanelProps<rc-picker.rc-picker/es/PickerPanel.PickerPanelDateProps<DateType>> */
 trait PickerDateProps[DateType] extends PickerProps[DateType] {
   var allowClear: js.UndefOr[Boolean] = js.undefined
   /** Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application. */
@@ -262,9 +263,7 @@ trait PickerDateProps[DateType] extends PickerProps[DateType] {
   var disabled: js.UndefOr[Boolean] = js.undefined
   var disabledDate: js.UndefOr[js.Function1[/* date */ DateType, Boolean]] = js.undefined
   var disabledTime: js.UndefOr[DisabledTime[DateType]] = js.undefined
-  var dropdownAlign: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-  ] = js.undefined
+  var dropdownAlign: js.UndefOr[AlignType] = js.undefined
   var dropdownClassName: js.UndefOr[String] = js.undefined
   var format: js.UndefOr[String | js.Array[String]] = js.undefined
   var generateConfig: GenerateConfig[DateType]
@@ -291,6 +290,7 @@ trait PickerDateProps[DateType] extends PickerProps[DateType] {
   var onPanelChange: js.UndefOr[OnPanelChange[DateType]] = js.undefined
   var onSelect: js.UndefOr[js.Function1[/* value */ DateType, Unit]] = js.undefined
   var open: js.UndefOr[Boolean] = js.undefined
+  var panelRender: js.UndefOr[js.Function1[/* originPanel */ ReactElement, ReactElement]] = js.undefined
   var picker: js.UndefOr[date] = js.undefined
   /** @private Internal usage, do not use in production mode!!! */
   var pickerRef: js.UndefOr[MutableRefObject[PickerRefConfig]] = js.undefined
@@ -584,9 +584,7 @@ object PickerDateProps {
     @scala.inline
     def deleteDisabledTime: Self = this.set("disabledTime", js.undefined)
     @scala.inline
-    def setDropdownAlign(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-    ): Self = this.set("dropdownAlign", value.asInstanceOf[js.Any])
+    def setDropdownAlign(value: AlignType): Self = this.set("dropdownAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDropdownAlign: Self = this.set("dropdownAlign", js.undefined)
     @scala.inline
@@ -685,6 +683,10 @@ object PickerDateProps {
     def setOpen(value: Boolean): Self = this.set("open", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOpen: Self = this.set("open", js.undefined)
+    @scala.inline
+    def setPanelRender(value: /* originPanel */ ReactElement => ReactElement): Self = this.set("panelRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def deletePanelRender: Self = this.set("panelRender", js.undefined)
     @scala.inline
     def setPicker(value: date): Self = this.set("picker", value.asInstanceOf[js.Any])
     @scala.inline

@@ -164,6 +164,7 @@ trait InputProps extends js.Object {
   var autoCorrect: js.UndefOr[String] = js.undefined
   var autoFocus: js.UndefOr[Boolean] = js.undefined
   var autoSave: js.UndefOr[String] = js.undefined
+  var bordered: js.UndefOr[Boolean] = js.undefined
   var capture: js.UndefOr[Boolean | String] = js.undefined
   var checked: js.UndefOr[Boolean] = js.undefined
   var children: js.UndefOr[ReactElement] = js.undefined
@@ -582,6 +583,10 @@ object InputProps {
     def setAutoSave(value: String): Self = this.set("autoSave", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteAutoSave: Self = this.set("autoSave", js.undefined)
+    @scala.inline
+    def setBordered(value: Boolean): Self = this.set("bordered", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteBordered: Self = this.set("bordered", js.undefined)
     @scala.inline
     def setCapture(value: Boolean | String): Self = this.set("capture", value.asInstanceOf[js.Any])
     @scala.inline

@@ -3,6 +3,7 @@ package typingsSlinky.antd
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.OmitModalStaticFunctionsw
 import typingsSlinky.antd.anon.PartialModalProps
+import typingsSlinky.antd.anon.RootPrefixCls
 import typingsSlinky.antd.anon.WeakValidationMapModalPro
 import typingsSlinky.antd.confirmMod.ModalFunc
 import typingsSlinky.antd.modalModalMod.ModalProps
@@ -15,9 +16,10 @@ import scala.scalajs.js.annotation._
 @JSImport("antd/lib/modal", JSImport.Namespace)
 @js.native
 object modalMod extends js.Object {
-  /* Inlined antd.antd/lib/modal/Modal.ModalInterface & antd.antd/lib/modal/confirm.ModalStaticFunctions & {destroyAll (): void} */
+  /* Inlined antd.antd/lib/modal/Modal.ModalInterface & antd.antd/lib/modal/confirm.ModalStaticFunctions & {destroyAll (): void,   config :(hasRootPrefixCls : {  rootPrefixCls :string | undefined}): void} */
   @js.native
   trait Modal extends js.Object {
+    var config: js.Function1[/* hasRootPrefixCls */ RootPrefixCls, Unit] = js.native
     var confirm: ModalFunc = js.native
     var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
     var defaultProps: js.UndefOr[PartialModalProps] = js.native

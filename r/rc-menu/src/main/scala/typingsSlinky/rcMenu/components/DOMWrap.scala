@@ -11,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DOMWrap {
-  @JSImport("rc-menu/lib/DOMWrap", JSImport.Default)
+  @JSImport("rc-menu/es/DOMWrap", JSImport.Default)
   @js.native
   object component extends js.Object
   

@@ -8,7 +8,8 @@ import scala.scalajs.js.annotation._
 trait TooltipPropsWithTitle
   extends AbstractTooltipProps
      with TooltipProps {
-  var overlay: js.UndefOr[ReactElement | RenderFunction] = js.undefined
+  @JSName("overlay")
+  var overlay_TooltipPropsWithTitle: js.UndefOr[ReactElement | RenderFunction] = js.undefined
   var title: ReactElement | RenderFunction
 }
 

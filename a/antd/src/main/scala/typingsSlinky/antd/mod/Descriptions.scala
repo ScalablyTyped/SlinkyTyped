@@ -12,6 +12,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object Descriptions extends js.Object {
   var Item: ReactComponentClass[DescriptionsItemProps] = js.native
-  def apply(hasPrefixClsTitleColumnColonBorderedLayoutChildrenClassNameStyleSize: DescriptionsProps): ReactElement = js.native
+  def apply(hasPrefixClsTitleExtraColumnColonBorderedLayoutChildrenClassNameStyleSize: DescriptionsProps): ReactElement = js.native
 }
 

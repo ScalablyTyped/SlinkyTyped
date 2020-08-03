@@ -1,0 +1,45 @@
+package typingsSlinky.rcSelect.anon
+
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.rcSelect.generatorMod.Key
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait Dictname[OptionsType /* <: js.Array[js.Object] */]
+  extends /** Save for customize data */
+/* prop */ StringDictionary[js.Any] {
+  var data: /* import warning: importer.ImportType#apply Failed type conversion: OptionsType[number] */ js.Any
+  var key: Key
+}
+
+object Dictname {
+  @scala.inline
+  def apply[/* <: js.Array[js.Object] */ OptionsType](
+    data: /* import warning: importer.ImportType#apply Failed type conversion: OptionsType[number] */ js.Any,
+    key: Key
+  ): Dictname[OptionsType] = {
+    val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any])
+    __obj.asInstanceOf[Dictname[OptionsType]]
+  }
+  @scala.inline
+  implicit class DictnameOps[Self <: Dictname[_], /* <: js.Array[js.Object] */ OptionsType] (val x: Self with Dictname[OptionsType]) extends AnyVal {
+    @scala.inline
+    def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
+    @scala.inline
+    def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
+    @scala.inline
+    def set(key: String, value: js.Any): Self = {
+        x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
+        x
+    }
+    @scala.inline
+    def setData(
+      value: /* import warning: importer.ImportType#apply Failed type conversion: OptionsType[number] */ js.Any
+    ): Self = this.set("data", value.asInstanceOf[js.Any])
+    @scala.inline
+    def setKey(value: Key): Self = this.set("key", value.asInstanceOf[js.Any])
+  }
+  
+}
+

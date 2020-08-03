@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Menu {
-  @JSImport("rc-menu/lib/Menu", JSImport.Default)
+  @JSImport("rc-menu/es/Menu", JSImport.Default)
   @js.native
   object component extends js.Object
   

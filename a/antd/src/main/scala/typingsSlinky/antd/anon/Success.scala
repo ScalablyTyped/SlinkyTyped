@@ -6,19 +6,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Success extends js.Object {
-  var error: ForwardRefExoticComponent[Pickanychildrensizeciteda]
-  var info: ForwardRefExoticComponent[Pickanychildrensizeciteda]
-  var success: ForwardRefExoticComponent[Pickanychildrensizeciteda]
-  var warning: ForwardRefExoticComponent[Pickanychildrensizeciteda]
+  var error: ForwardRefExoticComponent[PickAntdIconPropschildren]
+  var info: ForwardRefExoticComponent[PickAntdIconPropschildren]
+  var success: ForwardRefExoticComponent[PickAntdIconPropschildren]
+  var warning: ForwardRefExoticComponent[PickAntdIconPropschildren]
 }
 
 object Success {
   @scala.inline
   def apply(
-    error: ForwardRefExoticComponent[Pickanychildrensizeciteda],
-    info: ForwardRefExoticComponent[Pickanychildrensizeciteda],
-    success: ForwardRefExoticComponent[Pickanychildrensizeciteda],
-    warning: ForwardRefExoticComponent[Pickanychildrensizeciteda]
+    error: ForwardRefExoticComponent[PickAntdIconPropschildren],
+    info: ForwardRefExoticComponent[PickAntdIconPropschildren],
+    success: ForwardRefExoticComponent[PickAntdIconPropschildren],
+    warning: ForwardRefExoticComponent[PickAntdIconPropschildren]
   ): Success = {
     val __obj = js.Dynamic.literal(error = error.asInstanceOf[js.Any], info = info.asInstanceOf[js.Any], success = success.asInstanceOf[js.Any], warning = warning.asInstanceOf[js.Any])
     __obj.asInstanceOf[Success]
@@ -35,13 +35,13 @@ object Success {
         x
     }
     @scala.inline
-    def setError(value: ForwardRefExoticComponent[Pickanychildrensizeciteda]): Self = this.set("error", value.asInstanceOf[js.Any])
+    def setError(value: ForwardRefExoticComponent[PickAntdIconPropschildren]): Self = this.set("error", value.asInstanceOf[js.Any])
     @scala.inline
-    def setInfo(value: ForwardRefExoticComponent[Pickanychildrensizeciteda]): Self = this.set("info", value.asInstanceOf[js.Any])
+    def setInfo(value: ForwardRefExoticComponent[PickAntdIconPropschildren]): Self = this.set("info", value.asInstanceOf[js.Any])
     @scala.inline
-    def setSuccess(value: ForwardRefExoticComponent[Pickanychildrensizeciteda]): Self = this.set("success", value.asInstanceOf[js.Any])
+    def setSuccess(value: ForwardRefExoticComponent[PickAntdIconPropschildren]): Self = this.set("success", value.asInstanceOf[js.Any])
     @scala.inline
-    def setWarning(value: ForwardRefExoticComponent[Pickanychildrensizeciteda]): Self = this.set("warning", value.asInstanceOf[js.Any])
+    def setWarning(value: ForwardRefExoticComponent[PickAntdIconPropschildren]): Self = this.set("warning", value.asInstanceOf[js.Any])
   }
   
 }

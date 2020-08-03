@@ -52,6 +52,7 @@ import typingsSlinky.rcPicker.interfaceMod.OnPanelChange
 import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import typingsSlinky.rcPicker.monthBodyMod.MonthCellRender
 import typingsSlinky.rcPicker.pickerMod.PickerRefConfig
+import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
@@ -128,9 +129,7 @@ trait TimePickerProps extends js.Object {
   var disabledHours: js.UndefOr[js.Function0[js.Array[Double]]] = js.undefined
   var disabledMinutes: js.UndefOr[js.Function1[/* hour */ Double, js.Array[Double]]] = js.undefined
   var disabledSeconds: js.UndefOr[js.Function2[/* hour */ Double, /* minute */ Double, js.Array[Double]]] = js.undefined
-  var dropdownAlign: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-  ] = js.undefined
+  var dropdownAlign: js.UndefOr[AlignType] = js.undefined
   var dropdownClassName: js.UndefOr[String] = js.undefined
   var format: js.UndefOr[String | js.Array[String]] = js.undefined
   var getPopupContainer: js.UndefOr[js.Function1[/* node */ HTMLElement, HTMLElement]] = js.undefined
@@ -157,6 +156,7 @@ trait TimePickerProps extends js.Object {
   var onPanelChange: js.UndefOr[OnPanelChange[Moment]] = js.undefined
   var onSelect: js.UndefOr[js.Function1[/* value */ Moment, Unit]] = js.undefined
   var open: js.UndefOr[Boolean] = js.undefined
+  var panelRender: js.UndefOr[js.Function1[/* originPanel */ ReactElement, ReactElement]] = js.undefined
   var pickerRef: js.UndefOr[MutableRefObject[PickerRefConfig]] = js.undefined
   var placeholder: js.UndefOr[String] = js.undefined
   var popupClassName: js.UndefOr[String] = js.undefined
@@ -462,9 +462,7 @@ object TimePickerProps {
     @scala.inline
     def deleteDisabledSeconds: Self = this.set("disabledSeconds", js.undefined)
     @scala.inline
-    def setDropdownAlign(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-    ): Self = this.set("dropdownAlign", value.asInstanceOf[js.Any])
+    def setDropdownAlign(value: AlignType): Self = this.set("dropdownAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDropdownAlign: Self = this.set("dropdownAlign", js.undefined)
     @scala.inline
@@ -573,6 +571,10 @@ object TimePickerProps {
     def setOpen(value: Boolean): Self = this.set("open", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOpen: Self = this.set("open", js.undefined)
+    @scala.inline
+    def setPanelRender(value: /* originPanel */ ReactElement => ReactElement): Self = this.set("panelRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def deletePanelRender: Self = this.set("panelRender", js.undefined)
     @scala.inline
     def setPickerRef(value: MutableRefObject[PickerRefConfig]): Self = this.set("pickerRef", value.asInstanceOf[js.Any])
     @scala.inline

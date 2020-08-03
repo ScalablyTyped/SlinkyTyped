@@ -7,6 +7,7 @@ import scala.scalajs.js.annotation._
 
 trait ConfirmDialogProps extends ModalFuncProps {
   var afterClose: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var rootPrefixCls: js.UndefOr[String] = js.undefined
   def close(args: js.Any*): Unit
 }
 
@@ -33,6 +34,10 @@ object ConfirmDialogProps {
     def setAfterClose(value: () => Unit): Self = this.set("afterClose", js.Any.fromFunction0(value))
     @scala.inline
     def deleteAfterClose: Self = this.set("afterClose", js.undefined)
+    @scala.inline
+    def setRootPrefixCls(value: String): Self = this.set("rootPrefixCls", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deleteRootPrefixCls: Self = this.set("rootPrefixCls", js.undefined)
   }
   
 }

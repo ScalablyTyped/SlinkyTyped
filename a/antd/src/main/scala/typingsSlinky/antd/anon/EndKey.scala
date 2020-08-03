@@ -1,34 +1,21 @@
 package typingsSlinky.antd.anon
 
+import typingsSlinky.rcTree.interfaceMod.DataNode
+import typingsSlinky.rcTree.interfaceMod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait EndKey extends js.Object {
-  var endKey: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ js.Any
-  ] = js.undefined
-  var expandedKeys: js.Array[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-  ]
-  var startKey: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ js.Any
-  ] = js.undefined
-  var treeData: js.Array[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DataNode */ _
-  ]
+  var endKey: js.UndefOr[Key] = js.undefined
+  var expandedKeys: js.Array[Key]
+  var startKey: js.UndefOr[Key] = js.undefined
+  var treeData: js.Array[DataNode]
 }
 
 object EndKey {
   @scala.inline
-  def apply(
-    expandedKeys: js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-    ],
-    treeData: js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DataNode */ _
-    ]
-  ): EndKey = {
+  def apply(expandedKeys: js.Array[Key], treeData: js.Array[DataNode]): EndKey = {
     val __obj = js.Dynamic.literal(expandedKeys = expandedKeys.asInstanceOf[js.Any], treeData = treeData.asInstanceOf[js.Any])
     __obj.asInstanceOf[EndKey]
   }
@@ -44,31 +31,19 @@ object EndKey {
         x
     }
     @scala.inline
-    def setExpandedKeysVarargs(value: js.Any*): Self = this.set("expandedKeys", js.Array(value :_*))
+    def setExpandedKeysVarargs(value: Key*): Self = this.set("expandedKeys", js.Array(value :_*))
     @scala.inline
-    def setExpandedKeys(
-      value: js.Array[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-        ]
-    ): Self = this.set("expandedKeys", value.asInstanceOf[js.Any])
+    def setExpandedKeys(value: js.Array[Key]): Self = this.set("expandedKeys", value.asInstanceOf[js.Any])
     @scala.inline
-    def setTreeDataVarargs(value: js.Any*): Self = this.set("treeData", js.Array(value :_*))
+    def setTreeDataVarargs(value: DataNode*): Self = this.set("treeData", js.Array(value :_*))
     @scala.inline
-    def setTreeData(
-      value: js.Array[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DataNode */ _
-        ]
-    ): Self = this.set("treeData", value.asInstanceOf[js.Any])
+    def setTreeData(value: js.Array[DataNode]): Self = this.set("treeData", value.asInstanceOf[js.Any])
     @scala.inline
-    def setEndKey(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ js.Any
-    ): Self = this.set("endKey", value.asInstanceOf[js.Any])
+    def setEndKey(value: Key): Self = this.set("endKey", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteEndKey: Self = this.set("endKey", js.undefined)
     @scala.inline
-    def setStartKey(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ js.Any
-    ): Self = this.set("startKey", value.asInstanceOf[js.Any])
+    def setStartKey(value: Key): Self = this.set("startKey", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteStartKey: Self = this.set("startKey", js.undefined)
   }

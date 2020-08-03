@@ -6,7 +6,6 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.rcPicker.anon.Range
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import typingsSlinky.rcPicker.interfaceMod.Components
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
@@ -30,7 +29,6 @@ import typingsSlinky.rcPicker.rcPickerStrings.copy
 import typingsSlinky.rcPicker.rcPickerStrings.date
 import typingsSlinky.rcPicker.rcPickerStrings.descending
 import typingsSlinky.rcPicker.rcPickerStrings.dialog
-import typingsSlinky.rcPicker.rcPickerStrings.end
 import typingsSlinky.rcPicker.rcPickerStrings.execute
 import typingsSlinky.rcPicker.rcPickerStrings.grammar
 import typingsSlinky.rcPicker.rcPickerStrings.grid
@@ -52,12 +50,12 @@ import typingsSlinky.rcPicker.rcPickerStrings.popup
 import typingsSlinky.rcPicker.rcPickerStrings.removals
 import typingsSlinky.rcPicker.rcPickerStrings.rtl
 import typingsSlinky.rcPicker.rcPickerStrings.spelling
-import typingsSlinky.rcPicker.rcPickerStrings.start
 import typingsSlinky.rcPicker.rcPickerStrings.step
 import typingsSlinky.rcPicker.rcPickerStrings.text
 import typingsSlinky.rcPicker.rcPickerStrings.time
 import typingsSlinky.rcPicker.rcPickerStrings.tree
 import typingsSlinky.rcPicker.rcPickerStrings.vertical
+import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.MouseEventHandler
@@ -68,8 +66,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined parent rc-picker.rc-picker/lib/RangePicker.RangePickerSharedProps<DateType> */
-/* Inlined parent rc-picker.rc-picker/lib/RangePicker.OmitPickerProps<rc-picker.rc-picker/lib/Picker.PickerBaseProps<DateType>> */
+/* Inlined parent rc-picker.rc-picker/es/RangePicker.RangePickerSharedProps<DateType> */
+/* Inlined parent rc-picker.rc-picker/es/RangePicker.OmitPickerProps<rc-picker.rc-picker/es/Picker.PickerBaseProps<DateType>> */
 trait RangePickerBaseProps[DateType] extends RangePickerProps[DateType] {
   /** @private Internal control of active picker. Do not use since it's private usage */
   var activePickerIndex: js.UndefOr[`0` | `1`] = js.undefined
@@ -136,11 +134,9 @@ trait RangePickerBaseProps[DateType] extends RangePickerProps[DateType] {
   var disabled: js.UndefOr[Boolean | (js.Tuple2[Boolean, Boolean])] = js.undefined
   var disabledDate: js.UndefOr[js.Function1[/* date */ DateType, Boolean]] = js.undefined
   var disabledTime: js.UndefOr[
-    js.Function2[/* date */ EventValue[DateType], /* type */ start | end, DisabledTimes]
+    js.Function2[/* date */ EventValue[DateType], /* type */ RangeType, DisabledTimes]
   ] = js.undefined
-  var dropdownAlign: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-  ] = js.undefined
+  var dropdownAlign: js.UndefOr[AlignType] = js.undefined
   var dropdownClassName: js.UndefOr[String] = js.undefined
   var format: js.UndefOr[String | js.Array[String]] = js.undefined
   var generateConfig: GenerateConfig[DateType]
@@ -154,9 +150,10 @@ trait RangePickerBaseProps[DateType] extends RangePickerProps[DateType] {
   var nextIcon: js.UndefOr[ReactElement] = js.undefined
   var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.undefined
   var onCalendarChange: js.UndefOr[
-    js.Function2[
+    js.Function3[
       /* values */ RangeValue[DateType], 
       /* formatString */ js.Tuple2[String, String], 
+      /* info */ RangeInfo, 
       Unit
     ]
   ] = js.undefined
@@ -180,6 +177,7 @@ trait RangePickerBaseProps[DateType] extends RangePickerProps[DateType] {
     js.Function2[/* values */ RangeValue[DateType], /* modes */ js.Tuple2[PanelMode, PanelMode], Unit]
   ] = js.undefined
   var open: js.UndefOr[Boolean] = js.undefined
+  var panelRender: js.UndefOr[js.Function1[/* originPanel */ ReactElement, ReactElement]] = js.undefined
   var picker: Exclude[PickerMode, date | time]
   var pickerRef: js.UndefOr[MutableRefObject[PickerRefConfig]] = js.undefined
   var placeholder: js.UndefOr[js.Tuple2[String, String]] = js.undefined
@@ -454,7 +452,7 @@ object RangePickerBaseProps {
     @scala.inline
     def deleteComponents: Self = this.set("components", js.undefined)
     @scala.inline
-    def setDateRender(value: (DateType, DateType, /* info */ Range) => ReactElement): Self = this.set("dateRender", js.Any.fromFunction3(value))
+    def setDateRender(value: (DateType, DateType, /* info */ RangeInfo) => ReactElement): Self = this.set("dateRender", js.Any.fromFunction3(value))
     @scala.inline
     def deleteDateRender: Self = this.set("dateRender", js.undefined)
     @scala.inline
@@ -484,13 +482,11 @@ object RangePickerBaseProps {
     @scala.inline
     def deleteDisabledDate: Self = this.set("disabledDate", js.undefined)
     @scala.inline
-    def setDisabledTime(value: (/* date */ EventValue[DateType], /* type */ start | end) => DisabledTimes): Self = this.set("disabledTime", js.Any.fromFunction2(value))
+    def setDisabledTime(value: (/* date */ EventValue[DateType], /* type */ RangeType) => DisabledTimes): Self = this.set("disabledTime", js.Any.fromFunction2(value))
     @scala.inline
     def deleteDisabledTime: Self = this.set("disabledTime", js.undefined)
     @scala.inline
-    def setDropdownAlign(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-    ): Self = this.set("dropdownAlign", value.asInstanceOf[js.Any])
+    def setDropdownAlign(value: AlignType): Self = this.set("dropdownAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDropdownAlign: Self = this.set("dropdownAlign", js.undefined)
     @scala.inline
@@ -538,7 +534,9 @@ object RangePickerBaseProps {
     @scala.inline
     def deleteOnBlur: Self = this.set("onBlur", js.undefined)
     @scala.inline
-    def setOnCalendarChange(value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String]) => Unit): Self = this.set("onCalendarChange", js.Any.fromFunction2(value))
+    def setOnCalendarChange(
+      value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String], /* info */ RangeInfo) => Unit
+    ): Self = this.set("onCalendarChange", js.Any.fromFunction3(value))
     @scala.inline
     def deleteOnCalendarChange: Self = this.set("onCalendarChange", js.undefined)
     @scala.inline
@@ -589,6 +587,10 @@ object RangePickerBaseProps {
     def setOpen(value: Boolean): Self = this.set("open", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOpen: Self = this.set("open", js.undefined)
+    @scala.inline
+    def setPanelRender(value: /* originPanel */ ReactElement => ReactElement): Self = this.set("panelRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def deletePanelRender: Self = this.set("panelRender", js.undefined)
     @scala.inline
     def setPickerRef(value: MutableRefObject[PickerRefConfig]): Self = this.set("pickerRef", value.asInstanceOf[js.Any])
     @scala.inline

@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Select[ValueType /* <: SelectValue */]
   extends Component[SelectProps[ValueType], js.Object, js.Any] {
-  var selectRef: ReactRef[typingsSlinky.rcSelect.mod.default] = js.native
+  var selectRef: ReactRef[typingsSlinky.rcSelect.mod.default[ValueType]] = js.native
   def blur(): Unit = js.native
   def focus(): Unit = js.native
   def getMode(): js.UndefOr[multiple | tags | SECRET_COMBOBOX_MODE_DO_NOT_USE | combobox] = js.native

@@ -15,7 +15,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TimeBody {
-  @JSImport("rc-picker/lib/panels/TimePanel/TimeBody", JSImport.Default)
+  @JSImport("rc-picker/es/panels/TimePanel/TimeBody", JSImport.Default)
   @js.native
   object component extends js.Object
   

@@ -512,9 +512,6 @@ object rcMenuStrings {
   sealed trait WebkitClipPath extends js.Object
   
   @js.native
-  sealed trait WebkitColorAdjust extends js.Object
-  
-  @js.native
   sealed trait WebkitColumnCount extends js.Object
   
   @js.native
@@ -656,6 +653,9 @@ object rcMenuStrings {
   sealed trait WebkitPerspectiveOrigin extends js.Object
   
   @js.native
+  sealed trait WebkitPrintColorAdjust extends js.Object
+  
+  @js.native
   sealed trait WebkitScrollSnapPointsX extends js.Object
   
   @js.native
@@ -714,6 +714,9 @@ object rcMenuStrings {
   
   @js.native
   sealed trait WebkitTextStrokeWidth extends js.Object
+  
+  @js.native
+  sealed trait WebkitTextUnderlinePosition extends js.Object
   
   @js.native
   sealed trait WebkitTouchCallout extends js.Object
@@ -804,6 +807,9 @@ object rcMenuStrings {
   
   @js.native
   sealed trait ascending extends js.Object
+  
+  @js.native
+  sealed trait aspectRatio extends js.Object
   
   @js.native
   sealed trait assertive extends js.Object
@@ -1895,9 +1901,6 @@ object rcMenuStrings {
   sealed trait offsetPath extends js.Object
   
   @js.native
-  sealed trait offsetPosition extends js.Object
-  
-  @js.native
   sealed trait offsetRotate extends js.Object
   
   @js.native
@@ -1959,6 +1962,12 @@ object rcMenuStrings {
   
   @js.native
   sealed trait overscrollBehavior extends js.Object
+  
+  @js.native
+  sealed trait overscrollBehaviorBlock extends js.Object
+  
+  @js.native
+  sealed trait overscrollBehaviorInline extends js.Object
   
   @js.native
   sealed trait overscrollBehaviorX extends js.Object
@@ -2153,6 +2162,21 @@ object rcMenuStrings {
   sealed trait scrollSnapDestination extends js.Object
   
   @js.native
+  sealed trait scrollSnapMargin extends js.Object
+  
+  @js.native
+  sealed trait scrollSnapMarginBottom extends js.Object
+  
+  @js.native
+  sealed trait scrollSnapMarginLeft extends js.Object
+  
+  @js.native
+  sealed trait scrollSnapMarginRight extends js.Object
+  
+  @js.native
+  sealed trait scrollSnapMarginTop extends js.Object
+  
+  @js.native
   sealed trait scrollSnapPointsX extends js.Object
   
   @js.native
@@ -2172,6 +2196,9 @@ object rcMenuStrings {
   
   @js.native
   sealed trait scrollbarColor extends js.Object
+  
+  @js.native
+  sealed trait scrollbarTrackColor extends js.Object
   
   @js.native
   sealed trait scrollbarWidth extends js.Object
@@ -2273,6 +2300,12 @@ object rcMenuStrings {
   sealed trait textDecorationStyle extends js.Object
   
   @js.native
+  sealed trait textDecorationThickness extends js.Object
+  
+  @js.native
+  sealed trait textDecorationWidth extends js.Object
+  
+  @js.native
   sealed trait textEmphasis extends js.Object
   
   @js.native
@@ -2307,6 +2340,9 @@ object rcMenuStrings {
   
   @js.native
   sealed trait textTransform extends js.Object
+  
+  @js.native
+  sealed trait textUnderlineOffset extends js.Object
   
   @js.native
   sealed trait textUnderlinePosition extends js.Object
@@ -2750,8 +2786,6 @@ object rcMenuStrings {
   @scala.inline
   def WebkitClipPath: WebkitClipPath = "WebkitClipPath".asInstanceOf[WebkitClipPath]
   @scala.inline
-  def WebkitColorAdjust: WebkitColorAdjust = "WebkitColorAdjust".asInstanceOf[WebkitColorAdjust]
-  @scala.inline
   def WebkitColumnCount: WebkitColumnCount = "WebkitColumnCount".asInstanceOf[WebkitColumnCount]
   @scala.inline
   def WebkitColumnFill: WebkitColumnFill = "WebkitColumnFill".asInstanceOf[WebkitColumnFill]
@@ -2846,6 +2880,8 @@ object rcMenuStrings {
   @scala.inline
   def WebkitPerspectiveOrigin: WebkitPerspectiveOrigin = "WebkitPerspectiveOrigin".asInstanceOf[WebkitPerspectiveOrigin]
   @scala.inline
+  def WebkitPrintColorAdjust: WebkitPrintColorAdjust = "WebkitPrintColorAdjust".asInstanceOf[WebkitPrintColorAdjust]
+  @scala.inline
   def WebkitScrollSnapPointsX: WebkitScrollSnapPointsX = "WebkitScrollSnapPointsX".asInstanceOf[WebkitScrollSnapPointsX]
   @scala.inline
   def WebkitScrollSnapPointsY: WebkitScrollSnapPointsY = "WebkitScrollSnapPointsY".asInstanceOf[WebkitScrollSnapPointsY]
@@ -2885,6 +2921,8 @@ object rcMenuStrings {
   def WebkitTextStrokeColor: WebkitTextStrokeColor = "WebkitTextStrokeColor".asInstanceOf[WebkitTextStrokeColor]
   @scala.inline
   def WebkitTextStrokeWidth: WebkitTextStrokeWidth = "WebkitTextStrokeWidth".asInstanceOf[WebkitTextStrokeWidth]
+  @scala.inline
+  def WebkitTextUnderlinePosition: WebkitTextUnderlinePosition = "WebkitTextUnderlinePosition".asInstanceOf[WebkitTextUnderlinePosition]
   @scala.inline
   def WebkitTouchCallout: WebkitTouchCallout = "WebkitTouchCallout".asInstanceOf[WebkitTouchCallout]
   @scala.inline
@@ -2945,6 +2983,8 @@ object rcMenuStrings {
   def appearance: appearance = "appearance".asInstanceOf[appearance]
   @scala.inline
   def ascending: ascending = "ascending".asInstanceOf[ascending]
+  @scala.inline
+  def aspectRatio: aspectRatio = "aspectRatio".asInstanceOf[aspectRatio]
   @scala.inline
   def assertive: assertive = "assertive".asInstanceOf[assertive]
   @scala.inline
@@ -3672,8 +3712,6 @@ object rcMenuStrings {
   @scala.inline
   def offsetPath: offsetPath = "offsetPath".asInstanceOf[offsetPath]
   @scala.inline
-  def offsetPosition: offsetPosition = "offsetPosition".asInstanceOf[offsetPosition]
-  @scala.inline
   def offsetRotate: offsetRotate = "offsetRotate".asInstanceOf[offsetRotate]
   @scala.inline
   def offsetRotation: offsetRotation = "offsetRotation".asInstanceOf[offsetRotation]
@@ -3715,6 +3753,10 @@ object rcMenuStrings {
   def overflowY: overflowY = "overflowY".asInstanceOf[overflowY]
   @scala.inline
   def overscrollBehavior: overscrollBehavior = "overscrollBehavior".asInstanceOf[overscrollBehavior]
+  @scala.inline
+  def overscrollBehaviorBlock: overscrollBehaviorBlock = "overscrollBehaviorBlock".asInstanceOf[overscrollBehaviorBlock]
+  @scala.inline
+  def overscrollBehaviorInline: overscrollBehaviorInline = "overscrollBehaviorInline".asInstanceOf[overscrollBehaviorInline]
   @scala.inline
   def overscrollBehaviorX: overscrollBehaviorX = "overscrollBehaviorX".asInstanceOf[overscrollBehaviorX]
   @scala.inline
@@ -3844,6 +3886,16 @@ object rcMenuStrings {
   @scala.inline
   def scrollSnapDestination: scrollSnapDestination = "scrollSnapDestination".asInstanceOf[scrollSnapDestination]
   @scala.inline
+  def scrollSnapMargin: scrollSnapMargin = "scrollSnapMargin".asInstanceOf[scrollSnapMargin]
+  @scala.inline
+  def scrollSnapMarginBottom: scrollSnapMarginBottom = "scrollSnapMarginBottom".asInstanceOf[scrollSnapMarginBottom]
+  @scala.inline
+  def scrollSnapMarginLeft: scrollSnapMarginLeft = "scrollSnapMarginLeft".asInstanceOf[scrollSnapMarginLeft]
+  @scala.inline
+  def scrollSnapMarginRight: scrollSnapMarginRight = "scrollSnapMarginRight".asInstanceOf[scrollSnapMarginRight]
+  @scala.inline
+  def scrollSnapMarginTop: scrollSnapMarginTop = "scrollSnapMarginTop".asInstanceOf[scrollSnapMarginTop]
+  @scala.inline
   def scrollSnapPointsX: scrollSnapPointsX = "scrollSnapPointsX".asInstanceOf[scrollSnapPointsX]
   @scala.inline
   def scrollSnapPointsY: scrollSnapPointsY = "scrollSnapPointsY".asInstanceOf[scrollSnapPointsY]
@@ -3857,6 +3909,8 @@ object rcMenuStrings {
   def scrollSnapTypeY: scrollSnapTypeY = "scrollSnapTypeY".asInstanceOf[scrollSnapTypeY]
   @scala.inline
   def scrollbarColor: scrollbarColor = "scrollbarColor".asInstanceOf[scrollbarColor]
+  @scala.inline
+  def scrollbarTrackColor: scrollbarTrackColor = "scrollbarTrackColor".asInstanceOf[scrollbarTrackColor]
   @scala.inline
   def scrollbarWidth: scrollbarWidth = "scrollbarWidth".asInstanceOf[scrollbarWidth]
   @scala.inline
@@ -3924,6 +3978,10 @@ object rcMenuStrings {
   @scala.inline
   def textDecorationStyle: textDecorationStyle = "textDecorationStyle".asInstanceOf[textDecorationStyle]
   @scala.inline
+  def textDecorationThickness: textDecorationThickness = "textDecorationThickness".asInstanceOf[textDecorationThickness]
+  @scala.inline
+  def textDecorationWidth: textDecorationWidth = "textDecorationWidth".asInstanceOf[textDecorationWidth]
+  @scala.inline
   def textEmphasis: textEmphasis = "textEmphasis".asInstanceOf[textEmphasis]
   @scala.inline
   def textEmphasisColor: textEmphasisColor = "textEmphasisColor".asInstanceOf[textEmphasisColor]
@@ -3947,6 +4005,8 @@ object rcMenuStrings {
   def textSizeAdjust: textSizeAdjust = "textSizeAdjust".asInstanceOf[textSizeAdjust]
   @scala.inline
   def textTransform: textTransform = "textTransform".asInstanceOf[textTransform]
+  @scala.inline
+  def textUnderlineOffset: textUnderlineOffset = "textUnderlineOffset".asInstanceOf[textUnderlineOffset]
   @scala.inline
   def textUnderlinePosition: textUnderlinePosition = "textUnderlinePosition".asInstanceOf[textUnderlinePosition]
   @scala.inline

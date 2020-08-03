@@ -3,15 +3,14 @@ package typingsSlinky.antd.treeTreeMod
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import slinky.web.SyntheticMouseEvent
+import typingsSlinky.rcTree.interfaceMod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait AntTreeNodeDropEvent extends js.Object {
   var dragNode: ReactComponentClass[AntTreeNodeProps]
-  var dragNodesKeys: js.Array[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-  ]
+  var dragNodesKeys: js.Array[Key]
   var dropPosition: Double
   var dropToGap: js.UndefOr[Boolean] = js.undefined
   var event: SyntheticMouseEvent[HTMLElement]
@@ -22,9 +21,7 @@ object AntTreeNodeDropEvent {
   @scala.inline
   def apply(
     dragNode: ReactComponentClass[AntTreeNodeProps],
-    dragNodesKeys: js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-    ],
+    dragNodesKeys: js.Array[Key],
     dropPosition: Double,
     event: SyntheticMouseEvent[HTMLElement],
     node: ReactComponentClass[AntTreeNodeProps]
@@ -46,13 +43,9 @@ object AntTreeNodeDropEvent {
     @scala.inline
     def setDragNode(value: ReactComponentClass[AntTreeNodeProps]): Self = this.set("dragNode", value.asInstanceOf[js.Any])
     @scala.inline
-    def setDragNodesKeysVarargs(value: js.Any*): Self = this.set("dragNodesKeys", js.Array(value :_*))
+    def setDragNodesKeysVarargs(value: Key*): Self = this.set("dragNodesKeys", js.Array(value :_*))
     @scala.inline
-    def setDragNodesKeys(
-      value: js.Array[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-        ]
-    ): Self = this.set("dragNodesKeys", value.asInstanceOf[js.Any])
+    def setDragNodesKeys(value: js.Array[Key]): Self = this.set("dragNodesKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def setDropPosition(value: Double): Self = this.set("dropPosition", value.asInstanceOf[js.Any])
     @scala.inline

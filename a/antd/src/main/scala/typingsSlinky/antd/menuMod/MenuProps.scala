@@ -5,8 +5,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* import warning: RemoveDifficultInheritance.summarizeChanges 
-- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RcMenuProps * / any */ trait MenuProps extends js.Object {
+trait MenuProps
+  extends typingsSlinky.rcMenu.menuMod.MenuProps {
   var focusable: js.UndefOr[Boolean] = js.undefined
   var inlineIndent: js.UndefOr[Double] = js.undefined
   var theme: js.UndefOr[MenuTheme] = js.undefined

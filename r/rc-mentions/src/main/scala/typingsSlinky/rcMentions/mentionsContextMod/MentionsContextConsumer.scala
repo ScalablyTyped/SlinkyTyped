@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("rc-mentions/lib/MentionsContext", "MentionsContextConsumer")
+@JSImport("rc-mentions/es/MentionsContext", "MentionsContextConsumer")
 @js.native
 object MentionsContextConsumer extends TopLevel[ReactComponentClass[ConsumerProps[MentionsContextProps]]]
 

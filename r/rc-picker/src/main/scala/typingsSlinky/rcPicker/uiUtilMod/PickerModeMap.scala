@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("rc-picker/lib/utils/uiUtil", "PickerModeMap")
+@JSImport("rc-picker/es/utils/uiUtil", "PickerModeMap")
 @js.native
 object PickerModeMap extends js.Object {
   var date: (js.Function1[/* next */ PanelMode, PanelMode]) | Null = js.native

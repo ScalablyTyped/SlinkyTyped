@@ -9,6 +9,7 @@ import scala.scalajs.js.annotation._
   - typingsSlinky.csstype.csstypeStrings.`Colon-moz-dir`
   - typingsSlinky.csstype.csstypeStrings.`Colon-webkit-anyLeftparenthesisRightparenthesis`
   - typingsSlinky.csstype.csstypeStrings.ColonColoncue
+  - typingsSlinky.csstype.csstypeStrings.`ColonColoncue-region`
   - typingsSlinky.csstype.csstypeStrings.ColonColonpart
   - typingsSlinky.csstype.csstypeStrings.ColonColonslotted
   - typingsSlinky.csstype.csstypeStrings.Colondir
@@ -36,6 +37,8 @@ object AdvancedPseudos {
   def `Colon-webkit-anyLeftparenthesisRightparenthesis`: typingsSlinky.csstype.csstypeStrings.`Colon-webkit-anyLeftparenthesisRightparenthesis` = ":-webkit-any()".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`Colon-webkit-anyLeftparenthesisRightparenthesis`]
   @scala.inline
   def ColonColoncue: typingsSlinky.csstype.csstypeStrings.ColonColoncue = "::cue".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColoncue]
+  @scala.inline
+  def `ColonColoncue-region`: typingsSlinky.csstype.csstypeStrings.`ColonColoncue-region` = "::cue-region".asInstanceOf[typingsSlinky.csstype.csstypeStrings.`ColonColoncue-region`]
   @scala.inline
   def ColonColonpart: typingsSlinky.csstype.csstypeStrings.ColonColonpart = "::part".asInstanceOf[typingsSlinky.csstype.csstypeStrings.ColonColonpart]
   @scala.inline

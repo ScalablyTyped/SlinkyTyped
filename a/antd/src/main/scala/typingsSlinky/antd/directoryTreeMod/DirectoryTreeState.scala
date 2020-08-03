@@ -1,20 +1,13 @@
 package typingsSlinky.antd.directoryTreeMod
 
+import typingsSlinky.rcTree.interfaceMod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait DirectoryTreeState extends js.Object {
-  var expandedKeys: js.UndefOr[
-    js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-    ]
-  ] = js.undefined
-  var selectedKeys: js.UndefOr[
-    js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-    ]
-  ] = js.undefined
+  var expandedKeys: js.UndefOr[js.Array[Key]] = js.undefined
+  var selectedKeys: js.UndefOr[js.Array[Key]] = js.undefined
 }
 
 object DirectoryTreeState {
@@ -35,23 +28,15 @@ object DirectoryTreeState {
         x
     }
     @scala.inline
-    def setExpandedKeysVarargs(value: js.Any*): Self = this.set("expandedKeys", js.Array(value :_*))
+    def setExpandedKeysVarargs(value: Key*): Self = this.set("expandedKeys", js.Array(value :_*))
     @scala.inline
-    def setExpandedKeys(
-      value: js.Array[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-        ]
-    ): Self = this.set("expandedKeys", value.asInstanceOf[js.Any])
+    def setExpandedKeys(value: js.Array[Key]): Self = this.set("expandedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteExpandedKeys: Self = this.set("expandedKeys", js.undefined)
     @scala.inline
-    def setSelectedKeysVarargs(value: js.Any*): Self = this.set("selectedKeys", js.Array(value :_*))
+    def setSelectedKeysVarargs(value: Key*): Self = this.set("selectedKeys", js.Array(value :_*))
     @scala.inline
-    def setSelectedKeys(
-      value: js.Array[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Key */ _
-        ]
-    ): Self = this.set("selectedKeys", value.asInstanceOf[js.Any])
+    def setSelectedKeys(value: js.Array[Key]): Self = this.set("selectedKeys", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSelectedKeys: Self = this.set("selectedKeys", js.undefined)
   }

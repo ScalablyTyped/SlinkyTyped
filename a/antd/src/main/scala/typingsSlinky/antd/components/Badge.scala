@@ -6,6 +6,7 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.badgeMod.BadgeProps
 import typingsSlinky.antd.colorsMod.PresetColorType
 import typingsSlinky.antd.colorsMod.PresetStatusColorType
+import typingsSlinky.antd.ribbonMod.RibbonProps
 import typingsSlinky.antd.typeMod.LiteralUnion
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -55,5 +56,14 @@ object Badge {
   
   def withProps(p: BadgeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Badge.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
+  object Ribbon {
+    @JSImport("antd/lib/badge", "default.Ribbon")
+    @js.native
+    object component extends js.Object
+    
+    def withProps(p: RibbonProps): SharedBuilder_RibbonProps1687579282 = new SharedBuilder_RibbonProps1687579282(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Ribbon.type): SharedBuilder_RibbonProps1687579282 = new SharedBuilder_RibbonProps1687579282(js.Array(this.component, js.Dictionary.empty))()
+  }
+  
 }
 

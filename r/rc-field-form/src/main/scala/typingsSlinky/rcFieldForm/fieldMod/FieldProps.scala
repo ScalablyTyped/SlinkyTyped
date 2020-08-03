@@ -10,6 +10,7 @@ import typingsSlinky.rcFieldForm.interfaceMod.Rule
 import typingsSlinky.rcFieldForm.interfaceMod.Store
 import typingsSlinky.rcFieldForm.interfaceMod.StoreValue
 import typingsSlinky.rcFieldForm.rcFieldFormBooleans.`false`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.parallel
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -36,7 +37,7 @@ trait FieldProps extends js.Object {
   var rules: js.UndefOr[js.Array[Rule]] = js.undefined
   var shouldUpdate: js.UndefOr[ShouldUpdate] = js.undefined
   var trigger: js.UndefOr[String] = js.undefined
-  var validateFirst: js.UndefOr[Boolean] = js.undefined
+  var validateFirst: js.UndefOr[Boolean | parallel] = js.undefined
   var validateTrigger: js.UndefOr[String | js.Array[String] | `false`] = js.undefined
   var valuePropName: js.UndefOr[String] = js.undefined
 }
@@ -129,7 +130,7 @@ object FieldProps {
     @scala.inline
     def deleteTrigger: Self = this.set("trigger", js.undefined)
     @scala.inline
-    def setValidateFirst(value: Boolean): Self = this.set("validateFirst", value.asInstanceOf[js.Any])
+    def setValidateFirst(value: Boolean | parallel): Self = this.set("validateFirst", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteValidateFirst: Self = this.set("validateFirst", js.undefined)
     @scala.inline

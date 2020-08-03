@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("rc-picker/lib/utils/uiUtil", "getDefaultFormat")
+@JSImport("rc-picker/es/utils/uiUtil", "getDefaultFormat")
 @js.native
 object getDefaultFormat extends js.Object {
   def apply(): String | js.Array[String] = js.native

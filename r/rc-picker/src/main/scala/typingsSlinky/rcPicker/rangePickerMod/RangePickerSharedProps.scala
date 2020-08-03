@@ -3,17 +3,14 @@ package typingsSlinky.rcPicker.rangePickerMod
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticFocusEvent
-import typingsSlinky.rcPicker.anon.Range
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
 import typingsSlinky.rcPicker.interfaceMod.EventValue
 import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import typingsSlinky.rcPicker.interfaceMod.RangeValue
 import typingsSlinky.rcPicker.rcPickerNumbers.`0`
 import typingsSlinky.rcPicker.rcPickerNumbers.`1`
-import typingsSlinky.rcPicker.rcPickerStrings.end
 import typingsSlinky.rcPicker.rcPickerStrings.ltr
 import typingsSlinky.rcPicker.rcPickerStrings.rtl
-import typingsSlinky.rcPicker.rcPickerStrings.start
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.std.Exclude
 import typingsSlinky.std.Record
@@ -32,15 +29,16 @@ trait RangePickerSharedProps[DateType] extends js.Object {
   var direction: js.UndefOr[ltr | rtl] = js.undefined
   var disabled: js.UndefOr[Boolean | (js.Tuple2[Boolean, Boolean])] = js.undefined
   var disabledTime: js.UndefOr[
-    js.Function2[/* date */ EventValue[DateType], /* type */ start | end, DisabledTimes]
+    js.Function2[/* date */ EventValue[DateType], /* type */ RangeType, DisabledTimes]
   ] = js.undefined
   var id: js.UndefOr[String] = js.undefined
   var mode: js.UndefOr[js.Tuple2[PanelMode, PanelMode]] = js.undefined
   var onBlur: js.UndefOr[FocusEventHandler[HTMLInputElement]] = js.undefined
   var onCalendarChange: js.UndefOr[
-    js.Function2[
+    js.Function3[
       /* values */ RangeValue[DateType], 
       /* formatString */ js.Tuple2[String, String], 
+      /* info */ RangeInfo, 
       Unit
     ]
   ] = js.undefined
@@ -56,6 +54,7 @@ trait RangePickerSharedProps[DateType] extends js.Object {
   var onPanelChange: js.UndefOr[
     js.Function2[/* values */ RangeValue[DateType], /* modes */ js.Tuple2[PanelMode, PanelMode], Unit]
   ] = js.undefined
+  var panelRender: js.UndefOr[js.Function1[/* originPanel */ ReactElement, ReactElement]] = js.undefined
   var placeholder: js.UndefOr[js.Tuple2[String, String]] = js.undefined
   var ranges: js.UndefOr[
     Record[
@@ -97,7 +96,7 @@ object RangePickerSharedProps {
     @scala.inline
     def deleteAutoComplete: Self = this.set("autoComplete", js.undefined)
     @scala.inline
-    def setDateRender(value: (DateType, DateType, /* info */ Range) => ReactElement): Self = this.set("dateRender", js.Any.fromFunction3(value))
+    def setDateRender(value: (DateType, DateType, /* info */ RangeInfo) => ReactElement): Self = this.set("dateRender", js.Any.fromFunction3(value))
     @scala.inline
     def deleteDateRender: Self = this.set("dateRender", js.undefined)
     @scala.inline
@@ -119,7 +118,7 @@ object RangePickerSharedProps {
     @scala.inline
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     @scala.inline
-    def setDisabledTime(value: (/* date */ EventValue[DateType], /* type */ start | end) => DisabledTimes): Self = this.set("disabledTime", js.Any.fromFunction2(value))
+    def setDisabledTime(value: (/* date */ EventValue[DateType], /* type */ RangeType) => DisabledTimes): Self = this.set("disabledTime", js.Any.fromFunction2(value))
     @scala.inline
     def deleteDisabledTime: Self = this.set("disabledTime", js.undefined)
     @scala.inline
@@ -135,7 +134,9 @@ object RangePickerSharedProps {
     @scala.inline
     def deleteOnBlur: Self = this.set("onBlur", js.undefined)
     @scala.inline
-    def setOnCalendarChange(value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String]) => Unit): Self = this.set("onCalendarChange", js.Any.fromFunction2(value))
+    def setOnCalendarChange(
+      value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String], /* info */ RangeInfo) => Unit
+    ): Self = this.set("onCalendarChange", js.Any.fromFunction3(value))
     @scala.inline
     def deleteOnCalendarChange: Self = this.set("onCalendarChange", js.undefined)
     @scala.inline
@@ -154,6 +155,10 @@ object RangePickerSharedProps {
     def setOnPanelChange(value: (/* values */ RangeValue[DateType], /* modes */ js.Tuple2[PanelMode, PanelMode]) => Unit): Self = this.set("onPanelChange", js.Any.fromFunction2(value))
     @scala.inline
     def deleteOnPanelChange: Self = this.set("onPanelChange", js.undefined)
+    @scala.inline
+    def setPanelRender(value: /* originPanel */ ReactElement => ReactElement): Self = this.set("panelRender", js.Any.fromFunction1(value))
+    @scala.inline
+    def deletePanelRender: Self = this.set("panelRender", js.undefined)
     @scala.inline
     def setPlaceholder(value: js.Tuple2[String, String]): Self = this.set("placeholder", value.asInstanceOf[js.Any])
     @scala.inline

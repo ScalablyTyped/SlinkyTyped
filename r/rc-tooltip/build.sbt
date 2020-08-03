@@ -1,15 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "rc-tooltip"
-version := "3.7-dt-20200515Z-8a9d67"
+version := "4.2.1-adfdd8"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-6e65be",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-ecc9ab",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200515Z-b103c7",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-c21af0")
+  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-b1f63d",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-77dff4",
+  "org.scalablytyped.slinky" %%% "rc-trigger" % "4.3.4-b693aa",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-6a2e4b",
+  "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

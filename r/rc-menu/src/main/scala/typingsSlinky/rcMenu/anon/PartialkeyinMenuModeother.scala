@@ -1,29 +1,18 @@
 package typingsSlinky.rcMenu.anon
 
+import typingsSlinky.rcTrigger.interfaceMod.MotionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined std.Partial<{[ key in rc-menu.rc-menu/lib/interface.MenuMode | 'other' ]: / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType * / any}> */
+/* Inlined std.Partial<{[ key in rc-menu.rc-menu/es/interface.MenuMode | 'other' ]: rc-menu.rc-menu/es/interface.MotionType}> */
 trait PartialkeyinMenuModeother extends js.Object {
-  var horizontal: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-  ] = js.undefined
-  var `inline`: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-  ] = js.undefined
-  var other: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-  ] = js.undefined
-  var vertical: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-  ] = js.undefined
-  var `vertical-left`: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-  ] = js.undefined
-  var `vertical-right`: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-  ] = js.undefined
+  var horizontal: js.UndefOr[MotionType] = js.undefined
+  var `inline`: js.UndefOr[MotionType] = js.undefined
+  var other: js.UndefOr[MotionType] = js.undefined
+  var vertical: js.UndefOr[MotionType] = js.undefined
+  var `vertical-left`: js.UndefOr[MotionType] = js.undefined
+  var `vertical-right`: js.UndefOr[MotionType] = js.undefined
 }
 
 object PartialkeyinMenuModeother {
@@ -44,39 +33,27 @@ object PartialkeyinMenuModeother {
         x
     }
     @scala.inline
-    def setHorizontal(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-    ): Self = this.set("horizontal", value.asInstanceOf[js.Any])
+    def setHorizontal(value: MotionType): Self = this.set("horizontal", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteHorizontal: Self = this.set("horizontal", js.undefined)
     @scala.inline
-    def setInline(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-    ): Self = this.set("inline", value.asInstanceOf[js.Any])
+    def setInline(value: MotionType): Self = this.set("inline", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteInline: Self = this.set("inline", js.undefined)
     @scala.inline
-    def setOther(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-    ): Self = this.set("other", value.asInstanceOf[js.Any])
+    def setOther(value: MotionType): Self = this.set("other", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOther: Self = this.set("other", js.undefined)
     @scala.inline
-    def setVertical(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-    ): Self = this.set("vertical", value.asInstanceOf[js.Any])
+    def setVertical(value: MotionType): Self = this.set("vertical", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteVertical: Self = this.set("vertical", js.undefined)
     @scala.inline
-    def `setVertical-left`(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-    ): Self = this.set("vertical-left", value.asInstanceOf[js.Any])
+    def `setVertical-left`(value: MotionType): Self = this.set("vertical-left", value.asInstanceOf[js.Any])
     @scala.inline
     def `deleteVertical-left`: Self = this.set("vertical-left", js.undefined)
     @scala.inline
-    def `setVertical-right`(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-    ): Self = this.set("vertical-right", value.asInstanceOf[js.Any])
+    def `setVertical-right`(value: MotionType): Self = this.set("vertical-right", value.asInstanceOf[js.Any])
     @scala.inline
     def `deleteVertical-right`: Self = this.set("vertical-right", js.undefined)
   }

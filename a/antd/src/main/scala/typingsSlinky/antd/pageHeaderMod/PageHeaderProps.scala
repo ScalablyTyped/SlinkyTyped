@@ -3,7 +3,7 @@ package typingsSlinky.antd.pageHeaderMod
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.antd.avatarMod.AvatarProps
+import typingsSlinky.antd.avatarAvatarMod.AvatarProps
 import typingsSlinky.antd.breadcrumbBreadcrumbMod.BreadcrumbProps
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js

@@ -1,14 +1,15 @@
 organization := "org.scalablytyped.slinky"
 name := "rc-menu"
-version := "8.5.0-7c2878"
+version := "8.5.0-e4d07e"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.5",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-9fcfdc",
+  "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-b1f63d",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-77dff4",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-014bc6",
+  "org.scalablytyped.slinky" %%% "rc-trigger" % "4.3.4-b693aa",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-6a2e4b",
   "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")

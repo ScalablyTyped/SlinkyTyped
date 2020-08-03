@@ -14,7 +14,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Notice {
-  @JSImport("rc-notification/lib/Notice", JSImport.Default)
+  @JSImport("rc-notification/es/Notice", JSImport.Default)
   @js.native
   object component extends js.Object
   

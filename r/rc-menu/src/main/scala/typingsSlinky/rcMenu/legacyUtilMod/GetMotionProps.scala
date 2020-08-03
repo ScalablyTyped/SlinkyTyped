@@ -2,19 +2,17 @@ package typingsSlinky.rcMenu.legacyUtilMod
 
 import typingsSlinky.rcMenu.anon.PartialkeyinMenuModeother
 import typingsSlinky.rcMenu.interfaceMod.OpenAnimation
+import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcTrigger.interfaceMod.TransitionNameType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait GetMotionProps extends js.Object {
   var defaultMotions: js.UndefOr[PartialkeyinMenuModeother] = js.undefined
-  var motion: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-  ] = js.undefined
+  var motion: js.UndefOr[MotionType] = js.undefined
   var openAnimation: js.UndefOr[OpenAnimation] = js.undefined
-  var openTransitionName: js.UndefOr[
-    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionNameType */ js.Any
-  ] = js.undefined
+  var openTransitionName: js.UndefOr[TransitionNameType] = js.undefined
   var prefixCls: js.UndefOr[String] = js.undefined
 }
 
@@ -40,9 +38,7 @@ object GetMotionProps {
     @scala.inline
     def deleteDefaultMotions: Self = this.set("defaultMotions", js.undefined)
     @scala.inline
-    def setMotion(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify MotionType */ js.Any
-    ): Self = this.set("motion", value.asInstanceOf[js.Any])
+    def setMotion(value: MotionType): Self = this.set("motion", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteMotion: Self = this.set("motion", js.undefined)
     @scala.inline
@@ -50,9 +46,7 @@ object GetMotionProps {
     @scala.inline
     def deleteOpenAnimation: Self = this.set("openAnimation", js.undefined)
     @scala.inline
-    def setOpenTransitionName(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify TransitionNameType */ js.Any
-    ): Self = this.set("openTransitionName", value.asInstanceOf[js.Any])
+    def setOpenTransitionName(value: TransitionNameType): Self = this.set("openTransitionName", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOpenTransitionName: Self = this.set("openTransitionName", js.undefined)
     @scala.inline

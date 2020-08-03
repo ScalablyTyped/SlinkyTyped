@@ -8,13 +8,14 @@ import typingsSlinky.rcPicker.pickerTriggerMod.PickerTriggerProps
 import typingsSlinky.rcPicker.pickerTriggerMod.Placement
 import typingsSlinky.rcPicker.rcPickerStrings.ltr
 import typingsSlinky.rcPicker.rcPickerStrings.rtl
+import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PickerTrigger {
-  @JSImport("rc-picker/lib/PickerTrigger", JSImport.Default)
+  @JSImport("rc-picker/es/PickerTrigger", JSImport.Default)
   @js.native
   object component extends js.Object
   
@@ -25,9 +26,7 @@ object PickerTrigger {
     @scala.inline
     def direction(value: ltr | rtl): this.type = set("direction", value.asInstanceOf[js.Any])
     @scala.inline
-    def dropdownAlign(
-      value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-    ): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
+    def dropdownAlign(value: AlignType): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
     @scala.inline

@@ -49,6 +49,7 @@ import typingsSlinky.rcPicker.interfaceMod.OnPanelChange
 import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import typingsSlinky.rcPicker.monthBodyMod.MonthCellRender
 import typingsSlinky.rcPicker.pickerMod.PickerRefConfig
+import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.FocusEventHandler
 import typingsSlinky.react.mod.Key
@@ -136,13 +137,7 @@ trait WeakValidationMapTimePick extends js.Object {
       js.UndefOr[(js.Function2[/* hour */ Double, /* minute */ Double, js.Array[Double]]) | Null]
     ]
   ] = js.undefined
-  var dropdownAlign: js.UndefOr[
-    Validator[
-      js.UndefOr[
-        (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ _) | Null
-      ]
-    ]
-  ] = js.undefined
+  var dropdownAlign: js.UndefOr[Validator[js.UndefOr[AlignType | Null]]] = js.undefined
   var dropdownClassName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var format: js.UndefOr[Validator[js.UndefOr[js.Array[String] | Null | String]]] = js.undefined
   var getPopupContainer: js.UndefOr[
@@ -174,6 +169,9 @@ trait WeakValidationMapTimePick extends js.Object {
   var onPanelChange: js.UndefOr[Validator[js.UndefOr[Null | OnPanelChange[Moment]]]] = js.undefined
   var onSelect: js.UndefOr[Validator[js.UndefOr[(js.Function1[/* value */ Moment, Unit]) | Null]]] = js.undefined
   var open: js.UndefOr[Validator[js.UndefOr[Boolean | Null]]] = js.undefined
+  var panelRender: js.UndefOr[
+    Validator[js.UndefOr[(js.Function1[/* originPanel */ ReactElement, ReactElement]) | Null]]
+  ] = js.undefined
   var pickerRef: js.UndefOr[Validator[js.UndefOr[MutableRefObject[PickerRefConfig] | Null]]] = js.undefined
   var placeholder: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
   var popupClassName: js.UndefOr[Validator[js.UndefOr[Null | String]]] = js.undefined
@@ -482,13 +480,7 @@ object WeakValidationMapTimePick {
     @scala.inline
     def deleteDisabledSeconds: Self = this.set("disabledSeconds", js.undefined)
     @scala.inline
-    def setDropdownAlign(
-      value: Validator[
-          js.UndefOr[
-            (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ _) | Null
-          ]
-        ]
-    ): Self = this.set("dropdownAlign", value.asInstanceOf[js.Any])
+    def setDropdownAlign(value: Validator[js.UndefOr[AlignType | Null]]): Self = this.set("dropdownAlign", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteDropdownAlign: Self = this.set("dropdownAlign", js.undefined)
     @scala.inline
@@ -599,6 +591,10 @@ object WeakValidationMapTimePick {
     def setOpen(value: Validator[js.UndefOr[Boolean | Null]]): Self = this.set("open", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteOpen: Self = this.set("open", js.undefined)
+    @scala.inline
+    def setPanelRender(value: Validator[js.UndefOr[(js.Function1[/* originPanel */ ReactElement, ReactElement]) | Null]]): Self = this.set("panelRender", value.asInstanceOf[js.Any])
+    @scala.inline
+    def deletePanelRender: Self = this.set("panelRender", js.undefined)
     @scala.inline
     def setPickerRef(value: Validator[js.UndefOr[MutableRefObject[PickerRefConfig] | Null]]): Self = this.set("pickerRef", value.asInstanceOf[js.Any])
     @scala.inline

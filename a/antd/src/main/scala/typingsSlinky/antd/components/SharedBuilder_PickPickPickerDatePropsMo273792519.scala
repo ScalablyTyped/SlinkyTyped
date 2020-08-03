@@ -53,6 +53,7 @@ import typingsSlinky.rcPicker.interfaceMod.Locale
 import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import typingsSlinky.rcPicker.pickerMod.PickerRefConfig
 import typingsSlinky.rcPicker.timePanelMod.SharedTimeProps
+import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MutableRefObject
 import scala.scalajs.js
@@ -190,9 +191,7 @@ class SharedBuilder_PickPickPickerDatePropsMo273792519 (val args: js.Array[js.An
   @scala.inline
   def disabledTime(value: /* date */ Moment | Null => DisabledTimes): this.type = set("disabledTime", js.Any.fromFunction1(value))
   @scala.inline
-  def dropdownAlign(
-    value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-  ): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
+  def dropdownAlign(value: AlignType): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
   @scala.inline
   def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
   @scala.inline
@@ -241,6 +240,8 @@ class SharedBuilder_PickPickPickerDatePropsMo273792519 (val args: js.Array[js.An
   def onSelect(value: /* value */ Moment => Unit): this.type = set("onSelect", js.Any.fromFunction1(value))
   @scala.inline
   def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+  @scala.inline
+  def panelRender(value: /* originPanel */ ReactElement => ReactElement): this.type = set("panelRender", js.Any.fromFunction1(value))
   @scala.inline
   def pickerRef(value: MutableRefObject[PickerRefConfig]): this.type = set("pickerRef", value.asInstanceOf[js.Any])
   @scala.inline

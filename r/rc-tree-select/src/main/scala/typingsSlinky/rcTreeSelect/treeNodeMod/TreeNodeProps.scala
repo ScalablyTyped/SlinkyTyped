@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined parent std.Omit<rc-tree-select.rc-tree-select/lib/interface.DataNode, 'children'> */
+/* Inlined parent std.Omit<rc-tree-select.rc-tree-select/es/interface.DataNode, 'children'> */
 trait TreeNodeProps extends js.Object {
   var checkable: js.UndefOr[Boolean] = js.undefined
   var children: js.UndefOr[ReactElement] = js.undefined

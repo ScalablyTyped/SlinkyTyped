@@ -23,7 +23,8 @@ trait PopconfirmProps extends AbstractTooltipProps {
   var okType: js.UndefOr[LegacyButtonType] = js.undefined
   var onCancel: js.UndefOr[js.Function1[/* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], Unit]] = js.undefined
   var onConfirm: js.UndefOr[js.Function1[/* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement]], Unit]] = js.undefined
-  var onVisibleChange: js.UndefOr[
+  @JSName("onVisibleChange")
+  var onVisibleChange_PopconfirmProps: js.UndefOr[
     js.Function2[
       /* visible */ Boolean, 
       /* e */ js.UndefOr[SyntheticMouseEvent[HTMLElement] | SyntheticKeyboardEvent[HTMLDivElement]], 

@@ -5,13 +5,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Checked extends js.Object {
-  var checked: js.Array[String]
-  var halfChecked: js.Array[String]
+  var checked: js.Array[typingsSlinky.rcTree.interfaceMod.Key]
+  var halfChecked: js.Array[typingsSlinky.rcTree.interfaceMod.Key]
 }
 
 object Checked {
   @scala.inline
-  def apply(checked: js.Array[String], halfChecked: js.Array[String]): Checked = {
+  def apply(
+    checked: js.Array[typingsSlinky.rcTree.interfaceMod.Key],
+    halfChecked: js.Array[typingsSlinky.rcTree.interfaceMod.Key]
+  ): Checked = {
     val __obj = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any], halfChecked = halfChecked.asInstanceOf[js.Any])
     __obj.asInstanceOf[Checked]
   }
@@ -27,13 +30,13 @@ object Checked {
         x
     }
     @scala.inline
-    def setCheckedVarargs(value: String*): Self = this.set("checked", js.Array(value :_*))
+    def setCheckedVarargs(value: typingsSlinky.rcTree.interfaceMod.Key*): Self = this.set("checked", js.Array(value :_*))
     @scala.inline
-    def setChecked(value: js.Array[String]): Self = this.set("checked", value.asInstanceOf[js.Any])
+    def setChecked(value: js.Array[typingsSlinky.rcTree.interfaceMod.Key]): Self = this.set("checked", value.asInstanceOf[js.Any])
     @scala.inline
-    def setHalfCheckedVarargs(value: String*): Self = this.set("halfChecked", js.Array(value :_*))
+    def setHalfCheckedVarargs(value: typingsSlinky.rcTree.interfaceMod.Key*): Self = this.set("halfChecked", js.Array(value :_*))
     @scala.inline
-    def setHalfChecked(value: js.Array[String]): Self = this.set("halfChecked", value.asInstanceOf[js.Any])
+    def setHalfChecked(value: js.Array[typingsSlinky.rcTree.interfaceMod.Key]): Self = this.set("halfChecked", value.asInstanceOf[js.Any])
   }
   
 }

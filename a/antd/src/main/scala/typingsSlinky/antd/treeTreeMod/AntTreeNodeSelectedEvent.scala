@@ -3,6 +3,7 @@ package typingsSlinky.antd.treeTreeMod
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.ReactComponentClass
 import typingsSlinky.antd.antdStrings.select
+import typingsSlinky.rcTree.interfaceMod.DataNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,11 +11,7 @@ import scala.scalajs.js.annotation._
 trait AntTreeNodeSelectedEvent extends AntTreeNodeBaseEvent {
   var event: select
   var selected: js.UndefOr[Boolean] = js.undefined
-  var selectedNodes: js.UndefOr[
-    js.Array[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DataNode */ _
-    ]
-  ] = js.undefined
+  var selectedNodes: js.UndefOr[js.Array[DataNode]] = js.undefined
 }
 
 object AntTreeNodeSelectedEvent {
@@ -41,13 +38,9 @@ object AntTreeNodeSelectedEvent {
     @scala.inline
     def deleteSelected: Self = this.set("selected", js.undefined)
     @scala.inline
-    def setSelectedNodesVarargs(value: js.Any*): Self = this.set("selectedNodes", js.Array(value :_*))
+    def setSelectedNodesVarargs(value: DataNode*): Self = this.set("selectedNodes", js.Array(value :_*))
     @scala.inline
-    def setSelectedNodes(
-      value: js.Array[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify DataNode */ _
-        ]
-    ): Self = this.set("selectedNodes", value.asInstanceOf[js.Any])
+    def setSelectedNodes(value: js.Array[DataNode]): Self = this.set("selectedNodes", value.asInstanceOf[js.Any])
     @scala.inline
     def deleteSelectedNodes: Self = this.set("selectedNodes", js.undefined)
   }

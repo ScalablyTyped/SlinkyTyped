@@ -8,7 +8,6 @@ import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rcPicker.anon.Range
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
 import typingsSlinky.rcPicker.interfaceMod.Components
 import typingsSlinky.rcPicker.interfaceMod.DisabledTimes
@@ -18,7 +17,9 @@ import typingsSlinky.rcPicker.interfaceMod.PanelMode
 import typingsSlinky.rcPicker.interfaceMod.PickerMode
 import typingsSlinky.rcPicker.interfaceMod.RangeValue
 import typingsSlinky.rcPicker.pickerMod.PickerRefConfig
+import typingsSlinky.rcPicker.rangePickerMod.RangeInfo
 import typingsSlinky.rcPicker.rangePickerMod.RangeShowTimeObject
+import typingsSlinky.rcPicker.rangePickerMod.RangeType
 import typingsSlinky.rcPicker.rangePickerMod.default
 import typingsSlinky.rcPicker.rcPickerNumbers.`0`
 import typingsSlinky.rcPicker.rcPickerNumbers.`1`
@@ -33,7 +34,6 @@ import typingsSlinky.rcPicker.rcPickerStrings.copy
 import typingsSlinky.rcPicker.rcPickerStrings.date
 import typingsSlinky.rcPicker.rcPickerStrings.descending
 import typingsSlinky.rcPicker.rcPickerStrings.dialog
-import typingsSlinky.rcPicker.rcPickerStrings.end
 import typingsSlinky.rcPicker.rcPickerStrings.execute
 import typingsSlinky.rcPicker.rcPickerStrings.grammar
 import typingsSlinky.rcPicker.rcPickerStrings.grid
@@ -55,12 +55,12 @@ import typingsSlinky.rcPicker.rcPickerStrings.popup
 import typingsSlinky.rcPicker.rcPickerStrings.removals
 import typingsSlinky.rcPicker.rcPickerStrings.rtl
 import typingsSlinky.rcPicker.rcPickerStrings.spelling
-import typingsSlinky.rcPicker.rcPickerStrings.start
 import typingsSlinky.rcPicker.rcPickerStrings.step
 import typingsSlinky.rcPicker.rcPickerStrings.text
 import typingsSlinky.rcPicker.rcPickerStrings.time
 import typingsSlinky.rcPicker.rcPickerStrings.tree
 import typingsSlinky.rcPicker.rcPickerStrings.vertical
+import typingsSlinky.rcTrigger.interfaceMod.AlignType
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.MutableRefObject
 import typingsSlinky.std.Exclude
@@ -71,7 +71,7 @@ import scala.scalajs.js.annotation._
 
 object RangePicker {
   object RangePickerBaseProps {
-    @JSImport("rc-picker/lib/RangePicker", JSImport.Default)
+    @JSImport("rc-picker/es/RangePicker", JSImport.Default)
     @js.native
     object component extends js.Object
     
@@ -194,7 +194,7 @@ object RangePicker {
       @scala.inline
       def components(value: Components): this.type = set("components", value.asInstanceOf[js.Any])
       @scala.inline
-      def dateRender(value: (DateType, DateType, /* info */ Range) => ReactElement): this.type = set("dateRender", js.Any.fromFunction3(value))
+      def dateRender(value: (DateType, DateType, /* info */ RangeInfo) => ReactElement): this.type = set("dateRender", js.Any.fromFunction3(value))
       @scala.inline
       def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
       @scala.inline
@@ -210,11 +210,9 @@ object RangePicker {
       @scala.inline
       def disabledDate(value: DateType => Boolean): this.type = set("disabledDate", js.Any.fromFunction1(value))
       @scala.inline
-      def disabledTime(value: (/* date */ EventValue[DateType], /* type */ start | end) => DisabledTimes): this.type = set("disabledTime", js.Any.fromFunction2(value))
+      def disabledTime(value: (/* date */ EventValue[DateType], /* type */ RangeType) => DisabledTimes): this.type = set("disabledTime", js.Any.fromFunction2(value))
       @scala.inline
-      def dropdownAlign(
-        value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-      ): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
+      def dropdownAlign(value: AlignType): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
       @scala.inline
       def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
       @scala.inline
@@ -240,7 +238,9 @@ object RangePicker {
       @scala.inline
       def onBlur(value: SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
       @scala.inline
-      def onCalendarChange(value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String]) => Unit): this.type = set("onCalendarChange", js.Any.fromFunction2(value))
+      def onCalendarChange(
+        value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String], /* info */ RangeInfo) => Unit
+      ): this.type = set("onCalendarChange", js.Any.fromFunction3(value))
       @scala.inline
       def onChange(value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
       @scala.inline
@@ -265,6 +265,8 @@ object RangePicker {
       def onPanelChange(value: (/* values */ RangeValue[DateType], /* modes */ js.Tuple2[PanelMode, PanelMode]) => Unit): this.type = set("onPanelChange", js.Any.fromFunction2(value))
       @scala.inline
       def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+      @scala.inline
+      def panelRender(value: /* originPanel */ ReactElement => ReactElement): this.type = set("panelRender", js.Any.fromFunction1(value))
       @scala.inline
       def pickerRef(value: MutableRefObject[PickerRefConfig]): this.type = set("pickerRef", value.asInstanceOf[js.Any])
       @scala.inline
@@ -325,7 +327,7 @@ object RangePicker {
   }
   
   object RangePickerDateProps {
-    @JSImport("rc-picker/lib/RangePicker", JSImport.Default)
+    @JSImport("rc-picker/es/RangePicker", JSImport.Default)
     @js.native
     object component extends js.Object
     
@@ -448,7 +450,7 @@ object RangePicker {
       @scala.inline
       def components(value: Components): this.type = set("components", value.asInstanceOf[js.Any])
       @scala.inline
-      def dateRender(value: (DateType, DateType, /* info */ Range) => ReactElement): this.type = set("dateRender", js.Any.fromFunction3(value))
+      def dateRender(value: (DateType, DateType, /* info */ RangeInfo) => ReactElement): this.type = set("dateRender", js.Any.fromFunction3(value))
       @scala.inline
       def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
       @scala.inline
@@ -464,11 +466,9 @@ object RangePicker {
       @scala.inline
       def disabledDate(value: DateType => Boolean): this.type = set("disabledDate", js.Any.fromFunction1(value))
       @scala.inline
-      def disabledTime(value: (/* date */ EventValue[DateType], /* type */ start | end) => DisabledTimes): this.type = set("disabledTime", js.Any.fromFunction2(value))
+      def disabledTime(value: (/* date */ EventValue[DateType], /* type */ RangeType) => DisabledTimes): this.type = set("disabledTime", js.Any.fromFunction2(value))
       @scala.inline
-      def dropdownAlign(
-        value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-      ): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
+      def dropdownAlign(value: AlignType): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
       @scala.inline
       def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
       @scala.inline
@@ -494,7 +494,9 @@ object RangePicker {
       @scala.inline
       def onBlur(value: SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
       @scala.inline
-      def onCalendarChange(value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String]) => Unit): this.type = set("onCalendarChange", js.Any.fromFunction2(value))
+      def onCalendarChange(
+        value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String], /* info */ RangeInfo) => Unit
+      ): this.type = set("onCalendarChange", js.Any.fromFunction3(value))
       @scala.inline
       def onChange(value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
       @scala.inline
@@ -519,6 +521,8 @@ object RangePicker {
       def onPanelChange(value: (/* values */ RangeValue[DateType], /* modes */ js.Tuple2[PanelMode, PanelMode]) => Unit): this.type = set("onPanelChange", js.Any.fromFunction2(value))
       @scala.inline
       def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
+      @scala.inline
+      def panelRender(value: /* originPanel */ ReactElement => ReactElement): this.type = set("panelRender", js.Any.fromFunction1(value))
       @scala.inline
       def picker(value: date): this.type = set("picker", value.asInstanceOf[js.Any])
       @scala.inline
@@ -585,7 +589,7 @@ object RangePicker {
   }
   
   object RangePickerTimeProps {
-    @JSImport("rc-picker/lib/RangePicker", JSImport.Default)
+    @JSImport("rc-picker/es/RangePicker", JSImport.Default)
     @js.native
     object component extends js.Object
     
@@ -708,7 +712,7 @@ object RangePicker {
       @scala.inline
       def components(value: Components): this.type = set("components", value.asInstanceOf[js.Any])
       @scala.inline
-      def dateRender(value: (DateType, DateType, /* info */ Range) => ReactElement): this.type = set("dateRender", js.Any.fromFunction3(value))
+      def dateRender(value: (DateType, DateType, /* info */ RangeInfo) => ReactElement): this.type = set("dateRender", js.Any.fromFunction3(value))
       @scala.inline
       def defaultOpen(value: Boolean): this.type = set("defaultOpen", value.asInstanceOf[js.Any])
       @scala.inline
@@ -732,11 +736,9 @@ object RangePicker {
       @scala.inline
       def disabledSeconds(value: (/* hour */ Double, /* minute */ Double) => js.Array[Double]): this.type = set("disabledSeconds", js.Any.fromFunction2(value))
       @scala.inline
-      def disabledTime(value: (/* date */ EventValue[DateType], /* type */ start | end) => DisabledTimes): this.type = set("disabledTime", js.Any.fromFunction2(value))
+      def disabledTime(value: (/* date */ EventValue[DateType], /* type */ RangeType) => DisabledTimes): this.type = set("disabledTime", js.Any.fromFunction2(value))
       @scala.inline
-      def dropdownAlign(
-        value: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any
-      ): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
+      def dropdownAlign(value: AlignType): this.type = set("dropdownAlign", value.asInstanceOf[js.Any])
       @scala.inline
       def dropdownClassName(value: String): this.type = set("dropdownClassName", value.asInstanceOf[js.Any])
       @scala.inline
@@ -768,7 +770,9 @@ object RangePicker {
       @scala.inline
       def onBlur(value: SyntheticFocusEvent[HTMLInputElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
       @scala.inline
-      def onCalendarChange(value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String]) => Unit): this.type = set("onCalendarChange", js.Any.fromFunction2(value))
+      def onCalendarChange(
+        value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String], /* info */ RangeInfo) => Unit
+      ): this.type = set("onCalendarChange", js.Any.fromFunction3(value))
       @scala.inline
       def onChange(value: (/* values */ RangeValue[DateType], /* formatString */ js.Tuple2[String, String]) => Unit): this.type = set("onChange", js.Any.fromFunction2(value))
       @scala.inline
@@ -795,6 +799,8 @@ object RangePicker {
       def open(value: Boolean): this.type = set("open", value.asInstanceOf[js.Any])
       @scala.inline
       def order(value: Boolean): this.type = set("order", value.asInstanceOf[js.Any])
+      @scala.inline
+      def panelRender(value: /* originPanel */ ReactElement => ReactElement): this.type = set("panelRender", js.Any.fromFunction1(value))
       @scala.inline
       def pickerRef(value: MutableRefObject[PickerRefConfig]): this.type = set("pickerRef", value.asInstanceOf[js.Any])
       @scala.inline

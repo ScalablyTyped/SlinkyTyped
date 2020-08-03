@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* Inlined rc-notification.rc-notification/lib/Notification.NotificationProps & {  getContainer :(): std.HTMLElement | undefined} */
+/* Inlined rc-notification.rc-notification/es/Notification.NotificationProps & {  getContainer :(): std.HTMLElement | undefined} */
 trait NotificationPropsgetConta extends js.Object {
   var animation: js.UndefOr[String | js.Object] = js.undefined
   var className: js.UndefOr[String] = js.undefined

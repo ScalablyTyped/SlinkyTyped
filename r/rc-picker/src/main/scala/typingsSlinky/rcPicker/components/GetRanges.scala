@@ -13,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GetRanges {
-  @JSImport("rc-picker/lib/utils/getRanges", JSImport.Default)
+  @JSImport("rc-picker/es/utils/getRanges", JSImport.Default)
   @js.native
   object component extends js.Object
   

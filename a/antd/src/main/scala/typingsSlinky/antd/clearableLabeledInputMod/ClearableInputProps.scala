@@ -25,13 +25,14 @@ trait ClearableInputProps extends BasicProps {
 object ClearableInputProps {
   @scala.inline
   def apply(
+    bordered: Boolean,
     element: ReactElement,
     handleReset: SyntheticMouseEvent[HTMLElement] => Unit,
     inputType: text | input,
     prefixCls: String,
     triggerFocus: () => Unit
   ): ClearableInputProps = {
-    val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], handleReset = js.Any.fromFunction1(handleReset), inputType = inputType.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], triggerFocus = js.Any.fromFunction0(triggerFocus))
+    val __obj = js.Dynamic.literal(bordered = bordered.asInstanceOf[js.Any], element = element.asInstanceOf[js.Any], handleReset = js.Any.fromFunction1(handleReset), inputType = inputType.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], triggerFocus = js.Any.fromFunction0(triggerFocus))
     __obj.asInstanceOf[ClearableInputProps]
   }
   @scala.inline
