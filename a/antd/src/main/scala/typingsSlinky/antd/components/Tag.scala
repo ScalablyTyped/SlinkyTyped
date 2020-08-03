@@ -79,7 +79,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Tag {
-  @JSImport("antd/lib/tag", JSImport.Default)
+  @JSImport("antd", "Tag")
   @js.native
   object component extends js.Object
   
@@ -454,7 +454,7 @@ object Tag {
   def withProps(p: TagProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Tag.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object CheckableTag {
-    @JSImport("antd/lib/tag", "default.CheckableTag")
+    @JSImport("antd", "Tag.CheckableTag")
     @js.native
     object component extends js.Object
     

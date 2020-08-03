@@ -71,7 +71,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TimePicker {
-  @JSImport("antd/lib/time-picker", JSImport.Default)
+  @JSImport("antd", "TimePicker")
   @js.native
   object component extends js.Object
   
@@ -318,7 +318,7 @@ object TimePicker {
   def withProps(p: TimePickerProps with RefAttributes[js.Any]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: TimePicker.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object RangePicker {
-    @JSImport("antd/lib/time-picker", "default.RangePicker")
+    @JSImport("antd", "TimePicker.RangePicker")
     @js.native
     object component extends js.Object
     

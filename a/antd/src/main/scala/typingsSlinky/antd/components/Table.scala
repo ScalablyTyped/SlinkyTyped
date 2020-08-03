@@ -38,7 +38,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Table {
-  @JSImport("antd/lib/table", JSImport.Default)
+  @JSImport("antd", "Table")
   @js.native
   object component extends js.Object
   
@@ -154,13 +154,13 @@ object Table {
   
   def withProps[/* <: js.Object */ RecordType](p: TableProps[RecordType]): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[/* <: js.Object */ RecordType](): Builder[RecordType] = {
+  def apply[/* <: js.Object */ RecordType]: Builder[RecordType] = {
     val __props = js.Dynamic.literal()
     new Builder[RecordType](js.Array(this.component, __props.asInstanceOf[TableProps[RecordType]]))
   }
   implicit def make[/* <: js.Object */ RecordType](companion: Table.type): Builder[RecordType] = new Builder[RecordType](js.Array(this.component, js.Dictionary.empty))()
   object Row {
-    @JSImport("antd/lib/table", "default.Summary.Row")
+    @JSImport("antd", "Table.Summary.Row")
     @js.native
     object component extends js.Object
     
@@ -179,7 +179,7 @@ object Table {
   }
   
   object Cell {
-    @JSImport("antd/lib/table", "default.Summary.Cell")
+    @JSImport("antd", "Table.Summary.Cell")
     @js.native
     object component extends js.Object
     

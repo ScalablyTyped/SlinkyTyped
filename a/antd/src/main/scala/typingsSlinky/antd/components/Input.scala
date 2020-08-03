@@ -3,6 +3,7 @@ package typingsSlinky.antd.components
 import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
+import org.scalajs.dom.raw.HTMLSpanElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticAnimationEvent
@@ -32,6 +33,7 @@ import typingsSlinky.antd.antdStrings.color
 import typingsSlinky.antd.antdStrings.copy
 import typingsSlinky.antd.antdStrings.date
 import typingsSlinky.antd.antdStrings.decimal
+import typingsSlinky.antd.antdStrings.default
 import typingsSlinky.antd.antdStrings.descending
 import typingsSlinky.antd.antdStrings.dialog
 import typingsSlinky.antd.antdStrings.email
@@ -43,6 +45,7 @@ import typingsSlinky.antd.antdStrings.hidden
 import typingsSlinky.antd.antdStrings.horizontal
 import typingsSlinky.antd.antdStrings.image
 import typingsSlinky.antd.antdStrings.inherit
+import typingsSlinky.antd.antdStrings.large
 import typingsSlinky.antd.antdStrings.link
 import typingsSlinky.antd.antdStrings.list
 import typingsSlinky.antd.antdStrings.listbox
@@ -67,6 +70,7 @@ import typingsSlinky.antd.antdStrings.range
 import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.reset
 import typingsSlinky.antd.antdStrings.search
+import typingsSlinky.antd.antdStrings.small
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
 import typingsSlinky.antd.antdStrings.submit
@@ -80,7 +84,6 @@ import typingsSlinky.antd.antdStrings.week
 import typingsSlinky.antd.antdStrings.yes
 import typingsSlinky.antd.inputGroupMod.GroupProps
 import typingsSlinky.antd.inputInputMod.InputProps
-import typingsSlinky.antd.inputMod.default
 import typingsSlinky.antd.passwordMod.PasswordProps
 import typingsSlinky.antd.searchMod.SearchProps
 import typingsSlinky.antd.sizeContextMod.SizeType
@@ -96,14 +99,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Input {
-  @JSImport("antd/lib/input", JSImport.Default)
+  @JSImport("antd", "Input")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Input] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -546,16 +549,40 @@ object Input {
   def withProps(p: InputProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Input.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object Group {
-    @JSImport("antd/lib/input", "Group")
+    @JSImport("antd", "Input.Group")
     @js.native
     object component extends js.Object
     
-    def withProps(p: GroupProps): SharedBuilder_GroupProps_418259250 = new SharedBuilder_GroupProps_418259250(js.Array(this.component, p.asInstanceOf[js.Any]))
-    implicit def make(companion: Group.type): SharedBuilder_GroupProps_418259250 = new SharedBuilder_GroupProps_418259250(js.Array(this.component, js.Dictionary.empty))()
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[slinky.web.html.span.tag.type, js.Object] {
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      @scala.inline
+      def compact(value: Boolean): this.type = set("compact", value.asInstanceOf[js.Any])
+      @scala.inline
+      def onBlur(value: SyntheticFocusEvent[HTMLSpanElement] => Unit): this.type = set("onBlur", js.Any.fromFunction1(value))
+      @scala.inline
+      def onFocus(value: SyntheticFocusEvent[HTMLSpanElement] => Unit): this.type = set("onFocus", js.Any.fromFunction1(value))
+      @scala.inline
+      def onMouseEnter(value: SyntheticMouseEvent[HTMLSpanElement] => Unit): this.type = set("onMouseEnter", js.Any.fromFunction1(value))
+      @scala.inline
+      def onMouseLeave(value: SyntheticMouseEvent[HTMLSpanElement] => Unit): this.type = set("onMouseLeave", js.Any.fromFunction1(value))
+      @scala.inline
+      def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+      @scala.inline
+      def size(value: large | small | default): this.type = set("size", value.asInstanceOf[js.Any])
+      @scala.inline
+      def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: GroupProps): typingsSlinky.antd.components.Input.Group.Builder = new typingsSlinky.antd.components.Input.Group.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Group.type): typingsSlinky.antd.components.Input.Group.Builder = new typingsSlinky.antd.components.Input.Group.Builder(js.Array(this.component, js.Dictionary.empty))()
   }
   
   object Password {
-    @JSImport("antd/lib/input", "Password")
+    @JSImport("antd", "Input.Password")
     @js.native
     object component extends js.Object
     
@@ -564,7 +591,7 @@ object Input {
   }
   
   object Search {
-    @JSImport("antd/lib/input", "Search")
+    @JSImport("antd", "Input.Search")
     @js.native
     object component extends js.Object
     

@@ -21,7 +21,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Skeleton {
-  @JSImport("antd/lib/skeleton", JSImport.Default)
+  @JSImport("antd", "Skeleton")
   @js.native
   object component extends js.Object
   
@@ -50,7 +50,7 @@ object Skeleton {
   def withProps(p: SkeletonProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Skeleton.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object Input {
-    @JSImport("antd/lib/skeleton", "default.Input")
+    @JSImport("antd", "Skeleton.Input")
     @js.native
     object component extends js.Object
     
@@ -75,7 +75,7 @@ object Skeleton {
   }
   
   object Button {
-    @JSImport("antd/lib/skeleton", "default.Button")
+    @JSImport("antd", "Skeleton.Button")
     @js.native
     object component extends js.Object
     
@@ -102,7 +102,7 @@ object Skeleton {
   }
   
   object Image {
-    @JSImport("antd/lib/skeleton", "default.Image")
+    @JSImport("antd", "Skeleton.Image")
     @js.native
     object component extends js.Object
     
@@ -111,12 +111,30 @@ object Skeleton {
   }
   
   object Avatar {
-    @JSImport("antd/lib/skeleton", "default.Avatar")
+    @JSImport("antd", "Skeleton.Avatar")
     @js.native
     object component extends js.Object
     
-    def withProps(p: AvatarProps): SharedBuilder_AvatarProps1231857601 = new SharedBuilder_AvatarProps1231857601(js.Array(this.component, p.asInstanceOf[js.Any]))
-    implicit def make(companion: Avatar.type): SharedBuilder_AvatarProps1231857601 = new SharedBuilder_AvatarProps1231857601(js.Array(this.component, js.Dictionary.empty))()
+    @scala.inline
+    class Builder (val args: js.Array[js.Any])
+      extends AnyVal
+         with StBuildingComponent[tag.type, js.Object] {
+      @scala.inline
+      def active(value: Boolean): this.type = set("active", value.asInstanceOf[js.Any])
+      @scala.inline
+      def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+      @scala.inline
+      def prefixCls(value: String): this.type = set("prefixCls", value.asInstanceOf[js.Any])
+      @scala.inline
+      def shape(value: circle | square): this.type = set("shape", value.asInstanceOf[js.Any])
+      @scala.inline
+      def size(value: large | small | default | Double): this.type = set("size", value.asInstanceOf[js.Any])
+      @scala.inline
+      def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
+    }
+    
+    def withProps(p: AvatarProps): typingsSlinky.antd.components.Skeleton.Avatar.Builder = new typingsSlinky.antd.components.Skeleton.Avatar.Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: Avatar.type): typingsSlinky.antd.components.Skeleton.Avatar.Builder = new typingsSlinky.antd.components.Skeleton.Avatar.Builder(js.Array(this.component, js.Dictionary.empty))()
   }
   
 }

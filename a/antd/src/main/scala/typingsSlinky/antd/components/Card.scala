@@ -79,7 +79,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Card {
-  @JSImport("antd/lib/card", JSImport.Default)
+  @JSImport("antd", "Card")
   @js.native
   object component extends js.Object
   
@@ -486,7 +486,7 @@ object Card {
   def withProps(p: CardProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Card.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object Grid {
-    @JSImport("antd/lib/card", "default.Grid")
+    @JSImport("antd", "Card.Grid")
     @js.native
     object component extends js.Object
     
@@ -495,7 +495,7 @@ object Card {
   }
   
   object Meta {
-    @JSImport("antd/lib/card", "default.Meta")
+    @JSImport("antd", "Card.Meta")
     @js.native
     object component extends js.Object
     

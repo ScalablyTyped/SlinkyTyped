@@ -17,7 +17,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Descriptions {
-  @JSImport("antd/lib/descriptions", JSImport.Default)
+  @JSImport("antd", "Descriptions")
   @js.native
   object component extends js.Object
   
@@ -54,7 +54,7 @@ object Descriptions {
   def withProps(p: DescriptionsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Descriptions.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object Item {
-    @JSImport("antd/lib/descriptions", "default.Item")
+    @JSImport("antd", "Descriptions.Item")
     @js.native
     object component extends js.Object
     

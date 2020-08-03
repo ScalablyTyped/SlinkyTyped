@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "rc-menu"
-version := "8.5.0-e4d07e"
+version := "8.5.0-f307b3"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

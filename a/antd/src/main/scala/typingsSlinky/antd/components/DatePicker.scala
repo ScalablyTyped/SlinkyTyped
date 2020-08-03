@@ -49,7 +49,6 @@ import typingsSlinky.antd.antdStrings.text
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
-import typingsSlinky.antd.datePickerMod.default
 import typingsSlinky.antd.generatePickerMod.PickerLocale
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.moment.mod.Moment
@@ -75,14 +74,14 @@ import scala.scalajs.js.annotation._
 
 object DatePicker {
   object PickerBaseProps {
-    @JSImport("antd/lib/date-picker", JSImport.Default)
+    @JSImport("antd", "DatePicker")
     @js.native
     object component extends js.Object
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default] {
+         with StBuildingComponent[tag.type, typingsSlinky.antd.mod.DatePicker] {
       @scala.inline
       def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
       @scala.inline
@@ -296,7 +295,7 @@ object DatePicker {
         new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.antd.generatePickerMod.PickerBaseProps[Moment]]))
     }
     object MonthPicker {
-      @JSImport("antd/lib/date-picker", "MonthPicker")
+      @JSImport("antd", "DatePicker.MonthPicker")
       @js.native
       object component extends js.Object
       
@@ -305,7 +304,7 @@ object DatePicker {
     }
     
     object QuarterPicker {
-      @JSImport("antd/lib/date-picker", "QuarterPicker")
+      @JSImport("antd", "DatePicker.QuarterPicker")
       @js.native
       object component extends js.Object
       
@@ -315,7 +314,7 @@ object DatePicker {
     
     object RangePicker {
       object RangePickerBaseProps {
-        @JSImport("antd/lib/date-picker", "RangePicker")
+        @JSImport("antd", "DatePicker.RangePicker")
         @js.native
         object component extends js.Object
         
@@ -559,7 +558,7 @@ object DatePicker {
       }
       
       object RangePickerDateProps {
-        @JSImport("antd/lib/date-picker", "RangePicker")
+        @JSImport("antd", "DatePicker.RangePicker")
         @js.native
         object component extends js.Object
         
@@ -805,7 +804,7 @@ object DatePicker {
       }
       
       object RangePickerTimeProps {
-        @JSImport("antd/lib/date-picker", "RangePicker")
+        @JSImport("antd", "DatePicker.RangePicker")
         @js.native
         object component extends js.Object
         
@@ -1079,7 +1078,7 @@ object DatePicker {
     }
     
     object TimePicker {
-      @JSImport("antd/lib/date-picker", "TimePicker")
+      @JSImport("antd", "DatePicker.TimePicker")
       @js.native
       object component extends js.Object
       
@@ -1088,7 +1087,7 @@ object DatePicker {
     }
     
     object WeekPicker {
-      @JSImport("antd/lib/date-picker", "WeekPicker")
+      @JSImport("antd", "DatePicker.WeekPicker")
       @js.native
       object component extends js.Object
       
@@ -1097,7 +1096,7 @@ object DatePicker {
     }
     
     object YearPicker {
-      @JSImport("antd/lib/date-picker", "YearPicker")
+      @JSImport("antd", "DatePicker.YearPicker")
       @js.native
       object component extends js.Object
       
@@ -1108,14 +1107,14 @@ object DatePicker {
   }
   
   object PickerDateProps {
-    @JSImport("antd/lib/date-picker", JSImport.Default)
+    @JSImport("antd", "DatePicker")
     @js.native
     object component extends js.Object
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default] {
+         with StBuildingComponent[tag.type, typingsSlinky.antd.mod.DatePicker] {
       @scala.inline
       def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
       @scala.inline
@@ -1335,7 +1334,7 @@ object DatePicker {
     def withProps(p: typingsSlinky.antd.generatePickerMod.PickerDateProps[Moment]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
     implicit def make(companion: PickerDateProps.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
     object MonthPicker {
-      @JSImport("antd/lib/date-picker", "MonthPicker")
+      @JSImport("antd", "DatePicker.MonthPicker")
       @js.native
       object component extends js.Object
       
@@ -1344,7 +1343,7 @@ object DatePicker {
     }
     
     object QuarterPicker {
-      @JSImport("antd/lib/date-picker", "QuarterPicker")
+      @JSImport("antd", "DatePicker.QuarterPicker")
       @js.native
       object component extends js.Object
       
@@ -1354,7 +1353,7 @@ object DatePicker {
     
     object RangePicker {
       object RangePickerBaseProps {
-        @JSImport("antd/lib/date-picker", "RangePicker")
+        @JSImport("antd", "DatePicker.RangePicker")
         @js.native
         object component extends js.Object
         
@@ -1598,7 +1597,7 @@ object DatePicker {
       }
       
       object RangePickerDateProps {
-        @JSImport("antd/lib/date-picker", "RangePicker")
+        @JSImport("antd", "DatePicker.RangePicker")
         @js.native
         object component extends js.Object
         
@@ -1844,7 +1843,7 @@ object DatePicker {
       }
       
       object RangePickerTimeProps {
-        @JSImport("antd/lib/date-picker", "RangePicker")
+        @JSImport("antd", "DatePicker.RangePicker")
         @js.native
         object component extends js.Object
         
@@ -2118,7 +2117,7 @@ object DatePicker {
     }
     
     object TimePicker {
-      @JSImport("antd/lib/date-picker", "TimePicker")
+      @JSImport("antd", "DatePicker.TimePicker")
       @js.native
       object component extends js.Object
       
@@ -2127,7 +2126,7 @@ object DatePicker {
     }
     
     object WeekPicker {
-      @JSImport("antd/lib/date-picker", "WeekPicker")
+      @JSImport("antd", "DatePicker.WeekPicker")
       @js.native
       object component extends js.Object
       
@@ -2136,7 +2135,7 @@ object DatePicker {
     }
     
     object YearPicker {
-      @JSImport("antd/lib/date-picker", "YearPicker")
+      @JSImport("antd", "DatePicker.YearPicker")
       @js.native
       object component extends js.Object
       
@@ -2147,14 +2146,14 @@ object DatePicker {
   }
   
   object PickerTimeProps {
-    @JSImport("antd/lib/date-picker", JSImport.Default)
+    @JSImport("antd", "DatePicker")
     @js.native
     object component extends js.Object
     
     @scala.inline
     class Builder (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default] {
+         with StBuildingComponent[tag.type, typingsSlinky.antd.mod.DatePicker] {
       @scala.inline
       def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
       @scala.inline
@@ -2394,7 +2393,7 @@ object DatePicker {
         new Builder(js.Array(this.component, __props.asInstanceOf[typingsSlinky.antd.generatePickerMod.PickerTimeProps[Moment]]))
     }
     object MonthPicker {
-      @JSImport("antd/lib/date-picker", "MonthPicker")
+      @JSImport("antd", "DatePicker.MonthPicker")
       @js.native
       object component extends js.Object
       
@@ -2403,7 +2402,7 @@ object DatePicker {
     }
     
     object QuarterPicker {
-      @JSImport("antd/lib/date-picker", "QuarterPicker")
+      @JSImport("antd", "DatePicker.QuarterPicker")
       @js.native
       object component extends js.Object
       
@@ -2413,7 +2412,7 @@ object DatePicker {
     
     object RangePicker {
       object RangePickerBaseProps {
-        @JSImport("antd/lib/date-picker", "RangePicker")
+        @JSImport("antd", "DatePicker.RangePicker")
         @js.native
         object component extends js.Object
         
@@ -2657,7 +2656,7 @@ object DatePicker {
       }
       
       object RangePickerDateProps {
-        @JSImport("antd/lib/date-picker", "RangePicker")
+        @JSImport("antd", "DatePicker.RangePicker")
         @js.native
         object component extends js.Object
         
@@ -2903,7 +2902,7 @@ object DatePicker {
       }
       
       object RangePickerTimeProps {
-        @JSImport("antd/lib/date-picker", "RangePicker")
+        @JSImport("antd", "DatePicker.RangePicker")
         @js.native
         object component extends js.Object
         
@@ -3177,7 +3176,7 @@ object DatePicker {
     }
     
     object TimePicker {
-      @JSImport("antd/lib/date-picker", "TimePicker")
+      @JSImport("antd", "DatePicker.TimePicker")
       @js.native
       object component extends js.Object
       
@@ -3186,7 +3185,7 @@ object DatePicker {
     }
     
     object WeekPicker {
-      @JSImport("antd/lib/date-picker", "WeekPicker")
+      @JSImport("antd", "DatePicker.WeekPicker")
       @js.native
       object component extends js.Object
       
@@ -3195,7 +3194,7 @@ object DatePicker {
     }
     
     object YearPicker {
-      @JSImport("antd/lib/date-picker", "YearPicker")
+      @JSImport("antd", "DatePicker.YearPicker")
       @js.native
       object component extends js.Object
       

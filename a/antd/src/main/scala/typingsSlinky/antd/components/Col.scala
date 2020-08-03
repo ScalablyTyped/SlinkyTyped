@@ -76,7 +76,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Col {
-  @JSImport("antd/lib/col", JSImport.Default)
+  @JSImport("antd", "Col")
   @js.native
   object component extends js.Object
   

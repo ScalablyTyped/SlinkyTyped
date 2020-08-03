@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "rc-tabs"
-version := "11.5.6-2b61ab"
+version := "11.5.6-e7890a"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

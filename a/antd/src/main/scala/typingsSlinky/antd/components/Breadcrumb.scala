@@ -13,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Breadcrumb {
-  @JSImport("antd/lib/breadcrumb", JSImport.Default)
+  @JSImport("antd", "Breadcrumb")
   @js.native
   object component extends js.Object
   
@@ -46,7 +46,7 @@ object Breadcrumb {
   def withProps(p: BreadcrumbProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Breadcrumb.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object Item {
-    @JSImport("antd/lib/breadcrumb", "default.Item")
+    @JSImport("antd", "Breadcrumb.Item")
     @js.native
     object component extends js.Object
     
@@ -55,7 +55,7 @@ object Breadcrumb {
   }
   
   object Separator {
-    @JSImport("antd/lib/breadcrumb", "default.Separator")
+    @JSImport("antd", "Breadcrumb.Separator")
     @js.native
     object component extends js.Object
     

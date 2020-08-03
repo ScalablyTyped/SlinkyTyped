@@ -7,21 +7,20 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.checkboxCheckboxMod.CheckboxChangeEvent
 import typingsSlinky.antd.checkboxCheckboxMod.CheckboxProps
-import typingsSlinky.antd.checkboxMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Checkbox {
-  @JSImport("antd/lib/checkbox", JSImport.Default)
+  @JSImport("antd", "Checkbox")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Checkbox] {
     @scala.inline
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
     @scala.inline

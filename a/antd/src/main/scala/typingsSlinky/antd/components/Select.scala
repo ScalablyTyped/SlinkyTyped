@@ -50,7 +50,6 @@ import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.selectMod.SelectProps
-import typingsSlinky.antd.selectMod.default
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.rcSelect.anon.Mark
 import typingsSlinky.rcSelect.generatorMod.CustomTagProps
@@ -70,14 +69,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Select {
-  @JSImport("antd/lib/select", JSImport.Default)
+  @JSImport("antd", "Select")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder[/* <: typingsSlinky.antd.selectMod.SelectValue */ ValueType] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[ValueType]] {
+       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Select[ValueType]] {
     @scala.inline
     def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
     @scala.inline
@@ -356,13 +355,13 @@ object Select {
   
   def withProps[/* <: typingsSlinky.antd.selectMod.SelectValue */ ValueType](p: SelectProps[ValueType]): Builder[ValueType] = new Builder[ValueType](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[/* <: typingsSlinky.antd.selectMod.SelectValue */ ValueType](): Builder[ValueType] = {
+  def apply[/* <: typingsSlinky.antd.selectMod.SelectValue */ ValueType]: Builder[ValueType] = {
     val __props = js.Dynamic.literal()
     new Builder[ValueType](js.Array(this.component, __props.asInstanceOf[SelectProps[ValueType]]))
   }
   implicit def make[/* <: typingsSlinky.antd.selectMod.SelectValue */ ValueType](companion: Select.type): Builder[ValueType] = new Builder[ValueType](js.Array(this.component, js.Dictionary.empty))()
   object OptGroup {
-    @JSImport("antd/lib/select", "OptGroup")
+    @JSImport("antd", "Select.OptGroup")
     @js.native
     object component extends js.Object
     
@@ -385,7 +384,7 @@ object Select {
   }
   
   object Option {
-    @JSImport("antd/lib/select", "Option")
+    @JSImport("antd", "Select.Option")
     @js.native
     object component extends js.Object
     

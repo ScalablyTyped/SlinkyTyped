@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "rc-mentions"
-version := "1.4.0-a03ee6"
+version := "1.4.0-345588"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -8,7 +8,7 @@ libraryDependencies ++= Seq(
   "me.shadaj" %%% "slinky-web" % "0.6.5",
   "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-b1f63d",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-77dff4",
-  "org.scalablytyped.slinky" %%% "rc-textarea" % "0.3.0-9727d3",
+  "org.scalablytyped.slinky" %%% "rc-textarea" % "0.3.0-c2fc1a",
   "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-6a2e4b",
   "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false

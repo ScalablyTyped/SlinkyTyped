@@ -74,7 +74,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InputNumber {
-  @JSImport("antd/lib/input-number", JSImport.Default)
+  @JSImport("antd", "InputNumber")
   @js.native
   object component extends js.Object
   

@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Empty {
-  @JSImport("antd/lib/empty", JSImport.Default)
+  @JSImport("antd", "Empty")
   @js.native
   object component extends js.Object
   

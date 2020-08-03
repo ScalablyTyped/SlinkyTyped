@@ -18,7 +18,7 @@ object SlinkyTypedPlugin extends AutoPlugin {
         val `ant-design__icons` = "org.scalablytyped.slinky" % "ant-design__icons_sjs1_2.13" % "4.2.1-71fe4b"
         val `ant-design__icons-svg` = "org.scalablytyped.slinky" % "ant-design__icons-svg_sjs1_2.13" % "4.1.0-ac6146"
         val `ant-design__react-slick` = "org.scalablytyped.slinky" % "ant-design__react-slick_sjs1_2.13" % "0.27.0-de9b26"
-        val antd = "org.scalablytyped.slinky" % "antd_sjs1_2.13" % "4.5.1-4c87af"
+        val antd = "org.scalablytyped.slinky" % "antd_sjs1_2.13" % "4.5.1-350385"
       }
       object C {
         val csstype = "org.scalablytyped.slinky" % "csstype_sjs1_2.13" % "3.0.2-b1f63d"
@@ -33,18 +33,18 @@ object SlinkyTypedPlugin extends AutoPlugin {
         val `prop-types` = "org.scalablytyped.slinky" % "prop-types_sjs1_2.13" % "15.7-dt-20200515Z-77dff4"
       }
       object R {
-        val `rc-field-form` = "org.scalablytyped.slinky" % "rc-field-form_sjs1_2.13" % "1.8.0-17ff8f"
-        val `rc-mentions` = "org.scalablytyped.slinky" % "rc-mentions_sjs1_2.13" % "1.4.0-a03ee6"
-        val `rc-menu` = "org.scalablytyped.slinky" % "rc-menu_sjs1_2.13" % "8.5.0-e4d07e"
+        val `rc-field-form` = "org.scalablytyped.slinky" % "rc-field-form_sjs1_2.13" % "1.8.0-b6c711"
+        val `rc-mentions` = "org.scalablytyped.slinky" % "rc-mentions_sjs1_2.13" % "1.4.0-345588"
+        val `rc-menu` = "org.scalablytyped.slinky" % "rc-menu_sjs1_2.13" % "8.5.0-f307b3"
         val `rc-notification` = "org.scalablytyped.slinky" % "rc-notification_sjs1_2.13" % "4.4.0-0c247e"
-        val `rc-picker` = "org.scalablytyped.slinky" % "rc-picker_sjs1_2.13" % "1.15.1-4d0e26"
-        val `rc-select` = "org.scalablytyped.slinky" % "rc-select_sjs1_2.13" % "11.1.0-cc833b"
-        val `rc-table` = "org.scalablytyped.slinky" % "rc-table_sjs1_2.13" % "7.8.6-234f9b"
-        val `rc-tabs` = "org.scalablytyped.slinky" % "rc-tabs_sjs1_2.13" % "11.5.6-2b61ab"
-        val `rc-textarea` = "org.scalablytyped.slinky" % "rc-textarea_sjs1_2.13" % "0.3.0-9727d3"
+        val `rc-picker` = "org.scalablytyped.slinky" % "rc-picker_sjs1_2.13" % "1.15.1-f41f2f"
+        val `rc-select` = "org.scalablytyped.slinky" % "rc-select_sjs1_2.13" % "11.1.0-532e49"
+        val `rc-table` = "org.scalablytyped.slinky" % "rc-table_sjs1_2.13" % "7.8.6-c29aa2"
+        val `rc-tabs` = "org.scalablytyped.slinky" % "rc-tabs_sjs1_2.13" % "11.5.6-e7890a"
+        val `rc-textarea` = "org.scalablytyped.slinky" % "rc-textarea_sjs1_2.13" % "0.3.0-c2fc1a"
         val `rc-tooltip` = "org.scalablytyped.slinky" % "rc-tooltip_sjs1_2.13" % "4.2.1-adfdd8"
-        val `rc-tree` = "org.scalablytyped.slinky" % "rc-tree_sjs1_2.13" % "3.8.2-27ff76"
-        val `rc-tree-select` = "org.scalablytyped.slinky" % "rc-tree-select_sjs1_2.13" % "4.1.0-c275ac"
+        val `rc-tree` = "org.scalablytyped.slinky" % "rc-tree_sjs1_2.13" % "3.8.2-75cf60"
+        val `rc-tree-select` = "org.scalablytyped.slinky" % "rc-tree-select_sjs1_2.13" % "4.1.0-daef2d"
         val `rc-trigger` = "org.scalablytyped.slinky" % "rc-trigger_sjs1_2.13" % "4.3.4-b693aa"
         val react = "org.scalablytyped.slinky" % "react_sjs1_2.13" % "16.9-dt-20200711Z-6a2e4b"
       }

@@ -18,7 +18,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ConfigProvider {
-  @JSImport("antd/lib/config-provider", JSImport.Default)
+  @JSImport("antd", "ConfigProvider")
   @js.native
   object component extends js.Object
   

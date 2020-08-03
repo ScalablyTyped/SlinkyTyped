@@ -13,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BackTop {
-  @JSImport("antd/lib/back-top", JSImport.Default)
+  @JSImport("antd", "BackTop")
   @js.native
   object component extends js.Object
   

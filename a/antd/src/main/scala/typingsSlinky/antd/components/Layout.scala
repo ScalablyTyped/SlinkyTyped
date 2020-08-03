@@ -82,14 +82,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Layout {
-  @JSImport("antd/lib/layout", JSImport.Default)
+  @JSImport("antd", "Layout")
   @js.native
   object component extends js.Object
   
   def withProps(p: BasicProps): SharedBuilder_BasicProps_202839332 = new SharedBuilder_BasicProps_202839332(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Layout.type): SharedBuilder_BasicProps_202839332 = new SharedBuilder_BasicProps_202839332(js.Array(this.component, js.Dictionary.empty))()
   object Content {
-    @JSImport("antd/lib/layout", "Content")
+    @JSImport("antd", "Layout.Content")
     @js.native
     object component extends js.Object
     
@@ -98,7 +98,7 @@ object Layout {
   }
   
   object Footer {
-    @JSImport("antd/lib/layout", "Footer")
+    @JSImport("antd", "Layout.Footer")
     @js.native
     object component extends js.Object
     
@@ -107,7 +107,7 @@ object Layout {
   }
   
   object Header {
-    @JSImport("antd/lib/layout", "Header")
+    @JSImport("antd", "Layout.Header")
     @js.native
     object component extends js.Object
     
@@ -116,7 +116,7 @@ object Layout {
   }
   
   object Sider {
-    @JSImport("antd/lib/layout", "Sider")
+    @JSImport("antd", "Layout.Sider")
     @js.native
     object component extends js.Object
     

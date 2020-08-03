@@ -10,7 +10,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Comment {
-  @JSImport("antd/lib/comment", JSImport.Default)
+  @JSImport("antd", "Comment")
   @js.native
   object component extends js.Object
   

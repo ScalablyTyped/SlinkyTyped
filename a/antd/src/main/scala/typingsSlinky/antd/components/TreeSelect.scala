@@ -49,7 +49,6 @@ import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.antd.treeSelectMod.TreeSelectProps
-import typingsSlinky.antd.treeSelectMod.default
 import typingsSlinky.rcSelect.anon.Mark
 import typingsSlinky.rcSelect.generatorMod.CustomTagProps
 import typingsSlinky.rcSelect.generatorMod.FilterFunc
@@ -69,14 +68,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TreeSelect {
-  @JSImport("antd/lib/tree-select", JSImport.Default)
+  @JSImport("antd", "TreeSelect")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder[T] (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default[T]] {
+       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.TreeSelect[T]] {
     @scala.inline
     def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
     @scala.inline
@@ -385,13 +384,13 @@ object TreeSelect {
   
   def withProps[T](p: TreeSelectProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T](): Builder[T] = {
+  def apply[T]: Builder[T] = {
     val __props = js.Dynamic.literal()
     new Builder[T](js.Array(this.component, __props.asInstanceOf[TreeSelectProps[T]]))
   }
   implicit def make[T](companion: TreeSelect.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
   object TreeNode {
-    @JSImport("antd/lib/tree-select", "TreeNode")
+    @JSImport("antd", "TreeSelect.TreeNode")
     @js.native
     object component extends js.Object
     

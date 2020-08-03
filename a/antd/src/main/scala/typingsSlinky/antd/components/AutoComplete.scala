@@ -70,7 +70,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object AutoComplete {
-  @JSImport("antd/lib/auto-complete", JSImport.Default)
+  @JSImport("antd", "AutoComplete")
   @js.native
   object component extends js.Object
   
@@ -357,7 +357,7 @@ object AutoComplete {
   def withProps(p: AutoCompleteProps with RefAttributes[default[SelectValue]]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: AutoComplete.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object Option {
-    @JSImport("antd/lib/auto-complete", "default.Option")
+    @JSImport("antd", "AutoComplete.Option")
     @js.native
     object component extends js.Object
     

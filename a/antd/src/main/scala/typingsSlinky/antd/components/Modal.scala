@@ -11,12 +11,13 @@ import typingsSlinky.antd.buttonButtonMod.LegacyButtonType
 import typingsSlinky.antd.modalModalMod.ModalProps
 import typingsSlinky.antd.modalModalMod.getContainerFunc
 import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.PropsWithChildren
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Modal {
-  @JSImport("antd/lib/modal/Modal", JSImport.Default)
+  @JSImport("antd", "Modal")
   @js.native
   object component extends js.Object
   
@@ -106,7 +107,7 @@ object Modal {
     def zIndex(value: Double): this.type = set("zIndex", value.asInstanceOf[js.Any])
   }
   
-  def withProps(p: ModalProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: PropsWithChildren[ModalProps]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Modal.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
 }
 

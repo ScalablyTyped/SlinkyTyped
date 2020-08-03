@@ -18,7 +18,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Pagination {
-  @JSImport("antd/lib/pagination", JSImport.Default)
+  @JSImport("antd", "Pagination")
   @js.native
   object component extends js.Object
   

@@ -19,7 +19,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object List {
-  @JSImport("antd/lib/list", JSImport.Default)
+  @JSImport("antd", "List")
   @js.native
   object component extends js.Object
   
@@ -81,20 +81,20 @@ object List {
   
   def withProps[T](p: ListProps[T]): Builder[T] = new Builder[T](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[T](): Builder[T] = {
+  def apply[T]: Builder[T] = {
     val __props = js.Dynamic.literal()
     new Builder[T](js.Array(this.component, __props.asInstanceOf[ListProps[T]]))
   }
   implicit def make[T](companion: List.type): Builder[T] = new Builder[T](js.Array(this.component, js.Dictionary.empty))()
   object Item {
-    @JSImport("antd/lib/list", "default.Item")
+    @JSImport("antd", "List.Item")
     @js.native
     object component extends js.Object
     
     def withProps(p: ListItemProps): SharedBuilder_ListItemProps_1246570549 = new SharedBuilder_ListItemProps_1246570549(js.Array(this.component, p.asInstanceOf[js.Any]))
     implicit def make(companion: Item.type): SharedBuilder_ListItemProps_1246570549 = new SharedBuilder_ListItemProps_1246570549(js.Array(this.component, js.Dictionary.empty))()
     object Meta {
-      @JSImport("antd/lib/list", "default.Item.Meta")
+      @JSImport("antd", "List.Item.Meta")
       @js.native
       object component extends js.Object
       

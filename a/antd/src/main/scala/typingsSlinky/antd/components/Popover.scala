@@ -22,7 +22,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Popover {
-  @JSImport("antd/lib/popover", JSImport.Default)
+  @JSImport("antd", "Popover")
   @js.native
   object component extends js.Object
   

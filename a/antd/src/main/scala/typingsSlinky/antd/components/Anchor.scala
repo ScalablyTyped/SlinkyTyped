@@ -6,7 +6,6 @@ import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anchorAnchorMod.AnchorContainer
 import typingsSlinky.antd.anchorAnchorMod.AnchorProps
-import typingsSlinky.antd.anchorMod.default
 import typingsSlinky.antd.anon.Href
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -14,14 +13,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Anchor {
-  @JSImport("antd/lib/anchor", JSImport.Default)
+  @JSImport("antd", "Anchor")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Anchor] {
     @scala.inline
     def affix(value: Boolean): this.type = set("affix", value.asInstanceOf[js.Any])
     @scala.inline

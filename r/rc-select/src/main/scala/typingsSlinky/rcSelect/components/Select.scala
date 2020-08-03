@@ -17,13 +17,13 @@ object Select {
   
   def withProps[VT](p: SelectProps[OptionsType, VT]): SharedBuilder_SelectProps_319205751[default[VT], VT] = new SharedBuilder_SelectProps_319205751[default[VT], VT](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[VT](): SharedBuilder_SelectProps_319205751[default[VT], VT] = {
+  def apply[VT]: SharedBuilder_SelectProps_319205751[default[VT], VT] = {
     val __props = js.Dynamic.literal()
     new SharedBuilder_SelectProps_319205751[default[VT], VT](js.Array(this.component, __props.asInstanceOf[SelectProps[OptionsType, VT]]))
   }
   implicit def make[VT](companion: Select.type): SharedBuilder_SelectProps_319205751[default[VT], VT] = new SharedBuilder_SelectProps_319205751[default[VT], VT](js.Array(this.component, js.Dictionary.empty))()
   object OptGroup {
-    @JSImport("rc-select/lib/Select", "OptGroup")
+    @JSImport("rc-select/lib/Select", "default.OptGroup")
     @js.native
     object component extends js.Object
     
@@ -32,7 +32,7 @@ object Select {
   }
   
   object Option {
-    @JSImport("rc-select/lib/Select", "Option")
+    @JSImport("rc-select/lib/Select", "default.Option")
     @js.native
     object component extends js.Object
     

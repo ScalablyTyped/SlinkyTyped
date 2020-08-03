@@ -18,7 +18,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Alert {
-  @JSImport("antd/lib/alert", JSImport.Default)
+  @JSImport("antd", "Alert")
   @js.native
   object component extends js.Object
   
@@ -71,12 +71,12 @@ object Alert {
   def withProps(p: AlertProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Alert.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object ErrorBoundary {
-    @JSImport("antd/lib/alert", "default.ErrorBoundary")
+    @JSImport("antd", "Alert.ErrorBoundary")
     @js.native
     object component extends js.Object
     
-    def withProps(p: ErrorBoundaryProps): SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.alertMod.default.ErrorBoundary] = new SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.alertMod.default.ErrorBoundary](js.Array(this.component, p.asInstanceOf[js.Any]))
-    implicit def make(companion: ErrorBoundary.type): SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.alertMod.default.ErrorBoundary] = new SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.alertMod.default.ErrorBoundary](js.Array(this.component, js.Dictionary.empty))()
+    def withProps(p: ErrorBoundaryProps): SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.mod.Alert.ErrorBoundary] = new SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.mod.Alert.ErrorBoundary](js.Array(this.component, p.asInstanceOf[js.Any]))
+    implicit def make(companion: ErrorBoundary.type): SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.mod.Alert.ErrorBoundary] = new SharedBuilder_ErrorBoundaryProps_1809267820[typingsSlinky.antd.mod.Alert.ErrorBoundary](js.Array(this.component, js.Dictionary.empty))()
   }
   
 }

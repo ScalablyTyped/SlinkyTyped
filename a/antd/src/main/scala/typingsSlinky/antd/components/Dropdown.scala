@@ -18,7 +18,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Dropdown {
-  @JSImport("antd/lib/dropdown", JSImport.Default)
+  @JSImport("antd", "Dropdown")
   @js.native
   object component extends js.Object
   
@@ -71,7 +71,7 @@ object Dropdown {
     new Builder(js.Array(this.component, __props.asInstanceOf[DropDownProps]))
   }
   object Button {
-    @JSImport("antd/lib/dropdown", "default.Button")
+    @JSImport("antd", "Dropdown.Button")
     @js.native
     object component extends js.Object
     

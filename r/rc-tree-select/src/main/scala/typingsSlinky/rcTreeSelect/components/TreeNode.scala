@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TreeNode {
-  @JSImport("rc-tree-select/es/TreeNode", JSImport.Default)
+  @JSImport("rc-tree-select", "TreeNode")
   @js.native
   object component extends js.Object
   

@@ -14,7 +14,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Badge {
-  @JSImport("antd/lib/badge", JSImport.Default)
+  @JSImport("antd", "Badge")
   @js.native
   object component extends js.Object
   
@@ -57,7 +57,7 @@ object Badge {
   def withProps(p: BadgeProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Badge.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object Ribbon {
-    @JSImport("antd/lib/badge", "default.Ribbon")
+    @JSImport("antd", "Badge.Ribbon")
     @js.native
     object component extends js.Object
     

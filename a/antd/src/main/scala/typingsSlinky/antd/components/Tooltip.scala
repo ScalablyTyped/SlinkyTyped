@@ -24,7 +24,7 @@ import scala.scalajs.js.annotation._
 
 object Tooltip {
   object TooltipPropsWithOverlayRefAttributes {
-    @JSImport("antd/lib/tooltip", JSImport.Default)
+    @JSImport("antd", "Tooltip")
     @js.native
     object component extends js.Object
     
@@ -113,7 +113,7 @@ object Tooltip {
   }
   
   object TooltipPropsWithTitleRefAttributes {
-    @JSImport("antd/lib/tooltip", JSImport.Default)
+    @JSImport("antd", "Tooltip")
     @js.native
     object component extends js.Object
     

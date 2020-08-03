@@ -21,7 +21,6 @@ import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.menuContextMod.MenuTheme
 import typingsSlinky.antd.menuMod.MenuProps
-import typingsSlinky.antd.menuMod.default
 import typingsSlinky.rcMenu.anon.Open
 import typingsSlinky.rcMenu.anon.PartialkeyinMenuModeother
 import typingsSlinky.rcMenu.dividerMod.DividerProps
@@ -90,14 +89,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Menu {
-  @JSImport("antd/lib/menu", JSImport.Default)
+  @JSImport("antd", "Menu")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Menu] {
     @scala.inline
     def about(value: String): this.type = set("about", value.asInstanceOf[js.Any])
     @scala.inline
@@ -535,7 +534,7 @@ object Menu {
   def withProps(p: MenuProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Menu.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object Divider {
-    @JSImport("antd/lib/menu", "Divider")
+    @JSImport("antd", "Menu.Divider")
     @js.native
     object component extends js.Object
     

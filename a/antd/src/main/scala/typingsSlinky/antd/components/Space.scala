@@ -16,7 +16,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Space {
-  @JSImport("antd/lib/space", JSImport.Default)
+  @JSImport("antd", "Space")
   @js.native
   object component extends js.Object
   

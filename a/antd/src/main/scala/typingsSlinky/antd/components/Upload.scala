@@ -22,21 +22,20 @@ import typingsSlinky.antd.uploadInterfaceMod.UploadListType
 import typingsSlinky.antd.uploadInterfaceMod.UploadLocale
 import typingsSlinky.antd.uploadInterfaceMod.UploadProps
 import typingsSlinky.antd.uploadInterfaceMod.UploadType
-import typingsSlinky.antd.uploadMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Upload {
-  @JSImport("antd/lib/upload", JSImport.Default)
+  @JSImport("antd", "Upload")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Upload] {
     @scala.inline
     def accept(value: String): this.type = set("accept", value.asInstanceOf[js.Any])
     @scala.inline

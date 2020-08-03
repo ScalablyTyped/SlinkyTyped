@@ -16,7 +16,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Drawer {
-  @JSImport("antd/lib/drawer", JSImport.Default)
+  @JSImport("antd", "Drawer")
   @js.native
   object component extends js.Object
   

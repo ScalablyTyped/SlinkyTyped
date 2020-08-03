@@ -27,7 +27,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Popconfirm {
-  @JSImport("antd/lib/popconfirm", JSImport.Default)
+  @JSImport("antd", "Popconfirm")
   @js.native
   object component extends js.Object
   

@@ -10,7 +10,6 @@ import typingsSlinky.antd.cascaderMod.CascaderProps
 import typingsSlinky.antd.cascaderMod.CascaderValueType
 import typingsSlinky.antd.cascaderMod.FieldNamesType
 import typingsSlinky.antd.cascaderMod.ShowSearchType
-import typingsSlinky.antd.cascaderMod.default
 import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -18,14 +17,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Cascader {
-  @JSImport("antd/lib/cascader", JSImport.Default)
+  @JSImport("antd", "Cascader")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Cascader] {
     @scala.inline
     def allowClear(value: Boolean): this.type = set("allowClear", value.asInstanceOf[js.Any])
     @scala.inline

@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Field {
-  @JSImport("rc-field-form/es/Field", JSImport.Default)
+  @JSImport("rc-field-form", "Field")
   @js.native
   object component extends js.Object
   

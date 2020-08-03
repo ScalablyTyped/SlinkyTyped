@@ -36,7 +36,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Tree {
-  @JSImport("antd/lib/tree", JSImport.Default)
+  @JSImport("antd", "Tree")
   @js.native
   object component extends js.Object
   
@@ -183,7 +183,7 @@ object Tree {
   def withProps(p: TreeProps with RefAttributes[default]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Tree.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object DirectoryTree {
-    @JSImport("antd/lib/tree", "default.DirectoryTree")
+    @JSImport("antd", "Tree.DirectoryTree")
     @js.native
     object component extends js.Object
     
@@ -192,7 +192,7 @@ object Tree {
   }
   
   object TreeNode {
-    @JSImport("antd/lib/tree", "default.TreeNode")
+    @JSImport("antd", "Tree.TreeNode")
     @js.native
     object component extends js.Object
     

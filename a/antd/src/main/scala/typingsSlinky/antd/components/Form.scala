@@ -92,7 +92,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Form {
-  @JSImport("antd/lib/form", JSImport.Default)
+  @JSImport("antd", "Form")
   @js.native
   object component extends js.Object
   
@@ -521,7 +521,7 @@ object Form {
   def withProps(p: FormProps with RefAttributes[FormInstance]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Form.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object Item {
-    @JSImport("antd/lib/form", "default.Item")
+    @JSImport("antd", "Form.Item")
     @js.native
     object component extends js.Object
     
@@ -530,7 +530,7 @@ object Form {
   }
   
   object List {
-    @JSImport("antd/lib/form", "default.List")
+    @JSImport("antd", "Form.List")
     @js.native
     object component extends js.Object
     
@@ -546,7 +546,7 @@ object Form {
   }
   
   object Provider {
-    @JSImport("antd/lib/form", "default.Provider")
+    @JSImport("antd", "Form.Provider")
     @js.native
     object component extends js.Object
     

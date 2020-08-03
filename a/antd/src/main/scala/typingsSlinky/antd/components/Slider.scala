@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
 
 object Slider {
   object SliderSinglePropsRefAttributes {
-    @JSImport("antd/lib/slider", JSImport.Default)
+    @JSImport("antd", "Slider")
     @js.native
     object component extends js.Object
     
@@ -83,7 +83,7 @@ object Slider {
   }
   
   object SliderRangePropsRefAttributes {
-    @JSImport("antd/lib/slider", JSImport.Default)
+    @JSImport("antd", "Slider")
     @js.native
     object component extends js.Object
     

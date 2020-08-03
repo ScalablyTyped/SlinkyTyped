@@ -14,7 +14,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Switch {
-  @JSImport("antd/lib/switch", JSImport.Default)
+  @JSImport("antd", "Switch")
   @js.native
   object component extends js.Object
   

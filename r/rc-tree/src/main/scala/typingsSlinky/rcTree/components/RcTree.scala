@@ -19,7 +19,7 @@ object RcTree {
     new SharedBuilder_TreeProps_407499862[default](js.Array(this.component, __props.asInstanceOf[TreeProps]))
   }
   object TreeNode {
-    @JSImport("rc-tree", "TreeNode")
+    @JSImport("rc-tree", "default.TreeNode")
     @js.native
     object component extends js.Object
     

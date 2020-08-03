@@ -11,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Result {
-  @JSImport("antd/lib/result", JSImport.Default)
+  @JSImport("antd", "Result")
   @js.native
   object component extends js.Object
   

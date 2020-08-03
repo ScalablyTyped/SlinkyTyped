@@ -20,7 +20,6 @@ import typingsSlinky.rcPicker.pickerMod.PickerRefConfig
 import typingsSlinky.rcPicker.rangePickerMod.RangeInfo
 import typingsSlinky.rcPicker.rangePickerMod.RangeShowTimeObject
 import typingsSlinky.rcPicker.rangePickerMod.RangeType
-import typingsSlinky.rcPicker.rangePickerMod.default
 import typingsSlinky.rcPicker.rcPickerNumbers.`0`
 import typingsSlinky.rcPicker.rcPickerNumbers.`1`
 import typingsSlinky.rcPicker.rcPickerStrings.`additions text`
@@ -71,14 +70,14 @@ import scala.scalajs.js.annotation._
 
 object RangePicker {
   object RangePickerBaseProps {
-    @JSImport("rc-picker/es/RangePicker", JSImport.Default)
+    @JSImport("rc-picker", "RangePicker")
     @js.native
     object component extends js.Object
     
     @scala.inline
     class Builder[DateType] (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default[DateType]] {
+         with StBuildingComponent[tag.type, typingsSlinky.rcPicker.mod.RangePicker[DateType]] {
       @scala.inline
       def activePickerIndex(value: `0` | `1`): this.type = set("activePickerIndex", value.asInstanceOf[js.Any])
       @scala.inline
@@ -327,14 +326,14 @@ object RangePicker {
   }
   
   object RangePickerDateProps {
-    @JSImport("rc-picker/es/RangePicker", JSImport.Default)
+    @JSImport("rc-picker", "RangePicker")
     @js.native
     object component extends js.Object
     
     @scala.inline
     class Builder[DateType] (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default[DateType]] {
+         with StBuildingComponent[tag.type, typingsSlinky.rcPicker.mod.RangePicker[DateType]] {
       @scala.inline
       def activePickerIndex(value: `0` | `1`): this.type = set("activePickerIndex", value.asInstanceOf[js.Any])
       @scala.inline
@@ -589,14 +588,14 @@ object RangePicker {
   }
   
   object RangePickerTimeProps {
-    @JSImport("rc-picker/es/RangePicker", JSImport.Default)
+    @JSImport("rc-picker", "RangePicker")
     @js.native
     object component extends js.Object
     
     @scala.inline
     class Builder[DateType] (val args: js.Array[js.Any])
       extends AnyVal
-         with StBuildingComponent[tag.type, default[DateType]] {
+         with StBuildingComponent[tag.type, typingsSlinky.rcPicker.mod.RangePicker[DateType]] {
       @scala.inline
       def activePickerIndex(value: `0` | `1`): this.type = set("activePickerIndex", value.asInstanceOf[js.Any])
       @scala.inline

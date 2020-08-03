@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Option {
-  @JSImport("rc-select/lib/Option", JSImport.Default)
+  @JSImport("rc-select", "Option")
   @js.native
   object component extends js.Object
   

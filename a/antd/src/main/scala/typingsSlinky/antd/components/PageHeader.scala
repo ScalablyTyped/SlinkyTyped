@@ -14,7 +14,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PageHeader {
-  @JSImport("antd/lib/page-header", JSImport.Default)
+  @JSImport("antd", "PageHeader")
   @js.native
   object component extends js.Object
   

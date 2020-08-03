@@ -11,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Rate {
-  @JSImport("antd/lib/rate", JSImport.Default)
+  @JSImport("antd", "Rate")
   @js.native
   object component extends js.Object
   

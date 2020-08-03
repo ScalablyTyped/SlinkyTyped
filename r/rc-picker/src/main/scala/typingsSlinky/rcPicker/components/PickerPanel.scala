@@ -24,7 +24,7 @@ import scala.scalajs.js.annotation._
 
 object PickerPanel {
   object PickerPanelBaseProps {
-    @JSImport("rc-picker/es/PickerPanel", JSImport.Default)
+    @JSImport("rc-picker", "PickerPanel")
     @js.native
     object component extends js.Object
     
@@ -89,7 +89,7 @@ object PickerPanel {
   }
   
   object PickerPanelDateProps {
-    @JSImport("rc-picker/es/PickerPanel", JSImport.Default)
+    @JSImport("rc-picker", "PickerPanel")
     @js.native
     object component extends js.Object
     
@@ -164,7 +164,7 @@ object PickerPanel {
   }
   
   object PickerPanelTimeProps {
-    @JSImport("rc-picker/es/PickerPanel", JSImport.Default)
+    @JSImport("rc-picker", "PickerPanel")
     @js.native
     object component extends js.Object
     

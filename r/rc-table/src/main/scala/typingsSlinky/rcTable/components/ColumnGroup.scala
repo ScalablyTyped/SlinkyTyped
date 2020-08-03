@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ColumnGroup {
-  @JSImport("rc-table/lib/sugar/ColumnGroup", JSImport.Default)
+  @JSImport("rc-table", "ColumnGroup")
   @js.native
   object component extends js.Object
   

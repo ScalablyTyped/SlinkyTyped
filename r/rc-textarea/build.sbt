@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "rc-textarea"
-version := "0.3.0-9727d3"
+version := "0.3.0-c2fc1a"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "rc-tree-select"
-version := "4.1.0-c275ac"
+version := "4.1.0-daef2d"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
@@ -8,8 +8,8 @@ libraryDependencies ++= Seq(
   "me.shadaj" %%% "slinky-web" % "0.6.5",
   "org.scalablytyped.slinky" %%% "csstype" % "3.0.2-b1f63d",
   "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20200515Z-77dff4",
-  "org.scalablytyped.slinky" %%% "rc-select" % "11.1.0-cc833b",
-  "org.scalablytyped.slinky" %%% "rc-tree" % "3.8.2-27ff76",
+  "org.scalablytyped.slinky" %%% "rc-select" % "11.1.0-532e49",
+  "org.scalablytyped.slinky" %%% "rc-tree" % "3.8.2-75cf60",
   "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200711Z-6a2e4b",
   "org.scalablytyped.slinky" %%% "std" % "3.9-25efe0")
 publishArtifact in packageDoc := false

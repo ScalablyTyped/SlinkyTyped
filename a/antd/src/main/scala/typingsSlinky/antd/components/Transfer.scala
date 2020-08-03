@@ -8,7 +8,6 @@ import slinky.web.html.ul.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.antd.anon.PartialTransferLocale
 import typingsSlinky.antd.listBodyMod.TransferListBodyProps
-import typingsSlinky.antd.operationMod.TransferOperationProps
 import typingsSlinky.antd.transferInterfaceMod.PaginationType
 import typingsSlinky.antd.transferListMod.TransferListProps
 import typingsSlinky.antd.transferMod.ListStyle
@@ -17,21 +16,20 @@ import typingsSlinky.antd.transferMod.SelectAllLabel
 import typingsSlinky.antd.transferMod.TransferDirection
 import typingsSlinky.antd.transferMod.TransferItem
 import typingsSlinky.antd.transferMod.TransferProps
-import typingsSlinky.antd.transferMod.default
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Transfer {
-  @JSImport("antd/lib/transfer", JSImport.Default)
+  @JSImport("antd", "Transfer")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Transfer] {
     @scala.inline
     def children(value: /* props */ TransferListBodyProps => ReactElement): this.type = set("children", js.Any.fromFunction1(value))
     @scala.inline
@@ -107,14 +105,5 @@ object Transfer {
     val __props = js.Dynamic.literal(dataSource = dataSource.asInstanceOf[js.Any], listStyle = listStyle.asInstanceOf[js.Any])
     new Builder(js.Array(this.component, __props.asInstanceOf[TransferProps]))
   }
-  object Operation {
-    @JSImport("antd/lib/transfer", "Operation")
-    @js.native
-    object component extends js.Object
-    
-    def withProps(p: TransferOperationProps): SharedBuilder_TransferOperationProps1870046190 = new SharedBuilder_TransferOperationProps1870046190(js.Array(this.component, p.asInstanceOf[js.Any]))
-    implicit def make(companion: Operation.type): SharedBuilder_TransferOperationProps1870046190 = new SharedBuilder_TransferOperationProps1870046190(js.Array(this.component, js.Dictionary.empty))()
-  }
-  
 }
 

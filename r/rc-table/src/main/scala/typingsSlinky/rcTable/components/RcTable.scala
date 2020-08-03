@@ -17,7 +17,7 @@ object RcTable {
   
   def withProps[/* <: typingsSlinky.rcTable.interfaceMod.DefaultRecordType */ RecordType](p: TableProps[RecordType]): SharedBuilder_TableProps_175475921[RecordType] = new SharedBuilder_TableProps_175475921[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[/* <: typingsSlinky.rcTable.interfaceMod.DefaultRecordType */ RecordType](): SharedBuilder_TableProps_175475921[RecordType] = {
+  def apply[/* <: typingsSlinky.rcTable.interfaceMod.DefaultRecordType */ RecordType]: SharedBuilder_TableProps_175475921[RecordType] = {
     val __props = js.Dynamic.literal()
     new SharedBuilder_TableProps_175475921[RecordType](js.Array(this.component, __props.asInstanceOf[TableProps[RecordType]]))
   }
@@ -42,7 +42,7 @@ object RcTable {
     
     def withProps[RecordType](p: ColumnProps[RecordType]): SharedBuilder_ColumnProps177095460[RecordType] = new SharedBuilder_ColumnProps177095460[RecordType](js.Array(this.component, p.asInstanceOf[js.Any]))
     @scala.inline
-    def apply[RecordType](): SharedBuilder_ColumnProps177095460[RecordType] = {
+    def apply[RecordType]: SharedBuilder_ColumnProps177095460[RecordType] = {
         val __props = js.Dynamic.literal()
         new SharedBuilder_ColumnProps177095460[RecordType](js.Array(this.component, __props.asInstanceOf[ColumnProps[RecordType]]))
     }

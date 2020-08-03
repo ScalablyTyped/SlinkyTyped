@@ -15,7 +15,7 @@ object RcMentions {
   def withProps(p: MentionsProps): SharedBuilder_MentionsProps1504682567[default] = new SharedBuilder_MentionsProps1504682567[default](js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: RcMentions.type): SharedBuilder_MentionsProps1504682567[default] = new SharedBuilder_MentionsProps1504682567[default](js.Array(this.component, js.Dictionary.empty))()
   object Option {
-    @JSImport("rc-mentions", "Option")
+    @JSImport("rc-mentions", "default.Option")
     @js.native
     object component extends js.Object
     

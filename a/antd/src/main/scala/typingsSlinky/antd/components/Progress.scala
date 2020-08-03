@@ -14,7 +14,6 @@ import typingsSlinky.antd.antdStrings.round
 import typingsSlinky.antd.antdStrings.square
 import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.top
-import typingsSlinky.antd.progressMod.default
 import typingsSlinky.antd.progressProgressMod.ProgressGradient
 import typingsSlinky.antd.progressProgressMod.ProgressProps
 import typingsSlinky.antd.progressProgressMod.ProgressSize
@@ -26,14 +25,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Progress {
-  @JSImport("antd/lib/progress", JSImport.Default)
+  @JSImport("antd", "Progress")
   @js.native
   object component extends js.Object
   
   @scala.inline
   class Builder (val args: js.Array[js.Any])
     extends AnyVal
-       with StBuildingComponent[tag.type, default] {
+       with StBuildingComponent[tag.type, typingsSlinky.antd.mod.Progress] {
     @scala.inline
     def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
     @scala.inline

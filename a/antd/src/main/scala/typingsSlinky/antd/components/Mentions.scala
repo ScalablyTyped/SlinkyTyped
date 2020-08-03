@@ -81,7 +81,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Mentions {
-  @JSImport("antd/lib/mentions", JSImport.Default)
+  @JSImport("antd", "Mentions")
   @js.native
   object component extends js.Object
   
@@ -500,7 +500,7 @@ object Mentions {
   def withProps(p: MentionProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Mentions.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object Option {
-    @JSImport("antd/lib/mentions", "default.Option")
+    @JSImport("antd", "Mentions.Option")
     @js.native
     object component extends js.Object
     

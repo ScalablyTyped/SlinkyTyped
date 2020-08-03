@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "rc-tree"
-version := "3.8.2-27ff76"
+version := "3.8.2-75cf60"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

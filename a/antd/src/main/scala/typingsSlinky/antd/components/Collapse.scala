@@ -13,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Collapse {
-  @JSImport("antd/lib/collapse", JSImport.Default)
+  @JSImport("antd", "Collapse")
   @js.native
   object component extends js.Object
   
@@ -54,7 +54,7 @@ object Collapse {
   def withProps(p: CollapseProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Collapse.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object Panel {
-    @JSImport("antd/lib/collapse", "default.Panel")
+    @JSImport("antd", "Collapse.Panel")
     @js.native
     object component extends js.Object
     

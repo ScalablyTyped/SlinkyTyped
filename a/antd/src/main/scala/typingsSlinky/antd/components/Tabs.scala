@@ -85,7 +85,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Tabs {
-  @JSImport("antd/lib/tabs", JSImport.Default)
+  @JSImport("antd", "Tabs")
   @js.native
   object component extends js.Object
   
@@ -498,7 +498,7 @@ object Tabs {
   def withProps(p: TabsProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Tabs.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object TabPane {
-    @JSImport("antd/lib/tabs", "default.TabPane")
+    @JSImport("antd", "Tabs.TabPane")
     @js.native
     object component extends js.Object
     

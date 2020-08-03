@@ -15,13 +15,13 @@ object TreeSelect {
   
   def withProps[ValueType](p: TreeSelectProps[ValueType]): SharedBuilder_TreeSelectProps_1571959893[default[ValueType], ValueType] = new SharedBuilder_TreeSelectProps_1571959893[default[ValueType], ValueType](js.Array(this.component, p.asInstanceOf[js.Any]))
   @scala.inline
-  def apply[ValueType](): SharedBuilder_TreeSelectProps_1571959893[default[ValueType], ValueType] = {
+  def apply[ValueType]: SharedBuilder_TreeSelectProps_1571959893[default[ValueType], ValueType] = {
     val __props = js.Dynamic.literal()
     new SharedBuilder_TreeSelectProps_1571959893[default[ValueType], ValueType](js.Array(this.component, __props.asInstanceOf[TreeSelectProps[ValueType]]))
   }
   implicit def make[ValueType](companion: TreeSelect.type): SharedBuilder_TreeSelectProps_1571959893[default[ValueType], ValueType] = new SharedBuilder_TreeSelectProps_1571959893[default[ValueType], ValueType](js.Array(this.component, js.Dictionary.empty))()
   object TreeNode {
-    @JSImport("rc-tree-select/es/TreeSelect", "TreeNode")
+    @JSImport("rc-tree-select/es/TreeSelect", "default.TreeNode")
     @js.native
     object component extends js.Object
     

@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "rc-select"
-version := "11.1.0-cc833b"
+version := "11.1.0-532e49"
 scalaVersion := "2.13.2"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

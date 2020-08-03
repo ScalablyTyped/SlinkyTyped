@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TabPane {
-  @JSImport("rc-tabs/es/TabPanelList/TabPane", JSImport.Default)
+  @JSImport("rc-tabs", "TabPane")
   @js.native
   object component extends js.Object
   

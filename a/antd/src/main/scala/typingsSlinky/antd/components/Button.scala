@@ -80,7 +80,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Button {
-  @JSImport("antd/lib/button", JSImport.Default)
+  @JSImport("antd", "Button")
   @js.native
   object component extends js.Object
   
@@ -499,7 +499,7 @@ object Button {
   def withProps(p: ButtonProps with RefAttributes[HTMLElement]): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Button.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object Group {
-    @JSImport("antd/lib/button", "default.Group")
+    @JSImport("antd", "Button.Group")
     @js.native
     object component extends js.Object
     

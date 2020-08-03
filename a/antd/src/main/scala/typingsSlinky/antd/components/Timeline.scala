@@ -14,7 +14,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Timeline {
-  @JSImport("antd/lib/timeline", JSImport.Default)
+  @JSImport("antd", "Timeline")
   @js.native
   object component extends js.Object
   
@@ -45,7 +45,7 @@ object Timeline {
   def withProps(p: TimelineProps): Builder = new Builder(js.Array(this.component, p.asInstanceOf[js.Any]))
   implicit def make(companion: Timeline.type): Builder = new Builder(js.Array(this.component, js.Dictionary.empty))()
   object Item {
-    @JSImport("antd/lib/timeline", "default.Item")
+    @JSImport("antd", "Timeline.Item")
     @js.native
     object component extends js.Object
     
